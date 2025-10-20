@@ -25,6 +25,8 @@ from utils import (
     _interpolate_range_value,
     _coerce_numeric,
     _json_default,
+    METADATA_FILE,
+    get_env_id,
 )
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
 from stable_baselines3.common.callbacks import BaseCallback
@@ -39,7 +41,7 @@ def train(
     *,
     seed: Optional[int] = None,
     callback: Optional[BaseCallback] = None,
-    log_interval: int = 100,
+    log_interval: int = 1,
     progress_bar: bool = False,
 ) -> Path:
     """Train a Stable-Baselines3 model and persist artifacts to disk.
@@ -51,7 +53,6 @@ def train(
         folder_name: Target directory where logs and the trained model are written.
         seed: Optional integer seed to make training reproducible.
         callback: Optional SB3 callback invoked during learning.
-        log_interval: Frequency (in calls to ``learn``) at which metrics are logged.
         progress_bar: Whether to display Stable-Baselines3's tqdm progress bar.
 
     Returns:
@@ -114,8 +115,10 @@ def train(
         "model_path": str(model_path) + ".zip",
         "logs_dir": str(logs_dir),
         "env_config": env.unwrapped.config, # type: ignore
+        "env_id": get_env_id(env),
+        "model_class": model.__class__.__name__,
     }
-    with (output_dir / "training_metadata.json").open("w", encoding="utf-8") as fp:
+    with (output_dir / METADATA_FILE).open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
     return model_path
@@ -124,4 +127,4 @@ def train(
 if __name__ == "__main__":
     env = gym.make("highway-fast-v0")
     model = PPO("MlpPolicy", env, device="cpu")
-    train(env, model, int(5e4), "first_test", seed=0, progress_bar=True, log_interval=100)
+    train(env, model, int(5e4), "first_test", seed=0, progress_bar=True)
