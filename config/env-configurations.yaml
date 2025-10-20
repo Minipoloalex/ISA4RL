@@ -1,0 +1,77 @@
+highway: # https://highway-env.farama.org/environments/highway/
+  lanes_count:
+    type: int
+    range: [2, 10]
+
+  vehicles_count:
+    type: int
+    range: [0, 100]
+
+  initial_lane_id:  # [0, lanes_count - 1]
+    type: int
+
+  duration: # episode time limit in seconds
+    type: int
+
+  ego_spacing:  # determines the minimum starting distance of the ego-vehicle to others
+    type: float
+    range: [1.0, 10.0]
+
+  vehicles_density: # inverse of spacing between spawned vehicles
+    type: float
+    range: [0.5, 2]
+
+
+  reward_speed_range: # an interval of speeds where the agent receives high-speed rewards
+    type: list[float, float]
+    default: [20, 30]
+
+  collision_reward: # negative to avoid collisions
+    type: float
+
+  lane_change_reward: # 0 or negative to avoid changing lanes a lot
+    type: float
+
+  right_lane_reward:  # promote right-most lanes
+    type: float
+
+  high_speed_reward:  # positive or negative to promote/avoid high speeds
+    type: float
+
+
+merge:  # https://highway-env.farama.org/environments/merge/
+  reward_speed_range:
+    type: list[float, float]
+    default: [20, 30]
+
+  merging_speed_reward: # negative reward to make room for incoming vehicles (avoid slowing them down)
+    type: float
+
+  collision_reward:
+    type: float
+
+  lane_change_reward:
+    type: float
+
+  right_lane_reward:
+    type: float
+
+  high_speed_reward:
+    type: float
+
+
+roundabout: # https://highway-env.farama.org/environments/roundabout/
+  duration:
+    type: int
+
+  collision_reward:
+    type: float
+
+  lane_change_reward:
+    type: float
+
+  right_lane_reward:
+    type: float
+
+  high_speed_reward:
+    type: float

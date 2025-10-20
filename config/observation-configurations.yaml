@@ -1,0 +1,36 @@
+# https://highway-env.farama.org/observations/
+
+Kinematics:
+  vehicles_count: # number of vehicles
+    type: int
+
+  features:  # list of features from each vehicle
+    type: list
+
+GrayscaleObservation:
+  observation_shape: # the image size
+    type: list[int,int]
+
+  stack_size:  # how many images to stack for an observation
+    type: int
+
+OccupancyGrid:
+  features:   # list of features from each vehicle
+    type: list
+
+  grid_size:
+    default: [[-27.5, 27.5], [-27.5, 27.5]]
+
+  grid_step:
+    default: [5, 5]
+
+TimeToCollision:
+  horizon:
+    type: int
+
+Lidar:
+  cells:
+    type: int
+
+  maximum_range:
+    type: int
