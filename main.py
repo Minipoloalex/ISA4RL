@@ -26,11 +26,13 @@ from collections import Counter, deque, defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
+from tqdm import tqdm
 
 import numpy as np
 import yaml
 
 from train import train
+from evaluate import evaluate
 from utils import (
     set_global_seed,
     ensure_dir,
@@ -41,6 +43,7 @@ from utils import (
     _interpolate_range_value,
     _coerce_numeric,
     _json_default,
+    BASE_OUTPUT_PATH,
 )
 
 try:
@@ -55,6 +58,7 @@ except ImportError as exc:  # pragma: no cover
 
 try:
     from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
+    from stable_baselines3.common.base_class import BaseAlgorithm
     from stable_baselines3.common.callbacks import BaseCallback
 except ImportError as exc:  # pragma: no cover
     raise ImportError(

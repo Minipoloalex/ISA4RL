@@ -14,6 +14,10 @@ import yaml
 import gymnasium as gym
 import pandas as pd
 import highway_env
+from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
+from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.base_class import BaseAlgorithm
+from stable_baselines3.common.logger import Logger, configure
 
 from utils import (
     set_global_seed,
@@ -25,13 +29,10 @@ from utils import (
     _interpolate_range_value,
     _coerce_numeric,
     _json_default,
-    METADATA_FILE,
+    TRAINING_METADATA_FILE,
+    MODEL_FILE,
     get_env_id,
 )
-from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
-from stable_baselines3.common.callbacks import BaseCallback
-from stable_baselines3.common.base_class import BaseAlgorithm
-from stable_baselines3.common.logger import Logger, configure
 
 def train(
     env: gym.Env,
@@ -41,8 +42,8 @@ def train(
     *,
     seed: Optional[int] = None,
     callback: Optional[BaseCallback] = None,
-    log_interval: int = 1,
     progress_bar: bool = False,
+    **kwargs,
 ) -> Path:
     """Train a Stable-Baselines3 model and persist artifacts to disk.
 
@@ -57,9 +58,6 @@ def train(
 
     Returns:
         Path: Filesystem path to the saved model archive (``.zip``).
-
-    Raises:
-        ValueError: If ``timesteps`` is not a positive integer.
     """
     output_dir = Path(folder_name).expanduser()
     ensure_dir(output_dir)
@@ -75,6 +73,7 @@ def train(
         try:
             env.reset(seed=seed)
         except TypeError:
+            print("env.reset() has no seed parameter")
             env.reset()
         if hasattr(env.action_space, "seed"):
             env.action_space.seed(seed)
@@ -92,7 +91,6 @@ def train(
 
     learn_kwargs: Dict[str, Any] = {
         "total_timesteps": timesteps,
-        "log_interval": log_interval,
     }
     if callback is not None:
         learn_kwargs["callback"] = callback
@@ -104,7 +102,7 @@ def train(
     elapsed = time.perf_counter() - before
     print(f"Training finished in {elapsed:.2f}s for {timesteps} timesteps.")
 
-    model_path = output_dir / "model"
+    model_path = output_dir / MODEL_FILE
     model.save(model_path)
 
     metadata = {
@@ -112,13 +110,13 @@ def train(
         "elapsed_seconds": elapsed,
         "seed": seed,
         "timestamp": time.time(),
-        "model_path": str(model_path) + ".zip",
+        "model_path": str(model_path),
         "logs_dir": str(logs_dir),
         "env_config": env.unwrapped.config, # type: ignore
         "env_id": get_env_id(env),
         "model_class": model.__class__.__name__,
     }
-    with (output_dir / METADATA_FILE).open("w", encoding="utf-8") as fp:
+    with (output_dir / TRAINING_METADATA_FILE).open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
     return model_path

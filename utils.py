@@ -16,6 +16,7 @@ import yaml
 
 from stable_baselines3 import A2C, DQN, PPO, SAC, TD3
 from stable_baselines3.common.base_class import BaseAlgorithm
+from run_config import RunConfig
 import gymnasium as gym
 
 AlgorithmName = str
@@ -24,7 +25,14 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "dqn": DQN,
     "a2c": A2C,
 }
-METADATA_FILE = "training_metadata.json"
+
+BASE_OUTPUT_PATH = Path("results")
+CONFIG_FILE = "configs.json"
+MODEL_FILE = "model.zip"
+
+TRAINING_METADATA_FILE = "training_metadata.json"
+EVALUATION_RESULTS_FILE = "eval_results.json"
+METAFEATURES_RESULTS_FILE = "metafeatures_result.json"
 
 
 def set_global_seed(seed: int) -> None:
@@ -34,6 +42,13 @@ def set_global_seed(seed: int) -> None:
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
 
+def read_json(file: Path):
+    with file.open("w", encoding="utf-8") as fp:
+        return json.load(fp)
+
+def save_json(file: Path, results):
+    with file.open("w", encoding="utf-8") as fp:
+        json.dump(results, fp, indent=2, default=_json_default)
 
 def ensure_dir(path: Path) -> None:
     path.mkdir(parents=True, exist_ok=True)
@@ -111,22 +126,74 @@ def build_env(env_id: str, config: Dict[str, Any]) -> gym.Env:
     }
     return gym.make(env_id, **env_kwargs)
 
+def get_env_id(env: gym.Env):
+    assert(env.spec is not None)
+    return env.spec.id
 
-def load_model(model_path: Path, algo_name: str) -> BaseAlgorithm:
+
+def map_algo_name_to_class(algo_name: str) -> type[BaseAlgorithm]:
     algo_cls = ALGORITHM_MAP.get(algo_name.lower())
     if algo_cls is None:
         raise KeyError(
             f"Unknown algorithm '{algo_name}'. Expected one of {sorted(ALGORITHM_MAP)}."
         )
+    return algo_cls
+
+def load_model(model_path: Path, algo_name: str) -> BaseAlgorithm:
+    algo_cls = map_algo_name_to_class(algo_name)
     return algo_cls.load(str(model_path))
 
 def load_training_metadata(run_dir: Path) -> Dict[str, Any]:
-    metadata_path = run_dir / METADATA_FILE
+    metadata_path = run_dir / TRAINING_METADATA_FILE
     with metadata_path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
 
+def save_eval_results(results, folder_name: str):
+    filepath = Path(folder_name) / EVALUATION_RESULTS_FILE
+    save_json(filepath, results)
 
-def get_env_id(env: gym.Env):
-    assert(env.spec is not None)
-    return env.spec.id
+def save_extract_results(results, folder_name: str):
+    filepath = Path(folder_name) / METAFEATURES_RESULTS_FILE
+    save_json(filepath, results)
+
+
+def load_all_configs() -> List[RunConfig]:
+    config_data = read_json(Path(CONFIG_FILE))
+    configs = []
+    for config_id, config in config_data:
+        env = build_env(config["env_id"], config["env_config"])
+        algo_builder = map_algo_name_to_class(config["model"])
+        algo = algo_builder(
+            env=env,
+            tensorboard_log=config["folder_name"],
+            **config["policy_params"],
+        )
+        configs.append(RunConfig(
+            id=config_id,
+            folder_name=config["folder_name"],
+            env=env,
+            model=algo,
+            timesteps=config["timesteps"],
+            seed=config["seed"],
+        ))
+    return configs
+
+def _nonempty_file_in(filepath: Path) -> bool:
+    """Return True if filepath exists, is a regular file, and is non-empty."""
+    try:
+        return filepath.is_file() and filepath.stat().st_size > 0
+    except OSError:
+        return False
+
+def is_trained(config: RunConfig) -> bool:
+    """Trained iff training metadata artifact exists."""
+    return _nonempty_file_in(Path(config.folder_name) / TRAINING_METADATA_FILE)
+
+def is_evaluated(config: RunConfig) -> bool:
+    """Evaluated iff evaluation results artifact exists."""
+    return _nonempty_file_in(Path(config.folder_name) / EVALUATION_RESULTS_FILE)
+
+def is_extracted(config: RunConfig) -> bool:
+    """Extracted iff metafeatures result artifact exists."""
+    return _nonempty_file_in(Path(config.folder_name) / METAFEATURES_RESULTS_FILE)
 

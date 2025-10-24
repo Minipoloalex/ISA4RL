@@ -27,7 +27,7 @@ except ImportError as exc:  # pragma: no cover
     raise ImportError("highway-env is required: pip install highway-env") from exc
 
 
-from utils import _json_default, ensure_dir, set_global_seed, ALGORITHM_MAP, METADATA_FILE, build_env, load_model, load_training_metadata
+from utils import _json_default, ensure_dir, set_global_seed, ALGORITHM_MAP, TRAINING_METADATA_FILE, build_env, load_model, load_training_metadata
 
 
 def parse_args() -> argparse.Namespace:
@@ -89,8 +89,6 @@ def parse_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
-
-
 def rollout_episode(
     model: BaseAlgorithm,
     env: gym.Env,
@@ -113,6 +111,34 @@ def rollout_episode(
         if max_steps is not None and steps >= max_steps:
             break
     return episode_reward, steps, infos
+
+def evaluate(
+    model: BaseAlgorithm,
+    env: gym.Env,
+    n_episodes: int,
+    max_steps: Optional[int],
+    *,
+    deterministic: bool,
+    seed: Optional[int],
+    **kwargs,
+) -> List[Dict[str, Any]]:
+    episodes_stats: List[Dict[str, Any]] = []
+    for idx in range(n_episodes):
+        if seed is not None:
+            env.reset(seed=seed + idx)
+        reward, length, infos = rollout_episode(
+            model,
+            env,
+            deterministic=deterministic,
+            max_steps=max_steps,
+        )
+        episodes_stats.append({
+            "episode": idx,
+            "reward": reward,
+            "length": length,
+            "infos": infos,
+        })
+    return episodes_stats
 
 
 def aggregate_metrics(
@@ -137,32 +163,6 @@ def aggregate_metrics(
             summary[f"{field}_rate"] = float(np.mean(values))
     return summary
 
-def evaluate(
-    model: BaseAlgorithm,
-    env: gym.Env,
-    n_episodes: int,
-    max_steps: int,
-    *,
-    deterministic: bool,
-    seed: Optional[int],
-):
-    per_episode: List[Dict[str, Any]] = []
-    for idx in range(n_episodes):
-        if seed is not None:
-            env.reset(seed=seed + idx)
-        reward, length, infos = rollout_episode(
-            model,
-            env,
-            deterministic=deterministic,
-            max_steps=max_steps,
-        )
-        per_episode.append({
-            "episode": idx,
-            "reward": reward,
-            "length": length,
-            "infos": infos,
-        })
-
 def main() -> None:
     args = parse_args()
     run_dir = args.run_dir.expanduser().resolve()
@@ -185,17 +185,17 @@ def main() -> None:
     results = evaluate(model, env, episodes, max_steps, deterministic=True, seed=seed)
     env.close()
 
-    summary = aggregate_metrics(per_episode)
+    summary = aggregate_metrics(results)
 
     print("Evaluation summary:")
     for key, value in summary.items():
-        print(f"  {key}: {value}")
+        print(f"  w{key}: {value}")
 
     if args.output:
         ensure_dir(args.output.expanduser().resolve().parent)
         payload = {
             "summary": summary,
-            "episodes": per_episode,
+            "episodes": results,
             "model_path": str(model_path),
             "env_id": env_id,
             "deterministic": args.deterministic,
