@@ -123,6 +123,17 @@ def train(
 
 
 if __name__ == "__main__":
+    parser = argparse.ArgumentParser(
+        description="Experiment with training a PPO agent on highway-fast-v0"
+    )
+    parser.add_argument(
+        "-n", "--name",
+        dest="run_name",
+        required=True,
+        help="Name of the output folder/test run"
+    )
+    args = parser.parse_args()
+
     env = gym.make("highway-fast-v0")
     model = PPO("MlpPolicy", env, device="cpu")
-    train(env, model, int(5e4), "first_test", seed=0, progress_bar=True)
+    train(env, model, int(5e4), args.run_name, seed=0, progress_bar=True)
