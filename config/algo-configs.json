@@ -1,0 +1,189 @@
+{
+  "a2c": {
+    "atari": {
+      "env_wrapper": [
+        "stable_baselines3.common.atari_wrappers.AtariWrapper"
+      ],
+      "frame_stack": 4,
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "n_timesteps": 10000000.0,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "CartPole-v1": {
+      "n_envs": 8,
+      "n_timesteps": 500000.0,
+      "policy": "MlpPolicy",
+      "ent_coef": 0.0
+    },
+    "LunarLander-v3": {
+      "n_envs": 8,
+      "n_timesteps": 200000.0,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "MountainCar-v0": {
+      "normalize": true,
+      "n_envs": 16,
+      "n_timesteps": 1000000.0,
+      "policy": "MlpPolicy",
+      "ent_coef": 0.0
+    },
+    "Acrobot-v1": {
+      "normalize": true,
+      "n_envs": 16,
+      "n_timesteps": 500000.0,
+      "policy": "MlpPolicy",
+      "ent_coef": 0.0
+    }
+  },
+  "ppo": {
+    "atari": {
+      "env_wrapper": [
+        "stable_baselines3.common.atari_wrappers.AtariWrapper"
+      ],
+      "frame_stack": 4,
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "n_timesteps": 10000000.0,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "CartPole-v1": {
+      "n_envs": 8,
+      "n_timesteps": 100000.0,
+      "policy": "MlpPolicy",
+      "n_steps": 32,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
+    },
+    "MountainCar-v0": {
+      "normalize": true,
+      "n_envs": 16,
+      "n_timesteps": 1000000.0,
+      "policy": "MlpPolicy",
+      "n_steps": 16,
+      "gae_lambda": 0.98,
+      "gamma": 0.99,
+      "n_epochs": 4,
+      "ent_coef": 0.0
+    },
+    "Acrobot-v1": {
+      "normalize": true,
+      "n_envs": 16,
+      "n_timesteps": 1000000.0,
+      "policy": "MlpPolicy",
+      "n_steps": 256,
+      "gae_lambda": 0.94,
+      "gamma": 0.99,
+      "n_epochs": 4,
+      "ent_coef": 0.0
+    },
+    "LunarLander-v3": {
+      "n_envs": 16,
+      "n_timesteps": 1000000.0,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    }
+  },
+  "dqn": {
+    "atari": {
+      "env_wrapper": [
+        "stable_baselines3.common.atari_wrappers.AtariWrapper"
+      ],
+      "frame_stack": 4,
+      "policy": "CnnPolicy",
+      "n_timesteps": 10000000.0,
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "CartPole-v1": {
+      "n_timesteps": 50000.0,
+      "policy": "MlpPolicy",
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
+      "gamma": 0.99,
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "MountainCar-v0": {
+      "n_timesteps": 120000.0,
+      "policy": "MlpPolicy",
+      "learning_rate": 0.004,
+      "batch_size": 128,
+      "buffer_size": 10000,
+      "learning_starts": 1000,
+      "gamma": 0.98,
+      "target_update_interval": 600,
+      "train_freq": 16,
+      "gradient_steps": 8,
+      "exploration_fraction": 0.2,
+      "exploration_final_eps": 0.07,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "LunarLander-v3": {
+      "n_timesteps": 100000.0,
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "Acrobot-v1": {
+      "n_timesteps": 100000.0,
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    }
+  }
+}

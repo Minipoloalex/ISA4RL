@@ -323,7 +323,7 @@ if __name__ == "__main__":
     env_configs = build_env_configs()
     save_json(ENV_CONFIG_PATH, env_configs)
 
-    print(f"Total environment configs: {len(env_configs)}")
+    print(f"Environment configs: {len(env_configs)}")
 
     ensure_dir(BASE_IMAGES_PATH)
     correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE
@@ -332,10 +332,8 @@ if __name__ == "__main__":
 
     algo_configs = extract_algo_configs()
     obs_configs = get_obs_configs()
-    print("\n\nAlgo Configs")
-    pprint(algo_configs)
-    print("\n\nObservation Configs")
-    pprint(obs_configs)
+    print(f"\n\nAlgo Configs: {len(algo_configs)}")
+    print(f"\n\nObservation Configs: {len(obs_configs)}")
 
 
     all_configs = get_all_configs()
