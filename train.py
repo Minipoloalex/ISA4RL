@@ -4,6 +4,7 @@ import math
 import os
 import random
 import time
+from datetime import datetime
 from collections import Counter, deque, defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
@@ -109,7 +110,7 @@ def train(
     before = time.perf_counter()
     model.learn(**learn_kwargs)
     elapsed = time.perf_counter() - before
-    print(f"Training finished in {elapsed:.2f}s ({elapsed / 60:.2f}min) for {timesteps} timesteps.")
+    print(f"Training finished in {elapsed:.2f}s ({elapsed / 60:.2f} min) for {timesteps} timesteps.")
 
     model_path = output_dir / MODEL_FILE
     model.save(model_path)
@@ -118,7 +119,7 @@ def train(
         "timesteps": timesteps,
         "elapsed_seconds": elapsed,
         "seed": seed,
-        "timestamp": time.time(),
+        "timestamp": datetime.now().isoformat(timespec="seconds"),
         "model_path": str(model_path),
         "logs_dir": str(logs_dir),
         "env_config": base_env.unwrapped.config, # type: ignore
