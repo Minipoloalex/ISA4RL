@@ -7,9 +7,10 @@ import time
 from collections import Counter, deque, defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
 
 import numpy as np
+import torch
 import yaml
 import gymnasium as gym
 import pandas as pd
@@ -18,6 +19,11 @@ from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.logger import Logger, configure
+from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.env_util import make_vec_env
+
+torch.set_num_threads(1)
 
 from utils import (
     set_global_seed,
@@ -32,10 +38,12 @@ from utils import (
     TRAINING_METADATA_FILE,
     MODEL_FILE,
     get_env_id,
+    vectorize_env,
+    unwrap_first_env,
 )
 
 def train(
-    env: gym.Env,
+    env: VecEnv,
     model: BaseAlgorithm,
     timesteps: int,
     folder_name: str,
@@ -68,10 +76,11 @@ def train(
     tensorboard_dir = logs_dir / "tensorboard"
     ensure_dir(tensorboard_dir)
 
+    base_env = unwrap_first_env(env)
     if seed is not None:
         set_global_seed(seed)
         try:
-            env.reset(seed=seed)
+            env.seed(seed)
         except TypeError:
             print("env.reset() has no seed parameter")
             env.reset()
@@ -100,7 +109,7 @@ def train(
     before = time.perf_counter()
     model.learn(**learn_kwargs)
     elapsed = time.perf_counter() - before
-    print(f"Training finished in {elapsed:.2f}s for {timesteps} timesteps.")
+    print(f"Training finished in {elapsed:.2f}s ({elapsed / 60:.2f}min) for {timesteps} timesteps.")
 
     model_path = output_dir / MODEL_FILE
     model.save(model_path)
@@ -112,8 +121,8 @@ def train(
         "timestamp": time.time(),
         "model_path": str(model_path),
         "logs_dir": str(logs_dir),
-        "env_config": env.unwrapped.config, # type: ignore
-        "env_id": get_env_id(env),
+        "env_config": base_env.unwrapped.config, # type: ignore
+        "env_id": get_env_id(base_env),
         "model_class": model.__class__.__name__,
     }
     with (output_dir / TRAINING_METADATA_FILE).open("w", encoding="utf-8") as fp:
@@ -134,6 +143,18 @@ if __name__ == "__main__":
     )
     args = parser.parse_args()
 
-    env = gym.make("highway-fast-v0")
-    model = PPO("MlpPolicy", env, device="cpu")
-    train(env, model, int(5e4), args.run_name, seed=0, progress_bar=True)
+    env = make_vec_env(
+        "highway-fast-v0",
+        n_envs=8,
+        seed=0,
+        vec_env_cls=SubprocVecEnv,
+    )
+    model = PPO("MlpPolicy", env, device="cpu",
+        n_steps=32,
+        batch_size=256,
+        gae_lambda=0.8,
+        gamma=0.98,
+        n_epochs=20,
+        ent_coef=0.0,
+    )
+    train(env, model, int(2e5), args.run_name, seed=0, progress_bar=True)
