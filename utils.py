@@ -13,6 +13,7 @@ import torch.nn as nn
 import torch.optim as optim
 import numpy as np
 import yaml
+from pprint import pprint
 
 from stable_baselines3 import A2C, DQN, PPO, SAC, TD3
 from stable_baselines3.common.callbacks import BaseCallback
@@ -21,6 +22,7 @@ from stable_baselines3.common.logger import Logger, configure
 from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.env_util import make_vec_env
+from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
 from run_config import RunConfig
 import gymnasium as gym
 
@@ -33,6 +35,7 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
 
 BASE_OUTPUT_PATH = Path("results")
 BASE_CONFIG_PATH = Path("config")
+BASE_IMAGES_PATH = Path("images")
 
 CONFIG_FILE = "configs.json"
 MODEL_FILE = "model.zip"
@@ -50,7 +53,8 @@ METAFEATURES_RESULTS_FILE = "metafeatures_result.json"
 TRAIN_TIMESTEPS = int(1e5)
 
 # Mostly refer to the environment
-DISCARD_POLICY_PARAMS = ["policy", "n_envs", "algo", "env_wrapper", "frame_stack", "normalize"]
+DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize"]
+
 
 def set_global_seed(seed: int) -> None:
     random.seed(seed)
@@ -165,7 +169,7 @@ def load_training_metadata(run_dir: Path) -> Dict[str, Any]:
     with metadata_path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
 
-def save_eval_results(results, folder_name: str):
+def save_eval_results(results: List[Dict[str, Any]], folder_name: str):
     filepath = Path(folder_name) / EVALUATION_RESULTS_FILE
     save_json(filepath, results)
 
@@ -173,18 +177,31 @@ def save_extract_results(results, folder_name: str):
     filepath = Path(folder_name) / METAFEATURES_RESULTS_FILE
     save_json(filepath, results)
 
+def get_all_configs() -> List[Dict[str, Any]]:
+    return read_json(Path(CONFIG_FILE))
 
+def _parse_policy_kwargs(raw_value: Any) -> Any:
+    """Convert string-encoded policy kwargs into a Python object."""
+    if not isinstance(raw_value, str):
+        return raw_value
+    allowed_names = {
+        "RMSpropTFLike": RMSpropTFLike,
+        "dict": dict,
+    }
+    try:
+        return eval(raw_value, {"__builtins__": {}}, allowed_names)
+    except Exception as exc:  # pragma: no cover - config errors surface at runtime
+        raise ValueError(f"Failed to parse policy_kwargs='{raw_value}': {exc}") from exc
 
 def load_all_configs() -> List[RunConfig]:
-    # configs = get_all_configs()
-    configs = []
+    configs = get_all_configs()
     run_configs: List[RunConfig] = []
     for config in configs:
         env_config : Dict[str, Any] = config["env_config"]
         obs_config : Dict[str, Any] = config["obs_config"]
         algo_config: Dict[str, Any] = config["algo_config"]
         id: int = config["timestamp"]
-        folder_name: str = str(id)
+        folder_name: str = str(BASE_OUTPUT_PATH / str(id))
 
         env_id: str = env_config["env_id"]
         env_config: Dict[str, Any] = env_config["config"]
@@ -197,9 +214,13 @@ def load_all_configs() -> List[RunConfig]:
             algo_config.pop(key, None)
 
         policy_params: Dict[str, Any] = algo_config
+        policy_kwargs = policy_params.get("policy_kwargs")
+        if policy_kwargs is not None:
+            policy_params["policy_kwargs"] = _parse_policy_kwargs(policy_kwargs)
         algo_cls = map_algo_name_to_class(algo_name)
 
         vec_env_cls = DummyVecEnv if n_envs == 1 else SubprocVecEnv
+        device = "cuda" if policy == "CnnPolicy" else "cpu"
         # if policy == "CnnPolicy":
         #     pass
 
@@ -217,23 +238,38 @@ def load_all_configs() -> List[RunConfig]:
                 env_kwargs=env_kwargs,
             )
 
+        def eval_env_factory(
+            env_id: str = env_id,
+            env_config: Dict[str, Any] = env_config,
+        ) -> gym.Env:
+            env_kwargs = {"config": env_config.copy()}
+            return gym.make(env_id, max_episode_steps=None, disable_env_checker=None, **env_kwargs)
+
         def model_factory(
             env: VecEnv,
             *,
             algo_cls: type[BaseAlgorithm] = algo_cls,
             tensorboard_log: str = folder_name,
             policy_params: Dict[str, Any] = policy_params,
+            device: str = device,
         ) -> BaseAlgorithm:
-            return algo_cls(env=env, tensorboard_log=tensorboard_log, **policy_params)
+            model_path = Path(folder_name) / MODEL_FILE
+            if _nonempty_file_in(model_path):
+                model = algo_cls.load(str(model_path), env=env, device=device)
+                model.tensorboard_log = tensorboard_log
+                return model
+            return algo_cls(env=env, tensorboard_log=tensorboard_log, device=device, **policy_params)
 
         run_configs.append(
             RunConfig(
                 id=id,
                 folder_name=folder_name,
                 make_env=env_factory,
+                make_eval_env=eval_env_factory,
                 make_model=model_factory,
                 timesteps=TRAIN_TIMESTEPS,
-                seed=0,
+                train_seed=0,
+                eval_seed=1,
             )
         )
     return run_configs

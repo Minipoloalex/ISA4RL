@@ -7,6 +7,7 @@ from stable_baselines3.common.vec_env import VecEnv
 
 EnvFactory = Callable[[], VecEnv]
 ModelFactory = Callable[[VecEnv], BaseAlgorithm]
+EvalEnvFactory = Callable[[], gym.Env]
 
 
 @dataclass
@@ -14,17 +15,26 @@ class RunConfig:
     id: int
     folder_name: str
     make_env: EnvFactory
+    make_eval_env: EvalEnvFactory
     make_model: ModelFactory
     timesteps: int
-    seed: int
+    train_seed: int
+    eval_seed: int
     _env: Optional[VecEnv] = field(default=None, init=False, repr=False)
     _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
+    _eval_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
 
     def ensure_env(self) -> VecEnv:
         """Instantiate the environment lazily and cache it for reuse."""
         if self._env is None:
             self._env = self.make_env()
         return self._env
+
+    def ensure_eval_env(self) -> gym.Env:
+        """Instantiate a single-environment instance for evaluation."""
+        if self._eval_env is None:
+            self._eval_env = self.make_eval_env()
+        return self._eval_env
 
     def ensure_model(self) -> BaseAlgorithm:
         """Instantiate the algorithm lazily and cache it alongside the env."""
@@ -40,4 +50,9 @@ class RunConfig:
                 self._env.close()
             finally:
                 self._env = None
+        if self._eval_env is not None:
+            try:
+                self._eval_env.close()
+            finally:
+                self._eval_env = None
         self._model = None
