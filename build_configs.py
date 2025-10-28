@@ -17,6 +17,8 @@ from utils import (
     ALGO_CONFIG_PATH,
     OBS_CONFIG_PATH,
     ALGO_CONFIG_HYPERPARAMS_PATH,
+    BASE_IMAGES_PATH,
+    ensure_dir,
 )
 
 # Config generation parameters
@@ -62,7 +64,7 @@ EGO_SPACING_SLOPE = 0.9
 EGO_SPACING_MIN = 1.5
 EGO_SPACING_MAX = 4.5
 
-CORRELATION_PLOT_PATH = Path("config_correlations.png")
+CORRELATION_PLOT_FILE = "config_correlations.png"
 CORRELATION_KEYS = (
     "lanes_count",
     "vehicles_count",
@@ -322,8 +324,11 @@ if __name__ == "__main__":
     save_json(ENV_CONFIG_PATH, env_configs)
 
     print(f"Total environment configs: {len(env_configs)}")
-    save_correlation_plot(env_configs, CORRELATION_PLOT_PATH)
-    print(f"Correlation plot written to {CORRELATION_PLOT_PATH}")
+
+    ensure_dir(BASE_IMAGES_PATH)
+    correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE
+    save_correlation_plot(env_configs, correlation_plot_path)
+    print(f"Correlation plot written to {correlation_plot_path}")
 
     algo_configs = extract_algo_configs()
     obs_configs = get_obs_configs()
