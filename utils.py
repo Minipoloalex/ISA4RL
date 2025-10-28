@@ -7,7 +7,7 @@ import time
 from collections import Counter, deque, defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
-from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -15,7 +15,12 @@ import numpy as np
 import yaml
 
 from stable_baselines3 import A2C, DQN, PPO, SAC, TD3
+from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
+from stable_baselines3.common.logger import Logger, configure
+from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
+from stable_baselines3.common.monitor import Monitor
+from stable_baselines3.common.env_util import make_vec_env
 from run_config import RunConfig
 import gymnasium as gym
 
@@ -27,13 +32,25 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
 }
 
 BASE_OUTPUT_PATH = Path("results")
+BASE_CONFIG_PATH = Path("config")
+
 CONFIG_FILE = "configs.json"
 MODEL_FILE = "model.zip"
+
+ENV_CONFIG_PATH = BASE_CONFIG_PATH / "env-configs.json"
+ALGO_CONFIG_PATH = BASE_CONFIG_PATH / "algo-configs.json"
+OBS_CONFIG_PATH = BASE_CONFIG_PATH / "obs-configs.json"
+
+ALGO_CONFIG_HYPERPARAMS_PATH = BASE_CONFIG_PATH / "rlzoo-algo-hyperparams"
 
 TRAINING_METADATA_FILE = "training_metadata.json"
 EVALUATION_RESULTS_FILE = "eval_results.json"
 METAFEATURES_RESULTS_FILE = "metafeatures_result.json"
 
+TRAIN_TIMESTEPS = int(1e5)
+
+# Mostly refer to the environment
+DISCARD_POLICY_PARAMS = ["policy", "n_envs", "algo", "env_wrapper", "frame_stack", "normalize"]
 
 def set_global_seed(seed: int) -> None:
     random.seed(seed)
@@ -43,10 +60,10 @@ def set_global_seed(seed: int) -> None:
         torch.cuda.manual_seed_all(seed)
 
 def read_json(file: Path):
-    with file.open("w", encoding="utf-8") as fp:
+    with file.open("r", encoding="utf-8") as fp:
         return json.load(fp)
 
-def save_json(file: Path, results):
+def save_json(file: Path, results: Dict[str, Any] | List[Dict[str, Any]] | List[Any]):
     with file.open("w", encoding="utf-8") as fp:
         json.dump(results, fp, indent=2, default=_json_default)
 
@@ -157,26 +174,69 @@ def save_extract_results(results, folder_name: str):
     save_json(filepath, results)
 
 
+
 def load_all_configs() -> List[RunConfig]:
-    config_data = read_json(Path(CONFIG_FILE))
+    # configs = get_all_configs()
     configs = []
-    for config_id, config in config_data:
-        env = build_env(config["env_id"], config["env_config"])
-        algo_builder = map_algo_name_to_class(config["model"])
-        algo = algo_builder(
-            env=env,
-            tensorboard_log=config["folder_name"],
-            **config["policy_params"],
+    run_configs: List[RunConfig] = []
+    for config in configs:
+        env_config : Dict[str, Any] = config["env_config"]
+        obs_config : Dict[str, Any] = config["obs_config"]
+        algo_config: Dict[str, Any] = config["algo_config"]
+        id: int = config["timestamp"]
+        folder_name: str = str(id)
+
+        env_id: str = env_config["env_id"]
+        env_config: Dict[str, Any] = env_config["config"]
+        env_config["observation"] = obs_config
+
+        algo_name: str = algo_config["algo"]
+        n_envs = algo_config.get("n_envs", 1)
+        policy = algo_config["policy"]
+        for key in DISCARD_POLICY_PARAMS:
+            algo_config.pop(key, None)
+
+        policy_params: Dict[str, Any] = algo_config
+        algo_cls = map_algo_name_to_class(algo_name)
+
+        vec_env_cls = DummyVecEnv if n_envs == 1 else SubprocVecEnv
+        # if policy == "CnnPolicy":
+        #     pass
+
+        def env_factory(
+            env_id: str = env_id,
+            env_config: Dict[str, Any] = env_config,
+            env_cnt: int = n_envs,
+            vec_cls: type[DummyVecEnv] | type[SubprocVecEnv] = vec_env_cls,
+        ) -> VecEnv:
+            env_kwargs = {"config": env_config.copy()}
+            return make_vec_env(
+                env_id,
+                n_envs=env_cnt,
+                vec_env_cls=vec_cls,
+                env_kwargs=env_kwargs,
+            )
+
+        def model_factory(
+            env: VecEnv,
+            *,
+            algo_cls: type[BaseAlgorithm] = algo_cls,
+            tensorboard_log: str = folder_name,
+            policy_params: Dict[str, Any] = policy_params,
+        ) -> BaseAlgorithm:
+            return algo_cls(env=env, tensorboard_log=tensorboard_log, **policy_params)
+
+        run_configs.append(
+            RunConfig(
+                id=id,
+                folder_name=folder_name,
+                make_env=env_factory,
+                make_model=model_factory,
+                timesteps=TRAIN_TIMESTEPS,
+                seed=0,
+            )
         )
-        configs.append(RunConfig(
-            id=config_id,
-            folder_name=config["folder_name"],
-            env=env,
-            model=algo,
-            timesteps=config["timesteps"],
-            seed=config["seed"],
-        ))
-    return configs
+    return run_configs
 
 def _nonempty_file_in(filepath: Path) -> bool:
     """Return True if filepath exists, is a regular file, and is non-empty."""
@@ -197,3 +257,24 @@ def is_extracted(config: RunConfig) -> bool:
     """Extracted iff metafeatures result artifact exists."""
     return _nonempty_file_in(Path(config.folder_name) / METAFEATURES_RESULTS_FILE)
 
+def unwrap_first_env(vec_env: VecEnv) -> gym.Env:
+    """Return the first underlying gym.Env from a VecEnv, if accessible."""
+    current: VecEnv = vec_env
+    # Unwrap nested VecEnv wrappers if present (e.g. VecMonitor -> VecNormalize -> VecEnvBase)
+    for _ in range(10):
+        envs = getattr(current, "envs", None)
+        if envs:
+            return envs[0].unwrapped
+        next_vec = getattr(current, "venv", None)
+        if next_vec is None:
+            break
+        current = next_vec
+    unwrapped_envs = current.get_attr("unwrapped")
+    return unwrapped_envs[0]
+
+
+def vectorize_env(env: Union[gym.Env, VecEnv]) -> Tuple[VecEnv, Optional[gym.Env]]:
+    """Ensure we operate on a VecEnv while keeping a handle to the base env."""
+    if isinstance(env, VecEnv):
+        return env, unwrap_first_env(env)
+    return DummyVecEnv([lambda: env]), env
