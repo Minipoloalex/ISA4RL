@@ -27,7 +27,16 @@ except ImportError as exc:  # pragma: no cover
     raise ImportError("highway-env is required: pip install highway-env") from exc
 
 
-from utils import _json_default, ensure_dir, set_global_seed, ALGORITHM_MAP, TRAINING_METADATA_FILE, build_env, load_model, load_training_metadata
+from utils import (
+    _json_default,
+    ensure_dir,
+    set_global_seed,
+    ALGORITHM_MAP,
+    TRAINING_METADATA_FILE,
+    build_env,
+    load_model,
+    load_training_metadata,
+)
 
 
 def parse_args() -> argparse.Namespace:
@@ -38,22 +47,6 @@ def parse_args() -> argparse.Namespace:
         "--run-dir",
         type=Path,
         help="Directory with training artifacts (expects training_metadata.json).",
-    )
-    parser.add_argument(
-        "--model-path",
-        type=Path,
-        help="Path to the saved model archive (.zip). Overrides metadata if given.",
-    )
-    parser.add_argument(
-        "--algo",
-        type=str,
-        choices=sorted(ALGORITHM_MAP.keys()),
-        help="Algorithm class used for training (e.g., ppo).",
-    )
-    parser.add_argument(
-        "--env-id",
-        type=str,
-        help="Gymnasium environment id. Overrides metadata if provided.",
     )
     parser.add_argument(
         "--episodes",
@@ -89,6 +82,7 @@ def parse_args() -> argparse.Namespace:
     )
     return parser.parse_args()
 
+
 def rollout_episode(
     model: BaseAlgorithm,
     env: gym.Env,
@@ -112,6 +106,7 @@ def rollout_episode(
             break
     return episode_reward, steps, infos
 
+
 def evaluate(
     model: BaseAlgorithm,
     env: gym.Env,
@@ -132,17 +127,19 @@ def evaluate(
             deterministic=deterministic,
             max_steps=max_steps,
         )
-        episodes_stats.append({
-            "episode": idx,
-            "reward": reward,
-            "length": length,
-            "infos": infos,
-        })
+        episodes_stats.append(
+            {
+                "episode": idx,
+                "reward": reward,
+                "length": length,
+                "infos": infos,
+            }
+        )
     return episodes_stats
 
 
 def aggregate_metrics(
-    per_episode: Iterable[Dict[str, Any]]
+    per_episode: Iterable[Dict[str, Any]],
 ) -> Dict[str, Union[float, int]]:
     rewards = np.array([entry["reward"] for entry in per_episode], dtype=np.float64)
     lengths = np.array([entry["length"] for entry in per_episode], dtype=np.int32)
@@ -163,6 +160,7 @@ def aggregate_metrics(
             summary[f"{field}_rate"] = float(np.mean(values))
     return summary
 
+
 def main() -> None:
     args = parse_args()
     run_dir = args.run_dir.expanduser().resolve()
@@ -171,7 +169,7 @@ def main() -> None:
     if args.seed is not None:
         set_global_seed(args.seed)
 
-    model_path = run_dir / metadata["model_path"]
+    model_path = metadata["model_path"]
     algo_name = metadata["model_class"]
     env_id = metadata["env_id"]
     env_config = metadata["env_config"]
