@@ -1,0 +1,17 @@
+[
+    {
+        "type": "Kinematics",
+        "vehicles_count": 15
+    },
+    {
+        "type": "GrayscaleObservation",
+        "observation_shape": [128, 64],
+        "stack_size": 4,
+        "weights": [0.2989, 0.5870, 0.1140],
+        "scaling": 1.75
+    },
+    {
+        "type": "TimeToCollision",
+        "horizon": 10
+    }
+]
