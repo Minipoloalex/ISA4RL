@@ -75,13 +75,13 @@ CORRELATION_KEYS = (
 
 ALGO_HYPERPAMETER_ENVS = {
     "lunarlander-v3",
-    "cartpole-v1",
-    "acrobot-v1",
-    "mountaincar-v0",
     "atari",
 }
 ALGO_FILES = ["a2c", "ppo", "dqn"]
-ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack"]
+ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
+
+OBS_CNN = ["GrayscaleObservation"]
+OBS_MLP = ["Kinematics", "TimeToCollision"]
 
 INTERMEDIATE_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
 
@@ -233,7 +233,7 @@ def build_env_configs() -> List[Dict[str, Any]]:
                     duration = choose_duration(lanes, vehicles, density, capacity)
                     config = {
                         "name": f"L{lanes}_V{vehicles}_D{str(density).replace('.', 'p')}",
-                        "env_id": "highway-v0",
+                        "env_id": "highway-fast-v0",
                         "config": {
                             "lanes_count": lanes,
                             "vehicles_count": vehicles,
@@ -286,10 +286,12 @@ def get_algo_configs():
         for env, hyperparams in hyperparam_config.items():
             for key in ALGO_KEYS_TO_DROP:
                 hyperparams.pop(key, None)
-            configs.append({
-                "algo": algo,
-                **hyperparams,
-            })
+            configs.append(
+                {
+                    "algo": algo,
+                    **hyperparams,
+                }
+            )
     return configs
 
 
@@ -314,10 +316,33 @@ def build_all_configs(
             "algo_config": algo_config,
             "timestamp": time.time_ns(),
         }
-    return list(map(conv_config, itertools.product(env_configs, obs_configs, algo_configs)))
+
+    def valid_config(config: Dict[str, Any]) -> bool:
+        return (
+            config["algo_config"]["policy"] == "CnnPolicy"
+            and config["obs_config"]["type"] in OBS_CNN
+        ) or (
+            config["algo_config"]["policy"] == "MlpPolicy"
+            and config["obs_config"]["type"] in OBS_MLP
+        )
+
+    configs = list(
+        filter(
+            valid_config,
+            map(
+                conv_config,
+                itertools.product(env_configs, obs_configs, algo_configs),
+            ),
+        )
+    )
+    for i, config in enumerate(configs):
+        config["id"] = i
+    return configs
+
 
 def get_all_configs() -> List[Dict[str, Any]]:
     return build_all_configs(get_env_configs(), get_obs_configs(), get_algo_configs())
+
 
 if __name__ == "__main__":
     env_configs = build_env_configs()
@@ -335,10 +360,9 @@ if __name__ == "__main__":
     print(f"\n\nAlgo Configs: {len(algo_configs)}")
     print(f"\n\nObservation Configs: {len(obs_configs)}")
 
-
     all_configs = get_all_configs()
     print(f"\n\nTotal number of configs: {len(all_configs)}")
     print("Example config:")
     pprint(all_configs[0])
-    
+
     save_json(Path(CONFIG_FILE), all_configs)
