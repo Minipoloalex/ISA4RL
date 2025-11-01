@@ -193,6 +193,36 @@ def _parse_policy_kwargs(raw_value: Any) -> Any:
     except Exception as exc:  # pragma: no cover - config errors surface at runtime
         raise ValueError(f"Failed to parse policy_kwargs='{raw_value}': {exc}") from exc
 
+def _linear_schedule(initial_value: float) -> Callable[[float], float]:
+    """
+    Linear learning rate schedule.
+
+    :param initial_value: Initial learning rate.
+    :return: schedule that computes
+      current learning rate depending on remaining progress
+    """
+    def func(progress_remaining: float) -> float:
+        """
+        Progress will decrease from 1 (beginning) to 0.
+
+        :param progress_remaining:
+        :return: current learning rate
+        """
+        return progress_remaining * initial_value
+    return func
+
+
+def _resolve_schedule_placeholders(value: Any) -> Any:
+    """Recursively replace lin_* placeholders with schedule callables."""
+    if isinstance(value, str) and value.startswith("lin_"):
+        parts = value.split("_")
+        assert(len(parts) == 2)
+        numeric_value = _coerce_numeric(parts[1])
+        if numeric_value is None:
+            raise ValueError(f"Invalid linear schedule specification: '{value}'")
+        return _linear_schedule(numeric_value)
+    return value
+
 def load_all_configs() -> List[RunConfig]:
     configs = get_all_configs()
     run_configs: List[RunConfig] = []
@@ -200,8 +230,12 @@ def load_all_configs() -> List[RunConfig]:
         env_config : Dict[str, Any] = config["env_config"]
         obs_config : Dict[str, Any] = config["obs_config"]
         algo_config: Dict[str, Any] = config["algo_config"]
-        id: int = config["timestamp"]
+
+        id: int = config["id"]
         folder_name: str = str(BASE_OUTPUT_PATH / str(id))
+
+        if "observation_shape" in obs_config:
+            obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
         env_id: str = env_config["env_id"]
         env_config: Dict[str, Any] = env_config["config"]
@@ -212,6 +246,9 @@ def load_all_configs() -> List[RunConfig]:
         policy = algo_config["policy"]
         for key in DISCARD_POLICY_PARAMS:
             algo_config.pop(key, None)
+
+        for param in algo_config.keys():
+            algo_config[param] = _resolve_schedule_placeholders(algo_config[param])
 
         policy_params: Dict[str, Any] = algo_config
         policy_kwargs = policy_params.get("policy_kwargs")
@@ -293,8 +330,14 @@ def is_extracted(config: RunConfig) -> bool:
     """Extracted iff metafeatures result artifact exists."""
     return _nonempty_file_in(Path(config.folder_name) / METAFEATURES_RESULTS_FILE)
 
-def unwrap_first_env(vec_env: VecEnv) -> gym.Env:
-    """Return the first underlying gym.Env from a VecEnv, if accessible."""
+def unwrap_first_env(vec_env: VecEnv) -> Optional[gym.Env]:
+    """Return the first underlying gym.Env from a VecEnv when accessible.
+
+    Subproc-based VecEnvs keep environments in separate processes, making the
+    raw env objects unpicklable across process boundaries. In that case we fall
+    back to returning ``None`` and callers are expected to query attributes via
+    ``VecEnv.get_attr`` instead.
+    """
     current: VecEnv = vec_env
     # Unwrap nested VecEnv wrappers if present (e.g. VecMonitor -> VecNormalize -> VecEnvBase)
     for _ in range(10):
@@ -305,8 +348,7 @@ def unwrap_first_env(vec_env: VecEnv) -> gym.Env:
         if next_vec is None:
             break
         current = next_vec
-    unwrapped_envs = current.get_attr("unwrapped")
-    return unwrapped_envs[0]
+    return None
 
 
 def vectorize_env(env: Union[gym.Env, VecEnv]) -> Tuple[VecEnv, Optional[gym.Env]]:

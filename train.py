@@ -107,6 +107,17 @@ def train(
     if progress_bar:
         learn_kwargs["progress_bar"] = True
 
+    # Gather environment metadata without forcing access to the raw env when using
+    # SubprocVecEnv, which keeps environments in separate processes
+    if base_env is not None:
+        env_config = base_env.unwrapped.config  # type: ignore
+        env_id = get_env_id(base_env)
+    else:
+        configs = env.get_attr("config")
+        env_config = configs[0]
+        specs = env.get_attr("spec")
+        env_id = specs[0].id
+
     before = time.perf_counter()
     model.learn(**learn_kwargs)
     elapsed = time.perf_counter() - before
@@ -122,8 +133,8 @@ def train(
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "model_path": str(model_path),
         "logs_dir": str(logs_dir),
-        "env_config": base_env.unwrapped.config, # type: ignore
-        "env_id": get_env_id(base_env),
+        "env_config": env_config,
+        "env_id": env_id,
         "model_class": model.__class__.__name__,
     }
     with (output_dir / TRAINING_METADATA_FILE).open("w", encoding="utf-8") as fp:
