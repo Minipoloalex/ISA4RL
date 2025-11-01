@@ -37,9 +37,9 @@ BASE_OUTPUT_PATH = Path("results")
 BASE_CONFIG_PATH = Path("config")
 BASE_IMAGES_PATH = Path("images")
 
-CONFIG_FILE = "configs.json"
 MODEL_FILE = "model.zip"
 
+CONFIG_PATH = BASE_CONFIG_PATH / "configs.json"
 ENV_CONFIG_PATH = BASE_CONFIG_PATH / "env-configs.json"
 ALGO_CONFIG_PATH = BASE_CONFIG_PATH / "algo-configs.json"
 OBS_CONFIG_PATH = BASE_CONFIG_PATH / "obs-configs.json"
@@ -178,7 +178,7 @@ def save_extract_results(results, folder_name: str):
     save_json(filepath, results)
 
 def get_all_configs() -> List[Dict[str, Any]]:
-    return read_json(Path(CONFIG_FILE))
+    return read_json(Path(CONFIG_PATH))
 
 def _parse_policy_kwargs(raw_value: Any) -> Any:
     """Convert string-encoded policy kwargs into a Python object."""

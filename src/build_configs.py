@@ -11,7 +11,7 @@ import time
 from utils import (
     save_json,
     read_json,
-    CONFIG_FILE,
+    CONFIG_PATH,
     BASE_CONFIG_PATH,
     ENV_CONFIG_PATH,
     ALGO_CONFIG_PATH,
@@ -365,4 +365,4 @@ if __name__ == "__main__":
     print("Example config:")
     pprint(all_configs[0])
 
-    save_json(Path(CONFIG_FILE), all_configs)
+    save_json(Path(CONFIG_PATH), all_configs)
