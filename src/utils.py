@@ -257,22 +257,23 @@ def load_all_configs() -> List[RunConfig]:
         algo_cls = map_algo_name_to_class(algo_name)
 
         vec_env_cls = DummyVecEnv if n_envs == 1 else SubprocVecEnv
+        vec_env_kwargs = None if n_envs == 1 else {"start_method": "spawn"}
         device = "cuda" if policy == "CnnPolicy" else "cpu"
-        # if policy == "CnnPolicy":
-        #     pass
 
         def env_factory(
             env_id: str = env_id,
             env_config: Dict[str, Any] = env_config,
             env_cnt: int = n_envs,
             vec_cls: type[DummyVecEnv] | type[SubprocVecEnv] = vec_env_cls,
+            vec_kwargs: Dict[str, Any] | None = vec_env_kwargs,
         ) -> VecEnv:
-            env_kwargs = {"config": env_config.copy()}
+            env_kwargs = {"config": env_config.copy(), "render_mode": None}
             return make_vec_env(
                 env_id,
                 n_envs=env_cnt,
                 vec_env_cls=vec_cls,
                 env_kwargs=env_kwargs,
+                vec_env_kwargs=vec_kwargs,
             )
 
         def eval_env_factory(
