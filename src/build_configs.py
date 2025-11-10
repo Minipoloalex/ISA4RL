@@ -13,7 +13,9 @@ from utils import (
     read_json,
     CONFIG_PATH,
     BASE_CONFIG_PATH,
-    ENV_CONFIG_PATH,
+    HIGHWAY_CONFIG_PATH,
+    ROUNDABOUT_CONFIG_PATH,
+    MERGE_CONFIG_PATH,
     ALGO_CONFIG_PATH,
     OBS_CONFIG_PATH,
     ALGO_CONFIG_HYPERPARAMS_PATH,
@@ -195,7 +197,7 @@ def save_correlation_plot(configs: Sequence[Dict[str, Any]], output_path: Path) 
     plt.close(fig)
 
 
-def build_env_configs() -> List[Dict[str, Any]]:
+def build_highway_configs() -> List[Dict[str, Any]]:
     """Generate a diverse collection of highway-env configurations.
 
     The sampler covers a wide spectrum of lane counts, traffic densities, and
@@ -292,15 +294,25 @@ def get_algo_configs():
                     **hyperparams,
                 }
             )
+    for id, conf in enumerate(configs):
+        conf["id"] = id
     return configs
 
 
 def get_obs_configs():
-    return read_json(OBS_CONFIG_PATH)
+    configs = read_json(OBS_CONFIG_PATH)
+    for id, conf in enumerate(configs):
+        conf["id"] = id
+    return configs
 
+def get_roundabout_configs():
+    return read_json(ROUNDABOUT_CONFIG_PATH)
 
-def get_env_configs():
-    return read_json(ENV_CONFIG_PATH)
+def get_merge_configs():
+    return read_json(MERGE_CONFIG_PATH)
+
+def get_highway_configs():
+    return read_json(HIGHWAY_CONFIG_PATH)
 
 
 def build_all_configs(
@@ -341,12 +353,12 @@ def build_all_configs(
 
 
 def get_all_configs() -> List[Dict[str, Any]]:
-    return build_all_configs(get_env_configs(), get_obs_configs(), get_algo_configs())
-
+    all_env_configs = get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+    return build_all_configs(all_env_configs, get_obs_configs(), get_algo_configs())
 
 if __name__ == "__main__":
-    env_configs = build_env_configs()
-    save_json(ENV_CONFIG_PATH, env_configs)
+    env_configs = build_highway_configs()
+    save_json(HIGHWAY_CONFIG_PATH, env_configs)
 
     print(f"Environment configs: {len(env_configs)}")
 
