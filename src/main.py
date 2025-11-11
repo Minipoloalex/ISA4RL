@@ -1,6 +1,3 @@
-
-from __future__ import annotations
-
 import argparse
 import json
 import math
@@ -16,7 +13,7 @@ from pprint import pprint
 import numpy as np
 import yaml
 
-from configs import RunConfig
+from configs import RunConfig, InstanceConfig
 
 from train import train
 from evaluate import evaluate, show_eval_results
@@ -38,43 +35,19 @@ from utils import (
     is_evaluated,
     is_extracted,
     load_all_run_configs,
+    load_all_instance_configs,
 )
 
-try:
-    import gymnasium as gym
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("gymnasium is required: pip install gymnasium") from exc
-
-try:
-    import highway_env  # noqa: F401  # ensures envs are registered
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("highway-env is required: pip install highway-env") from exc
-
-try:
-    from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
-    from stable_baselines3.common.base_class import BaseAlgorithm
-    from stable_baselines3.common.callbacks import BaseCallback
-except ImportError as exc:  # pragma: no cover
-    raise ImportError(
-        "stable-baselines3 is required for training probes and portfolio agents."
-    ) from exc
-
-try:
-    from sklearn.linear_model import Ridge
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("scikit-learn is required: pip install scikit-learn") from exc
-
-try:
-    import pandas as pd
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("pandas is required: pip install pandas") from exc
-
-try:
-    import torch
-    import torch.nn as nn
-    import torch.optim as optim
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("PyTorch is required for trajectory embeddings.") from exc
+import gymnasium as gym
+import highway_env
+from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
+from stable_baselines3.common.base_class import BaseAlgorithm
+from stable_baselines3.common.callbacks import BaseCallback
+from sklearn.linear_model import Ridge
+import pandas as pd
+import torch
+import torch.nn as nn
+import torch.optim as optim
 
 def train_agents(run_configs: List[RunConfig]):
     train_configs = filter(lambda config: not is_trained(config), run_configs)
@@ -139,22 +112,27 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     )
     args = parser.parse_args(argv)
 
-    run_configs: List[RunConfig] = load_all_run_configs()
-    total = len(run_configs)
+    configs = (
+        load_all_instance_configs()
+        if args.task == "extract"
+        else load_all_run_configs()
+    )
+
+    total = len(configs)
     start = max(0, args.start)
     end = total if args.end is None else max(start, min(total, args.end))
-    selected = run_configs[start:end]
+    selected = configs[start:end]
 
     if not selected:
         print("No run configurations selected. Nothing to do.")
         return
 
-    task_map: Dict[str, Callable[[List[RunConfig]], None]] = {
+    task_map: Dict[str, Callable[[List[InstanceConfig | RunConfig]], None]] = {
         "train": train_agents,
         "evaluate": eval_agents,
         "extract": extract_metafeatures,
-    }
-    task_map[args.task](selected)
+    }   # type: ignore
+    task_map[args.task](selected)   # type: ignore
 
 
 if __name__ == "__main__":

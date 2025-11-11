@@ -23,7 +23,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
-from configs import RunConfig
+from configs import RunConfig, InstanceConfig
 import gymnasium as gym
 
 AlgorithmName = str
@@ -77,7 +77,7 @@ def save_json(file: Path, results: Dict[str, Any] | List[Dict[str, Any]] | List[
 def ensure_dir(path: str | Path) -> None:
     if type(path) is str:
         path = Path(path)
-    path.mkdir(parents=True, exist_ok=True)
+    path.mkdir(parents=True, exist_ok=True) # type: ignore
 
 
 def discretize(obs: np.ndarray, clip_range: Tuple[float, float] = (-5.0, 5.0), bins_per_dim: int = 15) -> Tuple[int, ...]:
@@ -327,6 +327,43 @@ def load_all_run_configs() -> List[RunConfig]:
             )
         )
     return run_configs
+
+def load_all_instance_configs() -> List[InstanceConfig]:
+    configs = get_all_instance_configs()
+    instance_configs: List[InstanceConfig] = []
+    for config in configs:
+        env_config : Dict[str, Any] = config["env_config"]
+        obs_config : Dict[str, Any] = config["obs_config"]
+
+        id: int = config["id"]
+        id_env: int = env_config["id"]
+        id_obs: int = obs_config["id"]
+        folder_name: str = str(BASE_OUTPUT_PATH / str(id))
+
+        if "observation_shape" in obs_config:
+            obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
+
+        env_id: str = env_config["env_id"]
+        env_config: Dict[str, Any] = env_config["config"]
+        env_config["observation"] = obs_config
+
+        def eval_env_factory(
+            env_id: str = env_id,
+            env_config: Dict[str, Any] = env_config,
+        ) -> gym.Env:
+            env_kwargs = {"config": env_config.copy()}
+            return gym.make(env_id, max_episode_steps=None, disable_env_checker=None, **env_kwargs)
+
+        instance_configs.append(
+            InstanceConfig(
+                id=id,
+                id_env_config=id_env,
+                id_obs_config=id_obs,
+                make_eval_env=eval_env_factory,
+                eval_seed=1,
+            )
+        )
+    return instance_configs
 
 def _nonempty_file_in(filepath: Path) -> bool:
     """Return True if filepath exists, is a regular file, and is non-empty."""
