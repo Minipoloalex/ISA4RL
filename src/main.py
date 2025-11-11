@@ -16,7 +16,7 @@ from pprint import pprint
 import numpy as np
 import yaml
 
-from run_config import RunConfig
+from configs import RunConfig
 
 from train import train
 from evaluate import evaluate, show_eval_results
@@ -37,7 +37,7 @@ from utils import (
     is_trained,
     is_evaluated,
     is_extracted,
-    load_all_configs,
+    load_all_run_configs,
 )
 
 try:
@@ -110,7 +110,7 @@ def eval_agents(run_configs: List[RunConfig]):
         show_eval_results(eval_results)
 
 def extract_metafeatures(run_configs: List[RunConfig]):
-    metafeature_configs = filter(lambda config: is_trained(config) and not is_extracted(config), run_configs)
+    metafeature_configs = filter(lambda config: not is_extracted(config), run_configs)
     for config in tqdm(metafeature_configs):
         extract_results = compute_metafeatures(config)
         save_extract_results(extract_results, config.folder_name)
@@ -139,7 +139,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     )
     args = parser.parse_args(argv)
 
-    run_configs: List[RunConfig] = load_all_configs()
+    run_configs: List[RunConfig] = load_all_run_configs()
     total = len(run_configs)
     start = max(0, args.start)
     end = total if args.end is None else max(start, min(total, args.end))

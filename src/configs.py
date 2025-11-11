@@ -11,30 +11,44 @@ EvalEnvFactory = Callable[[], gym.Env]
 
 
 @dataclass
-class RunConfig:
+class InstanceConfig:
     id: int
-    folder_name: str
-    make_env: EnvFactory
+    id_env_config: int
+    id_obs_config: int
     make_eval_env: EvalEnvFactory
-    make_model: ModelFactory
-    timesteps: int
-    train_seed: int
     eval_seed: int
-    _env: Optional[VecEnv] = field(default=None, init=False, repr=False)
-    _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
     _eval_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
-
-    def ensure_env(self) -> VecEnv:
-        """Instantiate the environment lazily and cache it for reuse."""
-        if self._env is None:
-            self._env = self.make_env()
-        return self._env
 
     def ensure_eval_env(self) -> gym.Env:
         """Instantiate a single-environment instance for evaluation."""
         if self._eval_env is None:
             self._eval_env = self.make_eval_env()
         return self._eval_env
+
+    def close(self) -> None:
+        """Close any cached environment and drop references to heavy objects."""
+        if self._eval_env is not None:
+            try:
+                self._eval_env.close()
+            finally:
+                self._eval_env = None
+
+@dataclass
+class RunConfig(InstanceConfig):
+    id_algo_config: int
+    make_model: ModelFactory
+    make_env: EnvFactory
+    timesteps: int
+    train_seed: int
+    folder_name: str
+    _env: Optional[VecEnv] = field(default=None, init=False, repr=False)
+    _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
+
+    def ensure_env(self) -> VecEnv:
+        """Instantiate the environment lazily and cache it for reuse."""
+        if self._env is None:
+            self._env = self.make_env()
+        return self._env
 
     def ensure_model(self) -> BaseAlgorithm:
         """Instantiate the algorithm lazily and cache it alongside the env."""
@@ -45,14 +59,11 @@ class RunConfig:
 
     def close(self) -> None:
         """Close any cached environment and drop references to heavy objects."""
+        super().close()
         if self._env is not None:
             try:
                 self._env.close()
             finally:
                 self._env = None
-        if self._eval_env is not None:
-            try:
-                self._eval_env.close()
-            finally:
-                self._eval_env = None
+
         self._model = None

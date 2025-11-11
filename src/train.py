@@ -80,11 +80,7 @@ def train(
     base_env = unwrap_first_env(env)
     if seed is not None:
         set_global_seed(seed)
-        try:
-            env.seed(seed)
-        except TypeError:
-            print("env.reset() has no seed parameter")
-            env.reset()
+        env.seed(seed)
         if hasattr(env.action_space, "seed"):
             env.action_space.seed(seed)
         if hasattr(env.observation_space, "seed"):

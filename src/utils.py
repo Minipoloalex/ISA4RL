@@ -23,7 +23,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
-from run_config import RunConfig
+from configs import RunConfig
 import gymnasium as gym
 
 AlgorithmName = str
@@ -40,7 +40,9 @@ BASE_IMAGES_PATH = Path("images")
 MODEL_FILE = "model.zip"
 
 CONFIG_PATH = BASE_CONFIG_PATH / "configs.json"
-ENV_CONFIG_PATH = BASE_CONFIG_PATH / "env-configs.json"
+HIGHWAY_CONFIG_PATH = BASE_CONFIG_PATH / "highway-configs.json"
+ROUNDABOUT_CONFIG_PATH = BASE_CONFIG_PATH / "roundabout-configs.json"
+MERGE_CONFIG_PATH = BASE_CONFIG_PATH / "merge-configs.json"
 ALGO_CONFIG_PATH = BASE_CONFIG_PATH / "algo-configs.json"
 OBS_CONFIG_PATH = BASE_CONFIG_PATH / "obs-configs.json"
 
@@ -48,7 +50,7 @@ ALGO_CONFIG_HYPERPARAMS_PATH = BASE_CONFIG_PATH / "rlzoo-algo-hyperparams"
 
 TRAINING_METADATA_FILE = "training_metadata.json"
 EVALUATION_RESULTS_FILE = "eval_results.json"
-METAFEATURES_RESULTS_FILE = "metafeatures_result.json"
+METAFEATURES_RESULTS_FILE = "metafeatures.json"
 
 TRAIN_TIMESTEPS = int(1e5)
 
@@ -71,7 +73,9 @@ def save_json(file: Path, results: Dict[str, Any] | List[Dict[str, Any]] | List[
     with file.open("w", encoding="utf-8") as fp:
         json.dump(results, fp, indent=2, default=_json_default)
 
-def ensure_dir(path: Path) -> None:
+def ensure_dir(path: str | Path) -> None:
+    if type(path) is str:
+        path = Path(path)
     path.mkdir(parents=True, exist_ok=True)
 
 
@@ -170,10 +174,12 @@ def load_training_metadata(run_dir: Path) -> Dict[str, Any]:
         return json.load(handle)
 
 def save_eval_results(results: List[Dict[str, Any]], folder_name: str):
+    ensure_dir(folder_name)
     filepath = Path(folder_name) / EVALUATION_RESULTS_FILE
     save_json(filepath, results)
 
 def save_extract_results(results, folder_name: str):
+    ensure_dir(folder_name)
     filepath = Path(folder_name) / METAFEATURES_RESULTS_FILE
     save_json(filepath, results)
 
@@ -223,7 +229,7 @@ def _resolve_schedule_placeholders(value: Any) -> Any:
         return _linear_schedule(numeric_value)
     return value
 
-def load_all_configs() -> List[RunConfig]:
+def load_all_run_configs() -> List[RunConfig]:
     configs = get_all_configs()
     run_configs: List[RunConfig] = []
     for config in configs:
@@ -232,6 +238,9 @@ def load_all_configs() -> List[RunConfig]:
         algo_config: Dict[str, Any] = config["algo_config"]
 
         id: int = config["id"]
+        id_env: int = env_config["id"]
+        id_obs: int = obs_config["id"]
+        id_algo: int = algo_config["id"]
         folder_name: str = str(BASE_OUTPUT_PATH / str(id))
 
         if "observation_shape" in obs_config:
@@ -301,6 +310,9 @@ def load_all_configs() -> List[RunConfig]:
         run_configs.append(
             RunConfig(
                 id=id,
+                id_env_config=id_env,
+                id_obs_config=id_obs,
+                id_algo_config=id_algo,
                 folder_name=folder_name,
                 make_env=env_factory,
                 make_eval_env=eval_env_factory,
