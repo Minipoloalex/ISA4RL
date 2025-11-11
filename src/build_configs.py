@@ -11,7 +11,8 @@ import time
 from utils import (
     save_json,
     read_json,
-    CONFIG_PATH,
+    RUN_CONFIG_PATH,
+    INSTANCE_CONFIG_PATH,
     BASE_CONFIG_PATH,
     HIGHWAY_CONFIG_PATH,
     ROUNDABOUT_CONFIG_PATH,
@@ -319,13 +320,20 @@ def build_all_configs(
     env_configs: List[Dict[str, Any]],
     obs_configs: List[Dict[str, Any]],
     algo_configs: List[Dict[str, Any]],
-) -> List[Dict[str, Any]]:
-    def conv_config(config: INTERMEDIATE_CONFIG_TYPE) -> Dict[str, Any]:
+) -> Tuple[List[Dict[str, Any]],List[Dict[str,Any]]]:
+    def conv_run_config(config: INTERMEDIATE_CONFIG_TYPE) -> Dict[str, Any]:
         env_config, obs_config, algo_config = config
         return {
             "env_config": env_config,
             "obs_config": obs_config,
             "algo_config": algo_config,
+            "timestamp": time.time_ns(),
+        }
+    def conv_instance_config(config: Tuple[Dict[str, Any],Dict[str,Any]]) -> Dict[str, Any]:
+        env_config, obs_config = config
+        return {
+            "env_config": env_config,
+            "obs_config": obs_config,
             "timestamp": time.time_ns(),
         }
 
@@ -338,22 +346,32 @@ def build_all_configs(
             and config["obs_config"]["type"] in OBS_MLP
         )
 
-    configs = list(
+    run_configs = list(
         filter(
             valid_config,
             map(
-                conv_config,
+                conv_run_config,
                 itertools.product(env_configs, obs_configs, algo_configs),
             ),
         )
     )
-    for i, config in enumerate(configs):
+    instance_configs = list(
+        map(
+            conv_instance_config,
+            itertools.product(env_configs, obs_configs),
+        )
+    )
+    for i, config in enumerate(run_configs):
         config["id"] = i
-    return configs
+    for i, config in enumerate(instance_configs):
+        config["id"] = i
+    return run_configs, instance_configs
 
 
-def get_all_configs() -> List[Dict[str, Any]]:
+def get_all_configs() -> Tuple[List[Dict[str, Any]],List[Dict[str, Any]]]:
     all_env_configs = get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+    for id, conf in enumerate(all_env_configs):
+        conf["id"] = id
     return build_all_configs(all_env_configs, get_obs_configs(), get_algo_configs())
 
 if __name__ == "__main__":
@@ -372,9 +390,15 @@ if __name__ == "__main__":
     print(f"\n\nAlgo Configs: {len(algo_configs)}")
     print(f"\n\nObservation Configs: {len(obs_configs)}")
 
-    all_configs = get_all_configs()
-    print(f"\n\nTotal number of configs: {len(all_configs)}")
+    all_run_configs, all_instance_configs = get_all_configs()
+    print(f"\n\nTotal number of run configs: {len(all_run_configs)}")
     print("Example config:")
-    pprint(all_configs[0])
+    pprint(all_run_configs[0])
 
-    save_json(Path(CONFIG_PATH), all_configs)
+    print(f"\n\nTotal number of instance configs: {len(all_run_configs)}")
+    print("Example config:")
+    pprint(all_instance_configs[0])
+
+
+    save_json(Path(RUN_CONFIG_PATH), all_run_configs)
+    save_json(Path(INSTANCE_CONFIG_PATH), all_instance_configs)

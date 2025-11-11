@@ -39,7 +39,8 @@ BASE_IMAGES_PATH = Path("images")
 
 MODEL_FILE = "model.zip"
 
-CONFIG_PATH = BASE_CONFIG_PATH / "configs.json"
+RUN_CONFIG_PATH = BASE_CONFIG_PATH / "configs.json"
+INSTANCE_CONFIG_PATH = BASE_CONFIG_PATH / "instance_configs.json"
 HIGHWAY_CONFIG_PATH = BASE_CONFIG_PATH / "highway-configs.json"
 ROUNDABOUT_CONFIG_PATH = BASE_CONFIG_PATH / "roundabout-configs.json"
 MERGE_CONFIG_PATH = BASE_CONFIG_PATH / "merge-configs.json"
@@ -184,7 +185,10 @@ def save_extract_results(results, folder_name: str):
     save_json(filepath, results)
 
 def get_all_configs() -> List[Dict[str, Any]]:
-    return read_json(Path(CONFIG_PATH))
+    return read_json(RUN_CONFIG_PATH)
+
+def get_all_instance_configs() -> List[Dict[str, Any]]:
+    return read_json(INSTANCE_CONFIG_PATH)
 
 def _parse_policy_kwargs(raw_value: Any) -> Any:
     """Convert string-encoded policy kwargs into a Python object."""
