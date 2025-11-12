@@ -80,8 +80,7 @@ def eval_agents(run_configs: List[RunConfig]):
             model=model,
             env=eval_env,
             n_episodes=10,
-            max_steps=None,
-            deterministic=True,
+            deterministic=False,
             seed=config.eval_seed,
         )
         save_eval_results(eval_results, config.train_folder_name)

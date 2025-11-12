@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import yaml
 
 import itertools
-from typing import List, Dict, Any, Iterable, Tuple, Sequence
+from typing import List, Dict, Any, Iterable, Tuple, Sequence, Optional
 from pathlib import Path
 from pprint import pprint
 import time
@@ -22,6 +22,7 @@ from utils import (
     ALGO_CONFIG_HYPERPARAMS_PATH,
     BASE_IMAGES_PATH,
     ensure_dir,
+    annotate_ids,
 )
 
 # Config generation parameters
@@ -86,7 +87,15 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
 
-INTERMEDIATE_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
+TRAIN_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
+EVAL_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str,Any]]
+
+EVAL_BASE_SEED = 1000
+EVAL_SEED_COUNT = {
+    "highway": 1,
+    "merge": 50,
+    "roundabout": 50,
+}
 
 
 def lane_capacity(lanes: int) -> float:
@@ -257,6 +266,19 @@ def build_highway_configs() -> List[Dict[str, Any]]:
     return configs
 
 
+def build_seeded_configs(config: Dict[str, Any], seed_cnt: int, base_seed: int) -> List[Dict[str, Any]]:
+    seeds = range(base_seed, base_seed + seed_cnt)
+    seeded_configs = [
+        {
+            **config,
+            "eval_seed": seed,
+        }
+        for seed in seeds
+    ]
+    return seeded_configs
+    
+
+
 def extract_algo_configs():
     aggregated: Dict[str, Dict[str, Any]] = {}
 
@@ -295,16 +317,11 @@ def get_algo_configs():
                     **hyperparams,
                 }
             )
-    for id, conf in enumerate(configs):
-        conf["id"] = id
-    return configs
-
+    return annotate_ids(configs)
 
 def get_obs_configs():
     configs = read_json(OBS_CONFIG_PATH)
-    for id, conf in enumerate(configs):
-        conf["id"] = id
-    return configs
+    return annotate_ids(configs)
 
 def get_roundabout_configs():
     return read_json(ROUNDABOUT_CONFIG_PATH)
@@ -317,11 +334,12 @@ def get_highway_configs():
 
 
 def build_all_configs(
-    env_configs: List[Dict[str, Any]],
+    env_configs_train: List[Dict[str, Any]],
+    env_configs_eval: List[Dict[str, Any]],  # these also include some configurations where only the seed varies
     obs_configs: List[Dict[str, Any]],
     algo_configs: List[Dict[str, Any]],
 ) -> Tuple[List[Dict[str, Any]],List[Dict[str,Any]]]:
-    def conv_run_config(config: INTERMEDIATE_CONFIG_TYPE) -> Dict[str, Any]:
+    def conv_run_config(config: TRAIN_CONFIG_TYPE) -> Dict[str, Any]:
         env_config, obs_config, algo_config = config
         return {
             "env_config": env_config,
@@ -329,7 +347,7 @@ def build_all_configs(
             "algo_config": algo_config,
             "timestamp": time.time_ns(),
         }
-    def conv_instance_config(config: Tuple[Dict[str, Any],Dict[str,Any]]) -> Dict[str, Any]:
+    def conv_instance_config(config: EVAL_CONFIG_TYPE) -> Dict[str, Any]:
         env_config, obs_config = config
         return {
             "env_config": env_config,
@@ -351,28 +369,31 @@ def build_all_configs(
             valid_config,
             map(
                 conv_run_config,
-                itertools.product(env_configs, obs_configs, algo_configs),
+                itertools.product(env_configs_train, obs_configs, algo_configs),
             ),
         )
     )
     instance_configs = list(
         map(
             conv_instance_config,
-            itertools.product(env_configs, obs_configs),
+            itertools.product(env_configs_eval, obs_configs),
         )
     )
-    for i, config in enumerate(run_configs):
-        config["id"] = i
-    for i, config in enumerate(instance_configs):
-        config["id"] = i
+    run_configs = annotate_ids(run_configs)
+    instance_configs = annotate_ids(instance_configs)
     return run_configs, instance_configs
 
 
 def get_all_configs() -> Tuple[List[Dict[str, Any]],List[Dict[str, Any]]]:
-    all_env_configs = get_highway_configs() + get_roundabout_configs() + get_merge_configs()
-    for id, conf in enumerate(all_env_configs):
-        conf["id"] = id
-    return build_all_configs(all_env_configs, get_obs_configs(), get_algo_configs())
+    env_configs_train = get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+    env_configs_eval = []
+    for train_config in env_configs_train:
+        env_name = train_config["env_id"].split("-")[0]
+        env_configs_eval.extend(build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name]))
+
+    env_configs_train = annotate_ids(env_configs_train)
+    env_configs_eval = annotate_ids(env_configs_eval)
+    return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 
 if __name__ == "__main__":
     env_configs = build_highway_configs()

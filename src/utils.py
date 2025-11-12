@@ -414,3 +414,12 @@ def vectorize_env(env: Union[gym.Env, VecEnv]) -> Tuple[VecEnv, Optional[gym.Env
     if isinstance(env, VecEnv):
         return env, unwrap_first_env(env)
     return DummyVecEnv([lambda: env]), env
+
+def annotate_ids(lst: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
+    return [
+        {
+            **d,
+            "id": id,
+        }
+        for id, d in enumerate(lst)
+    ]

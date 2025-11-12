@@ -1,13 +1,3 @@
-"""Evaluate a Stable-Baselines3 agent trained with ``train.py``.
-
-The script restores a saved model, rebuilds the matching highway-env instance,
-and rolls out multiple evaluation episodes while tracking per-episode rewards
-and optional environment-specific metrics (e.g., crashes).  Results are printed
-to stdout and can be written to JSON for downstream analysis.
-"""
-
-from __future__ import annotations
-
 import argparse
 import json
 from pathlib import Path
@@ -15,17 +5,8 @@ from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
 
 from stable_baselines3.common.base_class import BaseAlgorithm
 import numpy as np
-
-try:
-    import gymnasium as gym
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("gymnasium is required: pip install gymnasium") from exc
-
-try:  # ensures highway environments are registered
-    import highway_env  # noqa: F401
-except ImportError as exc:  # pragma: no cover
-    raise ImportError("highway-env is required: pip install highway-env") from exc
-
+import gymnasium as gym
+import highway_env
 
 from utils import (
     _json_default,
@@ -87,13 +68,13 @@ def rollout_episode(
     model: BaseAlgorithm,
     env: gym.Env,
     *,
+    env_seed: int,
     deterministic: bool,
-    max_steps: Optional[int],
 ) -> Tuple[float, int, List[Dict[str, Any]]]:
     episode_reward = 0.0
     steps = 0
     infos: List[Dict[str, Any]] = []
-    obs, _ = env.reset()
+    obs, info = env.reset(env_seed)
     while True:
         action, _ = model.predict(obs, deterministic=deterministic)
         obs, reward, terminated, truncated, info = env.step(action)
@@ -102,29 +83,25 @@ def rollout_episode(
         infos.append(info)
         if terminated or truncated:
             break
-        if max_steps is not None and steps >= max_steps:
-            break
     return episode_reward, steps, infos
 
 def evaluate(
     model: BaseAlgorithm,
     env: gym.Env,
     n_episodes: int,
-    max_steps: Optional[int],
     *,
     deterministic: bool,
-    seed: int,
+    env_seed: int,
     **kwargs,
 ) -> List[Dict[str, Any]]:
     episodes_stats: List[Dict[str, Any]] = []
     for idx in range(n_episodes):
-        env_seed = seed + idx
         env.reset(seed=env_seed)
         reward, length, infos = rollout_episode(
             model,
             env,
+            env_seed=env_seed,
             deterministic=deterministic,
-            max_steps=max_steps,
         )
         episodes_stats.append(
             {
