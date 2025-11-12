@@ -87,10 +87,10 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
 
-TRAIN_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
-EVAL_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str,Any]]
+INTERMEDIATE_TRAIN_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
+INTERMEDIATE_EVAL_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str,Any]]
 
-EVAL_BASE_SEED = 1000
+EVAL_BASE_SEED = int(1e6)
 EVAL_SEED_COUNT = {
     "highway": 1,
     "merge": 50,
@@ -266,7 +266,7 @@ def build_highway_configs() -> List[Dict[str, Any]]:
     return configs
 
 
-def build_seeded_configs(config: Dict[str, Any], seed_cnt: int, base_seed: int) -> List[Dict[str, Any]]:
+def build_seeded_configs(config: Dict[str, Any], base_seed: int, seed_cnt: int) -> List[Dict[str, Any]]:
     seeds = range(base_seed, base_seed + seed_cnt)
     seeded_configs = [
         {
@@ -276,7 +276,6 @@ def build_seeded_configs(config: Dict[str, Any], seed_cnt: int, base_seed: int) 
         for seed in seeds
     ]
     return seeded_configs
-    
 
 
 def extract_algo_configs():
@@ -339,7 +338,7 @@ def build_all_configs(
     obs_configs: List[Dict[str, Any]],
     algo_configs: List[Dict[str, Any]],
 ) -> Tuple[List[Dict[str, Any]],List[Dict[str,Any]]]:
-    def conv_run_config(config: TRAIN_CONFIG_TYPE) -> Dict[str, Any]:
+    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG_TYPE) -> Dict[str, Any]:
         env_config, obs_config, algo_config = config
         return {
             "env_config": env_config,
@@ -347,7 +346,7 @@ def build_all_configs(
             "algo_config": algo_config,
             "timestamp": time.time_ns(),
         }
-    def conv_instance_config(config: EVAL_CONFIG_TYPE) -> Dict[str, Any]:
+    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG_TYPE) -> Dict[str, Any]:
         env_config, obs_config = config
         return {
             "env_config": env_config,
@@ -385,7 +384,11 @@ def build_all_configs(
 
 
 def get_all_configs() -> Tuple[List[Dict[str, Any]],List[Dict[str, Any]]]:
-    env_configs_train = get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+    env_configs_train = [
+        build_seeded_configs(config, EVAL_BASE_SEED, 1)[0]
+        for config in
+        get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+    ]
     env_configs_eval = []
     for train_config in env_configs_train:
         env_name = train_config["env_id"].split("-")[0]
@@ -416,7 +419,7 @@ if __name__ == "__main__":
     print("Example config:")
     pprint(all_run_configs[0])
 
-    print(f"\n\nTotal number of instance configs: {len(all_run_configs)}")
+    print(f"\n\nTotal number of instance configs: {len(all_instance_configs)}")
     print("Example config:")
     pprint(all_instance_configs[0])
 
