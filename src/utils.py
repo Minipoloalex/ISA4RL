@@ -60,7 +60,7 @@ METAFEATURES_RESULTS_FILE = "metafeatures.json"
 TRAIN_TIMESTEPS = int(1e5)
 
 # Mostly refer to the environment
-DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize"]
+DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize", "id"]
 
 
 def set_global_seed(seed: int) -> None:
