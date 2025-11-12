@@ -17,6 +17,7 @@ class InstanceConfig:
     id_obs_config: int
     make_eval_env: EvalEnvFactory
     eval_seed: int
+    instance_folder_name: str
     _eval_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
 
     def ensure_eval_env(self) -> gym.Env:
@@ -40,7 +41,7 @@ class RunConfig(InstanceConfig):
     make_env: EnvFactory
     timesteps: int
     train_seed: int
-    folder_name: str
+    train_folder_name: str
     _env: Optional[VecEnv] = field(default=None, init=False, repr=False)
     _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
 

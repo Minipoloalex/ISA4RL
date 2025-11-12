@@ -8,6 +8,7 @@ from collections import Counter, deque, defaultdict
 from dataclasses import dataclass, asdict
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple, Union
+from functools import partial
 import torch
 import torch.nn as nn
 import torch.optim as optim
@@ -36,6 +37,9 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
 BASE_OUTPUT_PATH = Path("results")
 BASE_CONFIG_PATH = Path("config")
 BASE_IMAGES_PATH = Path("images")
+
+TRAIN_FOLDER = "train"
+METAFEATURES_FOLDER = "metafeatures"
 
 MODEL_FILE = "model.zip"
 
@@ -152,6 +156,42 @@ def build_env(env_id: str, config: Dict[str, Any]) -> gym.Env:
     }
     return gym.make(env_id, **env_kwargs)
 
+def _make_train_env(
+    env_id: str,
+    env_config: Dict[str, Any],
+    env_cnt: int,
+    vec_cls: type[DummyVecEnv] | type[SubprocVecEnv],
+    vec_kwargs: Dict[str, Any] | None,
+) -> VecEnv:
+    env_kwargs = {"config": env_config.copy(), "render_mode": None}
+    return make_vec_env(
+        env_id,
+        n_envs=env_cnt,
+        vec_env_cls=vec_cls,
+        env_kwargs=env_kwargs,
+        vec_env_kwargs=vec_kwargs,
+    )
+
+def _make_eval_env(env_id: str, env_config: Dict[str, Any]) -> gym.Env:
+    env_kwargs = {"config": env_config.copy()}
+    return gym.make(env_id, max_episode_steps=None, disable_env_checker=None, **env_kwargs)
+
+def _make_model(
+    env: VecEnv,
+    *,
+    algo_cls: type[BaseAlgorithm],
+    folder_name: str,
+    policy_params: Dict[str, Any],
+    device: str,
+) -> BaseAlgorithm:
+    model_path = Path(folder_name) / MODEL_FILE
+    if _nonempty_file_in(model_path):
+        model = algo_cls.load(str(model_path), env=env, device=device)
+        model.tensorboard_log = folder_name
+        return model
+    return algo_cls(env=env, tensorboard_log=folder_name, device=device, **policy_params)
+
+
 def get_env_id(env: gym.Env):
     assert(env.spec is not None)
     return env.spec.id
@@ -245,7 +285,8 @@ def load_all_run_configs() -> List[RunConfig]:
         id_env: int = env_config["id"]
         id_obs: int = obs_config["id"]
         id_algo: int = algo_config["id"]
-        folder_name: str = str(BASE_OUTPUT_PATH / str(id))
+        train_folder_name: str = str(BASE_OUTPUT_PATH / TRAIN_FOLDER / str(id))
+        instance_folder_name: str = str(BASE_OUTPUT_PATH / METAFEATURES_FOLDER / f"ENV{id_env}_OBS{id_obs}")
 
         if "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
@@ -273,54 +314,23 @@ def load_all_run_configs() -> List[RunConfig]:
         vec_env_kwargs = None if n_envs == 1 else {"start_method": "spawn"}
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
-        def env_factory(
-            env_id: str = env_id,
-            env_config: Dict[str, Any] = env_config,
-            env_cnt: int = n_envs,
-            vec_cls: type[DummyVecEnv] | type[SubprocVecEnv] = vec_env_cls,
-            vec_kwargs: Dict[str, Any] | None = vec_env_kwargs,
-        ) -> VecEnv:
-            env_kwargs = {"config": env_config.copy(), "render_mode": None}
-            return make_vec_env(
-                env_id,
-                n_envs=env_cnt,
-                vec_env_cls=vec_cls,
-                env_kwargs=env_kwargs,
-                vec_env_kwargs=vec_kwargs,
-            )
-
-        def eval_env_factory(
-            env_id: str = env_id,
-            env_config: Dict[str, Any] = env_config,
-        ) -> gym.Env:
-            env_kwargs = {"config": env_config.copy()}
-            return gym.make(env_id, max_episode_steps=None, disable_env_checker=None, **env_kwargs)
-
-        def model_factory(
-            env: VecEnv,
-            *,
-            algo_cls: type[BaseAlgorithm] = algo_cls,
-            tensorboard_log: str = folder_name,
-            policy_params: Dict[str, Any] = policy_params,
-            device: str = device,
-        ) -> BaseAlgorithm:
-            model_path = Path(folder_name) / MODEL_FILE
-            if _nonempty_file_in(model_path):
-                model = algo_cls.load(str(model_path), env=env, device=device)
-                model.tensorboard_log = tensorboard_log
-                return model
-            return algo_cls(env=env, tensorboard_log=tensorboard_log, device=device, **policy_params)
-
         run_configs.append(
             RunConfig(
                 id=id,
                 id_env_config=id_env,
                 id_obs_config=id_obs,
                 id_algo_config=id_algo,
-                folder_name=folder_name,
-                make_env=env_factory,
-                make_eval_env=eval_env_factory,
-                make_model=model_factory,
+                instance_folder_name=instance_folder_name,
+                train_folder_name=train_folder_name,
+                make_env=partial(_make_train_env, env_id, env_config, n_envs, vec_env_cls, vec_env_kwargs),
+                make_eval_env=partial(_make_eval_env, env_id, env_config),
+                make_model=partial(
+                    _make_model,
+                    algo_cls=algo_cls,
+                    folder_name=train_folder_name,
+                    policy_params=policy_params,
+                    device=device,
+                ),
                 timesteps=TRAIN_TIMESTEPS,
                 train_seed=0,
                 eval_seed=1,
@@ -338,7 +348,7 @@ def load_all_instance_configs() -> List[InstanceConfig]:
         id: int = config["id"]
         id_env: int = env_config["id"]
         id_obs: int = obs_config["id"]
-        folder_name: str = str(BASE_OUTPUT_PATH / str(id))
+        instance_folder_name: str = str(BASE_OUTPUT_PATH / METAFEATURES_FOLDER / f"ENV{id_env}_OBS{id_obs}")
 
         if "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
@@ -347,20 +357,14 @@ def load_all_instance_configs() -> List[InstanceConfig]:
         env_config: Dict[str, Any] = env_config["config"]
         env_config["observation"] = obs_config
 
-        def eval_env_factory(
-            env_id: str = env_id,
-            env_config: Dict[str, Any] = env_config,
-        ) -> gym.Env:
-            env_kwargs = {"config": env_config.copy()}
-            return gym.make(env_id, max_episode_steps=None, disable_env_checker=None, **env_kwargs)
-
         instance_configs.append(
             InstanceConfig(
                 id=id,
                 id_env_config=id_env,
                 id_obs_config=id_obs,
-                make_eval_env=eval_env_factory,
+                make_eval_env=partial(_make_eval_env, env_id, env_config),
                 eval_seed=1,
+                instance_folder_name=instance_folder_name,
             )
         )
     return instance_configs
@@ -374,15 +378,15 @@ def _nonempty_file_in(filepath: Path) -> bool:
 
 def is_trained(config: RunConfig) -> bool:
     """Trained iff training metadata artifact exists."""
-    return _nonempty_file_in(Path(config.folder_name) / TRAINING_METADATA_FILE)
+    return _nonempty_file_in(Path(config.train_folder_name) / TRAINING_METADATA_FILE)
 
 def is_evaluated(config: RunConfig) -> bool:
     """Evaluated iff evaluation results artifact exists."""
-    return _nonempty_file_in(Path(config.folder_name) / EVALUATION_RESULTS_FILE)
+    return _nonempty_file_in(Path(config.train_folder_name) / EVALUATION_RESULTS_FILE)
 
-def is_extracted(config: RunConfig) -> bool:
+def is_extracted(config: InstanceConfig) -> bool:
     """Extracted iff metafeatures result artifact exists."""
-    return _nonempty_file_in(Path(config.folder_name) / METAFEATURES_RESULTS_FILE)
+    return _nonempty_file_in(Path(config.instance_folder_name) / METAFEATURES_RESULTS_FILE)
 
 def unwrap_first_env(vec_env: VecEnv) -> Optional[gym.Env]:
     """Return the first underlying gym.Env from a VecEnv when accessible.

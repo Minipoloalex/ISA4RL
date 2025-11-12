@@ -5,6 +5,7 @@ import os
 import random
 import time
 from collections import Counter, deque, defaultdict
+from multiprocessing import get_context, cpu_count
 from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 from tqdm import tqdm
@@ -49,24 +50,30 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+
 def train_agents(run_configs: List[RunConfig]):
-    train_configs = filter(lambda config: not is_trained(config), run_configs)
-    for config in tqdm(train_configs):
+    train_configs = [config for config in run_configs if not is_trained(config)]
+    for config in tqdm(train_configs, total=len(train_configs)):
         env = config.ensure_env()
         model = config.ensure_model()
         train(
             env=env,
             model=model,
             timesteps=config.timesteps,
-            folder_name=config.folder_name,
+            folder_name=config.train_folder_name,
             seed=config.train_seed,
             progress_bar=True,
         )
         config.close()
 
+
 def eval_agents(run_configs: List[RunConfig]):
-    eval_configs = filter(lambda config: is_trained(config) and not is_evaluated(config), run_configs)
-    for config in tqdm(eval_configs):
+    eval_configs = [
+        config
+        for config in run_configs
+        if is_trained(config) and not is_evaluated(config)
+    ]
+    for config in tqdm(eval_configs, total=len(eval_configs)):
         eval_env = config.ensure_eval_env()
         model = config.ensure_model()
         eval_results = evaluate(
@@ -77,17 +84,40 @@ def eval_agents(run_configs: List[RunConfig]):
             deterministic=True,
             seed=config.eval_seed,
         )
-        save_eval_results(eval_results, config.folder_name)
+        save_eval_results(eval_results, config.train_folder_name)
         config.close()
 
         show_eval_results(eval_results)
 
-def extract_metafeatures(run_configs: List[RunConfig]):
-    metafeature_configs = filter(lambda config: not is_extracted(config), run_configs)
-    for config in tqdm(metafeature_configs):
-        extract_results = compute_metafeatures(config)
-        save_extract_results(extract_results, config.folder_name)
-        config.close()
+
+def _extract_and_save(config: InstanceConfig) -> None:
+    extract_results = compute_metafeatures(config)
+    save_extract_results(extract_results, config.instance_folder_name)
+    config.close()
+
+
+def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int):
+    assert(workers > 0)
+    metafeature_configs = [
+        config for config in instance_configs if not is_extracted(config)
+    ]
+    desc = f"Extracting metafeatures (workers={workers})"
+    if workers == 1:
+        for config in tqdm(
+            metafeature_configs, total=len(metafeature_configs), desc=desc
+        ):
+            _extract_and_save(config)
+        return
+
+    ctx = get_context("spawn")
+    with ctx.Pool(processes=workers) as pool:
+        for _ in tqdm(
+            pool.imap_unordered(_extract_and_save, metafeature_configs),
+            total=len(metafeature_configs),
+            desc=desc,
+        ):
+            pass
+
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     parser = argparse.ArgumentParser(
@@ -110,6 +140,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         default=None,
         help="Exclusive ending index for selecting run configurations. Defaults to all.",
     )
+    parser.add_argument(
+        "--workers",
+        type=int,
+        default=1,
+        help="Parallel worker processes to use for metafeature extraction (extract task only).",
+    )
     args = parser.parse_args(argv)
 
     configs = (
@@ -130,9 +166,11 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     task_map: Dict[str, Callable[[List[InstanceConfig | RunConfig]], None]] = {
         "train": train_agents,
         "evaluate": eval_agents,
-        "extract": extract_metafeatures,
-    }   # type: ignore
-    task_map[args.task](selected)   # type: ignore
+    }  # type: ignore
+    if args.task == "extract":
+        extract_metafeatures(selected, workers=args.workers)  # type: ignore[arg-type]
+    else:
+        task_map[args.task](selected)  # type: ignore
 
 
 if __name__ == "__main__":

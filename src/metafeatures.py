@@ -15,28 +15,28 @@ PolicyFn = Callable[[Any, Dict[str, Any]], Any]
 
 
 def extract_metafeatures(config: InstanceConfig):
+    before = time.perf_counter()
     env = config.ensure_eval_env()
     env_name = getattr(getattr(env, "spec", None), "id", None)
     horizon = _infer_horizon(env)
-    base_seed = getattr(config, "eval_seed", None)
+    base_seed = config.eval_seed
     env_features = _collect_env_features(env)
 
     random_probe = _run_probe(
         env=env,
         policy=_make_random_policy(env),
         episodes=10,
-        max_steps=horizon,
         seed=base_seed,
         label="random_rollout",
     )
     idm_probe = _run_idm_probe(
         env=env,
-        episodes=10,
-        max_steps=horizon,
+        episodes=5,
         seed=base_seed,
         label="idm_like",
     )
     config.close()
+    elapsed = time.perf_counter() - before
 
     idm_advantage = (
         idm_probe["mean_episode_return"] - random_probe["mean_episode_return"]
@@ -54,6 +54,7 @@ def extract_metafeatures(config: InstanceConfig):
         "obs_config_id": config.id_obs_config,
         "env_name": env_name,
         "generated_at": time.time_ns(),
+        "elapsed_seconds": elapsed,
         "probes": {
             "random": random_probe,
             "idm_like": idm_probe,
@@ -79,8 +80,7 @@ def _make_random_policy(env: gym.Env) -> PolicyFn:
 def _run_idm_probe(
     env: gym.Env,
     episodes: int,
-    max_steps: Optional[int],
-    seed: Optional[int],
+    seed: int,
     label: str,
 ) -> Dict[str, Any]:
     dummy_action = _default_idle_action(env)
@@ -93,7 +93,6 @@ def _run_idm_probe(
         env=env,
         policy=policy,
         episodes=episodes,
-        max_steps=max_steps,
         seed=seed,
         label=label,
         reset_hook=reset_hook,
@@ -102,13 +101,20 @@ def _run_idm_probe(
     )
 
 
-def _default_idle_action(env: gym.Env) -> Any:
-    space = env.action_space
-    spaces = gym.spaces
-    if isinstance(space, spaces.Discrete):
+def _default_idle_action(env: gym.Env) -> int:
+    if isinstance(env.action_space, gym.spaces.Discrete):
         return 0
-    return None
+    raise NotImplementedError(f"Idle action not implemented for action space type: {type(env.action_space)}")
 
+def _constant_policy(action: Any) -> PolicyFn:
+    def policy(_: Any, __: Dict[str, Any]) -> Any:
+        if isinstance(action, np.ndarray):
+            return np.array(action, copy=True)
+        if isinstance(action, (list, tuple)):
+            return type(action)(action)
+        return action
+
+    return policy
 
 def _default_value_for_space(space: gym.spaces.Space) -> Any:
     spaces = gym.spaces
@@ -125,25 +131,12 @@ def _default_value_for_space(space: gym.spaces.Space) -> Any:
     return space.sample()
 
 
-def _constant_policy(action: Any) -> PolicyFn:
-    def policy(_: Any, __: Dict[str, Any]) -> Any:
-        if isinstance(action, np.ndarray):
-            return np.array(action, copy=True)
-        if isinstance(action, (list, tuple)):
-            return type(action)(action)
-        return action
-
-    return policy
-
-
-def _base_env(env: gym.Env) -> gym.Env:
-    return getattr(env, "unwrapped", env)
-
-
 def _ensure_idm_vehicle(env: gym.Env) -> None:
-    base_env = _base_env(env)
-    vehicle = getattr(base_env, "vehicle", None)
-    road = getattr(base_env, "road", None)
+    base_env = env.unwrapped
+    vehicle = base_env.vehicle
+    road = base_env.road
+    # vehicle = getattr(base_env, "vehicle", None)
+    # road = getattr(base_env, "road", None)
 
     idm_vehicle = IDMVehicle.create_from(vehicle)
     idm_vehicle.enable_lane_change = True
@@ -160,9 +153,10 @@ def _ensure_idm_vehicle(env: gym.Env) -> None:
             road.vehicles[idx] = idm_vehicle
             break
 
-    action_type = getattr(base_env, "action_type", None)
-    if action_type is not None:
-        action_type.controlled_vehicle = idm_vehicle
+    base_env.action_type.controlled_vehicle = idm_vehicle
+    # action_type = getattr(base_env, "action_type", None)
+    # if action_type is not None:
+    #     action_type.controlled_vehicle = idm_vehicle
 
 
 def _copy_vehicle_attr(
@@ -177,10 +171,8 @@ def _copy_vehicle_attr(
 
 
 def _idm_action_getter(_: Any, env: gym.Env) -> Any:
-    vehicle = getattr(_base_env(env), "vehicle", None)
-    if vehicle is None:
-        return None
-    action = getattr(vehicle, "action", None)
+    vehicle = env.unwrapped.vehicle
+    action = vehicle.action
     if isinstance(action, dict):
         normalized: Dict[str, Any] = {}
         for key, value in action.items():
@@ -198,7 +190,6 @@ def _run_probe(
     env: gym.Env,
     policy: PolicyFn,
     episodes: int,
-    max_steps: Optional[int],
     seed: Optional[int],
     label: str,
     reset_hook: Optional[Callable[[gym.Env], None]] = None,
@@ -250,7 +241,7 @@ def _run_probe(
 
             crashed = crashed or bool(info.get("crashed", False))
             timeout = timeout or bool(truncated)
-            speed = _extract_speed(obs, info)
+            speed = info["speed"]
             if speed is not None:
                 speed_samples.append(speed)
             obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count = _obs_stats_update(
@@ -272,10 +263,6 @@ def _run_probe(
                         logged_action = action
                 action_counter[_action_key(logged_action)] += 1
 
-            if max_steps is not None and ep_steps >= max_steps:
-                timeout = True
-                break
-
             done = terminated or truncated
 
         returns.append(ep_return)
@@ -294,20 +281,20 @@ def _run_probe(
             p * math.log(max(p, 1e-12)) for p in action_distribution.values()
         )
 
-    mean_return = float(np.mean(returns)) if returns else 0.0
-    std_return = float(np.std(returns)) if returns else 0.0
-    mean_length = float(np.mean(lengths)) if lengths else 0.0
-    std_length = float(np.std(lengths)) if lengths else 0.0
-    mean_speed = float(np.mean(speed_samples)) if speed_samples else 0.0
-    std_speed = float(np.std(speed_samples)) if speed_samples else 0.0
+    mean_return = float(np.mean(returns))
+    std_return = float(np.std(returns))
+    mean_length = float(np.mean(lengths))
+    std_length = float(np.std(lengths))
+    mean_speed = float(np.mean(speed_samples))
+    std_speed = float(np.std(speed_samples))
 
-    obs_mean = obs_sum / obs_count if obs_count else 0.0
-    obs_var = obs_sq_sum / obs_count - obs_mean ** 2 if obs_count else 0.0
+    obs_mean = obs_sum / obs_count
+    obs_var = obs_sq_sum / obs_count - obs_mean ** 2
     obs_var = max(obs_var, 0.0)
     obs_std = float(math.sqrt(obs_var))
-    obs_mean_abs = obs_abs_sum / obs_count if obs_count else 0.0
+    obs_mean_abs = obs_abs_sum / obs_count
     obs_zero_fraction = (
-        obs_zero_count / obs_count if obs_count else 0.0
+        obs_zero_count / obs_count
     )
 
     return {
@@ -318,8 +305,8 @@ def _run_probe(
         "std_episode_return": std_return,
         "mean_episode_length": mean_length,
         "std_episode_length": std_length,
-        "collision_rate": collisions / episodes if episodes else 0.0,
-        "timeout_rate": timeouts / episodes if episodes else 0.0,
+        "collision_rate": collisions / episodes,
+        "timeout_rate": timeouts / episodes,
         "mean_speed": mean_speed,
         "std_speed": std_speed,
         "action_distribution": action_distribution,
@@ -329,22 +316,22 @@ def _run_probe(
         "obs_mean_abs": obs_mean_abs,
         "obs_zero_fraction": obs_zero_fraction,
         "obs_flat_dim": obs_dim or 0,
-        "return_min": float(np.min(returns)) if returns else 0.0,
-        "return_max": float(np.max(returns)) if returns else 0.0,
-        "return_median": float(np.median(returns)) if returns else 0.0,
-        "return_p10": float(np.percentile(returns, 10)) if returns else 0.0,
-        "return_p90": float(np.percentile(returns, 90)) if returns else 0.0,
-        "length_min": float(np.min(lengths)) if lengths else 0.0,
-        "length_max": float(np.max(lengths)) if lengths else 0.0,
-        "speed_min": float(np.min(speed_samples)) if speed_samples else 0.0,
-        "speed_max": float(np.max(speed_samples)) if speed_samples else 0.0,
+        "return_min": float(np.min(returns)),
+        "return_max": float(np.max(returns)),
+        "return_median": float(np.median(returns)),
+        "return_p10": float(np.percentile(returns, 10)),
+        "return_p90": float(np.percentile(returns, 90)),
+        "length_min": float(np.min(lengths)),
+        "length_max": float(np.max(lengths)),
+        "speed_min": float(np.min(speed_samples)),
+        "speed_max": float(np.max(speed_samples)),
     }
 
 def _action_key(action: Any) -> str:
     if isinstance(action, dict):
-        print(action)
+        # print(action)
         normalized_items = sorted(
-            (str(key), _normalize_action_value(value)) for key, value in action.items()
+            (str(key), float(value)) for key, value in action.items()
         )
         return str(normalized_items)
     if isinstance(action, np.ndarray):
@@ -357,21 +344,6 @@ def _action_key(action: Any) -> str:
         return str(float(action))
     return repr(action)
 
-
-def _normalize_action_value(value: Any) -> Any:
-    if isinstance(value, np.ndarray):
-        return tuple(np.asarray(value).flatten().round(4).tolist())
-    if isinstance(value, (list, tuple)):
-        return tuple(_normalize_action_value(v) for v in value)
-    if isinstance(value, dict):
-        return tuple(
-            sorted((str(key), _normalize_action_value(val)) for key, val in value.items())
-        )
-    if isinstance(value, (np.integer, int)):  # type: ignore[arg-type]
-        return int(value)
-    if isinstance(value, (np.floating, float)):  # type: ignore[arg-type]
-        return float(value)
-    return value
 
 def _infer_obs_dim(obs: Any) -> int:
     return int(_flatten_obs(obs).size)
@@ -393,67 +365,19 @@ def _obs_stats_update(
     obs_zero_count += int(np.count_nonzero(flat == 0))
     return obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count
 
-
-def _extract_speed(obs: Any, info: Dict[str, Any]) -> Optional[float]:
-    if "speed" in info and isinstance(info["speed"], (int, float)):
-        return float(info["speed"])
-
-    try:
-        arr = _ensure_vehicle_array(obs)
-    except Exception:
-        return None
-
-    if arr.size == 0:
-        return None
-
-    ego = arr[0]
-    if ego.size < 4:
-        return None
-    vx = float(ego[3])
-    vy = float(ego[4]) if ego.size > 4 else 0.0
-    return float(math.sqrt(vx * vx + vy * vy))
-
-
-def _ensure_vehicle_array(obs: Any) -> np.ndarray:
-    if isinstance(obs, dict):
-        if "observation" in obs:
-            obs = obs["observation"]
-        elif "vehicles" in obs:
-            obs = obs["vehicles"]
-        else:
-            obs = next(iter(obs.values()))
-    arr = np.asarray(obs, dtype=np.float32)
-    if arr.ndim == 1:
-        arr = arr[None, :]
-    return arr
-
-
-def _infer_horizon(env: gym.Env) -> Optional[int]:
-    config = getattr(env, "config", None)
-    if isinstance(config, dict):
-        duration = config.get("duration")
-        if isinstance(duration, (int, float)):
-            return int(duration)
-    return None
-
+def _infer_horizon(env: gym.Env) -> int:
+    return int(env.unwrapped.config["duration"])
 
 def _is_number(value: Any) -> bool:
     return isinstance(value, (int, float, np.integer, np.floating))
-
 
 def _as_float(value: Any) -> Optional[float]:
     if _is_number(value):
         return float(value)
     return None
 
-
-def _stable_string_id(value: str) -> int:
-    digest = hashlib.sha1(value.encode("utf-8")).hexdigest()
-    return int(digest[:8], 16)
-
-
 def _collect_env_features(env: gym.Env) -> Dict[str, float]:
-    base_env = _base_env(env)
+    base_env = env.unwrapped
     config = getattr(base_env, "config", {}) or {}
     features: Dict[str, float] = {}
 
@@ -478,7 +402,7 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     add("right_lane_reward", config.get("right_lane_reward"))
     add("high_speed_reward", config.get("high_speed_reward"))
     add("lane_change_reward", config.get("lane_change_reward"))
-    add("normalize_reward", 1.0 if config.get("normalize_reward") else 0.0)
+    # add("normalize_reward", 1.0 if config.get("normalize_reward") else 0.0)
     reward_speed_range = config.get("reward_speed_range")
     if isinstance(reward_speed_range, (list, tuple)) and len(reward_speed_range) == 2:
         add("reward_speed_min", reward_speed_range[0])
@@ -489,14 +413,11 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     add("speed_limit_hint", config.get("speed_limit"))
 
     obs_config = config.get("observation", {})
-    if isinstance(obs_config, dict):
-        obs_type = obs_config.get("type")
-        if isinstance(obs_type, str):
-            features["observation_type_id"] = float(_stable_string_id(obs_type))
-        add("observation_vehicles_count", obs_config.get("vehicles_count"))
-        obs_features = obs_config.get("features")
-        if isinstance(obs_features, (list, tuple)):
-            add("observation_feature_dim", len(obs_features))
+    features["observation_type_id"] = obs_config["type"]
+    add("observation_vehicles_count", obs_config.get("vehicles_count"))
+    obs_features = obs_config.get("features")
+    if isinstance(obs_features, (list, tuple)):
+        add("observation_feature_dim", len(obs_features))
 
     lanes_val = _as_float(lanes) or 1.0
     veh_cnt_val = _as_float(vehicles_count) or 0.0
@@ -509,25 +430,13 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     add("vehicles_per_second", veh_cnt_val / max(duration_val, 1.0))
 
     action_space = env.action_space
-    action_type = type(action_space).__name__
-    features["action_space_type_id"] = float(_stable_string_id(action_type))
-    features["action_is_discrete"] = (
-        1.0 if isinstance(action_space, gym.spaces.Discrete) else 0.0
-    )
-    if isinstance(action_space, gym.spaces.Discrete):
-        add("action_space_size", action_space.n)
-        add("action_branching_factor", action_space.n)
-    elif isinstance(action_space, gym.spaces.MultiDiscrete):
-        add("action_space_size", float(np.prod(action_space.nvec)))
-        add("action_branching_factor", float(np.max(action_space.nvec)))
-    elif isinstance(action_space, gym.spaces.Box):
-        add("action_space_size", int(np.prod(action_space.shape)))
-        finite_high = action_space.high[np.isfinite(action_space.high)]
-        finite_low = action_space.low[np.isfinite(action_space.low)]
-        if finite_high.size:
-            add("action_box_high", float(np.max(finite_high)))
-        if finite_low.size:
-            add("action_box_low", float(np.min(finite_low)))
+    # action_type = type(action_space).__name__
+    # features["action_space_type"] = action_type
+    # features["action_is_discrete"] = (
+    #     1.0 if isinstance(action_space, gym.spaces.Discrete) else 0.0#
+    # )
+    add("action_space_size", action_space.n)
+    add("action_branching_factor", action_space.n)
 
     obs_space = env.observation_space
     if isinstance(obs_space, gym.spaces.Box):
