@@ -366,7 +366,8 @@ def _obs_stats_update(
     return obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count
 
 def _infer_horizon(env: gym.Env) -> int:
-    return int(env.unwrapped.config["duration"])
+    # TODO: remove duration? merge environment doesn't have duration (it uses position for termination)
+    return int(env.unwrapped.config.get("duration", 0))
 
 def _is_number(value: Any) -> bool:
     return isinstance(value, (int, float, np.integer, np.floating))
