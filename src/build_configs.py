@@ -89,8 +89,8 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
 
-INTERMEDIATE_TRAIN_CONFIG = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
-INTERMEDIATE_EVAL_CONFIG = Tuple[Dict[str, Any], Dict[str,Any]]
+INTERMEDIATE_TRAIN_CONFIG = Tuple[CONFIG, CONFIG, CONFIG]
+INTERMEDIATE_EVAL_CONFIG = Tuple[CONFIG, CONFIG]
 
 EVAL_BASE_SEED = int(1e6)
 EVAL_SEED_COUNT = {
@@ -175,7 +175,7 @@ def choose_ego_spacing(density: float) -> float:
     return float(round(clamp(spacing, EGO_SPACING_MIN, EGO_SPACING_MAX), 1))
 
 
-def extract_numeric_matrix(configs: Sequence[Dict[str, Any]]) -> np.ndarray:
+def extract_numeric_matrix(configs: Sequence[CONFIG]) -> np.ndarray:
     rows = []
     for cfg in configs:
         params = cfg["config"]
@@ -183,7 +183,7 @@ def extract_numeric_matrix(configs: Sequence[Dict[str, Any]]) -> np.ndarray:
     return np.asarray(rows, dtype=np.float64)
 
 
-def save_correlation_plot(configs: Sequence[Dict[str, Any]], output_path: Path) -> None:
+def save_correlation_plot(configs: Sequence[CONFIG], output_path: Path) -> None:
     data = extract_numeric_matrix(configs)
     if data.shape[0] < 2:
         raise ValueError(
@@ -209,14 +209,14 @@ def save_correlation_plot(configs: Sequence[Dict[str, Any]], output_path: Path) 
     plt.close(fig)
 
 
-def build_highway_configs() -> List[Dict[str, Any]]:
+def build_highway_configs() -> List[CONFIG]:
     """Generate a diverse collection of highway-env configurations.
 
     The sampler covers a wide spectrum of lane counts, traffic densities, and
     vehicle counts while preserving plausible ratios between them.
     """
 
-    configs: List[Dict[str, Any]] = []
+    configs: List[CONFIG] = []
     dedup: set[Tuple[int, int, float]] = set()
 
     for lanes in range(MIN_LANE_COUNT, MAX_LANE_COUNT + 1):
@@ -268,7 +268,7 @@ def build_highway_configs() -> List[Dict[str, Any]]:
     return configs
 
 
-def build_seeded_configs(config: Dict[str, Any], base_seed: int, seed_cnt: int) -> List[Dict[str, Any]]:
+def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
     seeds = range(base_seed, base_seed + seed_cnt)
     seeded_configs = [
         {
@@ -340,7 +340,7 @@ def build_all_configs(
     obs_configs: List[CONFIG],
     algo_configs: List[CONFIG],
 ) -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
-    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> Dict[str, Any]:
+    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> CONFIG:
         env_config, obs_config, algo_config = config
         return {
             "env_config": env_config,
@@ -348,7 +348,7 @@ def build_all_configs(
             "algo_config": algo_config,
             "timestamp": time.time_ns(),
         }
-    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> Dict[str, Any]:
+    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> CONFIG:
         env_config, obs_config = config
         return {
             "env_config": env_config,
@@ -356,7 +356,7 @@ def build_all_configs(
             "timestamp": time.time_ns(),
         }
 
-    def valid_config(config: Dict[str, Any]) -> bool:
+    def valid_config(config: CONFIG) -> bool:
         return (
             config["algo_config"]["policy"] == "CnnPolicy"
             and config["obs_config"]["type"] in OBS_CNN
@@ -401,12 +401,18 @@ def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
         for config in
         get_highway_configs() + get_roundabout_configs() + get_merge_configs()
     ]
+    env_configs_train = annotate_ids(env_configs_train)
+    for cfg in env_configs_train:
+        cfg["orig_id"] = cfg["id"]
+
     env_configs_eval = []
     for train_config in env_configs_train:
         env_name = train_config["env_id"].split("-")[0]
-        env_configs_eval.extend(build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name]))
+        seed_configs = build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name])
+        for conf in seed_configs:
+            conf["orig_id"] = train_config["orig_id"]
+        env_configs_eval.extend(seed_configs)
 
-    env_configs_train = annotate_ids(env_configs_train)
     env_configs_eval = annotate_ids(env_configs_eval)
     return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 

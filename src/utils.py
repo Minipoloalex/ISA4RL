@@ -66,6 +66,9 @@ TRAIN_TIMESTEPS = int(1e5)
 # Mostly refer to the environment
 DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize", "id"]
 
+# Map from (env_id, obs_id, algo_id) -> train id
+_TRAIN_ID_CACHE: Dict[Tuple[int, int, int], int] | None = None
+
 
 def set_global_seed(seed: int) -> None:
     random.seed(seed)
@@ -190,7 +193,11 @@ def _make_model(
 ) -> BaseAlgorithm:
     model_path = Path(folder_name) / MODEL_FILE
     if _nonempty_file_in(model_path):
-        model = algo_cls.load(str(model_path), env=env, device=device)
+        custom_objects = {}
+        lr = policy_params.get("learning_rate")
+        if lr is not None and type(lr) is not str:
+            custom_objects["learning_rate"] = lr
+        model = algo_cls.load(str(model_path), env=env, device=device, custom_objects=custom_objects)
         model.tensorboard_log = folder_name
         return model
     return algo_cls(env=env, tensorboard_log=folder_name, device=device, **policy_params)
@@ -293,9 +300,12 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
 
         id: int = config["id"]
         id_env: int = env_config["id"]
+        orig_id_env: int = env_config["orig_id"]    # TODO: remove the other one (with .get())
         id_obs: int = obs_config["id"]
         id_algo: int = algo_config["id"]
-        train_folder_name: str = str(BASE_OUTPUT_PATH / TRAIN_FOLDER / str(id))
+        train_id: int = map_to_train_id(orig_id_env, id_obs, id_algo)
+
+        train_folder_name: str = str(BASE_OUTPUT_PATH / TRAIN_FOLDER / str(train_id))
         instance_folder_name: str = str(BASE_OUTPUT_PATH / METAFEATURES_FOLDER / f"ENV{id_env}_OBS{id_obs}")
 
         if "observation_shape" in obs_config:
@@ -329,7 +339,9 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
         run_configs.append(
             RunConfig(
                 id=id,
+                train_id=train_id,
                 id_env_config=id_env,
+                orig_id_env_config=orig_id_env,
                 id_obs_config=id_obs,
                 id_algo_config=id_algo,
                 instance_folder_name=instance_folder_name,
@@ -359,6 +371,7 @@ def load_all_instance_configs() -> List[InstanceConfig]:
 
         id: int = config["id"]
         id_env: int = env_config["id"]
+        orig_id_env: int = env_config["orig_id"]
         id_obs: int = obs_config["id"]
         instance_folder_name: str = str(BASE_OUTPUT_PATH / METAFEATURES_FOLDER / f"ENV{id_env}_OBS{id_obs}")
 
@@ -373,6 +386,7 @@ def load_all_instance_configs() -> List[InstanceConfig]:
             InstanceConfig(
                 id=id,
                 id_env_config=id_env,
+                orig_id_env_config=orig_id_env,
                 id_obs_config=id_obs,
                 make_eval_env=partial(_make_eval_env, env_id, env_config),
                 eval_seed=1,
@@ -380,6 +394,30 @@ def load_all_instance_configs() -> List[InstanceConfig]:
             )
         )
     return instance_configs
+
+def map_to_train_id(orig_env_id: int, obs_id: int, algo_id: int) -> int:
+    """Map from (env_id, obs_id, algo_id) to train_id"""
+    global _TRAIN_ID_CACHE
+    if _TRAIN_ID_CACHE is None:
+        _TRAIN_ID_CACHE = {}
+        for config in get_all_train_configs():
+            env_cfg = config["env_config"]
+            obs_cfg = config["obs_config"]
+            algo_cfg = config["algo_config"]
+            key = (
+                env_cfg["orig_id"],
+                obs_cfg["id"],
+                algo_cfg["id"],
+            )
+            if key in _TRAIN_ID_CACHE:
+                raise ValueError(f"Duplicate training config key detected: {key}")
+            _TRAIN_ID_CACHE[key] = config["id"]
+
+    key = (orig_env_id, obs_id, algo_id)
+    try:
+        return _TRAIN_ID_CACHE[key]
+    except KeyError as exc:
+        raise KeyError(f"Missing training config for env={orig_env_id}, obs={obs_id}, algo={algo_id}") from exc
 
 def _nonempty_file_in(filepath: Path) -> bool:
     """Return True if filepath exists, is a regular file, and is non-empty."""

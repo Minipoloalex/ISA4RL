@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import argparse
-from functools import lru_cache
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple
 
@@ -10,13 +9,18 @@ import pandas as pd
 from evaluate import aggregate_metrics
 from utils import (
     BASE_OUTPUT_PATH,
+    EVALUATION_RESULTS_BASE_PATH,
     EVALUATION_RESULTS_FILE,
     METAFEATURES_FOLDER,
     METAFEATURES_RESULTS_FILE,
     TRAIN_FOLDER,
+    CONFIG,
     ensure_dir,
-    get_all_configs,
+    get_all_train_configs,
+    get_all_instance_configs,
+    get_all_eval_configs,
     read_json,
+    map_to_train_id,
 )
 
 ISA_OUTPUT_DIR = BASE_OUTPUT_PATH / "isa"
@@ -33,7 +37,6 @@ def _instance_dir(env_id: int, obs_id: int) -> Path:
     return BASE_OUTPUT_PATH / METAFEATURES_FOLDER / folder
 
 
-@lru_cache(maxsize=None)
 def _load_metafeatures(env_id: int, obs_id: int) -> Optional[Dict[str, float]]:
     file_path = _instance_dir(env_id, obs_id) / METAFEATURES_RESULTS_FILE
     if not file_path.is_file():
@@ -48,13 +51,13 @@ def _load_metafeatures(env_id: int, obs_id: int) -> Optional[Dict[str, float]]:
     }
     features = data.get("features", {})
     diagnostics = data.get("diagnostics", {})
-    record.update(features)
+    record.update({f"feat_{k}": v for k, v in features.items()})
     record.update({f"diag_{k}": v for k, v in diagnostics.items()})
     return record
 
 
-def _load_metric(run_id: int, metric_key: str) -> Optional[float]:
-    eval_file = _run_dir(run_id) / EVALUATION_RESULTS_FILE
+def _load_metric(run_id: int, metric_key: str, eval_seed: int) -> Optional[float]:
+    eval_file = _run_dir(run_id) / EVALUATION_RESULTS_BASE_PATH / EVALUATION_RESULTS_FILE(eval_seed)
     if not eval_file.is_file():
         return None
     per_episode = read_json(eval_file)
@@ -66,7 +69,7 @@ def _load_metric(run_id: int, metric_key: str) -> Optional[float]:
 
 
 def build_dataset(metric_key: str) -> pd.DataFrame:
-    configs = get_all_configs()
+    configs: List[CONFIG] = get_all_eval_configs()
     instance_rows: Dict[Tuple[int, int], Dict[str, float]] = {}
     missing_meta: List[Tuple[int, int]] = []
     missing_metric: List[int] = []
@@ -77,9 +80,13 @@ def build_dataset(metric_key: str) -> pd.DataFrame:
         algo_cfg = cfg["algo_config"]
 
         env_id = int(env_cfg["id"])
+        eval_seed = int(env_cfg["eval_seed"])
+        orig_env_id = int(env_cfg["orig_id"])
         obs_id = int(obs_cfg["id"])
         algo_name = str(algo_cfg["algo"]).lower()
+        algo_id = algo_cfg["id"]
         key = (env_id, obs_id)
+        train_id = map_to_train_id(orig_env_id, obs_id, algo_id)
 
         row = instance_rows.get(key)
         if row is None:
@@ -89,12 +96,14 @@ def build_dataset(metric_key: str) -> pd.DataFrame:
                 continue
             row = dict(meta)
             instance_rows[key] = row
+        else:
+            raise ValueError(f"Repeated (env_id, obs_id) in metafeature extraction configs: ({env_id}, {obs_id})")
 
-        metric_value = _load_metric(cfg["id"], metric_key)
+        metric_value = _load_metric(train_id, metric_key, eval_seed)
         if metric_value is None:
             missing_metric.append(cfg["id"])
             continue
-        column_name = f"{algo_name}_{metric_key}"
+        column_name = f"algo_{algo_name}_{metric_key}"
         row[column_name] = metric_value
 
     if missing_meta:
@@ -139,10 +148,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         print("[isa] No instances with both metafeatures and evaluation metrics were found.")
         return
     output_path = save_dataset(dataset, args.output)
-    algo_columns = [col for col in dataset.columns if col.endswith(f"_{args.metric}")]
+    feature_columns = [col for col in dataset.columns if col.startswith("feat_")]
+    algo_columns = [col for col in dataset.columns if col.startswith(f"algo_")]
     print(
         "[isa] Dataset ready for instancespace:"
         f" {len(dataset)} instances,"
+        f" {len(feature_columns)} (meta-)feature columns,"
         f" {len(algo_columns)} algorithm performance columns."
     )
     print(f"[isa] Saved to '{output_path}'.")

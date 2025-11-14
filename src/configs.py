@@ -13,6 +13,7 @@ EvalEnvFactory = Callable[[], gym.Env]
 @dataclass
 class InstanceConfig:
     id: int
+    orig_id_env_config: int
     id_env_config: int
     id_obs_config: int
     make_eval_env: EvalEnvFactory
@@ -36,6 +37,7 @@ class InstanceConfig:
 
 @dataclass
 class RunConfig(InstanceConfig):
+    train_id: int
     id_algo_config: int
     make_model: ModelFactory
     make_env: EnvFactory
