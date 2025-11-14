@@ -19,20 +19,20 @@ def extract_metafeatures(config: InstanceConfig):
     env = config.ensure_eval_env()
     env_name = getattr(getattr(env, "spec", None), "id", None)
     horizon = _infer_horizon(env)
-    base_seed = config.eval_seed
+    env_seed = config.eval_seed
     env_features = _collect_env_features(env)
 
     random_probe = _run_probe(
         env=env,
         policy=_make_random_policy(env),
         episodes=10,
-        seed=base_seed,
+        env_seed=env_seed,
         label="random_rollout",
     )
     idm_probe = _run_idm_probe(
         env=env,
         episodes=5,
-        seed=base_seed,
+        env_seed=env_seed,
         label="idm_like",
     )
     config.close()
@@ -80,7 +80,7 @@ def _make_random_policy(env: gym.Env) -> PolicyFn:
 def _run_idm_probe(
     env: gym.Env,
     episodes: int,
-    seed: int,
+    env_seed: int,
     label: str,
 ) -> Dict[str, Any]:
     dummy_action = _default_idle_action(env)
@@ -93,7 +93,7 @@ def _run_idm_probe(
         env=env,
         policy=policy,
         episodes=episodes,
-        seed=seed,
+        env_seed=env_seed,
         label=label,
         reset_hook=reset_hook,
         track_actions=True,
@@ -133,8 +133,8 @@ def _default_value_for_space(space: gym.spaces.Space) -> Any:
 
 def _ensure_idm_vehicle(env: gym.Env) -> None:
     base_env = env.unwrapped
-    vehicle = base_env.vehicle
-    road = base_env.road
+    vehicle = base_env.vehicle  # type: ignore
+    road = base_env.road    # type: ignore
     # vehicle = getattr(base_env, "vehicle", None)
     # road = getattr(base_env, "road", None)
 
@@ -146,14 +146,14 @@ def _ensure_idm_vehicle(env: gym.Env) -> None:
     _copy_vehicle_attr(vehicle, idm_vehicle, "index_to_speed")
     _copy_vehicle_attr(vehicle, idm_vehicle, "speed_index")
 
-    base_env.vehicle = idm_vehicle
+    base_env.vehicle = idm_vehicle  # type: ignore
 
     for idx, existing in enumerate(road.vehicles):
         if existing is vehicle:
             road.vehicles[idx] = idm_vehicle
             break
 
-    base_env.action_type.controlled_vehicle = idm_vehicle
+    base_env.action_type.controlled_vehicle = idm_vehicle   # type: ignore
     # action_type = getattr(base_env, "action_type", None)
     # if action_type is not None:
     #     action_type.controlled_vehicle = idm_vehicle
@@ -171,7 +171,7 @@ def _copy_vehicle_attr(
 
 
 def _idm_action_getter(_: Any, env: gym.Env) -> Any:
-    vehicle = env.unwrapped.vehicle
+    vehicle = env.unwrapped.vehicle # type: ignore
     action = vehicle.action
     if isinstance(action, dict):
         normalized: Dict[str, Any] = {}
@@ -190,7 +190,7 @@ def _run_probe(
     env: gym.Env,
     policy: PolicyFn,
     episodes: int,
-    seed: Optional[int],
+    env_seed: int,
     label: str,
     reset_hook: Optional[Callable[[gym.Env], None]] = None,
     track_actions: bool = True,
@@ -212,7 +212,7 @@ def _run_probe(
     obs_dim: Optional[int] = None
 
     for episode in range(episodes):
-        obs, info = env.reset(seed=seed)
+        obs, info = env.reset(seed=env_seed)
         if reset_hook is not None:
             reset_hook(env)
         obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count = _obs_stats_update(
@@ -367,7 +367,7 @@ def _obs_stats_update(
 
 def _infer_horizon(env: gym.Env) -> int:
     # TODO: remove duration? merge environment doesn't have duration (it uses position for termination)
-    return int(env.unwrapped.config.get("duration", 0))
+    return int(env.unwrapped.config.get("duration", 0)) # type: ignore
 
 def _is_number(value: Any) -> bool:
     return isinstance(value, (int, float, np.integer, np.floating))
@@ -436,8 +436,8 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     # features["action_is_discrete"] = (
     #     1.0 if isinstance(action_space, gym.spaces.Discrete) else 0.0#
     # )
-    add("action_space_size", action_space.n)
-    add("action_branching_factor", action_space.n)
+    add("action_space_size", action_space.n)    # type: ignore
+    add("action_branching_factor", action_space.n)  # type: ignore
 
     obs_space = env.observation_space
     if isinstance(obs_space, gym.spaces.Box):

@@ -27,7 +27,9 @@ from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
 from configs import RunConfig, InstanceConfig
 import gymnasium as gym
 
+CONFIG = Dict[str, Any]
 AlgorithmName = str
+
 ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "ppo": PPO,
     "dqn": DQN,
@@ -43,8 +45,9 @@ METAFEATURES_FOLDER = "metafeatures"
 
 MODEL_FILE = "model.zip"
 
-RUN_CONFIG_PATH = BASE_CONFIG_PATH / "configs.json"
+TRAIN_CONFIG_PATH = BASE_CONFIG_PATH / "train_configs.json"
 INSTANCE_CONFIG_PATH = BASE_CONFIG_PATH / "instance_configs.json"
+EVAL_CONFIG_PATH = BASE_CONFIG_PATH / "eval_configs.json"
 HIGHWAY_CONFIG_PATH = BASE_CONFIG_PATH / "highway-configs.json"
 ROUNDABOUT_CONFIG_PATH = BASE_CONFIG_PATH / "roundabout-configs.json"
 MERGE_CONFIG_PATH = BASE_CONFIG_PATH / "merge-configs.json"
@@ -53,9 +56,10 @@ OBS_CONFIG_PATH = BASE_CONFIG_PATH / "obs-configs.json"
 
 ALGO_CONFIG_HYPERPARAMS_PATH = BASE_CONFIG_PATH / "rlzoo-algo-hyperparams"
 
+EVALUATION_RESULTS_BASE_PATH = "eval_results"
 TRAINING_METADATA_FILE = "training_metadata.json"
-EVALUATION_RESULTS_FILE = "eval_results.json"
 METAFEATURES_RESULTS_FILE = "metafeatures.json"
+EVALUATION_RESULTS_FILE = lambda seed: f"seed_{seed}.json"
 
 TRAIN_TIMESTEPS = int(1e5)
 
@@ -214,9 +218,11 @@ def load_training_metadata(run_dir: Path) -> Dict[str, Any]:
     with metadata_path.open("r", encoding="utf-8") as handle:
         return json.load(handle)
 
-def save_eval_results(results: List[Dict[str, Any]], folder_name: str):
-    ensure_dir(folder_name)
-    filepath = Path(folder_name) / EVALUATION_RESULTS_FILE
+def save_eval_results(results: List[Dict[str, Any]], folder_name: str, eval_seed: int):
+    folder_path = Path(folder_name) / EVALUATION_RESULTS_BASE_PATH
+    ensure_dir(folder_path)
+
+    filepath = folder_path / EVALUATION_RESULTS_FILE(eval_seed)
     save_json(filepath, results)
 
 def save_extract_results(results, folder_name: str):
@@ -224,11 +230,14 @@ def save_extract_results(results, folder_name: str):
     filepath = Path(folder_name) / METAFEATURES_RESULTS_FILE
     save_json(filepath, results)
 
-def get_all_configs() -> List[Dict[str, Any]]:
-    return read_json(RUN_CONFIG_PATH)
+def get_all_train_configs() -> List[CONFIG]:
+    return read_json(TRAIN_CONFIG_PATH)
 
-def get_all_instance_configs() -> List[Dict[str, Any]]:
+def get_all_instance_configs() -> List[CONFIG]:
     return read_json(INSTANCE_CONFIG_PATH)
+
+def get_all_eval_configs() -> List[CONFIG]:
+    return read_json(EVAL_CONFIG_PATH)
 
 def _parse_policy_kwargs(raw_value: Any) -> Any:
     """Convert string-encoded policy kwargs into a Python object."""
@@ -273,13 +282,14 @@ def _resolve_schedule_placeholders(value: Any) -> Any:
         return _linear_schedule(numeric_value)
     return value
 
-def load_all_run_configs() -> List[RunConfig]:
-    configs = get_all_configs()
+def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunConfig]:
+    """get_configs should be get_all_run_configs or get_all_eval_configs"""
+    configs = get_configs()
     run_configs: List[RunConfig] = []
     for config in configs:
-        env_config : Dict[str, Any] = config["env_config"]
-        obs_config : Dict[str, Any] = config["obs_config"]
-        algo_config: Dict[str, Any] = config["algo_config"]
+        env_config : CONFIG = config["env_config"]
+        obs_config : CONFIG = config["obs_config"]
+        algo_config: CONFIG = config["algo_config"]
 
         id: int = config["id"]
         id_env: int = env_config["id"]
@@ -292,7 +302,9 @@ def load_all_run_configs() -> List[RunConfig]:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
         env_id: str = env_config["env_id"]
-        env_config: Dict[str, Any] = env_config["config"]
+        eval_seed: int = env_config["eval_seed"]
+
+        env_config: CONFIG = env_config["config"]
         env_config["observation"] = obs_config
 
         algo_name: str = algo_config["algo"]
@@ -333,7 +345,7 @@ def load_all_run_configs() -> List[RunConfig]:
                 ),
                 timesteps=TRAIN_TIMESTEPS,
                 train_seed=0,
-                eval_seed=1,
+                eval_seed=eval_seed,
             )
         )
     return run_configs
@@ -382,7 +394,11 @@ def is_trained(config: RunConfig) -> bool:
 
 def is_evaluated(config: RunConfig) -> bool:
     """Evaluated iff evaluation results artifact exists."""
-    return _nonempty_file_in(Path(config.train_folder_name) / EVALUATION_RESULTS_FILE)
+    return _nonempty_file_in(
+        Path(config.train_folder_name)
+        / EVALUATION_RESULTS_BASE_PATH
+        / EVALUATION_RESULTS_FILE(config.eval_seed)
+    )
 
 def is_extracted(config: InstanceConfig) -> bool:
     """Extracted iff metafeatures result artifact exists."""

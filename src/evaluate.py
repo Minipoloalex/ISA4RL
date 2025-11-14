@@ -71,10 +71,11 @@ def rollout_episode(
     env_seed: int,
     deterministic: bool,
 ) -> Tuple[float, int, List[Dict[str, Any]]]:
+    assert(env_seed >= int(1e6))
     episode_reward = 0.0
     steps = 0
     infos: List[Dict[str, Any]] = []
-    obs, info = env.reset(env_seed)
+    obs, info = env.reset(seed=env_seed)
     while True:
         action, _ = model.predict(obs, deterministic=deterministic)
         obs, reward, terminated, truncated, info = env.step(action)
@@ -173,7 +174,7 @@ def aggregate_metrics(
     for field in bool_fields:
         values = [entry.get(field) for entry in per_episode if field in entry]
         if values:
-            summary[f"{field}_rate"] = float(np.mean(values))
+            summary[f"{field}_rate"] = float(np.mean(values))   # type: ignore
     return summary
 
 
@@ -200,9 +201,8 @@ def main() -> None:
         model,
         env,
         episodes,
-        max_steps,
         deterministic=args.deterministic,
-        seed=seed,
+        env_seed=seed,
     )
     env.close()
 

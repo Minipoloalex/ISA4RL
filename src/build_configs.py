@@ -11,8 +11,10 @@ import time
 from utils import (
     save_json,
     read_json,
-    RUN_CONFIG_PATH,
+    CONFIG,
+    TRAIN_CONFIG_PATH,
     INSTANCE_CONFIG_PATH,
+    EVAL_CONFIG_PATH,
     BASE_CONFIG_PATH,
     HIGHWAY_CONFIG_PATH,
     ROUNDABOUT_CONFIG_PATH,
@@ -87,8 +89,8 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
 
-INTERMEDIATE_TRAIN_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
-INTERMEDIATE_EVAL_CONFIG_TYPE = Tuple[Dict[str, Any], Dict[str,Any]]
+INTERMEDIATE_TRAIN_CONFIG = Tuple[Dict[str, Any], Dict[str, Any], Dict[str, Any]]
+INTERMEDIATE_EVAL_CONFIG = Tuple[Dict[str, Any], Dict[str,Any]]
 
 EVAL_BASE_SEED = int(1e6)
 EVAL_SEED_COUNT = {
@@ -333,12 +335,12 @@ def get_highway_configs():
 
 
 def build_all_configs(
-    env_configs_train: List[Dict[str, Any]],
-    env_configs_eval: List[Dict[str, Any]],  # these also include some configurations where only the seed varies
-    obs_configs: List[Dict[str, Any]],
-    algo_configs: List[Dict[str, Any]],
-) -> Tuple[List[Dict[str, Any]],List[Dict[str,Any]]]:
-    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG_TYPE) -> Dict[str, Any]:
+    env_configs_train: List[CONFIG],
+    env_configs_eval: List[CONFIG],  # these also include some configurations where only the seed varies
+    obs_configs: List[CONFIG],
+    algo_configs: List[CONFIG],
+) -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
+    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> Dict[str, Any]:
         env_config, obs_config, algo_config = config
         return {
             "env_config": env_config,
@@ -346,7 +348,7 @@ def build_all_configs(
             "algo_config": algo_config,
             "timestamp": time.time_ns(),
         }
-    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG_TYPE) -> Dict[str, Any]:
+    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> Dict[str, Any]:
         env_config, obs_config = config
         return {
             "env_config": env_config,
@@ -372,6 +374,15 @@ def build_all_configs(
             ),
         )
     )
+    eval_configs = list(
+        filter(
+            valid_config,
+            map(
+                conv_run_config,
+                itertools.product(env_configs_eval, obs_configs, algo_configs),
+            ),
+        )
+    )
     instance_configs = list(
         map(
             conv_instance_config,
@@ -379,11 +390,12 @@ def build_all_configs(
         )
     )
     run_configs = annotate_ids(run_configs)
+    eval_configs = annotate_ids(eval_configs)
     instance_configs = annotate_ids(instance_configs)
-    return run_configs, instance_configs
+    return run_configs, eval_configs, instance_configs
 
 
-def get_all_configs() -> Tuple[List[Dict[str, Any]],List[Dict[str, Any]]]:
+def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
     env_configs_train = [
         build_seeded_configs(config, EVAL_BASE_SEED, 1)[0]
         for config in
@@ -414,8 +426,8 @@ if __name__ == "__main__":
     print(f"\n\nAlgo Configs: {len(algo_configs)}")
     print(f"\n\nObservation Configs: {len(obs_configs)}")
 
-    all_run_configs, all_instance_configs = get_all_configs()
-    print(f"\n\nTotal number of run configs: {len(all_run_configs)}")
+    all_run_configs, all_eval_configs, all_instance_configs = get_all_configs()
+    print(f"\n\nTotal number of train configs: {len(all_run_configs)}")
     print("Example config:")
     pprint(all_run_configs[0])
 
@@ -423,6 +435,11 @@ if __name__ == "__main__":
     print("Example config:")
     pprint(all_instance_configs[0])
 
+    print(f"\n\nTotal number of eval configs: {len(all_eval_configs)}")
+    print("Example config:")
+    pprint(all_eval_configs[0])
 
-    save_json(Path(RUN_CONFIG_PATH), all_run_configs)
+
+    save_json(Path(TRAIN_CONFIG_PATH), all_run_configs)
     save_json(Path(INSTANCE_CONFIG_PATH), all_instance_configs)
+    save_json(Path(EVAL_CONFIG_PATH), all_eval_configs)

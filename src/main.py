@@ -10,6 +10,7 @@ from pathlib import Path
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 from tqdm import tqdm
 from pprint import pprint
+from functools import partial
 
 import numpy as np
 import yaml
@@ -35,6 +36,8 @@ from utils import (
     is_trained,
     is_evaluated,
     is_extracted,
+    get_all_train_configs,
+    get_all_eval_configs,
     load_all_run_configs,
     load_all_instance_configs,
 )
@@ -81,9 +84,9 @@ def eval_agents(run_configs: List[RunConfig]):
             env=eval_env,
             n_episodes=10,
             deterministic=False,
-            seed=config.eval_seed,
+            env_seed=config.eval_seed,
         )
-        save_eval_results(eval_results, config.train_folder_name)
+        save_eval_results(eval_results, config.train_folder_name, config.eval_seed)
         config.close()
 
         show_eval_results(eval_results)
@@ -147,11 +150,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     )
     args = parser.parse_args(argv)
 
-    configs = (
-        load_all_instance_configs()
-        if args.task == "extract"
-        else load_all_run_configs()
-    )
+    load_configs = {
+        "train": partial(load_all_run_configs, get_all_train_configs),
+        "evaluate": partial(load_all_run_configs, get_all_eval_configs),
+        "extract": load_all_instance_configs,
+    }
+    configs = load_configs[args.task]()
 
     total = len(configs)
     start = max(0, args.start)
