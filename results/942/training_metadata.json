@@ -1,0 +1,51 @@
+{
+  "timesteps": 100000,
+  "elapsed_seconds": 1331.0929689999903,
+  "seed": 0,
+  "timestamp": "2025-11-13T02:09:23",
+  "model_path": "results\\942\\model.zip",
+  "logs_dir": "results\\942\\logs",
+  "env_config": {
+    "observation": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "action": {
+      "type": "DiscreteMetaAction"
+    },
+    "simulation_frequency": 5,
+    "policy_frequency": 1,
+    "other_vehicles_type": "highway_env.vehicle.behavior.IDMVehicle",
+    "screen_width": 600,
+    "screen_height": 150,
+    "centering_position": [
+      0.3,
+      0.5
+    ],
+    "scaling": 5.5,
+    "show_trajectories": false,
+    "render_agent": true,
+    "offscreen_rendering": false,
+    "manual_control": false,
+    "real_time_rendering": false,
+    "lanes_count": 4,
+    "vehicles_count": 70,
+    "controlled_vehicles": 1,
+    "initial_lane_id": null,
+    "duration": 40,
+    "ego_spacing": 2.5,
+    "vehicles_density": 1.75,
+    "collision_reward": -1,
+    "right_lane_reward": 0.1,
+    "high_speed_reward": 0.4,
+    "lane_change_reward": 0,
+    "reward_speed_range": [
+      20,
+      30
+    ],
+    "normalize_reward": true,
+    "offroad_terminal": false
+  },
+  "env_id": "highway-fast-v0",
+  "model_class": "A2C"
+}
