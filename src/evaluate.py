@@ -8,12 +8,11 @@ import numpy as np
 import gymnasium as gym
 import highway_env
 
+from file_utils import _json_default, ensure_dir, TRAINING_METADATA_FILE
 from utils import (
-    _json_default,
     ensure_dir,
     set_global_seed,
     ALGORITHM_MAP,
-    TRAINING_METADATA_FILE,
     build_env,
     load_model,
     load_training_metadata,

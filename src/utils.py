@@ -26,6 +26,7 @@ from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
 from configs import RunConfig, InstanceConfig
 import gymnasium as gym
+from file_utils import *
 
 CONFIG = Dict[str, Any]
 AlgorithmName = str
@@ -35,31 +36,6 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "dqn": DQN,
     "a2c": A2C,
 }
-
-BASE_OUTPUT_PATH = Path("results")
-BASE_CONFIG_PATH = Path("config")
-BASE_IMAGES_PATH = Path("images")
-
-TRAIN_FOLDER = "train"
-METAFEATURES_FOLDER = "metafeatures"
-
-MODEL_FILE = "model.zip"
-
-TRAIN_CONFIG_PATH = BASE_CONFIG_PATH / "train_configs.json"
-INSTANCE_CONFIG_PATH = BASE_CONFIG_PATH / "instance_configs.json"
-EVAL_CONFIG_PATH = BASE_CONFIG_PATH / "eval_configs.json"
-HIGHWAY_CONFIG_PATH = BASE_CONFIG_PATH / "highway-configs.json"
-ROUNDABOUT_CONFIG_PATH = BASE_CONFIG_PATH / "roundabout-configs.json"
-MERGE_CONFIG_PATH = BASE_CONFIG_PATH / "merge-configs.json"
-ALGO_CONFIG_PATH = BASE_CONFIG_PATH / "algo-configs.json"
-OBS_CONFIG_PATH = BASE_CONFIG_PATH / "obs-configs.json"
-
-ALGO_CONFIG_HYPERPARAMS_PATH = BASE_CONFIG_PATH / "rlzoo-algo-hyperparams"
-
-EVALUATION_RESULTS_BASE_PATH = "eval_results"
-TRAINING_METADATA_FILE = "training_metadata.json"
-METAFEATURES_RESULTS_FILE = "metafeatures.json"
-EVALUATION_RESULTS_FILE = lambda seed: f"seed_{seed}.json"
 
 TRAIN_TIMESTEPS = int(1e5)
 
@@ -76,20 +52,6 @@ def set_global_seed(seed: int) -> None:
     torch.manual_seed(seed)
     if torch.cuda.is_available():
         torch.cuda.manual_seed_all(seed)
-
-def read_json(file: Path):
-    with file.open("r", encoding="utf-8") as fp:
-        return json.load(fp)
-
-def save_json(file: Path, results: Dict[str, Any] | List[Dict[str, Any]] | List[Any]):
-    with file.open("w", encoding="utf-8") as fp:
-        json.dump(results, fp, indent=2, default=_json_default)
-
-def ensure_dir(path: str | Path) -> None:
-    if type(path) is str:
-        path = Path(path)
-    path.mkdir(parents=True, exist_ok=True) # type: ignore
-
 
 def discretize(obs: np.ndarray, clip_range: Tuple[float, float] = (-5.0, 5.0), bins_per_dim: int = 15) -> Tuple[int, ...]:
     obs = np.asarray(obs, dtype=np.float32)
@@ -143,19 +105,6 @@ def _coerce_numeric(value: Any) -> Optional[float]:
         except ValueError:
             return None
     return None
-
-
-def _json_default(obj: Any) -> Any:
-    if isinstance(obj, (np.integer, np.int32, np.int64)): # type: ignore
-        return int(obj)
-    if isinstance(obj, (np.floating, np.float32, np.float64)): # type: ignore
-        return float(obj)
-    if isinstance(obj, (np.bool_,)):
-        return bool(obj)
-    if isinstance(obj, np.ndarray):
-        return obj.tolist()
-    raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
-
 
 def build_env(env_id: str, config: Dict[str, Any]) -> gym.Env:
     env_kwargs: Dict[str, Any] = {

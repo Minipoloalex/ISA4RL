@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import argparse
 from pathlib import Path
-from typing import Dict, List, Optional, Sequence, Tuple
+from typing import Dict, List, Optional, Sequence, Tuple, Any
 
 import pandas as pd
 
@@ -26,7 +26,7 @@ from utils import (
 ISA_OUTPUT_DIR = BASE_OUTPUT_PATH / "isa"
 DATASET_FILENAME = "instancespace_dataset.csv"
 DEFAULT_METRIC = "mean_reward"
-
+METAFEATURES_TO_DISCARD = {"observation_type_id"}
 
 def _run_dir(run_id: int) -> Path:
     return BASE_OUTPUT_PATH / TRAIN_FOLDER / str(run_id)
@@ -37,21 +37,27 @@ def _instance_dir(env_id: int, obs_id: int) -> Path:
     return BASE_OUTPUT_PATH / METAFEATURES_FOLDER / folder
 
 
-def _load_metafeatures(env_id: int, obs_id: int) -> Optional[Dict[str, float]]:
+def _load_metafeatures(env_id: int, obs_id: int, source: str, debug: bool) -> Optional[Dict[str, float]]:
     file_path = _instance_dir(env_id, obs_id) / METAFEATURES_RESULTS_FILE
     if not file_path.is_file():
         return None
     data = read_json(file_path)
-    record: Dict[str, float] = {
-        "instance_id": data.get("instance_id"),
+    record: Dict[str, Any] = {
+        "instances": data["instance_id"],
+        "source": source,
+    }
+    sources = {
         "env_config_id": env_id,
         "obs_config_id": obs_id,
         "env_name": data.get("env_name"),
         "metafeatures_elapsed_seconds": data.get("elapsed_seconds"),
     }
+    if debug:
+        record.update(sources)
+
     features = data.get("features", {})
-    diagnostics = data.get("diagnostics", {})
-    record.update({f"feat_{k}": v for k, v in features.items()})
+    diagnostics = data.get("diagnostics", {}) if debug else {}
+    record.update({f"feature_{k}": v for k, v in features.items() if k not in METAFEATURES_TO_DISCARD})
     record.update({f"diag_{k}": v for k, v in diagnostics.items()})
     return record
 
@@ -68,7 +74,7 @@ def _load_metric(run_id: int, metric_key: str, eval_seed: int) -> Optional[float
     return float(value) if value is not None else None
 
 
-def build_dataset(metric_key: str) -> pd.DataFrame:
+def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
     configs: List[CONFIG] = get_all_eval_configs()
     instance_rows: Dict[Tuple[int, int], Dict[str, float]] = {}
     missing_meta: List[Tuple[int, int]] = []
@@ -90,14 +96,13 @@ def build_dataset(metric_key: str) -> pd.DataFrame:
 
         row = instance_rows.get(key)
         if row is None:
-            meta = _load_metafeatures(env_id, obs_id)
+            source = f"{env_cfg["env_id"]}_{obs_cfg["type"]}"
+            meta = _load_metafeatures(env_id, obs_id, source, debug)
             if meta is None:
                 missing_meta.append(key)
                 continue
             row = dict(meta)
             instance_rows[key] = row
-        else:
-            raise ValueError(f"Repeated (env_id, obs_id) in metafeature extraction configs: ({env_id}, {obs_id})")
 
         metric_value = _load_metric(train_id, metric_key, eval_seed)
         if metric_value is None:
@@ -112,9 +117,10 @@ def build_dataset(metric_key: str) -> pd.DataFrame:
     if missing_metric:
         print(f"[isa] {len(missing_metric)} runs are missing evaluation data.")
 
-    return pd.DataFrame(instance_rows.values()).sort_values(
-        ["env_config_id", "obs_config_id"]
-    )
+    df = pd.DataFrame(instance_rows.values())
+    if debug:
+        df.sort_values(["env_config_id", "obs_config_id"], inplace=True)
+    return df
 
 
 def save_dataset(df: pd.DataFrame, output_path: Path) -> Path:
@@ -126,6 +132,11 @@ def save_dataset(df: pd.DataFrame, output_path: Path) -> Path:
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Build an instance-space dataset (one row per instance, columns for metafeatures and algorithm performance)."
+    )
+    parser.add_argument(
+        "--debug",
+        action="store_true",
+        help="Include diagnostic metrics and others from metafeature extraction.",
     )
     parser.add_argument(
         "--metric",
@@ -143,12 +154,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
-    dataset = build_dataset(args.metric)
+    dataset = build_dataset(args.metric, args.debug)
     if dataset.empty:
         print("[isa] No instances with both metafeatures and evaluation metrics were found.")
         return
     output_path = save_dataset(dataset, args.output)
-    feature_columns = [col for col in dataset.columns if col.startswith("feat_")]
+    feature_columns = [col for col in dataset.columns if col.startswith("feature_")]
     algo_columns = [col for col in dataset.columns if col.startswith(f"algo_")]
     print(
         "[isa] Dataset ready for instancespace:"

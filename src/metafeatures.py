@@ -437,7 +437,6 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     #     1.0 if isinstance(action_space, gym.spaces.Discrete) else 0.0#
     # )
     add("action_space_size", action_space.n)    # type: ignore
-    add("action_branching_factor", action_space.n)  # type: ignore
 
     obs_space = env.observation_space
     if isinstance(obs_space, gym.spaces.Box):
