@@ -9,9 +9,13 @@ from pprint import pprint
 import time
 
 from utils import (
+    CONFIG,
+    annotate_ids,
+)
+from file_utils import (
     save_json,
     read_json,
-    CONFIG,
+    ensure_dir,
     TRAIN_CONFIG_PATH,
     INSTANCE_CONFIG_PATH,
     EVAL_CONFIG_PATH,
@@ -23,8 +27,6 @@ from utils import (
     OBS_CONFIG_PATH,
     ALGO_CONFIG_HYPERPARAMS_PATH,
     BASE_IMAGES_PATH,
-    ensure_dir,
-    annotate_ids,
 )
 
 # Config generation parameters
@@ -246,7 +248,6 @@ def build_highway_configs() -> List[CONFIG]:
 
                     duration = choose_duration(lanes, vehicles, density, capacity)
                     config = {
-                        "name": f"L{lanes}_V{vehicles}_D{str(density).replace('.', 'p')}",
                         "env_id": "highway-fast-v0",
                         "config": {
                             "lanes_count": lanes,
@@ -324,15 +325,14 @@ def get_obs_configs():
     configs = read_json(OBS_CONFIG_PATH)
     return annotate_ids(configs)
 
-def get_roundabout_configs():
+def get_roundabout_configs() -> List[CONFIG]:
     return read_json(ROUNDABOUT_CONFIG_PATH)
 
-def get_merge_configs():
+def get_merge_configs() -> List[CONFIG]:
     return read_json(MERGE_CONFIG_PATH)
 
-def get_highway_configs():
+def get_highway_configs() -> List[CONFIG]:
     return read_json(HIGHWAY_CONFIG_PATH)
-
 
 def build_all_configs(
     env_configs_train: List[CONFIG],
@@ -417,14 +417,13 @@ def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
     return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 
 if __name__ == "__main__":
-    env_configs = build_highway_configs()
-    save_json(HIGHWAY_CONFIG_PATH, env_configs)
-
-    print(f"Environment configs: {len(env_configs)}")
+    highway_configs = build_highway_configs()
+    save_json(HIGHWAY_CONFIG_PATH, highway_configs)
+    print(f"Highway environment configs: {len(highway_configs)}")
 
     ensure_dir(BASE_IMAGES_PATH)
     correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE
-    save_correlation_plot(env_configs, correlation_plot_path)
+    save_correlation_plot(highway_configs, correlation_plot_path)
     print(f"Correlation plot written to {correlation_plot_path}")
 
     algo_configs = extract_algo_configs()
