@@ -7,19 +7,21 @@ from typing import Dict, List, Optional, Sequence, Tuple, Any
 import pandas as pd
 
 from evaluate import aggregate_metrics
-from utils import (
+from file_utils import (
     BASE_OUTPUT_PATH,
     EVALUATION_RESULTS_BASE_PATH,
     EVALUATION_RESULTS_FILE,
     METAFEATURES_FOLDER,
     METAFEATURES_RESULTS_FILE,
     TRAIN_FOLDER,
-    CONFIG,
     ensure_dir,
+    read_json,
+)
+from utils import (
+    CONFIG,
     get_all_train_configs,
     get_all_instance_configs,
     get_all_eval_configs,
-    read_json,
     map_to_train_id,
 )
 
@@ -46,14 +48,14 @@ def _load_metafeatures(env_id: int, obs_id: int, source: str, debug: bool) -> Op
         "instances": data["instance_id"],
         "source": source,
     }
-    sources = {
+    debug_info = {
         "env_config_id": env_id,
         "obs_config_id": obs_id,
         "env_name": data.get("env_name"),
         "metafeatures_elapsed_seconds": data.get("elapsed_seconds"),
     }
     if debug:
-        record.update(sources)
+        record.update(debug_info)
 
     features = data.get("features", {})
     diagnostics = data.get("diagnostics", {}) if debug else {}
@@ -158,9 +160,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     if dataset.empty:
         print("[isa] No instances with both metafeatures and evaluation metrics were found.")
         return
-    output_path = save_dataset(dataset, args.output)
     feature_columns = [col for col in dataset.columns if col.startswith("feature_")]
     algo_columns = [col for col in dataset.columns if col.startswith(f"algo_")]
+    leading_columns = [col for col in dataset.columns if col not in algo_columns]
+    dataset = dataset[leading_columns + algo_columns]
+
+    output_path = save_dataset(dataset, args.output)
     print(
         "[isa] Dataset ready for instancespace:"
         f" {len(dataset)} instances,"
