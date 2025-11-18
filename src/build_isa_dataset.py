@@ -111,6 +111,7 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
             missing_metric.append(cfg["id"])
             continue
         column_name = f"algo_{algo_name}_{metric_key}"
+        metric_value = metric_value / row["feature_idm_mean_episode_return"] # normalization
         row[column_name] = metric_value
 
     if missing_meta:
