@@ -14,6 +14,10 @@ from utils import _flatten_obs
 
 PolicyFn = Callable[[Any, Dict[str, Any]], Any]
 
+INITIAL_GEOMETRY_SAMPLES = 3
+MAX_FREE_SPACE_METERS = 200.0
+MAX_TTC_SECONDS = 30.0
+
 
 @dataclass
 class StepMetricsContext:
@@ -53,9 +57,9 @@ def extract_metafeatures(config: InstanceConfig):
     before = time.perf_counter()
     env = config.ensure_eval_env()
     env_name = getattr(getattr(env, "spec", None), "id", None)
-    horizon = _infer_horizon(env)
     env_seed = config.eval_seed
     env_features = _collect_env_features(env)
+    # env_features.update(_initial_geometry_features(env, env_seed))
 
     random_probe = _run_probe(
         env=env,
@@ -65,33 +69,41 @@ def extract_metafeatures(config: InstanceConfig):
         label="random_rollout",
         metric_hooks=_build_metric_hooks(),
     )
+    STUFF_IDK = [
+        # IDK what these are and if they may be decent
+        # Or just IDK if I want to keep them
+        "conflict_rate",
+        "lane_change_feasible_rate_left",
+        "lane_change_feasible_rate_right",
+        "stop_and_go_rate",
+        "nearby_vehicles_10m",
+        "nearby_vehicles_20m",
+        "nearby_vehicles_30m",
+    ]
+    INCLUDE_STUFF = [
+        "total_steps",
+        "mean_episode_return",
+        "std_episode_return",
+        "mean_episode_length",
+        "std_episode_length",
+        "collision_rate",
+        "timeout_rate",
+        "mean_speed",
+        "std_speed",
+        "reward_sparsity",
+        "reward_skew",
+        "reward_kurtosis",
+        "reward_autocorr1",
+        "corr_reward_speed",
+        "corr_reward_lane_change",
+        "corr_reward_progress",
+    ]
+    print(random_probe)
     idm_probe = _run_idm_probe(
         env=env,
         episodes=5,
         env_seed=env_seed,
         label="idm_like",
-    )
-    obs_noise_policy = _with_observation_noise(_make_random_policy(env), sigma=0.05)
-    obs_noise_probe = _run_probe(
-        env=env,
-        policy=obs_noise_policy,
-        episodes=3,
-        env_seed=env_seed,
-        label="obs_noise",
-        metric_hooks=_build_metric_hooks(),
-    )
-    sticky_policy = _with_sticky_actions(
-        _make_random_policy(env),
-        stick_prob=0.25,
-        delay_steps=1,
-    )
-    sticky_probe = _run_probe(
-        env=env,
-        policy=sticky_policy,
-        episodes=3,
-        env_seed=env_seed,
-        label="sticky_action",
-        metric_hooks=_build_metric_hooks(),
     )
     config.close()
     elapsed = time.perf_counter() - before
@@ -102,17 +114,20 @@ def extract_metafeatures(config: InstanceConfig):
     safety_delta = random_probe["collision_rate"] - idm_probe["collision_rate"]
     features: Dict[str, float] = {}
     features.update(env_features)
-    features.update(_probe_to_features(random_probe, "random"))
-    features.update(_probe_to_features(idm_probe, "idm"))
-    features.update(_probe_to_features(obs_noise_probe, "obs_noise"))
-    features.update(_probe_to_features(sticky_probe, "sticky"))
-    features.update(_derived_features(random_probe, idm_probe, env_features))
+    features.update(_random_probe_features(random_probe))
+    features.update(_baseline_probe_features(idm_probe, "idm"))
+    features.update(
+        _derived_features(
+            random_probe=random_probe,
+            idm_probe=idm_probe,
+            env_features=env_features,
+        )
+    )
+    features.update(_ttc_gap_features(random_probe, idm_probe))
     features.update(
         _robustness_features(
             random_probe=random_probe,
             idm_probe=idm_probe,
-            obs_noise_probe=obs_noise_probe,
-            sticky_probe=sticky_probe,
         )
     )
 
@@ -126,11 +141,8 @@ def extract_metafeatures(config: InstanceConfig):
         "probes": {
             "random": random_probe,
             "idm_like": idm_probe,
-            "obs_noise": obs_noise_probe,
-            "sticky_action": sticky_probe,
         },
         "diagnostics": {
-            "estimated_horizon": horizon,
             "idm_advantage": idm_advantage,
             "idm_safety_gain": safety_delta,
         },
@@ -145,63 +157,6 @@ def _make_random_policy(env: gym.Env) -> PolicyFn:
         return action_space.sample()
 
     return policy
-
-
-class ObservationNoisePolicy:
-    def __init__(self, base_policy: PolicyFn, sigma: float) -> None:
-        self.base_policy = base_policy
-        self.sigma = max(float(sigma), 0.0)
-
-    def reset_episode(self) -> None:
-        _reset_policy_state(self.base_policy)
-
-    def __call__(self, obs: Any, info: Dict[str, Any]) -> Any:
-        if self.sigma <= 0.0:
-            return self.base_policy(obs, info)
-        noisy_obs = _perturb_observation(obs, self.sigma)
-        return self.base_policy(noisy_obs, info)
-
-
-class StickyActionPolicy:
-    def __init__(self, base_policy: PolicyFn, stick_prob: float, delay_steps: int) -> None:
-        self.base_policy = base_policy
-        self.stick_prob = float(np.clip(stick_prob, 0.0, 1.0))
-        self.delay_steps = max(int(delay_steps), 0)
-        self._last_action: Any = None
-        self._delay_buffer: deque = deque(maxlen=self.delay_steps + 1 if self.delay_steps > 0 else 1)
-
-    def reset_episode(self) -> None:
-        _reset_policy_state(self.base_policy)
-        self._last_action = None
-        self._delay_buffer.clear()
-
-    def __call__(self, obs: Any, info: Dict[str, Any]) -> Any:
-        candidate_action = self.base_policy(obs, info)
-        candidate_action = _copy_action_like(candidate_action)
-
-        if self.delay_steps > 0:
-            self._delay_buffer.append(candidate_action)
-            if len(self._delay_buffer) <= self.delay_steps:
-                delayed_action = self._delay_buffer[0]
-            else:
-                delayed_action = self._delay_buffer.popleft()
-            candidate_action = _copy_action_like(delayed_action)
-
-        if self._last_action is not None and np.random.rand() < self.stick_prob:
-            action_to_use = _copy_action_like(self._last_action)
-        else:
-            action_to_use = _copy_action_like(candidate_action)
-        self._last_action = _copy_action_like(action_to_use)
-        return action_to_use
-
-
-def _with_observation_noise(policy: PolicyFn, sigma: float) -> PolicyFn:
-    return ObservationNoisePolicy(policy, sigma)
-
-
-def _with_sticky_actions(policy: PolicyFn, stick_prob: float = 0.25, delay_steps: int = 0) -> PolicyFn:
-    return StickyActionPolicy(policy, stick_prob, delay_steps)
-
 
 def _run_idm_probe(
     env: gym.Env,
@@ -235,10 +190,6 @@ def _default_idle_action(env: gym.Env) -> int:
 
 def _constant_policy(action: Any) -> PolicyFn:
     def policy(_: Any, __: Dict[str, Any]) -> Any:
-        if isinstance(action, np.ndarray):
-            return np.array(action, copy=True)
-        if isinstance(action, (list, tuple)):
-            return type(action)(action)
         return action
 
     return policy
@@ -499,22 +450,23 @@ def _run_probe(
         "timeout_rate": timeouts / episodes,
         "mean_speed": mean_speed,
         "std_speed": std_speed,
-        "action_distribution": action_distribution,
         "action_entropy": action_entropy,
-        "obs_mean": obs_mean,
-        "obs_std": obs_std,
+        # "obs_mean": obs_mean,
+        # "obs_std": obs_std,
         "obs_mean_abs": obs_mean_abs,
         "obs_zero_fraction": obs_zero_fraction,
         "obs_flat_dim": obs_dim or 0,
-        "return_min": float(np.min(returns)),
-        "return_max": float(np.max(returns)),
-        "return_median": float(np.median(returns)),
-        "return_p10": float(np.percentile(returns, 10)),
-        "return_p90": float(np.percentile(returns, 90)),
-        "length_min": float(np.min(lengths)),
-        "length_max": float(np.max(lengths)),
-        "speed_min": float(np.min(speed_samples)),
-        "speed_max": float(np.max(speed_samples)),
+        "collision_observed": 1.0 if collisions > 0 else 0.0,
+        "timeout_observed": 1.0 if timeouts > 0 else 0.0,
+        # "return_min": float(np.min(returns)),
+        # "return_max": float(np.max(returns)),
+        # "return_median": float(np.median(returns)),
+        # "return_p10": float(np.percentile(returns, 10)),
+        # "return_p90": float(np.percentile(returns, 90)),
+        # "length_min": float(np.min(lengths)),
+        # "length_max": float(np.max(lengths)),
+        # "speed_min": float(np.min(speed_samples)),
+        # "speed_max": float(np.max(speed_samples)),
     }
 
     extra_metrics: Dict[str, float] = {}
@@ -557,23 +509,6 @@ def _copy_action_like(action: Any) -> Any:
     return action
 
 
-def _perturb_observation(obs: Any, sigma: float) -> Any:
-    if sigma <= 0.0 or obs is None:
-        return obs
-    if isinstance(obs, dict):
-        return {key: _perturb_observation(value, sigma) for key, value in obs.items()}
-    if isinstance(obs, np.ndarray):
-        noise = np.random.normal(scale=sigma, size=obs.shape)
-        return obs + noise
-    if isinstance(obs, list):
-        return [_perturb_observation(value, sigma) for value in obs]
-    if isinstance(obs, tuple):
-        return tuple(_perturb_observation(value, sigma) for value in obs)
-    if isinstance(obs, (float, int, np.floating, np.integer)):
-        return float(obs) + float(np.random.normal(scale=sigma))
-    return obs
-
-
 def _infer_obs_dim(obs: Any) -> int:
     return int(_flatten_obs(obs).size)
 
@@ -594,10 +529,6 @@ def _obs_stats_update(
     obs_zero_count += int(np.count_nonzero(flat == 0))
     return obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count
 
-def _infer_horizon(env: gym.Env) -> int:
-    # TODO: remove duration? merge environment doesn't have duration (it uses position for termination)
-    return int(env.unwrapped.config.get("duration", 0)) # type: ignore
-
 def _is_number(value: Any) -> bool:
     return isinstance(value, (int, float, np.integer, np.floating))
 
@@ -611,97 +542,258 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     config = getattr(base_env, "config", {}) or {}
     features: Dict[str, float] = {}
 
-    def add(name: str, value: Any) -> None:
+    def add(name: str, value: Any, default: Optional[Any] = None) -> None:
         numeric = _as_float(value)
         if numeric is not None:
             features[name] = numeric
+        elif default is not None:
+            features[name] = default
 
-    lanes = config.get("lanes_count")
+    lanes = config.get("lanes_count", 2)
     vehicles_count = config.get("vehicles_count")
     vehicles_density = config.get("vehicles_density")
-    duration = config.get("duration")
+    collision_reward = config.get("collision_reward")
+    right_lane_reward = config.get("right_lane_reward")
+    high_speed_reward = config.get("high_speed_reward")
+    lane_change_reward = config.get("lane_change_reward")
 
     add("lanes_count", lanes)
     add("vehicles_count", vehicles_count)
     add("vehicles_density", vehicles_density)
-    add("episode_duration", duration)
-    add("ego_spacing", config.get("ego_spacing"))
-    add("policy_frequency", config.get("policy_frequency"))
-    add("simulation_frequency", config.get("simulation_frequency"))
-    add("collision_reward", config.get("collision_reward"))
-    add("right_lane_reward", config.get("right_lane_reward"))
-    add("high_speed_reward", config.get("high_speed_reward"))
-    add("lane_change_reward", config.get("lane_change_reward"))
-    # add("normalize_reward", 1.0 if config.get("normalize_reward") else 0.0)
-    reward_speed_range = config.get("reward_speed_range")
-    if isinstance(reward_speed_range, (list, tuple)) and len(reward_speed_range) == 2:
-        add("reward_speed_min", reward_speed_range[0])
-        add("reward_speed_max", reward_speed_range[1])
-
-    target_speed = config.get("target_speed") or config.get("desired_speed")
-    add("target_speed_hint", target_speed)
-    add("speed_limit_hint", config.get("speed_limit"))
-
-    obs_config = config.get("observation", {})
-    features["observation_type_id"] = obs_config["type"]
-    add("observation_vehicles_count", obs_config.get("vehicles_count"))
-    obs_features = obs_config.get("features")
-    if isinstance(obs_features, (list, tuple)):
-        add("observation_feature_dim", len(obs_features))
-
-    lanes_val = _as_float(lanes) or 1.0
-    veh_cnt_val = _as_float(vehicles_count) or 0.0
-    veh_density_val = _as_float(vehicles_density) or 0.0
-    duration_val = _as_float(duration) or 1.0
-    add(
-        "traffic_intensity_index",
-        (veh_cnt_val * max(veh_density_val, 1e-3)) / max(lanes_val, 1.0),
-    )
-    add("vehicles_per_second", veh_cnt_val / max(duration_val, 1.0))
+    add("collision_reward", collision_reward)
+    add("right_lane_reward", right_lane_reward)
+    add("high_speed_reward", high_speed_reward)
+    add("lane_change_reward", lane_change_reward)
 
     action_space = env.action_space
-    # action_type = type(action_space).__name__
-    # features["action_space_type"] = action_type
-    # features["action_is_discrete"] = (
-    #     1.0 if isinstance(action_space, gym.spaces.Discrete) else 0.0#
-    # )
-    add("action_space_size", action_space.n)    # type: ignore
+    add("action_space_size", action_space.n)
 
     obs_space = env.observation_space
-    if isinstance(obs_space, gym.spaces.Box):
-        add("observation_space_dim", int(np.prod(obs_space.shape)))
+    assert(isinstance(obs_space, gym.spaces.Box))
+    add("observation_space_dim", int(np.prod(obs_space.shape)))
 
     return features
 
 
-def _probe_to_features(probe: Dict[str, Any], prefix: str) -> Dict[str, float]:
+def _initial_geometry_features(
+    env: gym.Env,
+    env_seed: int,
+    samples: int = INITIAL_GEOMETRY_SAMPLES,
+) -> Dict[str, float]:
+    snapshots: List[Dict[str, float]] = []
+    env.reset(seed=env_seed)
+    snapshot = _geometry_snapshot_from_env(env)
+    snapshots.append(snapshot)
+
+    free_space_ahead = [_cap_free_space(s["free_space_ahead"]) for s in snapshots]
+    free_space_any = [_cap_free_space(s["free_space_min"]) for s in snapshots]
+    lane_entropy = [s["lane_entropy"] for s in snapshots]
+    relative_speed_std = [s["relative_speed_std"] for s in snapshots]
+    nearby_counts = [s["vehicles_within_20m"] for s in snapshots]
+
+    print(free_space_ahead)
     features: Dict[str, float] = {}
-
-    def add(name: str, value: Any) -> None:
-        numeric = _as_float(value)
-        if numeric is not None:
-            features[f"{prefix}_{name}"] = numeric
-
-    for key, value in probe.items():
-        if key in {"label", "action_distribution"}:
-            continue
-        add(key, value)
-
-    mean_return = probe.get("mean_episode_return", 0.0)
-    std_return = probe.get("std_episode_return", 0.0)
-    mean_length = probe.get("mean_episode_length", 0.0)
-    mean_speed = probe.get("mean_speed", 0.0)
-    std_speed = probe.get("std_speed", 0.0)
-    collision_rate = probe.get("collision_rate", 0.0)
-    timeout_rate = probe.get("timeout_rate", 0.0)
-
-    add("return_per_step", mean_return / max(mean_length, 1.0))
-    add("reward_snr", mean_return / (std_return + 1e-6))
-    add("speed_cv", std_speed / (abs(mean_speed) + 1e-6))
-    add("safety_index", 1.0 - collision_rate)
-    add("timeout_pressure", timeout_rate)
-    add("safety_vs_speed", (1.0 - collision_rate) * mean_speed)
+    features["init_free_space_ahead_mean"] = float(np.mean(free_space_ahead))
+    features["init_free_space_ahead_min"] = float(np.min(free_space_ahead))
+    features["init_free_space_min"] = float(np.min(free_space_any))
+    features["init_lane_occupancy_entropy"] = float(np.mean(lane_entropy))
+    features["init_relative_speed_std"] = float(np.mean(relative_speed_std))
+    features["init_num_vehicles_within_20m"] = float(np.mean(nearby_counts))
+    if len(free_space_ahead) > 1:
+        features["initial_state_stochasticity"] = float(np.std(free_space_ahead))
+    else:
+        features["initial_state_stochasticity"] = 0.0
     return features
+
+
+def _geometry_snapshot_from_env(env: gym.Env) -> Optional[Dict[str, float]]:
+    base_env = env.unwrapped
+    road = getattr(base_env, "road", None)
+    ego = getattr(base_env, "vehicle", None)
+    if road is None or ego is None:
+        return None
+    ego_lane = _lane_id_from_vehicle(ego)
+    if ego_lane is None:
+        return None
+    ego_pos = _vehicle_position(ego)
+    if ego_pos.size < 2:
+        return None
+
+    front_gap = math.inf
+    any_front_gap = math.inf
+    lane_counts: Counter = Counter()
+    rel_speed_samples: List[float] = []
+    nearby_within_20 = 0
+
+    vehicles = getattr(road, "vehicles", [])
+    for other in vehicles:
+        if other is ego:
+            continue
+        lane_id = _lane_id_from_vehicle(other)
+        if lane_id is None:
+            continue
+        lane_counts[lane_id] += 1
+        other_pos = _vehicle_position(other)
+        if other_pos.size < 2:
+            continue
+        gap = float(other_pos[0] - ego_pos[0])
+        if gap >= 0.0:
+            any_front_gap = min(any_front_gap, gap)
+            if lane_id == ego_lane:
+                front_gap = min(front_gap, gap)
+        distance = float(np.linalg.norm(other_pos - ego_pos))
+        if distance <= 20.0:
+            nearby_within_20 += 1
+        rel_speed_samples.append(_vehicle_speed(other) - ego.speed)
+
+    snapshot: Dict[str, float] = {}
+    snapshot["free_space_ahead"] = float(front_gap) if math.isfinite(front_gap) else float("inf")
+    snapshot["free_space_min"] = float(any_front_gap) if math.isfinite(any_front_gap) else float("inf")
+    snapshot["lane_entropy"] = _entropy_from_counts(lane_counts)
+    snapshot["relative_speed_std"] = (
+        float(np.std(rel_speed_samples)) if rel_speed_samples else 0.0
+    )
+    snapshot["vehicles_within_20m"] = float(nearby_within_20)
+    return snapshot
+
+
+def _cap_free_space(value: float) -> float:
+    if not math.isfinite(value):
+        return MAX_FREE_SPACE_METERS
+    return float(min(value, MAX_FREE_SPACE_METERS))
+
+
+def _entropy_from_counts(counts: Counter) -> float:
+    total = sum(counts.values())
+    if total <= 0:
+        return 0.0
+    probabilities = np.asarray(list(counts.values()), dtype=float) / float(total)
+    probabilities = probabilities[probabilities > 0]
+    if probabilities.size == 0:
+        return 0.0
+    return float(-np.sum(probabilities * np.log(np.maximum(probabilities, 1e-12))))
+
+
+def _random_probe_features(probe: Dict[str, Any]) -> Dict[str, float]:
+    features: Dict[str, float] = {}
+    keep_keys = [
+        "mean_episode_return",
+        "std_episode_return",
+        "collision_rate",
+        "timeout_rate",
+        "mean_speed",
+        "reward_sparsity",
+        "reward_skew",
+        "reward_kurtosis",
+        "reward_autocorr1",
+        "action_entropy",
+        "collision_observed",
+        "timeout_observed",
+    ]
+    for key in keep_keys:
+        _add_prefixed_feature(features, "random", key, probe.get(key))
+
+    mean_return = _probe_value(probe, "mean_episode_return")
+    std_return = _probe_value(probe, "std_episode_return")
+    mean_length = _probe_value(probe, "mean_episode_length")
+    mean_speed = _probe_value(probe, "mean_speed")
+    std_speed = _probe_value(probe, "std_speed")
+    collision_rate = _probe_value(probe, "collision_rate")
+    timeout_rate = _probe_value(probe, "timeout_rate")
+
+    if mean_return is not None and mean_length is not None and mean_length > 0.0:
+        features["random_return_per_step"] = mean_return / max(mean_length, 1e-6)
+    if mean_return is not None and std_return is not None:
+        features["random_reward_snr"] = mean_return / (abs(std_return) + 1e-6)
+    if mean_speed is not None and std_speed is not None:
+        denom = max(abs(mean_speed), 1e-6)
+        features["random_speed_cv"] = std_speed / denom
+    if collision_rate is not None:
+        features["random_safety_index"] = 1.0 - collision_rate
+        if mean_speed is not None:
+            features["random_safety_vs_speed"] = (1.0 - collision_rate) * mean_speed
+    if timeout_rate is not None:
+        features["random_timeout_pressure"] = timeout_rate
+
+    for ttc_key in ["ttc_p05", "ttc_p50", "ttc_p95"]:
+        _add_prefixed_feature(
+            features,
+            "random",
+            ttc_key,
+            probe.get(ttc_key),
+            fallback=MAX_TTC_SECONDS,
+            impute_flag=f"random_{ttc_key}_imputed",
+        )
+    _add_prefixed_feature(
+        features,
+        "random",
+        "headway_mean",
+        probe.get("headway_mean"),
+        fallback=MAX_FREE_SPACE_METERS,
+        impute_flag="random_headway_mean_imputed",
+    )
+    return features
+
+
+def _baseline_probe_features(probe: Dict[str, Any], prefix: str) -> Dict[str, float]:
+    features: Dict[str, float] = {}
+    keep_keys = [
+        "mean_episode_return",
+        "collision_rate",
+        "timeout_rate",
+        "mean_speed",
+        "collision_observed",
+        "timeout_observed",
+    ]
+    for key in keep_keys:
+        _add_prefixed_feature(features, prefix, key, probe.get(key))
+
+    mean_speed = _probe_value(probe, "mean_speed")
+    std_speed = _probe_value(probe, "std_speed")
+    if mean_speed is not None and std_speed is not None:
+        denom = max(abs(mean_speed), 1e-6)
+        features[f"{prefix}_speed_cv"] = std_speed / denom
+
+    collision_rate = _probe_value(probe, "collision_rate")
+    if collision_rate is not None:
+        features[f"{prefix}_safety_index"] = 1.0 - collision_rate
+    return features
+
+
+def _add_prefixed_feature(
+    features: Dict[str, float],
+    prefix: str,
+    name: str,
+    value: Any,
+    *,
+    fallback: Optional[float] = None,
+    impute_flag: Optional[str] = None,
+) -> None:
+    key = f"{prefix}_{name}" if prefix else name
+    numeric = _as_float(value)
+    used_fallback = False
+    if numeric is None or not math.isfinite(numeric):
+        if fallback is None:
+            return
+        numeric = fallback
+        used_fallback = True
+    features[key] = float(numeric)
+    if impute_flag is not None:
+        features[impute_flag] = 1.0 if used_fallback else 0.0
+
+
+def _probe_value(probe: Dict[str, Any], key: str) -> Optional[float]:
+    value = probe.get(key)
+    if value is None:
+        return None
+    return _as_float(value)
+
+
+def _probe_stat(probe: Dict[str, Any], key: str, default: float = 0.0) -> float:
+    value = _probe_value(probe, key)
+    if value is None:
+        return default
+    return value
 
 
 def _derived_features(
@@ -711,18 +803,22 @@ def _derived_features(
 ) -> Dict[str, float]:
     features: Dict[str, float] = {}
 
-    r_return = random_probe.get("mean_episode_return", 0.0)
-    i_return = idm_probe.get("mean_episode_return", 0.0)
-    r_std = random_probe.get("std_episode_return", 0.0)
-    i_std = idm_probe.get("std_episode_return", 0.0)
-    r_speed = random_probe.get("mean_speed", 0.0)
-    i_speed = idm_probe.get("mean_speed", 0.0)
-    r_collision = random_probe.get("collision_rate", 0.0)
-    i_collision = idm_probe.get("collision_rate", 0.0)
-    r_timeout = random_probe.get("timeout_rate", 0.0)
-    i_timeout = idm_probe.get("timeout_rate", 0.0)
-    r_obs_dim = random_probe.get("obs_flat_dim", 0.0)
-    entropy = random_probe.get("action_entropy", 0.0)
+    r_return = _probe_stat(random_probe, "mean_episode_return")
+    i_return = _probe_stat(idm_probe, "mean_episode_return")
+
+    r_std = _probe_stat(random_probe, "std_episode_return")
+    i_std = _probe_stat(idm_probe, "std_episode_return")
+    r_speed = _probe_stat(random_probe, "mean_speed")
+    i_speed = _probe_stat(idm_probe, "mean_speed")
+
+    r_collision = _probe_stat(random_probe, "collision_rate")
+    i_collision = _probe_stat(idm_probe, "collision_rate")
+
+    r_timeout = _probe_stat(random_probe, "timeout_rate")
+    i_timeout = _probe_stat(idm_probe, "timeout_rate")
+
+    r_obs_dim = _probe_stat(random_probe, "obs_flat_dim")
+    entropy = _probe_stat(random_probe, "action_entropy")
 
     features["idm_return_gain"] = i_return - r_return
     features["idm_return_ratio"] = i_return / (abs(r_return) + 1e-6)
@@ -742,14 +838,56 @@ def _derived_features(
         i_speed * (1.0 - i_collision) - r_speed * (1.0 - r_collision)
     )
     features["timeout_sensitivity"] = r_timeout
+
+    returns = [r_return, i_return]
+    collisions = [r_collision, i_collision]
+    timeouts = [r_timeout, i_timeout]
+    speeds = [r_speed, i_speed]
+
+    features["probe_return_spread"] = max(returns) - min(returns)
+    features["probe_safety_spread"] = max(collisions) - min(collisions)
+    features["probe_timeout_spread"] = max(timeouts) - min(timeouts)
+    features["probe_speed_spread"] = max(speeds) - min(speeds)
     return features
+
+
+def _ttc_gap_features(
+    random_probe: Dict[str, Any],
+    idm_probe: Dict[str, Any],
+    sticky_probe: Dict[str, Any],
+) -> Dict[str, float]:
+    features: Dict[str, float] = {}
+    ttc_keys = ["ttc_p05", "ttc_p50", "ttc_p95"]
+    comparisons = [
+        ("idm", idm_probe, "random", random_probe),
+        ("sticky", sticky_probe, "random", random_probe),
+        ("sticky", sticky_probe, "idm", idm_probe),
+    ]
+    for metric in ttc_keys:
+        for left_name, left_probe, right_name, right_probe in comparisons:
+            diff = _ttc_gap(left_probe, right_probe, metric)
+            if diff is not None:
+                features[f"{metric}_gap_{left_name}_{right_name}"] = diff
+    return features
+
+
+def _ttc_gap(
+    probe_a: Dict[str, Any],
+    probe_b: Dict[str, Any],
+    key: str,
+) -> Optional[float]:
+    value_a = _probe_value(probe_a, key)
+    value_b = _probe_value(probe_b, key)
+    if value_a is None or value_b is None:
+        return None
+    if not math.isfinite(value_a) or not math.isfinite(value_b):
+        return None
+    return value_a - value_b
 
 
 def _robustness_features(
     random_probe: Optional[Dict[str, Any]],
     idm_probe: Optional[Dict[str, Any]],
-    obs_noise_probe: Optional[Dict[str, Any]],
-    sticky_probe: Optional[Dict[str, Any]],
 ) -> Dict[str, float]:
     features: Dict[str, float] = {}
 
@@ -774,7 +912,6 @@ def _robustness_features(
         features[f"{probe_name}_timeout_delta_vs_{reference_label}"] = probe_timeout - ref_timeout
 
     for probe_name, probe in {
-        "obs_noise": obs_noise_probe,
         "sticky": sticky_probe,
     }.items():
         _add_delta(probe_name, probe, random_probe, "random")
@@ -976,77 +1113,14 @@ class RewardSignalHook(BaseMetricHook):
         if corr_progress is not None:
             stats["corr_reward_progress"] = corr_progress
 
-        early10, late10 = _return_variance_fractions(self._episode_sequences, 10)
-        if early10 is not None:
-            stats["reward_return_var_early10_frac"] = early10
-        if late10 is not None:
-            stats["reward_return_var_late10_frac"] = late10
-
-        early20, late20 = _return_variance_fractions(self._episode_sequences, 20)
-        if early20 is not None:
-            stats["reward_return_var_early20_frac"] = early20
-        if late20 is not None:
-            stats["reward_return_var_late20_frac"] = late20
-
         return stats
 
-
-class ObservabilityHook(BaseMetricHook):
-    def __init__(self, max_obs_samples: int = 1024, max_obs_dim: int = 256) -> None:
-        self.max_obs_samples = max_obs_samples
-        self.max_obs_dim = max_obs_dim
-        self._visibility_samples: List[float] = []
-        self._obs_samples: List[np.ndarray] = []
-        self._target_obs_dim: Optional[int] = None
-
-    def on_step(self, context: StepMetricsContext) -> None:
-        ratio = _estimate_visibility_coverage(context)
-        if ratio is not None:
-            self._visibility_samples.append(ratio)
-
-        if len(self._obs_samples) >= self.max_obs_samples:
-            return
-
-        obs_source = context.pre_obs if context.pre_obs is not None else context.post_obs
-        if obs_source is None:
-            return
-
-        flat = _flatten_obs(obs_source)
-        if flat.size == 0:
-            return
-        sample = flat.astype(np.float32, copy=True)
-        if self._target_obs_dim is None:
-            self._target_obs_dim = min(sample.shape[0], self.max_obs_dim)
-        target_dim = self._target_obs_dim or 0
-        if target_dim == 0:
-            return
-        trimmed = sample[:target_dim]
-        if trimmed.shape[0] < target_dim:
-            trimmed = np.pad(trimmed, (0, target_dim - trimmed.shape[0]), mode="constant")
-        self._obs_samples.append(trimmed)
-
-    def finalize(self) -> Dict[str, float]:
-        metrics: Dict[str, float] = {}
-        if self._visibility_samples:
-            metrics["visibility_coverage"] = float(np.mean(self._visibility_samples))
-
-        if len(self._obs_samples) >= 2:
-            data = np.stack(self._obs_samples, axis=0)
-            data = data - np.mean(data, axis=0, keepdims=True)
-            cov = np.atleast_2d(np.cov(data, rowvar=False))
-            cov = cov + np.eye(cov.shape[0]) * 1e-6
-            try:
-                metrics["obs_condition_number"] = float(np.linalg.cond(cov))
-            except np.linalg.LinAlgError:
-                pass
-        return metrics
 
 
 def _build_metric_hooks() -> List[MetricHook]:
     return [
-        TrafficMetricHook(),
+        # TrafficMetricHook(),
         RewardSignalHook(),
-        ObservabilityHook(),
     ]
 
 
@@ -1063,7 +1137,7 @@ def _traffic_snapshot(
 
     vehicles = getattr(road, "vehicles", [])
     ego_lane = _lane_id_from_vehicle(ego)
-    ego_speed = _vehicle_speed(ego)
+    ego_speed = ego.speed
     ego_pos = _vehicle_position(ego)
     if ego_pos.size < 2:
         return None
@@ -1158,6 +1232,7 @@ def _traffic_snapshot(
 
     snapshot["lane_change_feasible_left"] = snapshot.get("lane_change_feasible_left", 0.0)
     snapshot["lane_change_feasible_right"] = snapshot.get("lane_change_feasible_right", 0.0)
+    
     for radius, count in nearby_counts.items():
         snapshot[f"nearby_count_{radius}m"] = float(count)
     return snapshot
@@ -1203,15 +1278,7 @@ def _lane_id_from_vehicle(vehicle: Any) -> Optional[int]:
 
 
 def _vehicle_speed(vehicle: Any) -> float:
-    speed = getattr(vehicle, "speed", None)
-    if speed is not None:
-        return float(speed)
-    velocity = getattr(vehicle, "velocity", None)
-    if velocity is not None:
-        velocity_arr = np.asarray(velocity, dtype=float)
-        return float(np.linalg.norm(velocity_arr))
-    return 0.0
-
+    return vehicle.speed
 
 def _safe_autocorr(values: np.ndarray) -> Optional[float]:
     if values.size <= 1:
@@ -1232,66 +1299,3 @@ def _safe_corr(x_values: List[float], y_values: List[float]) -> Optional[float]:
         return 0.0
     return float(np.corrcoef(x, y)[0, 1])
 
-
-def _return_variance_fractions(
-    episode_sequences: List[List[float]],
-    prefix_len: int,
-) -> Tuple[Optional[float], Optional[float]]:
-    if len(episode_sequences) < 2:
-        return None, None
-    returns = np.asarray([sum(seq) for seq in episode_sequences], dtype=float)
-    if np.var(returns) < 1e-8:
-        return None, None
-    prefix = np.asarray([sum(seq[:prefix_len]) for seq in episode_sequences], dtype=float)
-    suffix = np.asarray([sum(seq[prefix_len:]) for seq in episode_sequences], dtype=float)
-    total_var = float(np.var(returns))
-    early_frac = float(np.var(prefix) / total_var)
-    late_frac = float(np.var(suffix) / total_var)
-    return early_frac, late_frac
-
-
-def _estimate_visibility_coverage(context: StepMetricsContext) -> Optional[float]:
-    base_env = context.env.unwrapped
-    road = getattr(base_env, "road", None)
-    if road is None:
-        return None
-    vehicles = getattr(road, "vehicles", [])
-    total = max(len(vehicles) - 1, 1)
-    obs_source = context.pre_obs if context.pre_obs is not None else context.post_obs
-    observed = _infer_observed_vehicle_count(obs_source, base_env)
-    if observed is None:
-        return None
-    observed_clamped = min(observed, float(total))
-    return observed_clamped / max(float(total), 1.0)
-
-
-def _infer_observed_vehicle_count(obs: Any, base_env: Any) -> Optional[float]:
-    count = _extract_vehicle_count_from_obs(obs)
-    if count is not None:
-        return float(count)
-    config = getattr(base_env, "config", {}) or {}
-    obs_config = config.get("observation", {}) or {}
-    capacity = obs_config.get("vehicles_count")
-    if capacity is None:
-        return None
-    return float(capacity)
-
-
-def _extract_vehicle_count_from_obs(obs: Any) -> Optional[int]:
-    if obs is None:
-        return None
-    if isinstance(obs, dict):
-        for key in ("vehicles", "observation", "objects"):
-            if key in obs:
-                arr = np.asarray(obs[key])
-                if arr.ndim == 2:
-                    return int(arr.shape[0])
-        for value in obs.values():
-            arr = np.asarray(value)
-            if arr.ndim == 2 and arr.shape[1] >= 3:
-                return int(arr.shape[0])
-        return None
-    arr = np.asarray(obs)
-    if arr.ndim == 2 and arr.shape[1] >= 3:
-        return int(arr.shape[0])
-    return None
