@@ -111,6 +111,7 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
             missing_metric.append(cfg["id"])
             continue
         column_name = f"algo_{algo_name}_{metric_key}"
+        # normalize by IDM performance
         metric_value = metric_value / row["feature_idm_mean_episode_return"] # normalization
         row[column_name] = metric_value
 
@@ -119,6 +120,14 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
         print(f"[isa] Skipped {len(unique)} instances without metafeatures.")
     if missing_metric:
         print(f"[isa] {len(missing_metric)} runs are missing evaluation data.")
+
+    # Normalize, with best algorithm performance = 1
+    # for k, v in instance_rows.items():
+    #     cols = [col for col in v.keys() if col.startswith("algo_")]
+    #     best = max(cols, key=lambda name: v[name])
+    #     best_val = v[best]
+    #     for col in cols:
+    #         instance_rows[k][col] /= best_val
 
     df = pd.DataFrame(instance_rows.values())
     if debug:

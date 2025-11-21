@@ -5,21 +5,11 @@ from typing import Tuple
 
 import pandas as pd
 
-
-DATASET_CANDIDATES = (
-    Path("results/isa/instance_dataset.csv"),
-    Path("results/isa/instancespace_dataset.csv"),
-)
+DATASET_PATH = Path("results") / "isa" / "instancespace_dataset.csv"
 
 
-def _load_dataset() -> Tuple[Path, pd.DataFrame]:
-    for candidate in DATASET_CANDIDATES:
-        if candidate.exists():
-            return candidate, pd.read_csv(candidate)
-    raise FileNotFoundError(
-        "Could not find any ISA dataset. Checked: "
-        + ", ".join(str(path) for path in DATASET_CANDIDATES)
-    )
+def _load_dataset() -> pd.DataFrame:
+    return pd.read_csv(str(DATASET_PATH))
 
 
 def _print_summary(df: pd.DataFrame) -> None:
@@ -62,10 +52,23 @@ def _print_summary(df: pd.DataFrame) -> None:
         for column, value in cv.sort_values(ascending=False).head(5).items():
             print(f"  - {column}: {value:.2f}")
 
+    print("\n")
+    _extensive_metafeature_analysis(df)
+
+def _extensive_metafeature_analysis(df: pd.DataFrame) -> None:
+    for col in df.columns:
+        if not col.startswith("feature_"):
+            continue
+        print(f">> {col}")
+        nr = df[col].nunique()
+        print(f"Unique values: {nr}")
+        if nr <= 25:
+            print(df[col].unique())
+        print(df[col].mean(), df[col].std())
+        print()
 
 def main() -> None:
-    dataset_path, df = _load_dataset()
-    print(f"Analyzing ISA dataset at: {dataset_path}")
+    df = _load_dataset()
     _print_summary(df)
 
 

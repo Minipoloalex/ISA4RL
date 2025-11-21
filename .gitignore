@@ -2,6 +2,10 @@
 .venvisa
 __pycache__
 **/locals/**
-results
+results/*
+!results/isa/
+results/isa/*
+!results/isa/*instancespace_dataset.csv
 images
 .vscode
+!**/*instancespace_dataset.csv

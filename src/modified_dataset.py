@@ -4,7 +4,7 @@ from typing import Callable, Iterable, List, Sequence
 
 COLUMNS_TO_DISCARD: Sequence[str] = ()
 IN_PATH = Path("results") / "isa" / "instancespace_dataset.csv"
-OUT_PATH = Path("results") / "isa" / "version3.csv"
+OUT_PATH = Path("results") / "isa" / "version2.csv"
 OBSERVATION_KEYWORDS = ("obs", "observation")
 RowPredicate = Callable[[pd.Series], bool]
 ROW_FILTERS: Sequence[RowPredicate] = ()
@@ -16,10 +16,9 @@ def _matches_observation_metadata(column: str) -> bool:
 
 def _columns_to_drop(columns: Iterable[str]) -> List[str]:
     """Return all columns that leak observation-space information."""
-    return []
-    # auto_columns = [col for col in columns if _matches_observation_metadata(col)]
-    # manual_columns = [col for col in COLUMNS_TO_DISCARD if col in columns]
-    # return sorted(set(auto_columns + manual_columns))
+    auto_columns = [col for col in columns if _matches_observation_metadata(col)]
+    manual_columns = [col for col in COLUMNS_TO_DISCARD if col in columns]
+    return sorted(set(auto_columns + manual_columns))
 
 def _drop_rows(df: pd.DataFrame, predicates: Sequence[RowPredicate]) -> pd.DataFrame:
     if df.empty or not predicates:
@@ -40,7 +39,7 @@ def filter_grayscale(row: pd.Series) -> bool:
     return row["source"].endswith("GrayscaleObservation")
 
 def main() -> None:
-    ROW_FILTERS = [filter_grayscale]
+    ROW_FILTERS = []
 
     df = pd.read_csv(IN_PATH)
     columns_to_drop = _columns_to_drop(df.columns)

@@ -123,14 +123,6 @@ def extract_metafeatures(config: InstanceConfig):
             env_features=env_features,
         )
     )
-    features.update(_ttc_gap_features(random_probe, idm_probe))
-    features.update(
-        _robustness_features(
-            random_probe=random_probe,
-            idm_probe=idm_probe,
-        )
-    )
-
     return {
         "instance_id": config.id,
         "env_config_id": config.id_env_config,
@@ -850,76 +842,6 @@ def _derived_features(
     features["probe_speed_spread"] = max(speeds) - min(speeds)
     return features
 
-
-def _ttc_gap_features(
-    random_probe: Dict[str, Any],
-    idm_probe: Dict[str, Any],
-    sticky_probe: Dict[str, Any],
-) -> Dict[str, float]:
-    features: Dict[str, float] = {}
-    ttc_keys = ["ttc_p05", "ttc_p50", "ttc_p95"]
-    comparisons = [
-        ("idm", idm_probe, "random", random_probe),
-        ("sticky", sticky_probe, "random", random_probe),
-        ("sticky", sticky_probe, "idm", idm_probe),
-    ]
-    for metric in ttc_keys:
-        for left_name, left_probe, right_name, right_probe in comparisons:
-            diff = _ttc_gap(left_probe, right_probe, metric)
-            if diff is not None:
-                features[f"{metric}_gap_{left_name}_{right_name}"] = diff
-    return features
-
-
-def _ttc_gap(
-    probe_a: Dict[str, Any],
-    probe_b: Dict[str, Any],
-    key: str,
-) -> Optional[float]:
-    value_a = _probe_value(probe_a, key)
-    value_b = _probe_value(probe_b, key)
-    if value_a is None or value_b is None:
-        return None
-    if not math.isfinite(value_a) or not math.isfinite(value_b):
-        return None
-    return value_a - value_b
-
-
-def _robustness_features(
-    random_probe: Optional[Dict[str, Any]],
-    idm_probe: Optional[Dict[str, Any]],
-) -> Dict[str, float]:
-    features: Dict[str, float] = {}
-
-    def _add_delta(
-        probe_name: str,
-        probe: Optional[Dict[str, Any]],
-        reference: Optional[Dict[str, Any]],
-        reference_label: str,
-    ) -> None:
-        if probe is None or reference is None:
-            return
-        ref_return = reference.get("mean_episode_return", 0.0)
-        probe_return = probe.get("mean_episode_return", 0.0)
-        features[f"{probe_name}_return_drop_vs_{reference_label}"] = ref_return - probe_return
-
-        ref_collision = reference.get("collision_rate", 0.0)
-        probe_collision = probe.get("collision_rate", 0.0)
-        features[f"{probe_name}_collision_delta_vs_{reference_label}"] = probe_collision - ref_collision
-
-        ref_timeout = reference.get("timeout_rate", 0.0)
-        probe_timeout = probe.get("timeout_rate", 0.0)
-        features[f"{probe_name}_timeout_delta_vs_{reference_label}"] = probe_timeout - ref_timeout
-
-    for probe_name, probe in {
-        "sticky": sticky_probe,
-    }.items():
-        _add_delta(probe_name, probe, random_probe, "random")
-        _add_delta(probe_name, probe, idm_probe, "idm")
-
-    return features
-
-
 class BaseMetricHook:
     def on_probe_start(self) -> None:
         pass
@@ -935,7 +857,6 @@ class BaseMetricHook:
 
     def finalize(self) -> Dict[str, float]:
         return {}
-
 
 class TrafficMetricHook(BaseMetricHook):
     def __init__(
