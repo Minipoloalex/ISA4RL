@@ -4,8 +4,9 @@ from typing import Callable, Iterable, List, Sequence
 
 COLUMNS_TO_DISCARD: Sequence[str] = ()
 IN_PATH = Path("results") / "isa" / "instancespace_dataset.csv"
-OUT_PATH = Path("results") / "isa" / "version2.csv"
-OBSERVATION_KEYWORDS = ("obs", "observation")
+OUT_PATH = Path("results") / "isa" / "version6.csv"
+OBSERVATION_KEYWORDS = ["obs", "observation"]
+STICKY_KEYWORDS = ["sticky"]
 RowPredicate = Callable[[pd.Series], bool]
 ROW_FILTERS: Sequence[RowPredicate] = ()
 
@@ -13,10 +14,14 @@ def _matches_observation_metadata(column: str) -> bool:
     lowered = column.lower()
     return any(keyword in lowered for keyword in OBSERVATION_KEYWORDS)
 
+def _matches_sticky_metadata(column: str) -> bool:
+    lowered = column.lower()
+    return any(keyword in lowered for keyword in STICKY_KEYWORDS)
 
 def _columns_to_drop(columns: Iterable[str]) -> List[str]:
-    """Return all columns that leak observation-space information."""
-    auto_columns = [col for col in columns if _matches_observation_metadata(col)]
+    """Return all columns that, for instance, leak observation-space information.
+    Or instead give useless information"""
+    auto_columns = [col for col in columns if _matches_observation_metadata(col) or _matches_sticky_metadata(col)]
     manual_columns = [col for col in COLUMNS_TO_DISCARD if col in columns]
     return sorted(set(auto_columns + manual_columns))
 
