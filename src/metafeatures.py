@@ -94,11 +94,10 @@ def extract_metafeatures(config: InstanceConfig):
         "reward_skew",
         "reward_kurtosis",
         "reward_autocorr1",
-        "corr_reward_speed",
+        "corr_reward_speed",    # are these actually good?
         "corr_reward_lane_change",
         "corr_reward_progress",
     ]
-    print(random_probe)
     idm_probe = _run_idm_probe(
         env=env,
         episodes=5,
@@ -188,6 +187,7 @@ def _constant_policy(action: Any) -> PolicyFn:
 
 
 def _reset_policy_state(policy: Any) -> None:
+    # TODO: check if this function does anything
     if hasattr(policy, "reset_episode"):
         try:
             policy.reset_episode()
