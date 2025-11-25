@@ -6,12 +6,12 @@ from typing import Optional, Sequence
 
 from instancespace import InstanceSpace
 from instancespace.data import metadata as isa_metadata
-from instancespace.data.options import InstanceSpaceOptions, from_json_file
+from instancespace.data.options import InstanceSpaceOptions, from_json_file, PerformanceOptions
 
 from file_utils import BASE_OUTPUT_PATH, ensure_dir
 
 ISA_RESULTS_DIR = BASE_OUTPUT_PATH / "isa"
-DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "old_instancespace_dataset.csv"
+DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "new_instancespace_dataset.csv"
 DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / "analysis"
 
 
@@ -21,9 +21,15 @@ class InstanceSpaceAnalysisError(RuntimeError):
 
 def _load_options(options_path: Optional[Path]) -> InstanceSpaceOptions:
     if options_path is None:
+        perf = PerformanceOptions.default(
+            max_perf=True,
+            abs_perf=True,
+            epsilon = 0.98,
+            beta_threshold = 0.55,
+        )
         return InstanceSpaceOptions.default(
             parallel=None,
-            perf=None,
+            perf=perf,
             auto=None,
             bound=None,
             norm=None,
@@ -73,7 +79,9 @@ def run_instance_space_analysis(
     )
 
     instance_space = InstanceSpace(metadata, options)
+    print(f"[isa] Instance created. Building...")
     model = instance_space.build()
+    print(f"[isa] Build completed. Saving...")
 
     output_dir = output_dir.expanduser()
     ensure_dir(output_dir)
