@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Callable, Iterable, List, Sequence
 
 COLUMNS_TO_DISCARD: Sequence[str] = ()
-IN_PATH = Path("results") / "isa" / "instancespace_dataset.csv"
+IN_PATH = Path("results") / "isa" / "old_instancespace_dataset.csv"
 OUT_PATH = Path("results") / "isa" / "version6.csv"
 OBSERVATION_KEYWORDS = ["obs", "observation"]
 STICKY_KEYWORDS = ["sticky"]

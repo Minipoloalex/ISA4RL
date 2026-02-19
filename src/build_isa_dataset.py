@@ -99,6 +99,7 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
         row = instance_rows.get(key)
         if row is None:
             source = f"{env_cfg["env_id"]}_{obs_cfg["type"]}"
+            # source = f"{env_cfg["env_id"]}"
             meta = _load_metafeatures(env_id, obs_id, source, debug)
             if meta is None:
                 missing_meta.append(key)

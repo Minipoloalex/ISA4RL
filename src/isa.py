@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Optional, Sequence
+import time
 
 from instancespace import InstanceSpace
 from instancespace.data import metadata as isa_metadata
@@ -12,7 +13,7 @@ from file_utils import BASE_OUTPUT_PATH, ensure_dir
 
 ISA_RESULTS_DIR = BASE_OUTPUT_PATH / "isa"
 DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "new_instancespace_dataset.csv"
-DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / "analysis"
+DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / f"analysis_{str(time.time_ns())}"
 
 
 class InstanceSpaceAnalysisError(RuntimeError):
@@ -23,8 +24,8 @@ def _load_options(options_path: Optional[Path]) -> InstanceSpaceOptions:
     if options_path is None:
         perf = PerformanceOptions.default(
             max_perf=True,
-            abs_perf=True,
-            epsilon = 0.98,
+            abs_perf=False,
+            epsilon = 0.02,
             beta_threshold = 0.55,
         )
         return InstanceSpaceOptions.default(

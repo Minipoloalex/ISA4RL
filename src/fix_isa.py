@@ -1,8 +1,14 @@
 import pandas as pd
 import numpy as np
 
-path = "results/isa/old_instancespace_dataset.csv"
-new_path = "results/isa/new_instancespace_dataset.csv"
+# path = "results/isa/old_instancespace_dataset.csv"
+# path = "results/isa/instancespace_dataset.csv"
+path = "results/isa/instancespace_dataset_highway.csv"
+# path = "results/isa/version6.csv"
+# path = "results/isa/version6_highway.csv"
+
+# new_path = "results/isa/new_instancespace_dataset.csv"
+new_path = "results/isa/new_instancespace_dataset_highway.csv"
 
 df = pd.read_csv(path)
 
@@ -18,7 +24,7 @@ summary = pd.DataFrame({
 })
 
 problematic = summary.query(
-    "missing > 0 or n_unique <= 1 or min <= 0"
+    "missing > 0 or n_unique <= 1 or min < 0"
 )
 
 
@@ -38,16 +44,11 @@ for feature in lean_features:
 print()
 # print(lean_features)
 
-selected_features = [
-"feature_random_obs_std",
-"feature_random_reward_return_var_early10_frac",
-"feature_idm_mean_speed",
-"feature_idm_return_p90",
-"feature_idm_return_per_step",
-"feature_obs_noise_return_p90",
-]
+# selected_features = ["feature_random_obs_std","feature_random_reward_return_var_early10_frac","feature_idm_mean_speed","feature_idm_return_p90","feature_idm_return_per_step","feature_obs_noise_return_p90"]
+# selected_features = ['feature_random_std_speed', 'feature_random_obs_mean', 'feature_random_return_per_step', 'feature_idm_return_min', 'feature_idm_speed_max', 'feature_obs_noise_return_p90']
+# selected_features = ['feature_random_obs_mean', 'feature_random_return_per_step', 'feature_idm_return_min', 'feature_idm_speed_max', 'feature_obs_noise_return_p90']
 
-new_df = df[["instances"] + lean_features + algo_cols] # TODO: filter by lean features
-new_df = df[["instances"] + selected_features + algo_cols] # TODO: this allows saving results/isa
+new_df = df[["instances"] + ["source"] + lean_features + algo_cols] # TODO: filter by lean features
+# new_df = df[["instances"] + ["source"] + selected_features + algo_cols] # TODO: this allows saving results/isa
 
 new_df.to_csv(new_path, index=False)
