@@ -12,7 +12,7 @@ from utils import (
     CONFIG,
     annotate_ids,
 )
-from file_utils import (
+from src.common.file_utils import (
     save_json,
     read_json,
     ensure_dir,
