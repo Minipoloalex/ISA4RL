@@ -1,3 +1,4 @@
+import datetime
 import argparse
 import json
 import math
@@ -164,8 +165,9 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     if args.task == "extract":
         extract_metafeatures(selected, workers=args.workers)  # type: ignore[arg-type]
     else:
+        print("", datetime.datetime.now(), "\n\n\n")
         task_map[args.task](selected)  # type: ignore
-
+        print("\n\n\n", datetime.datetime.now())
 
 if __name__ == "__main__":
     main()
