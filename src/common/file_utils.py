@@ -1,11 +1,14 @@
 import json
+import os
 from pathlib import Path
 from typing import Dict, Any, List
 import numpy as np
 
-BASE_OUTPUT_PATH = Path("results")
-BASE_CONFIG_PATH = Path("config")
-BASE_IMAGES_PATH = Path("images")
+base_path = Path(os.getenv("APP_DIR", "../../"))
+
+BASE_OUTPUT_PATH = base_path / "results"
+BASE_CONFIG_PATH = base_path / "config"
+BASE_IMAGES_PATH = base_path / "images"
 
 TRAIN_FOLDER = "train"
 METAFEATURES_FOLDER = "metafeatures"

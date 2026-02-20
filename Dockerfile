@@ -10,7 +10,7 @@ WORKDIR /app/src/main
 COPY ./src/main/uv.lock uv.lock
 COPY ./src/main/pyproject.toml pyproject.toml
 
-RUN uv sync --no-cache --locked
+RUN uv sync --no-cache --no-editable --frozen
 
 WORKDIR /app
 

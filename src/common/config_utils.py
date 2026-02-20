@@ -1,5 +1,5 @@
 from typing import Dict, Any, Tuple
-from file_utils import *
+from .file_utils import *
 
 CONFIG = Dict[str, Any]
 
