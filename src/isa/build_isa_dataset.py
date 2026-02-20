@@ -6,8 +6,8 @@ from typing import Dict, List, Optional, Sequence, Tuple, Any
 
 import pandas as pd
 
-from src.common.eval_summary import aggregate_metrics
-from src.common.file_utils import (
+from common.eval_summary import aggregate_metrics
+from common.file_utils import (
     BASE_OUTPUT_PATH,
     EVALUATION_RESULTS_BASE_PATH,
     EVALUATION_RESULTS_FILE,
@@ -17,7 +17,7 @@ from src.common.file_utils import (
     ensure_dir,
     read_json,
 )
-from src.common.config_utils import (
+from common.config_utils import (
     CONFIG,
     get_all_train_configs,
     get_all_instance_configs,

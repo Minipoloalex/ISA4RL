@@ -8,4 +8,9 @@ results/isa/*
 !results/isa/*instancespace_dataset.csv
 images
 .vscode
+*.sif
+*.tar
 # !**/*instancespace_dataset.csv
+
+**/build
+**/**.egg-info

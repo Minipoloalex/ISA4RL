@@ -27,8 +27,8 @@ from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
 import gymnasium as gym
 
 from configs import RunConfig, InstanceConfig
-from src.common.file_utils import *
-from src.common.config_utils import *
+from common.file_utils import *
+from common.config_utils import *
 
 AlgorithmName = str
 

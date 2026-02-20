@@ -21,7 +21,7 @@ from configs import RunConfig, InstanceConfig
 from train import train
 from evaluate import evaluate, show_eval_results
 from metafeatures import extract_metafeatures as compute_metafeatures
-from src.common.file_utils import _json_default
+from file_utils import _json_default
 from utils import (
     save_eval_results,
     save_extract_results,

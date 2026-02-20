@@ -1,0 +1,24 @@
+# Git
+**/.git
+**/.gitattributes
+**/.gitignore
+**/.gitmodules
+
+# Python environments and cache
+**/.venv
+**/.venvisa
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Local IDE and tools
+**/.vscode
+**/.idea
+**/.pytest_cache
+**/.ipynb_checkpoints
+
+# Data and results
+# Exclude if you want to generate fresh results inside the container
+**/results/
+**/images/
