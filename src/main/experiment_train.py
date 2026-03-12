@@ -15,6 +15,8 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Select the environment to experiment with training."
     )
+    # Options: highway-v0, merge-v0, roundabout-v0, exit-v0, lane-keeping-v0, parking-v0
+    #           two-way-v0, u-turn-v0, racetrack-v0, racetrack-large-v0, racetrack-oval-v0
     parser.add_argument("--env", default="highway-v0", help="Environment ID to load.")
     parser.add_argument("--train", dest="train", action="store_true", help="Disable training")
     parser.set_defaults(train=False)

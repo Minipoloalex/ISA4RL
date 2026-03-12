@@ -8,10 +8,8 @@ from pathlib import Path
 from pprint import pprint
 import time
 
-from utils import (
-    CONFIG,
-    annotate_ids,
-)
+from common.config_utils import CONFIG
+from utils.load_config_utils import annotate_ids
 from common.file_utils import (
     save_json,
     read_json,
@@ -44,7 +42,16 @@ ROUNDABOUT_FIXED_CONFIGS = {
     "eval_freq": int(1e3),
     "n_eval_episodes": 10,
 }
-
+U_TURN_FIXED_CONFIGS = {
+    "train_timesteps": int(1e5),
+    "eval_freq": int(1e3),
+    "n_eval_episodes": 10,
+}
+TWO_WAY_FIXED_CONFIGS = {
+    "train_timesteps": int(1e5),
+    "eval_freq": int(1e3),
+    "n_eval_episodes": 10,
+}
 # Config generation parameters
 MIN_LANE_COUNT = 2
 MAX_LANE_COUNT = 5
@@ -303,7 +310,36 @@ def build_roundabout_configs() -> List[CONFIG]:
         }
     ]
 
+def build_u_turn_configs() -> List[CONFIG]:
+    return [
+        {
+            "env_id": "u-turn-v0",
+            "config": {"duration": 25},
+            **U_TURN_FIXED_CONFIGS,
+        }
+    ]
 
+def build_two_way_configs() -> List[CONFIG]:
+    return [
+        {
+            "env_id": "two-way-v0",
+            "config": {},
+            **TWO_WAY_FIXED_CONFIGS,
+        }
+    ]
+
+def build_exit_configs() -> List[CONFIG]:
+    raise NotImplementedError
+
+def build_lane_keeping_configs() -> List[CONFIG]:
+    raise NotImplementedError
+
+def build_parking_configs() -> List[CONFIG]:
+    raise NotImplementedError
+
+def build_racetrack_configs() -> List[CONFIG]:
+    raise NotImplementedError
+    
 def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
     seeds = range(base_seed, base_seed + seed_cnt)
     seeded_configs = [

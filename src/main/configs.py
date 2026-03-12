@@ -7,8 +7,6 @@ from stable_baselines3.common.vec_env import VecEnv
 
 EnvFactory = Callable[[], VecEnv]
 ModelFactory = Callable[[VecEnv], BaseAlgorithm]
-EvalEnvFactory = Callable[[], gym.Env]
-
 
 @dataclass
 class InstanceConfig:
@@ -16,12 +14,12 @@ class InstanceConfig:
     orig_id_env_config: int
     id_env_config: int
     id_obs_config: int
-    make_eval_env: EvalEnvFactory
+    make_eval_env: EnvFactory
     eval_seed: int
     instance_folder_name: str
-    _eval_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
+    _eval_env: Optional[VecEnv] = field(default=None, init=False, repr=False)
 
-    def ensure_eval_env(self) -> gym.Env:
+    def ensure_eval_env(self) -> VecEnv:
         """Instantiate a single-environment instance for evaluation."""
         if self._eval_env is None:
             self._eval_env = self.make_eval_env()

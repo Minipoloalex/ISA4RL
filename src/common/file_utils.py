@@ -60,3 +60,26 @@ def _json_default(obj: Any) -> Any:
         return obj.tolist()
     raise TypeError(f"Object of type {type(obj)} is not JSON serializable")
 
+def nonempty_file_in(filepath: Path) -> bool:
+    """Return True if filepath exists, is a regular file, and is non-empty."""
+    try:
+        return filepath.is_file() and filepath.stat().st_size > 0
+    except OSError:
+        return False
+
+def load_training_metadata(run_dir: Path) -> Dict[str, Any]:
+    metadata_path = run_dir / TRAINING_METADATA_FILE
+    with metadata_path.open("r", encoding="utf-8") as handle:
+        return json.load(handle)
+
+def save_eval_results(results: List[Dict[str, Any]], folder_name: str, eval_seed: int):
+    folder_path = Path(folder_name) / EVALUATION_RESULTS_BASE_PATH
+    ensure_dir(folder_path)
+
+    filepath = folder_path / EVALUATION_RESULTS_FILE(eval_seed)
+    save_json(filepath, results)
+
+def save_extract_results(results, folder_name: str):
+    ensure_dir(folder_name)
+    filepath = Path(folder_name) / METAFEATURES_RESULTS_FILE
+    save_json(filepath, results)

@@ -34,7 +34,7 @@ from common.file_utils import (
 )
 torch.set_num_threads(1)
 
-from utils import (
+from utils.general_utils import (
     set_global_seed,
     ensure_dir,
     discretize,
@@ -43,10 +43,8 @@ from utils import (
     _round_half_up,
     _interpolate_range_value,
     _coerce_numeric,
-    get_env_id,
-    vectorize_env,
-    unwrap_first_env,
 )
+from utils.sb3_utils import get_env_id, unwrap_first_env
 from common.file_utils import _json_default
 
 def train(
@@ -120,8 +118,7 @@ def train(
         render=False,
         verbose=1,
     )
-    if progress_bar:
-        learn_kwargs["progress_bar"] = True
+    learn_kwargs["progress_bar"] = progress_bar
 
     # Gather environment metadata without forcing access to the raw env when using
     # SubprocVecEnv, which keeps environments in separate processes
@@ -158,32 +155,3 @@ def train(
         json.dump(metadata, fp, default=_json_default, indent=2)
 
     return best_model_path
-
-
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(
-        description="Experiment with training a PPO agent on highway-fast-v0"
-    )
-    parser.add_argument(
-        "-n", "--name",
-        dest="run_name",
-        required=True,
-        help="Name of the output folder/test run"
-    )
-    args = parser.parse_args()
-
-    env = make_vec_env(
-        "highway-fast-v0",
-        n_envs=8,
-        seed=0,
-        vec_env_cls=SubprocVecEnv,
-    )
-    model = PPO("MlpPolicy", env, device="cpu",
-        n_steps=32,
-        batch_size=256,
-        gae_lambda=0.8,
-        gamma=0.98,
-        n_epochs=20,
-        ent_coef=0.0,
-    )
-    train(env, model, int(2e5), args.run_name, seed=0, progress_bar=True)
