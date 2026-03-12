@@ -38,8 +38,6 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "a2c": A2C,
 }
 
-TRAIN_TIMESTEPS = int(1e5)
-
 # Mostly refer to the environment
 DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize", "id"]
 
@@ -242,6 +240,11 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
         id_algo: int = algo_config["id"]
         train_id: int = map_to_train_id(orig_id_env, id_obs, id_algo)
 
+        # Depend on environment (some environments may have very large episodes)
+        eval_freq: int = env_config["eval_freq"]
+        n_eval_episodes: int = env_config["n_eval_episodes"]
+        train_timesteps: int = env_config["train_timesteps"]
+
         train_folder_name: str = str(BASE_OUTPUT_PATH / TRAIN_FOLDER / str(train_id))
         instance_folder_name: str = str(BASE_OUTPUT_PATH / METAFEATURES_FOLDER / f"ENV{id_env}_OBS{id_obs}")
 
@@ -283,6 +286,8 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
                 id_algo_config=id_algo,
                 instance_folder_name=instance_folder_name,
                 train_folder_name=train_folder_name,
+                eval_freq=eval_freq,
+                n_eval_episodes=n_eval_episodes,
                 make_env=partial(_make_train_env, env_id, env_config, n_envs, vec_env_cls, vec_env_kwargs),
                 make_eval_env=partial(_make_eval_env, env_id, env_config),
                 make_model=partial(
@@ -292,7 +297,7 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
                     policy_params=policy_params,
                     device=device,
                 ),
-                timesteps=TRAIN_TIMESTEPS,
+                timesteps=train_timesteps,
                 train_seed=0,
                 eval_seed=eval_seed,
             )

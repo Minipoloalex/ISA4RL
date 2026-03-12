@@ -44,6 +44,8 @@ class RunConfig(InstanceConfig):
     timesteps: int
     train_seed: int
     train_folder_name: str
+    eval_freq: int
+    n_eval_episodes: int
     _env: Optional[VecEnv] = field(default=None, init=False, repr=False)
     _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
 

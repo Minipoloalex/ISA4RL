@@ -9,6 +9,7 @@ import gymnasium as gym
 import highway_env
 
 from common.file_utils import _json_default, ensure_dir, TRAINING_METADATA_FILE
+from common.eval_summary import aggregate_metrics
 from utils import (
     ensure_dir,
     set_global_seed,

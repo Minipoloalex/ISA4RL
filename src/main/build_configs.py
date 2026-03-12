@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import yaml
 
 import itertools
-from typing import List, Dict, Any, Iterable, Tuple, Sequence, Optional
+from typing import List, Dict, Any, Iterable, Tuple, Sequence, Optional, Callable
 from pathlib import Path
 from pprint import pprint
 import time
@@ -28,6 +28,22 @@ from common.file_utils import (
     ALGO_CONFIG_HYPERPARAMS_PATH,
     BASE_IMAGES_PATH,
 )
+
+HIGHWAY_FIXED_CONFIGS = {
+    "train_timesteps": int(1e5),
+    "eval_freq": int(1e3),
+    "n_eval_episodes": 10,
+}
+MERGE_FIXED_CONFIGS = {
+    "train_timesteps": int(1e5),
+    "eval_freq": int(1e3),
+    "n_eval_episodes": 10,
+}
+ROUNDABOUT_FIXED_CONFIGS = {
+    "train_timesteps": int(1e5),
+    "eval_freq": int(1e3),
+    "n_eval_episodes": 10,
+}
 
 # Config generation parameters
 MIN_LANE_COUNT = 2
@@ -256,6 +272,7 @@ def build_highway_configs() -> List[CONFIG]:
                             "duration": duration,
                             "ego_spacing": choose_ego_spacing(density),
                         },
+                        **HIGHWAY_FIXED_CONFIGS,
                     }
                     configs.append(config)
 
@@ -267,6 +284,24 @@ def build_highway_configs() -> List[CONFIG]:
         )
     )
     return configs
+
+def build_merge_configs() -> List[CONFIG]:
+    return [
+        {
+            "env_id": "merge-v0",
+            "config": {},
+            **MERGE_FIXED_CONFIGS,
+        }
+    ]
+
+def build_roundabout_configs() -> List[CONFIG]:
+    return [
+        {
+            "env_id": "roundabout-v0",
+            "config": {},
+            **ROUNDABOUT_FIXED_CONFIGS,
+        }
+    ]
 
 
 def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
@@ -416,10 +451,16 @@ def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
     env_configs_eval = annotate_ids(env_configs_eval)
     return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 
+def build_configs(builder: Callable[[], List[CONFIG]], save_path: Path, name: str) -> List[CONFIG]:
+    configs = builder()
+    save_json(save_path, configs)
+    print(f"{name} environment configs: {len(configs)}")
+    return configs
+
 if __name__ == "__main__":
-    highway_configs = build_highway_configs()
-    save_json(HIGHWAY_CONFIG_PATH, highway_configs)
-    print(f"Highway environment configs: {len(highway_configs)}")
+    highway_configs = build_configs(build_highway_configs, HIGHWAY_CONFIG_PATH, "Highway")
+    build_configs(build_merge_configs, MERGE_CONFIG_PATH, "Merge")
+    build_configs(build_roundabout_configs, ROUNDABOUT_CONFIG_PATH, "Roundabout")
 
     ensure_dir(BASE_IMAGES_PATH)
     correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE

@@ -38,7 +38,7 @@ import gymnasium as gym
 import highway_env
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
 from stable_baselines3.common.base_class import BaseAlgorithm
-from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from sklearn.linear_model import Ridge
 import pandas as pd
 import torch
@@ -51,11 +51,15 @@ def train_agents(run_configs: List[RunConfig]):
     for config in tqdm(train_configs, total=len(train_configs)):
         env = config.ensure_env()
         model = config.ensure_model()
+        eval_env = config.ensure_eval_env()
         train(
             env=env,
             model=model,
             timesteps=config.timesteps,
             folder_name=config.train_folder_name,
+            eval_env=eval_env,
+            n_eval_episodes=config.n_eval_episodes,
+            eval_freq=config.eval_freq,
             seed=config.train_seed,
             progress_bar=True,
         )

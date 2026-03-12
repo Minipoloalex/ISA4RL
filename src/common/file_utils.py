@@ -12,8 +12,13 @@ BASE_IMAGES_PATH = base_path / "images"
 
 TRAIN_FOLDER = "train"
 METAFEATURES_FOLDER = "metafeatures"
+MODELS_FOLDER = "models"
 
+BEST_MODEL_FILE = "best_model.zip"
 MODEL_FILE = "model.zip"
+
+TENSORBOARD_FOLDER = "tensorboard"
+LOGS_FOLDER = "logs"
 
 TRAIN_CONFIG_PATH = BASE_CONFIG_PATH / "train_configs.json"
 INSTANCE_CONFIG_PATH = BASE_CONFIG_PATH / "instance_configs.json"

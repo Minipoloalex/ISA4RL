@@ -17,13 +17,21 @@ import gymnasium as gym
 import pandas as pd
 import highway_env
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
-from stable_baselines3.common.callbacks import BaseCallback
+from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.logger import Logger, configure
 from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.env_util import make_vec_env
 
+from common.file_utils import (
+    TENSORBOARD_FOLDER, 
+    LOGS_FOLDER,
+    MODELS_FOLDER,
+    TRAINING_METADATA_FILE,
+    MODEL_FILE,
+    BEST_MODEL_FILE,
+)
 torch.set_num_threads(1)
 
 from utils import (
@@ -35,8 +43,6 @@ from utils import (
     _round_half_up,
     _interpolate_range_value,
     _coerce_numeric,
-    TRAINING_METADATA_FILE,
-    MODEL_FILE,
     get_env_id,
     vectorize_env,
     unwrap_first_env,
@@ -48,9 +54,11 @@ def train(
     model: BaseAlgorithm,
     timesteps: int,
     folder_name: str,
+    eval_env: gym.Env,
+    n_eval_episodes: int,
+    eval_freq: int,
     *,
     seed: Optional[int] = None,
-    callback: Optional[BaseCallback] = None,
     progress_bar: bool = False,
     **kwargs,
 ) -> Path:
@@ -71,11 +79,13 @@ def train(
     output_dir = Path(folder_name).expanduser()
     ensure_dir(output_dir)
 
-    logs_dir = output_dir / "logs"
+    logs_dir = output_dir / LOGS_FOLDER
     ensure_dir(logs_dir)
 
-    tensorboard_dir = logs_dir / "tensorboard"
+    tensorboard_dir = logs_dir / TENSORBOARD_FOLDER
     ensure_dir(tensorboard_dir)
+
+    models_dir = output_dir / MODELS_FOLDER
 
     base_env = unwrap_first_env(env)
     if seed is not None:
@@ -98,8 +108,18 @@ def train(
     learn_kwargs: Dict[str, Any] = {
         "total_timesteps": timesteps,
     }
-    if callback is not None:
-        learn_kwargs["callback"] = callback
+
+    best_model_path = models_dir / BEST_MODEL_FILE
+    learn_kwargs["callback"] = EvalCallback(
+        eval_env,
+        n_eval_episodes=n_eval_episodes,
+        best_model_save_path=str(best_model_path),
+        log_path=folder_name,
+        eval_freq=eval_freq,
+        deterministic=True,
+        render=False,
+        verbose=1,
+    )
     if progress_bar:
         learn_kwargs["progress_bar"] = True
 
@@ -119,15 +139,16 @@ def train(
     elapsed = time.perf_counter() - before
     print(f"Training finished in {elapsed:.2f}s ({elapsed / 60:.2f} min) for {timesteps} timesteps.")
 
-    model_path = output_dir / MODEL_FILE
-    model.save(model_path)
+    final_model_path = models_dir / MODEL_FILE
+    model.save(final_model_path)
 
     metadata = {
         "timesteps": timesteps,
         "elapsed_seconds": elapsed,
         "seed": seed,
         "timestamp": datetime.now().isoformat(timespec="seconds"),
-        "model_path": str(model_path),
+        "model_path": str(final_model_path),
+        "best_model_path": str(best_model_path),
         "logs_dir": str(logs_dir),
         "env_config": env_config,
         "env_id": env_id,
@@ -136,7 +157,7 @@ def train(
     with (output_dir / TRAINING_METADATA_FILE).open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
-    return model_path
+    return best_model_path
 
 
 if __name__ == "__main__":

@@ -189,6 +189,12 @@ def main() -> None:
         env_config.update(
             
         )
+    if args.env == "racetrack-oval-v0":
+        env_config.update({
+            "block_lane": False,
+            "force_decision": True,
+            "no_lanes": 5,
+        })
     env_kwargs: Dict[str, object] = {"render_mode": "human"}
     if env_config:
         env_kwargs["config"] = env_config
