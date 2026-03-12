@@ -59,8 +59,8 @@ if __name__ == "__main__":
         eval_callback = EvalCallback(
             eval_env,
             n_eval_episodes=callback_eval_episodes,
-            best_model_save_path=f"experiment_{env_id}/best_model",
-            log_path=f"experiment_{env_id}/",
+            best_model_save_path=f"result_experiment_{env_id}/best_model",
+            log_path=f"result_experiment_{env_id}/",
             eval_freq=1000,
             deterministic=True,
             render=False,
@@ -74,7 +74,7 @@ if __name__ == "__main__":
             n_envs=1,
             env_kwargs=env_kwargs,
             vec_env_cls=DummyVecEnv,
-            monitor_dir=f"experiment_{env_id}/",
+            monitor_dir=f"result_experiment_{env_id}/",
         )
         # config = {
         #     "n_envs": 16,
@@ -102,18 +102,18 @@ if __name__ == "__main__":
             # n_epochs=4,
             # ent_coef=0.0,
             verbose=1,
-            tensorboard_log=f"experiment_{env_id}/",
+            tensorboard_log=f"result_experiment_{env_id}/",
             device="cpu",
         )
         # Train the agent
         model.learn(total_timesteps=train_timesteps, progress_bar=True, callback=eval_callback)
         # Save the agent
-        model.save(f"experiment_{env_id}/model")
+        model.save(f"result_experiment_{env_id}/model")
 
         train_env.close()
         eval_env.close()
 
-    model = PPO.load(f"experiment_{env_id}/best_model/best_model", device="cpu")
+    model = PPO.load(f"result_experiment_{env_id}/best_model/best_model", device="cpu")
     env = gym.make(env_id, config=config, render_mode="human")
     env = Monitor(env)
     for _ in range(5):
