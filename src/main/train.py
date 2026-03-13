@@ -52,7 +52,7 @@ def train(
     model: BaseAlgorithm,
     timesteps: int,
     folder_name: str,
-    eval_env: gym.Env,
+    eval_env: VecEnv,
     n_eval_episodes: int,
     eval_freq: int,
     *,

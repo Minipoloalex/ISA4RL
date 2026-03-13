@@ -4,9 +4,16 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional, Tuple, Union
 
 from stable_baselines3.common.base_class import BaseAlgorithm
+from stable_baselines3.common.vec_env import VecEnv
+from stable_baselines3.common.evaluation import evaluate_policy
 import numpy as np
 import gymnasium as gym
 import highway_env
+
+from typing import List, Dict, Any
+import numpy as np
+from stable_baselines3.common.base_class import BaseAlgorithm
+from stable_baselines3.common.vec_env import VecEnv
 
 def rollout_episode(
     model: BaseAlgorithm,
@@ -39,9 +46,9 @@ def evaluate(
     env_seed: int,
     **kwargs,
 ) -> List[Dict[str, Any]]:
+    # TODO: Fix seeds
     episodes_stats: List[Dict[str, Any]] = []
     for idx in range(n_episodes):
-        env.reset(seed=env_seed)
         reward, length, infos = rollout_episode(
             model,
             env,

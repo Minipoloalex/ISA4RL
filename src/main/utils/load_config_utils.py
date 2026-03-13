@@ -11,6 +11,7 @@ from main.utils.sb3_utils import (
     map_algo_name_to_class,
     _parse_policy_kwargs,
     _make_env,
+    _make_vec_env,
     _make_model,
 )
 
@@ -81,8 +82,8 @@ def load_all_run_configs(get_configs: Callable[[], List[CONFIG]]) -> List[RunCon
                 train_folder_name=train_folder_name,
                 eval_freq=eval_freq,
                 n_eval_episodes=n_eval_episodes,
-                make_env=partial(_make_env, env_id, env_config, n_envs, vec_env_cls, vec_env_kwargs),
-                make_eval_env=partial(_make_env, env_id, env_config, n_envs, vec_env_cls, vec_env_kwargs),
+                make_env=partial(_make_env, env_id, env_config),
+                make_vec_env=partial(_make_vec_env, env_id, env_config, n_envs, vec_env_cls, vec_env_kwargs),
                 make_model=partial(
                     _make_model,
                     algo_cls=algo_cls,
@@ -123,7 +124,7 @@ def load_all_instance_configs() -> List[InstanceConfig]:
                 id_env_config=id_env,
                 orig_id_env_config=orig_id_env,
                 id_obs_config=id_obs,
-                make_eval_env=partial(_make_env, env_id, env_config, env_cnt=1, vec_cls=DummyVecEnv, vec_kwargs=None),
+                make_env=partial(_make_env, env_id, env_config),
                 eval_seed=1,
                 instance_folder_name=instance_folder_name,
             )

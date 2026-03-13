@@ -15,24 +15,6 @@ from functools import partial
 
 import numpy as np
 import yaml
-
-from configs import RunConfig, InstanceConfig
-
-from train import train
-from evaluate import evaluate, show_eval_results
-from metafeatures import extract_metafeatures as compute_metafeatures
-from main.utils.general_utils import (
-    save_eval_results,
-    save_extract_results,
-    is_trained,
-    is_evaluated,
-    is_extracted,
-    get_all_train_configs,
-    get_all_eval_configs,
-    load_all_run_configs,
-    load_all_instance_configs,
-)
-
 import gymnasium as gym
 import highway_env
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
@@ -44,15 +26,31 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
+from configs import RunConfig, InstanceConfig
+from train import train
+from evaluate import evaluate, show_eval_results
+from metafeatures import extract_metafeatures as compute_metafeatures
+from common.config_utils import get_all_train_configs, get_all_eval_configs
+from common.file_utils import (
+    save_eval_results,
+    save_extract_results,
+)
+from utils.load_config_utils import (
+    load_all_run_configs,
+    load_all_instance_configs,
+    is_trained,
+    is_evaluated,
+    is_extracted,
+)
 
 def train_agents(run_configs: List[RunConfig]):
     train_configs = [config for config in run_configs if not is_trained(config)]
     for config in tqdm(train_configs, total=len(train_configs)):
-        env = config.ensure_env()
+        train_env = config.ensure_train_env()
         model = config.ensure_model()
         eval_env = config.ensure_eval_env()
         train(
-            env=env,
+            env=train_env,
             model=model,
             timesteps=config.timesteps,
             folder_name=config.train_folder_name,
@@ -72,11 +70,11 @@ def eval_agents(run_configs: List[RunConfig]):
         if is_trained(config) and not is_evaluated(config)
     ]
     for config in tqdm(eval_configs, total=len(eval_configs)):
-        eval_env = config.ensure_eval_env()
+        test_env = config.ensure_test_env()
         model = config.ensure_model()
         eval_results = evaluate(
             model=model,
-            env=eval_env,
+            env=test_env,
             n_episodes=10,
             deterministic=False,
             env_seed=config.eval_seed,

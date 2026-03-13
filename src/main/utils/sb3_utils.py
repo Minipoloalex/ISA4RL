@@ -24,7 +24,12 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "ddpg": DDPG,
 }
 
-def _make_env(
+def _make_env(env_id: str, env_config: Dict[str, Any]) -> gym.Env:
+    env_kwargs = {"config": env_config.copy()}
+    # Nones are required to allow using **env_kwargs
+    return gym.make(env_id, None, None, **env_kwargs)
+
+def _make_vec_env(
     env_id: str,
     env_config: Dict[str, Any],
     env_cnt: int,
