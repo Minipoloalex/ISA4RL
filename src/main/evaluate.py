@@ -8,7 +8,6 @@ from stable_baselines3.common.vec_env import VecEnv
 from stable_baselines3.common.evaluation import evaluate_policy
 import numpy as np
 import gymnasium as gym
-import highway_env
 
 from typing import List, Dict, Any
 import numpy as np
@@ -27,6 +26,7 @@ def rollout_episode(
     steps = 0
     infos: List[Dict[str, Any]] = []
     obs, info = env.reset(seed=env_seed)
+    infos.append(info)
     while True:
         action, _ = model.predict(obs, deterministic=deterministic)
         obs, reward, terminated, truncated, info = env.step(action)

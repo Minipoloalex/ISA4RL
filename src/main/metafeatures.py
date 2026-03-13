@@ -55,7 +55,7 @@ class MetricHook(Protocol):
 
 def extract_metafeatures(config: InstanceConfig):
     before = time.perf_counter()
-    env = config.ensure_eval_env()
+    env = config.ensure_test_env()
     env_name = env.spec.id
     env_seed = config.eval_seed
     env_features = _collect_env_features(env)
