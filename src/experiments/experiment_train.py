@@ -49,6 +49,7 @@ if __name__ == "__main__":
     elif env_id == "parking-v0":
         policy_arch = "MultiInputPolicy"
         train_timesteps = int(2e5)
+        config["duration"] = 10
         config["add_walls"] = False
 
     env_kwargs = {"config": config}

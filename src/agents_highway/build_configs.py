@@ -10,7 +10,7 @@ import time
 from copy import deepcopy
 
 from common.config_utils import CONFIG
-from utils.load_config_utils import annotate_ids
+from main.utils.load_config_utils import annotate_ids
 from common.file_utils import (
     save_json,
     read_json,

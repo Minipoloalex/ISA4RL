@@ -174,7 +174,6 @@ def main() -> None:
                     "lateral": False,
                     "target_speeds": [0, 4.5, 9],
                 },
-                "manual_control": True,
             }
         )
     if args.env.startswith("exit"):
@@ -195,6 +194,11 @@ def main() -> None:
             "force_decision": True,
             "no_lanes": 5,
         })
+    if args.env == "u-turn-v0":
+       env_config.update({
+           "duration": 25,
+       })
+
     env_kwargs: Dict[str, object] = {"render_mode": "human"}
     if env_config:
         env_kwargs["config"] = env_config
