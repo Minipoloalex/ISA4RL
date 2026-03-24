@@ -190,8 +190,6 @@ def main() -> None:
         )
     if args.env == "racetrack-oval-v0":
         env_config.update({
-            "block_lane": False,
-            "force_decision": True,
             "no_lanes": 5,
         })
     if args.env == "u-turn-v0":
