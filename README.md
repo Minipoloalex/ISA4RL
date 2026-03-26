@@ -21,3 +21,47 @@ apptainer exec --nv --containall \
 Inside `src/main`:
 
 ```uv run --env-file .env main.py```
+
+
+
+### Setup for configurations:
+
+Before:
+
+```
+train/
+    <id>/
+        eval_results/
+        logs/
+            (training info)
+        model.zip
+        training_metadata.json
+
+metafeatures/
+    ENV_<obs-id>_OBS_<obs-id>
+```
+
+New setup:
+```
+<ENV_NAME>/
+    <random-id>/
+        config.json (Important: information about config)
+        train/
+            logs/
+                (training info)
+            model.zip
+            training_metadata.json
+        eval/
+            eval_results.json
+        metafeatures/
+            ...
+```
+
+From config information to id: $O(N)$
+From id to config information: $O(1)$
+
+Requires an $O(N)$ check for each configuration to check if it has been trained or not.
+This can be costly, if we need to filter them out all initially (even when not training all of them).
+Therefore, it makes sense to filter them out only just before starting training instead of always at the start.
+
+If I use a deterministic algorithm, config information to id would work in $O(1)$ but would break if I change anything, so this O(N) solution might be more flexible.
