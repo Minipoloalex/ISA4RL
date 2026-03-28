@@ -10,7 +10,7 @@ import numpy as np
 from highway_env.vehicle.behavior import IDMVehicle
 
 from configs import InstanceConfig
-from main.utils.general_utils import _flatten_obs
+from utils.general_utils import _flatten_obs
 
 PolicyFn = Callable[[Any, Dict[str, Any]], Any]
 

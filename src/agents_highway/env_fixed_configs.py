@@ -2,6 +2,7 @@ DEFAULT_TRAIN_CONFIGS = {
     "train_timesteps": int(1e5),
     "eval_freq": int(1e3),
     "n_eval_episodes": 10,
+    "n_test_episodes": 10,
 }
 
 HIGHWAY_FIXED_CONFIGS = {

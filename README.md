@@ -45,14 +45,15 @@ New setup:
 ```
 <ENV_NAME>/
     <random-id>/
-        config.json (Important: information about config)
+        instance_config.json # Important: information about config: environment and observation configurations - does not include algorithm information
         train/
-            logs/
-                (training info)
-            model.zip
-            training_metadata.json
-        eval/
-            eval_results.json
+            <algo-random-id>/
+                algo_config.json # config about algorithm
+                logs/
+                    (training info)
+                model.zip
+                training_metadata.json
+                eval_results.json
         metafeatures/
             ...
 ```

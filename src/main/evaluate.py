@@ -43,24 +43,23 @@ def evaluate(
     n_episodes: int,
     *,
     deterministic: bool,
-    env_seed: int,
-    **kwargs,
 ) -> List[Dict[str, Any]]:
-    # TODO: Fix seeds
+    base_seed = int(1e6)
     episodes_stats: List[Dict[str, Any]] = []
-    for idx in range(n_episodes):
+    for i in range(n_episodes):
+        cur_seed = base_seed + i
         reward, length, infos = rollout_episode(
             model,
             env,
-            env_seed=env_seed,
+            env_seed=cur_seed,
             deterministic=deterministic,
         )
         episodes_stats.append(
             {
-                "episode": idx,
+                "episode": i,
                 "reward": reward,
                 "length": length,
-                "seed": env_seed,
+                "seed": cur_seed,
                 "infos": infos,
             }
         )

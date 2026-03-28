@@ -28,7 +28,7 @@ from common.file_utils import (
     TENSORBOARD_FOLDER, 
     LOGS_FOLDER,
     MODELS_FOLDER,
-    TRAINING_METADATA_FILE,
+    RESULTS_TRAIN_METADATA_PATH,
     MODEL_FILE,
     BEST_MODEL_FILE,
 )
@@ -84,6 +84,7 @@ def train(
     ensure_dir(tensorboard_dir)
 
     models_dir = output_dir / MODELS_FOLDER
+    ensure_dir(models_dir)
 
     base_env = unwrap_first_env(env)
     if seed is not None:
@@ -151,7 +152,7 @@ def train(
         "env_id": env_id,
         "model_class": model.__class__.__name__,
     }
-    with (output_dir / TRAINING_METADATA_FILE).open("w", encoding="utf-8") as fp:
+    with RESULTS_TRAIN_METADATA_PATH(output_dir).open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
     return best_model_path

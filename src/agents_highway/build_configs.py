@@ -9,19 +9,14 @@ from pprint import pprint
 import time
 from copy import deepcopy
 
-from common.config_utils import CONFIG
-from main.utils.load_config_utils import annotate_ids
+from common.config_utils import ENVS, CONFIG
 from common.file_utils import (
     save_json,
     read_json,
     ensure_dir,
-    TRAIN_CONFIG_PATH,
-    INSTANCE_CONFIG_PATH,
-    EVAL_CONFIG_PATH,
-    BASE_CONFIG_PATH,
-    HIGHWAY_CONFIG_PATH,
-    ROUNDABOUT_CONFIG_PATH,
-    MERGE_CONFIG_PATH,
+    TRAIN_CONFIGS_PATH,
+    EVAL_CONFIGS_PATH,
+    ENV_CONFIG_PATH,
     ALGO_CONFIG_PATH,
     OBS_CONFIG_PATH,
     ALGO_CONFIG_HYPERPARAMS_PATH,
@@ -90,9 +85,6 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
-
-INTERMEDIATE_TRAIN_CONFIG = Tuple[CONFIG, CONFIG, CONFIG]
-INTERMEDIATE_EVAL_CONFIG = Tuple[CONFIG, CONFIG]
 
 EVAL_BASE_SEED = int(1e6)
 EVAL_SEED_COUNT = {
@@ -299,16 +291,16 @@ def build_racetrack_configs() -> List[CONFIG]:
 def build_parking_configs() -> List[CONFIG]:
     raise NotImplementedError
     
-def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
-    seeds = range(base_seed, base_seed + seed_cnt)
-    seeded_configs = [
-        {
-            **config,
-            "eval_seed": seed,
-        }
-        for seed in seeds
-    ]
-    return seeded_configs
+# def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
+#     seeds = range(base_seed, base_seed + seed_cnt)
+#     seeded_configs = [
+#         {
+#             **config,
+#             "eval_seed": seed,
+#         }
+#         for seed in seeds
+#     ]
+#     return seeded_configs
 
 
 def extract_algo_configs():
@@ -349,102 +341,124 @@ def get_algo_configs():
                     **hyperparams,
                 }
             )
-    return annotate_ids(configs)
+    return configs
 
 def get_obs_configs():
-    configs = read_json(OBS_CONFIG_PATH)
-    return annotate_ids(configs)
+    return read_json(OBS_CONFIG_PATH)
 
-def get_roundabout_configs() -> List[CONFIG]:
-    return read_json(ROUNDABOUT_CONFIG_PATH)
+def get_env_configs(env_id: str) -> List[CONFIG]:
+    return read_json(ENV_CONFIG_PATH(env_id))
 
-def get_merge_configs() -> List[CONFIG]:
-    return read_json(MERGE_CONFIG_PATH)
-
-def get_highway_configs() -> List[CONFIG]:
-    return read_json(HIGHWAY_CONFIG_PATH)
+def valid_config(algo_config: CONFIG, obs_config: CONFIG) -> bool:
+    return (
+        algo_config["policy"] == "CnnPolicy"
+        and obs_config["type"] in OBS_CNN
+    ) or (
+        algo_config["policy"] == "MlpPolicy"
+        and obs_config["type"] in OBS_MLP
+    )
 
 def build_all_configs(
-    env_configs_train: List[CONFIG],
-    env_configs_eval: List[CONFIG],  # these also include some configurations where only the seed varies
+    env_configs: List[CONFIG],
     obs_configs: List[CONFIG],
     algo_configs: List[CONFIG],
-) -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
-    def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> CONFIG:
-        env_config, obs_config, algo_config = config
-        return {
-            "env_config": env_config,
-            "obs_config": obs_config,
-            "algo_config": algo_config,
+) -> Tuple[List[CONFIG], List[CONFIG]]:
+    run_configs = [
+        {
+            "env_config": config[0],
+            "obs_config": config[1],
+            "algo_config": config[2],
             "timestamp": time.time_ns(),
         }
-    def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> CONFIG:
-        env_config, obs_config = config
-        return {
-            "env_config": env_config,
-            "obs_config": obs_config,
-            "timestamp": time.time_ns(),
-        }
-
-    def valid_config(config: CONFIG) -> bool:
-        return (
-            config["algo_config"]["policy"] == "CnnPolicy"
-            and config["obs_config"]["type"] in OBS_CNN
-        ) or (
-            config["algo_config"]["policy"] == "MlpPolicy"
-            and config["obs_config"]["type"] in OBS_MLP
+        for config in itertools.product(
+            env_configs, obs_configs, algo_configs,
         )
-
-    run_configs = list(
-        filter(
-            valid_config,
-            map(
-                conv_run_config,
-                itertools.product(env_configs_train, obs_configs, algo_configs),
-            ),
-        )
-    )
-    eval_configs = list(
-        filter(
-            valid_config,
-            map(
-                conv_run_config,
-                itertools.product(env_configs_eval, obs_configs, algo_configs),
-            ),
-        )
-    )
-    instance_configs = list(
-        map(
-            conv_instance_config,
-            itertools.product(env_configs_eval, obs_configs),
-        )
-    )
-    run_configs = annotate_ids(run_configs)
-    eval_configs = annotate_ids(eval_configs)
-    instance_configs = annotate_ids(instance_configs)
-    return run_configs, eval_configs, instance_configs
-
-
-def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
-    env_configs_train = [
-        build_seeded_configs(config, EVAL_BASE_SEED, 1)[0]
-        for config in
-        get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+        if valid_config(config[2], config[1])
     ]
-    env_configs_train = annotate_ids(env_configs_train)
-    for cfg in env_configs_train:
-        cfg["orig_id"] = cfg["id"]
+    eval_configs = [
+        {
+            "env_config": config[0],
+            "obs_config": config[1],
+            "timestamp": time.time_ns(),
+        }
+        for config in itertools.product(
+            env_configs, obs_configs,
+        )
+    ]
+    return run_configs, eval_configs
 
-    env_configs_eval = []
-    for train_config in env_configs_train:
-        env_name = train_config["env_id"].split("-")[0]
-        seed_configs = build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name])
-        for conf in seed_configs:
-            conf["orig_id"] = train_config["orig_id"]
-        env_configs_eval.extend(seed_configs)
+# def build_all_configs(
+#     env_configs_train: List[CONFIG],
+#     env_configs_eval: List[CONFIG],  # these also include some configurations where only the seed varies
+#     obs_configs: List[CONFIG],
+#     algo_configs: List[CONFIG],
+# ) -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
+#     def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> CONFIG:
+#         env_config, obs_config, algo_config = config
+#         return {
+#             "env_config": env_config,
+#             "obs_config": obs_config,
+#             "algo_config": algo_config,
+#             "timestamp": time.time_ns(),
+#         }
+#     def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> CONFIG:
+#         env_config, obs_config = config
+#         return {
+#             "env_config": env_config,
+#             "obs_config": obs_config,
+#             "timestamp": time.time_ns(),
+#         }
 
-    env_configs_eval = annotate_ids(env_configs_eval)
-    return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
+#     run_configs = list(
+#         filter(
+#             valid_config,
+#             map(
+#                 conv_run_config,
+#                 itertools.product(env_configs_train, obs_configs, algo_configs),
+#             ),
+#         )
+#     )
+#     eval_configs = list(
+#         filter(
+#             valid_config,
+#             map(
+#                 conv_run_config,
+#                 itertools.product(env_configs_eval, obs_configs, algo_configs),
+#             ),
+#         )
+#     )
+#     instance_configs = list(
+#         map(
+#             conv_instance_config,
+#             itertools.product(env_configs_eval, obs_configs),
+#         )
+#     )
+#     run_configs = annotate_ids(run_configs)
+#     eval_configs = annotate_ids(eval_configs)
+#     instance_configs = annotate_ids(instance_configs)
+#     return run_configs, eval_configs, instance_configs
+
+
+# def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
+#     env_configs_train = [
+#         build_seeded_configs(config, EVAL_BASE_SEED, 1)[0]
+#         for config in
+#         get_highway_configs() + get_roundabout_configs() + get_merge_configs()
+#     ]
+#     env_configs_train = annotate_ids(env_configs_train)
+#     for cfg in env_configs_train:
+#         cfg["orig_id"] = cfg["id"]
+
+#     env_configs_eval = []
+#     for train_config in env_configs_train:
+#         env_name = train_config["env_id"].split("-")[0]
+#         seed_configs = build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name])
+#         for conf in seed_configs:
+#             conf["orig_id"] = train_config["orig_id"]
+#         env_configs_eval.extend(seed_configs)
+
+#     env_configs_eval = annotate_ids(env_configs_eval)
+#     return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 
 def build_configs(builder: Callable[[], List[CONFIG]], save_path: Path, name: str) -> List[CONFIG]:
     configs = builder()
@@ -453,9 +467,9 @@ def build_configs(builder: Callable[[], List[CONFIG]], save_path: Path, name: st
     return configs
 
 if __name__ == "__main__":
-    highway_configs = build_configs(build_highway_configs, HIGHWAY_CONFIG_PATH, "Highway")
-    build_configs(build_merge_configs, MERGE_CONFIG_PATH, "Merge")
-    build_configs(build_roundabout_configs, ROUNDABOUT_CONFIG_PATH, "Roundabout")
+    highway_configs = build_configs(build_highway_configs, ENV_CONFIG_PATH("highway-fast-v0"), "Highway")
+    build_configs(build_merge_configs, ENV_CONFIG_PATH("merge-generic-v0"), "Merge")
+    build_configs(build_roundabout_configs, ENV_CONFIG_PATH("roundabout-generic-v0"), "Roundabout")
 
     ensure_dir(BASE_IMAGES_PATH)
     correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE
@@ -467,20 +481,21 @@ if __name__ == "__main__":
     print(f"\n\nAlgo Configs: {len(algo_configs)}")
     print(f"\n\nObservation Configs: {len(obs_configs)}")
 
-    all_run_configs, all_eval_configs, all_instance_configs = get_all_configs()
+    all_run_configs = []
+    all_eval_configs = []
+    for env in ENVS:
+        env_run_configs, env_eval_configs = build_all_configs(
+            get_env_configs(env), get_obs_configs(), get_algo_configs(),
+        )
+        save_json(TRAIN_CONFIGS_PATH(env), env_run_configs)
+        save_json(EVAL_CONFIGS_PATH(env), env_eval_configs)
+        all_run_configs.append(env_run_configs)
+        all_eval_configs.append(env_eval_configs)
+
     print(f"\n\nTotal number of train configs: {len(all_run_configs)}")
     print("Example config:")
     pprint(all_run_configs[0])
 
-    print(f"\n\nTotal number of instance configs: {len(all_instance_configs)}")
-    print("Example config:")
-    pprint(all_instance_configs[0])
-
     print(f"\n\nTotal number of eval configs: {len(all_eval_configs)}")
     print("Example config:")
     pprint(all_eval_configs[0])
-
-
-    save_json(Path(TRAIN_CONFIG_PATH), all_run_configs)
-    save_json(Path(INSTANCE_CONFIG_PATH), all_instance_configs)
-    save_json(Path(EVAL_CONFIG_PATH), all_eval_configs)
