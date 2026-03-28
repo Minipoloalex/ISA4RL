@@ -27,7 +27,7 @@ from env_fixed_configs import *
 # Config generation parameters
 MIN_LANE_COUNT = 2
 MAX_LANE_COUNT = 5
-LANE_CAPACITY_RANGE = (12.0, 18.0)  # approximate per-lane throughput for min/max lanes
+LANE_CAPACITY_RANGE = (6.0, 12.0)  # approximate per-lane throughput for min/max lanes
 
 MIN_VEHICLE_COUNT = 0
 MAX_VEHICLE_COUNT = 120
@@ -85,13 +85,6 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
-
-EVAL_BASE_SEED = int(1e6)
-EVAL_SEED_COUNT = {
-    "highway": 1,
-    "merge": 50,
-    "roundabout": 50,
-}
 
 
 def lane_capacity(lanes: int) -> float:
@@ -290,18 +283,6 @@ def build_racetrack_configs() -> List[CONFIG]:
 
 def build_parking_configs() -> List[CONFIG]:
     raise NotImplementedError
-    
-# def build_seeded_configs(config: CONFIG, base_seed: int, seed_cnt: int) -> List[CONFIG]:
-#     seeds = range(base_seed, base_seed + seed_cnt)
-#     seeded_configs = [
-#         {
-#             **config,
-#             "eval_seed": seed,
-#         }
-#         for seed in seeds
-#     ]
-#     return seeded_configs
-
 
 def extract_algo_configs():
     aggregated: Dict[str, Dict[str, Any]] = {}
@@ -386,79 +367,6 @@ def build_all_configs(
         )
     ]
     return run_configs, eval_configs
-
-# def build_all_configs(
-#     env_configs_train: List[CONFIG],
-#     env_configs_eval: List[CONFIG],  # these also include some configurations where only the seed varies
-#     obs_configs: List[CONFIG],
-#     algo_configs: List[CONFIG],
-# ) -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
-#     def conv_run_config(config: INTERMEDIATE_TRAIN_CONFIG) -> CONFIG:
-#         env_config, obs_config, algo_config = config
-#         return {
-#             "env_config": env_config,
-#             "obs_config": obs_config,
-#             "algo_config": algo_config,
-#             "timestamp": time.time_ns(),
-#         }
-#     def conv_instance_config(config: INTERMEDIATE_EVAL_CONFIG) -> CONFIG:
-#         env_config, obs_config = config
-#         return {
-#             "env_config": env_config,
-#             "obs_config": obs_config,
-#             "timestamp": time.time_ns(),
-#         }
-
-#     run_configs = list(
-#         filter(
-#             valid_config,
-#             map(
-#                 conv_run_config,
-#                 itertools.product(env_configs_train, obs_configs, algo_configs),
-#             ),
-#         )
-#     )
-#     eval_configs = list(
-#         filter(
-#             valid_config,
-#             map(
-#                 conv_run_config,
-#                 itertools.product(env_configs_eval, obs_configs, algo_configs),
-#             ),
-#         )
-#     )
-#     instance_configs = list(
-#         map(
-#             conv_instance_config,
-#             itertools.product(env_configs_eval, obs_configs),
-#         )
-#     )
-#     run_configs = annotate_ids(run_configs)
-#     eval_configs = annotate_ids(eval_configs)
-#     instance_configs = annotate_ids(instance_configs)
-#     return run_configs, eval_configs, instance_configs
-
-
-# def get_all_configs() -> Tuple[List[CONFIG], List[CONFIG], List[CONFIG]]:
-#     env_configs_train = [
-#         build_seeded_configs(config, EVAL_BASE_SEED, 1)[0]
-#         for config in
-#         get_highway_configs() + get_roundabout_configs() + get_merge_configs()
-#     ]
-#     env_configs_train = annotate_ids(env_configs_train)
-#     for cfg in env_configs_train:
-#         cfg["orig_id"] = cfg["id"]
-
-#     env_configs_eval = []
-#     for train_config in env_configs_train:
-#         env_name = train_config["env_id"].split("-")[0]
-#         seed_configs = build_seeded_configs(train_config, EVAL_BASE_SEED, EVAL_SEED_COUNT[env_name])
-#         for conf in seed_configs:
-#             conf["orig_id"] = train_config["orig_id"]
-#         env_configs_eval.extend(seed_configs)
-
-#     env_configs_eval = annotate_ids(env_configs_eval)
-#     return build_all_configs(env_configs_train, env_configs_eval, get_obs_configs(), get_algo_configs())
 
 def build_configs(builder: Callable[[], List[CONFIG]], save_path: Path, name: str) -> List[CONFIG]:
     configs = builder()
