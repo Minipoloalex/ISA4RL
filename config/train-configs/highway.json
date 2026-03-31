@@ -5,7 +5,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -27,7 +27,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032532634
+    "timestamp": 1774951269768662249
   },
   {
     "env_config": {
@@ -35,7 +35,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -59,7 +59,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032534087
+    "timestamp": 1774951269768665265
   },
   {
     "env_config": {
@@ -67,7 +67,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -95,7 +95,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032534722
+    "timestamp": 1774951269768666577
   },
   {
     "env_config": {
@@ -103,7 +103,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -134,7 +134,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032535029
+    "timestamp": 1774951269768667329
   },
   {
     "env_config": {
@@ -142,7 +142,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -177,7 +177,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032535438
+    "timestamp": 1774951269768668471
   },
   {
     "env_config": {
@@ -185,7 +185,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -222,7 +222,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032535742
+    "timestamp": 1774951269768669413
   },
   {
     "env_config": {
@@ -230,7 +230,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -252,7 +252,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032536170
+    "timestamp": 1774951269768670705
   },
   {
     "env_config": {
@@ -260,7 +260,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -284,7 +284,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032536443
+    "timestamp": 1774951269768671567
   },
   {
     "env_config": {
@@ -292,7 +292,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -320,7 +320,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032536681
+    "timestamp": 1774951269768672408
   },
   {
     "env_config": {
@@ -328,7 +328,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -350,7 +350,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032537023
+    "timestamp": 1774951269768673340
   },
   {
     "env_config": {
@@ -358,7 +358,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -382,7 +382,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032537263
+    "timestamp": 1774951269768674612
   },
   {
     "env_config": {
@@ -390,7 +390,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -418,7 +418,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032537572
+    "timestamp": 1774951269768675714
   },
   {
     "env_config": {
@@ -426,7 +426,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -457,7 +457,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032537744
+    "timestamp": 1774951269768676235
   },
   {
     "env_config": {
@@ -465,7 +465,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -500,7 +500,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032538035
+    "timestamp": 1774951269768677047
   },
   {
     "env_config": {
@@ -508,7 +508,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -545,7 +545,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032538275
+    "timestamp": 1774951269768677868
   },
   {
     "env_config": {
@@ -553,7 +553,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -575,7 +575,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032538609
+    "timestamp": 1774951269768679031
   },
   {
     "env_config": {
@@ -583,7 +583,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -607,7 +607,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032538836
+    "timestamp": 1774951269768679952
   },
   {
     "env_config": {
@@ -615,7 +615,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.5,
-        "vehicles_count": 5.0,
+        "vehicles_count": 5,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -643,7 +643,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032539083
+    "timestamp": 1774951269768680884
   },
   {
     "env_config": {
@@ -651,7 +651,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -673,7 +673,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032539334
+    "timestamp": 1774951269768681806
   },
   {
     "env_config": {
@@ -681,7 +681,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -705,7 +705,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032539574
+    "timestamp": 1774951269768682828
   },
   {
     "env_config": {
@@ -713,7 +713,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -741,7 +741,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032539809
+    "timestamp": 1774951269768683689
   },
   {
     "env_config": {
@@ -749,7 +749,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -780,7 +780,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032539959
+    "timestamp": 1774951269768684250
   },
   {
     "env_config": {
@@ -788,7 +788,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -823,7 +823,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032540166
+    "timestamp": 1774951269768685062
   },
   {
     "env_config": {
@@ -831,7 +831,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -868,7 +868,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032540372
+    "timestamp": 1774951269768685853
   },
   {
     "env_config": {
@@ -876,7 +876,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -898,7 +898,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032540667
+    "timestamp": 1774951269768687016
   },
   {
     "env_config": {
@@ -906,7 +906,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -930,7 +930,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032540920
+    "timestamp": 1774951269768687967
   },
   {
     "env_config": {
@@ -938,7 +938,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 0.75,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -966,7 +966,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032541171
+    "timestamp": 1774951269768688889
   },
   {
     "env_config": {
@@ -974,7 +974,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -996,7 +996,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032541408
+    "timestamp": 1774951269768689791
   },
   {
     "env_config": {
@@ -1004,7 +1004,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1028,7 +1028,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032541672
+    "timestamp": 1774951269768690683
   },
   {
     "env_config": {
@@ -1036,7 +1036,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1064,7 +1064,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032542568
+    "timestamp": 1774951269768691554
   },
   {
     "env_config": {
@@ -1072,7 +1072,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1103,7 +1103,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032543165
+    "timestamp": 1774951269768692225
   },
   {
     "env_config": {
@@ -1111,7 +1111,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1146,7 +1146,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032543351
+    "timestamp": 1774951269768693027
   },
   {
     "env_config": {
@@ -1154,7 +1154,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1191,7 +1191,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032543538
+    "timestamp": 1774951269768693788
   },
   {
     "env_config": {
@@ -1199,7 +1199,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1221,7 +1221,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032543913
+    "timestamp": 1774951269768695211
   },
   {
     "env_config": {
@@ -1229,7 +1229,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1253,7 +1253,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032544150
+    "timestamp": 1774951269768696253
   },
   {
     "env_config": {
@@ -1261,7 +1261,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.0,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1289,7 +1289,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032544382
+    "timestamp": 1774951269768697355
   },
   {
     "env_config": {
@@ -1297,7 +1297,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1319,7 +1319,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032544604
+    "timestamp": 1774951269768698407
   },
   {
     "env_config": {
@@ -1327,7 +1327,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1351,7 +1351,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032544823
+    "timestamp": 1774951269768699259
   },
   {
     "env_config": {
@@ -1359,7 +1359,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1387,7 +1387,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032545119
+    "timestamp": 1774951269768700110
   },
   {
     "env_config": {
@@ -1395,7 +1395,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1426,7 +1426,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032545271
+    "timestamp": 1774951269768700611
   },
   {
     "env_config": {
@@ -1434,7 +1434,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1469,7 +1469,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032545547
+    "timestamp": 1774951269768701403
   },
   {
     "env_config": {
@@ -1477,7 +1477,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1514,7 +1514,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032545801
+    "timestamp": 1774951269768702655
   },
   {
     "env_config": {
@@ -1522,7 +1522,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1544,7 +1544,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032546099
+    "timestamp": 1774951269768704028
   },
   {
     "env_config": {
@@ -1552,7 +1552,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1576,7 +1576,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032546334
+    "timestamp": 1774951269768705070
   },
   {
     "env_config": {
@@ -1584,7 +1584,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.25,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1612,7 +1612,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032546610
+    "timestamp": 1774951269768706142
   },
   {
     "env_config": {
@@ -1620,7 +1620,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1642,7 +1642,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032546845
+    "timestamp": 1774951269768707224
   },
   {
     "env_config": {
@@ -1650,7 +1650,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1674,7 +1674,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032547072
+    "timestamp": 1774951269768708236
   },
   {
     "env_config": {
@@ -1682,7 +1682,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1710,7 +1710,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032547274
+    "timestamp": 1774951269768709077
   },
   {
     "env_config": {
@@ -1718,7 +1718,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1749,7 +1749,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032547415
+    "timestamp": 1774951269768709618
   },
   {
     "env_config": {
@@ -1757,7 +1757,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1792,7 +1792,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032547615
+    "timestamp": 1774951269768710450
   },
   {
     "env_config": {
@@ -1800,7 +1800,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1837,7 +1837,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032547814
+    "timestamp": 1774951269768711422
   },
   {
     "env_config": {
@@ -1845,7 +1845,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1867,7 +1867,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032548133
+    "timestamp": 1774951269768712854
   },
   {
     "env_config": {
@@ -1875,7 +1875,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1899,7 +1899,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032548346
+    "timestamp": 1774951269768713896
   },
   {
     "env_config": {
@@ -1907,7 +1907,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.5,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1935,7 +1935,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032548686
+    "timestamp": 1774951269768715229
   },
   {
     "env_config": {
@@ -1943,7 +1943,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1965,7 +1965,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032548940
+    "timestamp": 1774951269768716311
   },
   {
     "env_config": {
@@ -1973,7 +1973,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -1997,7 +1997,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032549144
+    "timestamp": 1774951269768717333
   },
   {
     "env_config": {
@@ -2005,7 +2005,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2033,7 +2033,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032549345
+    "timestamp": 1774951269768718335
   },
   {
     "env_config": {
@@ -2041,7 +2041,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2072,7 +2072,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032549518
+    "timestamp": 1774951269768718906
   },
   {
     "env_config": {
@@ -2080,7 +2080,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2115,7 +2115,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032549787
+    "timestamp": 1774951269768719908
   },
   {
     "env_config": {
@@ -2123,7 +2123,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2160,7 +2160,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032549998
+    "timestamp": 1774951269768720699
   },
   {
     "env_config": {
@@ -2168,7 +2168,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2190,7 +2190,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032550330
+    "timestamp": 1774951269768721911
   },
   {
     "env_config": {
@@ -2198,7 +2198,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2222,7 +2222,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032550556
+    "timestamp": 1774951269768722773
   },
   {
     "env_config": {
@@ -2230,7 +2230,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 1.75,
-        "vehicles_count": 17.5,
+        "vehicles_count": 18,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2258,7 +2258,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032550775
+    "timestamp": 1774951269768723955
   },
   {
     "env_config": {
@@ -2266,7 +2266,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2288,7 +2288,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032551011
+    "timestamp": 1774951269768724857
   },
   {
     "env_config": {
@@ -2296,7 +2296,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2320,7 +2320,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032551212
+    "timestamp": 1774951269768725708
   },
   {
     "env_config": {
@@ -2328,7 +2328,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2356,7 +2356,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032551619
+    "timestamp": 1774951269768727061
   },
   {
     "env_config": {
@@ -2364,7 +2364,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2395,7 +2395,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032551781
+    "timestamp": 1774951269768727923
   },
   {
     "env_config": {
@@ -2403,7 +2403,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2438,7 +2438,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032552008
+    "timestamp": 1774951269768728724
   },
   {
     "env_config": {
@@ -2446,7 +2446,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2483,7 +2483,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032552204
+    "timestamp": 1774951269768729526
   },
   {
     "env_config": {
@@ -2491,7 +2491,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2513,7 +2513,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032552502
+    "timestamp": 1774951269768730858
   },
   {
     "env_config": {
@@ -2521,7 +2521,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2545,7 +2545,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032552741
+    "timestamp": 1774951269768731730
   },
   {
     "env_config": {
@@ -2553,7 +2553,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2581,7 +2581,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032552953
+    "timestamp": 1774951269768732742
   },
   {
     "env_config": {
@@ -2589,7 +2589,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2611,7 +2611,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032553194
+    "timestamp": 1774951269768733643
   },
   {
     "env_config": {
@@ -2619,7 +2619,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2643,7 +2643,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032553413
+    "timestamp": 1774951269768734485
   },
   {
     "env_config": {
@@ -2651,7 +2651,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2679,7 +2679,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032553638
+    "timestamp": 1774951269768735577
   },
   {
     "env_config": {
@@ -2687,7 +2687,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2718,7 +2718,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032553773
+    "timestamp": 1774951269768736278
   },
   {
     "env_config": {
@@ -2726,7 +2726,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2761,7 +2761,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032553978
+    "timestamp": 1774951269768737090
   },
   {
     "env_config": {
@@ -2769,7 +2769,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2806,7 +2806,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032554304
+    "timestamp": 1774951269768738903
   },
   {
     "env_config": {
@@ -2814,7 +2814,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2836,7 +2836,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032554637
+    "timestamp": 1774951269768740256
   },
   {
     "env_config": {
@@ -2844,7 +2844,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2868,7 +2868,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032554898
+    "timestamp": 1774951269768741258
   },
   {
     "env_config": {
@@ -2876,7 +2876,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.25,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2904,7 +2904,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032555115
+    "timestamp": 1774951269768742109
   },
   {
     "env_config": {
@@ -2912,7 +2912,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2934,7 +2934,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032555344
+    "timestamp": 1774951269768743211
   },
   {
     "env_config": {
@@ -2942,7 +2942,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -2966,7 +2966,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032555573
+    "timestamp": 1774951269768744073
   },
   {
     "env_config": {
@@ -2974,7 +2974,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3002,7 +3002,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032555798
+    "timestamp": 1774951269768745085
   },
   {
     "env_config": {
@@ -3010,7 +3010,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3041,7 +3041,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032555993
+    "timestamp": 1774951269768745806
   },
   {
     "env_config": {
@@ -3049,7 +3049,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3084,7 +3084,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032556190
+    "timestamp": 1774951269768746778
   },
   {
     "env_config": {
@@ -3092,7 +3092,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3129,7 +3129,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032556388
+    "timestamp": 1774951269768747820
   },
   {
     "env_config": {
@@ -3137,7 +3137,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3159,7 +3159,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032556728
+    "timestamp": 1774951269768749012
   },
   {
     "env_config": {
@@ -3167,7 +3167,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3191,7 +3191,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032556934
+    "timestamp": 1774951269768750054
   },
   {
     "env_config": {
@@ -3199,7 +3199,7 @@
       "config": {
         "lanes_count": 2,
         "vehicles_density": 2.5,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3227,7 +3227,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032557136
+    "timestamp": 1774951269768751096
   },
   {
     "env_config": {
@@ -3235,7 +3235,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3257,7 +3257,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032557378
+    "timestamp": 1774951269768752138
   },
   {
     "env_config": {
@@ -3265,7 +3265,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3289,7 +3289,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032557589
+    "timestamp": 1774951269768752980
   },
   {
     "env_config": {
@@ -3297,7 +3297,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3325,7 +3325,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032557797
+    "timestamp": 1774951269768754022
   },
   {
     "env_config": {
@@ -3333,7 +3333,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3364,7 +3364,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032557981
+    "timestamp": 1774951269768754833
   },
   {
     "env_config": {
@@ -3372,7 +3372,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3407,7 +3407,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032558293
+    "timestamp": 1774951269768755645
   },
   {
     "env_config": {
@@ -3415,7 +3415,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3452,7 +3452,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032558484
+    "timestamp": 1774951269768756597
   },
   {
     "env_config": {
@@ -3460,7 +3460,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3482,7 +3482,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032558769
+    "timestamp": 1774951269768757959
   },
   {
     "env_config": {
@@ -3490,7 +3490,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3514,7 +3514,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032559040
+    "timestamp": 1774951269768758981
   },
   {
     "env_config": {
@@ -3522,7 +3522,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3550,7 +3550,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032559255
+    "timestamp": 1774951269768759973
   },
   {
     "env_config": {
@@ -3558,7 +3558,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3580,7 +3580,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032559478
+    "timestamp": 1774951269768761045
   },
   {
     "env_config": {
@@ -3588,7 +3588,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3612,7 +3612,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032559685
+    "timestamp": 1774951269768762047
   },
   {
     "env_config": {
@@ -3620,7 +3620,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3648,7 +3648,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032559916
+    "timestamp": 1774951269768763029
   },
   {
     "env_config": {
@@ -3656,7 +3656,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3687,7 +3687,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032560049
+    "timestamp": 1774951269768763720
   },
   {
     "env_config": {
@@ -3695,7 +3695,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3730,7 +3730,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032560238
+    "timestamp": 1774951269768764732
   },
   {
     "env_config": {
@@ -3738,7 +3738,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3775,7 +3775,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032560430
+    "timestamp": 1774951269768765523
   },
   {
     "env_config": {
@@ -3783,7 +3783,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3805,7 +3805,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032560749
+    "timestamp": 1774951269768766706
   },
   {
     "env_config": {
@@ -3813,7 +3813,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3837,7 +3837,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032560962
+    "timestamp": 1774951269768767748
   },
   {
     "env_config": {
@@ -3845,7 +3845,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.5,
-        "vehicles_count": 7.5,
+        "vehicles_count": 8,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3873,7 +3873,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032561164
+    "timestamp": 1774951269768768739
   },
   {
     "env_config": {
@@ -3881,7 +3881,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3903,7 +3903,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032561408
+    "timestamp": 1774951269768769791
   },
   {
     "env_config": {
@@ -3911,7 +3911,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3935,7 +3935,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032561672
+    "timestamp": 1774951269768770954
   },
   {
     "env_config": {
@@ -3943,7 +3943,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -3971,7 +3971,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032561872
+    "timestamp": 1774951269768771795
   },
   {
     "env_config": {
@@ -3979,7 +3979,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4010,7 +4010,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032562002
+    "timestamp": 1774951269768772316
   },
   {
     "env_config": {
@@ -4018,7 +4018,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4053,7 +4053,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032562222
+    "timestamp": 1774951269768773118
   },
   {
     "env_config": {
@@ -4061,7 +4061,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4098,7 +4098,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032562413
+    "timestamp": 1774951269768773929
   },
   {
     "env_config": {
@@ -4106,7 +4106,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4128,7 +4128,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032562697
+    "timestamp": 1774951269768775121
   },
   {
     "env_config": {
@@ -4136,7 +4136,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4160,7 +4160,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032562905
+    "timestamp": 1774951269768775983
   },
   {
     "env_config": {
@@ -4168,7 +4168,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 0.75,
-        "vehicles_count": 11.25,
+        "vehicles_count": 12,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4196,7 +4196,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032563220
+    "timestamp": 1774951269768776825
   },
   {
     "env_config": {
@@ -4204,7 +4204,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4226,7 +4226,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032563437
+    "timestamp": 1774951269768777706
   },
   {
     "env_config": {
@@ -4234,7 +4234,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4258,7 +4258,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032563652
+    "timestamp": 1774951269768778548
   },
   {
     "env_config": {
@@ -4266,7 +4266,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4294,7 +4294,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032563850
+    "timestamp": 1774951269768779390
   },
   {
     "env_config": {
@@ -4302,7 +4302,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4333,7 +4333,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032563998
+    "timestamp": 1774951269768780081
   },
   {
     "env_config": {
@@ -4341,7 +4341,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4376,7 +4376,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032564199
+    "timestamp": 1774951269768780892
   },
   {
     "env_config": {
@@ -4384,7 +4384,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4421,7 +4421,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032564390
+    "timestamp": 1774951269768781694
   },
   {
     "env_config": {
@@ -4429,7 +4429,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4451,7 +4451,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032564698
+    "timestamp": 1774951269768782966
   },
   {
     "env_config": {
@@ -4459,7 +4459,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4483,7 +4483,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032564915
+    "timestamp": 1774951269768783998
   },
   {
     "env_config": {
@@ -4491,7 +4491,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.0,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4519,7 +4519,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032565123
+    "timestamp": 1774951269768784900
   },
   {
     "env_config": {
@@ -4527,7 +4527,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4549,7 +4549,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032565347
+    "timestamp": 1774951269768785782
   },
   {
     "env_config": {
@@ -4557,7 +4557,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4581,7 +4581,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032565544
+    "timestamp": 1774951269768786623
   },
   {
     "env_config": {
@@ -4589,7 +4589,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4617,7 +4617,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032565747
+    "timestamp": 1774951269768787465
   },
   {
     "env_config": {
@@ -4625,7 +4625,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4656,7 +4656,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032565919
+    "timestamp": 1774951269768788677
   },
   {
     "env_config": {
@@ -4664,7 +4664,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4699,7 +4699,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032566142
+    "timestamp": 1774951269768789468
   },
   {
     "env_config": {
@@ -4707,7 +4707,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4744,7 +4744,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032566334
+    "timestamp": 1774951269768790260
   },
   {
     "env_config": {
@@ -4752,7 +4752,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4774,7 +4774,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032566647
+    "timestamp": 1774951269768791603
   },
   {
     "env_config": {
@@ -4782,7 +4782,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4806,7 +4806,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032566881
+    "timestamp": 1774951269768792444
   },
   {
     "env_config": {
@@ -4814,7 +4814,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.25,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4842,7 +4842,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032567097
+    "timestamp": 1774951269768793656
   },
   {
     "env_config": {
@@ -4850,7 +4850,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4872,7 +4872,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032567306
+    "timestamp": 1774951269768794548
   },
   {
     "env_config": {
@@ -4880,7 +4880,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4904,7 +4904,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032567515
+    "timestamp": 1774951269768795390
   },
   {
     "env_config": {
@@ -4912,7 +4912,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4940,7 +4940,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032567714
+    "timestamp": 1774951269768796231
   },
   {
     "env_config": {
@@ -4948,7 +4948,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -4979,7 +4979,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032567844
+    "timestamp": 1774951269768796772
   },
   {
     "env_config": {
@@ -4987,7 +4987,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5022,7 +5022,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032568039
+    "timestamp": 1774951269768797734
   },
   {
     "env_config": {
@@ -5030,7 +5030,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5067,7 +5067,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032568244
+    "timestamp": 1774951269768798526
   },
   {
     "env_config": {
@@ -5075,7 +5075,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5097,7 +5097,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032568548
+    "timestamp": 1774951269768799718
   },
   {
     "env_config": {
@@ -5105,7 +5105,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5129,7 +5129,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032568759
+    "timestamp": 1774951269768800559
   },
   {
     "env_config": {
@@ -5137,7 +5137,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.5,
-        "vehicles_count": 22.5,
+        "vehicles_count": 23,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5165,7 +5165,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032568980
+    "timestamp": 1774951269768801561
   },
   {
     "env_config": {
@@ -5173,7 +5173,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5195,7 +5195,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032569202
+    "timestamp": 1774951269768802443
   },
   {
     "env_config": {
@@ -5203,7 +5203,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5227,7 +5227,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032569418
+    "timestamp": 1774951269768803284
   },
   {
     "env_config": {
@@ -5235,7 +5235,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5263,7 +5263,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032569728
+    "timestamp": 1774951269768804126
   },
   {
     "env_config": {
@@ -5271,7 +5271,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5302,7 +5302,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032569863
+    "timestamp": 1774951269768804647
   },
   {
     "env_config": {
@@ -5310,7 +5310,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5345,7 +5345,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032570061
+    "timestamp": 1774951269768805479
   },
   {
     "env_config": {
@@ -5353,7 +5353,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5390,7 +5390,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032570291
+    "timestamp": 1774951269768806481
   },
   {
     "env_config": {
@@ -5398,7 +5398,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5420,7 +5420,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032570627
+    "timestamp": 1774951269768807933
   },
   {
     "env_config": {
@@ -5428,7 +5428,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5452,7 +5452,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032570896
+    "timestamp": 1774951269768808935
   },
   {
     "env_config": {
@@ -5460,7 +5460,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 1.75,
-        "vehicles_count": 26.25,
+        "vehicles_count": 27,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5488,7 +5488,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032571136
+    "timestamp": 1774951269768809937
   },
   {
     "env_config": {
@@ -5496,7 +5496,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5518,7 +5518,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032571346
+    "timestamp": 1774951269768810979
   },
   {
     "env_config": {
@@ -5526,7 +5526,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5550,7 +5550,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032571543
+    "timestamp": 1774951269768811981
   },
   {
     "env_config": {
@@ -5558,7 +5558,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5586,7 +5586,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032571764
+    "timestamp": 1774951269768812993
   },
   {
     "env_config": {
@@ -5594,7 +5594,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5625,7 +5625,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032571892
+    "timestamp": 1774951269768813524
   },
   {
     "env_config": {
@@ -5633,7 +5633,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5668,7 +5668,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032572080
+    "timestamp": 1774951269768814536
   },
   {
     "env_config": {
@@ -5676,7 +5676,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5713,7 +5713,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032572285
+    "timestamp": 1774951269768815497
   },
   {
     "env_config": {
@@ -5721,7 +5721,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5743,7 +5743,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032572588
+    "timestamp": 1774951269768816850
   },
   {
     "env_config": {
@@ -5751,7 +5751,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5775,7 +5775,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032572799
+    "timestamp": 1774951269768818042
   },
   {
     "env_config": {
@@ -5783,7 +5783,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.0,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5811,7 +5811,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032573013
+    "timestamp": 1774951269768819044
   },
   {
     "env_config": {
@@ -5819,7 +5819,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5841,7 +5841,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032573244
+    "timestamp": 1774951269768819956
   },
   {
     "env_config": {
@@ -5849,7 +5849,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5873,7 +5873,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032573444
+    "timestamp": 1774951269768820948
   },
   {
     "env_config": {
@@ -5881,7 +5881,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5909,7 +5909,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032573664
+    "timestamp": 1774951269768821970
   },
   {
     "env_config": {
@@ -5917,7 +5917,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5948,7 +5948,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032573790
+    "timestamp": 1774951269768822481
   },
   {
     "env_config": {
@@ -5956,7 +5956,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -5991,7 +5991,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032573981
+    "timestamp": 1774951269768823292
   },
   {
     "env_config": {
@@ -5999,7 +5999,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6036,7 +6036,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032574199
+    "timestamp": 1774951269768824094
   },
   {
     "env_config": {
@@ -6044,7 +6044,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6066,7 +6066,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032574517
+    "timestamp": 1774951269768825296
   },
   {
     "env_config": {
@@ -6074,7 +6074,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6098,7 +6098,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032574749
+    "timestamp": 1774951269768826138
   },
   {
     "env_config": {
@@ -6106,7 +6106,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.25,
-        "vehicles_count": 33.75,
+        "vehicles_count": 34,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6134,7 +6134,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032574962
+    "timestamp": 1774951269768826989
   },
   {
     "env_config": {
@@ -6142,7 +6142,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6164,7 +6164,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032575175
+    "timestamp": 1774951269768827901
   },
   {
     "env_config": {
@@ -6172,7 +6172,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6196,7 +6196,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032575390
+    "timestamp": 1774951269768828903
   },
   {
     "env_config": {
@@ -6204,7 +6204,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6232,7 +6232,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032575626
+    "timestamp": 1774951269768829814
   },
   {
     "env_config": {
@@ -6240,7 +6240,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6271,7 +6271,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032575758
+    "timestamp": 1774951269768830345
   },
   {
     "env_config": {
@@ -6279,7 +6279,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6314,7 +6314,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032575947
+    "timestamp": 1774951269768831147
   },
   {
     "env_config": {
@@ -6322,7 +6322,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6359,7 +6359,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032576153
+    "timestamp": 1774951269768832079
   },
   {
     "env_config": {
@@ -6367,7 +6367,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6389,7 +6389,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032576437
+    "timestamp": 1774951269768833431
   },
   {
     "env_config": {
@@ -6397,7 +6397,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6421,7 +6421,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032576656
+    "timestamp": 1774951269768834433
   },
   {
     "env_config": {
@@ -6429,7 +6429,7 @@
       "config": {
         "lanes_count": 3,
         "vehicles_density": 2.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6457,7 +6457,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032576873
+    "timestamp": 1774951269768835415
   },
   {
     "env_config": {
@@ -6465,7 +6465,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6487,7 +6487,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032577092
+    "timestamp": 1774951269768836287
   },
   {
     "env_config": {
@@ -6495,7 +6495,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6519,7 +6519,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032577299
+    "timestamp": 1774951269768837128
   },
   {
     "env_config": {
@@ -6527,7 +6527,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6555,7 +6555,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032577510
+    "timestamp": 1774951269768837980
   },
   {
     "env_config": {
@@ -6563,7 +6563,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6594,7 +6594,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032577639
+    "timestamp": 1774951269768838501
   },
   {
     "env_config": {
@@ -6602,7 +6602,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6637,7 +6637,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032577863
+    "timestamp": 1774951269768839453
   },
   {
     "env_config": {
@@ -6645,7 +6645,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6682,7 +6682,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032578055
+    "timestamp": 1774951269768840464
   },
   {
     "env_config": {
@@ -6690,7 +6690,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6712,7 +6712,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032578330
+    "timestamp": 1774951269768841797
   },
   {
     "env_config": {
@@ -6720,7 +6720,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6744,7 +6744,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032578537
+    "timestamp": 1774951269768842799
   },
   {
     "env_config": {
@@ -6752,7 +6752,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6780,7 +6780,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032578736
+    "timestamp": 1774951269768843640
   },
   {
     "env_config": {
@@ -6788,7 +6788,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6810,7 +6810,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032578969
+    "timestamp": 1774951269768844672
   },
   {
     "env_config": {
@@ -6818,7 +6818,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6842,7 +6842,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032579174
+    "timestamp": 1774951269768845514
   },
   {
     "env_config": {
@@ -6850,7 +6850,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6878,7 +6878,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032579385
+    "timestamp": 1774951269768846496
   },
   {
     "env_config": {
@@ -6886,7 +6886,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6917,7 +6917,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032579592
+    "timestamp": 1774951269768847017
   },
   {
     "env_config": {
@@ -6925,7 +6925,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -6960,7 +6960,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032579789
+    "timestamp": 1774951269768847959
   },
   {
     "env_config": {
@@ -6968,7 +6968,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7005,7 +7005,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032579980
+    "timestamp": 1774951269768848740
   },
   {
     "env_config": {
@@ -7013,7 +7013,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7035,7 +7035,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032580277
+    "timestamp": 1774951269768850093
   },
   {
     "env_config": {
@@ -7043,7 +7043,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7067,7 +7067,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032580495
+    "timestamp": 1774951269768850934
   },
   {
     "env_config": {
@@ -7075,7 +7075,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.5,
-        "vehicles_count": 10.0,
+        "vehicles_count": 10,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7103,7 +7103,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032580694
+    "timestamp": 1774951269768851786
   },
   {
     "env_config": {
@@ -7111,7 +7111,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7133,7 +7133,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032580908
+    "timestamp": 1774951269768852657
   },
   {
     "env_config": {
@@ -7141,7 +7141,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7165,7 +7165,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032581122
+    "timestamp": 1774951269768853499
   },
   {
     "env_config": {
@@ -7173,7 +7173,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7201,7 +7201,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032581321
+    "timestamp": 1774951269768854341
   },
   {
     "env_config": {
@@ -7209,7 +7209,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7240,7 +7240,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032581483
+    "timestamp": 1774951269768854902
   },
   {
     "env_config": {
@@ -7248,7 +7248,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7283,7 +7283,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032581672
+    "timestamp": 1774951269768855873
   },
   {
     "env_config": {
@@ -7291,7 +7291,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7328,7 +7328,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032581870
+    "timestamp": 1774951269768856675
   },
   {
     "env_config": {
@@ -7336,7 +7336,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7358,7 +7358,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032582169
+    "timestamp": 1774951269768858018
   },
   {
     "env_config": {
@@ -7366,7 +7366,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7390,7 +7390,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032582390
+    "timestamp": 1774951269768859059
   },
   {
     "env_config": {
@@ -7398,7 +7398,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 0.75,
-        "vehicles_count": 15.0,
+        "vehicles_count": 15,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7426,7 +7426,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032582594
+    "timestamp": 1774951269768859901
   },
   {
     "env_config": {
@@ -7434,7 +7434,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7456,7 +7456,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032582809
+    "timestamp": 1774951269768860933
   },
   {
     "env_config": {
@@ -7464,7 +7464,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7488,7 +7488,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032583025
+    "timestamp": 1774951269768861785
   },
   {
     "env_config": {
@@ -7496,7 +7496,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7524,7 +7524,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032583230
+    "timestamp": 1774951269768862766
   },
   {
     "env_config": {
@@ -7532,7 +7532,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7563,7 +7563,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032583381
+    "timestamp": 1774951269768863287
   },
   {
     "env_config": {
@@ -7571,7 +7571,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7606,7 +7606,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032583568
+    "timestamp": 1774951269768864079
   },
   {
     "env_config": {
@@ -7614,7 +7614,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7651,7 +7651,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032583756
+    "timestamp": 1774951269768865031
   },
   {
     "env_config": {
@@ -7659,7 +7659,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7681,7 +7681,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032584053
+    "timestamp": 1774951269768866253
   },
   {
     "env_config": {
@@ -7689,7 +7689,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7713,7 +7713,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032584262
+    "timestamp": 1774951269768867265
   },
   {
     "env_config": {
@@ -7721,7 +7721,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.0,
-        "vehicles_count": 20.0,
+        "vehicles_count": 20,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7749,7 +7749,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032584463
+    "timestamp": 1774951269768868257
   },
   {
     "env_config": {
@@ -7757,7 +7757,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7779,7 +7779,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032584713
+    "timestamp": 1774951269768869319
   },
   {
     "env_config": {
@@ -7787,7 +7787,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7811,7 +7811,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032584918
+    "timestamp": 1774951269768870160
   },
   {
     "env_config": {
@@ -7819,7 +7819,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7847,7 +7847,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032585113
+    "timestamp": 1774951269768870992
   },
   {
     "env_config": {
@@ -7855,7 +7855,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7886,7 +7886,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032585244
+    "timestamp": 1774951269768871713
   },
   {
     "env_config": {
@@ -7894,7 +7894,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7929,7 +7929,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032585448
+    "timestamp": 1774951269768872505
   },
   {
     "env_config": {
@@ -7937,7 +7937,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -7974,7 +7974,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032585659
+    "timestamp": 1774951269768873286
   },
   {
     "env_config": {
@@ -7982,7 +7982,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8004,7 +8004,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032585977
+    "timestamp": 1774951269768874619
   },
   {
     "env_config": {
@@ -8012,7 +8012,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8036,7 +8036,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032586254
+    "timestamp": 1774951269768875631
   },
   {
     "env_config": {
@@ -8044,7 +8044,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.25,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8072,7 +8072,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032586455
+    "timestamp": 1774951269768876482
   },
   {
     "env_config": {
@@ -8080,7 +8080,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8102,7 +8102,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032586684
+    "timestamp": 1774951269768877514
   },
   {
     "env_config": {
@@ -8110,7 +8110,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8134,7 +8134,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032586885
+    "timestamp": 1774951269768878516
   },
   {
     "env_config": {
@@ -8142,7 +8142,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8170,7 +8170,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032587083
+    "timestamp": 1774951269768879368
   },
   {
     "env_config": {
@@ -8178,7 +8178,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8209,7 +8209,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032587227
+    "timestamp": 1774951269768880480
   },
   {
     "env_config": {
@@ -8217,7 +8217,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8252,7 +8252,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032587417
+    "timestamp": 1774951269768881281
   },
   {
     "env_config": {
@@ -8260,7 +8260,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8297,7 +8297,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032587609
+    "timestamp": 1774951269768882073
   },
   {
     "env_config": {
@@ -8305,7 +8305,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8327,7 +8327,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032587908
+    "timestamp": 1774951269768883415
   },
   {
     "env_config": {
@@ -8335,7 +8335,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8359,7 +8359,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032588127
+    "timestamp": 1774951269768884257
   },
   {
     "env_config": {
@@ -8367,7 +8367,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.5,
-        "vehicles_count": 30.0,
+        "vehicles_count": 30,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8395,7 +8395,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032588411
+    "timestamp": 1774951269768885159
   },
   {
     "env_config": {
@@ -8403,7 +8403,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8425,7 +8425,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032588627
+    "timestamp": 1774951269768886221
   },
   {
     "env_config": {
@@ -8433,7 +8433,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8457,7 +8457,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032588837
+    "timestamp": 1774951269768887202
   },
   {
     "env_config": {
@@ -8465,7 +8465,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8493,7 +8493,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032589052
+    "timestamp": 1774951269768888415
   },
   {
     "env_config": {
@@ -8501,7 +8501,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8532,7 +8532,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032589187
+    "timestamp": 1774951269768889096
   },
   {
     "env_config": {
@@ -8540,7 +8540,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8575,7 +8575,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032589439
+    "timestamp": 1774951269768890068
   },
   {
     "env_config": {
@@ -8583,7 +8583,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8620,7 +8620,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032589692
+    "timestamp": 1774951269768891170
   },
   {
     "env_config": {
@@ -8628,7 +8628,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8650,7 +8650,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032589980
+    "timestamp": 1774951269768892382
   },
   {
     "env_config": {
@@ -8658,7 +8658,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8682,7 +8682,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032590197
+    "timestamp": 1774951269768893284
   },
   {
     "env_config": {
@@ -8690,7 +8690,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 1.75,
-        "vehicles_count": 35.0,
+        "vehicles_count": 35,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8718,7 +8718,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032590404
+    "timestamp": 1774951269768894125
   },
   {
     "env_config": {
@@ -8726,7 +8726,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8748,7 +8748,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032590692
+    "timestamp": 1774951269768895007
   },
   {
     "env_config": {
@@ -8756,7 +8756,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8780,7 +8780,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032590891
+    "timestamp": 1774951269768895849
   },
   {
     "env_config": {
@@ -8788,7 +8788,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8816,7 +8816,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032591104
+    "timestamp": 1774951269768896690
   },
   {
     "env_config": {
@@ -8824,7 +8824,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8855,7 +8855,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032591233
+    "timestamp": 1774951269768897211
   },
   {
     "env_config": {
@@ -8863,7 +8863,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8898,7 +8898,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032591444
+    "timestamp": 1774951269768898003
   },
   {
     "env_config": {
@@ -8906,7 +8906,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8943,7 +8943,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032591666
+    "timestamp": 1774951269768898804
   },
   {
     "env_config": {
@@ -8951,7 +8951,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -8973,7 +8973,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032591951
+    "timestamp": 1774951269768900137
   },
   {
     "env_config": {
@@ -8981,7 +8981,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9005,7 +9005,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032592165
+    "timestamp": 1774951269768900978
   },
   {
     "env_config": {
@@ -9013,7 +9013,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.0,
-        "vehicles_count": 40.0,
+        "vehicles_count": 40,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9041,7 +9041,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032592409
+    "timestamp": 1774951269768901980
   },
   {
     "env_config": {
@@ -9049,7 +9049,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9071,7 +9071,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032592637
+    "timestamp": 1774951269768902872
   },
   {
     "env_config": {
@@ -9079,7 +9079,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9103,7 +9103,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032592844
+    "timestamp": 1774951269768903703
   },
   {
     "env_config": {
@@ -9111,7 +9111,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9139,7 +9139,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032593049
+    "timestamp": 1774951269768904555
   },
   {
     "env_config": {
@@ -9147,7 +9147,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9178,7 +9178,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032593182
+    "timestamp": 1774951269768905066
   },
   {
     "env_config": {
@@ -9186,7 +9186,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9221,7 +9221,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032593376
+    "timestamp": 1774951269768921657
   },
   {
     "env_config": {
@@ -9229,7 +9229,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9266,7 +9266,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032593584
+    "timestamp": 1774951269768922639
   },
   {
     "env_config": {
@@ -9274,7 +9274,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9296,7 +9296,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032593872
+    "timestamp": 1774951269768924142
   },
   {
     "env_config": {
@@ -9304,7 +9304,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9328,7 +9328,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032594147
+    "timestamp": 1774951269768925204
   },
   {
     "env_config": {
@@ -9336,7 +9336,7 @@
       "config": {
         "lanes_count": 4,
         "vehicles_density": 2.25,
-        "vehicles_count": 45.0,
+        "vehicles_count": 45,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9364,7 +9364,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032594522
+    "timestamp": 1774951269768926116
   },
   {
     "env_config": {
@@ -9394,7 +9394,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032594782
+    "timestamp": 1774951269768927087
   },
   {
     "env_config": {
@@ -9426,7 +9426,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032595015
+    "timestamp": 1774951269768927979
   },
   {
     "env_config": {
@@ -9462,7 +9462,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032595226
+    "timestamp": 1774951269768928881
   },
   {
     "env_config": {
@@ -9501,7 +9501,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032595393
+    "timestamp": 1774951269768929462
   },
   {
     "env_config": {
@@ -9544,7 +9544,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032595591
+    "timestamp": 1774951269768930294
   },
   {
     "env_config": {
@@ -9589,7 +9589,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032595782
+    "timestamp": 1774951269768931135
   },
   {
     "env_config": {
@@ -9619,7 +9619,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032596072
+    "timestamp": 1774951269768932327
   },
   {
     "env_config": {
@@ -9651,7 +9651,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032596274
+    "timestamp": 1774951269768933159
   },
   {
     "env_config": {
@@ -9687,7 +9687,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032596507
+    "timestamp": 1774951269768934121
   },
   {
     "env_config": {
@@ -9695,7 +9695,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9717,7 +9717,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032596772
+    "timestamp": 1774951269768935012
   },
   {
     "env_config": {
@@ -9725,7 +9725,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9749,7 +9749,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032596976
+    "timestamp": 1774951269768935864
   },
   {
     "env_config": {
@@ -9757,7 +9757,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9785,7 +9785,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032597175
+    "timestamp": 1774951269768936746
   },
   {
     "env_config": {
@@ -9793,7 +9793,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9824,7 +9824,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032597310
+    "timestamp": 1774951269768937487
   },
   {
     "env_config": {
@@ -9832,7 +9832,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9867,7 +9867,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032597515
+    "timestamp": 1774951269768938459
   },
   {
     "env_config": {
@@ -9875,7 +9875,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9912,7 +9912,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032597706
+    "timestamp": 1774951269768939240
   },
   {
     "env_config": {
@@ -9920,7 +9920,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9942,7 +9942,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032598009
+    "timestamp": 1774951269768940433
   },
   {
     "env_config": {
@@ -9950,7 +9950,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -9974,7 +9974,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032598228
+    "timestamp": 1774951269768941455
   },
   {
     "env_config": {
@@ -9982,7 +9982,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.0,
-        "vehicles_count": 0.0,
+        "vehicles_count": 0,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10010,7 +10010,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032598432
+    "timestamp": 1774951269768942466
   },
   {
     "env_config": {
@@ -10018,7 +10018,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10040,7 +10040,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032598715
+    "timestamp": 1774951269768943508
   },
   {
     "env_config": {
@@ -10048,7 +10048,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10072,7 +10072,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032598924
+    "timestamp": 1774951269768944340
   },
   {
     "env_config": {
@@ -10080,7 +10080,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10108,7 +10108,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032599127
+    "timestamp": 1774951269768945182
   },
   {
     "env_config": {
@@ -10116,7 +10116,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10147,7 +10147,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032599255
+    "timestamp": 1774951269768945703
   },
   {
     "env_config": {
@@ -10155,7 +10155,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10190,7 +10190,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032599454
+    "timestamp": 1774951269768946504
   },
   {
     "env_config": {
@@ -10198,7 +10198,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10235,7 +10235,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032599669
+    "timestamp": 1774951269768947296
   },
   {
     "env_config": {
@@ -10243,7 +10243,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10265,7 +10265,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032599981
+    "timestamp": 1774951269768948478
   },
   {
     "env_config": {
@@ -10273,7 +10273,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10297,7 +10297,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032600197
+    "timestamp": 1774951269768949319
   },
   {
     "env_config": {
@@ -10305,7 +10305,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.5,
-        "vehicles_count": 12.5,
+        "vehicles_count": 13,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10333,7 +10333,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032600399
+    "timestamp": 1774951269768950161
   },
   {
     "env_config": {
@@ -10341,7 +10341,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10363,7 +10363,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032600632
+    "timestamp": 1774951269768951033
   },
   {
     "env_config": {
@@ -10371,7 +10371,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10395,7 +10395,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032600841
+    "timestamp": 1774951269768951884
   },
   {
     "env_config": {
@@ -10403,7 +10403,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10431,7 +10431,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032601041
+    "timestamp": 1774951269768952776
   },
   {
     "env_config": {
@@ -10439,7 +10439,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10470,7 +10470,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032601173
+    "timestamp": 1774951269768953577
   },
   {
     "env_config": {
@@ -10478,7 +10478,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10513,7 +10513,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032601395
+    "timestamp": 1774951269768954459
   },
   {
     "env_config": {
@@ -10521,7 +10521,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10558,7 +10558,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032601627
+    "timestamp": 1774951269768955301
   },
   {
     "env_config": {
@@ -10566,7 +10566,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10588,7 +10588,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032602017
+    "timestamp": 1774951269768956543
   },
   {
     "env_config": {
@@ -10596,7 +10596,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10620,7 +10620,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032602256
+    "timestamp": 1774951269768957455
   },
   {
     "env_config": {
@@ -10628,7 +10628,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 0.75,
-        "vehicles_count": 18.75,
+        "vehicles_count": 19,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10656,7 +10656,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032602501
+    "timestamp": 1774951269768958356
   },
   {
     "env_config": {
@@ -10664,7 +10664,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10686,7 +10686,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032602720
+    "timestamp": 1774951269768959288
   },
   {
     "env_config": {
@@ -10694,7 +10694,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10718,7 +10718,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032603010
+    "timestamp": 1774951269768960170
   },
   {
     "env_config": {
@@ -10726,7 +10726,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10754,7 +10754,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032603210
+    "timestamp": 1774951269768961011
   },
   {
     "env_config": {
@@ -10762,7 +10762,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10793,7 +10793,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032603348
+    "timestamp": 1774951269768961542
   },
   {
     "env_config": {
@@ -10801,7 +10801,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10836,7 +10836,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032603558
+    "timestamp": 1774951269768962354
   },
   {
     "env_config": {
@@ -10844,7 +10844,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10881,7 +10881,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032603754
+    "timestamp": 1774951269768963145
   },
   {
     "env_config": {
@@ -10889,7 +10889,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10911,7 +10911,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032604043
+    "timestamp": 1774951269768964338
   },
   {
     "env_config": {
@@ -10919,7 +10919,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10943,7 +10943,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032604268
+    "timestamp": 1774951269768965610
   },
   {
     "env_config": {
@@ -10951,7 +10951,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.0,
-        "vehicles_count": 25.0,
+        "vehicles_count": 25,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -10979,7 +10979,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032604481
+    "timestamp": 1774951269768966642
   },
   {
     "env_config": {
@@ -10987,7 +10987,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11009,7 +11009,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032604782
+    "timestamp": 1774951269768967794
   },
   {
     "env_config": {
@@ -11017,7 +11017,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11041,7 +11041,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032604987
+    "timestamp": 1774951269768968646
   },
   {
     "env_config": {
@@ -11049,7 +11049,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11077,7 +11077,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032605186
+    "timestamp": 1774951269768969648
   },
   {
     "env_config": {
@@ -11085,7 +11085,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11116,7 +11116,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032605361
+    "timestamp": 1774951269768970750
   },
   {
     "env_config": {
@@ -11124,7 +11124,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11159,7 +11159,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032605570
+    "timestamp": 1774951269768971732
   },
   {
     "env_config": {
@@ -11167,7 +11167,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11204,7 +11204,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032605766
+    "timestamp": 1774951269768972763
   },
   {
     "env_config": {
@@ -11212,7 +11212,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11234,7 +11234,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032606076
+    "timestamp": 1774951269768973966
   },
   {
     "env_config": {
@@ -11242,7 +11242,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11266,7 +11266,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032606290
+    "timestamp": 1774951269768974807
   },
   {
     "env_config": {
@@ -11274,7 +11274,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.25,
-        "vehicles_count": 31.25,
+        "vehicles_count": 32,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11302,7 +11302,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032606503
+    "timestamp": 1774951269768975799
   },
   {
     "env_config": {
@@ -11310,7 +11310,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11332,7 +11332,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032606728
+    "timestamp": 1774951269768976841
   },
   {
     "env_config": {
@@ -11340,7 +11340,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11364,7 +11364,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032606961
+    "timestamp": 1774951269768977863
   },
   {
     "env_config": {
@@ -11372,7 +11372,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11400,7 +11400,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032607164
+    "timestamp": 1774951269768978705
   },
   {
     "env_config": {
@@ -11408,7 +11408,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11439,7 +11439,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032607299
+    "timestamp": 1774951269768979406
   },
   {
     "env_config": {
@@ -11447,7 +11447,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11482,7 +11482,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032607500
+    "timestamp": 1774951269768980398
   },
   {
     "env_config": {
@@ -11490,7 +11490,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11527,7 +11527,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032607692
+    "timestamp": 1774951269768981199
   },
   {
     "env_config": {
@@ -11535,7 +11535,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11557,7 +11557,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032608045
+    "timestamp": 1774951269768982572
   },
   {
     "env_config": {
@@ -11565,7 +11565,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11589,7 +11589,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032608262
+    "timestamp": 1774951269768983413
   },
   {
     "env_config": {
@@ -11597,7 +11597,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.5,
-        "vehicles_count": 37.5,
+        "vehicles_count": 38,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11625,7 +11625,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032608461
+    "timestamp": 1774951269768984425
   },
   {
     "env_config": {
@@ -11633,7 +11633,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11655,7 +11655,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032608679
+    "timestamp": 1774951269768985457
   },
   {
     "env_config": {
@@ -11663,7 +11663,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11687,7 +11687,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032608895
+    "timestamp": 1774951269768986479
   },
   {
     "env_config": {
@@ -11695,7 +11695,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11723,7 +11723,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032609096
+    "timestamp": 1774951269768987521
   },
   {
     "env_config": {
@@ -11731,7 +11731,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11762,7 +11762,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032609228
+    "timestamp": 1774951269768988203
   },
   {
     "env_config": {
@@ -11770,7 +11770,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11805,7 +11805,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032609441
+    "timestamp": 1774951269768989004
   },
   {
     "env_config": {
@@ -11813,7 +11813,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11850,7 +11850,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032609635
+    "timestamp": 1774951269768989956
   },
   {
     "env_config": {
@@ -11858,7 +11858,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11880,7 +11880,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032609914
+    "timestamp": 1774951269768991298
   },
   {
     "env_config": {
@@ -11888,7 +11888,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11912,7 +11912,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032610146
+    "timestamp": 1774951269768992300
   },
   {
     "env_config": {
@@ -11920,7 +11920,7 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 1.75,
-        "vehicles_count": 43.75,
+        "vehicles_count": 44,
         "duration": 40,
         "ego_spacing": 2
       },
@@ -11948,7 +11948,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032610368
+    "timestamp": 1774951269768993152
   },
   {
     "env_config": {
@@ -11978,7 +11978,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032610590
+    "timestamp": 1774951269768994204
   },
   {
     "env_config": {
@@ -12010,7 +12010,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032610801
+    "timestamp": 1774951269768995256
   },
   {
     "env_config": {
@@ -12046,7 +12046,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032611018
+    "timestamp": 1774951269768996278
   },
   {
     "env_config": {
@@ -12085,7 +12085,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032611153
+    "timestamp": 1774951269768996969
   },
   {
     "env_config": {
@@ -12128,7 +12128,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032611344
+    "timestamp": 1774951269768997991
   },
   {
     "env_config": {
@@ -12136,329 +12136,6 @@
       "config": {
         "lanes_count": 5,
         "vehicles_density": 2.0,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001032611547
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.0,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001032611879
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.0,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001032612082
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.0,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001032612285
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001032612516
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001032612725
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001032612936
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001032613070
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001032613274
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 2.25,
         "vehicles_count": 50,
         "duration": 40,
         "ego_spacing": 2
@@ -12496,7 +12173,330 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032613675
+    "timestamp": 1774951269768998782
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269768999965
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269769000796
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269769001648
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269769002670
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269769003672
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269769004894
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269769005585
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269769006567
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269769007529
   },
   {
     "env_config": {
@@ -12526,7 +12526,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032613983
+    "timestamp": 1774951269769009112
   },
   {
     "env_config": {
@@ -12558,7 +12558,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032614211
+    "timestamp": 1774951269769009953
   },
   {
     "env_config": {
@@ -12594,7 +12594,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032614433
+    "timestamp": 1774951269769010805
   },
   {
     "env_config": {
@@ -12624,7 +12624,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032614665
+    "timestamp": 1774951269769011687
   },
   {
     "env_config": {
@@ -12656,7 +12656,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032614873
+    "timestamp": 1774951269769012538
   },
   {
     "env_config": {
@@ -12692,7 +12692,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032615116
+    "timestamp": 1774951269769013450
   },
   {
     "env_config": {
@@ -12731,7 +12731,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001032615260
+    "timestamp": 1774951269769014111
   },
   {
     "env_config": {
@@ -12774,7 +12774,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032615453
+    "timestamp": 1774951269769015053
   },
   {
     "env_config": {
@@ -12819,7 +12819,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001032615687
+    "timestamp": 1774951269769015995
   },
   {
     "env_config": {
@@ -12849,7 +12849,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001032615981
+    "timestamp": 1774951269769017317
   },
   {
     "env_config": {
@@ -12881,7 +12881,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001032616284
+    "timestamp": 1774951269769018319
   },
   {
     "env_config": {
@@ -12917,6 +12917,6 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001032616509
+    "timestamp": 1774951269769019381
   }
 ]

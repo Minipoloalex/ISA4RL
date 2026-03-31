@@ -7,6 +7,8 @@ import gymnasium as gym
 from gymnasium import spaces
 import highway_env  # noqa: F401 - needed to register the environments
 import numpy as np
+from pprint import pprint
+from math import ceil
 
 ActionValue = int
 KeyBindings = Dict[str, Tuple[ActionValue, str]]
@@ -173,7 +175,7 @@ def main() -> None:
             "roundabout_lanes": 2,
             "roundabout_radius": 30,
             "vehicles_count": 15,
-            "duration": 15 + 20 / 4,
+            "duration": 20,
         })
     if args.env.startswith("intersection"):
         env_config.update(
@@ -196,15 +198,33 @@ def main() -> None:
             "vehicles_count": 20,
         })
     if args.env == "exit-v0":
+        lanes = 5
+        capacity = 10
+        highway_duration = 40
+        density = 2
+        pos = 700
+        length = 150
+        road_length = pos + length + 500
+        duration = (pos+length) // 25
+        veh = ceil(lanes * capacity * (density / 2) * duration / highway_duration)
+        pprint({
+            "lanes": lanes,
+            "capacity": capacity,
+            "density": density,
+            "vehicles": veh,
+            "exit_position": pos,
+            "exit_length": length,
+            "duration": duration,
+        })
         env_config.update(
             {
-                "lanes_count": 3,
-                "vehicles_count": 10,
-                "vehicles_density": 1,
-                "road_length": 1000,
-                "exit_position": 300,
-                "exit_length": 30,
-                "duration": 10,
+                "lanes_count": lanes,
+                "vehicles_count": veh,
+                "vehicles_density": density,
+                "road_length": road_length,
+                "exit_position": pos,
+                "exit_length": length,
+                "duration": duration,
             }
         )
     if args.env.startswith("two-way"):
@@ -219,9 +239,10 @@ def main() -> None:
         pass
     if args.env == "racetrack-oval-v0":
         env_config.update({
-            # "no_lanes": 5,
             "vehicles_count": 20,
+            "lanes_count": 3,
             "duration": 100,
+            "length": 150,
             "block_lanes": [],
         })
     if args.env == "u-turn-v0":

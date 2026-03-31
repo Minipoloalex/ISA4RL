@@ -4,6 +4,6 @@ ENVS = [
     "merge",
     "racetrack",
     "parking",
-    # "exit",
+    "exit",
     "lane-keeping",
 ]

@@ -26,7 +26,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038527349
+    "timestamp": 1774951269789299616
   },
   {
     "env_config": {
@@ -57,7 +57,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038527975
+    "timestamp": 1774951269789301640
   },
   {
     "env_config": {
@@ -92,7 +92,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038528246
+    "timestamp": 1774951269789302552
   },
   {
     "env_config": {
@@ -130,7 +130,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038528495
+    "timestamp": 1774951269789303243
   },
   {
     "env_config": {
@@ -172,327 +172,13 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038528790
+    "timestamp": 1774951269789304165
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
         "vehicles_count": 0,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001038529090
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 0,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038529470
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 0,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038529739
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 0,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038530004
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038530373
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038530621
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038530875
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038531059
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038531308
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 5,
         "roundabout_lanes": 2,
         "roundabout_radius": 20,
         "duration": 17.0
@@ -530,13 +216,13 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038531528
+    "timestamp": 1774951269789305066
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 5,
+        "vehicles_count": 0,
         "roundabout_lanes": 2,
         "roundabout_radius": 20,
         "duration": 17.0
@@ -559,13 +245,13 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038531847
+    "timestamp": 1774951269789306399
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 5,
+        "vehicles_count": 0,
         "roundabout_lanes": 2,
         "roundabout_radius": 20,
         "duration": 17.0
@@ -590,327 +276,13 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038532094
+    "timestamp": 1774951269789307291
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 5,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038532402
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038532655
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038532915
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038533138
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038533284
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038533513
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001038533745
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038534057
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 20,
-        "duration": 17.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038534339
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
+        "vehicles_count": 0,
         "roundabout_lanes": 2,
         "roundabout_radius": 20,
         "duration": 17.0
@@ -939,7 +311,635 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038534717
+    "timestamp": 1774951269789308343
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789309384
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789310246
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789311418
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789311979
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789312861
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269789313683
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789314895
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789315787
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789316738
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789317660
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789318532
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789319403
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789319934
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789320756
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269789321577
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789322790
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789323742
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789324763
   },
   {
     "env_config": {
@@ -968,7 +968,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038534991
+    "timestamp": 1774951269789325725
   },
   {
     "env_config": {
@@ -999,7 +999,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038535242
+    "timestamp": 1774951269789326577
   },
   {
     "env_config": {
@@ -1034,7 +1034,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038535495
+    "timestamp": 1774951269789327418
   },
   {
     "env_config": {
@@ -1072,7 +1072,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038535674
+    "timestamp": 1774951269789327969
   },
   {
     "env_config": {
@@ -1114,7 +1114,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038535933
+    "timestamp": 1774951269789328761
   },
   {
     "env_config": {
@@ -1158,7 +1158,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038536142
+    "timestamp": 1774951269789329522
   },
   {
     "env_config": {
@@ -1187,7 +1187,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038536510
+    "timestamp": 1774951269789330785
   },
   {
     "env_config": {
@@ -1218,7 +1218,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038536751
+    "timestamp": 1774951269789331666
   },
   {
     "env_config": {
@@ -1253,7 +1253,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038536981
+    "timestamp": 1774951269789332538
   },
   {
     "env_config": {
@@ -1282,7 +1282,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038537218
+    "timestamp": 1774951269789333430
   },
   {
     "env_config": {
@@ -1313,7 +1313,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038537473
+    "timestamp": 1774951269789334271
   },
   {
     "env_config": {
@@ -1348,7 +1348,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038537734
+    "timestamp": 1774951269789335113
   },
   {
     "env_config": {
@@ -1386,7 +1386,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038537894
+    "timestamp": 1774951269789335644
   },
   {
     "env_config": {
@@ -1428,7 +1428,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038538110
+    "timestamp": 1774951269789336455
   },
   {
     "env_config": {
@@ -1472,7 +1472,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038538433
+    "timestamp": 1774951269789337788
   },
   {
     "env_config": {
@@ -1501,7 +1501,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038538758
+    "timestamp": 1774951269789338980
   },
   {
     "env_config": {
@@ -1532,7 +1532,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038539014
+    "timestamp": 1774951269789339812
   },
   {
     "env_config": {
@@ -1567,7 +1567,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038539226
+    "timestamp": 1774951269789340663
   },
   {
     "env_config": {
@@ -1596,7 +1596,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038539457
+    "timestamp": 1774951269789341565
   },
   {
     "env_config": {
@@ -1627,7 +1627,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038539687
+    "timestamp": 1774951269789342407
   },
   {
     "env_config": {
@@ -1662,7 +1662,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038539897
+    "timestamp": 1774951269789343258
   },
   {
     "env_config": {
@@ -1700,7 +1700,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038540034
+    "timestamp": 1774951269789343789
   },
   {
     "env_config": {
@@ -1742,7 +1742,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038540252
+    "timestamp": 1774951269789344601
   },
   {
     "env_config": {
@@ -1786,7 +1786,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038540451
+    "timestamp": 1774951269789345392
   },
   {
     "env_config": {
@@ -1815,7 +1815,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038540762
+    "timestamp": 1774951269789346574
   },
   {
     "env_config": {
@@ -1846,7 +1846,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038541126
+    "timestamp": 1774951269789347606
   },
   {
     "env_config": {
@@ -1881,7 +1881,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038541470
+    "timestamp": 1774951269789348638
   },
   {
     "env_config": {
@@ -1910,7 +1910,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038541737
+    "timestamp": 1774951269789349540
   },
   {
     "env_config": {
@@ -1941,7 +1941,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038541990
+    "timestamp": 1774951269789350382
   },
   {
     "env_config": {
@@ -1976,7 +1976,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038543941
+    "timestamp": 1774951269789351203
   },
   {
     "env_config": {
@@ -2014,7 +2014,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038544138
+    "timestamp": 1774951269789351724
   },
   {
     "env_config": {
@@ -2056,7 +2056,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038544475
+    "timestamp": 1774951269789352526
   },
   {
     "env_config": {
@@ -2100,7 +2100,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038544773
+    "timestamp": 1774951269789353307
   },
   {
     "env_config": {
@@ -2129,7 +2129,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038545130
+    "timestamp": 1774951269789354469
   },
   {
     "env_config": {
@@ -2160,7 +2160,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038545501
+    "timestamp": 1774951269789355311
   },
   {
     "env_config": {
@@ -2195,7 +2195,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038545748
+    "timestamp": 1774951269789356142
   },
   {
     "env_config": {
@@ -2224,7 +2224,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038545991
+    "timestamp": 1774951269789357034
   },
   {
     "env_config": {
@@ -2255,7 +2255,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038546228
+    "timestamp": 1774951269789357856
   },
   {
     "env_config": {
@@ -2290,7 +2290,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038546644
+    "timestamp": 1774951269789358838
   },
   {
     "env_config": {
@@ -2328,7 +2328,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038546803
+    "timestamp": 1774951269789359369
   },
   {
     "env_config": {
@@ -2370,7 +2370,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038547022
+    "timestamp": 1774951269789360160
   },
   {
     "env_config": {
@@ -2414,7 +2414,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038547226
+    "timestamp": 1774951269789360931
   },
   {
     "env_config": {
@@ -2443,7 +2443,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038547517
+    "timestamp": 1774951269789362094
   },
   {
     "env_config": {
@@ -2474,7 +2474,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038547743
+    "timestamp": 1774951269789362925
   },
   {
     "env_config": {
@@ -2509,7 +2509,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038547947
+    "timestamp": 1774951269789363777
   },
   {
     "env_config": {
@@ -2538,7 +2538,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038548197
+    "timestamp": 1774951269789364839
   },
   {
     "env_config": {
@@ -2569,7 +2569,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038548400
+    "timestamp": 1774951269789365670
   },
   {
     "env_config": {
@@ -2604,7 +2604,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038548621
+    "timestamp": 1774951269789366652
   },
   {
     "env_config": {
@@ -2642,7 +2642,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038548766
+    "timestamp": 1774951269789367324
   },
   {
     "env_config": {
@@ -2684,7 +2684,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038548960
+    "timestamp": 1774951269789368265
   },
   {
     "env_config": {
@@ -2728,7 +2728,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038549287
+    "timestamp": 1774951269789369728
   },
   {
     "env_config": {
@@ -2757,7 +2757,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038549581
+    "timestamp": 1774951269789371061
   },
   {
     "env_config": {
@@ -2788,7 +2788,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038549795
+    "timestamp": 1774951269789372042
   },
   {
     "env_config": {
@@ -2823,7 +2823,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038550010
+    "timestamp": 1774951269789373044
   },
   {
     "env_config": {
@@ -2852,7 +2852,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038550228
+    "timestamp": 1774951269789374216
   },
   {
     "env_config": {
@@ -2883,7 +2883,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038550425
+    "timestamp": 1774951269789375208
   },
   {
     "env_config": {
@@ -2918,7 +2918,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038550620
+    "timestamp": 1774951269789376280
   },
   {
     "env_config": {
@@ -2956,7 +2956,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038550772
+    "timestamp": 1774951269789377002
   },
   {
     "env_config": {
@@ -2998,327 +2998,13 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038550996
+    "timestamp": 1774951269789377913
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
         "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001038551185
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038551501
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038551887
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038552110
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038552347
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038552548
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038552748
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038552937
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038553150
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
         "roundabout_lanes": 2,
         "roundabout_radius": 40,
         "duration": 19.0
@@ -3356,13 +3042,13 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038553344
+    "timestamp": 1774951269789378845
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 15,
+        "vehicles_count": 10,
         "roundabout_lanes": 2,
         "roundabout_radius": 40,
         "duration": 19.0
@@ -3385,13 +3071,13 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038553638
+    "timestamp": 1774951269789379997
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 15,
+        "vehicles_count": 10,
         "roundabout_lanes": 2,
         "roundabout_radius": 40,
         "duration": 19.0
@@ -3416,327 +3102,13 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038553852
+    "timestamp": 1774951269789380849
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038554052
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038554272
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038554484
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038554680
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038554814
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038555015
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001038555207
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038555491
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 2,
-        "roundabout_radius": 40,
-        "duration": 19.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038555732
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
+        "vehicles_count": 10,
         "roundabout_lanes": 2,
         "roundabout_radius": 40,
         "duration": 19.0
@@ -3765,7 +3137,635 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038555956
+    "timestamp": 1774951269789381721
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789382672
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789383554
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789384626
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789385428
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789386269
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269789387041
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789388193
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789389084
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789389926
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789390788
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789391639
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789392461
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789393002
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789393823
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269789394625
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789395787
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789396639
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789397490
   },
   {
     "env_config": {
@@ -3794,7 +3794,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038556173
+    "timestamp": 1774951269789398362
   },
   {
     "env_config": {
@@ -3825,7 +3825,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038556438
+    "timestamp": 1774951269789399274
   },
   {
     "env_config": {
@@ -3860,7 +3860,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038556650
+    "timestamp": 1774951269789400105
   },
   {
     "env_config": {
@@ -3898,7 +3898,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038556780
+    "timestamp": 1774951269789400626
   },
   {
     "env_config": {
@@ -3940,7 +3940,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038556968
+    "timestamp": 1774951269789401418
   },
   {
     "env_config": {
@@ -3984,7 +3984,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038557160
+    "timestamp": 1774951269789402189
   },
   {
     "env_config": {
@@ -4013,7 +4013,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038557448
+    "timestamp": 1774951269789403371
   },
   {
     "env_config": {
@@ -4044,7 +4044,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038557659
+    "timestamp": 1774951269789404213
   },
   {
     "env_config": {
@@ -4079,7 +4079,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038557878
+    "timestamp": 1774951269789405055
   },
   {
     "env_config": {
@@ -4108,7 +4108,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038558095
+    "timestamp": 1774951269789405936
   },
   {
     "env_config": {
@@ -4139,7 +4139,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038558309
+    "timestamp": 1774951269789406758
   },
   {
     "env_config": {
@@ -4174,7 +4174,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038558527
+    "timestamp": 1774951269789407589
   },
   {
     "env_config": {
@@ -4212,7 +4212,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038558672
+    "timestamp": 1774951269789408110
   },
   {
     "env_config": {
@@ -4254,7 +4254,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038558860
+    "timestamp": 1774951269789408902
   },
   {
     "env_config": {
@@ -4298,7 +4298,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038559049
+    "timestamp": 1774951269789409673
   },
   {
     "env_config": {
@@ -4327,7 +4327,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038559346
+    "timestamp": 1774951269789410825
   },
   {
     "env_config": {
@@ -4358,7 +4358,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038559542
+    "timestamp": 1774951269789411667
   },
   {
     "env_config": {
@@ -4393,7 +4393,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038559763
+    "timestamp": 1774951269789412519
   },
   {
     "env_config": {
@@ -4422,7 +4422,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038559984
+    "timestamp": 1774951269789413390
   },
   {
     "env_config": {
@@ -4453,7 +4453,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038560187
+    "timestamp": 1774951269789414222
   },
   {
     "env_config": {
@@ -4488,7 +4488,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038560395
+    "timestamp": 1774951269789415053
   },
   {
     "env_config": {
@@ -4526,7 +4526,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038560565
+    "timestamp": 1774951269789415614
   },
   {
     "env_config": {
@@ -4568,327 +4568,13 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038560772
+    "timestamp": 1774951269789416406
   },
   {
     "env_config": {
       "env_id": "roundabout-generic-v0",
       "config": {
         "vehicles_count": 10,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "CnnPolicy",
-      "buffer_size": 100000,
-      "learning_rate": 0.0001,
-      "batch_size": 32,
-      "learning_starts": 100000,
-      "target_update_interval": 1000,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01,
-      "optimize_memory_usage": false
-    },
-    "timestamp": 1774887001038560990
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038561281
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038561494
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 10,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "TimeToCollision",
-      "horizon": 10
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038561722
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
-    },
-    "timestamp": 1774887001038561944
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "n_envs": 16,
-      "policy": "MlpPolicy",
-      "n_steps": 1024,
-      "batch_size": 64,
-      "gae_lambda": 0.98,
-      "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038562148
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "Kinematics",
-      "vehicles_count": 15
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
-      "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774887001038562348
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038562482
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 20,
-        "duration": 18.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "policy": "CnnPolicy",
-      "n_envs": 8,
-      "n_steps": 128,
-      "n_epochs": 4,
-      "batch_size": 256,
-      "learning_rate": "lin_2.5e-4",
-      "clip_range": "lin_0.1",
-      "vf_coef": 0.5,
-      "ent_coef": 0.01
-    },
-    "timestamp": 1774887001038562668
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 15,
         "roundabout_lanes": 3,
         "roundabout_radius": 20,
         "duration": 18.0
@@ -4926,7 +4612,321 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038562866
+    "timestamp": 1774951269789417177
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789418350
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789419191
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789420043
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "n_envs": 8,
+      "policy": "MlpPolicy",
+      "gamma": 0.995,
+      "n_steps": 5,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1774951269789420914
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "n_envs": 16,
+      "policy": "MlpPolicy",
+      "n_steps": 1024,
+      "batch_size": 64,
+      "gae_lambda": 0.98,
+      "gamma": 0.999,
+      "n_epochs": 4,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789421796
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "MlpPolicy",
+      "learning_rate": 0.00063,
+      "batch_size": 128,
+      "buffer_size": 50000,
+      "learning_starts": 0,
+      "gamma": 0.99,
+      "target_update_interval": 250,
+      "train_freq": 4,
+      "gradient_steps": -1,
+      "exploration_fraction": 0.12,
+      "exploration_final_eps": 0.1,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1774951269789422658
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789423199
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "policy": "CnnPolicy",
+      "n_envs": 8,
+      "n_steps": 128,
+      "n_epochs": 4,
+      "batch_size": 256,
+      "learning_rate": "lin_2.5e-4",
+      "clip_range": "lin_0.1",
+      "vf_coef": 0.5,
+      "ent_coef": 0.01
+    },
+    "timestamp": 1774951269789423980
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "policy": "CnnPolicy",
+      "buffer_size": 100000,
+      "learning_rate": 0.0001,
+      "batch_size": 32,
+      "learning_starts": 100000,
+      "target_update_interval": 1000,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01,
+      "optimize_memory_usage": false
+    },
+    "timestamp": 1774951269789424752
   },
   {
     "env_config": {
@@ -4955,7 +4955,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038563163
+    "timestamp": 1774951269789425914
   },
   {
     "env_config": {
@@ -4986,7 +4986,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038563421
+    "timestamp": 1774951269789426886
   },
   {
     "env_config": {
@@ -5021,7 +5021,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038563654
+    "timestamp": 1774951269789427747
   },
   {
     "env_config": {
@@ -5050,7 +5050,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038563869
+    "timestamp": 1774951269789428609
   },
   {
     "env_config": {
@@ -5081,7 +5081,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038564074
+    "timestamp": 1774951269789429440
   },
   {
     "env_config": {
@@ -5116,7 +5116,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038564297
+    "timestamp": 1774951269789430292
   },
   {
     "env_config": {
@@ -5154,7 +5154,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038564435
+    "timestamp": 1774951269789430813
   },
   {
     "env_config": {
@@ -5196,7 +5196,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038564647
+    "timestamp": 1774951269789431594
   },
   {
     "env_config": {
@@ -5240,7 +5240,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038564898
+    "timestamp": 1774951269789432436
   },
   {
     "env_config": {
@@ -5269,7 +5269,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038565193
+    "timestamp": 1774951269789433578
   },
   {
     "env_config": {
@@ -5300,7 +5300,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038565414
+    "timestamp": 1774951269789434430
   },
   {
     "env_config": {
@@ -5335,7 +5335,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038565649
+    "timestamp": 1774951269789435271
   },
   {
     "env_config": {
@@ -5364,7 +5364,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038565873
+    "timestamp": 1774951269789436143
   },
   {
     "env_config": {
@@ -5395,7 +5395,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038566115
+    "timestamp": 1774951269789436965
   },
   {
     "env_config": {
@@ -5430,7 +5430,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038566338
+    "timestamp": 1774951269789437796
   },
   {
     "env_config": {
@@ -5468,7 +5468,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038566476
+    "timestamp": 1774951269789438327
   },
   {
     "env_config": {
@@ -5510,7 +5510,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038566670
+    "timestamp": 1774951269789439109
   },
   {
     "env_config": {
@@ -5554,7 +5554,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038566859
+    "timestamp": 1774951269789439890
   },
   {
     "env_config": {
@@ -5583,7 +5583,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038567157
+    "timestamp": 1774951269789441052
   },
   {
     "env_config": {
@@ -5614,7 +5614,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038567376
+    "timestamp": 1774951269789441894
   },
   {
     "env_config": {
@@ -5649,7 +5649,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038567578
+    "timestamp": 1774951269789442735
   },
   {
     "env_config": {
@@ -5678,7 +5678,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038567794
+    "timestamp": 1774951269789443607
   },
   {
     "env_config": {
@@ -5709,7 +5709,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038568001
+    "timestamp": 1774951269789444439
   },
   {
     "env_config": {
@@ -5744,7 +5744,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038568212
+    "timestamp": 1774951269789445270
   },
   {
     "env_config": {
@@ -5782,7 +5782,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038568356
+    "timestamp": 1774951269789445791
   },
   {
     "env_config": {
@@ -5824,7 +5824,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038568556
+    "timestamp": 1774951269789446583
   },
   {
     "env_config": {
@@ -5868,7 +5868,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038568746
+    "timestamp": 1774951269789447354
   },
   {
     "env_config": {
@@ -5897,7 +5897,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038569053
+    "timestamp": 1774951269789448516
   },
   {
     "env_config": {
@@ -5928,7 +5928,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038569273
+    "timestamp": 1774951269789449368
   },
   {
     "env_config": {
@@ -5963,7 +5963,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038569476
+    "timestamp": 1774951269789450209
   },
   {
     "env_config": {
@@ -5992,7 +5992,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038569716
+    "timestamp": 1774951269789451071
   },
   {
     "env_config": {
@@ -6023,7 +6023,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038569930
+    "timestamp": 1774951269789451903
   },
   {
     "env_config": {
@@ -6058,7 +6058,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038570186
+    "timestamp": 1774951269789452774
   },
   {
     "env_config": {
@@ -6096,7 +6096,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038570326
+    "timestamp": 1774951269789453285
   },
   {
     "env_config": {
@@ -6138,7 +6138,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038570519
+    "timestamp": 1774951269789454057
   },
   {
     "env_config": {
@@ -6182,7 +6182,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038570710
+    "timestamp": 1774951269789454828
   },
   {
     "env_config": {
@@ -6211,7 +6211,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038571014
+    "timestamp": 1774951269789455990
   },
   {
     "env_config": {
@@ -6242,7 +6242,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038571217
+    "timestamp": 1774951269789456832
   },
   {
     "env_config": {
@@ -6277,7 +6277,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038571418
+    "timestamp": 1774951269789457674
   },
   {
     "env_config": {
@@ -6306,7 +6306,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038571648
+    "timestamp": 1774951269789458535
   },
   {
     "env_config": {
@@ -6337,7 +6337,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038571850
+    "timestamp": 1774951269789459357
   },
   {
     "env_config": {
@@ -6372,7 +6372,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038572049
+    "timestamp": 1774951269789460198
   },
   {
     "env_config": {
@@ -6410,7 +6410,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038572182
+    "timestamp": 1774951269789460719
   },
   {
     "env_config": {
@@ -6452,7 +6452,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038572388
+    "timestamp": 1774951269789461491
   },
   {
     "env_config": {
@@ -6496,7 +6496,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038572579
+    "timestamp": 1774951269789462272
   },
   {
     "env_config": {
@@ -6525,7 +6525,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038572858
+    "timestamp": 1774951269789463434
   },
   {
     "env_config": {
@@ -6556,7 +6556,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038573101
+    "timestamp": 1774951269789464276
   },
   {
     "env_config": {
@@ -6591,7 +6591,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038573321
+    "timestamp": 1774951269789465118
   },
   {
     "env_config": {
@@ -6620,7 +6620,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038573546
+    "timestamp": 1774951269789465979
   },
   {
     "env_config": {
@@ -6651,7 +6651,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038573759
+    "timestamp": 1774951269789466801
   },
   {
     "env_config": {
@@ -6686,7 +6686,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038573975
+    "timestamp": 1774951269789467632
   },
   {
     "env_config": {
@@ -6724,7 +6724,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038574103
+    "timestamp": 1774951269789468163
   },
   {
     "env_config": {
@@ -6766,7 +6766,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038574293
+    "timestamp": 1774951269789468955
   },
   {
     "env_config": {
@@ -6810,7 +6810,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038574484
+    "timestamp": 1774951269789469716
   },
   {
     "env_config": {
@@ -6839,7 +6839,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038574776
+    "timestamp": 1774951269789470878
   },
   {
     "env_config": {
@@ -6870,7 +6870,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038575004
+    "timestamp": 1774951269789471720
   },
   {
     "env_config": {
@@ -6905,7 +6905,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038575218
+    "timestamp": 1774951269789472562
   },
   {
     "env_config": {
@@ -6934,7 +6934,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038575438
+    "timestamp": 1774951269789473423
   },
   {
     "env_config": {
@@ -6965,7 +6965,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038575664
+    "timestamp": 1774951269789474255
   },
   {
     "env_config": {
@@ -7000,7 +7000,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038575875
+    "timestamp": 1774951269789475086
   },
   {
     "env_config": {
@@ -7038,7 +7038,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038576040
+    "timestamp": 1774951269789475637
   },
   {
     "env_config": {
@@ -7080,7 +7080,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038576233
+    "timestamp": 1774951269789476419
   },
   {
     "env_config": {
@@ -7124,7 +7124,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038576442
+    "timestamp": 1774951269789477200
   },
   {
     "env_config": {
@@ -7153,7 +7153,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038576725
+    "timestamp": 1774951269789478362
   },
   {
     "env_config": {
@@ -7184,7 +7184,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038576943
+    "timestamp": 1774951269789479204
   },
   {
     "env_config": {
@@ -7219,7 +7219,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038577151
+    "timestamp": 1774951269789480056
   },
   {
     "env_config": {
@@ -7248,7 +7248,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038577374
+    "timestamp": 1774951269789480917
   },
   {
     "env_config": {
@@ -7279,7 +7279,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038577574
+    "timestamp": 1774951269789481739
   },
   {
     "env_config": {
@@ -7314,7 +7314,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038577802
+    "timestamp": 1774951269789482600
   },
   {
     "env_config": {
@@ -7352,7 +7352,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038577936
+    "timestamp": 1774951269789483131
   },
   {
     "env_config": {
@@ -7394,7 +7394,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038578123
+    "timestamp": 1774951269789483903
   },
   {
     "env_config": {
@@ -7438,7 +7438,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038578328
+    "timestamp": 1774951269789484674
   },
   {
     "env_config": {
@@ -7467,7 +7467,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038578608
+    "timestamp": 1774951269789485837
   },
   {
     "env_config": {
@@ -7498,7 +7498,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038578833
+    "timestamp": 1774951269789486688
   },
   {
     "env_config": {
@@ -7533,7 +7533,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038579152
+    "timestamp": 1774951269789487530
   },
   {
     "env_config": {
@@ -7562,7 +7562,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038579369
+    "timestamp": 1774951269789488401
   },
   {
     "env_config": {
@@ -7593,7 +7593,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038579585
+    "timestamp": 1774951269789489223
   },
   {
     "env_config": {
@@ -7628,7 +7628,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038579783
+    "timestamp": 1774951269789490054
   },
   {
     "env_config": {
@@ -7666,7 +7666,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038579913
+    "timestamp": 1774951269789490585
   },
   {
     "env_config": {
@@ -7708,7 +7708,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038580120
+    "timestamp": 1774951269789491367
   },
   {
     "env_config": {
@@ -7752,7 +7752,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038580321
+    "timestamp": 1774951269789492128
   },
   {
     "env_config": {
@@ -7781,7 +7781,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038580602
+    "timestamp": 1774951269789493301
   },
   {
     "env_config": {
@@ -7812,7 +7812,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038580827
+    "timestamp": 1774951269789494142
   },
   {
     "env_config": {
@@ -7847,7 +7847,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038581030
+    "timestamp": 1774951269789495054
   },
   {
     "env_config": {
@@ -7876,7 +7876,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038581252
+    "timestamp": 1774951269789495936
   },
   {
     "env_config": {
@@ -7907,7 +7907,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038581469
+    "timestamp": 1774951269789496777
   },
   {
     "env_config": {
@@ -7942,45 +7942,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038581667
-  },
-  {
-    "env_config": {
-      "env_id": "roundabout-generic-v0",
-      "config": {
-        "vehicles_count": 20,
-        "roundabout_lanes": 3,
-        "roundabout_radius": 40,
-        "duration": 20.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001038581797
+    "timestamp": 1774951269789497629
   },
   {
     "env_config": {
@@ -8011,6 +7973,44 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269789498160
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "policy": "CnnPolicy",
       "n_envs": 8,
@@ -8022,7 +8022,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038581982
+    "timestamp": 1774951269789498951
   },
   {
     "env_config": {
@@ -8066,7 +8066,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038582190
+    "timestamp": 1774951269789499923
   },
   {
     "env_config": {
@@ -8095,7 +8095,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038582484
+    "timestamp": 1774951269789501516
   },
   {
     "env_config": {
@@ -8126,7 +8126,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038582729
+    "timestamp": 1774951269789502388
   },
   {
     "env_config": {
@@ -8161,7 +8161,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038582967
+    "timestamp": 1774951269789503460
   },
   {
     "env_config": {
@@ -8190,7 +8190,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038583199
+    "timestamp": 1774951269789504532
   },
   {
     "env_config": {
@@ -8221,7 +8221,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038583407
+    "timestamp": 1774951269789505504
   },
   {
     "env_config": {
@@ -8256,7 +8256,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038583616
+    "timestamp": 1774951269789506325
   },
   {
     "env_config": {
@@ -8294,7 +8294,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038583748
+    "timestamp": 1774951269789506846
   },
   {
     "env_config": {
@@ -8336,7 +8336,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038583935
+    "timestamp": 1774951269789507618
   },
   {
     "env_config": {
@@ -8380,7 +8380,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038584144
+    "timestamp": 1774951269789508389
   },
   {
     "env_config": {
@@ -8409,7 +8409,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038584440
+    "timestamp": 1774951269789509551
   },
   {
     "env_config": {
@@ -8440,7 +8440,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038584660
+    "timestamp": 1774951269789510383
   },
   {
     "env_config": {
@@ -8475,7 +8475,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038584861
+    "timestamp": 1774951269789511224
   },
   {
     "env_config": {
@@ -8504,7 +8504,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038585081
+    "timestamp": 1774951269789512076
   },
   {
     "env_config": {
@@ -8535,7 +8535,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038585307
+    "timestamp": 1774951269789512907
   },
   {
     "env_config": {
@@ -8570,7 +8570,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038585506
+    "timestamp": 1774951269789513739
   },
   {
     "env_config": {
@@ -8608,7 +8608,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038585636
+    "timestamp": 1774951269789514270
   },
   {
     "env_config": {
@@ -8650,7 +8650,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038585844
+    "timestamp": 1774951269789515052
   },
   {
     "env_config": {
@@ -8694,7 +8694,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038586030
+    "timestamp": 1774951269789515833
   },
   {
     "env_config": {
@@ -8723,7 +8723,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038586308
+    "timestamp": 1774951269789516995
   },
   {
     "env_config": {
@@ -8754,7 +8754,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038586515
+    "timestamp": 1774951269789517837
   },
   {
     "env_config": {
@@ -8789,7 +8789,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038586714
+    "timestamp": 1774951269789518668
   },
   {
     "env_config": {
@@ -8818,7 +8818,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038588020
+    "timestamp": 1774951269789519530
   },
   {
     "env_config": {
@@ -8849,7 +8849,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038588284
+    "timestamp": 1774951269789520362
   },
   {
     "env_config": {
@@ -8884,7 +8884,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038588521
+    "timestamp": 1774951269789521183
   },
   {
     "env_config": {
@@ -8922,7 +8922,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038588656
+    "timestamp": 1774951269789521714
   },
   {
     "env_config": {
@@ -8964,7 +8964,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038588850
+    "timestamp": 1774951269789522506
   },
   {
     "env_config": {
@@ -9008,7 +9008,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038589043
+    "timestamp": 1774951269789523267
   },
   {
     "env_config": {
@@ -9037,7 +9037,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038589330
+    "timestamp": 1774951269789524439
   },
   {
     "env_config": {
@@ -9068,7 +9068,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038589545
+    "timestamp": 1774951269789525271
   },
   {
     "env_config": {
@@ -9103,7 +9103,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038589745
+    "timestamp": 1774951269789526122
   },
   {
     "env_config": {
@@ -9132,7 +9132,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038589965
+    "timestamp": 1774951269789526984
   },
   {
     "env_config": {
@@ -9163,7 +9163,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038590203
+    "timestamp": 1774951269789527816
   },
   {
     "env_config": {
@@ -9198,7 +9198,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038590406
+    "timestamp": 1774951269789528637
   },
   {
     "env_config": {
@@ -9236,7 +9236,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038590538
+    "timestamp": 1774951269789529158
   },
   {
     "env_config": {
@@ -9278,7 +9278,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038590745
+    "timestamp": 1774951269789530260
   },
   {
     "env_config": {
@@ -9322,7 +9322,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038590932
+    "timestamp": 1774951269789531022
   },
   {
     "env_config": {
@@ -9351,7 +9351,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038591226
+    "timestamp": 1774951269789532354
   },
   {
     "env_config": {
@@ -9382,7 +9382,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038591444
+    "timestamp": 1774951269789533206
   },
   {
     "env_config": {
@@ -9417,7 +9417,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038591677
+    "timestamp": 1774951269789534097
   },
   {
     "env_config": {
@@ -9446,7 +9446,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038591896
+    "timestamp": 1774951269789534959
   },
   {
     "env_config": {
@@ -9477,7 +9477,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038592111
+    "timestamp": 1774951269789535791
   },
   {
     "env_config": {
@@ -9512,7 +9512,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038592321
+    "timestamp": 1774951269789536622
   },
   {
     "env_config": {
@@ -9550,7 +9550,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038592451
+    "timestamp": 1774951269789537143
   },
   {
     "env_config": {
@@ -9592,7 +9592,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038592644
+    "timestamp": 1774951269789537915
   },
   {
     "env_config": {
@@ -9636,7 +9636,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038592830
+    "timestamp": 1774951269789538686
   },
   {
     "env_config": {
@@ -9665,7 +9665,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038593110
+    "timestamp": 1774951269789539858
   },
   {
     "env_config": {
@@ -9696,7 +9696,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038593341
+    "timestamp": 1774951269789540700
   },
   {
     "env_config": {
@@ -9731,7 +9731,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038593543
+    "timestamp": 1774951269789541541
   },
   {
     "env_config": {
@@ -9760,7 +9760,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038593759
+    "timestamp": 1774951269789542413
   },
   {
     "env_config": {
@@ -9791,7 +9791,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038593970
+    "timestamp": 1774951269789543465
   },
   {
     "env_config": {
@@ -9826,7 +9826,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038594178
+    "timestamp": 1774951269789544447
   },
   {
     "env_config": {
@@ -9864,7 +9864,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038594310
+    "timestamp": 1774951269789544968
   },
   {
     "env_config": {
@@ -9906,7 +9906,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038594511
+    "timestamp": 1774951269789545739
   },
   {
     "env_config": {
@@ -9950,7 +9950,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038594699
+    "timestamp": 1774951269789546511
   },
   {
     "env_config": {
@@ -9979,7 +9979,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038594980
+    "timestamp": 1774951269789547673
   },
   {
     "env_config": {
@@ -10010,7 +10010,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038595187
+    "timestamp": 1774951269789548504
   },
   {
     "env_config": {
@@ -10045,7 +10045,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038595388
+    "timestamp": 1774951269789549346
   },
   {
     "env_config": {
@@ -10074,7 +10074,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038595605
+    "timestamp": 1774951269789550218
   },
   {
     "env_config": {
@@ -10105,7 +10105,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038595824
+    "timestamp": 1774951269789551039
   },
   {
     "env_config": {
@@ -10140,7 +10140,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038596041
+    "timestamp": 1774951269789551881
   },
   {
     "env_config": {
@@ -10178,7 +10178,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038596170
+    "timestamp": 1774951269789552582
   },
   {
     "env_config": {
@@ -10220,7 +10220,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038596360
+    "timestamp": 1774951269789553354
   },
   {
     "env_config": {
@@ -10264,7 +10264,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038596572
+    "timestamp": 1774951269789554125
   },
   {
     "env_config": {
@@ -10293,7 +10293,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038596857
+    "timestamp": 1774951269789555277
   },
   {
     "env_config": {
@@ -10324,7 +10324,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038597066
+    "timestamp": 1774951269789556119
   },
   {
     "env_config": {
@@ -10359,7 +10359,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038597281
+    "timestamp": 1774951269789556970
   },
   {
     "env_config": {
@@ -10388,7 +10388,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038597494
+    "timestamp": 1774951269789557842
   },
   {
     "env_config": {
@@ -10419,7 +10419,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038597713
+    "timestamp": 1774951269789558674
   },
   {
     "env_config": {
@@ -10454,7 +10454,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038597911
+    "timestamp": 1774951269789559686
   },
   {
     "env_config": {
@@ -10492,7 +10492,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038598041
+    "timestamp": 1774951269789560217
   },
   {
     "env_config": {
@@ -10534,7 +10534,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038598246
+    "timestamp": 1774951269789560988
   },
   {
     "env_config": {
@@ -10578,7 +10578,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038598434
+    "timestamp": 1774951269789561759
   },
   {
     "env_config": {
@@ -10607,7 +10607,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038598730
+    "timestamp": 1774951269789562922
   },
   {
     "env_config": {
@@ -10638,7 +10638,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038598944
+    "timestamp": 1774951269789563763
   },
   {
     "env_config": {
@@ -10673,7 +10673,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038599145
+    "timestamp": 1774951269789564615
   },
   {
     "env_config": {
@@ -10702,7 +10702,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038599369
+    "timestamp": 1774951269789565476
   },
   {
     "env_config": {
@@ -10733,7 +10733,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038599580
+    "timestamp": 1774951269789566328
   },
   {
     "env_config": {
@@ -10768,7 +10768,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038599779
+    "timestamp": 1774951269789567170
   },
   {
     "env_config": {
@@ -10806,7 +10806,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038599957
+    "timestamp": 1774951269789567701
   },
   {
     "env_config": {
@@ -10848,7 +10848,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038600150
+    "timestamp": 1774951269789568482
   },
   {
     "env_config": {
@@ -10892,7 +10892,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038600340
+    "timestamp": 1774951269789569244
   },
   {
     "env_config": {
@@ -10921,7 +10921,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038600629
+    "timestamp": 1774951269789570456
   },
   {
     "env_config": {
@@ -10952,7 +10952,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038600866
+    "timestamp": 1774951269789571297
   },
   {
     "env_config": {
@@ -10987,7 +10987,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038601067
+    "timestamp": 1774951269789572139
   },
   {
     "env_config": {
@@ -11016,7 +11016,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038601307
+    "timestamp": 1774951269789573011
   },
   {
     "env_config": {
@@ -11047,7 +11047,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038601612
+    "timestamp": 1774951269789573992
   },
   {
     "env_config": {
@@ -11082,7 +11082,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038601819
+    "timestamp": 1774951269789574974
   },
   {
     "env_config": {
@@ -11120,7 +11120,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038601950
+    "timestamp": 1774951269789575505
   },
   {
     "env_config": {
@@ -11162,7 +11162,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038602144
+    "timestamp": 1774951269789576427
   },
   {
     "env_config": {
@@ -11206,7 +11206,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038602340
+    "timestamp": 1774951269789577198
   },
   {
     "env_config": {
@@ -11235,7 +11235,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038602620
+    "timestamp": 1774951269789578371
   },
   {
     "env_config": {
@@ -11266,7 +11266,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038602817
+    "timestamp": 1774951269789579232
   },
   {
     "env_config": {
@@ -11301,7 +11301,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038603027
+    "timestamp": 1774951269789580074
   },
   {
     "env_config": {
@@ -11330,7 +11330,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038603239
+    "timestamp": 1774951269789580956
   },
   {
     "env_config": {
@@ -11361,7 +11361,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038603457
+    "timestamp": 1774951269789581777
   },
   {
     "env_config": {
@@ -11396,7 +11396,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038603654
+    "timestamp": 1774951269789582619
   },
   {
     "env_config": {
@@ -11434,7 +11434,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038603782
+    "timestamp": 1774951269789583150
   },
   {
     "env_config": {
@@ -11476,7 +11476,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038603984
+    "timestamp": 1774951269789584061
   },
   {
     "env_config": {
@@ -11520,7 +11520,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038604172
+    "timestamp": 1774951269789584823
   },
   {
     "env_config": {
@@ -11549,7 +11549,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038604451
+    "timestamp": 1774951269789586005
   },
   {
     "env_config": {
@@ -11580,7 +11580,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038604667
+    "timestamp": 1774951269789586847
   },
   {
     "env_config": {
@@ -11615,7 +11615,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038604864
+    "timestamp": 1774951269789587688
   },
   {
     "env_config": {
@@ -11644,7 +11644,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038605083
+    "timestamp": 1774951269789588560
   },
   {
     "env_config": {
@@ -11675,7 +11675,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038605288
+    "timestamp": 1774951269789589381
   },
   {
     "env_config": {
@@ -11710,7 +11710,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038605506
+    "timestamp": 1774951269789590213
   },
   {
     "env_config": {
@@ -11748,7 +11748,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038605634
+    "timestamp": 1774951269789590744
   },
   {
     "env_config": {
@@ -11790,7 +11790,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038605820
+    "timestamp": 1774951269789591566
   },
   {
     "env_config": {
@@ -11834,7 +11834,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038606015
+    "timestamp": 1774951269789592377
   },
   {
     "env_config": {
@@ -11863,7 +11863,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038606297
+    "timestamp": 1774951269789593569
   },
   {
     "env_config": {
@@ -11894,7 +11894,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038606511
+    "timestamp": 1774951269789594411
   },
   {
     "env_config": {
@@ -11929,7 +11929,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038606743
+    "timestamp": 1774951269789595262
   },
   {
     "env_config": {
@@ -11958,7 +11958,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038607016
+    "timestamp": 1774951269789596124
   },
   {
     "env_config": {
@@ -11989,7 +11989,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038607233
+    "timestamp": 1774951269789596946
   },
   {
     "env_config": {
@@ -12024,7 +12024,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038607444
+    "timestamp": 1774951269789599891
   },
   {
     "env_config": {
@@ -12062,7 +12062,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038607611
+    "timestamp": 1774951269789600452
   },
   {
     "env_config": {
@@ -12104,7 +12104,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038607832
+    "timestamp": 1774951269789601214
   },
   {
     "env_config": {
@@ -12148,7 +12148,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038608023
+    "timestamp": 1774951269789601985
   },
   {
     "env_config": {
@@ -12177,7 +12177,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038608334
+    "timestamp": 1774951269789603167
   },
   {
     "env_config": {
@@ -12208,7 +12208,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038608549
+    "timestamp": 1774951269789603999
   },
   {
     "env_config": {
@@ -12243,7 +12243,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038608749
+    "timestamp": 1774951269789604840
   },
   {
     "env_config": {
@@ -12272,7 +12272,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038608990
+    "timestamp": 1774951269789605712
   },
   {
     "env_config": {
@@ -12303,7 +12303,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038609200
+    "timestamp": 1774951269789606534
   },
   {
     "env_config": {
@@ -12338,7 +12338,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038609462
+    "timestamp": 1774951269789607445
   },
   {
     "env_config": {
@@ -12376,7 +12376,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038609613
+    "timestamp": 1774951269789607976
   },
   {
     "env_config": {
@@ -12418,7 +12418,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038609810
+    "timestamp": 1774951269789608758
   },
   {
     "env_config": {
@@ -12462,7 +12462,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038609998
+    "timestamp": 1774951269789609559
   },
   {
     "env_config": {
@@ -12491,7 +12491,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038610312
+    "timestamp": 1774951269789611353
   },
   {
     "env_config": {
@@ -12522,7 +12522,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038610524
+    "timestamp": 1774951269789612204
   },
   {
     "env_config": {
@@ -12557,7 +12557,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038610727
+    "timestamp": 1774951269789613246
   },
   {
     "env_config": {
@@ -12586,7 +12586,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038610962
+    "timestamp": 1774951269789614128
   },
   {
     "env_config": {
@@ -12617,7 +12617,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038611196
+    "timestamp": 1774951269789614960
   },
   {
     "env_config": {
@@ -12652,7 +12652,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038611418
+    "timestamp": 1774951269789615801
   },
   {
     "env_config": {
@@ -12690,7 +12690,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001038611550
+    "timestamp": 1774951269789616312
   },
   {
     "env_config": {
@@ -12732,7 +12732,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038611738
+    "timestamp": 1774951269789617094
   },
   {
     "env_config": {
@@ -12776,7 +12776,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001038611944
+    "timestamp": 1774951269789617865
   },
   {
     "env_config": {
@@ -12805,7 +12805,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001038612221
+    "timestamp": 1774951269789619057
   },
   {
     "env_config": {
@@ -12836,7 +12836,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001038612424
+    "timestamp": 1774951269789619909
   },
   {
     "env_config": {
@@ -12871,6 +12871,6 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001038612638
+    "timestamp": 1774951269789620750
   }
 ]

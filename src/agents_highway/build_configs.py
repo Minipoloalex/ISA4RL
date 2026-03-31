@@ -9,6 +9,8 @@ from pprint import pprint
 import time
 from copy import deepcopy
 import logging
+from math import ceil
+
 logger = logging.getLogger(__name__)
 
 from common.config_utils import ENVS, CONFIG
@@ -54,7 +56,7 @@ def build_highway_configs() -> List[CONFIG]:
         lanes_count: 2, vehicles_count: 5, vehicles_density: 0.5, duration: 40 (decent)
         """
         # High densities make the ego not be able to traverse everything, so we can upper bound the vehicle count
-        veh_cnt = min(MAX_VEHICLES_COUNT, lane_cnt * LANE_CAPACITY * (density / 2))
+        veh_cnt = min(MAX_VEHICLES_COUNT, ceil(lane_cnt * LANE_CAPACITY * (density / 2)))
         assert(density > 0 or veh_cnt == 0)
         config["config"].update({
             "lanes_count": lane_cnt,
@@ -115,22 +117,37 @@ def build_two_way_configs() -> List[CONFIG]:
     ]
 
 def build_exit_configs() -> List[CONFIG]:
+    # Similar idea to highway, with additional parameters
+    EXIT_POSITIONS = np.linspace(300, 700, 3, dtype=int)
+    EXIT_LENGTHS = np.linspace(50, 150, 3, dtype=int)
+
+    LANE_COUNTS = np.linspace(2, 5, 4, dtype=int)
+    LANE_CAPACITY = 10 # capacity of each lane in the fixed duration
+    VEHICLE_DENSITIES = list(np.linspace(0.5, 2, 4, dtype=float))
+
+    DURATION_HIGHWAY = 40
     configs = []
-    ROAD_LENGTH = 1000
-    EXIT_POSITIONS = np.linspace(300, 800, 6, dtype=int)
-    EXIT_LENGTHS = np.linspace(20, 200, 5, dtype=int)
-    for (pos, length) in itertools.product(EXIT_POSITIONS, EXIT_LENGTHS):
+    for (exit_pos, exit_length, lane_cnt, veh_density) in itertools.product(
+        EXIT_POSITIONS, EXIT_LENGTHS, LANE_COUNTS, VEHICLE_DENSITIES,
+    ):
         config = deepcopy(EXIT_FIXED_CONFIGS)
-        # duration probably should be a function of exit position and exit length
-        # default duration was 18 with exit_position = 400
-        # also need to take into account that larger positions
-        # will have more vehicles for the ego to handle, so it could take more time to get to the exit
-        duration = length // 30
+        exit_sz = exit_pos + exit_length
+        road_length = exit_sz + 500
+
+        # Match example default config of (400 + 100) / 25 = 20 close to 18
+        # Note how speeds are [18, 24, 30] in exit-v0
+        duration = exit_sz // 25    # range of values: [14, 34]
+
+        # Matches highway formula and takes into account duration to avoid unnecessary vehicles
+        veh_cnt = ceil(lane_cnt * LANE_CAPACITY * (veh_density / 2) * duration / DURATION_HIGHWAY)  # max value: 43
+        assert(veh_density > 0 or veh_cnt == 0)
         config["config"].update({
-            "exit_position": pos,
-            "exit_length": length,
-            "road_length": ROAD_LENGTH,
+            "exit_position": exit_pos,
+            "exit_length": exit_length,
+            "road_length": road_length,
+            "duration": duration,
         })
+        configs.append(config)
     return configs
 
 def build_lane_keeping_configs() -> List[CONFIG]:
@@ -166,29 +183,33 @@ def build_racetrack_configs() -> List[CONFIG]:
         })
         configs.append(config)
 
-    OVAL_VEHICLE_COUNTS = np.linspace(0, 20, 3, dtype=int)
+    MAX_OVAL_VEHICLE_COUNT = 20
     ROAD_LENGTHS = np.linspace(100, 200, 3, dtype=int)
     LANES_COUNT = np.linspace(2, 4, 3, dtype=int)
-    for (steering, veh_cnt, road_length, lanes_count) in itertools.product(
-        STEERING_RANGES, OVAL_VEHICLE_COUNTS, ROAD_LENGTHS, LANES_COUNT,
+    for (steering, (length_idx, road_length), (lanes_idx, lanes_count)) in itertools.product(
+        STEERING_RANGES, enumerate(ROAD_LENGTHS), enumerate(LANES_COUNT),
     ):
-        config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
-        ang = np.deg2rad(steering)
-        config["config"]["action"]["steering_range"] = [-ang, ang]
+        aux = lanes_idx * 2 + length_idx    # to check if there's enough space for more vehicles
+        max_veh_cnt = 20 if aux >= 3 else 10
+        oval_veh_cnts = np.linspace(0, max_veh_cnt, max_veh_cnt // 10 + 1, dtype=int)
+        for veh_cnt in oval_veh_cnts:
+            config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
+            ang = np.deg2rad(steering)
+            config["config"]["action"]["steering_range"] = [-ang, ang]
 
-        all_but_2nd = [i for i in range(1, lanes_count+1) if i != 2]
-        BLOCK_LANES = [[], [1]]
-        if all_but_2nd not in BLOCK_LANES:
-            BLOCK_LANES.append(all_but_2nd)
+            all_but_2nd = [i for i in range(1, lanes_count+1) if i != 2]
+            BLOCK_LANES = [[], [1]]
+            if all_but_2nd not in BLOCK_LANES:
+                BLOCK_LANES.append(all_but_2nd)
 
-        for blocks in BLOCK_LANES:
-            config["config"].update({
-                "lanes_count": lanes_count,
-                "vehicles_count": veh_cnt,
-                "length": road_length,
-                "block_lanes": blocks,
-            })
-            configs.append(config)
+            for blocks in BLOCK_LANES:
+                config["config"].update({
+                    "lanes_count": lanes_count,
+                    "vehicles_count": veh_cnt,
+                    "length": road_length,
+                    "block_lanes": blocks,
+                })
+                configs.append(config)
     log_configs("Racetrack", configs)
     return configs
 
@@ -315,6 +336,7 @@ if __name__ == "__main__":
     build_configs(build_lane_keeping_configs, ENV_CONFIG_PATH("lane-keeping"), "Lane Keeping")
     build_configs(build_racetrack_configs, ENV_CONFIG_PATH("racetrack"), "Racetrack")
     build_configs(build_parking_configs, ENV_CONFIG_PATH("parking"), "Parking")
+    build_configs(build_exit_configs, ENV_CONFIG_PATH("exit"), "Exit")
 
     algo_configs = extract_algo_configs()
     obs_configs = get_obs_configs()

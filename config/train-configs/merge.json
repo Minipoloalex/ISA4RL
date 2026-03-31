@@ -26,7 +26,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044113926
+    "timestamp": 1774951269809698244
   },
   {
     "env_config": {
@@ -57,7 +57,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044114782
+    "timestamp": 1774951269809699907
   },
   {
     "env_config": {
@@ -92,7 +92,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044115074
+    "timestamp": 1774951269809700789
   },
   {
     "env_config": {
@@ -130,7 +130,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044115280
+    "timestamp": 1774951269809701410
   },
   {
     "env_config": {
@@ -172,7 +172,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044115556
+    "timestamp": 1774951269809702251
   },
   {
     "env_config": {
@@ -216,7 +216,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044115821
+    "timestamp": 1774951269809703123
   },
   {
     "env_config": {
@@ -245,7 +245,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044116156
+    "timestamp": 1774951269809704345
   },
   {
     "env_config": {
@@ -276,7 +276,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044116369
+    "timestamp": 1774951269809705237
   },
   {
     "env_config": {
@@ -311,7 +311,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044116630
+    "timestamp": 1774951269809706239
   },
   {
     "env_config": {
@@ -340,7 +340,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044116915
+    "timestamp": 1774951269809707251
   },
   {
     "env_config": {
@@ -371,7 +371,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044117146
+    "timestamp": 1774951269809708122
   },
   {
     "env_config": {
@@ -406,7 +406,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044117387
+    "timestamp": 1774951269809709044
   },
   {
     "env_config": {
@@ -444,7 +444,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044117556
+    "timestamp": 1774951269809709575
   },
   {
     "env_config": {
@@ -486,7 +486,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044117807
+    "timestamp": 1774951269809710367
   },
   {
     "env_config": {
@@ -530,7 +530,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044117994
+    "timestamp": 1774951269809711128
   },
   {
     "env_config": {
@@ -559,7 +559,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044118319
+    "timestamp": 1774951269809712320
   },
   {
     "env_config": {
@@ -590,7 +590,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044118560
+    "timestamp": 1774951269809713222
   },
   {
     "env_config": {
@@ -625,7 +625,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044118805
+    "timestamp": 1774951269809714114
   },
   {
     "env_config": {
@@ -654,7 +654,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044119048
+    "timestamp": 1774951269809715025
   },
   {
     "env_config": {
@@ -685,7 +685,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044119287
+    "timestamp": 1774951269809715937
   },
   {
     "env_config": {
@@ -720,7 +720,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044119508
+    "timestamp": 1774951269809716799
   },
   {
     "env_config": {
@@ -758,7 +758,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044119661
+    "timestamp": 1774951269809717300
   },
   {
     "env_config": {
@@ -800,7 +800,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044119864
+    "timestamp": 1774951269809718121
   },
   {
     "env_config": {
@@ -844,7 +844,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044120068
+    "timestamp": 1774951269809718893
   },
   {
     "env_config": {
@@ -873,7 +873,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044120350
+    "timestamp": 1774951269809720035
   },
   {
     "env_config": {
@@ -904,7 +904,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044120589
+    "timestamp": 1774951269809720967
   },
   {
     "env_config": {
@@ -939,7 +939,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044120806
+    "timestamp": 1774951269809721838
   },
   {
     "env_config": {
@@ -968,7 +968,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044121033
+    "timestamp": 1774951269809722730
   },
   {
     "env_config": {
@@ -999,7 +999,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044121236
+    "timestamp": 1774951269809723592
   },
   {
     "env_config": {
@@ -1034,7 +1034,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044121439
+    "timestamp": 1774951269809724453
   },
   {
     "env_config": {
@@ -1072,7 +1072,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044121578
+    "timestamp": 1774951269809724984
   },
   {
     "env_config": {
@@ -1114,7 +1114,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044121775
+    "timestamp": 1774951269809725786
   },
   {
     "env_config": {
@@ -1158,7 +1158,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044121962
+    "timestamp": 1774951269809726557
   },
   {
     "env_config": {
@@ -1187,7 +1187,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044122284
+    "timestamp": 1774951269809727799
   },
   {
     "env_config": {
@@ -1218,7 +1218,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044122529
+    "timestamp": 1774951269809728701
   },
   {
     "env_config": {
@@ -1253,7 +1253,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044122756
+    "timestamp": 1774951269809729563
   },
   {
     "env_config": {
@@ -1282,7 +1282,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044122973
+    "timestamp": 1774951269809730454
   },
   {
     "env_config": {
@@ -1313,7 +1313,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044123184
+    "timestamp": 1774951269809731296
   },
   {
     "env_config": {
@@ -1348,7 +1348,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044123419
+    "timestamp": 1774951269809732138
   },
   {
     "env_config": {
@@ -1386,7 +1386,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044123554
+    "timestamp": 1774951269809732649
   },
   {
     "env_config": {
@@ -1428,7 +1428,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044123779
+    "timestamp": 1774951269809733450
   },
   {
     "env_config": {
@@ -1472,7 +1472,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044124065
+    "timestamp": 1774951269809734532
   },
   {
     "env_config": {
@@ -1501,7 +1501,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044124357
+    "timestamp": 1774951269809735694
   },
   {
     "env_config": {
@@ -1532,7 +1532,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044124572
+    "timestamp": 1774951269809736546
   },
   {
     "env_config": {
@@ -1567,7 +1567,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044124795
+    "timestamp": 1774951269809737408
   },
   {
     "env_config": {
@@ -1596,7 +1596,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044125046
+    "timestamp": 1774951269809738299
   },
   {
     "env_config": {
@@ -1627,7 +1627,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044125257
+    "timestamp": 1774951269809739141
   },
   {
     "env_config": {
@@ -1662,7 +1662,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044125465
+    "timestamp": 1774951269809739982
   },
   {
     "env_config": {
@@ -1700,7 +1700,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044125600
+    "timestamp": 1774951269809740513
   },
   {
     "env_config": {
@@ -1742,7 +1742,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044125816
+    "timestamp": 1774951269809741315
   },
   {
     "env_config": {
@@ -1786,7 +1786,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044126004
+    "timestamp": 1774951269809742086
   },
   {
     "env_config": {
@@ -1815,7 +1815,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044126283
+    "timestamp": 1774951269809743249
   },
   {
     "env_config": {
@@ -1846,7 +1846,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044126622
+    "timestamp": 1774951269809744110
   },
   {
     "env_config": {
@@ -1881,7 +1881,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044127121
+    "timestamp": 1774951269809745082
   },
   {
     "env_config": {
@@ -1910,7 +1910,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044127366
+    "timestamp": 1774951269809745994
   },
   {
     "env_config": {
@@ -1941,7 +1941,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044127582
+    "timestamp": 1774951269809746835
   },
   {
     "env_config": {
@@ -1976,7 +1976,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044127790
+    "timestamp": 1774951269809747687
   },
   {
     "env_config": {
@@ -2014,7 +2014,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044127924
+    "timestamp": 1774951269809748228
   },
   {
     "env_config": {
@@ -2056,7 +2056,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044128116
+    "timestamp": 1774951269809749019
   },
   {
     "env_config": {
@@ -2100,7 +2100,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044128299
+    "timestamp": 1774951269809749801
   },
   {
     "env_config": {
@@ -2129,7 +2129,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044128596
+    "timestamp": 1774951269809750983
   },
   {
     "env_config": {
@@ -2160,7 +2160,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044128809
+    "timestamp": 1774951269809751875
   },
   {
     "env_config": {
@@ -2195,7 +2195,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044129010
+    "timestamp": 1774951269809752726
   },
   {
     "env_config": {
@@ -2224,7 +2224,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044129238
+    "timestamp": 1774951269809753628
   },
   {
     "env_config": {
@@ -2255,7 +2255,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044129470
+    "timestamp": 1774951269809754460
   },
   {
     "env_config": {
@@ -2290,7 +2290,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044129824
+    "timestamp": 1774951269809755431
   },
   {
     "env_config": {
@@ -2328,7 +2328,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044129959
+    "timestamp": 1774951269809755962
   },
   {
     "env_config": {
@@ -2370,7 +2370,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044130148
+    "timestamp": 1774951269809756774
   },
   {
     "env_config": {
@@ -2414,7 +2414,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044130341
+    "timestamp": 1774951269809757606
   },
   {
     "env_config": {
@@ -2443,7 +2443,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044130630
+    "timestamp": 1774951269809758798
   },
   {
     "env_config": {
@@ -2474,7 +2474,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044130839
+    "timestamp": 1774951269809759659
   },
   {
     "env_config": {
@@ -2509,7 +2509,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044131046
+    "timestamp": 1774951269809760521
   },
   {
     "env_config": {
@@ -2538,7 +2538,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044131260
+    "timestamp": 1774951269809761413
   },
   {
     "env_config": {
@@ -2569,7 +2569,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044131460
+    "timestamp": 1774951269809762254
   },
   {
     "env_config": {
@@ -2604,7 +2604,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044131675
+    "timestamp": 1774951269809763096
   },
   {
     "env_config": {
@@ -2642,7 +2642,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044131807
+    "timestamp": 1774951269809763617
   },
   {
     "env_config": {
@@ -2684,7 +2684,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044131992
+    "timestamp": 1774951269809764458
   },
   {
     "env_config": {
@@ -2728,7 +2728,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044132314
+    "timestamp": 1774951269809765440
   },
   {
     "env_config": {
@@ -2757,7 +2757,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044132605
+    "timestamp": 1774951269809766612
   },
   {
     "env_config": {
@@ -2788,7 +2788,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044132818
+    "timestamp": 1774951269809767474
   },
   {
     "env_config": {
@@ -2823,7 +2823,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044133026
+    "timestamp": 1774951269809768336
   },
   {
     "env_config": {
@@ -2852,7 +2852,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044133273
+    "timestamp": 1774951269809769247
   },
   {
     "env_config": {
@@ -2883,7 +2883,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044133474
+    "timestamp": 1774951269809770099
   },
   {
     "env_config": {
@@ -2918,7 +2918,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044133687
+    "timestamp": 1774951269809770951
   },
   {
     "env_config": {
@@ -2956,7 +2956,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044133819
+    "timestamp": 1774951269809771482
   },
   {
     "env_config": {
@@ -2998,7 +2998,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044134006
+    "timestamp": 1774951269809772263
   },
   {
     "env_config": {
@@ -3042,7 +3042,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044134202
+    "timestamp": 1774951269809773035
   },
   {
     "env_config": {
@@ -3071,7 +3071,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044134479
+    "timestamp": 1774951269809774207
   },
   {
     "env_config": {
@@ -3102,7 +3102,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044134687
+    "timestamp": 1774951269809775068
   },
   {
     "env_config": {
@@ -3137,7 +3137,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044134903
+    "timestamp": 1774951269809775930
   },
   {
     "env_config": {
@@ -3166,7 +3166,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044135147
+    "timestamp": 1774951269809776822
   },
   {
     "env_config": {
@@ -3197,7 +3197,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044135353
+    "timestamp": 1774951269809777673
   },
   {
     "env_config": {
@@ -3232,45 +3232,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044135550
-  },
-  {
-    "env_config": {
-      "env_id": "merge-generic-v0",
-      "config": {
-        "length_after_merge": 250,
-        "lanes_count": 2,
-        "vehicles_count": 5,
-        "merge_length_parallel": 125
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001044135726
+    "timestamp": 1774951269809778505
   },
   {
     "env_config": {
@@ -3301,6 +3263,44 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269809779326
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "policy": "CnnPolicy",
       "n_envs": 8,
@@ -3312,7 +3312,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044135915
+    "timestamp": 1774951269809780108
   },
   {
     "env_config": {
@@ -3356,7 +3356,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044136110
+    "timestamp": 1774951269809780879
   },
   {
     "env_config": {
@@ -3385,7 +3385,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044136414
+    "timestamp": 1774951269809782042
   },
   {
     "env_config": {
@@ -3416,7 +3416,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044136625
+    "timestamp": 1774951269809782903
   },
   {
     "env_config": {
@@ -3451,7 +3451,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044136836
+    "timestamp": 1774951269809783765
   },
   {
     "env_config": {
@@ -3480,7 +3480,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044137070
+    "timestamp": 1774951269809784656
   },
   {
     "env_config": {
@@ -3511,7 +3511,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044137276
+    "timestamp": 1774951269809785498
   },
   {
     "env_config": {
@@ -3546,45 +3546,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044137505
-  },
-  {
-    "env_config": {
-      "env_id": "merge-generic-v0",
-      "config": {
-        "length_after_merge": 250,
-        "lanes_count": 2,
-        "vehicles_count": 10,
-        "merge_length_parallel": 125
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001044137643
+    "timestamp": 1774951269809786350
   },
   {
     "env_config": {
@@ -3615,6 +3577,44 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269809786881
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "policy": "CnnPolicy",
       "n_envs": 8,
@@ -3626,7 +3626,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044137835
+    "timestamp": 1774951269809787662
   },
   {
     "env_config": {
@@ -3670,7 +3670,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044138021
+    "timestamp": 1774951269809788444
   },
   {
     "env_config": {
@@ -3699,7 +3699,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044138319
+    "timestamp": 1774951269809789606
   },
   {
     "env_config": {
@@ -3730,7 +3730,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044138523
+    "timestamp": 1774951269809790477
   },
   {
     "env_config": {
@@ -3765,7 +3765,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044138718
+    "timestamp": 1774951269809791329
   },
   {
     "env_config": {
@@ -3794,7 +3794,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044138963
+    "timestamp": 1774951269809792221
   },
   {
     "env_config": {
@@ -3825,7 +3825,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044139304
+    "timestamp": 1774951269809793463
   },
   {
     "env_config": {
@@ -3860,7 +3860,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044139505
+    "timestamp": 1774951269809794315
   },
   {
     "env_config": {
@@ -3898,7 +3898,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044139640
+    "timestamp": 1774951269809794846
   },
   {
     "env_config": {
@@ -3940,7 +3940,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044139864
+    "timestamp": 1774951269809795647
   },
   {
     "env_config": {
@@ -3984,7 +3984,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044140056
+    "timestamp": 1774951269809796429
   },
   {
     "env_config": {
@@ -4013,7 +4013,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044140336
+    "timestamp": 1774951269809797601
   },
   {
     "env_config": {
@@ -4044,7 +4044,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044140538
+    "timestamp": 1774951269809798462
   },
   {
     "env_config": {
@@ -4079,7 +4079,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044140748
+    "timestamp": 1774951269809799324
   },
   {
     "env_config": {
@@ -4108,7 +4108,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044140972
+    "timestamp": 1774951269809800206
   },
   {
     "env_config": {
@@ -4139,7 +4139,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044141183
+    "timestamp": 1774951269809801047
   },
   {
     "env_config": {
@@ -4174,7 +4174,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044141400
+    "timestamp": 1774951269809801889
   },
   {
     "env_config": {
@@ -4212,7 +4212,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044141534
+    "timestamp": 1774951269809802410
   },
   {
     "env_config": {
@@ -4254,7 +4254,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044141725
+    "timestamp": 1774951269809803201
   },
   {
     "env_config": {
@@ -4298,7 +4298,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044141919
+    "timestamp": 1774951269809803973
   },
   {
     "env_config": {
@@ -4327,7 +4327,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044142216
+    "timestamp": 1774951269809805135
   },
   {
     "env_config": {
@@ -4358,7 +4358,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044142445
+    "timestamp": 1774951269809806007
   },
   {
     "env_config": {
@@ -4393,7 +4393,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044142644
+    "timestamp": 1774951269809806868
   },
   {
     "env_config": {
@@ -4422,7 +4422,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044142860
+    "timestamp": 1774951269809807750
   },
   {
     "env_config": {
@@ -4453,7 +4453,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044143071
+    "timestamp": 1774951269809808602
   },
   {
     "env_config": {
@@ -4488,7 +4488,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044143271
+    "timestamp": 1774951269809809443
   },
   {
     "env_config": {
@@ -4526,7 +4526,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044143534
+    "timestamp": 1774951269809810195
   },
   {
     "env_config": {
@@ -4568,7 +4568,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044143877
+    "timestamp": 1774951269809811006
   },
   {
     "env_config": {
@@ -4612,7 +4612,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044144094
+    "timestamp": 1774951269809811777
   },
   {
     "env_config": {
@@ -4641,7 +4641,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044144375
+    "timestamp": 1774951269809812950
   },
   {
     "env_config": {
@@ -4672,7 +4672,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044144598
+    "timestamp": 1774951269809813811
   },
   {
     "env_config": {
@@ -4707,7 +4707,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044144799
+    "timestamp": 1774951269809814673
   },
   {
     "env_config": {
@@ -4736,7 +4736,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044145031
+    "timestamp": 1774951269809815575
   },
   {
     "env_config": {
@@ -4767,7 +4767,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044145236
+    "timestamp": 1774951269809816416
   },
   {
     "env_config": {
@@ -4802,7 +4802,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044145450
+    "timestamp": 1774951269809817258
   },
   {
     "env_config": {
@@ -4840,7 +4840,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044145638
+    "timestamp": 1774951269809817789
   },
   {
     "env_config": {
@@ -4882,7 +4882,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044145857
+    "timestamp": 1774951269809818590
   },
   {
     "env_config": {
@@ -4926,7 +4926,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044146048
+    "timestamp": 1774951269809819372
   },
   {
     "env_config": {
@@ -4955,7 +4955,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044146330
+    "timestamp": 1774951269809820544
   },
   {
     "env_config": {
@@ -4986,7 +4986,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044146568
+    "timestamp": 1774951269809821406
   },
   {
     "env_config": {
@@ -5021,7 +5021,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044146776
+    "timestamp": 1774951269809822257
   },
   {
     "env_config": {
@@ -5050,7 +5050,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044147001
+    "timestamp": 1774951269809823129
   },
   {
     "env_config": {
@@ -5081,7 +5081,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044147228
+    "timestamp": 1774951269809823970
   },
   {
     "env_config": {
@@ -5116,7 +5116,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044147423
+    "timestamp": 1774951269809824822
   },
   {
     "env_config": {
@@ -5154,7 +5154,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044147552
+    "timestamp": 1774951269809825353
   },
   {
     "env_config": {
@@ -5196,7 +5196,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044147755
+    "timestamp": 1774951269809826145
   },
   {
     "env_config": {
@@ -5240,7 +5240,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044148049
+    "timestamp": 1774951269809827086
   },
   {
     "env_config": {
@@ -5269,7 +5269,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044148332
+    "timestamp": 1774951269809828258
   },
   {
     "env_config": {
@@ -5300,7 +5300,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044148551
+    "timestamp": 1774951269809829120
   },
   {
     "env_config": {
@@ -5335,7 +5335,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044148764
+    "timestamp": 1774951269809829982
   },
   {
     "env_config": {
@@ -5364,7 +5364,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044149007
+    "timestamp": 1774951269809830863
   },
   {
     "env_config": {
@@ -5395,7 +5395,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044149206
+    "timestamp": 1774951269809831715
   },
   {
     "env_config": {
@@ -5430,7 +5430,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044149415
+    "timestamp": 1774951269809832557
   },
   {
     "env_config": {
@@ -5468,7 +5468,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044149546
+    "timestamp": 1774951269809833088
   },
   {
     "env_config": {
@@ -5510,7 +5510,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044149752
+    "timestamp": 1774951269809833889
   },
   {
     "env_config": {
@@ -5554,7 +5554,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044149942
+    "timestamp": 1774951269809834681
   },
   {
     "env_config": {
@@ -5583,7 +5583,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044150220
+    "timestamp": 1774951269809835843
   },
   {
     "env_config": {
@@ -5614,7 +5614,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044150440
+    "timestamp": 1774951269809836744
   },
   {
     "env_config": {
@@ -5649,7 +5649,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044150642
+    "timestamp": 1774951269809837646
   },
   {
     "env_config": {
@@ -5678,7 +5678,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044150860
+    "timestamp": 1774951269809838548
   },
   {
     "env_config": {
@@ -5709,7 +5709,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044151101
+    "timestamp": 1774951269809839399
   },
   {
     "env_config": {
@@ -5744,7 +5744,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044151302
+    "timestamp": 1774951269809840241
   },
   {
     "env_config": {
@@ -5782,7 +5782,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044151433
+    "timestamp": 1774951269809840772
   },
   {
     "env_config": {
@@ -5824,7 +5824,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044151620
+    "timestamp": 1774951269809841564
   },
   {
     "env_config": {
@@ -5868,7 +5868,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044151811
+    "timestamp": 1774951269809842345
   },
   {
     "env_config": {
@@ -5897,7 +5897,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044152096
+    "timestamp": 1774951269809843507
   },
   {
     "env_config": {
@@ -5928,7 +5928,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044152308
+    "timestamp": 1774951269809844369
   },
   {
     "env_config": {
@@ -5963,7 +5963,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044152521
+    "timestamp": 1774951269809845230
   },
   {
     "env_config": {
@@ -5992,7 +5992,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044152739
+    "timestamp": 1774951269809846122
   },
   {
     "env_config": {
@@ -6023,7 +6023,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044152934
+    "timestamp": 1774951269809846964
   },
   {
     "env_config": {
@@ -6058,45 +6058,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044153242
-  },
-  {
-    "env_config": {
-      "env_id": "merge-generic-v0",
-      "config": {
-        "length_after_merge": 250,
-        "lanes_count": 3,
-        "vehicles_count": 15,
-        "merge_length_parallel": 75
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001044153376
+    "timestamp": 1774951269809847875
   },
   {
     "env_config": {
@@ -6127,6 +6089,44 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269809848426
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "policy": "CnnPolicy",
       "n_envs": 8,
@@ -6138,7 +6138,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044153569
+    "timestamp": 1774951269809849228
   },
   {
     "env_config": {
@@ -6182,7 +6182,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044153774
+    "timestamp": 1774951269809849999
   },
   {
     "env_config": {
@@ -6211,7 +6211,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044154051
+    "timestamp": 1774951269809851172
   },
   {
     "env_config": {
@@ -6242,7 +6242,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044154267
+    "timestamp": 1774951269809852033
   },
   {
     "env_config": {
@@ -6277,7 +6277,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044154477
+    "timestamp": 1774951269809852885
   },
   {
     "env_config": {
@@ -6306,7 +6306,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044154801
+    "timestamp": 1774951269809853766
   },
   {
     "env_config": {
@@ -6337,7 +6337,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044155024
+    "timestamp": 1774951269809854608
   },
   {
     "env_config": {
@@ -6372,7 +6372,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044155232
+    "timestamp": 1774951269809855450
   },
   {
     "env_config": {
@@ -6410,7 +6410,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044155388
+    "timestamp": 1774951269809855961
   },
   {
     "env_config": {
@@ -6452,7 +6452,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044155597
+    "timestamp": 1774951269809856762
   },
   {
     "env_config": {
@@ -6496,7 +6496,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044155868
+    "timestamp": 1774951269809857544
   },
   {
     "env_config": {
@@ -6525,7 +6525,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044156262
+    "timestamp": 1774951269809858706
   },
   {
     "env_config": {
@@ -6556,7 +6556,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044156471
+    "timestamp": 1774951269809859577
   },
   {
     "env_config": {
@@ -6591,7 +6591,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044156681
+    "timestamp": 1774951269809860429
   },
   {
     "env_config": {
@@ -6620,7 +6620,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044156935
+    "timestamp": 1774951269809861311
   },
   {
     "env_config": {
@@ -6651,7 +6651,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044157182
+    "timestamp": 1774951269809862162
   },
   {
     "env_config": {
@@ -6686,7 +6686,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044157388
+    "timestamp": 1774951269809863004
   },
   {
     "env_config": {
@@ -6724,7 +6724,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044157529
+    "timestamp": 1774951269809863525
   },
   {
     "env_config": {
@@ -6766,7 +6766,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044157769
+    "timestamp": 1774951269809864326
   },
   {
     "env_config": {
@@ -6810,7 +6810,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044157982
+    "timestamp": 1774951269809865098
   },
   {
     "env_config": {
@@ -6839,7 +6839,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044158294
+    "timestamp": 1774951269809866891
   },
   {
     "env_config": {
@@ -6870,7 +6870,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044158512
+    "timestamp": 1774951269809867783
   },
   {
     "env_config": {
@@ -6905,7 +6905,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044158722
+    "timestamp": 1774951269809868644
   },
   {
     "env_config": {
@@ -6934,7 +6934,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044158981
+    "timestamp": 1774951269809869536
   },
   {
     "env_config": {
@@ -6965,7 +6965,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044159206
+    "timestamp": 1774951269809870398
   },
   {
     "env_config": {
@@ -7000,7 +7000,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044159412
+    "timestamp": 1774951269809871229
   },
   {
     "env_config": {
@@ -7038,7 +7038,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044159703
+    "timestamp": 1774951269809871981
   },
   {
     "env_config": {
@@ -7080,7 +7080,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044159924
+    "timestamp": 1774951269809872792
   },
   {
     "env_config": {
@@ -7124,7 +7124,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044160143
+    "timestamp": 1774951269809873544
   },
   {
     "env_config": {
@@ -7153,7 +7153,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044160440
+    "timestamp": 1774951269809874876
   },
   {
     "env_config": {
@@ -7184,7 +7184,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044160663
+    "timestamp": 1774951269809875778
   },
   {
     "env_config": {
@@ -7219,7 +7219,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044160961
+    "timestamp": 1774951269809876840
   },
   {
     "env_config": {
@@ -7248,7 +7248,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044161188
+    "timestamp": 1774951269809877932
   },
   {
     "env_config": {
@@ -7279,7 +7279,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044161398
+    "timestamp": 1774951269809878794
   },
   {
     "env_config": {
@@ -7314,7 +7314,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044161624
+    "timestamp": 1774951269809879635
   },
   {
     "env_config": {
@@ -7352,7 +7352,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044161769
+    "timestamp": 1774951269809880507
   },
   {
     "env_config": {
@@ -7394,7 +7394,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044161964
+    "timestamp": 1774951269809881298
   },
   {
     "env_config": {
@@ -7438,7 +7438,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044162173
+    "timestamp": 1774951269809882070
   },
   {
     "env_config": {
@@ -7467,7 +7467,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044162470
+    "timestamp": 1774951269809883202
   },
   {
     "env_config": {
@@ -7498,7 +7498,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044162678
+    "timestamp": 1774951269809884254
   },
   {
     "env_config": {
@@ -7533,7 +7533,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044162896
+    "timestamp": 1774951269809885115
   },
   {
     "env_config": {
@@ -7562,7 +7562,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044163127
+    "timestamp": 1774951269809885987
   },
   {
     "env_config": {
@@ -7593,7 +7593,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044163351
+    "timestamp": 1774951269809886869
   },
   {
     "env_config": {
@@ -7628,7 +7628,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044163570
+    "timestamp": 1774951269809887791
   },
   {
     "env_config": {
@@ -7666,7 +7666,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044163709
+    "timestamp": 1774951269809888352
   },
   {
     "env_config": {
@@ -7708,7 +7708,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044163903
+    "timestamp": 1774951269809889203
   },
   {
     "env_config": {
@@ -7752,7 +7752,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044164097
+    "timestamp": 1774951269809889975
   },
   {
     "env_config": {
@@ -7781,7 +7781,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044164418
+    "timestamp": 1774951269809891137
   },
   {
     "env_config": {
@@ -7812,7 +7812,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044164628
+    "timestamp": 1774951269809892018
   },
   {
     "env_config": {
@@ -7847,7 +7847,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044164842
+    "timestamp": 1774951269809892860
   },
   {
     "env_config": {
@@ -7876,7 +7876,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044165079
+    "timestamp": 1774951269809893742
   },
   {
     "env_config": {
@@ -7907,7 +7907,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044165327
+    "timestamp": 1774951269809894764
   },
   {
     "env_config": {
@@ -7942,7 +7942,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044165546
+    "timestamp": 1774951269809895605
   },
   {
     "env_config": {
@@ -7980,7 +7980,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044165684
+    "timestamp": 1774951269809896116
   },
   {
     "env_config": {
@@ -8022,7 +8022,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044165885
+    "timestamp": 1774951269809896918
   },
   {
     "env_config": {
@@ -8066,7 +8066,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044166098
+    "timestamp": 1774951269809897699
   },
   {
     "env_config": {
@@ -8095,7 +8095,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044166390
+    "timestamp": 1774951269809898861
   },
   {
     "env_config": {
@@ -8126,7 +8126,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044166602
+    "timestamp": 1774951269809899713
   },
   {
     "env_config": {
@@ -8161,7 +8161,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044166880
+    "timestamp": 1774951269809900625
   },
   {
     "env_config": {
@@ -8190,7 +8190,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044167125
+    "timestamp": 1774951269809901707
   },
   {
     "env_config": {
@@ -8221,7 +8221,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044167364
+    "timestamp": 1774951269809902548
   },
   {
     "env_config": {
@@ -8256,7 +8256,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044167578
+    "timestamp": 1774951269809903390
   },
   {
     "env_config": {
@@ -8294,7 +8294,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044167723
+    "timestamp": 1774951269809903911
   },
   {
     "env_config": {
@@ -8336,7 +8336,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044167925
+    "timestamp": 1774951269809904893
   },
   {
     "env_config": {
@@ -8380,7 +8380,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044168136
+    "timestamp": 1774951269809905674
   },
   {
     "env_config": {
@@ -8409,7 +8409,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044168427
+    "timestamp": 1774951269809919079
   },
   {
     "env_config": {
@@ -8440,7 +8440,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044168648
+    "timestamp": 1774951269809919961
   },
   {
     "env_config": {
@@ -8475,7 +8475,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044168868
+    "timestamp": 1774951269809920853
   },
   {
     "env_config": {
@@ -8504,7 +8504,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044169096
+    "timestamp": 1774951269809921744
   },
   {
     "env_config": {
@@ -8535,7 +8535,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044169316
+    "timestamp": 1774951269809922586
   },
   {
     "env_config": {
@@ -8570,7 +8570,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044169547
+    "timestamp": 1774951269809923438
   },
   {
     "env_config": {
@@ -8608,7 +8608,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044169685
+    "timestamp": 1774951269809923969
   },
   {
     "env_config": {
@@ -8650,7 +8650,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044169894
+    "timestamp": 1774951269809924760
   },
   {
     "env_config": {
@@ -8694,7 +8694,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044170095
+    "timestamp": 1774951269809925542
   },
   {
     "env_config": {
@@ -8723,7 +8723,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044170388
+    "timestamp": 1774951269809926694
   },
   {
     "env_config": {
@@ -8754,7 +8754,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044170615
+    "timestamp": 1774951269809927545
   },
   {
     "env_config": {
@@ -8789,7 +8789,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044170825
+    "timestamp": 1774951269809928397
   },
   {
     "env_config": {
@@ -8818,7 +8818,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044171056
+    "timestamp": 1774951269809929279
   },
   {
     "env_config": {
@@ -8849,7 +8849,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044171288
+    "timestamp": 1774951269809930120
   },
   {
     "env_config": {
@@ -8884,7 +8884,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044171495
+    "timestamp": 1774951269809930952
   },
   {
     "env_config": {
@@ -8922,7 +8922,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044171633
+    "timestamp": 1774951269809931463
   },
   {
     "env_config": {
@@ -8964,7 +8964,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044171846
+    "timestamp": 1774951269809932264
   },
   {
     "env_config": {
@@ -9008,7 +9008,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044172043
+    "timestamp": 1774951269809933046
   },
   {
     "env_config": {
@@ -9037,7 +9037,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044172336
+    "timestamp": 1774951269809934378
   },
   {
     "env_config": {
@@ -9068,7 +9068,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044172553
+    "timestamp": 1774951269809935230
   },
   {
     "env_config": {
@@ -9103,7 +9103,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044172760
+    "timestamp": 1774951269809936111
   },
   {
     "env_config": {
@@ -9132,7 +9132,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044172990
+    "timestamp": 1774951269809937023
   },
   {
     "env_config": {
@@ -9163,7 +9163,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044173209
+    "timestamp": 1774951269809937865
   },
   {
     "env_config": {
@@ -9198,7 +9198,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044173438
+    "timestamp": 1774951269809938706
   },
   {
     "env_config": {
@@ -9236,7 +9236,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044173577
+    "timestamp": 1774951269809939227
   },
   {
     "env_config": {
@@ -9278,7 +9278,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044173776
+    "timestamp": 1774951269809940019
   },
   {
     "env_config": {
@@ -9322,7 +9322,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044173972
+    "timestamp": 1774951269809940790
   },
   {
     "env_config": {
@@ -9351,7 +9351,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044174304
+    "timestamp": 1774951269809941952
   },
   {
     "env_config": {
@@ -9382,7 +9382,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044174515
+    "timestamp": 1774951269809942814
   },
   {
     "env_config": {
@@ -9417,7 +9417,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044174800
+    "timestamp": 1774951269809943906
   },
   {
     "env_config": {
@@ -9446,7 +9446,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044175047
+    "timestamp": 1774951269809944798
   },
   {
     "env_config": {
@@ -9477,7 +9477,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044175279
+    "timestamp": 1774951269809945639
   },
   {
     "env_config": {
@@ -9512,7 +9512,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044175492
+    "timestamp": 1774951269809946491
   },
   {
     "env_config": {
@@ -9550,7 +9550,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044175633
+    "timestamp": 1774951269809947022
   },
   {
     "env_config": {
@@ -9592,7 +9592,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044175854
+    "timestamp": 1774951269809947813
   },
   {
     "env_config": {
@@ -9636,7 +9636,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044176054
+    "timestamp": 1774951269809948595
   },
   {
     "env_config": {
@@ -9665,7 +9665,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044176380
+    "timestamp": 1774951269809949757
   },
   {
     "env_config": {
@@ -9696,7 +9696,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044176607
+    "timestamp": 1774951269809950609
   },
   {
     "env_config": {
@@ -9731,7 +9731,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044176822
+    "timestamp": 1774951269809951470
   },
   {
     "env_config": {
@@ -9760,7 +9760,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044177073
+    "timestamp": 1774951269809952432
   },
   {
     "env_config": {
@@ -9791,7 +9791,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044177312
+    "timestamp": 1774951269809953304
   },
   {
     "env_config": {
@@ -9826,7 +9826,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044177522
+    "timestamp": 1774951269809954165
   },
   {
     "env_config": {
@@ -9864,7 +9864,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044177661
+    "timestamp": 1774951269809954686
   },
   {
     "env_config": {
@@ -9906,7 +9906,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044177873
+    "timestamp": 1774951269809955488
   },
   {
     "env_config": {
@@ -9950,7 +9950,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044178107
+    "timestamp": 1774951269809956350
   },
   {
     "env_config": {
@@ -9979,7 +9979,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044178474
+    "timestamp": 1774951269809957542
   },
   {
     "env_config": {
@@ -10010,7 +10010,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044178689
+    "timestamp": 1774951269809958393
   },
   {
     "env_config": {
@@ -10045,7 +10045,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044178898
+    "timestamp": 1774951269809959225
   },
   {
     "env_config": {
@@ -10074,7 +10074,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044179173
+    "timestamp": 1774951269809960127
   },
   {
     "env_config": {
@@ -10105,7 +10105,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044179399
+    "timestamp": 1774951269809960958
   },
   {
     "env_config": {
@@ -10140,45 +10140,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044179611
-  },
-  {
-    "env_config": {
-      "env_id": "merge-generic-v0",
-      "config": {
-        "length_after_merge": 250,
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "merge_length_parallel": 50
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        128,
-        64
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1774887001044179752
+    "timestamp": 1774951269809961990
   },
   {
     "env_config": {
@@ -10209,6 +10171,44 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1774951269809962531
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "policy": "CnnPolicy",
       "n_envs": 8,
@@ -10220,7 +10220,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044179953
+    "timestamp": 1774951269809963333
   },
   {
     "env_config": {
@@ -10264,7 +10264,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044180156
+    "timestamp": 1774951269809964124
   },
   {
     "env_config": {
@@ -10293,7 +10293,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044180459
+    "timestamp": 1774951269809965296
   },
   {
     "env_config": {
@@ -10324,7 +10324,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044180676
+    "timestamp": 1774951269809966148
   },
   {
     "env_config": {
@@ -10359,7 +10359,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044180887
+    "timestamp": 1774951269809967000
   },
   {
     "env_config": {
@@ -10388,7 +10388,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044181127
+    "timestamp": 1774951269809967881
   },
   {
     "env_config": {
@@ -10419,7 +10419,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044181350
+    "timestamp": 1774951269809968723
   },
   {
     "env_config": {
@@ -10454,7 +10454,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044181559
+    "timestamp": 1774951269809969564
   },
   {
     "env_config": {
@@ -10492,7 +10492,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044181703
+    "timestamp": 1774951269809970095
   },
   {
     "env_config": {
@@ -10534,7 +10534,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044181935
+    "timestamp": 1774951269809970907
   },
   {
     "env_config": {
@@ -10578,7 +10578,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044182135
+    "timestamp": 1774951269809971698
   },
   {
     "env_config": {
@@ -10607,7 +10607,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044182449
+    "timestamp": 1774951269809972861
   },
   {
     "env_config": {
@@ -10638,7 +10638,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044182682
+    "timestamp": 1774951269809973722
   },
   {
     "env_config": {
@@ -10673,7 +10673,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044182897
+    "timestamp": 1774951269809974564
   },
   {
     "env_config": {
@@ -10702,7 +10702,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044183171
+    "timestamp": 1774951269809975445
   },
   {
     "env_config": {
@@ -10733,7 +10733,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044183520
+    "timestamp": 1774951269809976287
   },
   {
     "env_config": {
@@ -10768,7 +10768,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044183744
+    "timestamp": 1774951269809977129
   },
   {
     "env_config": {
@@ -10806,7 +10806,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044183926
+    "timestamp": 1774951269809977680
   },
   {
     "env_config": {
@@ -10848,7 +10848,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044184162
+    "timestamp": 1774951269809978511
   },
   {
     "env_config": {
@@ -10892,7 +10892,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044184377
+    "timestamp": 1774951269809979303
   },
   {
     "env_config": {
@@ -10921,7 +10921,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044184682
+    "timestamp": 1774951269809980475
   },
   {
     "env_config": {
@@ -10952,7 +10952,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044184904
+    "timestamp": 1774951269809981337
   },
   {
     "env_config": {
@@ -10987,7 +10987,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044185137
+    "timestamp": 1774951269809982178
   },
   {
     "env_config": {
@@ -11016,7 +11016,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044185374
+    "timestamp": 1774951269809983070
   },
   {
     "env_config": {
@@ -11047,7 +11047,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044185593
+    "timestamp": 1774951269809983911
   },
   {
     "env_config": {
@@ -11082,7 +11082,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044185802
+    "timestamp": 1774951269809984753
   },
   {
     "env_config": {
@@ -11120,7 +11120,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044185963
+    "timestamp": 1774951269809985274
   },
   {
     "env_config": {
@@ -11162,7 +11162,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044186164
+    "timestamp": 1774951269809986096
   },
   {
     "env_config": {
@@ -11206,7 +11206,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044186358
+    "timestamp": 1774951269809986907
   },
   {
     "env_config": {
@@ -11235,7 +11235,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044186654
+    "timestamp": 1774951269809988079
   },
   {
     "env_config": {
@@ -11266,7 +11266,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044186890
+    "timestamp": 1774951269809989181
   },
   {
     "env_config": {
@@ -11301,7 +11301,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044187110
+    "timestamp": 1774951269809990043
   },
   {
     "env_config": {
@@ -11330,7 +11330,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044187339
+    "timestamp": 1774951269809990935
   },
   {
     "env_config": {
@@ -11361,7 +11361,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044187555
+    "timestamp": 1774951269809991786
   },
   {
     "env_config": {
@@ -11396,7 +11396,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044187760
+    "timestamp": 1774951269809992628
   },
   {
     "env_config": {
@@ -11434,7 +11434,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044187902
+    "timestamp": 1774951269809993149
   },
   {
     "env_config": {
@@ -11476,7 +11476,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044188113
+    "timestamp": 1774951269809993960
   },
   {
     "env_config": {
@@ -11520,7 +11520,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044188306
+    "timestamp": 1774951269809994752
   },
   {
     "env_config": {
@@ -11549,7 +11549,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044188619
+    "timestamp": 1774951269809995914
   },
   {
     "env_config": {
@@ -11580,7 +11580,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044188864
+    "timestamp": 1774951269809996776
   },
   {
     "env_config": {
@@ -11615,7 +11615,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044189082
+    "timestamp": 1774951269809997617
   },
   {
     "env_config": {
@@ -11644,7 +11644,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044189317
+    "timestamp": 1774951269809998509
   },
   {
     "env_config": {
@@ -11675,7 +11675,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044189552
+    "timestamp": 1774951269809999350
   },
   {
     "env_config": {
@@ -11710,7 +11710,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044189788
+    "timestamp": 1774951269810000182
   },
   {
     "env_config": {
@@ -11748,7 +11748,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044189934
+    "timestamp": 1774951269810000713
   },
   {
     "env_config": {
@@ -11790,7 +11790,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044190134
+    "timestamp": 1774951269810001515
   },
   {
     "env_config": {
@@ -11834,7 +11834,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044190343
+    "timestamp": 1774951269810002306
   },
   {
     "env_config": {
@@ -11863,7 +11863,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044190647
+    "timestamp": 1774951269810003468
   },
   {
     "env_config": {
@@ -11894,7 +11894,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044190865
+    "timestamp": 1774951269810004330
   },
   {
     "env_config": {
@@ -11929,7 +11929,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044191095
+    "timestamp": 1774951269810005191
   },
   {
     "env_config": {
@@ -11958,7 +11958,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044191327
+    "timestamp": 1774951269810006093
   },
   {
     "env_config": {
@@ -11989,7 +11989,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044191565
+    "timestamp": 1774951269810006935
   },
   {
     "env_config": {
@@ -12024,7 +12024,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044191773
+    "timestamp": 1774951269810007766
   },
   {
     "env_config": {
@@ -12062,7 +12062,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044191912
+    "timestamp": 1774951269810008287
   },
   {
     "env_config": {
@@ -12104,7 +12104,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044192112
+    "timestamp": 1774951269810009099
   },
   {
     "env_config": {
@@ -12148,7 +12148,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044192318
+    "timestamp": 1774951269810009890
   },
   {
     "env_config": {
@@ -12177,7 +12177,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044192621
+    "timestamp": 1774951269810011052
   },
   {
     "env_config": {
@@ -12208,7 +12208,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044192849
+    "timestamp": 1774951269810011904
   },
   {
     "env_config": {
@@ -12243,7 +12243,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044193069
+    "timestamp": 1774951269810012746
   },
   {
     "env_config": {
@@ -12272,7 +12272,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044193309
+    "timestamp": 1774951269810013637
   },
   {
     "env_config": {
@@ -12303,7 +12303,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044193519
+    "timestamp": 1774951269810014489
   },
   {
     "env_config": {
@@ -12338,7 +12338,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044193770
+    "timestamp": 1774951269810015391
   },
   {
     "env_config": {
@@ -12376,7 +12376,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044193925
+    "timestamp": 1774951269810015912
   },
   {
     "env_config": {
@@ -12418,7 +12418,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044194124
+    "timestamp": 1774951269810016733
   },
   {
     "env_config": {
@@ -12462,7 +12462,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044194319
+    "timestamp": 1774951269810017525
   },
   {
     "env_config": {
@@ -12491,7 +12491,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044194628
+    "timestamp": 1774951269810018687
   },
   {
     "env_config": {
@@ -12522,7 +12522,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044194842
+    "timestamp": 1774951269810019548
   },
   {
     "env_config": {
@@ -12557,7 +12557,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044195095
+    "timestamp": 1774951269810020390
   },
   {
     "env_config": {
@@ -12586,7 +12586,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044195328
+    "timestamp": 1774951269810021282
   },
   {
     "env_config": {
@@ -12617,7 +12617,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044195541
+    "timestamp": 1774951269810022123
   },
   {
     "env_config": {
@@ -12652,7 +12652,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044195761
+    "timestamp": 1774951269810022955
   },
   {
     "env_config": {
@@ -12690,7 +12690,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044195899
+    "timestamp": 1774951269810023486
   },
   {
     "env_config": {
@@ -12732,7 +12732,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044196093
+    "timestamp": 1774951269810024297
   },
   {
     "env_config": {
@@ -12776,7 +12776,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044196300
+    "timestamp": 1774951269810025089
   },
   {
     "env_config": {
@@ -12805,7 +12805,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044196601
+    "timestamp": 1774951269810026251
   },
   {
     "env_config": {
@@ -12836,7 +12836,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044196845
+    "timestamp": 1774951269810027113
   },
   {
     "env_config": {
@@ -12871,7 +12871,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044197070
+    "timestamp": 1774951269810027954
   },
   {
     "env_config": {
@@ -12900,7 +12900,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044197329
+    "timestamp": 1774951269810028826
   },
   {
     "env_config": {
@@ -12931,7 +12931,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044197540
+    "timestamp": 1774951269810029668
   },
   {
     "env_config": {
@@ -12966,7 +12966,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044197765
+    "timestamp": 1774951269810030509
   },
   {
     "env_config": {
@@ -13004,7 +13004,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044197914
+    "timestamp": 1774951269810031020
   },
   {
     "env_config": {
@@ -13046,7 +13046,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044198115
+    "timestamp": 1774951269810031832
   },
   {
     "env_config": {
@@ -13090,7 +13090,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044198312
+    "timestamp": 1774951269810032623
   },
   {
     "env_config": {
@@ -13119,7 +13119,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044198625
+    "timestamp": 1774951269810033775
   },
   {
     "env_config": {
@@ -13150,7 +13150,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044198838
+    "timestamp": 1774951269810034627
   },
   {
     "env_config": {
@@ -13185,7 +13185,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044199048
+    "timestamp": 1774951269810035468
   },
   {
     "env_config": {
@@ -13214,7 +13214,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044199296
+    "timestamp": 1774951269810036340
   },
   {
     "env_config": {
@@ -13245,7 +13245,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044199514
+    "timestamp": 1774951269810037172
   },
   {
     "env_config": {
@@ -13280,7 +13280,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044199731
+    "timestamp": 1774951269810038013
   },
   {
     "env_config": {
@@ -13318,7 +13318,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044199868
+    "timestamp": 1774951269810038534
   },
   {
     "env_config": {
@@ -13360,7 +13360,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044200079
+    "timestamp": 1774951269810039346
   },
   {
     "env_config": {
@@ -13404,7 +13404,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044200274
+    "timestamp": 1774951269810040147
   },
   {
     "env_config": {
@@ -13433,7 +13433,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044200564
+    "timestamp": 1774951269810041319
   },
   {
     "env_config": {
@@ -13464,7 +13464,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044200784
+    "timestamp": 1774951269810042161
   },
   {
     "env_config": {
@@ -13499,7 +13499,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044200991
+    "timestamp": 1774951269810043003
   },
   {
     "env_config": {
@@ -13528,7 +13528,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044201217
+    "timestamp": 1774951269810043884
   },
   {
     "env_config": {
@@ -13559,7 +13559,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044201447
+    "timestamp": 1774951269810044716
   },
   {
     "env_config": {
@@ -13594,7 +13594,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044201666
+    "timestamp": 1774951269810045557
   },
   {
     "env_config": {
@@ -13632,7 +13632,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044201803
+    "timestamp": 1774951269810046068
   },
   {
     "env_config": {
@@ -13674,7 +13674,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044202007
+    "timestamp": 1774951269810046880
   },
   {
     "env_config": {
@@ -13718,7 +13718,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044202223
+    "timestamp": 1774951269810047681
   },
   {
     "env_config": {
@@ -13747,7 +13747,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044202653
+    "timestamp": 1774951269810048844
   },
   {
     "env_config": {
@@ -13778,7 +13778,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044202893
+    "timestamp": 1774951269810049695
   },
   {
     "env_config": {
@@ -13813,7 +13813,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044203120
+    "timestamp": 1774951269810050537
   },
   {
     "env_config": {
@@ -13842,7 +13842,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044203365
+    "timestamp": 1774951269810051428
   },
   {
     "env_config": {
@@ -13873,7 +13873,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044203601
+    "timestamp": 1774951269810052270
   },
   {
     "env_config": {
@@ -13908,7 +13908,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044203809
+    "timestamp": 1774951269810053112
   },
   {
     "env_config": {
@@ -13946,7 +13946,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044203946
+    "timestamp": 1774951269810053633
   },
   {
     "env_config": {
@@ -13988,7 +13988,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044204159
+    "timestamp": 1774951269810054444
   },
   {
     "env_config": {
@@ -14032,7 +14032,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044204516
+    "timestamp": 1774951269810055276
   },
   {
     "env_config": {
@@ -14061,7 +14061,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044204853
+    "timestamp": 1774951269810056448
   },
   {
     "env_config": {
@@ -14092,7 +14092,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044205089
+    "timestamp": 1774951269810057290
   },
   {
     "env_config": {
@@ -14127,7 +14127,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044205299
+    "timestamp": 1774951269810058141
   },
   {
     "env_config": {
@@ -14156,7 +14156,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044205560
+    "timestamp": 1774951269810059023
   },
   {
     "env_config": {
@@ -14187,7 +14187,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044205782
+    "timestamp": 1774951269810059864
   },
   {
     "env_config": {
@@ -14222,7 +14222,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044205990
+    "timestamp": 1774951269810060716
   },
   {
     "env_config": {
@@ -14260,7 +14260,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044206130
+    "timestamp": 1774951269810061227
   },
   {
     "env_config": {
@@ -14302,7 +14302,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044206342
+    "timestamp": 1774951269810062048
   },
   {
     "env_config": {
@@ -14346,7 +14346,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044206540
+    "timestamp": 1774951269810062840
   },
   {
     "env_config": {
@@ -14375,7 +14375,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044206836
+    "timestamp": 1774951269810064002
   },
   {
     "env_config": {
@@ -14406,7 +14406,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044207066
+    "timestamp": 1774951269810064854
   },
   {
     "env_config": {
@@ -14441,7 +14441,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044207278
+    "timestamp": 1774951269810065695
   },
   {
     "env_config": {
@@ -14470,7 +14470,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044207523
+    "timestamp": 1774951269810066587
   },
   {
     "env_config": {
@@ -14501,7 +14501,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044207754
+    "timestamp": 1774951269810067459
   },
   {
     "env_config": {
@@ -14536,7 +14536,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044207978
+    "timestamp": 1774951269810068511
   },
   {
     "env_config": {
@@ -14574,7 +14574,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044208122
+    "timestamp": 1774951269810069072
   },
   {
     "env_config": {
@@ -14616,7 +14616,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044208316
+    "timestamp": 1774951269810069873
   },
   {
     "env_config": {
@@ -14660,7 +14660,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044208541
+    "timestamp": 1774951269810070665
   },
   {
     "env_config": {
@@ -14689,7 +14689,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044208836
+    "timestamp": 1774951269810071837
   },
   {
     "env_config": {
@@ -14720,7 +14720,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044209058
+    "timestamp": 1774951269810072698
   },
   {
     "env_config": {
@@ -14755,7 +14755,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044209297
+    "timestamp": 1774951269810073540
   },
   {
     "env_config": {
@@ -14784,7 +14784,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044209547
+    "timestamp": 1774951269810074422
   },
   {
     "env_config": {
@@ -14815,7 +14815,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044209757
+    "timestamp": 1774951269810075253
   },
   {
     "env_config": {
@@ -14850,7 +14850,7 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044209970
+    "timestamp": 1774951269810076095
   },
   {
     "env_config": {
@@ -14888,7 +14888,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1774887001044210108
+    "timestamp": 1774951269810076626
   },
   {
     "env_config": {
@@ -14930,7 +14930,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044210319
+    "timestamp": 1774951269810077437
   },
   {
     "env_config": {
@@ -14974,7 +14974,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1774887001044210517
+    "timestamp": 1774951269810078219
   },
   {
     "env_config": {
@@ -15003,7 +15003,7 @@
       "learning_rate": "lin_0.00083",
       "ent_coef": 1e-05
     },
-    "timestamp": 1774887001044210817
+    "timestamp": 1774951269810079381
   },
   {
     "env_config": {
@@ -15034,7 +15034,7 @@
       "n_epochs": 4,
       "ent_coef": 0.01
     },
-    "timestamp": 1774887001044211052
+    "timestamp": 1774951269810080233
   },
   {
     "env_config": {
@@ -15069,6 +15069,6 @@
       "exploration_final_eps": 0.1,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1774887001044211272
+    "timestamp": 1774951269810081074
   }
 ]
