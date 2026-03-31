@@ -14,7 +14,7 @@ from math import ceil
 logger = logging.getLogger(__name__)
 
 from common.config_utils import CONFIG
-from common.env_utils import ENVS, ALLOW_OBS
+from common.env_utils import ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C
 from common.file_utils import (
     save_json,
     read_json,
@@ -28,12 +28,13 @@ from common.file_utils import (
 )
 from env_fixed_configs import *
 
-D, C = "Discrete", "Continuous"
-ALGO_HYPERPAMETER_ENVS = {
+ALGO_HYPERPAMETER_ENVS_ACTION_SPACE = {
     "bipedalwalker-v3": C,
     "cartpole-v1": D,
     "atari": D,
 }
+ALGO_HYPERPAMETER_ENVS = list(ALGO_HYPERPAMETER_ENVS_ACTION_SPACE.keys())
+
 ALGO_FILES = ["a2c", "ppo", "dqn", "sac"]
 ALLOW_ACTION_SPACE = {
     "a2c": [D, C],
@@ -41,7 +42,7 @@ ALLOW_ACTION_SPACE = {
     "dqn": [D],
     "sac": [C],
 }
-ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
+ALGO_KEYS_TO_DROP = ["n_timesteps", "frame_stack", "env_wrapper"]
 
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision", "KinematicsGoal", "OccupancyGrid", "AttributesObservation", "ExitObservation"]
@@ -274,12 +275,14 @@ def get_algo_configs():
     algo_configs = read_json(ALGO_CONFIG_PATH)
     configs = []
     for algo, hyperparam_config in algo_configs.items():
-        for env, hyperparams in hyperparam_config.items():
+        for original_env, hyperparams in hyperparam_config.items():
+            action_space = ALGO_HYPERPAMETER_ENVS_ACTION_SPACE[original_env.lower()]
             for key in ALGO_KEYS_TO_DROP:
                 hyperparams.pop(key, None)
             configs.append(
                 {
                     "algo": algo,
+                    "action_space": action_space,
                     **hyperparams,
                 }
             )
@@ -299,15 +302,13 @@ def get_env_obs_configs(env_id: str, all_obs_configs: List[CONFIG]):
         if config["type"] in allowed
     ]
 
-# TODO: for continuous vs discrete environments and algorithms
-# def get_env_algo_configs(env_id: str, all_algo_configs: List[CONFIG]):
-#     allowed = ALLOW_ALGO[env_id]
-#     return [
-#         config
-#         for config in all_algo_configs
-#         if 
-#     ]
-#     pass
+def get_env_algo_configs(env_id: str, all_algo_configs: List[CONFIG]):
+    env_action_space = ENV_ACTION_SPACE[env_id]
+    return [
+        config
+        for config in all_algo_configs
+        if config["action_space"] == env_action_space
+    ]
 
 def valid_config(algo_config: CONFIG, obs_config: CONFIG) -> bool:
     # we can assume None is never anything
@@ -376,8 +377,9 @@ if __name__ == "__main__":
     all_eval_configs = []
     for env in ENVS:
         env_obs_configs = get_env_obs_configs(env, obs_configs)
+        env_algo_configs = get_env_algo_configs(env, get_algo_configs())
         env_run_configs, env_eval_configs = build_all_configs(
-            get_env_configs(env), env_obs_configs, get_algo_configs(),
+            get_env_configs(env), env_obs_configs, env_algo_configs,
         )
         save_json(TRAIN_CONFIGS_PATH(env), env_run_configs)
         save_json(EVAL_CONFIGS_PATH(env), env_eval_configs)

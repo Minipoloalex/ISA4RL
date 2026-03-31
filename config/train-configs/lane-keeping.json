@@ -32,45 +32,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861670185
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -85,7 +47,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861672169
+    "timestamp": 1774969001320586827
   },
   {
     "env_config": {
@@ -120,52 +82,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861673221
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -177,7 +94,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861673792
+    "timestamp": 1774969001320588150
   },
   {
     "env_config": {
@@ -211,21 +128,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861674704
+    "timestamp": 1774969001320588560
   },
   {
     "env_config": {
@@ -260,45 +178,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861675806
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -313,7 +193,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861676367
+    "timestamp": 1774969001320588981
   },
   {
     "env_config": {
@@ -348,52 +228,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861677268
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -405,7 +240,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861678090
+    "timestamp": 1774969001320589542
   },
   {
     "env_config": {
@@ -439,21 +274,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861679302
+    "timestamp": 1774969001320589983
   },
   {
     "env_config": {
@@ -488,45 +324,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861680264
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -541,7 +339,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861680855
+    "timestamp": 1774969001320590434
   },
   {
     "env_config": {
@@ -576,52 +374,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861684131
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -633,7 +386,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861684793
+    "timestamp": 1774969001320590835
   },
   {
     "env_config": {
@@ -667,21 +420,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861685895
+    "timestamp": 1774969001320591235
   },
   {
     "env_config": {
@@ -716,45 +470,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861686896
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -769,7 +485,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861687498
+    "timestamp": 1774969001320591666
   },
   {
     "env_config": {
@@ -804,52 +520,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861688530
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -861,7 +532,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861689151
+    "timestamp": 1774969001320592067
   },
   {
     "env_config": {
@@ -895,21 +566,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861690062
+    "timestamp": 1774969001320592438
   },
   {
     "env_config": {
@@ -944,45 +616,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861691004
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -997,7 +631,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861691585
+    "timestamp": 1774969001320592808
   },
   {
     "env_config": {
@@ -1032,52 +666,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861692517
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1089,7 +678,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861693098
+    "timestamp": 1774969001320593179
   },
   {
     "env_config": {
@@ -1123,21 +712,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861694020
+    "timestamp": 1774969001320593540
   },
   {
     "env_config": {
@@ -1172,45 +762,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861695212
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1225,7 +777,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861695793
+    "timestamp": 1774969001320593910
   },
   {
     "env_config": {
@@ -1260,52 +812,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861696715
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1317,7 +824,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861697727
+    "timestamp": 1774969001320594281
   },
   {
     "env_config": {
@@ -1351,21 +858,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861698819
+    "timestamp": 1774969001320596205
   },
   {
     "env_config": {
@@ -1400,45 +908,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861699761
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1453,7 +923,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861700362
+    "timestamp": 1774969001320596635
   },
   {
     "env_config": {
@@ -1488,52 +958,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861701284
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1545,7 +970,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861701905
+    "timestamp": 1774969001320597016
   },
   {
     "env_config": {
@@ -1579,21 +1004,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861702857
+    "timestamp": 1774969001320597377
   },
   {
     "env_config": {
@@ -1628,45 +1054,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861703808
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1681,7 +1069,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861704389
+    "timestamp": 1774969001320597768
   },
   {
     "env_config": {
@@ -1716,52 +1104,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861705311
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1773,7 +1116,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861705892
+    "timestamp": 1774969001320598118
   },
   {
     "env_config": {
@@ -1807,21 +1150,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861706964
+    "timestamp": 1774969001320598479
   },
   {
     "env_config": {
@@ -1856,45 +1200,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861708126
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1909,7 +1215,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861709349
+    "timestamp": 1774969001320598890
   },
   {
     "env_config": {
@@ -1944,52 +1250,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861710270
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2001,7 +1262,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861710852
+    "timestamp": 1774969001320599371
   },
   {
     "env_config": {
@@ -2035,21 +1296,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861713767
+    "timestamp": 1774969001320599731
   },
   {
     "env_config": {
@@ -2084,45 +1346,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861716683
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2137,7 +1361,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861717274
+    "timestamp": 1774969001320600112
   },
   {
     "env_config": {
@@ -2172,18 +1396,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861718195
+    "timestamp": 1774969001320600463
   },
   {
     "env_config": {
@@ -2217,67 +1442,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861718817
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.3490658503988659,
-            0.3490658503988659
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861719728
+    "timestamp": 1774969001320600823
   },
   {
     "env_config": {
@@ -2312,45 +1492,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861720680
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2365,7 +1507,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861721421
+    "timestamp": 1774969001320601194
   },
   {
     "env_config": {
@@ -2400,18 +1542,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861722493
+    "timestamp": 1774969001320601555
   },
   {
     "env_config": {
@@ -2445,67 +1588,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861723626
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861724547
+    "timestamp": 1774969001320601915
   },
   {
     "env_config": {
@@ -2540,45 +1638,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861725499
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2593,7 +1653,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861726080
+    "timestamp": 1774969001320602316
   },
   {
     "env_config": {
@@ -2628,18 +1688,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861727002
+    "timestamp": 1774969001320602677
   },
   {
     "env_config": {
@@ -2673,67 +1734,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861727573
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861728505
+    "timestamp": 1774969001320603037
   },
   {
     "env_config": {
@@ -2768,45 +1784,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861729437
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2821,7 +1799,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861730018
+    "timestamp": 1774969001320603408
   },
   {
     "env_config": {
@@ -2856,52 +1834,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861730949
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2913,7 +1846,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861731691
+    "timestamp": 1774969001320603759
   },
   {
     "env_config": {
@@ -2947,21 +1880,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861732612
+    "timestamp": 1774969001320604120
   },
   {
     "env_config": {
@@ -2996,45 +1930,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861733995
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3049,7 +1945,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861734576
+    "timestamp": 1774969001320604490
   },
   {
     "env_config": {
@@ -3084,52 +1980,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861735488
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3141,7 +1992,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861736069
+    "timestamp": 1774969001320604851
   },
   {
     "env_config": {
@@ -3175,21 +2026,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861736991
+    "timestamp": 1774969001320605753
   },
   {
     "env_config": {
@@ -3224,45 +2076,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861737942
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3277,7 +2091,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861738684
+    "timestamp": 1774969001320606133
   },
   {
     "env_config": {
@@ -3312,52 +2126,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861739756
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3369,7 +2138,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861740337
+    "timestamp": 1774969001320606494
   },
   {
     "env_config": {
@@ -3403,21 +2172,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861741249
+    "timestamp": 1774969001320606845
   },
   {
     "env_config": {
@@ -3452,45 +2222,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861742180
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3505,7 +2237,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861742762
+    "timestamp": 1774969001320607225
   },
   {
     "env_config": {
@@ -3540,52 +2272,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861747571
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3597,7 +2284,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861748162
+    "timestamp": 1774969001320607576
   },
   {
     "env_config": {
@@ -3631,21 +2318,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861749093
+    "timestamp": 1774969001320607927
   },
   {
     "env_config": {
@@ -3680,45 +2368,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861750025
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3733,7 +2383,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861750616
+    "timestamp": 1774969001320608317
   },
   {
     "env_config": {
@@ -3768,52 +2418,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861751528
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3825,7 +2430,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861752129
+    "timestamp": 1774969001320609790
   },
   {
     "env_config": {
@@ -3859,21 +2464,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861753201
+    "timestamp": 1774969001320610181
   },
   {
     "env_config": {
@@ -3908,45 +2514,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861754133
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3961,7 +2529,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861754724
+    "timestamp": 1774969001320610582
   },
   {
     "env_config": {
@@ -3996,52 +2564,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861755656
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4053,7 +2576,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861756237
+    "timestamp": 1774969001320610942
   },
   {
     "env_config": {
@@ -4087,21 +2610,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861757319
+    "timestamp": 1774969001320611393
   },
   {
     "env_config": {
@@ -4136,45 +2660,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861758401
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4189,7 +2675,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861758982
+    "timestamp": 1774969001320611784
   },
   {
     "env_config": {
@@ -4224,52 +2710,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861759904
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4281,7 +2722,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861761226
+    "timestamp": 1774969001320612135
   },
   {
     "env_config": {
@@ -4315,21 +2756,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861762148
+    "timestamp": 1774969001320612485
   },
   {
     "env_config": {
@@ -4364,45 +2806,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861763080
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4417,7 +2821,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861763671
+    "timestamp": 1774969001320612866
   },
   {
     "env_config": {
@@ -4452,18 +2856,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861764603
+    "timestamp": 1774969001320613217
   },
   {
     "env_config": {
@@ -4497,67 +2902,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861765174
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861766095
+    "timestamp": 1774969001320613577
   },
   {
     "env_config": {
@@ -4592,45 +2952,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861767027
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4645,7 +2967,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861767638
+    "timestamp": 1774969001320613958
   },
   {
     "env_config": {
@@ -4680,18 +3002,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861768570
+    "timestamp": 1774969001320614319
   },
   {
     "env_config": {
@@ -4725,67 +3048,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861769141
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861770063
+    "timestamp": 1774969001320614679
   },
   {
     "env_config": {
@@ -4820,45 +3098,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861770995
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4873,7 +3113,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861771566
+    "timestamp": 1774969001320615050
   },
   {
     "env_config": {
@@ -4908,18 +3148,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861772497
+    "timestamp": 1774969001320615411
   },
   {
     "env_config": {
@@ -4953,67 +3194,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861774932
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861777998
+    "timestamp": 1774969001320615872
   },
   {
     "env_config": {
@@ -5048,45 +3244,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861778960
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5101,7 +3259,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861779551
+    "timestamp": 1774969001320616252
   },
   {
     "env_config": {
@@ -5136,52 +3294,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861780472
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5193,7 +3306,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861781044
+    "timestamp": 1774969001320616603
   },
   {
     "env_config": {
@@ -5227,21 +3340,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861781985
+    "timestamp": 1774969001320616964
   },
   {
     "env_config": {
@@ -5276,45 +3390,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861782937
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5329,7 +3405,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861783528
+    "timestamp": 1774969001320617344
   },
   {
     "env_config": {
@@ -5364,52 +3440,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861784440
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5421,7 +3452,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861785021
+    "timestamp": 1774969001320617705
   },
   {
     "env_config": {
@@ -5455,21 +3486,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861785943
+    "timestamp": 1774969001320618056
   },
   {
     "env_config": {
@@ -5504,45 +3536,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861786895
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5557,7 +3551,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861787476
+    "timestamp": 1774969001320618436
   },
   {
     "env_config": {
@@ -5592,52 +3586,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861788387
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5649,7 +3598,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861788968
+    "timestamp": 1774969001320618787
   },
   {
     "env_config": {
@@ -5683,21 +3632,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861789890
+    "timestamp": 1774969001320619148
   },
   {
     "env_config": {
@@ -5732,45 +3682,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861790842
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5785,7 +3697,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861791423
+    "timestamp": 1774969001320619518
   },
   {
     "env_config": {
@@ -5820,52 +3732,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861792345
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5877,7 +3744,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861792916
+    "timestamp": 1774969001320619869
   },
   {
     "env_config": {
@@ -5911,21 +3778,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861794319
+    "timestamp": 1774969001320620520
   },
   {
     "env_config": {
@@ -5960,45 +3828,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861795260
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6013,7 +3843,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861795841
+    "timestamp": 1774969001320620901
   },
   {
     "env_config": {
@@ -6048,52 +3878,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861796763
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6105,7 +3890,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861797334
+    "timestamp": 1774969001320621262
   },
   {
     "env_config": {
@@ -6139,21 +3924,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861798316
+    "timestamp": 1774969001320622805
   },
   {
     "env_config": {
@@ -6188,45 +3974,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861801322
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6241,7 +3989,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861802013
+    "timestamp": 1774969001320624388
   },
   {
     "env_config": {
@@ -6276,52 +4024,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861802945
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6333,7 +4036,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861803526
+    "timestamp": 1774969001320624758
   },
   {
     "env_config": {
@@ -6367,21 +4070,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861804448
+    "timestamp": 1774969001320625129
   },
   {
     "env_config": {
@@ -6416,45 +4120,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861807143
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6469,7 +4135,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861807724
+    "timestamp": 1774969001320625520
   },
   {
     "env_config": {
@@ -6504,52 +4170,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861808655
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6561,7 +4182,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861809237
+    "timestamp": 1774969001320625870
   },
   {
     "env_config": {
@@ -6595,21 +4216,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861810168
+    "timestamp": 1774969001320626231
   },
   {
     "env_config": {
@@ -6644,45 +4266,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861811090
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6697,7 +4281,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861811681
+    "timestamp": 1774969001320626612
   },
   {
     "env_config": {
@@ -6732,18 +4316,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861812613
+    "timestamp": 1774969001320626972
   },
   {
     "env_config": {
@@ -6777,67 +4362,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861813204
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861814206
+    "timestamp": 1774969001320627323
   },
   {
     "env_config": {
@@ -6872,45 +4412,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861815138
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6925,7 +4427,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861815709
+    "timestamp": 1774969001320627704
   },
   {
     "env_config": {
@@ -6960,18 +4462,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861816641
+    "timestamp": 1774969001320628054
   },
   {
     "env_config": {
@@ -7005,67 +4508,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861817222
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861818143
+    "timestamp": 1774969001320628415
   },
   {
     "env_config": {
@@ -7100,45 +4558,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861819075
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7153,7 +4573,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861819646
+    "timestamp": 1774969001320628986
   },
   {
     "env_config": {
@@ -7188,18 +4608,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861820578
+    "timestamp": 1774969001320629357
   },
   {
     "env_config": {
@@ -7233,67 +4654,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861821159
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861822081
+    "timestamp": 1774969001320629718
   },
   {
     "env_config": {
@@ -7328,45 +4704,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861823002
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7381,7 +4719,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861823584
+    "timestamp": 1774969001320630088
   },
   {
     "env_config": {
@@ -7416,52 +4754,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861824515
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7473,7 +4766,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861825096
+    "timestamp": 1774969001320630459
   },
   {
     "env_config": {
@@ -7507,21 +4800,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861826018
+    "timestamp": 1774969001320630810
   },
   {
     "env_config": {
@@ -7556,45 +4850,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861826950
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7609,7 +4865,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861827541
+    "timestamp": 1774969001320631190
   },
   {
     "env_config": {
@@ -7644,52 +4900,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861828463
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7701,7 +4912,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861829044
+    "timestamp": 1774969001320631541
   },
   {
     "env_config": {
@@ -7735,21 +4946,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861829976
+    "timestamp": 1774969001320631902
   },
   {
     "env_config": {
@@ -7784,45 +4996,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861830907
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7837,7 +5011,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861831478
+    "timestamp": 1774969001320632272
   },
   {
     "env_config": {
@@ -7872,52 +5046,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861836087
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7929,7 +5058,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861837159
+    "timestamp": 1774969001320632633
   },
   {
     "env_config": {
@@ -7963,21 +5092,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861838101
+    "timestamp": 1774969001320632984
   },
   {
     "env_config": {
@@ -8012,45 +5142,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861839053
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8065,7 +5157,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861839644
+    "timestamp": 1774969001320633364
   },
   {
     "env_config": {
@@ -8100,18 +5192,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861840565
+    "timestamp": 1774969001320633715
   },
   {
     "env_config": {
@@ -8145,67 +5238,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861841147
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861842068
+    "timestamp": 1774969001320634066
   },
   {
     "env_config": {
@@ -8240,45 +5288,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861843000
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8293,7 +5303,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861843581
+    "timestamp": 1774969001320634446
   },
   {
     "env_config": {
@@ -8328,18 +5338,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861844503
+    "timestamp": 1774969001320634877
   },
   {
     "env_config": {
@@ -8373,67 +5384,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861845074
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861845996
+    "timestamp": 1774969001320635238
   },
   {
     "env_config": {
@@ -8468,45 +5434,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861846917
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8521,7 +5449,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861847499
+    "timestamp": 1774969001320635609
   },
   {
     "env_config": {
@@ -8556,52 +5484,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861848420
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8613,7 +5496,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861849001
+    "timestamp": 1774969001320637392
   },
   {
     "env_config": {
@@ -8647,21 +5530,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861849923
+    "timestamp": 1774969001320637763
   },
   {
     "env_config": {
@@ -8696,45 +5580,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861850875
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8749,7 +5595,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861851456
+    "timestamp": 1774969001320638163
   },
   {
     "env_config": {
@@ -8784,52 +5630,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861852378
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8841,7 +5642,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861852959
+    "timestamp": 1774969001320638524
   },
   {
     "env_config": {
@@ -8875,21 +5676,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861853871
+    "timestamp": 1774969001320638885
   },
   {
     "env_config": {
@@ -8924,45 +5726,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861854822
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8977,7 +5741,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861855403
+    "timestamp": 1774969001320639255
   },
   {
     "env_config": {
@@ -9012,52 +5776,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861856325
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9069,7 +5788,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861856896
+    "timestamp": 1774969001320639616
   },
   {
     "env_config": {
@@ -9103,21 +5822,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861857818
+    "timestamp": 1774969001320639977
   },
   {
     "env_config": {
@@ -9152,45 +5872,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861858740
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9205,7 +5887,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861859411
+    "timestamp": 1774969001320640348
   },
   {
     "env_config": {
@@ -9240,18 +5922,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861860333
+    "timestamp": 1774969001320640708
   },
   {
     "env_config": {
@@ -9285,67 +5968,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861860914
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861863569
+    "timestamp": 1774969001320641059
   },
   {
     "env_config": {
@@ -9380,45 +6018,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861864511
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9433,7 +6033,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861865092
+    "timestamp": 1774969001320641440
   },
   {
     "env_config": {
@@ -9468,18 +6068,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861866023
+    "timestamp": 1774969001320641800
   },
   {
     "env_config": {
@@ -9513,67 +6114,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861866604
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861867666
+    "timestamp": 1774969001320642161
   },
   {
     "env_config": {
@@ -9608,45 +6164,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861868628
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9661,7 +6179,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861869209
+    "timestamp": 1774969001320642532
   },
   {
     "env_config": {
@@ -9696,52 +6214,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861870131
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9753,7 +6226,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861870722
+    "timestamp": 1774969001320642902
   },
   {
     "env_config": {
@@ -9787,21 +6260,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861871634
+    "timestamp": 1774969001320643263
   },
   {
     "env_config": {
@@ -9836,45 +6310,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861872576
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9889,7 +6325,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861873157
+    "timestamp": 1774969001320643814
   },
   {
     "env_config": {
@@ -9924,52 +6360,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861874079
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9981,7 +6372,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861874660
+    "timestamp": 1774969001320644175
   },
   {
     "env_config": {
@@ -10015,21 +6406,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861877816
+    "timestamp": 1774969001320644535
   },
   {
     "env_config": {
@@ -10064,45 +6456,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861878747
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10117,7 +6471,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861879328
+    "timestamp": 1774969001320644916
   },
   {
     "env_config": {
@@ -10152,52 +6506,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861880260
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10209,7 +6518,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861880841
+    "timestamp": 1774969001320645277
   },
   {
     "env_config": {
@@ -10243,21 +6552,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861881763
+    "timestamp": 1774969001320645637
   },
   {
     "env_config": {
@@ -10292,45 +6602,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861882775
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10345,7 +6617,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861883356
+    "timestamp": 1774969001320646018
   },
   {
     "env_config": {
@@ -10380,18 +6652,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861884278
+    "timestamp": 1774969001320646389
   },
   {
     "env_config": {
@@ -10425,67 +6698,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861884859
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861885781
+    "timestamp": 1774969001320646750
   },
   {
     "env_config": {
@@ -10520,45 +6748,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861886712
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10573,7 +6763,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861887293
+    "timestamp": 1774969001320647120
   },
   {
     "env_config": {
@@ -10608,18 +6798,19 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
+      "action_space": "Continuous",
+      "n_envs": 32,
       "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
       "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1774961048861888215
+    "timestamp": 1774969001320647481
   },
   {
     "env_config": {
@@ -10653,67 +6844,22 @@
       ]
     },
     "algo_config": {
-      "algo": "ppo",
-      "n_envs": 32,
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861889668
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "dqn",
-      "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
-    },
-    "timestamp": 1774961048861890600
+    "timestamp": 1774969001320647842
   },
   {
     "env_config": {
@@ -10748,45 +6894,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861891581
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10801,7 +6909,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861896701
+    "timestamp": 1774969001320648212
   },
   {
     "env_config": {
@@ -10836,52 +6944,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861897623
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10893,7 +6956,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861898214
+    "timestamp": 1774969001320648573
   },
   {
     "env_config": {
@@ -10927,21 +6990,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861899136
+    "timestamp": 1774969001320648924
   },
   {
     "env_config": {
@@ -10976,45 +7040,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861900067
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11029,7 +7055,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861900659
+    "timestamp": 1774969001320650517
   },
   {
     "env_config": {
@@ -11064,52 +7090,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861901590
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11121,7 +7102,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861902171
+    "timestamp": 1774969001320652060
   },
   {
     "env_config": {
@@ -11155,21 +7136,22 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861903093
+    "timestamp": 1774969001320652450
   },
   {
     "env_config": {
@@ -11204,45 +7186,7 @@
     },
     "algo_config": {
       "algo": "a2c",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "ent_coef": 0.0
-    },
-    "timestamp": 1774961048861904025
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
+      "action_space": "Continuous",
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11257,7 +7201,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1774961048861904606
+    "timestamp": 1774969001320652851
   },
   {
     "env_config": {
@@ -11292,52 +7236,7 @@
     },
     "algo_config": {
       "algo": "ppo",
-      "n_envs": 8,
-      "policy": "MlpPolicy",
-      "n_steps": 32,
-      "batch_size": 256,
-      "gae_lambda": 0.8,
-      "gamma": 0.98,
-      "n_epochs": 20,
-      "ent_coef": 0.0,
-      "learning_rate": "lin_0.001",
-      "clip_range": "lin_0.2"
-    },
-    "timestamp": 1774961048861905538
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
+      "action_space": "Continuous",
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11349,7 +7248,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1774961048861922309
+    "timestamp": 1774969001320653212
   },
   {
     "env_config": {
@@ -11383,20 +7282,21 @@
       ]
     },
     "algo_config": {
-      "algo": "dqn",
+      "algo": "sac",
+      "action_space": "Continuous",
       "policy": "MlpPolicy",
-      "learning_rate": 0.0023,
-      "batch_size": 64,
-      "buffer_size": 100000,
-      "learning_starts": 1000,
-      "gamma": 0.99,
-      "target_update_interval": 10,
-      "train_freq": 256,
-      "gradient_steps": 128,
-      "exploration_fraction": 0.16,
-      "exploration_final_eps": 0.04,
-      "policy_kwargs": "dict(net_arch=[256, 256])"
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1774961048861923261
+    "timestamp": 1774969001320653693
   }
 ]

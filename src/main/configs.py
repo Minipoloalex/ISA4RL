@@ -21,7 +21,7 @@ from utils.sb3_utils import (
 )
 
 # Mostly refer to the environment
-_DISCARD_POLICY_PARAMS = ["n_envs", "algo", "env_wrapper", "frame_stack", "normalize", "id"]
+_DISCARD_POLICY_PARAMS = ["algo", "action_space", "n_envs", "env_wrapper", "frame_stack", "normalize", "id"]
 
 EnvFactory = Callable[[], gym.Env]
 VecEnvFactory = Callable[[], VecEnv]

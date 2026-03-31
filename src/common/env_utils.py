@@ -28,3 +28,14 @@ ALLOW_OBS: Dict[str, List[str]] = {
     "exit": [E],
     "lane-keeping": [A],
 }
+
+D, C = "Discrete", "Continuous"
+ENV_ACTION_SPACE = {
+    "highway": D,
+    "roundabout": D,
+    "merge": D,
+    "exit": D,
+    "racetrack": C,
+    "parking": C,
+    "lane-keeping": C,
+}
