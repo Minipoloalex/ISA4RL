@@ -249,6 +249,10 @@ def main() -> None:
        env_config.update({
            "duration": 25,
        })
+    if args.env == "lane-keeping-v0":
+        env_config.update({
+            
+        })
 
     env_kwargs: Dict[str, object] = {"render_mode": "human"}
     if env_config:

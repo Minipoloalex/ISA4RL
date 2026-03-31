@@ -16,9 +16,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769021796
+    "timestamp": 1774954784790192772
   },
   {
     "env_config": {
@@ -38,8 +38,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -49,7 +49,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769022557
+    "timestamp": 1774954784790193453
   },
   {
     "env_config": {
@@ -70,7 +70,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769022888
+    "timestamp": 1774954784790193874
   },
   {
     "env_config": {
@@ -89,9 +89,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769023198
+    "timestamp": 1774954784790194165
   },
   {
     "env_config": {
@@ -111,8 +111,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -122,7 +122,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769023799
+    "timestamp": 1774954784790194445
   },
   {
     "env_config": {
@@ -143,7 +143,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769024140
+    "timestamp": 1774954784790194776
   },
   {
     "env_config": {
@@ -162,9 +162,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769024591
+    "timestamp": 1774954784790195046
   },
   {
     "env_config": {
@@ -184,8 +184,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -195,7 +195,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769024841
+    "timestamp": 1774954784790195387
   },
   {
     "env_config": {
@@ -216,7 +216,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769025102
+    "timestamp": 1774954784790195647
   },
   {
     "env_config": {
@@ -235,9 +235,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769025563
+    "timestamp": 1774954784790195948
   },
   {
     "env_config": {
@@ -257,8 +257,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -268,7 +268,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769025964
+    "timestamp": 1774954784790196198
   },
   {
     "env_config": {
@@ -289,7 +289,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769026214
+    "timestamp": 1774954784790196459
   },
   {
     "env_config": {
@@ -308,9 +308,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769026655
+    "timestamp": 1774954784790196729
   },
   {
     "env_config": {
@@ -330,8 +330,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -341,7 +341,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769026905
+    "timestamp": 1774954784790196980
   },
   {
     "env_config": {
@@ -362,7 +362,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769027557
+    "timestamp": 1774954784790197220
   },
   {
     "env_config": {
@@ -381,9 +381,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769027807
+    "timestamp": 1774954784790197481
   },
   {
     "env_config": {
@@ -403,8 +403,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -414,7 +414,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769028218
+    "timestamp": 1774954784790197761
   },
   {
     "env_config": {
@@ -435,7 +435,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769028849
+    "timestamp": 1774954784790198102
   },
   {
     "env_config": {
@@ -454,9 +454,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769029120
+    "timestamp": 1774954784790198393
   },
   {
     "env_config": {
@@ -476,8 +476,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -487,7 +487,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769029360
+    "timestamp": 1774954784790198653
   },
   {
     "env_config": {
@@ -508,7 +508,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769029600
+    "timestamp": 1774954784790198903
   },
   {
     "env_config": {
@@ -527,9 +527,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769029861
+    "timestamp": 1774954784790199174
   },
   {
     "env_config": {
@@ -549,8 +549,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -560,7 +560,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769030111
+    "timestamp": 1774954784790199424
   },
   {
     "env_config": {
@@ -581,7 +581,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769030352
+    "timestamp": 1774954784790199675
   },
   {
     "env_config": {
@@ -600,9 +600,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769030612
+    "timestamp": 1774954784790199935
   },
   {
     "env_config": {
@@ -622,8 +622,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -633,7 +633,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769030923
+    "timestamp": 1774954784790200236
   },
   {
     "env_config": {
@@ -654,7 +654,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769031394
+    "timestamp": 1774954784790200507
   },
   {
     "env_config": {
@@ -673,9 +673,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769031654
+    "timestamp": 1774954784790200787
   },
   {
     "env_config": {
@@ -695,8 +695,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -706,7 +706,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769031895
+    "timestamp": 1774954784790201038
   },
   {
     "env_config": {
@@ -727,7 +727,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769032135
+    "timestamp": 1774954784790201318
   },
   {
     "env_config": {
@@ -746,9 +746,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769032406
+    "timestamp": 1774954784790201619
   },
   {
     "env_config": {
@@ -768,8 +768,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -779,7 +779,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769032646
+    "timestamp": 1774954784790201869
   },
   {
     "env_config": {
@@ -800,7 +800,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769032927
+    "timestamp": 1774954784790202120
   },
   {
     "env_config": {
@@ -819,9 +819,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769033247
+    "timestamp": 1774954784790202440
   },
   {
     "env_config": {
@@ -841,8 +841,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -852,7 +852,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769033658
+    "timestamp": 1774954784790202691
   },
   {
     "env_config": {
@@ -873,7 +873,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769033909
+    "timestamp": 1774954784790202931
   },
   {
     "env_config": {
@@ -892,9 +892,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769034169
+    "timestamp": 1774954784790203192
   },
   {
     "env_config": {
@@ -914,8 +914,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -925,7 +925,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769034429
+    "timestamp": 1774954784790203442
   },
   {
     "env_config": {
@@ -946,7 +946,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769034720
+    "timestamp": 1774954784790203753
   },
   {
     "env_config": {
@@ -965,9 +965,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769035191
+    "timestamp": 1774954784790204043
   },
   {
     "env_config": {
@@ -987,8 +987,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -998,7 +998,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769035632
+    "timestamp": 1774954784790204414
   },
   {
     "env_config": {
@@ -1019,7 +1019,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769035972
+    "timestamp": 1774954784790204724
   },
   {
     "env_config": {
@@ -1038,9 +1038,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769036243
+    "timestamp": 1774954784790204995
   },
   {
     "env_config": {
@@ -1060,8 +1060,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1071,7 +1071,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769036503
+    "timestamp": 1774954784790205255
   },
   {
     "env_config": {
@@ -1092,7 +1092,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769036904
+    "timestamp": 1774954784790205586
   },
   {
     "env_config": {
@@ -1111,9 +1111,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769037165
+    "timestamp": 1774954784790205857
   },
   {
     "env_config": {
@@ -1133,8 +1133,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1144,7 +1144,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769037575
+    "timestamp": 1774954784790206177
   },
   {
     "env_config": {
@@ -1165,7 +1165,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769037826
+    "timestamp": 1774954784790206438
   },
   {
     "env_config": {
@@ -1184,9 +1184,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769038086
+    "timestamp": 1774954784790206698
   },
   {
     "env_config": {
@@ -1206,8 +1206,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1217,7 +1217,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769038357
+    "timestamp": 1774954784790206959
   },
   {
     "env_config": {
@@ -1238,7 +1238,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769038607
+    "timestamp": 1774954784790207219
   },
   {
     "env_config": {
@@ -1257,9 +1257,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769038878
+    "timestamp": 1774954784790207480
   },
   {
     "env_config": {
@@ -1279,8 +1279,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1290,7 +1290,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769039128
+    "timestamp": 1774954784790207740
   },
   {
     "env_config": {
@@ -1311,7 +1311,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769039429
+    "timestamp": 1774954784790208081
   },
   {
     "env_config": {
@@ -1330,9 +1330,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769039699
+    "timestamp": 1774954784790208472
   },
   {
     "env_config": {
@@ -1352,8 +1352,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1363,7 +1363,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769039940
+    "timestamp": 1774954784790208762
   },
   {
     "env_config": {
@@ -1384,7 +1384,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769040180
+    "timestamp": 1774954784790209133
   },
   {
     "env_config": {
@@ -1403,9 +1403,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769040461
+    "timestamp": 1774954784790209523
   },
   {
     "env_config": {
@@ -1425,8 +1425,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1436,7 +1436,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769040701
+    "timestamp": 1774954784790209814
   },
   {
     "env_config": {
@@ -1457,7 +1457,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769048366
+    "timestamp": 1774954784790210065
   },
   {
     "env_config": {
@@ -1476,9 +1476,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769048636
+    "timestamp": 1774954784790210325
   },
   {
     "env_config": {
@@ -1498,8 +1498,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1509,7 +1509,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769049037
+    "timestamp": 1774954784790210596
   },
   {
     "env_config": {
@@ -1530,7 +1530,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769049277
+    "timestamp": 1774954784790210846
   },
   {
     "env_config": {
@@ -1549,9 +1549,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769049538
+    "timestamp": 1774954784790211116
   },
   {
     "env_config": {
@@ -1571,8 +1571,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1582,7 +1582,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769049788
+    "timestamp": 1774954784790211367
   },
   {
     "env_config": {
@@ -1603,7 +1603,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769050149
+    "timestamp": 1774954784790211818
   },
   {
     "env_config": {
@@ -1622,9 +1622,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769050410
+    "timestamp": 1774954784790212098
   },
   {
     "env_config": {
@@ -1644,8 +1644,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1655,7 +1655,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769050660
+    "timestamp": 1774954784790212359
   },
   {
     "env_config": {
@@ -1676,7 +1676,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769050900
+    "timestamp": 1774954784790212619
   },
   {
     "env_config": {
@@ -1695,9 +1695,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769051171
+    "timestamp": 1774954784790212890
   },
   {
     "env_config": {
@@ -1717,8 +1717,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1728,7 +1728,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769051411
+    "timestamp": 1774954784790213150
   },
   {
     "env_config": {
@@ -1749,7 +1749,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769051662
+    "timestamp": 1774954784790213391
   },
   {
     "env_config": {
@@ -1768,9 +1768,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769051922
+    "timestamp": 1774954784790213661
   },
   {
     "env_config": {
@@ -1790,8 +1790,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1801,7 +1801,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769052173
+    "timestamp": 1774954784790213922
   },
   {
     "env_config": {
@@ -1822,7 +1822,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769052413
+    "timestamp": 1774954784790214172
   },
   {
     "env_config": {
@@ -1841,9 +1841,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769052674
+    "timestamp": 1774954784790214443
   },
   {
     "env_config": {
@@ -1863,8 +1863,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1874,7 +1874,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769052914
+    "timestamp": 1774954784790214723
   },
   {
     "env_config": {
@@ -1895,7 +1895,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769053395
+    "timestamp": 1774954784790215194
   },
   {
     "env_config": {
@@ -1914,9 +1914,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769053656
+    "timestamp": 1774954784790215505
   },
   {
     "env_config": {
@@ -1936,8 +1936,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -1947,7 +1947,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769053906
+    "timestamp": 1774954784790215775
   },
   {
     "env_config": {
@@ -1968,7 +1968,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769054147
+    "timestamp": 1774954784790216046
   },
   {
     "env_config": {
@@ -1987,9 +1987,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769054417
+    "timestamp": 1774954784790216326
   },
   {
     "env_config": {
@@ -2009,8 +2009,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2020,7 +2020,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769054658
+    "timestamp": 1774954784790216587
   },
   {
     "env_config": {
@@ -2041,7 +2041,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769054908
+    "timestamp": 1774954784790216837
   },
   {
     "env_config": {
@@ -2060,9 +2060,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769055319
+    "timestamp": 1774954784790217108
   },
   {
     "env_config": {
@@ -2082,8 +2082,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2093,7 +2093,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769055910
+    "timestamp": 1774954784790217368
   },
   {
     "env_config": {
@@ -2114,7 +2114,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769056160
+    "timestamp": 1774954784790217629
   },
   {
     "env_config": {
@@ -2133,9 +2133,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769056421
+    "timestamp": 1774954784790217899
   },
   {
     "env_config": {
@@ -2155,8 +2155,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2166,7 +2166,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769056671
+    "timestamp": 1774954784790218160
   },
   {
     "env_config": {
@@ -2187,7 +2187,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769056922
+    "timestamp": 1774954784790218410
   },
   {
     "env_config": {
@@ -2206,9 +2206,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769057343
+    "timestamp": 1774954784790218801
   },
   {
     "env_config": {
@@ -2228,8 +2228,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2239,7 +2239,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769057583
+    "timestamp": 1774954784790219262
   },
   {
     "env_config": {
@@ -2260,7 +2260,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769057834
+    "timestamp": 1774954784790219512
   },
   {
     "env_config": {
@@ -2279,9 +2279,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769058274
+    "timestamp": 1774954784790220013
   },
   {
     "env_config": {
@@ -2301,8 +2301,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2312,7 +2312,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769058515
+    "timestamp": 1774954784790220254
   },
   {
     "env_config": {
@@ -2333,7 +2333,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769058765
+    "timestamp": 1774954784790220514
   },
   {
     "env_config": {
@@ -2352,9 +2352,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769059016
+    "timestamp": 1774954784790220775
   },
   {
     "env_config": {
@@ -2374,8 +2374,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2385,7 +2385,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769059266
+    "timestamp": 1774954784790221035
   },
   {
     "env_config": {
@@ -2406,7 +2406,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769059507
+    "timestamp": 1774954784790221296
   },
   {
     "env_config": {
@@ -2425,9 +2425,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769059777
+    "timestamp": 1774954784790221566
   },
   {
     "env_config": {
@@ -2447,8 +2447,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2458,7 +2458,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769061671
+    "timestamp": 1774954784790221817
   },
   {
     "env_config": {
@@ -2479,7 +2479,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769061921
+    "timestamp": 1774954784790222077
   },
   {
     "env_config": {
@@ -2498,9 +2498,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769062192
+    "timestamp": 1774954784790222348
   },
   {
     "env_config": {
@@ -2520,8 +2520,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2531,7 +2531,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769062432
+    "timestamp": 1774954784790222608
   },
   {
     "env_config": {
@@ -2552,7 +2552,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769062683
+    "timestamp": 1774954784790222859
   },
   {
     "env_config": {
@@ -2571,9 +2571,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769062943
+    "timestamp": 1774954784790223129
   },
   {
     "env_config": {
@@ -2593,8 +2593,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2604,7 +2604,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769063184
+    "timestamp": 1774954784790223380
   },
   {
     "env_config": {
@@ -2625,7 +2625,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769063574
+    "timestamp": 1774954784790223640
   },
   {
     "env_config": {
@@ -2644,9 +2644,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769063835
+    "timestamp": 1774954784790223911
   },
   {
     "env_config": {
@@ -2666,8 +2666,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2677,7 +2677,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769064206
+    "timestamp": 1774954784790224271
   },
   {
     "env_config": {
@@ -2698,7 +2698,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769064456
+    "timestamp": 1774954784790224522
   },
   {
     "env_config": {
@@ -2717,9 +2717,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769064716
+    "timestamp": 1774954784790224792
   },
   {
     "env_config": {
@@ -2739,8 +2739,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2750,7 +2750,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769064957
+    "timestamp": 1774954784790225053
   },
   {
     "env_config": {
@@ -2771,7 +2771,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769065227
+    "timestamp": 1774954784790225323
   },
   {
     "env_config": {
@@ -2790,9 +2790,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769065488
+    "timestamp": 1774954784790225684
   },
   {
     "env_config": {
@@ -2812,8 +2812,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2823,7 +2823,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769065879
+    "timestamp": 1774954784790233118
   },
   {
     "env_config": {
@@ -2844,7 +2844,7 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769066129
+    "timestamp": 1774954784790233368
   },
   {
     "env_config": {
@@ -2863,9 +2863,9 @@
     },
     "obs_config": {
       "type": "Kinematics",
-      "vehicles_count": 15
+      "vehicles_count": 10
     },
-    "timestamp": 1774951269769066390
+    "timestamp": 1774954784790233649
   },
   {
     "env_config": {
@@ -2885,8 +2885,8 @@
     "obs_config": {
       "type": "GrayscaleObservation",
       "observation_shape": [
-        128,
-        64
+        84,
+        84
       ],
       "stack_size": 4,
       "weights": [
@@ -2896,7 +2896,7 @@
       ],
       "scaling": 1.75
     },
-    "timestamp": 1774951269769066640
+    "timestamp": 1774954784790233899
   },
   {
     "env_config": {
@@ -2917,6 +2917,6 @@
       "type": "TimeToCollision",
       "horizon": 10
     },
-    "timestamp": 1774951269769066881
+    "timestamp": 1774954784790234160
   }
 ]

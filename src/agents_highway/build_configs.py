@@ -13,7 +13,8 @@ from math import ceil
 
 logger = logging.getLogger(__name__)
 
-from common.config_utils import ENVS, CONFIG
+from common.config_utils import CONFIG
+from common.env_utils import ENVS, ALLOW_OBS
 from common.file_utils import (
     save_json,
     read_json,
@@ -35,7 +36,7 @@ ALGO_FILES = ["a2c", "ppo", "dqn"]
 ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 
 OBS_CNN = ["GrayscaleObservation"]
-OBS_MLP = ["Kinematics", "TimeToCollision"]
+OBS_MLP = ["Kinematics", "TimeToCollision", "KinematicsGoal", "OccupancyGrid", "AttributesObservation", "ExitObservation"]
 
 def log_configs(env_description: str, configs: List[CONFIG]):
     logger.debug(f"Number of {env_description} configs: {len(configs)}")
@@ -285,7 +286,26 @@ def get_obs_configs():
 def get_env_configs(env_id: str) -> List[CONFIG]:
     return read_json(ENV_CONFIG_PATH(env_id))
 
+def get_env_obs_configs(env_id: str, all_obs_configs: List[CONFIG]):
+    allowed = ALLOW_OBS[env_id]
+    return [
+        config
+        for config in all_obs_configs
+        if config["type"] in allowed
+    ]
+
+# TODO: for continuous vs discrete environments and algorithms
+# def get_env_algo_configs(env_id: str, all_algo_configs: List[CONFIG]):
+#     allowed = ALLOW_ALGO[env_id]
+#     return [
+#         config
+#         for config in all_algo_configs
+#         if 
+#     ]
+#     pass
+
 def valid_config(algo_config: CONFIG, obs_config: CONFIG) -> bool:
+    # we can assume None is never anything
     return (
         algo_config["policy"] == "CnnPolicy"
         and obs_config["type"] in OBS_CNN
@@ -340,21 +360,30 @@ if __name__ == "__main__":
 
     algo_configs = extract_algo_configs()
     obs_configs = get_obs_configs()
-    print(f"\n\nAlgo Configs: {len(algo_configs)}")
-    print(f"\n\nObservation Configs: {len(obs_configs)}")
+    for config in obs_configs:
+        name = config["type"]
+        assert((name in OBS_MLP) ^ (name in OBS_CNN))
 
-    all_run_configs = []
+    print(f"\nAlgo Configs: {len(algo_configs)}")
+    print(f"\nObservation Configs: {len(obs_configs)}")
+    print("\n\n")
+    all_train_configs = []
     all_eval_configs = []
     for env in ENVS:
+        env_obs_configs = get_env_obs_configs(env, obs_configs)
         env_run_configs, env_eval_configs = build_all_configs(
-            get_env_configs(env), get_obs_configs(), get_algo_configs(),
+            get_env_configs(env), env_obs_configs, get_algo_configs(),
         )
         save_json(TRAIN_CONFIGS_PATH(env), env_run_configs)
         save_json(EVAL_CONFIGS_PATH(env), env_eval_configs)
-        all_run_configs.extend(env_run_configs)
+        all_train_configs.extend(env_run_configs)
         all_eval_configs.extend(env_eval_configs)
+        print(f">>>> {env}")
+        print(f"Train configs: {len(env_run_configs)}")
+        print(f"Eval configs: {len(env_eval_configs)}")
+        print()
 
-    print(f"\n\nTotal number of train configs: {len(all_run_configs)}")
+    print(f"\n\nTotal number of train configs: {len(all_train_configs)}")
     # print("Example config:")
     # pprint(all_run_configs[0])
 
