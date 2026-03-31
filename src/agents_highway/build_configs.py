@@ -8,6 +8,8 @@ from pathlib import Path
 from pprint import pprint
 import time
 from copy import deepcopy
+import logging
+logger = logging.getLogger(__name__)
 
 from common.config_utils import ENVS, CONFIG
 from common.file_utils import (
@@ -20,61 +22,8 @@ from common.file_utils import (
     ALGO_CONFIG_PATH,
     OBS_CONFIG_PATH,
     ALGO_CONFIG_HYPERPARAMS_PATH,
-    BASE_IMAGES_PATH,
 )
 from env_fixed_configs import *
-
-# Config generation parameters
-MIN_LANE_COUNT = 2
-MAX_LANE_COUNT = 5
-LANE_CAPACITY_RANGE = (6.0, 12.0)  # approximate per-lane throughput for min/max lanes
-
-MIN_VEHICLE_COUNT = 0
-MAX_VEHICLE_COUNT = 120
-MIN_NONZERO_VEHICLES_PER_LANE = 2
-MAX_VEHICLES_PER_LANE = 18
-VEHICLE_COUNT_STEP = 5
-VEHICLE_COUNT_VARIATIONS = (-10, -5, 0, 5, 10, 15, 20)
-
-OCCUPANCY_TARGETS = (0.0, 0.25, 0.4, 0.55, 0.7, 0.85, 1.0, 1.15)
-OCCUPANCY_DENSITY_BANDS: Tuple[Tuple[float, float, Sequence[float]], ...] = (
-    (0.0, 0.1, (0.45, 0.5, 0.55)),
-    (0.1, 0.4, (0.6, 0.7, 0.8, 0.9)),
-    (0.4, 0.65, (0.95, 1.05, 1.15)),
-    (0.65, 0.85, (1.2, 1.3, 1.4, 1.5)),
-    (0.85, 1.05, (1.45, 1.6, 1.7, 1.8)),
-    (1.05, 1.3, (1.75, 1.85, 1.95)),
-)
-MIN_DENSITY = 0.45
-MAX_DENSITY = 2.0
-
-BASE_DURATION = 35
-LANE_DURATION_BONUS = 3
-OCCUPANCY_DURATION_PIVOT = 0.6
-OCCUPANCY_DURATION_GAIN = 18
-LOW_DENSITY_THRESHOLD = 0.85
-LOW_DENSITY_BONUS = 6
-HIGH_DENSITY_THRESHOLD = 1.5
-HIGH_DENSITY_PENALTY = 8
-SMALL_FLEET_SCALE = 7
-DENSE_SMALL_FLEET_CAP = 30
-MIN_DURATION = 20
-MAX_DURATION = 75
-DURATION_ROUNDING = 5
-
-EGO_SPACING_BASE = 3.2
-EGO_SPACING_SLOPE = 0.9
-EGO_SPACING_MIN = 1.5
-EGO_SPACING_MAX = 4.5
-
-CORRELATION_PLOT_FILE = "config_correlations.png"
-CORRELATION_KEYS = (
-    "lanes_count",
-    "vehicles_count",
-    "vehicles_density",
-    "duration",
-    "ego_spacing",
-)
 
 ALGO_HYPERPAMETER_ENVS = {
     "lunarlander-v3",
@@ -86,181 +35,74 @@ ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 OBS_CNN = ["GrayscaleObservation"]
 OBS_MLP = ["Kinematics", "TimeToCollision"]
 
-
-def lane_capacity(lanes: int) -> float:
-    return float(
-        np.interp(lanes, (MIN_LANE_COUNT, MAX_LANE_COUNT), LANE_CAPACITY_RANGE)
-    )
-
-
-def round_to_step(value: float) -> int:
-    if value <= 0:
-        return 0
-    return int(VEHICLE_COUNT_STEP * max(1, round(value / VEHICLE_COUNT_STEP)))
-
-
-def clamp(value: float, lower: float, upper: float) -> float:
-    return max(lower, min(upper, value))
-
-
-def vehicle_counts_for_occupancy(
-    lanes: int, capacity: float, target_occupancy: float
-) -> Iterable[int]:
-    if target_occupancy <= 0:
-        yield 0
-        return
-
-    base = lanes * capacity * target_occupancy
-    candidate_counts = set()
-
-    for offset in VEHICLE_COUNT_VARIATIONS:
-        count = round_to_step(base + offset)
-        if count == 0:
-            continue
-        if count < MIN_VEHICLE_COUNT or count > MAX_VEHICLE_COUNT:
-            continue
-        per_lane = count / lanes
-        if per_lane < MIN_NONZERO_VEHICLES_PER_LANE or per_lane > MAX_VEHICLES_PER_LANE:
-            continue
-        candidate_counts.add(count)
-
-    if not candidate_counts:
-        count = round_to_step(base)
-        if 0 < count <= MAX_VEHICLE_COUNT:
-            per_lane = count / lanes if lanes else 0
-            if MIN_NONZERO_VEHICLES_PER_LANE <= per_lane <= MAX_VEHICLES_PER_LANE:
-                candidate_counts.add(count)
-
-    for count in sorted(candidate_counts):
-        yield count
-
-
-def density_options_for_occupancy(occupancy: float) -> Sequence[float]:
-    for lower, upper, options in OCCUPANCY_DENSITY_BANDS:
-        if lower <= occupancy < upper:
-            return tuple(d for d in options if MIN_DENSITY <= d <= MAX_DENSITY)
-    fallback_options = OCCUPANCY_DENSITY_BANDS[-1][2]
-    return tuple(d for d in fallback_options if MIN_DENSITY <= d <= MAX_DENSITY)
-
-
-def choose_duration(lanes: int, vehicles: int, density: float, capacity: float) -> int:
-    occupancy = vehicles / (lanes * capacity) if lanes and capacity else 0.0
-    base = BASE_DURATION + LANE_DURATION_BONUS * (lanes - MIN_LANE_COUNT)
-    base += int(OCCUPANCY_DURATION_GAIN * (occupancy - OCCUPANCY_DURATION_PIVOT))
-    if density <= LOW_DENSITY_THRESHOLD:
-        base += LOW_DENSITY_BONUS
-    elif density >= HIGH_DENSITY_THRESHOLD:
-        base -= HIGH_DENSITY_PENALTY
-    if vehicles <= lanes * SMALL_FLEET_SCALE and density >= HIGH_DENSITY_THRESHOLD:
-        base = min(base, DENSE_SMALL_FLEET_CAP)
-    base = clamp(base, MIN_DURATION, MAX_DURATION)
-    return int(DURATION_ROUNDING * round(base / DURATION_ROUNDING))
-
-
-def choose_ego_spacing(density: float) -> float:
-    spacing = EGO_SPACING_BASE - (density - 1.0) * EGO_SPACING_SLOPE
-    return float(round(clamp(spacing, EGO_SPACING_MIN, EGO_SPACING_MAX), 1))
-
-
-def extract_numeric_matrix(configs: Sequence[CONFIG]) -> np.ndarray:
-    rows = []
-    for cfg in configs:
-        params = cfg["config"]
-        rows.append([params[key] for key in CORRELATION_KEYS])
-    return np.asarray(rows, dtype=np.float64)
-
-
-def save_correlation_plot(configs: Sequence[CONFIG], output_path: Path) -> None:
-    data = extract_numeric_matrix(configs)
-    if data.shape[0] < 2:
-        raise ValueError(
-            "At least two configurations are required to compute correlations."
-        )
-    corr = np.corrcoef(data, rowvar=False)
-
-    fig, ax = plt.subplots(figsize=(6, 5), constrained_layout=True)
-    im = ax.imshow(corr, cmap="coolwarm", vmin=-1, vmax=1)
-
-    ax.set_xticks(range(len(CORRELATION_KEYS)))
-    ax.set_xticklabels(CORRELATION_KEYS, rotation=45, ha="right")
-    ax.set_yticks(range(len(CORRELATION_KEYS)))
-    ax.set_yticklabels(CORRELATION_KEYS)
-    ax.set_title("Correlation between highway-env config variables")
-
-    for i in range(corr.shape[0]):
-        for j in range(corr.shape[1]):
-            ax.text(j, i, f"{corr[i, j]:.2f}", ha="center", va="center", color="black")
-
-    fig.colorbar(im, ax=ax, fraction=0.046, pad=0.04, label="Pearson r")
-    fig.savefig(output_path, dpi=200)
-    plt.close(fig)
-
+def log_configs(env_description: str, configs: List[CONFIG]):
+    logger.debug(f"Number of {env_description} configs: {len(configs)}")
 
 def build_highway_configs() -> List[CONFIG]:
-    """Generate a diverse collection of highway-env configurations.
-
-    The sampler covers a wide spectrum of lane counts, traffic densities, and
-    vehicle counts while preserving plausible ratios between them.
-    """
-
-    configs: List[CONFIG] = []
-    dedup: set[Tuple[int, int, float]] = set()
-
-    for lanes in range(MIN_LANE_COUNT, MAX_LANE_COUNT + 1):
-        capacity = lane_capacity(lanes)
-
-        for target_occupancy in OCCUPANCY_TARGETS:
-            for vehicles in vehicle_counts_for_occupancy(
-                lanes, capacity, target_occupancy
-            ):
-                if vehicles > MAX_VEHICLE_COUNT:
-                    continue
-
-                occupancy = vehicles / (lanes * capacity) if lanes and capacity else 0.0
-                density_candidates = density_options_for_occupancy(occupancy)
-
-                for density in density_candidates:
-                    density = float(round(density, 2))
-                    if not (MIN_DENSITY <= density <= MAX_DENSITY):
-                        continue
-                    if vehicles == 0 and density > MIN_DENSITY:
-                        continue
-
-                    key = (lanes, vehicles, density)
-                    if key in dedup:
-                        continue
-                    dedup.add(key)
-
-                    duration = choose_duration(lanes, vehicles, density, capacity)
-
-                    config = deepcopy(HIGHWAY_FIXED_CONFIGS)
-                    config["config"].update({
-                            "lanes_count": lanes,
-                            "vehicles_count": vehicles,
-                            "vehicles_density": density,
-                            "duration": duration,
-                            "ego_spacing": choose_ego_spacing(density),
-                    })
-                    configs.append(config)
-
-    configs.sort(
-        key=lambda cfg: (
-            cfg["config"]["lanes_count"],
-            cfg["config"]["vehicles_count"],
-            cfg["config"]["vehicles_density"],
-        )
-    )
+    LANE_COUNTS = np.linspace(2, 5, 4, dtype=int)
+    LANE_CAPACITY = 10 # capacity of each lane in the fixed duration
+    VEHICLE_DENSITIES = [np.float64(0.0)] + list(np.linspace(0.5, 2.5, 9, dtype=float))
+    MAX_VEHICLES_COUNT = 50
+    DURATION = 40
+    configs = []
+    for (lane_cnt, density) in itertools.product(LANE_COUNTS, VEHICLE_DENSITIES):
+        config = deepcopy(HIGHWAY_FIXED_CONFIGS)
+        """
+        Example good configs (tested to see if make sense):
+        lanes_count: 5, vehicles_count: 50, vehicles_density: 2, duration: 40        
+        lanes_count: 5, vehicles_count: 10, vehicles_density: 0.5, duration: 40
+        lanes_count: 2, vehicles_count: 5, vehicles_density: 0.5, duration: 40 (decent)
+        """
+        # High densities make the ego not be able to traverse everything, so we can upper bound the vehicle count
+        veh_cnt = min(MAX_VEHICLES_COUNT, lane_cnt * LANE_CAPACITY * (density / 2))
+        assert(density > 0 or veh_cnt == 0)
+        config["config"].update({
+            "lanes_count": lane_cnt,
+            "vehicles_density": density,
+            "vehicles_count": veh_cnt,
+            "duration": DURATION,
+            "ego_spacing": 2,
+        })
+        configs.append(config)
+    log_configs("Highway", configs)
     return configs
 
 def build_merge_configs() -> List[CONFIG]:
-    return [
-        deepcopy(MERGE_FIXED_CONFIGS)
-    ]
+    LANES_COUNT = np.linspace(2, 4, 3, dtype=int)
+    MERGE_LENGTHS = np.linspace(50, 125, 4, dtype=int)
+    configs = []
+    for (lanes_cnt, merge_length) in itertools.product(LANES_COUNT, MERGE_LENGTHS):
+        max_vehicle_cnt = 10 + (lanes_cnt - 2) * 5
+        VEHICLE_COUNTS = np.linspace(0, max_vehicle_cnt, max_vehicle_cnt // 5 + 1, dtype=int)
+        for veh_cnt in VEHICLE_COUNTS:
+            config = deepcopy(MERGE_FIXED_CONFIGS)
+            config["config"].update({
+                "lanes_count": lanes_cnt,
+                "vehicles_count": veh_cnt,
+                "merge_length_parallel": merge_length,
+            })
+            configs.append(config)
+    return configs
 
 def build_roundabout_configs() -> List[CONFIG]:
-    return [
-        deepcopy(ROUNDABOUT_FIXED_CONFIGS)
-    ]
+    LANE_COUNTS = np.linspace(2, 4, 3, dtype=int)
+    RADIUS = np.linspace(20, 40, 3, dtype=int)
+    configs = []
+    for lanes_idx, lanes_cnt in enumerate(LANE_COUNTS):
+        for radius_idx, radius in enumerate(RADIUS):
+            max_vehicle_count = min(20, 10 + (lanes_idx + radius_idx) * 5)
+            VEHICLE_COUNTS = np.linspace(0, max_vehicle_count, max_vehicle_count // 5 + 1, dtype=int)
+            for veh_cnt in VEHICLE_COUNTS:
+                duration = 15 + radius / 10 + (lanes_cnt - 2)  # min: 17, max: 21
+                config = deepcopy(ROUNDABOUT_FIXED_CONFIGS)
+                config["config"].update({
+                    "vehicles_count": veh_cnt,
+                    "roundabout_lanes": lanes_cnt,
+                    "roundabout_radius": radius,
+                    "duration": duration,
+                })
+                configs.append(config)
+    return configs
 
 def build_u_turn_configs() -> List[CONFIG]:
     return [
@@ -273,16 +115,108 @@ def build_two_way_configs() -> List[CONFIG]:
     ]
 
 def build_exit_configs() -> List[CONFIG]:
-    raise NotImplementedError
+    configs = []
+    ROAD_LENGTH = 1000
+    EXIT_POSITIONS = np.linspace(300, 800, 6, dtype=int)
+    EXIT_LENGTHS = np.linspace(20, 200, 5, dtype=int)
+    for (pos, length) in itertools.product(EXIT_POSITIONS, EXIT_LENGTHS):
+        config = deepcopy(EXIT_FIXED_CONFIGS)
+        # duration probably should be a function of exit position and exit length
+        # default duration was 18 with exit_position = 400
+        # also need to take into account that larger positions
+        # will have more vehicles for the ego to handle, so it could take more time to get to the exit
+        duration = length // 30
+        config["config"].update({
+            "exit_position": pos,
+            "exit_length": length,
+            "road_length": ROAD_LENGTH,
+        })
+    return configs
 
 def build_lane_keeping_configs() -> List[CONFIG]:
-    raise NotImplementedError
+    STEERING_RANGES = np.linspace(20, 60, 5, dtype=int)
+    DURATIONS = np.linspace(100, 200, 3, dtype=int)
+    NOISES = np.linspace(0, 0.2, 5, dtype=float)
+
+    configs = []
+    for (steering, duration, noise) in itertools.product(STEERING_RANGES, DURATIONS, NOISES):
+        config = deepcopy(LANE_KEEPING_FIXED_CONFIGS)
+        ang = np.deg2rad(steering)
+        config["config"]["action"]["steering_range"] = [-ang, ang]
+        config["config"].update({
+            "duration": duration,
+            "state_noise": noise,
+            "derivative_noise": noise,
+        })
+        configs.append(config)
+
+    log_configs("Lane Keeping", configs)
+    return configs
 
 def build_racetrack_configs() -> List[CONFIG]:
-    raise NotImplementedError
+    STEERING_RANGES = np.linspace(30, 60, 3, dtype=int)
+    BASIC_VEHICLE_COUNTS = np.linspace(0, 10, 3, dtype=int)
+    configs = []
+    for (steering, veh_cnt) in itertools.product(STEERING_RANGES, BASIC_VEHICLE_COUNTS):
+        config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
+        ang = np.deg2rad(steering)
+        config["config"]["action"]["steering_range"] = [-ang, ang]
+        config.update({
+            "vehicles_count": veh_cnt,
+        })
+        configs.append(config)
+
+    OVAL_VEHICLE_COUNTS = np.linspace(0, 20, 3, dtype=int)
+    ROAD_LENGTHS = np.linspace(100, 200, 3, dtype=int)
+    LANES_COUNT = np.linspace(2, 4, 3, dtype=int)
+    for (steering, veh_cnt, road_length, lanes_count) in itertools.product(
+        STEERING_RANGES, OVAL_VEHICLE_COUNTS, ROAD_LENGTHS, LANES_COUNT,
+    ):
+        config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
+        ang = np.deg2rad(steering)
+        config["config"]["action"]["steering_range"] = [-ang, ang]
+
+        all_but_2nd = [i for i in range(1, lanes_count+1) if i != 2]
+        BLOCK_LANES = [[], [1]]
+        if all_but_2nd not in BLOCK_LANES:
+            BLOCK_LANES.append(all_but_2nd)
+
+        for blocks in BLOCK_LANES:
+            config["config"].update({
+                "lanes_count": lanes_count,
+                "vehicles_count": veh_cnt,
+                "length": road_length,
+                "block_lanes": blocks,
+            })
+            configs.append(config)
+    log_configs("Racetrack", configs)
+    return configs
 
 def build_parking_configs() -> List[CONFIG]:
-    raise NotImplementedError
+    PARKING_SPOTS = np.linspace(1, 16, 6, dtype=int)
+    STEERING_RANGES = np.linspace(30, 60, 3, dtype=int)
+    ADD_WALLS = [True, False]
+    OCCUPANCIES = [0, 0.25, 0.5, 0.75]
+    configs = []
+    mapper = {}
+    for (spots, steering, walls) in itertools.product(PARKING_SPOTS, STEERING_RANGES, ADD_WALLS):
+        veh_cnts = set()
+        actual_spots = spots * 2
+        for occ in OCCUPANCIES:
+            veh_cnts.add(int(occ * actual_spots))
+        for veh_cnt in veh_cnts:
+            config = deepcopy(PARKING_FIXED_CONFIGS)
+            ang = np.deg2rad(steering)
+            config["config"]["action"]["steering_range"] = [-ang, ang]
+            config["config"].update({
+                "parking_spots": spots,
+                "vehicles_count": veh_cnt,
+                "add_walls": walls,
+            })
+            configs.append(config)
+        mapper[spots] = veh_cnts
+    log_configs("Parking", configs)
+    return configs
 
 def extract_algo_configs():
     aggregated: Dict[str, Dict[str, Any]] = {}
@@ -375,14 +309,12 @@ def build_configs(builder: Callable[[], List[CONFIG]], save_path: Path, name: st
     return configs
 
 if __name__ == "__main__":
-    highway_configs = build_configs(build_highway_configs, ENV_CONFIG_PATH("highway-fast-v0"), "Highway")
-    build_configs(build_merge_configs, ENV_CONFIG_PATH("merge-generic-v0"), "Merge")
-    build_configs(build_roundabout_configs, ENV_CONFIG_PATH("roundabout-generic-v0"), "Roundabout")
-
-    ensure_dir(BASE_IMAGES_PATH)
-    correlation_plot_path = BASE_IMAGES_PATH / CORRELATION_PLOT_FILE
-    save_correlation_plot(highway_configs, correlation_plot_path)
-    print(f"Correlation plot written to {correlation_plot_path}")
+    build_configs(build_highway_configs, ENV_CONFIG_PATH("highway"), "Highway")
+    build_configs(build_merge_configs, ENV_CONFIG_PATH("merge"), "Merge")
+    build_configs(build_roundabout_configs, ENV_CONFIG_PATH("roundabout"), "Roundabout")
+    build_configs(build_lane_keeping_configs, ENV_CONFIG_PATH("lane-keeping"), "Lane Keeping")
+    build_configs(build_racetrack_configs, ENV_CONFIG_PATH("racetrack"), "Racetrack")
+    build_configs(build_parking_configs, ENV_CONFIG_PATH("parking"), "Parking")
 
     algo_configs = extract_algo_configs()
     obs_configs = get_obs_configs()
@@ -397,13 +329,13 @@ if __name__ == "__main__":
         )
         save_json(TRAIN_CONFIGS_PATH(env), env_run_configs)
         save_json(EVAL_CONFIGS_PATH(env), env_eval_configs)
-        all_run_configs.append(env_run_configs)
-        all_eval_configs.append(env_eval_configs)
+        all_run_configs.extend(env_run_configs)
+        all_eval_configs.extend(env_eval_configs)
 
     print(f"\n\nTotal number of train configs: {len(all_run_configs)}")
-    print("Example config:")
-    pprint(all_run_configs[0])
+    # print("Example config:")
+    # pprint(all_run_configs[0])
 
     print(f"\n\nTotal number of eval configs: {len(all_eval_configs)}")
-    print("Example config:")
-    pprint(all_eval_configs[0])
+    # print("Example config:")
+    # pprint(all_eval_configs[0])

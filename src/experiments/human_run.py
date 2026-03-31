@@ -161,10 +161,20 @@ def main() -> None:
     if args.env.startswith("highway"):
         env_config.update(
             {
-                "lanes_count": 5,
-                "vehicles_count": 50,
+                "lanes_count": 2,
+                "vehicles_count": 5,
+                "vehicles_density": 0.5,
+                "duration": 40,
+                "ego_spacing": 2,
             }
         )
+    if args.env == "roundabout-generic-v0":
+        env_config.update({
+            "roundabout_lanes": 2,
+            "roundabout_radius": 30,
+            "vehicles_count": 15,
+            "duration": 15 + 20 / 4,
+        })
     if args.env.startswith("intersection"):
         env_config.update(
             {
@@ -176,21 +186,43 @@ def main() -> None:
                 },
             }
         )
-    if args.env.startswith("exit"):
+    if args.env == "merge-generic-v0":
+        env_config.update({
+            # "length_before_merge": 150,
+            # "vehicles_count": 10,
+            # "length_after_merge": 250,
+            "lanes_count": 4,
+            "merge_length_parallel": 50,
+            "vehicles_count": 20,
+        })
+    if args.env == "exit-v0":
         env_config.update(
             {
                 "lanes_count": 3,
                 "vehicles_count": 10,
                 "vehicles_density": 1,
+                "road_length": 1000,
+                "exit_position": 300,
+                "exit_length": 30,
+                "duration": 10,
             }
         )
     if args.env.startswith("two-way"):
         env_config.update(
             
         )
+    if args.env == "racetrack-v0":
+        env_config.update({
+            "vehicles_count": 10,
+            "duration": 100,
+        })
+        pass
     if args.env == "racetrack-oval-v0":
         env_config.update({
-            "no_lanes": 5,
+            # "no_lanes": 5,
+            "vehicles_count": 20,
+            "duration": 100,
+            "block_lanes": [],
         })
     if args.env == "u-turn-v0":
        env_config.update({
