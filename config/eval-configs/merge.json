@@ -1,0 +1,3362 @@
+[
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044211966
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044212153
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044212320
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044212457
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044212546
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044212685
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044212777
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044212855
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044212939
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044213042
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044213142
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044213233
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044213326
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044213414
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044213497
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044213582
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044213660
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044213792
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044213878
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044213961
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044214051
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044214153
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044214238
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044214321
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044214402
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044214537
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044214613
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044214695
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044214782
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044214864
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044214948
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044215027
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044215117
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044217096
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044217236
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044217334
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044217431
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044217519
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044217614
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044217708
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044217791
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044217926
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044218015
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044218092
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044218190
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044218274
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044218366
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044218449
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044218532
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044218609
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044218692
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044218774
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044218848
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044218993
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044219081
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044219160
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044219243
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044219326
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044219403
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044219485
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044219571
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044219654
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044219744
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044219827
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044219921
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044220916
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044221029
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044221121
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044221233
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044221328
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044221415
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044221500
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044221585
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044221664
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044221745
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044221830
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044221906
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044222065
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044222150
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044222229
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044222314
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044222397
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044222477
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 3,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044222561
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044222643
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044222719
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044222799
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044222891
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044222971
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044223054
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044223138
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044223216
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044223299
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044223459
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044224379
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044224472
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044224564
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044225523
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 50
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044225621
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044225713
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044225796
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044225884
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044225970
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044226063
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044226147
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044226232
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044226310
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044226393
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044226478
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044226645
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044226724
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044226809
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044226885
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 75
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044226967
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044227050
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044227127
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044227204
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044227287
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044227364
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044227449
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044227530
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044227607
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044227699
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044227781
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044227860
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044227942
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044228024
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044228099
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 100
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044228195
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044229262
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044229349
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044229459
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044229550
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044229638
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 5,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044229723
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044229818
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044229899
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044229981
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044230065
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044230145
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 15,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044230229
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001044230316
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001044230394
+  },
+  {
+    "env_config": {
+      "env_id": "merge-generic-v0",
+      "config": {
+        "length_after_merge": 250,
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "merge_length_parallel": 125
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001044230475
+  }
+]

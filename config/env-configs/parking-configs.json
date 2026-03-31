@@ -1,0 +1,2642 @@
+[
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 1,
+      "vehicles_count": 1,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 2,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 4,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 4,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 3,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 7,
+      "vehicles_count": 7,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 10,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 5,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 10,
+      "vehicles_count": 15,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 19,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 13,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 13,
+      "vehicles_count": 6,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -0.7853981633974483,
+          0.7853981633974483
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": true
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 0,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 8,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 16,
+      "add_walls": false
+    }
+  },
+  {
+    "env-id": "parking-v0",
+    "train_timesteps": 300000,
+    "eval_freq": 3000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 5,
+    "config": {
+      "duration": 60,
+      "action": {
+        "type": "ContinuousAction",
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "parking_spots": 16,
+      "vehicles_count": 24,
+      "add_walls": false
+    }
+  }
+]

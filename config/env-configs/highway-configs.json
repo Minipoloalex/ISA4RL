@@ -1,0 +1,562 @@
+[
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 0.0,
+      "vehicles_count": 0.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 0.5,
+      "vehicles_count": 5.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 0.75,
+      "vehicles_count": 7.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 1.0,
+      "vehicles_count": 10.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 1.25,
+      "vehicles_count": 12.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 1.5,
+      "vehicles_count": 15.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 1.75,
+      "vehicles_count": 17.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 2.0,
+      "vehicles_count": 20.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 2.25,
+      "vehicles_count": 22.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 2,
+      "vehicles_density": 2.5,
+      "vehicles_count": 25.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 0.0,
+      "vehicles_count": 0.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 0.5,
+      "vehicles_count": 7.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 0.75,
+      "vehicles_count": 11.25,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 1.0,
+      "vehicles_count": 15.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 1.25,
+      "vehicles_count": 18.75,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 1.5,
+      "vehicles_count": 22.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 1.75,
+      "vehicles_count": 26.25,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 2.0,
+      "vehicles_count": 30.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 2.25,
+      "vehicles_count": 33.75,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 3,
+      "vehicles_density": 2.5,
+      "vehicles_count": 37.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 0.0,
+      "vehicles_count": 0.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 0.5,
+      "vehicles_count": 10.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 0.75,
+      "vehicles_count": 15.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 1.0,
+      "vehicles_count": 20.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 1.25,
+      "vehicles_count": 25.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 1.5,
+      "vehicles_count": 30.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 1.75,
+      "vehicles_count": 35.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 2.0,
+      "vehicles_count": 40.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 2.25,
+      "vehicles_count": 45.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 4,
+      "vehicles_density": 2.5,
+      "vehicles_count": 50,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 0.0,
+      "vehicles_count": 0.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 0.5,
+      "vehicles_count": 12.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 0.75,
+      "vehicles_count": 18.75,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 1.0,
+      "vehicles_count": 25.0,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 1.25,
+      "vehicles_count": 31.25,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 1.5,
+      "vehicles_count": 37.5,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 1.75,
+      "vehicles_count": 43.75,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 2.0,
+      "vehicles_count": 50,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 2.25,
+      "vehicles_count": 50,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "highway-fast-v0",
+    "config": {
+      "lanes_count": 5,
+      "vehicles_density": 2.5,
+      "vehicles_count": 50,
+      "duration": 40,
+      "ego_spacing": 2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  }
+]

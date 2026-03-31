@@ -1,0 +1,2922 @@
+[
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032617257
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032617608
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032617758
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.5,
+        "vehicles_count": 5.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032617866
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.5,
+        "vehicles_count": 5.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032617994
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.5,
+        "vehicles_count": 5.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032618115
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.75,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032618208
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.75,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032618289
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.75,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032618370
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.0,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032618483
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.0,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032618559
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.0,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032618643
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.25,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032618722
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.25,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032618801
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.25,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032618875
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.5,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032618963
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.5,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032619037
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.5,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032619140
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.75,
+        "vehicles_count": 17.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032619218
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.75,
+        "vehicles_count": 17.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032619309
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.75,
+        "vehicles_count": 17.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032619391
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032619476
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032619550
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032619639
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.25,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032619717
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.25,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032619813
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.25,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032619904
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.5,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032619982
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.5,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032620245
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 2.5,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032620318
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032620394
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032620472
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032620549
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.5,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032620653
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.5,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032620736
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.5,
+        "vehicles_count": 7.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032622669
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.75,
+        "vehicles_count": 11.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032622772
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.75,
+        "vehicles_count": 11.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032622858
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.75,
+        "vehicles_count": 11.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032622957
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.0,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032623050
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.0,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032623135
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.0,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032623256
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.25,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032623346
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.25,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032623432
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.25,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032623526
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.5,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032623612
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.5,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032623686
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.5,
+        "vehicles_count": 22.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032623949
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.75,
+        "vehicles_count": 26.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032624028
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.75,
+        "vehicles_count": 26.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032624161
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.75,
+        "vehicles_count": 26.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032624243
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.0,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032624323
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.0,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032624396
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.0,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032624516
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.25,
+        "vehicles_count": 33.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032624600
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.25,
+        "vehicles_count": 33.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032624677
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.25,
+        "vehicles_count": 33.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032624756
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032624855
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032624942
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032625018
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032625097
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032625171
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032625244
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.5,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032625326
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.5,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032625400
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.5,
+        "vehicles_count": 10.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032625569
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.75,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032625650
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.75,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032625733
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.75,
+        "vehicles_count": 15.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032625823
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032625903
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032625975
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.0,
+        "vehicles_count": 20.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032626056
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.25,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032626134
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.25,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032626211
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.25,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032626287
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.5,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032626366
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.5,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032626439
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.5,
+        "vehicles_count": 30.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032626596
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.75,
+        "vehicles_count": 35.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032626685
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.75,
+        "vehicles_count": 35.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032626763
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.75,
+        "vehicles_count": 35.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032626845
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.0,
+        "vehicles_count": 40.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032626929
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.0,
+        "vehicles_count": 40.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032627001
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.0,
+        "vehicles_count": 40.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032627076
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.25,
+        "vehicles_count": 45.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032627157
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.25,
+        "vehicles_count": 45.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032627231
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.25,
+        "vehicles_count": 45.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032627303
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032627385
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032627460
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032627535
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032627630
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032627701
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032627773
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.5,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032627888
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.5,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032627974
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.5,
+        "vehicles_count": 12.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032628045
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.75,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032628125
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.75,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032628199
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.75,
+        "vehicles_count": 18.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032628280
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.0,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032628454
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.0,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032628550
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.0,
+        "vehicles_count": 25.0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032628638
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.25,
+        "vehicles_count": 31.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032628728
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.25,
+        "vehicles_count": 31.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032628808
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.25,
+        "vehicles_count": 31.25,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032628887
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032628970
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032629066
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.5,
+        "vehicles_count": 37.5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032629140
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.75,
+        "vehicles_count": 43.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032629240
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.75,
+        "vehicles_count": 43.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032629361
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 1.75,
+        "vehicles_count": 43.75,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032629438
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032629516
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032629600
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.0,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032629677
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032629757
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032629834
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.25,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032629914
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001032629994
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001032630068
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001032630149
+  }
+]

@@ -1,0 +1,626 @@
+[
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 0,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 5,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 10,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 0,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 5,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 10,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 0,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 5,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 10,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 0,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 5,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 2,
+      "vehicles_count": 10,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 0,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 5,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 10,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 15,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 0,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 5,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 10,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 15,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 0,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 5,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 10,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 15,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 0,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 5,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 10,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 3,
+      "vehicles_count": 15,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 0,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 5,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 10,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 15,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 20,
+      "merge_length_parallel": 50
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 0,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 5,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 10,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 15,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 20,
+      "merge_length_parallel": 75
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 0,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 5,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 10,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 15,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 20,
+      "merge_length_parallel": 100
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 0,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 5,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 10,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 15,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "merge-generic-v0",
+    "config": {
+      "length_after_merge": 250,
+      "lanes_count": 4,
+      "vehicles_count": 20,
+      "merge_length_parallel": 125
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  }
+]

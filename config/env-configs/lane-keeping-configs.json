@@ -1,0 +1,1652 @@
+[
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.3490658503988659,
+          0.3490658503988659
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.5235987755982988,
+          0.5235987755982988
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.6981317007977318,
+          0.6981317007977318
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -0.8726646259971648,
+          0.8726646259971648
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 100,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 150,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.0,
+      "derivative_noise": 0.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.05,
+      "derivative_noise": 0.05
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.1,
+      "derivative_noise": 0.1
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.15000000000000002,
+      "derivative_noise": 0.15000000000000002
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "lane-keeping-v0",
+    "config": {
+      "action": {
+        "type": "ContinuousAction",
+        "longitudinal": false,
+        "lateral": true,
+        "dynamical": true,
+        "steering_range": [
+          -1.0471975511965976,
+          1.0471975511965976
+        ]
+      },
+      "duration": 200,
+      "state_noise": 0.2,
+      "derivative_noise": 0.2
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  }
+]

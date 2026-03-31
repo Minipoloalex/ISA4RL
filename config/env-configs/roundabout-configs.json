@@ -1,0 +1,535 @@
+[
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 20,
+      "duration": 17.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 20,
+      "duration": 17.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 20,
+      "duration": 17.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 30,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 30,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 30,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 30,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 40,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 40,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 40,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 40,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 2,
+      "roundabout_radius": 40,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 20,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 20,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 20,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 20,
+      "duration": 18.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 30,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 30,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 30,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 30,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 30,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 40,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 40,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 40,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 40,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 3,
+      "roundabout_radius": 40,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 20,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 20,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 20,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 20,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 20,
+      "duration": 19.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 30,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 30,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 30,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 30,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 30,
+      "duration": 20.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 0,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 40,
+      "duration": 21.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 5,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 40,
+      "duration": 21.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 10,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 40,
+      "duration": 21.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 15,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 40,
+      "duration": 21.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  },
+  {
+    "env_id": "roundabout-generic-v0",
+    "config": {
+      "vehicles_count": 20,
+      "roundabout_lanes": 4,
+      "roundabout_radius": 40,
+      "duration": 21.0
+    },
+    "train_timesteps": 100000,
+    "eval_freq": 1000,
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10
+  }
+]

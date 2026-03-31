@@ -1,0 +1,7277 @@
+[
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119266618
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119266781
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119266914
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119267032
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119267124
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119267252
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119267339
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119267412
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119267485
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119267606
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119267702
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119267785
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119267866
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119267938
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119268009
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119268088
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119268160
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119268270
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119268369
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119268453
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119269247
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119270028
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119270111
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119270197
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119270276
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119270393
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119270469
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119270551
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119270624
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119270717
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119270799
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119270871
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119270948
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119271058
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119271130
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119271204
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119271281
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119271355
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119271441
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119271520
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119271606
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119271717
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119271797
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119271868
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.3490658503988659,
+            0.3490658503988659
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119271944
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119272022
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119272094
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119272906
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119273003
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119273084
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119273168
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119273257
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119273978
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119274099
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119274188
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119274266
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119274350
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119274432
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119274504
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119274581
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119274659
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119274742
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119274820
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119274898
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119274971
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119275167
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119275249
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119275331
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119275409
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119275484
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119275557
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119275634
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119275706
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119275779
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119275857
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119275930
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119276002
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119276135
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119276215
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119276307
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119309844
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119309975
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119310054
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119310166
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119310982
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119311092
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119311175
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119311264
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119311349
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.5235987755982988,
+            0.5235987755982988
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119311430
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119311512
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119311581
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119311666
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119311865
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119311950
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119312036
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119312121
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119312204
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119312274
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119312353
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119312427
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119312499
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119312579
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119312650
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119312720
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119312799
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119312883
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119312956
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119313033
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119313165
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119313241
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119313322
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119313411
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119314696
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119314833
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119315617
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119315716
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119315816
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119315914
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119316002
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119316078
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119316154
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119316232
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119316311
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119316386
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119316463
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119316583
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119316653
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119316737
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119316856
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119316945
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119317023
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119317099
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119317182
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.6981317007977318,
+            0.6981317007977318
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119317265
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119317337
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119317409
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119317485
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119317559
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119317646
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119317722
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119317809
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119317881
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119317958
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119318036
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119318110
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119318191
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119318888
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119318967
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119319078
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119319169
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119319257
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119319345
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119320090
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119320180
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119320275
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119320361
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119320438
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119320518
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119320604
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119320697
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119320771
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119320851
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119320925
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119320998
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119321077
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119321150
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119321226
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119321306
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119321380
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119321457
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119321550
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119321623
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119321728
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119321806
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119321878
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119322785
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119322869
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119322952
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119323832
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119323936
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119324018
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119324127
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119324213
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119324292
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119324375
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119324457
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119324539
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119324623
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119324716
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119324815
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119324895
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119324979
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119325071
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 100,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119325151
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119325238
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119325309
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119325385
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119325464
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119325533
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119325628
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119325735
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119325805
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119325874
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119325951
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119326021
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119326105
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119326183
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119326270
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 150,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119326342
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119326429
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119327161
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119327254
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119327341
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119327415
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119327492
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119327573
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119327647
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119327722
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119327802
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119327883
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119327956
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001119328034
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001119328108
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 200,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001119328182
+  }
+]

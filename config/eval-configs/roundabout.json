@@ -1,0 +1,2872 @@
+[
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038613423
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038613623
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038613731
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038613838
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038613924
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038614084
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038614181
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038614295
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 20,
+        "duration": 17.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038614391
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038614536
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038614657
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038614744
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038614834
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038614911
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038614994
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038615075
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038615150
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038615275
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038615376
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038615454
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 30,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038615541
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038615628
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038615706
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038615791
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038615872
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038616002
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038616080
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038616160
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038616247
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038616348
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038616524
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038616682
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038616774
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038616881
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038616978
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 2,
+        "roundabout_radius": 40,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038617061
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038617146
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038617226
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038617309
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038617395
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038617471
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038617602
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038617685
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038617775
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038617855
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038617937
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038618014
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 20,
+        "duration": 18.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038618094
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038618177
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038618266
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038618347
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038618430
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038618523
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038618655
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038618739
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038618812
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038618882
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038618958
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038619027
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038619114
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038619201
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038619272
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 30,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038619350
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038619426
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038619495
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038619688
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038619764
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038619835
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038619919
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038619996
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038620066
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038620142
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038620218
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038620302
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038620378
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038620458
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038620527
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 3,
+        "roundabout_radius": 40,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038620656
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038620731
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038620806
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038620882
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038620960
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038621030
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038621105
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038621181
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038621263
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038621339
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038621414
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038621487
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038621565
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038621641
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038621713
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 20,
+        "duration": 19.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038621790
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038621904
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038621975
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038622049
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038622126
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038622198
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038622270
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038622377
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038622533
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038622624
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038622703
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038622779
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038622855
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038622933
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038623009
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 30,
+        "duration": 20.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038623087
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038623167
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038623289
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 0,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038623372
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038623446
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038623527
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 5,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038623603
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038623691
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038623765
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 10,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038623842
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038623917
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038623991
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 15,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038624068
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "Kinematics",
+      "vehicles_count": 15
+    },
+    "timestamp": 1774887001038624141
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        128,
+        64
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "timestamp": 1774887001038624225
+  },
+  {
+    "env_config": {
+      "env_id": "roundabout-generic-v0",
+      "config": {
+        "vehicles_count": 20,
+        "roundabout_lanes": 4,
+        "roundabout_radius": 40,
+        "duration": 21.0
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "TimeToCollision",
+      "horizon": 10
+    },
+    "timestamp": 1774887001038624301
+  }
+]
