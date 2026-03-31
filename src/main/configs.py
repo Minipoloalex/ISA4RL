@@ -6,7 +6,7 @@ from typing import Any, Callable, Dict, Optional
 
 import gymnasium as gym
 from stable_baselines3.common.base_class import BaseAlgorithm
-from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
+from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv, VecNormalize
 
 from common.file_utils import *
 from common.config_utils import CONFIG, get_algo_id, get_instance_id, save_algo_config, save_instance_config
@@ -14,9 +14,10 @@ from utils.sb3_utils import (
     _resolve_schedule_placeholders,
     map_algo_name_to_class,
     _parse_policy_kwargs,
-    _make_env,
-    _make_vec_env,
-    _make_model,
+    make_env_helper,
+    make_vec_env_helper,
+    make_env_vec_normalize,
+    make_model_helper,
 )
 
 # Mostly refer to the environment
@@ -28,9 +29,11 @@ ModelFactory = Callable[[VecEnv], BaseAlgorithm]
 
 @dataclass
 class InstanceConfig:
-    make_env: EnvFactory
+    make_test_env: EnvFactory
     n_test_episodes: int
     instance_folder_path: Path
+
+    # Only used for metafeatures extraction (no normalization)
     _test_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
 
     @classmethod
@@ -50,7 +53,7 @@ class InstanceConfig:
         env_kwargs["observation"] = obs_config
 
         return cls(
-            make_env=partial(_make_env, env_name, env_kwargs),
+            make_test_env=partial(make_env_helper, env_name, env_kwargs),
             n_test_episodes=env_config["n_test_episodes"],
             instance_folder_path=instance_folder_path,
         )
@@ -58,7 +61,7 @@ class InstanceConfig:
     def ensure_test_env(self) -> gym.Env:
         """Instantiate a single-environment instance for evaluation."""
         if self._test_env is None:
-            self._test_env = self.make_env()
+            self._test_env = self.make_test_env()
         return self._test_env
 
     def close(self) -> None:
@@ -72,7 +75,8 @@ class InstanceConfig:
 @dataclass
 class TrainConfig(InstanceConfig):
     make_model: ModelFactory
-    make_vec_env: VecEnvFactory
+    make_train_env: VecEnvFactory
+    make_eval_env: VecEnvFactory
     timesteps: int
     train_folder_path: Path
     eval_freq: int
@@ -82,7 +86,10 @@ class TrainConfig(InstanceConfig):
     _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
 
     @classmethod
-    def from_dict(cls, env_name: str, config_dict: Dict[str, Any]) -> "TrainConfig":
+    def from_dict(cls, env_name: str, config_dict: Dict[str, Any], use_best_model: bool = True) -> "TrainConfig":
+        """
+        use_best_model: only useful for evaluating (loads best model instead of model saved last)
+        """
         env_config = config_dict["env_config"].copy()
         obs_config = config_dict["obs_config"].copy()
         algo_config = config_dict["algo_config"].copy()
@@ -108,6 +115,7 @@ class TrainConfig(InstanceConfig):
         env_kwargs["observation"] = obs_config
 
         algo_name = algo_config.pop("algo")
+        use_vec_normalize = algo_config.pop("normalize", False)
         n_envs = algo_config.pop("n_envs", 1)
         policy = algo_config["policy"]
 
@@ -126,18 +134,47 @@ class TrainConfig(InstanceConfig):
         vec_env_kwargs = None if n_envs == 1 else {"start_method": "spawn"}
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
+        model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
+        vec_normalize_file = BEST_VEC_NORMALIZE_FILE if use_best_model else VEC_NORMALIZE_FILE
+        load_model_path = train_algo_folder_path / model_file # in case it's evaluation
+        load_vec_normalize_path = train_algo_folder_path / vec_normalize_file
+
+        # Only normalize rewards for parking
+        normalize_reward = use_vec_normalize and env_name == "parking-v0"
+
+        train_vec_env_builder = partial(make_vec_env_helper, env_name, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs)
+        eval_vec_env_builder = partial(make_vec_env_helper, env_name, env_kwargs, 1, DummyVecEnv)
+
+        if use_vec_normalize:
+            common_kwargs = {
+                "norm_obs": True,
+                "clip_obs": 10,
+                "clip_reward": 10,  # only used if norm_reward is True
+            }
+            train_vec_env_builder = partial(
+                make_env_vec_normalize, train_vec_env_builder, load_vec_normalize_path,
+                training=True, norm_reward=normalize_reward,**common_kwargs,
+            )
+            eval_vec_env_builder = partial(
+                make_env_vec_normalize, eval_vec_env_builder, load_vec_normalize_path,
+                training=False, norm_reward=False, **common_kwargs,
+            )
         return cls(
-            make_env=partial(_make_env, env_name, env_kwargs),
+            # make_test_env not used in TrainConfig
+            make_test_env=partial(make_env_helper, env_name, env_kwargs),
+
+            make_eval_env=eval_vec_env_builder,
             n_test_episodes=env_config["n_test_episodes"],
             instance_folder_path=instance_folder_path,
             make_model=partial(
-                _make_model,
+                make_model_helper,
                 algo_cls=algo_cls,
                 folder_name=str(train_algo_folder_path),
+                model_path=load_model_path,
                 policy_params=policy_params,
                 device=device,
             ),
-            make_vec_env=partial(_make_vec_env, env_name, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs),
+            make_train_env=train_vec_env_builder,
             timesteps=env_config["train_timesteps"],
             train_folder_path=train_algo_folder_path,
             eval_freq=env_config["eval_freq"],
@@ -147,13 +184,17 @@ class TrainConfig(InstanceConfig):
     def ensure_train_env(self) -> VecEnv:
         """Instantiate the environment lazily and cache it for reuse."""
         if self._train_env is None:
-            self._train_env = self.make_vec_env()
+            self._train_env = self.make_train_env()
         return self._train_env
 
     def ensure_eval_env(self) -> VecEnv:
         if self._eval_env is None:
-            self._eval_env = self.make_vec_env()
+            self._eval_env = self.make_eval_env()
         return self._eval_env
+
+    def ensure_test_env(self) -> gym.Env:
+        # Not supposed to use test_env within TrainConfig
+        raise NotImplementedError
 
     def ensure_model(self) -> BaseAlgorithm:
         """Instantiate the algorithm lazily and cache it alongside the env."""

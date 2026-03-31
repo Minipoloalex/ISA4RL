@@ -46,8 +46,10 @@ RESULTS_INSTANCE_CONFIG_FILE: Callable[[Path], Path] = lambda instance_folder_pa
 RESULTS_TRAIN_CONFIG_FILE: Callable[[Path], Path]= lambda train_algo_folder_path: train_algo_folder_path / "algo_config.json"
 
 MODELS_FOLDER = "models"
-BEST_MODEL_FILE = "best_model.zip"
 MODEL_FILE = "model.zip"
+BEST_MODEL_FILE = "best_model.zip"
+BEST_VEC_NORMALIZE_FILE = "vec_normalize_best.pkl"
+VEC_NORMALIZE_FILE = "vec_normalize.pkl"
 
 TENSORBOARD_FOLDER = "tensorboard"
 LOGS_FOLDER = "logs"

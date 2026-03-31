@@ -28,11 +28,19 @@ from common.file_utils import (
 )
 from env_fixed_configs import *
 
+D, C = "Discrete", "Continuous"
 ALGO_HYPERPAMETER_ENVS = {
-    "lunarlander-v3",
-    "atari",
+    "bipedalwalker-v3": C,
+    "cartpole-v1": D,
+    "atari": D,
 }
-ALGO_FILES = ["a2c", "ppo", "dqn"]
+ALGO_FILES = ["a2c", "ppo", "dqn", "sac"]
+ALLOW_ACTION_SPACE = {
+    "a2c": [D, C],
+    "ppo": [D, C],
+    "dqn": [D],
+    "sac": [C],
+}
 ALGO_KEYS_TO_DROP = ["n_timesteps", "normalize", "frame_stack", "env_wrapper"]
 
 OBS_CNN = ["GrayscaleObservation"]
@@ -153,7 +161,7 @@ def build_exit_configs() -> List[CONFIG]:
 
 def build_lane_keeping_configs() -> List[CONFIG]:
     STEERING_RANGES = np.linspace(20, 60, 5, dtype=int)
-    DURATIONS = np.linspace(100, 200, 3, dtype=int)
+    DURATIONS = np.linspace(100, 200, 2, dtype=int)
     NOISES = np.linspace(0, 0.2, 5, dtype=float)
 
     configs = []
@@ -184,7 +192,6 @@ def build_racetrack_configs() -> List[CONFIG]:
         })
         configs.append(config)
 
-    MAX_OVAL_VEHICLE_COUNT = 20
     ROAD_LENGTHS = np.linspace(100, 200, 3, dtype=int)
     LANES_COUNT = np.linspace(2, 4, 3, dtype=int)
     for (steering, (length_idx, road_length), (lanes_idx, lanes_count)) in itertools.product(
@@ -194,7 +201,7 @@ def build_racetrack_configs() -> List[CONFIG]:
         max_veh_cnt = 20 if aux >= 3 else 10
         oval_veh_cnts = np.linspace(0, max_veh_cnt, max_veh_cnt // 10 + 1, dtype=int)
         for veh_cnt in oval_veh_cnts:
-            config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
+            config = deepcopy(OVAL_RACETRACK_FIXED_CONFIGS)
             ang = np.deg2rad(steering)
             config["config"]["action"]["steering_range"] = [-ang, ang]
 
@@ -220,7 +227,6 @@ def build_parking_configs() -> List[CONFIG]:
     ADD_WALLS = [True, False]
     OCCUPANCIES = [0, 0.25, 0.5, 0.75]
     configs = []
-    mapper = {}
     for (spots, steering, walls) in itertools.product(PARKING_SPOTS, STEERING_RANGES, ADD_WALLS):
         veh_cnts = set()
         actual_spots = spots * 2
@@ -236,7 +242,6 @@ def build_parking_configs() -> List[CONFIG]:
                 "add_walls": walls,
             })
             configs.append(config)
-        mapper[spots] = veh_cnts
     log_configs("Parking", configs)
     return configs
 

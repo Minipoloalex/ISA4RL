@@ -4,9 +4,9 @@ ENVS: List[str] = [
     "highway",
     "roundabout",
     "merge",
+    "exit",
     "racetrack",
     "parking",
-    "exit",
     "lane-keeping",
 ]
 

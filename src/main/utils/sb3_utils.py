@@ -3,9 +3,10 @@ from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import BaseCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.logger import Logger, configure
-from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
+from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv, VecNormalize
 from stable_baselines3.common.env_util import make_vec_env
 from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
+
 import gymnasium as gym
 
 from typing import Optional, Dict, Any, Callable
@@ -24,17 +25,17 @@ ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "ddpg": DDPG,
 }
 
-def _make_env(env_id: str, env_config: Dict[str, Any]) -> gym.Env:
+def make_env_helper(env_id: str, env_config: Dict[str, Any]) -> gym.Env:
     env_kwargs = {"config": env_config.copy()}
     # Nones are required to allow using **env_kwargs
     return gym.make(env_id, None, None, **env_kwargs)
 
-def _make_vec_env(
+def make_vec_env_helper(
     env_id: str,
     env_config: Dict[str, Any],
     env_cnt: int,
     vec_cls: type[DummyVecEnv] | type[SubprocVecEnv],
-    vec_kwargs: Dict[str, Any] | None,
+    vec_kwargs: Dict[str, Any] | None = None,
 ) -> VecEnv:
     env_kwargs = {"config": env_config.copy(), "render_mode": None}
     return make_vec_env(
@@ -45,15 +46,24 @@ def _make_vec_env(
         vec_env_kwargs=vec_kwargs,
     )
 
-def _make_model(
+def make_env_vec_normalize(builder: Callable[[], VecEnv], vec_normalize_path: Path, training: bool, **kwargs) -> VecEnv:
+    if nonempty_file_in(vec_normalize_path):
+        env = VecNormalize.load(str(vec_normalize_path), builder())
+        env.training = training
+        if not env.training:
+            env.norm_reward = False # handled outside already but also here for good measure
+        return env
+    return VecNormalize(builder(), training=training, **kwargs)
+
+def make_model_helper(
     env: VecEnv,
     *,
     algo_cls: type[BaseAlgorithm],
     folder_name: str,
+    model_path: Path,
     policy_params: Dict[str, Any],
     device: str,
 ) -> BaseAlgorithm:
-    model_path = Path(folder_name) / MODEL_FILE
     if nonempty_file_in(model_path):
         custom_objects = {}
         lr = policy_params.get("learning_rate")
@@ -140,4 +150,16 @@ def unwrap_first_env(vec_env: VecEnv) -> Optional[gym.Env]:
         if next_vec is None:
             break
         current = next_vec
+    return None
+
+def find_vec_normalize(env: VecEnv) -> VecNormalize | None:
+    """Recursively search for VecNormalize in the wrapper stack."""
+    current_env = env
+    while current_env is not None:
+        if isinstance(current_env, VecNormalize):
+            return current_env
+        if hasattr(current_env, "venv"):
+            current_env = current_env.venv
+        else:
+            break
     return None

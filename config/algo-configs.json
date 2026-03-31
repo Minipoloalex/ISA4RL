@@ -12,14 +12,28 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "LunarLander-v3": {
+    "CartPole-v1": {
       "n_envs": 8,
-      "n_timesteps": 200000.0,
+      "n_timesteps": 500000.0,
       "policy": "MlpPolicy",
-      "gamma": 0.995,
-      "n_steps": 5,
-      "learning_rate": "lin_0.00083",
-      "ent_coef": 1e-05
+      "ent_coef": 0.0
+    },
+    "BipedalWalker-v3": {
+      "normalize": true,
+      "n_envs": 16,
+      "n_timesteps": 5000000.0,
+      "policy": "MlpPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     }
   },
   "ppo": {
@@ -39,16 +53,32 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "LunarLander-v3": {
-      "n_envs": 16,
-      "n_timesteps": 1000000.0,
+    "CartPole-v1": {
+      "n_envs": 8,
+      "n_timesteps": 100000.0,
       "policy": "MlpPolicy",
-      "n_steps": 1024,
+      "n_steps": 32,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
+    },
+    "BipedalWalker-v3": {
+      "normalize": true,
+      "n_envs": 32,
+      "n_timesteps": 5000000.0,
+      "policy": "MlpPolicy",
+      "n_steps": 2048,
       "batch_size": 64,
-      "gae_lambda": 0.98,
+      "gae_lambda": 0.95,
       "gamma": 0.999,
-      "n_epochs": 4,
-      "ent_coef": 0.01
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     }
   },
   "dqn": {
@@ -70,19 +100,19 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "LunarLander-v3": {
-      "n_timesteps": 100000.0,
+    "CartPole-v1": {
+      "n_timesteps": 50000.0,
       "policy": "MlpPolicy",
-      "learning_rate": 0.00063,
-      "batch_size": 128,
-      "buffer_size": 50000,
-      "learning_starts": 0,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "target_update_interval": 250,
-      "train_freq": 4,
-      "gradient_steps": -1,
-      "exploration_fraction": 0.12,
-      "exploration_final_eps": 0.1,
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     }
   }

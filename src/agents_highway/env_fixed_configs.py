@@ -84,7 +84,7 @@ PARKING_FIXED_CONFIGS = {
     "train_timesteps": int(3e5),
     "eval_freq": int(3e3),
     "n_eval_episodes": 5,
-    "n_test_episodes": 5,
+    "n_test_episodes": 10,
     "config": {
         "duration": 60,
         "action": { # steering_range not here

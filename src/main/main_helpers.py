@@ -40,8 +40,8 @@ from utils.load_config_utils import (
 )
 from multiprocessing import get_context, cpu_count
 
-def train_agents(run_configs: List[TrainConfig]):
-    train_configs = [config for config in run_configs if not is_trained(config)]
+def train_agents(train_configs: List[TrainConfig]):
+    train_configs = [config for config in train_configs if not is_trained(config)]
     for config in tqdm(train_configs, total=len(train_configs)):
         train_env = config.ensure_train_env()
         model = config.ensure_model()
@@ -67,11 +67,11 @@ def eval_agents(train_configs: List[TrainConfig]):
         if is_trained(config) and not is_evaluated(config)
     ]
     for config in tqdm(eval_configs, total=len(eval_configs)):
-        test_env=config.ensure_test_env()
+        eval_env=config.ensure_eval_env()
         model=config.ensure_model()
         eval_results=evaluate(
             model=model,
-            env=test_env,
+            env=eval_env,
             n_episodes=config.n_test_episodes,
             deterministic=True,
         )

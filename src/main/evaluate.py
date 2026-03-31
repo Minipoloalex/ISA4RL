@@ -16,7 +16,7 @@ from stable_baselines3.common.vec_env import VecEnv
 
 def rollout_episode(
     model: BaseAlgorithm,
-    env: gym.Env,
+    env: VecEnv,
     *,
     env_seed: int,
     deterministic: bool,
@@ -25,25 +25,28 @@ def rollout_episode(
     episode_reward = 0.0
     steps = 0
     infos: List[Dict[str, Any]] = []
-    obs, info = env.reset(seed=env_seed)
-    infos.append(info)
+    env.seed(env_seed)
+    obs = env.reset()
     while True:
         action, _ = model.predict(obs, deterministic=deterministic)
-        obs, reward, terminated, truncated, info = env.step(action)
-        episode_reward += float(reward)
+        obs, reward, done, info = env.step(action)
+        episode_reward += float(reward[0])
         steps += 1
-        infos.append(info)
-        if terminated or truncated:
+        infos.append(info[0])
+        if done[0]:
             break
     return episode_reward, steps, infos
 
 def evaluate(
     model: BaseAlgorithm,
-    env: gym.Env,
+    env: VecEnv,
     n_episodes: int,
     *,
     deterministic: bool,
 ) -> List[Dict[str, Any]]:
+    # env should be DummyVecEnv with n_envs=1
+    assert env.num_envs == 1    # only supports n_envs=1
+
     base_seed = int(1e6)
     episodes_stats: List[Dict[str, Any]] = []
     for i in range(n_episodes):

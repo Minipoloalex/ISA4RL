@@ -31,6 +31,8 @@ from common.file_utils import (
     RESULTS_TRAIN_METADATA_PATH,
     MODEL_FILE,
     BEST_MODEL_FILE,
+    BEST_VEC_NORMALIZE_FILE,
+    VEC_NORMALIZE_FILE,
 )
 torch.set_num_threads(1)
 
@@ -44,8 +46,20 @@ from utils.general_utils import (
     _interpolate_range_value,
     _coerce_numeric,
 )
-from utils.sb3_utils import get_env_id, unwrap_first_env
+from utils.sb3_utils import get_env_id, unwrap_first_env, find_vec_normalize
 from common.file_utils import _json_default
+
+class SaveVecNormalizeCallback(BaseCallback):
+    def __init__(self, save_path: str, verbose: int = 1):
+        super().__init__(verbose)
+        self.save_path = save_path
+        self.vec_normalize = find_vec_normalize(self.training_env)
+
+    def _on_step(self) -> bool:
+        # Find the wrapper in the training env and save its stats
+        if self.vec_normalize is not None:
+            self.vec_normalize.save(self.save_path)
+        return True
 
 def train(
     env: VecEnv,
@@ -59,7 +73,7 @@ def train(
     seed: Optional[int] = None,
     progress_bar: bool = False,
     **kwargs,
-) -> Path:
+) -> Tuple[Path, Path]:
     """Train a Stable-Baselines3 model and persist artifacts to disk.
 
     Args:
@@ -109,12 +123,15 @@ def train(
     }
 
     best_model_path = models_dir / BEST_MODEL_FILE
+    best_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
+    on_best_callback = SaveVecNormalizeCallback(best_vec_normalize_path)
     learn_kwargs["callback"] = EvalCallback(
         eval_env,
         n_eval_episodes=n_eval_episodes,
         best_model_save_path=str(best_model_path),
         log_path=folder_name,
         eval_freq=eval_freq,
+        callback_on_new_best=on_best_callback,
         deterministic=True,
         render=False,
         verbose=1,
@@ -140,6 +157,11 @@ def train(
     final_model_path = models_dir / MODEL_FILE
     model.save(final_model_path)
 
+    final_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
+    vec_normalize = find_vec_normalize(env)
+    if vec_normalize is not None:
+        vec_normalize.save(str(final_vec_normalize_path))    
+
     metadata = {
         "timesteps": timesteps,
         "elapsed_seconds": elapsed,
@@ -155,4 +177,4 @@ def train(
     with RESULTS_TRAIN_METADATA_PATH(output_dir).open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
-    return best_model_path
+    return best_model_path, best_vec_normalize_path

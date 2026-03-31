@@ -251,13 +251,15 @@ def main() -> None:
        })
     if args.env == "lane-keeping-v0":
         env_config.update({
-            
+            "duration": 5,
         })
 
     env_kwargs: Dict[str, object] = {"render_mode": "human"}
     if env_config:
         env_kwargs["config"] = env_config
     env = gym.make(args.env, **env_kwargs)  # type: ignore[arg-type]
+    print(env.unwrapped.config)
+
     action_space = env.action_space
     is_continuous = isinstance(action_space, spaces.Box)
     key_bindings: MaybeBindings = None
