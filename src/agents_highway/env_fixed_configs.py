@@ -47,7 +47,10 @@ LANE_KEEPING_FIXED_CONFIGS = {
             "dynamical": True,
         },
     },
-    **__DEFAULT_TRAIN_CONFIGS,
+    "train_timesteps": int(2e5),
+    "eval_freq": int(2e3),
+    "n_eval_episodes": 10,
+    "n_test_episodes": 10,
 }
 BASIC_RACETRACK_FIXED_CONFIGS = {
     "env_id": "racetrack-v0",

@@ -14,7 +14,7 @@ from math import ceil
 logger = logging.getLogger(__name__)
 
 from common.config_utils import CONFIG
-from common.env_utils import ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C
+from common.env_utils import ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C, K, TTC, KG, OG, A, E, GS
 from common.file_utils import (
     save_json,
     read_json,
@@ -44,8 +44,24 @@ ALLOW_ACTION_SPACE = {
 }
 ALGO_KEYS_TO_DROP = ["n_timesteps", "frame_stack", "env_wrapper"]
 
-OBS_CNN = ["GrayscaleObservation"]
-OBS_MLP = ["Kinematics", "TimeToCollision", "KinematicsGoal", "OccupancyGrid", "AttributesObservation", "ExitObservation"]
+MLP = "MlpPolicy"
+CNN = "CnnPolicy"
+MULTI_INPUT = "MultiInputPolicy"
+
+OBS_POLICY = {
+    K: MLP,
+    TTC: MLP,
+    KG: MLP,
+    OG: MLP,
+    E: MLP,
+    A: MULTI_INPUT,
+    GS: CNN,
+}
+
+def validate_policy_type(algo_config: CONFIG, obs_config: CONFIG):
+    if algo_config["policy"] == MLP and OBS_POLICY[obs_config["type"]] == MULTI_INPUT:
+        algo_config["policy"] = MULTI_INPUT
+    return algo_config
 
 def log_configs(env_description: str, configs: List[CONFIG]):
     logger.debug(f"Number of {env_description} configs: {len(configs)}")
@@ -313,11 +329,17 @@ def get_env_algo_configs(env_id: str, all_algo_configs: List[CONFIG]):
 def valid_config(algo_config: CONFIG, obs_config: CONFIG) -> bool:
     # we can assume None is never anything
     return (
-        algo_config["policy"] == "CnnPolicy"
-        and obs_config["type"] in OBS_CNN
+        algo_config["policy"] == CNN
+        and OBS_POLICY[obs_config["type"]] == CNN
     ) or (
-        algo_config["policy"] == "MlpPolicy"
-        and obs_config["type"] in OBS_MLP
+        algo_config["policy"] == MLP
+        and OBS_POLICY[obs_config["type"]] == MLP
+    ) or (
+        algo_config["policy"] == MLP    # in this case, we will need to modify the policy to be multi input
+        and OBS_POLICY[obs_config["type"]] == MULTI_INPUT
+    ) or (
+        algo_config["policy"] == MULTI_INPUT
+        and OBS_POLICY[obs_config["type"]] == MULTI_INPUT
     )
 
 def build_all_configs(
@@ -327,15 +349,15 @@ def build_all_configs(
 ) -> Tuple[List[CONFIG], List[CONFIG]]:
     run_configs = [
         {
-            "env_config": config[0],
-            "obs_config": config[1],
-            "algo_config": config[2],
+            "env_config": env,
+            "obs_config": obs,
+            "algo_config": validate_policy_type(algo, obs),
             "timestamp": time.time_ns(),
         }
-        for config in itertools.product(
+        for (env, obs, algo) in itertools.product(
             env_configs, obs_configs, algo_configs,
         )
-        if valid_config(config[2], config[1])
+        if valid_config(algo, obs)
     ]
     eval_configs = [
         {
@@ -368,7 +390,7 @@ if __name__ == "__main__":
     obs_configs = get_obs_configs()
     for config in obs_configs:
         name = config["type"]
-        assert((name in OBS_MLP) ^ (name in OBS_CNN))
+        assert(OBS_POLICY[name] in (MLP, CNN, MULTI_INPUT))
 
     print(f"\nAlgo Configs: {len(algo_configs)}")
     print(f"\nObservation Configs: {len(obs_configs)}")

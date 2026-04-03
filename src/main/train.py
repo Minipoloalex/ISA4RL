@@ -53,9 +53,13 @@ class SaveVecNormalizeCallback(BaseCallback):
     def __init__(self, save_path: str, verbose: int = 1):
         super().__init__(verbose)
         self.save_path = save_path
-        self.vec_normalize = find_vec_normalize(self.training_env)
+        self.looked = False
 
     def _on_step(self) -> bool:
+        if not self.looked:
+            self.vec_normalize = find_vec_normalize(self.training_env)
+            self.looked = True
+
         # Find the wrapper in the training env and save its stats
         if self.vec_normalize is not None:
             self.vec_normalize.save(self.save_path)
@@ -114,7 +118,7 @@ def train(
     model.set_env(env)
 
     # Configure logging so that we always emit CSV + TensorBoard traces.
-    logger: Logger = configure(str(logs_dir), ["stdout", "csv", "tensorboard"])
+    logger: Logger = configure(str(logs_dir), ["csv", "tensorboard"])
     model.set_logger(logger)
     model.tensorboard_log = str(tensorboard_dir)
 
@@ -124,13 +128,13 @@ def train(
 
     best_model_path = models_dir / BEST_MODEL_FILE
     best_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
-    on_best_callback = SaveVecNormalizeCallback(best_vec_normalize_path)
+    on_best_callback = SaveVecNormalizeCallback(str(best_vec_normalize_path))
     learn_kwargs["callback"] = EvalCallback(
         eval_env,
         n_eval_episodes=n_eval_episodes,
-        best_model_save_path=str(best_model_path),
+        best_model_save_path=str(models_dir),   # auto saves to models_dir / best_model.zip
         log_path=folder_name,
-        eval_freq=eval_freq,
+        eval_freq=eval_freq,    # already takes into account the number of vectorized environments
         callback_on_new_best=on_best_callback,
         deterministic=True,
         render=False,
@@ -174,7 +178,8 @@ def train(
         "env_id": env_id,
         "model_class": model.__class__.__name__,
     }
-    with RESULTS_TRAIN_METADATA_PATH(output_dir).open("w", encoding="utf-8") as fp:
+    metadata_output_path = RESULTS_TRAIN_METADATA_PATH(output_dir)
+    with metadata_output_path.open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
     return best_model_path, best_vec_normalize_path

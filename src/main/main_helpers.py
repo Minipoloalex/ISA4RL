@@ -5,6 +5,7 @@ import math
 import os
 import random
 import time
+import logging
 from collections import Counter, deque, defaultdict
 from multiprocessing import get_context, cpu_count
 from pathlib import Path
@@ -40,12 +41,21 @@ from utils.load_config_utils import (
 )
 from multiprocessing import get_context, cpu_count
 
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    datefmt="%d-%m-%Y %H:%M:%S",
+)
+
 def train_agents(train_configs: List[TrainConfig]):
     train_configs = [config for config in train_configs if not is_trained(config)]
     for config in tqdm(train_configs, total=len(train_configs)):
         train_env = config.ensure_train_env()
         model = config.ensure_model()
         eval_env = config.ensure_eval_env()
+        logger.info(f"Started training run in path: {config.train_folder_path}")
+        logger.info(f"Configuration for algorithm: {model.__str__()}")
         train(
             env=train_env,
             model=model,
@@ -58,6 +68,7 @@ def train_agents(train_configs: List[TrainConfig]):
             progress_bar=True,
         )
         config.close()
+        logger.info(f"Saved training information from run in {config.train_folder_path}")
 
 
 def eval_agents(train_configs: List[TrainConfig]):

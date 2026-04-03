@@ -49,11 +49,12 @@ class InstanceConfig:
         if "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
+        env_id = env_config["env_id"]
         env_kwargs = env_config["config"]
         env_kwargs["observation"] = obs_config
 
         return cls(
-            make_test_env=partial(make_env_helper, env_name, env_kwargs),
+            make_test_env=partial(make_env_helper, env_id, env_kwargs),
             n_test_episodes=env_config["n_test_episodes"],
             instance_folder_path=instance_folder_path,
         )
@@ -111,6 +112,7 @@ class TrainConfig(InstanceConfig):
         if "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
+        env_id = env_config["env_id"]
         env_kwargs = env_config["config"]
         env_kwargs["observation"] = obs_config
 
@@ -140,10 +142,10 @@ class TrainConfig(InstanceConfig):
         load_vec_normalize_path = train_algo_folder_path / vec_normalize_file
 
         # Only normalize rewards for parking
-        normalize_reward = use_vec_normalize and env_name == "parking-v0"
+        normalize_reward = use_vec_normalize and env_id == "parking-v0"
 
-        train_vec_env_builder = partial(make_vec_env_helper, env_name, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs)
-        eval_vec_env_builder = partial(make_vec_env_helper, env_name, env_kwargs, 1, DummyVecEnv)
+        train_vec_env_builder = partial(make_vec_env_helper, env_id, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs)
+        eval_vec_env_builder = partial(make_vec_env_helper, env_id, env_kwargs, 1, DummyVecEnv)
 
         if use_vec_normalize:
             common_kwargs = {
@@ -161,7 +163,7 @@ class TrainConfig(InstanceConfig):
             )
         return cls(
             # make_test_env not used in TrainConfig
-            make_test_env=partial(make_env_helper, env_name, env_kwargs),
+            make_test_env=partial(make_env_helper, env_id, env_kwargs),
 
             make_eval_env=eval_vec_env_builder,
             n_test_episodes=env_config["n_test_episodes"],
@@ -177,7 +179,7 @@ class TrainConfig(InstanceConfig):
             make_train_env=train_vec_env_builder,
             timesteps=env_config["train_timesteps"],
             train_folder_path=train_algo_folder_path,
-            eval_freq=env_config["eval_freq"],
+            eval_freq=env_config["eval_freq"] // n_envs,
             n_eval_episodes=env_config["n_eval_episodes"],
         )
 
