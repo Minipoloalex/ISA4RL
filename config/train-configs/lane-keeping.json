@@ -13,7 +13,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -48,7 +48,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730040888
+    "timestamp": 1775294422766383727
   },
   {
     "env_config": {
@@ -64,7 +64,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -96,7 +96,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730041947
+    "timestamp": 1775294422766384931
   },
   {
     "env_config": {
@@ -112,7 +112,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -145,7 +145,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730042415
+    "timestamp": 1775294422766385446
   },
   {
     "env_config": {
@@ -161,7 +161,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -196,7 +196,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730043032
+    "timestamp": 1775294422766386363
   },
   {
     "env_config": {
@@ -212,7 +212,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -244,7 +244,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730043567
+    "timestamp": 1775294422766386902
   },
   {
     "env_config": {
@@ -260,7 +260,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -293,7 +293,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730044043
+    "timestamp": 1775294422766387372
   },
   {
     "env_config": {
@@ -309,7 +309,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -344,7 +344,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730044449
+    "timestamp": 1775294422766387757
   },
   {
     "env_config": {
@@ -360,7 +360,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -392,7 +392,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730044696
+    "timestamp": 1775294422766388086
   },
   {
     "env_config": {
@@ -408,7 +408,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -441,7 +441,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730044914
+    "timestamp": 1775294422766388321
   },
   {
     "env_config": {
@@ -457,7 +457,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -492,7 +492,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730045203
+    "timestamp": 1775294422766388632
   },
   {
     "env_config": {
@@ -508,7 +508,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -540,7 +540,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730045450
+    "timestamp": 1775294422766388870
   },
   {
     "env_config": {
@@ -556,7 +556,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -589,7 +589,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730045677
+    "timestamp": 1775294422766389095
   },
   {
     "env_config": {
@@ -605,7 +605,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -640,7 +640,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730045893
+    "timestamp": 1775294422766389340
   },
   {
     "env_config": {
@@ -656,7 +656,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -688,7 +688,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730046085
+    "timestamp": 1775294422766389628
   },
   {
     "env_config": {
@@ -704,7 +704,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -737,7 +737,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730046277
+    "timestamp": 1775294422766389832
   },
   {
     "env_config": {
@@ -753,7 +753,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -788,7 +788,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730046497
+    "timestamp": 1775294422766390039
   },
   {
     "env_config": {
@@ -804,7 +804,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -836,7 +836,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730046724
+    "timestamp": 1775294422766390238
   },
   {
     "env_config": {
@@ -852,7 +852,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -885,7 +885,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730046990
+    "timestamp": 1775294422766390510
   },
   {
     "env_config": {
@@ -901,7 +901,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -936,7 +936,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730047215
+    "timestamp": 1775294422766390731
   },
   {
     "env_config": {
@@ -952,7 +952,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -984,7 +984,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730047406
+    "timestamp": 1775294422766390953
   },
   {
     "env_config": {
@@ -1000,7 +1000,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -1033,7 +1033,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730047602
+    "timestamp": 1775294422766391137
   },
   {
     "env_config": {
@@ -1049,7 +1049,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -1084,7 +1084,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730047798
+    "timestamp": 1775294422766391346
   },
   {
     "env_config": {
@@ -1100,7 +1100,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -1132,7 +1132,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730047977
+    "timestamp": 1775294422766391537
   },
   {
     "env_config": {
@@ -1148,7 +1148,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -1181,7 +1181,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730048155
+    "timestamp": 1775294422766391722
   },
   {
     "env_config": {
@@ -1197,7 +1197,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -1232,7 +1232,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730048358
+    "timestamp": 1775294422766391936
   },
   {
     "env_config": {
@@ -1248,7 +1248,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -1280,7 +1280,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730048599
+    "timestamp": 1775294422766392172
   },
   {
     "env_config": {
@@ -1296,7 +1296,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -1329,7 +1329,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730048800
+    "timestamp": 1775294422766392365
   },
   {
     "env_config": {
@@ -1345,7 +1345,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -1380,7 +1380,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730048995
+    "timestamp": 1775294422766392559
   },
   {
     "env_config": {
@@ -1396,7 +1396,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -1428,7 +1428,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730049176
+    "timestamp": 1775294422766392739
   },
   {
     "env_config": {
@@ -1444,7 +1444,7 @@
             0.3490658503988659
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -1477,7 +1477,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730049363
+    "timestamp": 1775294422766392934
   },
   {
     "env_config": {
@@ -1493,7 +1493,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -1528,7 +1528,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730049581
+    "timestamp": 1775294422766393132
   },
   {
     "env_config": {
@@ -1544,7 +1544,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -1576,7 +1576,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730049761
+    "timestamp": 1775294422766393315
   },
   {
     "env_config": {
@@ -1592,747 +1592,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730049956
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730050187
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730050367
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730050615
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730051882
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730052110
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730052311
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730052541
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730052729
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730053109
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730053316
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730053499
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730053702
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730053901
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730054102
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.5235987755982988,
-            0.5235987755982988
-          ]
-        },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -2365,7 +1625,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730054288
+    "timestamp": 1775294422766393514
   },
   {
     "env_config": {
@@ -2381,7 +1641,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -2416,7 +1676,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730054482
+    "timestamp": 1775294422766393778
   },
   {
     "env_config": {
@@ -2432,7 +1692,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -2464,7 +1724,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730054669
+    "timestamp": 1775294422766393965
   },
   {
     "env_config": {
@@ -2480,7 +1740,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -2513,7 +1773,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730054884
+    "timestamp": 1775294422766394175
   },
   {
     "env_config": {
@@ -2529,7 +1789,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -2564,7 +1824,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730055083
+    "timestamp": 1775294422766395351
   },
   {
     "env_config": {
@@ -2580,7 +1840,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -2612,7 +1872,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730055268
+    "timestamp": 1775294422766395608
   },
   {
     "env_config": {
@@ -2628,7 +1888,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -2661,7 +1921,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730055536
+    "timestamp": 1775294422766395848
   },
   {
     "env_config": {
@@ -2677,7 +1937,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -2712,7 +1972,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730055747
+    "timestamp": 1775294422766396072
   },
   {
     "env_config": {
@@ -2728,7 +1988,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -2760,7 +2020,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730055931
+    "timestamp": 1775294422766396285
   },
   {
     "env_config": {
@@ -2776,7 +2036,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -2809,7 +2069,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730056116
+    "timestamp": 1775294422766396605
   },
   {
     "env_config": {
@@ -2825,7 +2085,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -2860,7 +2120,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730056329
+    "timestamp": 1775294422766396832
   },
   {
     "env_config": {
@@ -2876,7 +2136,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -2908,7 +2168,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730056516
+    "timestamp": 1775294422766397028
   },
   {
     "env_config": {
@@ -2924,7 +2184,7 @@
             0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -2957,7 +2217,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730056709
+    "timestamp": 1775294422766397228
   },
   {
     "env_config": {
@@ -2969,11 +2229,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 100,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -3008,7 +2268,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730056908
+    "timestamp": 1775294422766397488
   },
   {
     "env_config": {
@@ -3020,11 +2280,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 100,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -3056,7 +2316,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730057090
+    "timestamp": 1775294422766397706
   },
   {
     "env_config": {
@@ -3068,751 +2328,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730057293
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730057539
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730058517
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730059058
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730059337
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730060345
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730060583
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730060804
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730061015
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730061224
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730061443
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730061673
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730061863
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730062073
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730062259
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
-          ]
-        },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -3845,7 +2365,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730062570
+    "timestamp": 1775294422766397908
   },
   {
     "env_config": {
@@ -3857,11 +2377,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -3896,7 +2416,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730062766
+    "timestamp": 1775294422766398161
   },
   {
     "env_config": {
@@ -3908,11 +2428,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -3944,7 +2464,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730062947
+    "timestamp": 1775294422766398391
   },
   {
     "env_config": {
@@ -3956,11 +2476,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -3993,7 +2513,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730063148
+    "timestamp": 1775294422766398601
   },
   {
     "env_config": {
@@ -4005,11 +2525,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -4044,7 +2564,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730063346
+    "timestamp": 1775294422766398822
   },
   {
     "env_config": {
@@ -4056,11 +2576,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -4092,7 +2612,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730063543
+    "timestamp": 1775294422766399031
   },
   {
     "env_config": {
@@ -4104,11 +2624,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -4141,7 +2661,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730063731
+    "timestamp": 1775294422766399307
   },
   {
     "env_config": {
@@ -4153,11 +2673,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -4192,7 +2712,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730063926
+    "timestamp": 1775294422766399540
   },
   {
     "env_config": {
@@ -4204,11 +2724,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -4240,7 +2760,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730064110
+    "timestamp": 1775294422766399743
   },
   {
     "env_config": {
@@ -4252,11 +2772,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -4289,7 +2809,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730064313
+    "timestamp": 1775294422766399961
   },
   {
     "env_config": {
@@ -4301,11 +2821,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -4340,7 +2860,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730064508
+    "timestamp": 1775294422766400183
   },
   {
     "env_config": {
@@ -4352,11 +2872,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -4388,7 +2908,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730064706
+    "timestamp": 1775294422766400389
   },
   {
     "env_config": {
@@ -4400,11 +2920,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.6981317007977318,
-            0.6981317007977318
+            -0.5235987755982988,
+            0.5235987755982988
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -4437,7 +2957,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730064888
+    "timestamp": 1775294422766400589
   },
   {
     "env_config": {
@@ -4449,11 +2969,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -4488,7 +3008,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730065085
+    "timestamp": 1775294422766400800
   },
   {
     "env_config": {
@@ -4500,11 +3020,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -4536,7 +3056,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730065267
+    "timestamp": 1775294422766401006
   },
   {
     "env_config": {
@@ -4548,751 +3068,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730065467
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730065735
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730065931
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730066126
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730066429
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730066610
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730066795
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730067854
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730068057
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730068250
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730068470
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730068658
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730068847
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730069065
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730069254
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
-          ]
-        },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -5325,7 +3105,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730069437
+    "timestamp": 1775294422766401216
   },
   {
     "env_config": {
@@ -5337,11 +3117,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -5376,7 +3156,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730069633
+    "timestamp": 1775294422766401422
   },
   {
     "env_config": {
@@ -5388,11 +3168,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -5424,7 +3204,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730069878
+    "timestamp": 1775294422766401632
   },
   {
     "env_config": {
@@ -5436,11 +3216,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -5473,7 +3253,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730070079
+    "timestamp": 1775294422766402040
   },
   {
     "env_config": {
@@ -5485,11 +3265,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -5524,7 +3304,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730070282
+    "timestamp": 1775294422766402262
   },
   {
     "env_config": {
@@ -5536,11 +3316,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -5572,7 +3352,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730070463
+    "timestamp": 1775294422766403252
   },
   {
     "env_config": {
@@ -5584,11 +3364,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -5621,7 +3401,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730070660
+    "timestamp": 1775294422766403455
   },
   {
     "env_config": {
@@ -5633,11 +3413,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -5672,7 +3452,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730070857
+    "timestamp": 1775294422766403668
   },
   {
     "env_config": {
@@ -5684,11 +3464,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -5720,7 +3500,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730071056
+    "timestamp": 1775294422766403907
   },
   {
     "env_config": {
@@ -5732,11 +3512,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -5769,7 +3549,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730071279
+    "timestamp": 1775294422766404903
   },
   {
     "env_config": {
@@ -5781,11 +3561,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -5820,7 +3600,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730071476
+    "timestamp": 1775294422766405126
   },
   {
     "env_config": {
@@ -5832,11 +3612,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -5868,7 +3648,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730071657
+    "timestamp": 1775294422766405323
   },
   {
     "env_config": {
@@ -5880,11 +3660,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -0.8726646259971648,
-            0.8726646259971648
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 10,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -5917,7 +3697,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730071840
+    "timestamp": 1775294422766405521
   },
   {
     "env_config": {
@@ -5929,11 +3709,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -5968,7 +3748,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730072052
+    "timestamp": 1775294422766405742
   },
   {
     "env_config": {
@@ -5980,11 +3760,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -6016,7 +3796,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730072243
+    "timestamp": 1775294422766405947
   },
   {
     "env_config": {
@@ -6028,751 +3808,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 100,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730072422
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730072614
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730072806
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.05,
-        "derivative_noise": 0.05
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730073005
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730073204
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730074249
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.1,
-        "derivative_noise": 0.1
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730074480
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730074724
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730074939
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.15000000000000002,
-        "derivative_noise": 0.15000000000000002
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730075893
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730076108
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730076313
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 100,
-        "state_noise": 0.2,
-        "derivative_noise": 0.2
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "sac",
-      "action_space": "Continuous",
-      "policy": "MultiInputPolicy",
-      "learning_rate": 0.00073,
-      "buffer_size": 300000,
-      "batch_size": 256,
-      "ent_coef": "auto",
-      "gamma": 0.98,
-      "tau": 0.02,
-      "train_freq": 64,
-      "gradient_steps": 64,
-      "learning_starts": 10000,
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
-    },
-    "timestamp": 1775225561730076526
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 16,
-      "policy": "MultiInputPolicy",
-      "ent_coef": 0.0,
-      "max_grad_norm": 0.5,
-      "n_steps": 8,
-      "gae_lambda": 0.9,
-      "vf_coef": 0.4,
-      "gamma": 0.99,
-      "use_rms_prop": true,
-      "normalize_advantage": false,
-      "learning_rate": "lin_0.00096",
-      "use_sde": true,
-      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
-    },
-    "timestamp": 1775225561730076739
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
-        "state_noise": 0.0,
-        "derivative_noise": 0.0
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "AttributesObservation",
-      "attributes": [
-        "state",
-        "derivative",
-        "reference_state"
-      ]
-    },
-    "algo_config": {
-      "algo": "ppo",
-      "action_space": "Continuous",
-      "normalize": true,
-      "n_envs": 32,
-      "policy": "MultiInputPolicy",
-      "n_steps": 2048,
-      "batch_size": 64,
-      "gae_lambda": 0.95,
-      "gamma": 0.999,
-      "n_epochs": 10,
-      "ent_coef": 0.0,
-      "learning_rate": 0.0003,
-      "clip_range": 0.18
-    },
-    "timestamp": 1775225561730076921
-  },
-  {
-    "env_config": {
-      "env_id": "lane-keeping-v0",
-      "config": {
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "dynamical": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.0,
         "derivative_noise": 0.0
       },
@@ -6805,7 +3845,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730077109
+    "timestamp": 1775294422766406250
   },
   {
     "env_config": {
@@ -6817,11 +3857,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -6856,7 +3896,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730077330
+    "timestamp": 1775294422766406457
   },
   {
     "env_config": {
@@ -6868,11 +3908,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -6904,7 +3944,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730077515
+    "timestamp": 1775294422766406668
   },
   {
     "env_config": {
@@ -6916,11 +3956,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.05,
         "derivative_noise": 0.05
       },
@@ -6953,7 +3993,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730077704
+    "timestamp": 1775294422766406884
   },
   {
     "env_config": {
@@ -6965,11 +4005,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -7004,7 +4044,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730077897
+    "timestamp": 1775294422766407106
   },
   {
     "env_config": {
@@ -7016,11 +4056,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -7052,7 +4092,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730078112
+    "timestamp": 1775294422766407304
   },
   {
     "env_config": {
@@ -7064,11 +4104,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.1,
         "derivative_noise": 0.1
       },
@@ -7101,7 +4141,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730078291
+    "timestamp": 1775294422766407503
   },
   {
     "env_config": {
@@ -7113,11 +4153,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -7152,7 +4192,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730078493
+    "timestamp": 1775294422766407711
   },
   {
     "env_config": {
@@ -7164,11 +4204,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -7200,7 +4240,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730078675
+    "timestamp": 1775294422766407920
   },
   {
     "env_config": {
@@ -7212,11 +4252,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.15000000000000002,
         "derivative_noise": 0.15000000000000002
       },
@@ -7249,7 +4289,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730078869
+    "timestamp": 1775294422766408123
   },
   {
     "env_config": {
@@ -7261,11 +4301,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -7300,7 +4340,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775225561730079067
+    "timestamp": 1775294422766408330
   },
   {
     "env_config": {
@@ -7312,11 +4352,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -7348,7 +4388,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775225561730079246
+    "timestamp": 1775294422766408529
   },
   {
     "env_config": {
@@ -7360,11 +4400,11 @@
           "lateral": true,
           "dynamical": true,
           "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
+            -0.6981317007977318,
+            0.6981317007977318
           ]
         },
-        "duration": 200,
+        "duration": 20,
         "state_noise": 0.2,
         "derivative_noise": 0.2
       },
@@ -7397,6 +4437,2966 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775225561730079486
+    "timestamp": 1775294422766408722
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766408920
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766409147
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766409339
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766409594
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766409795
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766409991
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766410306
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766410501
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766410697
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766411778
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766411981
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766412180
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766412407
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766412609
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766412806
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766413034
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766413231
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766413435
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766413644
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766413899
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766414095
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766414316
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766414512
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766414723
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766414929
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766415129
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766415348
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766415555
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766415748
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -0.8726646259971648,
+            0.8726646259971648
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766415943
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766416155
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766416373
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766416569
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766416773
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766416988
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766417182
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766417391
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766417605
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766417800
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766418050
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766418266
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766419266
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766419482
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766419678
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 10,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766419882
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766420892
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766421102
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.0,
+        "derivative_noise": 0.0
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766421298
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766421506
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766421726
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.05,
+        "derivative_noise": 0.05
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766421922
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766422126
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766422335
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.1,
+        "derivative_noise": 0.1
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766422528
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766422730
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766422942
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.15000000000000002,
+        "derivative_noise": 0.15000000000000002
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766423134
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 16,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 8,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1775294422766423334
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "normalize": true,
+      "n_envs": 32,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1775294422766423547
+  },
+  {
+    "env_config": {
+      "env_id": "lane-keeping-v0",
+      "config": {
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "dynamical": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "duration": 20,
+        "state_noise": 0.2,
+        "derivative_noise": 0.2
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "AttributesObservation",
+      "attributes": [
+        "state",
+        "derivative",
+        "reference_state"
+      ]
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1775294422766423790
   }
 ]

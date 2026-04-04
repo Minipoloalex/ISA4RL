@@ -25,7 +25,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675519572
+    "timestamp": 1775294422707248039
   },
   {
     "env_config": {
@@ -60,7 +60,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675521529
+    "timestamp": 1775294422707249940
   },
   {
     "env_config": {
@@ -97,7 +97,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675522472
+    "timestamp": 1775294422707250762
   },
   {
     "env_config": {
@@ -137,7 +137,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675522871
+    "timestamp": 1775294422707251072
   },
   {
     "env_config": {
@@ -181,7 +181,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675523569
+    "timestamp": 1775294422707251632
   },
   {
     "env_config": {
@@ -227,7 +227,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675524055
+    "timestamp": 1775294422707252280
   },
   {
     "env_config": {
@@ -255,7 +255,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675524730
+    "timestamp": 1775294422707252934
   },
   {
     "env_config": {
@@ -290,7 +290,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675525858
+    "timestamp": 1775294422707253286
   },
   {
     "env_config": {
@@ -327,7 +327,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675526777
+    "timestamp": 1775294422707253619
   },
   {
     "env_config": {
@@ -355,7 +355,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675527153
+    "timestamp": 1775294422707254006
   },
   {
     "env_config": {
@@ -390,7 +390,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675527438
+    "timestamp": 1775294422707254290
   },
   {
     "env_config": {
@@ -427,47 +427,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675527725
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 2,
-        "vehicles_density": 0.5,
-        "vehicles_count": 5,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675527933
+    "timestamp": 1775294422707254598
   },
   {
     "env_config": {
@@ -499,6 +459,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707254773
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 0.5,
+        "vehicles_count": 5,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -511,7 +511,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675528357
+    "timestamp": 1775294422707255136
   },
   {
     "env_config": {
@@ -557,7 +557,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675528740
+    "timestamp": 1775294422707255499
   },
   {
     "env_config": {
@@ -585,7 +585,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675529161
+    "timestamp": 1775294422707255939
   },
   {
     "env_config": {
@@ -620,7 +620,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675529460
+    "timestamp": 1775294422707256275
   },
   {
     "env_config": {
@@ -657,7 +657,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675529784
+    "timestamp": 1775294422707256703
   },
   {
     "env_config": {
@@ -685,7 +685,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675530087
+    "timestamp": 1775294422707257018
   },
   {
     "env_config": {
@@ -720,7 +720,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675530373
+    "timestamp": 1775294422707257328
   },
   {
     "env_config": {
@@ -757,7 +757,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675530651
+    "timestamp": 1775294422707257627
   },
   {
     "env_config": {
@@ -797,7 +797,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675530822
+    "timestamp": 1775294422707257804
   },
   {
     "env_config": {
@@ -841,7 +841,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675531114
+    "timestamp": 1775294422707258057
   },
   {
     "env_config": {
@@ -887,7 +887,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675531395
+    "timestamp": 1775294422707258319
   },
   {
     "env_config": {
@@ -915,7 +915,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675531773
+    "timestamp": 1775294422707258715
   },
   {
     "env_config": {
@@ -950,7 +950,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675532082
+    "timestamp": 1775294422707259052
   },
   {
     "env_config": {
@@ -987,7 +987,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675532358
+    "timestamp": 1775294422707259347
   },
   {
     "env_config": {
@@ -1015,7 +1015,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675532643
+    "timestamp": 1775294422707259653
   },
   {
     "env_config": {
@@ -1050,7 +1050,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675532973
+    "timestamp": 1775294422707259987
   },
   {
     "env_config": {
@@ -1087,7 +1087,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675533264
+    "timestamp": 1775294422707260272
   },
   {
     "env_config": {
@@ -1127,7 +1127,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675533443
+    "timestamp": 1775294422707260460
   },
   {
     "env_config": {
@@ -1171,7 +1171,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675533707
+    "timestamp": 1775294422707260745
   },
   {
     "env_config": {
@@ -1217,7 +1217,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675533958
+    "timestamp": 1775294422707260997
   },
   {
     "env_config": {
@@ -1245,7 +1245,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675534535
+    "timestamp": 1775294422707261534
   },
   {
     "env_config": {
@@ -1280,7 +1280,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675534862
+    "timestamp": 1775294422707261871
   },
   {
     "env_config": {
@@ -1317,7 +1317,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675535153
+    "timestamp": 1775294422707262229
   },
   {
     "env_config": {
@@ -1345,7 +1345,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675535454
+    "timestamp": 1775294422707262543
   },
   {
     "env_config": {
@@ -1380,7 +1380,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675535726
+    "timestamp": 1775294422707262847
   },
   {
     "env_config": {
@@ -1417,7 +1417,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675535983
+    "timestamp": 1775294422707263147
   },
   {
     "env_config": {
@@ -1457,7 +1457,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675536145
+    "timestamp": 1775294422707263343
   },
   {
     "env_config": {
@@ -1501,7 +1501,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675536419
+    "timestamp": 1775294422707263628
   },
   {
     "env_config": {
@@ -1547,7 +1547,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675536739
+    "timestamp": 1775294422707263978
   },
   {
     "env_config": {
@@ -1575,7 +1575,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675537210
+    "timestamp": 1775294422707264393
   },
   {
     "env_config": {
@@ -1610,7 +1610,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675537469
+    "timestamp": 1775294422707264699
   },
   {
     "env_config": {
@@ -1647,7 +1647,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675537748
+    "timestamp": 1775294422707264977
   },
   {
     "env_config": {
@@ -1675,7 +1675,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675538067
+    "timestamp": 1775294422707265299
   },
   {
     "env_config": {
@@ -1710,7 +1710,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675538335
+    "timestamp": 1775294422707265570
   },
   {
     "env_config": {
@@ -1747,7 +1747,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675538610
+    "timestamp": 1775294422707265850
   },
   {
     "env_config": {
@@ -1787,7 +1787,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675538761
+    "timestamp": 1775294422707266008
   },
   {
     "env_config": {
@@ -1831,7 +1831,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675539036
+    "timestamp": 1775294422707266278
   },
   {
     "env_config": {
@@ -1877,7 +1877,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675539289
+    "timestamp": 1775294422707266575
   },
   {
     "env_config": {
@@ -1905,7 +1905,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675539677
+    "timestamp": 1775294422707266993
   },
   {
     "env_config": {
@@ -1940,7 +1940,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675539939
+    "timestamp": 1775294422707267276
   },
   {
     "env_config": {
@@ -1977,7 +1977,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675540268
+    "timestamp": 1775294422707267608
   },
   {
     "env_config": {
@@ -2005,7 +2005,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675540565
+    "timestamp": 1775294422707267915
   },
   {
     "env_config": {
@@ -2040,7 +2040,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675540835
+    "timestamp": 1775294422707268203
   },
   {
     "env_config": {
@@ -2077,47 +2077,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675541092
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 2,
-        "vehicles_density": 1.75,
-        "vehicles_count": 18,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675541273
+    "timestamp": 1775294422707268475
   },
   {
     "env_config": {
@@ -2149,6 +2109,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707268651
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 2,
+        "vehicles_density": 1.75,
+        "vehicles_count": 18,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -2161,7 +2161,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675541530
+    "timestamp": 1775294422707268902
   },
   {
     "env_config": {
@@ -2207,7 +2207,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675541800
+    "timestamp": 1775294422707269165
   },
   {
     "env_config": {
@@ -2235,7 +2235,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675542274
+    "timestamp": 1775294422707269618
   },
   {
     "env_config": {
@@ -2270,7 +2270,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675542555
+    "timestamp": 1775294422707269911
   },
   {
     "env_config": {
@@ -2307,7 +2307,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675542826
+    "timestamp": 1775294422707270182
   },
   {
     "env_config": {
@@ -2335,7 +2335,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675543121
+    "timestamp": 1775294422707270474
   },
   {
     "env_config": {
@@ -2370,7 +2370,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675543405
+    "timestamp": 1775294422707270772
   },
   {
     "env_config": {
@@ -2407,7 +2407,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675543871
+    "timestamp": 1775294422707271264
   },
   {
     "env_config": {
@@ -2447,7 +2447,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675544028
+    "timestamp": 1775294422707271428
   },
   {
     "env_config": {
@@ -2491,7 +2491,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675544292
+    "timestamp": 1775294422707271687
   },
   {
     "env_config": {
@@ -2537,7 +2537,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675544581
+    "timestamp": 1775294422707271961
   },
   {
     "env_config": {
@@ -2565,7 +2565,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675544991
+    "timestamp": 1775294422707272357
   },
   {
     "env_config": {
@@ -2600,7 +2600,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675545254
+    "timestamp": 1775294422707272660
   },
   {
     "env_config": {
@@ -2637,7 +2637,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675545529
+    "timestamp": 1775294422707272936
   },
   {
     "env_config": {
@@ -2665,7 +2665,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675545827
+    "timestamp": 1775294422707273252
   },
   {
     "env_config": {
@@ -2700,7 +2700,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675546103
+    "timestamp": 1775294422707273526
   },
   {
     "env_config": {
@@ -2737,7 +2737,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675546390
+    "timestamp": 1775294422707273824
   },
   {
     "env_config": {
@@ -2777,7 +2777,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675546544
+    "timestamp": 1775294422707273981
   },
   {
     "env_config": {
@@ -2821,7 +2821,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675546824
+    "timestamp": 1775294422707274234
   },
   {
     "env_config": {
@@ -2867,7 +2867,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675547282
+    "timestamp": 1775294422707274734
   },
   {
     "env_config": {
@@ -2895,7 +2895,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675547694
+    "timestamp": 1775294422707275134
   },
   {
     "env_config": {
@@ -2930,7 +2930,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675547980
+    "timestamp": 1775294422707275434
   },
   {
     "env_config": {
@@ -2967,7 +2967,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675548263
+    "timestamp": 1775294422707275757
   },
   {
     "env_config": {
@@ -2995,7 +2995,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675548558
+    "timestamp": 1775294422707276055
   },
   {
     "env_config": {
@@ -3030,7 +3030,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675548820
+    "timestamp": 1775294422707276355
   },
   {
     "env_config": {
@@ -3067,7 +3067,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675549097
+    "timestamp": 1775294422707276640
   },
   {
     "env_config": {
@@ -3107,7 +3107,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675549250
+    "timestamp": 1775294422707276812
   },
   {
     "env_config": {
@@ -3151,7 +3151,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675549512
+    "timestamp": 1775294422707277094
   },
   {
     "env_config": {
@@ -3197,7 +3197,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675549777
+    "timestamp": 1775294422707277352
   },
   {
     "env_config": {
@@ -3225,7 +3225,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675550181
+    "timestamp": 1775294422707277757
   },
   {
     "env_config": {
@@ -3260,7 +3260,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675550443
+    "timestamp": 1775294422707278032
   },
   {
     "env_config": {
@@ -3297,7 +3297,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675550720
+    "timestamp": 1775294422707278306
   },
   {
     "env_config": {
@@ -3325,7 +3325,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675551024
+    "timestamp": 1775294422707278616
   },
   {
     "env_config": {
@@ -3360,7 +3360,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675551285
+    "timestamp": 1775294422707278908
   },
   {
     "env_config": {
@@ -3397,7 +3397,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675551575
+    "timestamp": 1775294422707279188
   },
   {
     "env_config": {
@@ -3437,7 +3437,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675551798
+    "timestamp": 1775294422707279405
   },
   {
     "env_config": {
@@ -3481,7 +3481,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675552074
+    "timestamp": 1775294422707279700
   },
   {
     "env_config": {
@@ -3527,7 +3527,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675552348
+    "timestamp": 1775294422707279957
   },
   {
     "env_config": {
@@ -3555,7 +3555,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675552751
+    "timestamp": 1775294422707280358
   },
   {
     "env_config": {
@@ -3590,7 +3590,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675553016
+    "timestamp": 1775294422707280630
   },
   {
     "env_config": {
@@ -3627,7 +3627,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675553293
+    "timestamp": 1775294422707280904
   },
   {
     "env_config": {
@@ -3655,7 +3655,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675553588
+    "timestamp": 1775294422707281200
   },
   {
     "env_config": {
@@ -3690,7 +3690,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675553869
+    "timestamp": 1775294422707281489
   },
   {
     "env_config": {
@@ -3727,47 +3727,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675554141
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 0.5,
-        "vehicles_count": 8,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675554312
+    "timestamp": 1775294422707281782
   },
   {
     "env_config": {
@@ -3799,6 +3759,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707281941
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.5,
+        "vehicles_count": 8,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -3811,7 +3811,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675554577
+    "timestamp": 1775294422707282206
   },
   {
     "env_config": {
@@ -3857,7 +3857,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675554849
+    "timestamp": 1775294422707282520
   },
   {
     "env_config": {
@@ -3885,7 +3885,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675555267
+    "timestamp": 1775294422707282935
   },
   {
     "env_config": {
@@ -3920,7 +3920,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675555533
+    "timestamp": 1775294422707283214
   },
   {
     "env_config": {
@@ -3957,7 +3957,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675555795
+    "timestamp": 1775294422707283489
   },
   {
     "env_config": {
@@ -3985,7 +3985,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675556091
+    "timestamp": 1775294422707283812
   },
   {
     "env_config": {
@@ -4020,7 +4020,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675556429
+    "timestamp": 1775294422707284144
   },
   {
     "env_config": {
@@ -4057,47 +4057,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675556772
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 0.75,
-        "vehicles_count": 12,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675556947
+    "timestamp": 1775294422707284421
   },
   {
     "env_config": {
@@ -4129,6 +4089,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707284580
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 0.75,
+        "vehicles_count": 12,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -4141,7 +4141,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675557208
+    "timestamp": 1775294422707284838
   },
   {
     "env_config": {
@@ -4187,7 +4187,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675557465
+    "timestamp": 1775294422707285098
   },
   {
     "env_config": {
@@ -4215,7 +4215,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675557865
+    "timestamp": 1775294422707285520
   },
   {
     "env_config": {
@@ -4250,7 +4250,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675558126
+    "timestamp": 1775294422707285816
   },
   {
     "env_config": {
@@ -4287,7 +4287,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675558403
+    "timestamp": 1775294422707286113
   },
   {
     "env_config": {
@@ -4315,7 +4315,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675558703
+    "timestamp": 1775294422707286422
   },
   {
     "env_config": {
@@ -4350,7 +4350,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675558984
+    "timestamp": 1775294422707286703
   },
   {
     "env_config": {
@@ -4387,7 +4387,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675559243
+    "timestamp": 1775294422707286980
   },
   {
     "env_config": {
@@ -4427,7 +4427,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675559420
+    "timestamp": 1775294422707287265
   },
   {
     "env_config": {
@@ -4471,7 +4471,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675559682
+    "timestamp": 1775294422707287619
   },
   {
     "env_config": {
@@ -4517,7 +4517,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675559930
+    "timestamp": 1775294422707287878
   },
   {
     "env_config": {
@@ -4545,7 +4545,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675560357
+    "timestamp": 1775294422707288322
   },
   {
     "env_config": {
@@ -4580,7 +4580,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675560653
+    "timestamp": 1775294422707288597
   },
   {
     "env_config": {
@@ -4617,7 +4617,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675560917
+    "timestamp": 1775294422707288891
   },
   {
     "env_config": {
@@ -4645,7 +4645,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675561208
+    "timestamp": 1775294422707289181
   },
   {
     "env_config": {
@@ -4680,7 +4680,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675561485
+    "timestamp": 1775294422707289480
   },
   {
     "env_config": {
@@ -4717,7 +4717,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675561747
+    "timestamp": 1775294422707289759
   },
   {
     "env_config": {
@@ -4757,7 +4757,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675561947
+    "timestamp": 1775294422707289965
   },
   {
     "env_config": {
@@ -4801,7 +4801,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675562211
+    "timestamp": 1775294422707290224
   },
   {
     "env_config": {
@@ -4847,7 +4847,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675562466
+    "timestamp": 1775294422707290496
   },
   {
     "env_config": {
@@ -4875,7 +4875,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675562874
+    "timestamp": 1775294422707290962
   },
   {
     "env_config": {
@@ -4910,7 +4910,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675563161
+    "timestamp": 1775294422707291240
   },
   {
     "env_config": {
@@ -4947,7 +4947,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675563422
+    "timestamp": 1775294422707291537
   },
   {
     "env_config": {
@@ -4975,7 +4975,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675563696
+    "timestamp": 1775294422707291846
   },
   {
     "env_config": {
@@ -5010,7 +5010,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675564000
+    "timestamp": 1775294422707292120
   },
   {
     "env_config": {
@@ -5047,47 +5047,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675564280
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 1.5,
-        "vehicles_count": 23,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675564438
+    "timestamp": 1775294422707292399
   },
   {
     "env_config": {
@@ -5119,6 +5079,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707292579
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.5,
+        "vehicles_count": 23,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -5131,7 +5131,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675564702
+    "timestamp": 1775294422707292856
   },
   {
     "env_config": {
@@ -5177,7 +5177,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675564970
+    "timestamp": 1775294422707293109
   },
   {
     "env_config": {
@@ -5205,7 +5205,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675565366
+    "timestamp": 1775294422707293527
   },
   {
     "env_config": {
@@ -5240,7 +5240,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675565627
+    "timestamp": 1775294422707293832
   },
   {
     "env_config": {
@@ -5277,7 +5277,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675565904
+    "timestamp": 1775294422707294134
   },
   {
     "env_config": {
@@ -5305,7 +5305,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675566175
+    "timestamp": 1775294422707294438
   },
   {
     "env_config": {
@@ -5340,7 +5340,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675566487
+    "timestamp": 1775294422707294715
   },
   {
     "env_config": {
@@ -5377,47 +5377,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675566771
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 1.75,
-        "vehicles_count": 27,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675567164
+    "timestamp": 1775294422707294991
   },
   {
     "env_config": {
@@ -5449,6 +5409,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707295173
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 1.75,
+        "vehicles_count": 27,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -5461,7 +5461,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675567440
+    "timestamp": 1775294422707295439
   },
   {
     "env_config": {
@@ -5507,7 +5507,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675567745
+    "timestamp": 1775294422707295800
   },
   {
     "env_config": {
@@ -5535,7 +5535,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675568158
+    "timestamp": 1775294422707296204
   },
   {
     "env_config": {
@@ -5570,7 +5570,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675568427
+    "timestamp": 1775294422707296502
   },
   {
     "env_config": {
@@ -5607,7 +5607,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675568685
+    "timestamp": 1775294422707296805
   },
   {
     "env_config": {
@@ -5635,7 +5635,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675568980
+    "timestamp": 1775294422707297094
   },
   {
     "env_config": {
@@ -5670,7 +5670,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675569260
+    "timestamp": 1775294422707297383
   },
   {
     "env_config": {
@@ -5707,7 +5707,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675569524
+    "timestamp": 1775294422707297680
   },
   {
     "env_config": {
@@ -5747,7 +5747,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675569695
+    "timestamp": 1775294422707297847
   },
   {
     "env_config": {
@@ -5791,7 +5791,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675570034
+    "timestamp": 1775294422707298125
   },
   {
     "env_config": {
@@ -5837,7 +5837,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675570289
+    "timestamp": 1775294422707298421
   },
   {
     "env_config": {
@@ -5865,7 +5865,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675570685
+    "timestamp": 1775294422707298819
   },
   {
     "env_config": {
@@ -5900,7 +5900,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675570945
+    "timestamp": 1775294422707299109
   },
   {
     "env_config": {
@@ -5937,7 +5937,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675571220
+    "timestamp": 1775294422707299428
   },
   {
     "env_config": {
@@ -5965,7 +5965,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675571562
+    "timestamp": 1775294422707299735
   },
   {
     "env_config": {
@@ -6000,7 +6000,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675571822
+    "timestamp": 1775294422707300011
   },
   {
     "env_config": {
@@ -6037,47 +6037,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675572099
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 2.25,
-        "vehicles_count": 34,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675572253
+    "timestamp": 1775294422707300311
   },
   {
     "env_config": {
@@ -6109,6 +6069,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707300487
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.25,
+        "vehicles_count": 34,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -6121,7 +6121,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675572522
+    "timestamp": 1775294422707300746
   },
   {
     "env_config": {
@@ -6167,7 +6167,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675572777
+    "timestamp": 1775294422707301125
   },
   {
     "env_config": {
@@ -6195,7 +6195,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675573183
+    "timestamp": 1775294422707301576
   },
   {
     "env_config": {
@@ -6230,7 +6230,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675573442
+    "timestamp": 1775294422707301889
   },
   {
     "env_config": {
@@ -6267,7 +6267,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675573704
+    "timestamp": 1775294422707302184
   },
   {
     "env_config": {
@@ -6295,7 +6295,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675573980
+    "timestamp": 1775294422707302479
   },
   {
     "env_config": {
@@ -6330,7 +6330,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675574251
+    "timestamp": 1775294422707302760
   },
   {
     "env_config": {
@@ -6367,47 +6367,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675574580
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 3,
-        "vehicles_density": 2.5,
-        "vehicles_count": 38,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675574738
+    "timestamp": 1775294422707303186
   },
   {
     "env_config": {
@@ -6439,6 +6399,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707303362
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 3,
+        "vehicles_density": 2.5,
+        "vehicles_count": 38,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -6451,7 +6451,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675575000
+    "timestamp": 1775294422707303634
   },
   {
     "env_config": {
@@ -6497,7 +6497,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675575255
+    "timestamp": 1775294422707303907
   },
   {
     "env_config": {
@@ -6525,7 +6525,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675575666
+    "timestamp": 1775294422707304325
   },
   {
     "env_config": {
@@ -6560,7 +6560,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675575947
+    "timestamp": 1775294422707304615
   },
   {
     "env_config": {
@@ -6597,7 +6597,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675576224
+    "timestamp": 1775294422707304957
   },
   {
     "env_config": {
@@ -6625,7 +6625,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675576517
+    "timestamp": 1775294422707305244
   },
   {
     "env_config": {
@@ -6660,7 +6660,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675576789
+    "timestamp": 1775294422707305561
   },
   {
     "env_config": {
@@ -6697,7 +6697,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675577066
+    "timestamp": 1775294422707305866
   },
   {
     "env_config": {
@@ -6737,7 +6737,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675577223
+    "timestamp": 1775294422707306024
   },
   {
     "env_config": {
@@ -6781,7 +6781,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675577474
+    "timestamp": 1775294422707306277
   },
   {
     "env_config": {
@@ -6827,7 +6827,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675577736
+    "timestamp": 1775294422707306552
   },
   {
     "env_config": {
@@ -6855,7 +6855,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675578129
+    "timestamp": 1775294422707306951
   },
   {
     "env_config": {
@@ -6890,7 +6890,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675578494
+    "timestamp": 1775294422707307242
   },
   {
     "env_config": {
@@ -6927,7 +6927,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675578770
+    "timestamp": 1775294422707307527
   },
   {
     "env_config": {
@@ -6955,7 +6955,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675579046
+    "timestamp": 1775294422707307814
   },
   {
     "env_config": {
@@ -6990,7 +6990,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675579323
+    "timestamp": 1775294422707308109
   },
   {
     "env_config": {
@@ -7027,47 +7027,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675579582
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 0.5,
-        "vehicles_count": 10,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675579749
+    "timestamp": 1775294422707308398
   },
   {
     "env_config": {
@@ -7099,6 +7059,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707308552
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.5,
+        "vehicles_count": 10,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -7111,7 +7111,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675580023
+    "timestamp": 1775294422707308807
   },
   {
     "env_config": {
@@ -7157,7 +7157,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675580329
+    "timestamp": 1775294422707309076
   },
   {
     "env_config": {
@@ -7185,7 +7185,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675580728
+    "timestamp": 1775294422707309470
   },
   {
     "env_config": {
@@ -7220,7 +7220,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675581009
+    "timestamp": 1775294422707309767
   },
   {
     "env_config": {
@@ -7257,7 +7257,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675581289
+    "timestamp": 1775294422707310044
   },
   {
     "env_config": {
@@ -7285,7 +7285,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675581581
+    "timestamp": 1775294422707310330
   },
   {
     "env_config": {
@@ -7320,7 +7320,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675581863
+    "timestamp": 1775294422707310613
   },
   {
     "env_config": {
@@ -7357,47 +7357,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675582147
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 0.75,
-        "vehicles_count": 15,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675582420
+    "timestamp": 1775294422707310887
   },
   {
     "env_config": {
@@ -7429,6 +7389,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707311091
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 0.75,
+        "vehicles_count": 15,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -7441,7 +7441,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675582785
+    "timestamp": 1775294422707311398
   },
   {
     "env_config": {
@@ -7487,7 +7487,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675583063
+    "timestamp": 1775294422707311659
   },
   {
     "env_config": {
@@ -7515,7 +7515,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675583454
+    "timestamp": 1775294422707312057
   },
   {
     "env_config": {
@@ -7550,7 +7550,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675583738
+    "timestamp": 1775294422707312346
   },
   {
     "env_config": {
@@ -7587,7 +7587,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675584017
+    "timestamp": 1775294422707315918
   },
   {
     "env_config": {
@@ -7615,7 +7615,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675584313
+    "timestamp": 1775294422707316425
   },
   {
     "env_config": {
@@ -7650,7 +7650,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675584576
+    "timestamp": 1775294422707316720
   },
   {
     "env_config": {
@@ -7687,47 +7687,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675584857
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 1.0,
-        "vehicles_count": 20,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675585015
+    "timestamp": 1775294422707317030
   },
   {
     "env_config": {
@@ -7759,6 +7719,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707317216
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.0,
+        "vehicles_count": 20,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -7771,7 +7771,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675585270
+    "timestamp": 1775294422707317499
   },
   {
     "env_config": {
@@ -7817,7 +7817,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675585602
+    "timestamp": 1775294422707317795
   },
   {
     "env_config": {
@@ -7845,7 +7845,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675586010
+    "timestamp": 1775294422707318235
   },
   {
     "env_config": {
@@ -7880,7 +7880,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675586272
+    "timestamp": 1775294422707318529
   },
   {
     "env_config": {
@@ -7917,7 +7917,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675586600
+    "timestamp": 1775294422707318805
   },
   {
     "env_config": {
@@ -7945,7 +7945,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675586888
+    "timestamp": 1775294422707319097
   },
   {
     "env_config": {
@@ -7980,7 +7980,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675587170
+    "timestamp": 1775294422707319400
   },
   {
     "env_config": {
@@ -8017,7 +8017,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675587432
+    "timestamp": 1775294422707319700
   },
   {
     "env_config": {
@@ -8057,7 +8057,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675587601
+    "timestamp": 1775294422707319952
   },
   {
     "env_config": {
@@ -8101,7 +8101,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675587890
+    "timestamp": 1775294422707320206
   },
   {
     "env_config": {
@@ -8147,7 +8147,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675588147
+    "timestamp": 1775294422707320459
   },
   {
     "env_config": {
@@ -8175,7 +8175,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675588546
+    "timestamp": 1775294422707320898
   },
   {
     "env_config": {
@@ -8210,7 +8210,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675588841
+    "timestamp": 1775294422707321186
   },
   {
     "env_config": {
@@ -8247,7 +8247,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675589129
+    "timestamp": 1775294422707321468
   },
   {
     "env_config": {
@@ -8275,7 +8275,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675589418
+    "timestamp": 1775294422707321791
   },
   {
     "env_config": {
@@ -8310,7 +8310,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675589685
+    "timestamp": 1775294422707322080
   },
   {
     "env_config": {
@@ -8347,47 +8347,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675589961
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 1.5,
-        "vehicles_count": 30,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675590124
+    "timestamp": 1775294422707322376
   },
   {
     "env_config": {
@@ -8419,6 +8379,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707322554
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.5,
+        "vehicles_count": 30,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -8431,7 +8431,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675590377
+    "timestamp": 1775294422707322850
   },
   {
     "env_config": {
@@ -8477,7 +8477,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675590647
+    "timestamp": 1775294422707323116
   },
   {
     "env_config": {
@@ -8505,7 +8505,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675591074
+    "timestamp": 1775294422707323573
   },
   {
     "env_config": {
@@ -8540,7 +8540,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675591345
+    "timestamp": 1775294422707323848
   },
   {
     "env_config": {
@@ -8577,7 +8577,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675591682
+    "timestamp": 1775294422707324176
   },
   {
     "env_config": {
@@ -8605,7 +8605,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675591960
+    "timestamp": 1775294422707324473
   },
   {
     "env_config": {
@@ -8640,7 +8640,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675592234
+    "timestamp": 1775294422707324746
   },
   {
     "env_config": {
@@ -8677,47 +8677,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675592529
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 1.75,
-        "vehicles_count": 35,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675592698
+    "timestamp": 1775294422707325288
   },
   {
     "env_config": {
@@ -8749,6 +8709,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707325463
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 1.75,
+        "vehicles_count": 35,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -8761,7 +8761,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675593009
+    "timestamp": 1775294422707325731
   },
   {
     "env_config": {
@@ -8807,7 +8807,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675593271
+    "timestamp": 1775294422707325997
   },
   {
     "env_config": {
@@ -8835,7 +8835,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675593681
+    "timestamp": 1775294422707326388
   },
   {
     "env_config": {
@@ -8870,7 +8870,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675593942
+    "timestamp": 1775294422707326672
   },
   {
     "env_config": {
@@ -8907,7 +8907,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675594241
+    "timestamp": 1775294422707326979
   },
   {
     "env_config": {
@@ -8935,7 +8935,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675594511
+    "timestamp": 1775294422707327272
   },
   {
     "env_config": {
@@ -8970,7 +8970,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675594794
+    "timestamp": 1775294422707327574
   },
   {
     "env_config": {
@@ -9007,47 +9007,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675595071
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 2.0,
-        "vehicles_count": 40,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675595224
+    "timestamp": 1775294422707327845
   },
   {
     "env_config": {
@@ -9079,6 +9039,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707328000
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.0,
+        "vehicles_count": 40,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -9091,7 +9091,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675595483
+    "timestamp": 1775294422707328259
   },
   {
     "env_config": {
@@ -9137,7 +9137,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675595755
+    "timestamp": 1775294422707328545
   },
   {
     "env_config": {
@@ -9165,7 +9165,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675596169
+    "timestamp": 1775294422707328957
   },
   {
     "env_config": {
@@ -9200,7 +9200,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675596428
+    "timestamp": 1775294422707329234
   },
   {
     "env_config": {
@@ -9237,7 +9237,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675596717
+    "timestamp": 1775294422707329538
   },
   {
     "env_config": {
@@ -9265,7 +9265,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675597014
+    "timestamp": 1775294422707329826
   },
   {
     "env_config": {
@@ -9300,7 +9300,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675597294
+    "timestamp": 1775294422707330109
   },
   {
     "env_config": {
@@ -9337,47 +9337,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675597554
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 2.25,
-        "vehicles_count": 45,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675597706
+    "timestamp": 1775294422707330400
   },
   {
     "env_config": {
@@ -9409,6 +9369,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707330582
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.25,
+        "vehicles_count": 45,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -9421,7 +9421,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675597986
+    "timestamp": 1775294422707330834
   },
   {
     "env_config": {
@@ -9467,7 +9467,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675598241
+    "timestamp": 1775294422707331087
   },
   {
     "env_config": {
@@ -9495,7 +9495,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675598644
+    "timestamp": 1775294422707331527
   },
   {
     "env_config": {
@@ -9530,7 +9530,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675598928
+    "timestamp": 1775294422707331828
   },
   {
     "env_config": {
@@ -9567,7 +9567,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675599211
+    "timestamp": 1775294422707332105
   },
   {
     "env_config": {
@@ -9595,7 +9595,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675599487
+    "timestamp": 1775294422707332392
   },
   {
     "env_config": {
@@ -9630,7 +9630,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675599764
+    "timestamp": 1775294422707332692
   },
   {
     "env_config": {
@@ -9667,47 +9667,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675600023
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 4,
-        "vehicles_density": 2.5,
-        "vehicles_count": 50,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675600177
+    "timestamp": 1775294422707332966
   },
   {
     "env_config": {
@@ -9739,6 +9699,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707333156
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 4,
+        "vehicles_density": 2.5,
+        "vehicles_count": 50,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -9751,7 +9751,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675600449
+    "timestamp": 1775294422707333447
   },
   {
     "env_config": {
@@ -9797,7 +9797,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675600739
+    "timestamp": 1775294422707333698
   },
   {
     "env_config": {
@@ -9825,7 +9825,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675601159
+    "timestamp": 1775294422707334114
   },
   {
     "env_config": {
@@ -9860,7 +9860,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675601422
+    "timestamp": 1775294422707334404
   },
   {
     "env_config": {
@@ -9897,7 +9897,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675601721
+    "timestamp": 1775294422707334727
   },
   {
     "env_config": {
@@ -9925,7 +9925,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675602014
+    "timestamp": 1775294422707335030
   },
   {
     "env_config": {
@@ -9960,7 +9960,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675602278
+    "timestamp": 1775294422707335331
   },
   {
     "env_config": {
@@ -9997,47 +9997,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675602608
-  },
-  {
-    "env_config": {
-      "env_id": "highway-fast-v0",
-      "config": {
-        "lanes_count": 5,
-        "vehicles_density": 0.0,
-        "vehicles_count": 0,
-        "duration": 40,
-        "ego_spacing": 2
-      },
-      "train_timesteps": 100000,
-      "eval_freq": 1000,
-      "n_eval_episodes": 10,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "GrayscaleObservation",
-      "observation_shape": [
-        84,
-        84
-      ],
-      "stack_size": 4,
-      "weights": [
-        0.2989,
-        0.587,
-        0.114
-      ],
-      "scaling": 1.75
-    },
-    "algo_config": {
-      "algo": "a2c",
-      "action_space": "Discrete",
-      "policy": "CnnPolicy",
-      "n_envs": 16,
-      "ent_coef": 0.01,
-      "vf_coef": 0.25,
-      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
-    },
-    "timestamp": 1775225561675602785
+    "timestamp": 1775294422707335662
   },
   {
     "env_config": {
@@ -10069,6 +10029,46 @@
       "scaling": 1.75
     },
     "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "policy": "CnnPolicy",
+      "n_envs": 16,
+      "ent_coef": 0.01,
+      "vf_coef": 0.25,
+      "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
+    },
+    "timestamp": 1775294422707335831
+  },
+  {
+    "env_config": {
+      "env_id": "highway-fast-v0",
+      "config": {
+        "lanes_count": 5,
+        "vehicles_density": 0.0,
+        "vehicles_count": 0,
+        "duration": 40,
+        "ego_spacing": 2
+      },
+      "train_timesteps": 100000,
+      "eval_freq": 1000,
+      "n_eval_episodes": 10,
+      "n_test_episodes": 10
+    },
+    "obs_config": {
+      "type": "GrayscaleObservation",
+      "observation_shape": [
+        84,
+        84
+      ],
+      "stack_size": 4,
+      "weights": [
+        0.2989,
+        0.587,
+        0.114
+      ],
+      "scaling": 1.75
+    },
+    "algo_config": {
       "algo": "ppo",
       "action_space": "Discrete",
       "policy": "CnnPolicy",
@@ -10081,7 +10081,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675603038
+    "timestamp": 1775294422707336085
   },
   {
     "env_config": {
@@ -10127,7 +10127,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675603308
+    "timestamp": 1775294422707336367
   },
   {
     "env_config": {
@@ -10155,7 +10155,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675603685
+    "timestamp": 1775294422707336763
   },
   {
     "env_config": {
@@ -10190,7 +10190,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675603977
+    "timestamp": 1775294422707337058
   },
   {
     "env_config": {
@@ -10227,7 +10227,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675604249
+    "timestamp": 1775294422707337351
   },
   {
     "env_config": {
@@ -10255,7 +10255,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675604543
+    "timestamp": 1775294422707337659
   },
   {
     "env_config": {
@@ -10290,7 +10290,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675604835
+    "timestamp": 1775294422707337929
   },
   {
     "env_config": {
@@ -10327,7 +10327,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675605102
+    "timestamp": 1775294422707338206
   },
   {
     "env_config": {
@@ -10367,7 +10367,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675605271
+    "timestamp": 1775294422707338377
   },
   {
     "env_config": {
@@ -10411,7 +10411,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675605538
+    "timestamp": 1775294422707338651
   },
   {
     "env_config": {
@@ -10457,7 +10457,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675605795
+    "timestamp": 1775294422707338901
   },
   {
     "env_config": {
@@ -10485,7 +10485,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675606209
+    "timestamp": 1775294422707339311
   },
   {
     "env_config": {
@@ -10520,7 +10520,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675606498
+    "timestamp": 1775294422707339582
   },
   {
     "env_config": {
@@ -10557,7 +10557,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675606776
+    "timestamp": 1775294422707339876
   },
   {
     "env_config": {
@@ -10585,7 +10585,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675607050
+    "timestamp": 1775294422707340165
   },
   {
     "env_config": {
@@ -10620,7 +10620,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675607325
+    "timestamp": 1775294422707340438
   },
   {
     "env_config": {
@@ -10657,7 +10657,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675607598
+    "timestamp": 1775294422707340722
   },
   {
     "env_config": {
@@ -10697,7 +10697,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675607753
+    "timestamp": 1775294422707340899
   },
   {
     "env_config": {
@@ -10741,7 +10741,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675608026
+    "timestamp": 1775294422707341164
   },
   {
     "env_config": {
@@ -10787,7 +10787,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675608277
+    "timestamp": 1775294422707341414
   },
   {
     "env_config": {
@@ -10815,7 +10815,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675608666
+    "timestamp": 1775294422707341824
   },
   {
     "env_config": {
@@ -10850,7 +10850,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675608929
+    "timestamp": 1775294422707342132
   },
   {
     "env_config": {
@@ -10887,7 +10887,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675609207
+    "timestamp": 1775294422707342430
   },
   {
     "env_config": {
@@ -10915,7 +10915,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675609497
+    "timestamp": 1775294422707342735
   },
   {
     "env_config": {
@@ -10950,7 +10950,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675609779
+    "timestamp": 1775294422707343008
   },
   {
     "env_config": {
@@ -10987,7 +10987,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675610056
+    "timestamp": 1775294422707343324
   },
   {
     "env_config": {
@@ -11027,7 +11027,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675610215
+    "timestamp": 1775294422707343546
   },
   {
     "env_config": {
@@ -11071,7 +11071,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675610479
+    "timestamp": 1775294422707343797
   },
   {
     "env_config": {
@@ -11117,7 +11117,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675610749
+    "timestamp": 1775294422707344064
   },
   {
     "env_config": {
@@ -11145,7 +11145,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675611133
+    "timestamp": 1775294422707344480
   },
   {
     "env_config": {
@@ -11180,7 +11180,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675611413
+    "timestamp": 1775294422707344783
   },
   {
     "env_config": {
@@ -11217,7 +11217,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675611684
+    "timestamp": 1775294422707345059
   },
   {
     "env_config": {
@@ -11245,7 +11245,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675611969
+    "timestamp": 1775294422707345344
   },
   {
     "env_config": {
@@ -11280,7 +11280,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675612247
+    "timestamp": 1775294422707345724
   },
   {
     "env_config": {
@@ -11317,7 +11317,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675612506
+    "timestamp": 1775294422707346084
   },
   {
     "env_config": {
@@ -11357,7 +11357,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675612740
+    "timestamp": 1775294422707346300
   },
   {
     "env_config": {
@@ -11401,7 +11401,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675613026
+    "timestamp": 1775294422707346596
   },
   {
     "env_config": {
@@ -11447,7 +11447,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675613331
+    "timestamp": 1775294422707346865
   },
   {
     "env_config": {
@@ -11475,7 +11475,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675613815
+    "timestamp": 1775294422707347257
   },
   {
     "env_config": {
@@ -11510,7 +11510,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675614124
+    "timestamp": 1775294422707347544
   },
   {
     "env_config": {
@@ -11547,7 +11547,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675614389
+    "timestamp": 1775294422707347827
   },
   {
     "env_config": {
@@ -11575,7 +11575,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675614688
+    "timestamp": 1775294422707348168
   },
   {
     "env_config": {
@@ -11610,7 +11610,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675614976
+    "timestamp": 1775294422707348451
   },
   {
     "env_config": {
@@ -11647,7 +11647,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675615236
+    "timestamp": 1775294422707348744
   },
   {
     "env_config": {
@@ -11687,7 +11687,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675615389
+    "timestamp": 1775294422707348914
   },
   {
     "env_config": {
@@ -11731,7 +11731,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675615666
+    "timestamp": 1775294422707349178
   },
   {
     "env_config": {
@@ -11777,7 +11777,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675615959
+    "timestamp": 1775294422707349429
   },
   {
     "env_config": {
@@ -11805,7 +11805,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675616342
+    "timestamp": 1775294422707349836
   },
   {
     "env_config": {
@@ -11840,7 +11840,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675616618
+    "timestamp": 1775294422707350135
   },
   {
     "env_config": {
@@ -11877,7 +11877,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675616890
+    "timestamp": 1775294422707350427
   },
   {
     "env_config": {
@@ -11905,7 +11905,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675617184
+    "timestamp": 1775294422707350722
   },
   {
     "env_config": {
@@ -11940,7 +11940,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675617459
+    "timestamp": 1775294422707351021
   },
   {
     "env_config": {
@@ -11977,7 +11977,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675617739
+    "timestamp": 1775294422707351294
   },
   {
     "env_config": {
@@ -12017,7 +12017,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675617925
+    "timestamp": 1775294422707351464
   },
   {
     "env_config": {
@@ -12061,7 +12061,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675618198
+    "timestamp": 1775294422707351724
   },
   {
     "env_config": {
@@ -12107,7 +12107,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675618459
+    "timestamp": 1775294422707351992
   },
   {
     "env_config": {
@@ -12135,7 +12135,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675618881
+    "timestamp": 1775294422707352390
   },
   {
     "env_config": {
@@ -12170,7 +12170,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675619175
+    "timestamp": 1775294422707352679
   },
   {
     "env_config": {
@@ -12207,7 +12207,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675619475
+    "timestamp": 1775294422707352955
   },
   {
     "env_config": {
@@ -12235,7 +12235,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675619753
+    "timestamp": 1775294422707353247
   },
   {
     "env_config": {
@@ -12270,7 +12270,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675620035
+    "timestamp": 1775294422707353557
   },
   {
     "env_config": {
@@ -12307,7 +12307,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675620302
+    "timestamp": 1775294422707353847
   },
   {
     "env_config": {
@@ -12347,7 +12347,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675620511
+    "timestamp": 1775294422707354020
   },
   {
     "env_config": {
@@ -12391,7 +12391,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675620840
+    "timestamp": 1775294422707354305
   },
   {
     "env_config": {
@@ -12437,7 +12437,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675621141
+    "timestamp": 1775294422707354574
   },
   {
     "env_config": {
@@ -12465,7 +12465,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675621542
+    "timestamp": 1775294422707354985
   },
   {
     "env_config": {
@@ -12500,7 +12500,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675621819
+    "timestamp": 1775294422707355274
   },
   {
     "env_config": {
@@ -12537,7 +12537,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675622104
+    "timestamp": 1775294422707355563
   },
   {
     "env_config": {
@@ -12565,7 +12565,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675622396
+    "timestamp": 1775294422707355864
   },
   {
     "env_config": {
@@ -12600,7 +12600,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675622692
+    "timestamp": 1775294422707356163
   },
   {
     "env_config": {
@@ -12637,7 +12637,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675622966
+    "timestamp": 1775294422707356455
   },
   {
     "env_config": {
@@ -12677,7 +12677,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675623142
+    "timestamp": 1775294422707356632
   },
   {
     "env_config": {
@@ -12721,7 +12721,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675623412
+    "timestamp": 1775294422707356882
   },
   {
     "env_config": {
@@ -12767,7 +12767,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675623685
+    "timestamp": 1775294422707357166
   },
   {
     "env_config": {
@@ -12795,7 +12795,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675624088
+    "timestamp": 1775294422707357574
   },
   {
     "env_config": {
@@ -12830,7 +12830,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675624378
+    "timestamp": 1775294422707357855
   },
   {
     "env_config": {
@@ -12867,7 +12867,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675624659
+    "timestamp": 1775294422707358129
   },
   {
     "env_config": {
@@ -12895,7 +12895,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675624943
+    "timestamp": 1775294422707358443
   },
   {
     "env_config": {
@@ -12930,7 +12930,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675625237
+    "timestamp": 1775294422707358733
   },
   {
     "env_config": {
@@ -12967,7 +12967,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675625548
+    "timestamp": 1775294422707359101
   },
   {
     "env_config": {
@@ -13007,7 +13007,7 @@
       "vf_coef": 0.25,
       "policy_kwargs": "dict(optimizer_class=RMSpropTFLike, optimizer_kwargs=dict(eps=1e-5))"
     },
-    "timestamp": 1775225561675625738
+    "timestamp": 1775294422707359270
   },
   {
     "env_config": {
@@ -13051,7 +13051,7 @@
       "vf_coef": 0.5,
       "ent_coef": 0.01
     },
-    "timestamp": 1775225561675626096
+    "timestamp": 1775294422707359539
   },
   {
     "env_config": {
@@ -13097,7 +13097,7 @@
       "exploration_final_eps": 0.01,
       "optimize_memory_usage": false
     },
-    "timestamp": 1775225561675626351
+    "timestamp": 1775294422707359848
   },
   {
     "env_config": {
@@ -13125,7 +13125,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1775225561675626769
+    "timestamp": 1775294422707360256
   },
   {
     "env_config": {
@@ -13160,7 +13160,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1775225561675627056
+    "timestamp": 1775294422707360541
   },
   {
     "env_config": {
@@ -13197,6 +13197,6 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1775225561675627339
+    "timestamp": 1775294422707360836
   }
 ]

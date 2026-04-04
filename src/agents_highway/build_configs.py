@@ -178,7 +178,7 @@ def build_exit_configs() -> List[CONFIG]:
 
 def build_lane_keeping_configs() -> List[CONFIG]:
     STEERING_RANGES = np.linspace(20, 60, 5, dtype=int)
-    DURATIONS = np.linspace(100, 200, 2, dtype=int)
+    DURATIONS = np.linspace(10, 20, 2, dtype=int)   # 100 to 200 steps
     NOISES = np.linspace(0, 0.2, 5, dtype=float)
 
     configs = []
