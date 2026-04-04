@@ -161,7 +161,7 @@ def train(
     final_model_path = models_dir / MODEL_FILE
     model.save(final_model_path)
 
-    final_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
+    final_vec_normalize_path = models_dir / VEC_NORMALIZE_FILE
     vec_normalize = find_vec_normalize(env)
     if vec_normalize is not None:
         vec_normalize.save(str(final_vec_normalize_path))    
