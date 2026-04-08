@@ -119,3 +119,17 @@ def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int):
             desc=desc,
         ):
             pass
+
+def check_agents(train_configs: List[TrainConfig]):
+    segs = []   # segments of not trained configurations
+    i = 0
+    while i < len(train_configs):
+        if not is_trained(train_configs[i]):
+            lo = i
+            hi = i + 1
+            while hi < len(train_configs) and not is_trained(train_configs[hi]):
+                hi += 1
+            segs.append((lo, hi))
+            i = hi - 1
+        i += 1
+    pprint(f"Segments not trained yet: {segs}")

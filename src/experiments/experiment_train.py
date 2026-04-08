@@ -38,6 +38,7 @@ if __name__ == "__main__":
         Default values: goal_reward = 1, high_speed_reward: 0.1, right_lane_reward: 0, collision_reward: 0
         """
         config["lanes_count"] = 4
+        config["duration"] = 20
         config["high_speed_reward"] = 0.01
     elif env_id == "lane-keeping-v0":
         policy_arch = "MultiInputPolicy"

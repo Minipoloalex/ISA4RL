@@ -10,16 +10,16 @@ import pandas as pd
 from configs import TrainConfig, InstanceConfig
 from common.env_utils import ENVS
 from utils.load_config_utils import load_env_train_configs, load_env_instance_configs
-from main_helpers import train_agents, eval_agents, extract_metafeatures
+from main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents
 
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     parser = argparse.ArgumentParser(
-        description="Run training, evaluation, or metafeature extraction for highway configs."
+        description="Run training, evaluation, metafeature extraction, or checks of what has been run for highway-env configs."
     )
     parser.add_argument(
         "--task",
-        choices=("train", "evaluate", "extract"),
+        choices=("train", "evaluate", "extract", "check"),
         help="Pipeline stage to execute.",
     )
     parser.add_argument(
@@ -52,6 +52,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         "train": partial(load_env_train_configs, env_name),
         "evaluate": partial(load_env_train_configs, env_name),
         "extract": partial(load_env_instance_configs, env_name),
+        "check": partial(load_env_train_configs, env_name), # used to check what configs have already trained
     }
     configs = load_configs[args.task]()
 
@@ -67,6 +68,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     task_map: Dict[str, Callable[[List[TrainConfig]], None]] = {
         "train": train_agents,
         "evaluate": eval_agents,
+        "check": check_agents,
     }  # type: ignore
     if args.task == "extract":
         extract_metafeatures(selected, workers=args.workers)  # type: ignore[arg-type]
