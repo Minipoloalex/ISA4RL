@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Callable
 import numpy as np
 
-from env_utils import ENVS
+from common.env_utils import ENVS
 
 # BASE PATHS
 
