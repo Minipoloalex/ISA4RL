@@ -218,9 +218,7 @@ def build_racetrack_configs() -> List[CONFIG]:
         max_veh_cnt = 20 if aux >= 3 else 10
         oval_veh_cnts = np.linspace(0, max_veh_cnt, max_veh_cnt // 10 + 1, dtype=int)
         for veh_cnt in oval_veh_cnts:
-            config = deepcopy(OVAL_RACETRACK_FIXED_CONFIGS)
             ang = np.deg2rad(steering)
-            config["config"]["action"]["steering_range"] = [-ang, ang]
 
             all_but_2nd = [i for i in range(1, lanes_count+1) if i != 2]
             BLOCK_LANES = [[], [1]]
@@ -228,6 +226,8 @@ def build_racetrack_configs() -> List[CONFIG]:
                 BLOCK_LANES.append(all_but_2nd)
 
             for blocks in BLOCK_LANES:
+                config = deepcopy(OVAL_RACETRACK_FIXED_CONFIGS)
+                config["config"]["action"]["steering_range"] = [-ang, ang]
                 config["config"].update({
                     "lanes_count": lanes_count,
                     "vehicles_count": veh_cnt,
