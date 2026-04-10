@@ -37,11 +37,11 @@ class InstanceConfig:
     _test_env: Optional[gym.Env] = field(default=None, init=False, repr=False)
 
     @classmethod
-    def from_dict(cls, env_name: str, config_dict: CONFIG) -> "InstanceConfig":
+    def from_dict(cls, env_name: str, config_dict: CONFIG, base_results_path: Path = BASE_RESULTS_PATH) -> "InstanceConfig":
         env_config = config_dict["env_config"].copy()
         obs_config = config_dict["obs_config"].copy()
 
-        base_env_path = RESULTS_ENV_FOLDER_PATH(env_name)
+        base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
         instance_folder_path = RESULTS_INSTANCE_FOLDER_PATH(base_env_path, instance_config_id)
         ensure_dir(instance_folder_path)
@@ -87,7 +87,13 @@ class TrainConfig(InstanceConfig):
     _model: Optional[BaseAlgorithm] = field(default=None, init=False, repr=False)
 
     @classmethod
-    def from_dict(cls, env_name: str, config_dict: Dict[str, Any], use_best_model: bool = True) -> "TrainConfig":
+    def from_dict(
+        cls,
+        env_name: str,
+        config_dict: Dict[str, Any],
+        base_results_path: Path = BASE_RESULTS_PATH,
+        use_best_model: bool = True,
+    ) -> "TrainConfig":
         """
         use_best_model: only useful for evaluating (loads best model instead of model saved last)
         """
@@ -95,7 +101,7 @@ class TrainConfig(InstanceConfig):
         obs_config = config_dict["obs_config"].copy()
         algo_config = config_dict["algo_config"].copy()
 
-        base_env_path = RESULTS_ENV_FOLDER_PATH(env_name)
+        base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
         instance_folder_path = RESULTS_INSTANCE_FOLDER_PATH(base_env_path, instance_config_id)
         ensure_dir(instance_folder_path)

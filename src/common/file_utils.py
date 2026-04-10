@@ -11,6 +11,7 @@ from common.env_utils import ENVS
 base_path = Path(os.getenv("APP_DIR", "../../"))
 
 BASE_RESULTS_PATH = base_path / "results"
+OTHER_RESULTS_PATH: Callable[[str], Path] = lambda folder: base_path / folder
 BASE_CONFIG_PATH = base_path / "config"
 BASE_IMAGES_PATH = base_path / "images"
 
@@ -37,7 +38,9 @@ TRAIN_CONFIGS_PATH: Callable[[str], Path] = lambda env: TRAIN_CONFIGS_FOLDER / f
 EVAL_CONFIGS_PATH: Callable[[str], Path] = lambda env: EVAL_CONFIGS_FOLDER / f"{env}.json"
 
 # RESULTS
-RESULTS_ENV_FOLDER_PATH: Callable[[str], Path] = lambda env_name: BASE_RESULTS_PATH / env_name
+RESULTS_ENV_FOLDER_PATH: Callable[[Path, str], Path] = (
+    lambda base_results_path, env_name: base_results_path / env_name
+)
 RESULTS_INSTANCE_FOLDER_PATH: Callable[[Path, str], Path] = lambda env_folder_path, instance_id: env_folder_path / instance_id
 RESULTS_TRAIN_FOLDER_PATH: Callable[[Path], Path] = lambda instance_folder_path: instance_folder_path / "train"
 RESULTS_TRAIN_ALGO_FOLDER_PATH: Callable[[Path, str], Path] = lambda train_folder_path, algo_id: train_folder_path / algo_id
@@ -63,7 +66,7 @@ _folders = [
     ENV_CONFIGS_FOLDER,
     TRAIN_CONFIGS_FOLDER,
     EVAL_CONFIGS_FOLDER,
-    *[RESULTS_ENV_FOLDER_PATH(env) for env in ENVS],
+    *[RESULTS_ENV_FOLDER_PATH(BASE_RESULTS_PATH, env) for env in ENVS],
 ]
 for folder_path in _folders:
     folder_path.mkdir(parents=True, exist_ok=True)

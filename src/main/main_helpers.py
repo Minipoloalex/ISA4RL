@@ -9,7 +9,7 @@ import logging
 from collections import Counter, deque, defaultdict
 from multiprocessing import get_context, cpu_count
 from pathlib import Path
-from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
+from typing import Any, Callable, List
 from tqdm import tqdm
 from pprint import pprint
 from functools import partial
@@ -30,7 +30,7 @@ from configs import TrainConfig, InstanceConfig
 from train import train
 from evaluate import evaluate, show_eval_results
 from metafeatures import extract_metafeatures as compute_metafeatures
-from common.file_utils import save_json
+from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
 from utils.load_config_utils import (
     is_trained,
     is_evaluated,
@@ -39,6 +39,7 @@ from utils.load_config_utils import (
     RESULTS_METAFEATURES_PATH,
     RESULTS_EVALUATION_PATH,
 )
+from utils.group_utils import find_config_in_folder, is_combination_trained, merge_result_folders
 from multiprocessing import get_context, cpu_count
 
 logger = logging.getLogger(__name__)
@@ -133,3 +134,35 @@ def check_agents(train_configs: List[TrainConfig]):
             i = hi - 1
         i += 1
     pprint(f"Segments not trained yet: {segs}")
+
+
+def group_results(
+        result_folders: list[str],
+    ):
+    # Assumptions:
+    # 1. The `results` folder contains all the environments and all the algorithms (and it is clean)
+    # 2. The folder structure is consistent throughout all the `results` folders
+    # 3. The combination `environment + algorithm` has files in exactly one of the `result_folders`
+    #    (if the combination ran partially in one and completely in the other, there is a 50-50 chance of breaking,
+    #     if the combination is not present in any computer, the folder will be left empty)
+
+    folder = BASE_RESULTS_PATH
+    for env_folder in folder.iterdir():
+        if env_folder.name == "isa":
+            continue
+        for env_instance_folder in env_folder.iterdir():
+            env_config_file = env_instance_folder / "instance_config.json"
+            env_config = read_json(env_config_file)
+            for final_results_folder in (env_instance_folder / "train").iterdir():
+                algo_config_file = final_results_folder / "algo_config.json"
+                algo_config = read_json(algo_config_file)
+
+                # Now, go through the other result folders to merge
+                for result_folder in result_folders:
+                    result_folder_to_merge = find_config_in_folder(OTHER_RESULTS_PATH(result_folder), (env_config, algo_config))
+                    if result_folder_to_merge is None:
+                        continue
+
+                    if is_combination_trained(result_folder_to_merge):
+                        merge_result_folders(result_folder_to_merge, final_results_folder)
+                        break
