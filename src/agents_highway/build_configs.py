@@ -204,7 +204,7 @@ def build_racetrack_configs() -> List[CONFIG]:
         config = deepcopy(BASIC_RACETRACK_FIXED_CONFIGS)
         ang = np.deg2rad(steering)
         config["config"]["action"]["steering_range"] = [-ang, ang]
-        config.update({
+        config["config"].update({
             "vehicles_count": veh_cnt,
         })
         configs.append(config)
