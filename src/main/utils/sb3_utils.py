@@ -36,6 +36,7 @@ def make_vec_env_helper(
     env_cnt: int,
     vec_cls: type[DummyVecEnv] | type[SubprocVecEnv],
     vec_kwargs: Dict[str, Any] | None = None,
+    monitor_dir: str | None = None,
 ) -> VecEnv:
     env_kwargs = {"config": env_config.copy(), "render_mode": None}
     return make_vec_env(
@@ -44,6 +45,7 @@ def make_vec_env_helper(
         vec_env_cls=vec_cls,
         env_kwargs=env_kwargs,
         vec_env_kwargs=vec_kwargs,
+        monitor_dir=monitor_dir,
     )
 
 def make_env_vec_normalize(builder: Callable[[], VecEnv], vec_normalize_path: Path, training: bool, **kwargs) -> VecEnv:

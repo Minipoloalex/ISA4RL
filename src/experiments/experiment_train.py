@@ -1,7 +1,8 @@
 import gymnasium as gym
 from stable_baselines3 import PPO
 from stable_baselines3.common.env_util import make_vec_env
-from stable_baselines3.common.vec_env import SubprocVecEnv, DummyVecEnv
+from stable_baselines3.common.vec_env import SubprocVecEnv, DummyVecEnv, VecNormalize
+from stable_baselines3 import HerReplayBuffer, SAC, DDPG
 from stable_baselines3.common.monitor import Monitor
 from stable_baselines3.common.callbacks import EvalCallback
 import argparse
@@ -27,6 +28,9 @@ if __name__ == "__main__":
     env_id = args.env
     train = args.train
     config = {}
+    config["render_mode"] = None
+    N_TRAIN_ENVS = 1
+    EVAL_FREQ = int(4e3)
     policy_arch = "MlpPolicy"
     train_timesteps = int(1e5)
     callback_eval_episodes = 10
@@ -50,20 +54,22 @@ if __name__ == "__main__":
     elif env_id == "parking-v0":
         policy_arch = "MultiInputPolicy"
         train_timesteps = int(2e5)
-        config["duration"] = 10
-        config["add_walls"] = False
-
+        config["duration"] = 60
+        config["add_walls"] = True
+        config["parking_spots"] = 4
+        config["vehicles_count"] = 4
     env_kwargs = {"config": config}
     if train:
-        eval_env = gym.make(env_id, config=config)
-        eval_env = Monitor(eval_env)
+        eval_env = make_vec_env(env_id, vec_env_cls=DummyVecEnv, env_kwargs={"config": config})
+        if env_id == "parking-v0":
+            eval_env = VecNormalize(eval_env, training=False, norm_reward=False, norm_obs=True)
 
         eval_callback = EvalCallback(
             eval_env,
             n_eval_episodes=callback_eval_episodes,
             best_model_save_path=f"result_experiment_{env_id}/best_model",
             log_path=f"result_experiment_{env_id}/",
-            eval_freq=1000,
+            eval_freq=EVAL_FREQ // N_TRAIN_ENVS,
             deterministic=True,
             render=False,
         )
@@ -73,11 +79,13 @@ if __name__ == "__main__":
         # env = make_vec_env("highway-fast-v0", n_envs=16, vec_env_cls=SubprocVecEnv)
         train_env = make_vec_env(
             env_id,
-            n_envs=1,
+            n_envs=N_TRAIN_ENVS,
             env_kwargs=env_kwargs,
             vec_env_cls=DummyVecEnv,
             monitor_dir=f"result_experiment_{env_id}/",
         )
+        if env_id == "parking-v0":
+            train_env = VecNormalize(train_env, training=True, norm_obs=True, norm_reward=True)
         # config = {
         #     "n_envs": 16,
         #     "n_timesteps": 100000,
@@ -88,6 +96,22 @@ if __name__ == "__main__":
         #     "n_epochs": 4,
         #     "ent_coef": 0.0,
         # }
+        # SAC hyperparams:
+        # model = SAC(
+        #     "MultiInputPolicy",
+        #     train_env,
+        #     replay_buffer_class=HerReplayBuffer,
+        #     replay_buffer_kwargs=dict(
+        #         n_sampled_goal=4,
+        #         goal_selection_strategy="future",
+        #     ),
+        #     verbose=1,
+        #     buffer_size=int(1e6),
+        #     learning_rate=1e-3,
+        #     gamma=0.95,
+        #     batch_size=256,
+        #     policy_kwargs=dict(net_arch=[256, 256, 256]),
+        # )
         model = PPO(
             policy_arch,
             train_env,
@@ -115,6 +139,7 @@ if __name__ == "__main__":
         train_env.close()
         eval_env.close()
 
+    print(">> Evaluating: showing visualization")
     model = PPO.load(f"result_experiment_{env_id}/best_model/best_model", device="cpu")
     env = gym.make(env_id, config=config, render_mode="human")
     env = Monitor(env)

@@ -21,8 +21,6 @@ from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.logger import Logger, configure
 from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
-from stable_baselines3.common.monitor import Monitor
-from stable_baselines3.common.env_util import make_vec_env
 
 from common.file_utils import (
     TENSORBOARD_FOLDER, 

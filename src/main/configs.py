@@ -144,8 +144,12 @@ class TrainConfig(InstanceConfig):
         # Only normalize rewards for parking
         normalize_reward = use_vec_normalize and env_id == "parking-v0"
 
-        train_vec_env_builder = partial(make_vec_env_helper, env_id, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs)
-        eval_vec_env_builder = partial(make_vec_env_helper, env_id, env_kwargs, 1, DummyVecEnv)
+        train_vec_env_builder = partial(
+            make_vec_env_helper, env_id, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
+        )
+        eval_vec_env_builder = partial(
+            make_vec_env_helper, env_id, env_kwargs, 1, DummyVecEnv, monitor_dir=str(train_algo_folder_path),
+        )
 
         if use_vec_normalize:
             common_kwargs = {
