@@ -55,12 +55,12 @@ echo "Launching Task B (Index $TASK_B_IDX): Range $START_B to $END_B"
 
 $UV_BIN run --frozen --no-sync --env-file .env main.py \
     --task train --env racetrack \
-    --start $START_A --end $END_A > "$LOG_PATH/racetrack_task_${START_A}_to_${END_A}.log" 2>&1 &
+    --start $START_A --end $END_A > "$LOG_PATH/racetrack_${START_A}_to_${END_A}.log" 2>&1 &
 
 # Launch Task B in the background
 $UV_BIN run --frozen --no-sync --env-file .env main.py \
     --task train --env racetrack \
-    --start $START_B --end $END_B > "$LOG_PATH/racetrack_task_${START_B}_to_${END_B}.log" 2>&1 &
+    --start $START_B --end $END_B > "$LOG_PATH/racetrack_${START_B}_to_${END_B}.log" 2>&1 &
 
 # Wait for both tasks to finish before releasing the node back to the cluster
 wait
