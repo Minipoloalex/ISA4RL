@@ -2,7 +2,7 @@
 #SBATCH --job-name=highway_env_racetrack
 #SBATCH --time=48:00:00
 #SBATCH --account=F202500007HPCVLABUPORTOa
-#SBATCH --partition=large-arm
+#SBATCH --partition=normal-arm
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --exclusive
