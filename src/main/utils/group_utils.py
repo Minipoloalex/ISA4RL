@@ -1,6 +1,7 @@
 from typing import Any, Callable, Dict, Iterable, List, Optional, Sequence, Tuple
 from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
 from pathlib import Path
+import shutil
 from .load_config_utils import (
     RESULTS_TRAIN_METADATA_PATH,
 )
@@ -29,6 +30,4 @@ def is_combination_trained(path: Path) -> bool:
     return nonempty_file_in(RESULTS_TRAIN_METADATA_PATH(path))
 
 def merge_result_folders(src_path: Path, dst_path: Path) -> None:
-    # TODO
-    print(f"Should copy path {src_path} to path {dst_path}")
-    return None
+    shutil.copytree(src_path, dst_path)
