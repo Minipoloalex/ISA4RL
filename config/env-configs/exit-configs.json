@@ -6,7 +6,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -20,7 +22,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -34,7 +38,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -48,7 +54,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -62,7 +70,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -76,7 +86,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -90,7 +102,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -104,7 +118,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -118,7 +134,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -132,7 +150,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -146,7 +166,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -160,7 +182,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -174,7 +198,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -188,7 +214,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -202,7 +230,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -216,7 +246,9 @@
       "exit_position": 300,
       "exit_length": 50,
       "road_length": 850,
-      "duration": 14
+      "duration": 14,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -230,7 +262,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -244,7 +278,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -258,7 +294,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -272,7 +310,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -286,7 +326,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -300,7 +342,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -314,7 +358,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -328,7 +374,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -342,7 +390,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -356,7 +406,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -370,7 +422,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -384,7 +438,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -398,7 +454,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -412,7 +470,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -426,7 +486,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -440,7 +502,9 @@
       "exit_position": 300,
       "exit_length": 100,
       "road_length": 900,
-      "duration": 16
+      "duration": 16,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -454,7 +518,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -468,7 +534,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -482,7 +550,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -496,7 +566,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -510,7 +582,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -524,7 +598,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -538,7 +614,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -552,7 +630,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -566,7 +646,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -580,7 +662,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -594,7 +678,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -608,7 +694,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -622,7 +710,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -636,7 +726,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -650,7 +742,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -664,7 +758,9 @@
       "exit_position": 300,
       "exit_length": 150,
       "road_length": 950,
-      "duration": 18
+      "duration": 18,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -678,7 +774,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -692,7 +790,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -706,7 +806,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -720,7 +822,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -734,7 +838,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -748,7 +854,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -762,7 +870,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -776,7 +886,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -790,7 +902,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -804,7 +918,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -818,7 +934,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -832,7 +950,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -846,7 +966,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -860,7 +982,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -874,7 +998,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -888,7 +1014,9 @@
       "exit_position": 500,
       "exit_length": 50,
       "road_length": 1050,
-      "duration": 22
+      "duration": 22,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -902,7 +1030,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -916,7 +1046,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -930,7 +1062,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -944,7 +1078,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -958,7 +1094,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -972,7 +1110,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -986,7 +1126,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1000,7 +1142,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1014,7 +1158,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1028,7 +1174,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1042,7 +1190,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1056,7 +1206,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1070,7 +1222,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1084,7 +1238,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1098,7 +1254,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1112,7 +1270,9 @@
       "exit_position": 500,
       "exit_length": 100,
       "road_length": 1100,
-      "duration": 24
+      "duration": 24,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1126,7 +1286,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1140,7 +1302,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1154,7 +1318,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1168,7 +1334,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1182,7 +1350,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1196,7 +1366,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1210,7 +1382,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1224,7 +1398,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1238,7 +1414,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1252,7 +1430,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1266,7 +1446,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1280,7 +1462,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1294,7 +1478,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1308,7 +1494,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1322,7 +1510,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1336,7 +1526,9 @@
       "exit_position": 500,
       "exit_length": 150,
       "road_length": 1150,
-      "duration": 26
+      "duration": 26,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1350,7 +1542,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1364,7 +1558,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1378,7 +1574,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1392,7 +1590,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1406,7 +1606,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1420,7 +1622,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1434,7 +1638,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1448,7 +1654,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1462,7 +1670,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1476,7 +1686,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1490,7 +1702,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1504,7 +1718,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1518,7 +1734,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1532,7 +1750,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1546,7 +1766,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1560,7 +1782,9 @@
       "exit_position": 700,
       "exit_length": 50,
       "road_length": 1250,
-      "duration": 30
+      "duration": 30,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1574,7 +1798,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1588,7 +1814,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1602,7 +1830,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1616,7 +1846,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1630,7 +1862,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1644,7 +1878,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1658,7 +1894,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1672,7 +1910,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1686,7 +1926,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1700,7 +1942,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1714,7 +1958,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1728,7 +1974,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1742,7 +1990,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1756,7 +2006,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1770,7 +2022,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1784,7 +2038,9 @@
       "exit_position": 700,
       "exit_length": 100,
       "road_length": 1300,
-      "duration": 32
+      "duration": 32,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1798,7 +2054,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 2,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1812,7 +2070,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 2,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1826,7 +2086,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 2,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1840,7 +2102,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 2,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1854,7 +2118,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 3,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1868,7 +2134,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 3,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1882,7 +2150,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 3,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1896,7 +2166,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 3,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1910,7 +2182,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 4,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1924,7 +2198,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 4,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1938,7 +2214,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 4,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1952,7 +2230,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 4,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1966,7 +2246,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 5,
+      "vehicles_density": 0.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1980,7 +2262,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 5,
+      "vehicles_density": 1.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -1994,7 +2278,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 5,
+      "vehicles_density": 1.5
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,
@@ -2008,7 +2294,9 @@
       "exit_position": 700,
       "exit_length": 150,
       "road_length": 1350,
-      "duration": 34
+      "duration": 34,
+      "lanes_count": 5,
+      "vehicles_density": 2.0
     },
     "train_timesteps": 100000,
     "eval_freq": 1000,

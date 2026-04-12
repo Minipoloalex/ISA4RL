@@ -172,6 +172,8 @@ def build_exit_configs() -> List[CONFIG]:
             "exit_length": exit_length,
             "road_length": road_length,
             "duration": duration,
+            "lanes_count": lane_cnt,
+            "vehicles_density": veh_density,
         })
         configs.append(config)
     return configs

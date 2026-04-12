@@ -7,7 +7,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -28,7 +30,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720375097
+    "timestamp": 1775981685262116271
   },
   {
     "env_config": {
@@ -38,7 +40,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -59,7 +63,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720375335
+    "timestamp": 1775981685262116576
   },
   {
     "env_config": {
@@ -69,7 +73,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -90,7 +96,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720375458
+    "timestamp": 1775981685262116686
   },
   {
     "env_config": {
@@ -100,7 +106,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -121,7 +129,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720375552
+    "timestamp": 1775981685262116774
   },
   {
     "env_config": {
@@ -131,7 +139,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -152,7 +162,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720375635
+    "timestamp": 1775981685262116868
   },
   {
     "env_config": {
@@ -162,7 +172,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -183,7 +195,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720376480
+    "timestamp": 1775981685262117005
   },
   {
     "env_config": {
@@ -193,7 +205,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -214,7 +228,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720376581
+    "timestamp": 1775981685262117088
   },
   {
     "env_config": {
@@ -224,7 +238,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -245,7 +261,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720376682
+    "timestamp": 1775981685262117174
   },
   {
     "env_config": {
@@ -255,7 +271,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -276,7 +294,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720376772
+    "timestamp": 1775981685262117249
   },
   {
     "env_config": {
@@ -286,7 +304,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -307,7 +327,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720377577
+    "timestamp": 1775981685262117355
   },
   {
     "env_config": {
@@ -317,7 +337,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -338,7 +360,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720377690
+    "timestamp": 1775981685262117453
   },
   {
     "env_config": {
@@ -348,7 +370,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -369,7 +393,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720377788
+    "timestamp": 1775981685262117538
   },
   {
     "env_config": {
@@ -379,7 +403,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -400,7 +426,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720377878
+    "timestamp": 1775981685262117623
   },
   {
     "env_config": {
@@ -410,7 +436,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -431,7 +459,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720378905
+    "timestamp": 1775981685262118507
   },
   {
     "env_config": {
@@ -441,7 +469,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -462,7 +492,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720378995
+    "timestamp": 1775981685262118609
   },
   {
     "env_config": {
@@ -472,7 +502,9 @@
         "exit_position": 300,
         "exit_length": 50,
         "road_length": 850,
-        "duration": 14
+        "duration": 14,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -493,7 +525,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379087
+    "timestamp": 1775981685262118697
   },
   {
     "env_config": {
@@ -503,7 +535,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -524,7 +558,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379179
+    "timestamp": 1775981685262118780
   },
   {
     "env_config": {
@@ -534,7 +568,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -555,7 +591,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379323
+    "timestamp": 1775981685262118916
   },
   {
     "env_config": {
@@ -565,7 +601,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -586,7 +624,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379437
+    "timestamp": 1775981685262119025
   },
   {
     "env_config": {
@@ -596,7 +634,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -617,7 +657,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379525
+    "timestamp": 1775981685262119125
   },
   {
     "env_config": {
@@ -627,7 +667,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -648,7 +690,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379614
+    "timestamp": 1775981685262119212
   },
   {
     "env_config": {
@@ -658,7 +700,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -679,7 +723,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379697
+    "timestamp": 1775981685262119285
   },
   {
     "env_config": {
@@ -689,7 +733,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -710,7 +756,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379785
+    "timestamp": 1775981685262119359
   },
   {
     "env_config": {
@@ -720,7 +766,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -741,7 +789,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379864
+    "timestamp": 1775981685262119431
   },
   {
     "env_config": {
@@ -751,7 +799,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -772,7 +822,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720379943
+    "timestamp": 1775981685262119506
   },
   {
     "env_config": {
@@ -782,7 +832,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -803,7 +855,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380054
+    "timestamp": 1775981685262119632
   },
   {
     "env_config": {
@@ -813,7 +865,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -834,7 +888,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380134
+    "timestamp": 1775981685262120617
   },
   {
     "env_config": {
@@ -844,7 +898,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -865,7 +921,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380209
+    "timestamp": 1775981685262120701
   },
   {
     "env_config": {
@@ -875,7 +931,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -896,7 +954,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380282
+    "timestamp": 1775981685262120782
   },
   {
     "env_config": {
@@ -906,7 +964,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -927,7 +987,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380356
+    "timestamp": 1775981685262120862
   },
   {
     "env_config": {
@@ -937,7 +997,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -958,7 +1020,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380430
+    "timestamp": 1775981685262120942
   },
   {
     "env_config": {
@@ -968,7 +1030,9 @@
         "exit_position": 300,
         "exit_length": 100,
         "road_length": 900,
-        "duration": 16
+        "duration": 16,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -989,7 +1053,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380514
+    "timestamp": 1775981685262121029
   },
   {
     "env_config": {
@@ -999,7 +1063,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1020,7 +1086,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380587
+    "timestamp": 1775981685262121106
   },
   {
     "env_config": {
@@ -1030,7 +1096,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1051,7 +1119,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380686
+    "timestamp": 1775981685262121221
   },
   {
     "env_config": {
@@ -1061,7 +1129,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1082,7 +1152,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380760
+    "timestamp": 1775981685262121298
   },
   {
     "env_config": {
@@ -1092,7 +1162,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1113,7 +1185,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380832
+    "timestamp": 1775981685262121376
   },
   {
     "env_config": {
@@ -1123,7 +1195,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1144,7 +1218,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380906
+    "timestamp": 1775981685262121467
   },
   {
     "env_config": {
@@ -1154,7 +1228,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1175,7 +1251,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720380980
+    "timestamp": 1775981685262121542
   },
   {
     "env_config": {
@@ -1185,7 +1261,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1206,7 +1284,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720381053
+    "timestamp": 1775981685262121615
   },
   {
     "env_config": {
@@ -1216,7 +1294,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1237,7 +1317,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720381128
+    "timestamp": 1775981685262121688
   },
   {
     "env_config": {
@@ -1247,7 +1327,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1268,7 +1350,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720381230
+    "timestamp": 1775981685262121761
   },
   {
     "env_config": {
@@ -1278,7 +1360,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1299,7 +1383,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382111
+    "timestamp": 1775981685262121876
   },
   {
     "env_config": {
@@ -1309,7 +1393,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1330,7 +1416,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382241
+    "timestamp": 1775981685262121963
   },
   {
     "env_config": {
@@ -1340,7 +1426,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1361,7 +1449,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382322
+    "timestamp": 1775981685262122036
   },
   {
     "env_config": {
@@ -1371,7 +1459,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1392,7 +1482,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382404
+    "timestamp": 1775981685262122111
   },
   {
     "env_config": {
@@ -1402,7 +1492,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1423,7 +1515,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382484
+    "timestamp": 1775981685262122184
   },
   {
     "env_config": {
@@ -1433,7 +1525,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1454,7 +1548,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382585
+    "timestamp": 1775981685262122255
   },
   {
     "env_config": {
@@ -1464,7 +1558,9 @@
         "exit_position": 300,
         "exit_length": 150,
         "road_length": 950,
-        "duration": 18
+        "duration": 18,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1485,7 +1581,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382667
+    "timestamp": 1775981685262122327
   },
   {
     "env_config": {
@@ -1495,7 +1591,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1516,7 +1614,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382744
+    "timestamp": 1775981685262123153
   },
   {
     "env_config": {
@@ -1526,7 +1624,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1547,7 +1647,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382823
+    "timestamp": 1775981685262123282
   },
   {
     "env_config": {
@@ -1557,7 +1657,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1578,7 +1680,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382902
+    "timestamp": 1775981685262123422
   },
   {
     "env_config": {
@@ -1588,7 +1690,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1609,7 +1713,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720382981
+    "timestamp": 1775981685262123592
   },
   {
     "env_config": {
@@ -1619,7 +1723,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1640,7 +1746,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383054
+    "timestamp": 1775981685262123697
   },
   {
     "env_config": {
@@ -1650,7 +1756,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1671,7 +1779,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383172
+    "timestamp": 1775981685262123889
   },
   {
     "env_config": {
@@ -1681,7 +1789,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1702,7 +1812,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383248
+    "timestamp": 1775981685262123969
   },
   {
     "env_config": {
@@ -1712,7 +1822,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1733,7 +1845,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383321
+    "timestamp": 1775981685262124060
   },
   {
     "env_config": {
@@ -1743,7 +1855,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1764,7 +1878,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383415
+    "timestamp": 1775981685262124189
   },
   {
     "env_config": {
@@ -1774,7 +1888,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1795,7 +1911,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383488
+    "timestamp": 1775981685262124327
   },
   {
     "env_config": {
@@ -1805,7 +1921,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1826,7 +1944,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383562
+    "timestamp": 1775981685262125277
   },
   {
     "env_config": {
@@ -1836,7 +1954,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1857,7 +1977,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383636
+    "timestamp": 1775981685262125424
   },
   {
     "env_config": {
@@ -1867,7 +1987,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1888,7 +2010,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383710
+    "timestamp": 1775981685262125521
   },
   {
     "env_config": {
@@ -1898,7 +2020,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1919,7 +2043,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383785
+    "timestamp": 1775981685262125622
   },
   {
     "env_config": {
@@ -1929,7 +2053,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1950,7 +2076,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383859
+    "timestamp": 1775981685262125705
   },
   {
     "env_config": {
@@ -1960,7 +2086,9 @@
         "exit_position": 500,
         "exit_length": 50,
         "road_length": 1050,
-        "duration": 22
+        "duration": 22,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -1981,7 +2109,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720383932
+    "timestamp": 1775981685262125786
   },
   {
     "env_config": {
@@ -1991,7 +2119,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2012,7 +2142,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720384006
+    "timestamp": 1775981685262125864
   },
   {
     "env_config": {
@@ -2022,7 +2152,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2043,7 +2175,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720384168
+    "timestamp": 1775981685262126043
   },
   {
     "env_config": {
@@ -2053,7 +2185,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2074,7 +2208,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720384241
+    "timestamp": 1775981685262126124
   },
   {
     "env_config": {
@@ -2084,7 +2218,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2105,7 +2241,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720384314
+    "timestamp": 1775981685262126202
   },
   {
     "env_config": {
@@ -2115,7 +2251,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2136,7 +2274,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720384387
+    "timestamp": 1775981685262126279
   },
   {
     "env_config": {
@@ -2146,7 +2284,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2167,7 +2307,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720385185
+    "timestamp": 1775981685262126355
   },
   {
     "env_config": {
@@ -2177,7 +2317,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2198,7 +2340,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720385267
+    "timestamp": 1775981685262126430
   },
   {
     "env_config": {
@@ -2208,7 +2350,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2229,7 +2373,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720385358
+    "timestamp": 1775981685262126525
   },
   {
     "env_config": {
@@ -2239,7 +2383,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2260,7 +2406,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386104
+    "timestamp": 1775981685262126600
   },
   {
     "env_config": {
@@ -2270,7 +2416,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2291,7 +2439,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386192
+    "timestamp": 1775981685262126676
   },
   {
     "env_config": {
@@ -2301,7 +2449,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2322,7 +2472,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386273
+    "timestamp": 1775981685262126750
   },
   {
     "env_config": {
@@ -2332,7 +2482,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2353,7 +2505,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386355
+    "timestamp": 1775981685262126825
   },
   {
     "env_config": {
@@ -2363,7 +2515,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2384,7 +2538,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386437
+    "timestamp": 1775981685262126900
   },
   {
     "env_config": {
@@ -2394,7 +2548,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2415,7 +2571,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386584
+    "timestamp": 1775981685262127046
   },
   {
     "env_config": {
@@ -2425,7 +2581,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2446,7 +2604,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386665
+    "timestamp": 1775981685262127132
   },
   {
     "env_config": {
@@ -2456,7 +2614,9 @@
         "exit_position": 500,
         "exit_length": 100,
         "road_length": 1100,
-        "duration": 24
+        "duration": 24,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2477,7 +2637,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386759
+    "timestamp": 1775981685262127208
   },
   {
     "env_config": {
@@ -2487,7 +2647,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2508,7 +2670,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386858
+    "timestamp": 1775981685262127280
   },
   {
     "env_config": {
@@ -2518,7 +2680,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2539,7 +2703,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720386937
+    "timestamp": 1775981685262127369
   },
   {
     "env_config": {
@@ -2549,7 +2713,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2570,7 +2736,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387019
+    "timestamp": 1775981685262127444
   },
   {
     "env_config": {
@@ -2580,7 +2746,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2601,7 +2769,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387115
+    "timestamp": 1775981685262127519
   },
   {
     "env_config": {
@@ -2611,7 +2779,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2632,7 +2802,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387190
+    "timestamp": 1775981685262127596
   },
   {
     "env_config": {
@@ -2642,7 +2812,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2663,7 +2835,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387283
+    "timestamp": 1775981685262127672
   },
   {
     "env_config": {
@@ -2673,7 +2845,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2694,7 +2868,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387359
+    "timestamp": 1775981685262127744
   },
   {
     "env_config": {
@@ -2704,7 +2878,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2725,7 +2901,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387452
+    "timestamp": 1775981685262127817
   },
   {
     "env_config": {
@@ -2735,7 +2911,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2756,7 +2934,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387541
+    "timestamp": 1775981685262127892
   },
   {
     "env_config": {
@@ -2766,7 +2944,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2787,7 +2967,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387618
+    "timestamp": 1775981685262128675
   },
   {
     "env_config": {
@@ -2797,7 +2977,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2818,7 +3000,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387694
+    "timestamp": 1775981685262128757
   },
   {
     "env_config": {
@@ -2828,7 +3010,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2849,7 +3033,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387771
+    "timestamp": 1775981685262128837
   },
   {
     "env_config": {
@@ -2859,7 +3043,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2880,7 +3066,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720387846
+    "timestamp": 1775981685262128915
   },
   {
     "env_config": {
@@ -2890,7 +3076,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2911,7 +3099,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720388045
+    "timestamp": 1775981685262129088
   },
   {
     "env_config": {
@@ -2921,7 +3109,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2942,7 +3132,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720388124
+    "timestamp": 1775981685262129181
   },
   {
     "env_config": {
@@ -2952,7 +3142,9 @@
         "exit_position": 500,
         "exit_length": 150,
         "road_length": 1150,
-        "duration": 26
+        "duration": 26,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -2973,7 +3165,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720388200
+    "timestamp": 1775981685262129261
   },
   {
     "env_config": {
@@ -2983,7 +3175,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3004,7 +3198,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720388277
+    "timestamp": 1775981685262129352
   },
   {
     "env_config": {
@@ -3014,7 +3208,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3035,7 +3231,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720388360
+    "timestamp": 1775981685262129427
   },
   {
     "env_config": {
@@ -3045,7 +3241,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3066,7 +3264,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389235
+    "timestamp": 1775981685262130458
   },
   {
     "env_config": {
@@ -3076,7 +3274,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3097,7 +3297,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389321
+    "timestamp": 1775981685262130559
   },
   {
     "env_config": {
@@ -3107,7 +3307,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3128,7 +3330,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389406
+    "timestamp": 1775981685262130656
   },
   {
     "env_config": {
@@ -3138,7 +3340,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3159,7 +3363,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389492
+    "timestamp": 1775981685262130738
   },
   {
     "env_config": {
@@ -3169,7 +3373,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3190,7 +3396,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389573
+    "timestamp": 1775981685262130820
   },
   {
     "env_config": {
@@ -3200,7 +3406,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3221,7 +3429,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720389655
+    "timestamp": 1775981685262130898
   },
   {
     "env_config": {
@@ -3231,7 +3439,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3252,7 +3462,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390391
+    "timestamp": 1775981685262131001
   },
   {
     "env_config": {
@@ -3262,7 +3472,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3283,7 +3495,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390478
+    "timestamp": 1775981685262131082
   },
   {
     "env_config": {
@@ -3293,7 +3505,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3314,7 +3528,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390600
+    "timestamp": 1775981685262131162
   },
   {
     "env_config": {
@@ -3324,7 +3538,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3345,7 +3561,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390686
+    "timestamp": 1775981685262131239
   },
   {
     "env_config": {
@@ -3355,7 +3571,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3376,7 +3594,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390771
+    "timestamp": 1775981685262131318
   },
   {
     "env_config": {
@@ -3386,7 +3604,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3407,7 +3627,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720390948
+    "timestamp": 1775981685262131496
   },
   {
     "env_config": {
@@ -3417,7 +3637,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3438,7 +3660,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391026
+    "timestamp": 1775981685262131572
   },
   {
     "env_config": {
@@ -3448,7 +3670,9 @@
         "exit_position": 700,
         "exit_length": 50,
         "road_length": 1250,
-        "duration": 30
+        "duration": 30,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3469,7 +3693,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391103
+    "timestamp": 1775981685262131648
   },
   {
     "env_config": {
@@ -3479,7 +3703,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3500,7 +3726,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391223
+    "timestamp": 1775981685262132747
   },
   {
     "env_config": {
@@ -3510,7 +3736,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3531,7 +3759,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391305
+    "timestamp": 1775981685262132852
   },
   {
     "env_config": {
@@ -3541,7 +3769,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3562,7 +3792,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391383
+    "timestamp": 1775981685262132937
   },
   {
     "env_config": {
@@ -3572,7 +3802,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3593,7 +3825,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391459
+    "timestamp": 1775981685262133021
   },
   {
     "env_config": {
@@ -3603,7 +3835,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3624,7 +3858,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391536
+    "timestamp": 1775981685262133101
   },
   {
     "env_config": {
@@ -3634,7 +3868,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3655,7 +3891,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391609
+    "timestamp": 1775981685262133181
   },
   {
     "env_config": {
@@ -3665,7 +3901,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3686,7 +3924,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391682
+    "timestamp": 1775981685262133261
   },
   {
     "env_config": {
@@ -3696,7 +3934,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3717,7 +3957,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391756
+    "timestamp": 1775981685262133338
   },
   {
     "env_config": {
@@ -3727,7 +3967,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3748,7 +3990,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391830
+    "timestamp": 1775981685262133418
   },
   {
     "env_config": {
@@ -3758,7 +4000,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3779,7 +4023,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391902
+    "timestamp": 1775981685262134182
   },
   {
     "env_config": {
@@ -3789,7 +4033,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3810,7 +4056,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720391985
+    "timestamp": 1775981685262134272
   },
   {
     "env_config": {
@@ -3820,7 +4066,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3841,7 +4089,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392059
+    "timestamp": 1775981685262134356
   },
   {
     "env_config": {
@@ -3851,7 +4099,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3872,7 +4122,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392132
+    "timestamp": 1775981685262134437
   },
   {
     "env_config": {
@@ -3882,7 +4132,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3903,7 +4155,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392222
+    "timestamp": 1775981685262134516
   },
   {
     "env_config": {
@@ -3913,7 +4165,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3934,7 +4188,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392297
+    "timestamp": 1775981685262134596
   },
   {
     "env_config": {
@@ -3944,7 +4198,9 @@
         "exit_position": 700,
         "exit_length": 100,
         "road_length": 1300,
-        "duration": 32
+        "duration": 32,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3965,7 +4221,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392368
+    "timestamp": 1775981685262134677
   },
   {
     "env_config": {
@@ -3975,7 +4231,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 2,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -3996,7 +4254,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392442
+    "timestamp": 1775981685262134755
   },
   {
     "env_config": {
@@ -4006,7 +4264,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 2,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4027,7 +4287,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392572
+    "timestamp": 1775981685262134882
   },
   {
     "env_config": {
@@ -4037,7 +4297,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 2,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4058,7 +4320,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392647
+    "timestamp": 1775981685262134963
   },
   {
     "env_config": {
@@ -4068,7 +4330,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 2,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4089,7 +4353,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392719
+    "timestamp": 1775981685262135057
   },
   {
     "env_config": {
@@ -4099,7 +4363,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 3,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4120,7 +4386,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720392792
+    "timestamp": 1775981685262135132
   },
   {
     "env_config": {
@@ -4130,7 +4396,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 3,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4151,7 +4419,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720393656
+    "timestamp": 1775981685262135210
   },
   {
     "env_config": {
@@ -4161,7 +4429,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 3,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4182,7 +4452,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720393735
+    "timestamp": 1775981685262135300
   },
   {
     "env_config": {
@@ -4192,7 +4462,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 3,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4213,7 +4485,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720393821
+    "timestamp": 1775981685262135379
   },
   {
     "env_config": {
@@ -4223,7 +4495,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 4,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4244,7 +4518,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720394635
+    "timestamp": 1775981685262135455
   },
   {
     "env_config": {
@@ -4254,7 +4528,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 4,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4275,7 +4551,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720394721
+    "timestamp": 1775981685262135533
   },
   {
     "env_config": {
@@ -4285,7 +4561,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 4,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4306,7 +4584,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720394802
+    "timestamp": 1775981685262135611
   },
   {
     "env_config": {
@@ -4316,7 +4594,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 4,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4337,7 +4617,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720394885
+    "timestamp": 1775981685262135689
   },
   {
     "env_config": {
@@ -4347,7 +4627,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 5,
+        "vehicles_density": 0.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4368,7 +4650,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720394963
+    "timestamp": 1775981685262135760
   },
   {
     "env_config": {
@@ -4378,7 +4660,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 5,
+        "vehicles_density": 1.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4399,7 +4683,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720395040
+    "timestamp": 1775981685262135846
   },
   {
     "env_config": {
@@ -4409,7 +4693,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 5,
+        "vehicles_density": 1.5
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4430,7 +4716,7 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720395115
+    "timestamp": 1775981685262135939
   },
   {
     "env_config": {
@@ -4440,7 +4726,9 @@
         "exit_position": 700,
         "exit_length": 150,
         "road_length": 1350,
-        "duration": 34
+        "duration": 34,
+        "lanes_count": 5,
+        "vehicles_density": 2.0
       },
       "train_timesteps": 100000,
       "eval_freq": 1000,
@@ -4461,6 +4749,6 @@
       ],
       "clip": false
     },
-    "timestamp": 1775837498720395188
+    "timestamp": 1775981685262136012
   }
 ]
