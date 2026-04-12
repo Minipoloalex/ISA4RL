@@ -51,7 +51,7 @@ MULTI_INPUT = "MultiInputPolicy"
 OBS_POLICY = {
     K: MLP,
     TTC: MLP,
-    KG: MLP,
+    KG: MULTI_INPUT,
     OG: MLP,
     E: MLP,
     A: MULTI_INPUT,
@@ -353,7 +353,7 @@ def build_all_configs(
         {
             "env_config": env,
             "obs_config": obs,
-            "algo_config": validate_policy_type(algo, obs),
+            "algo_config": validate_policy_type(deepcopy(algo), obs),
             "timestamp": time.time_ns(),
         }
         for (env, obs, algo) in itertools.product(
@@ -363,11 +363,11 @@ def build_all_configs(
     ]
     eval_configs = [
         {
-            "env_config": config[0],
-            "obs_config": config[1],
+            "env_config": env,
+            "obs_config": obs,
             "timestamp": time.time_ns(),
         }
-        for config in itertools.product(
+        for (env, obs) in itertools.product(
             env_configs, obs_configs,
         )
     ]
