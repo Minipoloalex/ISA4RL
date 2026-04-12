@@ -83,7 +83,7 @@ OVAL_RACETRACK_FIXED_CONFIGS = {
     "n_test_episodes": 10,
 }
 PARKING_FIXED_CONFIGS = {
-    "env-id": "parking-v0",
+    "env_id": "parking-v0",
     "train_timesteps": int(3e5),
     "eval_freq": int(3e3),
     "n_eval_episodes": 5,

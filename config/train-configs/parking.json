@@ -1,7 +1,7 @@
 [
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -58,11 +58,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289341445
+    "timestamp": 1775983155646680779
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -116,11 +116,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289342278
+    "timestamp": 1775983155646681497
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -175,11 +175,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289342590
+    "timestamp": 1775983155646681788
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -236,11 +236,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289342933
+    "timestamp": 1775983155646682053
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -294,11 +294,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289343198
+    "timestamp": 1775983155646682293
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -353,11 +353,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289343484
+    "timestamp": 1775983155646682535
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -414,11 +414,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289343770
+    "timestamp": 1775983155646682781
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -472,11 +472,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289343971
+    "timestamp": 1775983155646682972
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -531,11 +531,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289344174
+    "timestamp": 1775983155646683169
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -592,11 +592,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289344485
+    "timestamp": 1775983155646683447
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -650,11 +650,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289344685
+    "timestamp": 1775983155646683646
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -709,11 +709,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289344890
+    "timestamp": 1775983155646683838
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -770,11 +770,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289345086
+    "timestamp": 1775983155646684068
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -828,11 +828,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289345273
+    "timestamp": 1775983155646684255
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -887,11 +887,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289345458
+    "timestamp": 1775983155646684440
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -948,11 +948,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289346407
+    "timestamp": 1775983155646685798
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1006,11 +1006,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289346608
+    "timestamp": 1775983155646686043
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1065,11 +1065,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289346864
+    "timestamp": 1775983155646686292
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1126,11 +1126,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289347060
+    "timestamp": 1775983155646686510
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1184,11 +1184,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289347287
+    "timestamp": 1775983155646686716
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1243,11 +1243,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289347546
+    "timestamp": 1775983155646686903
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1304,11 +1304,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289347741
+    "timestamp": 1775983155646687107
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1362,11 +1362,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289347924
+    "timestamp": 1775983155646687294
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1421,11 +1421,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289348107
+    "timestamp": 1775983155646687478
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1482,11 +1482,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289348314
+    "timestamp": 1775983155646687689
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1540,11 +1540,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289348555
+    "timestamp": 1775983155646687932
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1599,11 +1599,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289348754
+    "timestamp": 1775983155646688123
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1660,11 +1660,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289348950
+    "timestamp": 1775983155646688322
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1718,11 +1718,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289349128
+    "timestamp": 1775983155646688519
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1777,11 +1777,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289349305
+    "timestamp": 1775983155646688702
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1838,11 +1838,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289349497
+    "timestamp": 1775983155646688898
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1896,11 +1896,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289349679
+    "timestamp": 1775983155646689102
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -1955,11 +1955,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289349896
+    "timestamp": 1775983155646689284
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2016,11 +2016,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289350143
+    "timestamp": 1775983155646690313
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2074,11 +2074,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289350332
+    "timestamp": 1775983155646690513
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2133,11 +2133,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289350527
+    "timestamp": 1775983155646690703
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2194,11 +2194,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289350723
+    "timestamp": 1775983155646690895
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2252,11 +2252,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289350907
+    "timestamp": 1775983155646691089
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2311,11 +2311,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289351107
+    "timestamp": 1775983155646691312
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2372,11 +2372,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289351318
+    "timestamp": 1775983155646691513
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2430,11 +2430,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289351499
+    "timestamp": 1775983155646691693
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2489,11 +2489,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289351722
+    "timestamp": 1775983155646691911
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2550,11 +2550,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289351917
+    "timestamp": 1775983155646692122
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2608,11 +2608,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289352112
+    "timestamp": 1775983155646692303
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2667,11 +2667,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289352292
+    "timestamp": 1775983155646692481
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2728,11 +2728,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289352524
+    "timestamp": 1775983155646692665
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2786,11 +2786,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289352713
+    "timestamp": 1775983155646692859
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2845,11 +2845,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289352917
+    "timestamp": 1775983155646693052
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2906,11 +2906,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289353964
+    "timestamp": 1775983155646694015
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -2964,11 +2964,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289354163
+    "timestamp": 1775983155646694218
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3023,11 +3023,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289354355
+    "timestamp": 1775983155646694413
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3084,11 +3084,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289354559
+    "timestamp": 1775983155646694614
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3142,11 +3142,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289354762
+    "timestamp": 1775983155646694789
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3201,11 +3201,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289355010
+    "timestamp": 1775983155646695006
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3262,11 +3262,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289355256
+    "timestamp": 1775983155646695212
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3320,11 +3320,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289355451
+    "timestamp": 1775983155646695390
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3379,11 +3379,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289355637
+    "timestamp": 1775983155646695567
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3440,11 +3440,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289355827
+    "timestamp": 1775983155646695764
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3498,11 +3498,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289356033
+    "timestamp": 1775983155646695938
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3557,11 +3557,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289356216
+    "timestamp": 1775983155646696127
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3618,11 +3618,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289356428
+    "timestamp": 1775983155646696356
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3676,11 +3676,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289356618
+    "timestamp": 1775983155646696542
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3735,11 +3735,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289356797
+    "timestamp": 1775983155646696716
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3796,11 +3796,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289357887
+    "timestamp": 1775983155646696923
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3854,11 +3854,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289358085
+    "timestamp": 1775983155646697104
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3913,11 +3913,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289358469
+    "timestamp": 1775983155646697532
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -3974,11 +3974,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289358673
+    "timestamp": 1775983155646697719
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4032,11 +4032,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289358857
+    "timestamp": 1775983155646697892
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4091,11 +4091,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289359041
+    "timestamp": 1775983155646698066
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4152,11 +4152,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289359255
+    "timestamp": 1775983155646698276
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4210,11 +4210,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289359446
+    "timestamp": 1775983155646698508
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4269,11 +4269,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289359645
+    "timestamp": 1775983155646698686
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4330,11 +4330,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289359840
+    "timestamp": 1775983155646698871
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4388,11 +4388,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289360038
+    "timestamp": 1775983155646699044
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4447,11 +4447,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289360229
+    "timestamp": 1775983155646699228
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4508,11 +4508,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289360414
+    "timestamp": 1775983155646699412
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4566,11 +4566,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289360612
+    "timestamp": 1775983155646699586
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4625,11 +4625,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289360943
+    "timestamp": 1775983155646699861
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4686,11 +4686,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289361145
+    "timestamp": 1775983155646700084
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4744,11 +4744,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289362058
+    "timestamp": 1775983155646700981
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4803,11 +4803,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289362271
+    "timestamp": 1775983155646701169
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4864,11 +4864,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289362478
+    "timestamp": 1775983155646701371
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4922,11 +4922,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289362665
+    "timestamp": 1775983155646701566
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -4981,11 +4981,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289362862
+    "timestamp": 1775983155646701746
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5042,11 +5042,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289363071
+    "timestamp": 1775983155646701936
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5100,11 +5100,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289363262
+    "timestamp": 1775983155646702140
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5159,11 +5159,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289363453
+    "timestamp": 1775983155646702323
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5220,11 +5220,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289363644
+    "timestamp": 1775983155646702521
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5278,11 +5278,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289363853
+    "timestamp": 1775983155646702703
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5337,11 +5337,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289364045
+    "timestamp": 1775983155646702920
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5398,11 +5398,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289364256
+    "timestamp": 1775983155646703115
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5456,11 +5456,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289364438
+    "timestamp": 1775983155646703296
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5515,11 +5515,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289364621
+    "timestamp": 1775983155646703482
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5576,11 +5576,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289364977
+    "timestamp": 1775983155646703746
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5634,11 +5634,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289365163
+    "timestamp": 1775983155646703931
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5693,11 +5693,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289365345
+    "timestamp": 1775983155646704114
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5754,11 +5754,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289365539
+    "timestamp": 1775983155646704321
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5812,11 +5812,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289365746
+    "timestamp": 1775983155646705275
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5871,11 +5871,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289365950
+    "timestamp": 1775983155646705471
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5932,11 +5932,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289366170
+    "timestamp": 1775983155646705670
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -5990,11 +5990,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289366353
+    "timestamp": 1775983155646705850
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6049,11 +6049,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289366556
+    "timestamp": 1775983155646706042
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6110,11 +6110,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289366751
+    "timestamp": 1775983155646706245
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6168,11 +6168,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289366933
+    "timestamp": 1775983155646706447
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6227,11 +6227,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289367136
+    "timestamp": 1775983155646706639
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6288,11 +6288,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289367330
+    "timestamp": 1775983155646706843
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6346,11 +6346,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289367512
+    "timestamp": 1775983155646707044
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6405,11 +6405,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289367726
+    "timestamp": 1775983155646707221
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6466,11 +6466,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289367934
+    "timestamp": 1775983155646707410
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6524,11 +6524,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289368260
+    "timestamp": 1775983155646707700
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6583,11 +6583,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289368459
+    "timestamp": 1775983155646707894
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6644,11 +6644,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289370732
+    "timestamp": 1775983155646710040
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6702,11 +6702,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289370947
+    "timestamp": 1775983155646710245
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6761,11 +6761,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289371162
+    "timestamp": 1775983155646710463
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6822,11 +6822,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289371379
+    "timestamp": 1775983155646710657
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6880,11 +6880,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289371566
+    "timestamp": 1775983155646710856
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -6939,11 +6939,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289371752
+    "timestamp": 1775983155646711031
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7000,11 +7000,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289371962
+    "timestamp": 1775983155646711228
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7058,11 +7058,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289372151
+    "timestamp": 1775983155646711419
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7117,11 +7117,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289372355
+    "timestamp": 1775983155646711708
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7178,11 +7178,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289372552
+    "timestamp": 1775983155646711899
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7236,11 +7236,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289372737
+    "timestamp": 1775983155646712104
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7295,11 +7295,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289372937
+    "timestamp": 1775983155646712281
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7356,11 +7356,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289373130
+    "timestamp": 1775983155646712470
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7414,11 +7414,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289373318
+    "timestamp": 1775983155646712654
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7473,11 +7473,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289373497
+    "timestamp": 1775983155646712864
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7534,11 +7534,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289373704
+    "timestamp": 1775983155646713075
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7592,11 +7592,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289374647
+    "timestamp": 1775983155646713258
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7651,11 +7651,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289374849
+    "timestamp": 1775983155646713433
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7712,11 +7712,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289375115
+    "timestamp": 1775983155646713879
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7770,11 +7770,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289375314
+    "timestamp": 1775983155646714066
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7829,11 +7829,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289375519
+    "timestamp": 1775983155646714242
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7890,11 +7890,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289375714
+    "timestamp": 1775983155646714437
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -7948,11 +7948,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289375908
+    "timestamp": 1775983155646714637
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8007,11 +8007,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289376090
+    "timestamp": 1775983155646714814
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8068,11 +8068,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289376287
+    "timestamp": 1775983155646714999
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8126,11 +8126,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289376470
+    "timestamp": 1775983155646715176
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8185,11 +8185,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289376674
+    "timestamp": 1775983155646715379
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8246,11 +8246,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289376871
+    "timestamp": 1775983155646715564
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8304,11 +8304,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289377053
+    "timestamp": 1775983155646715760
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8363,11 +8363,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289377239
+    "timestamp": 1775983155646715945
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8424,11 +8424,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289377444
+    "timestamp": 1775983155646716132
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8482,11 +8482,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289377629
+    "timestamp": 1775983155646716335
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8541,11 +8541,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289378520
+    "timestamp": 1775983155646717217
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8602,11 +8602,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289378767
+    "timestamp": 1775983155646717439
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8660,11 +8660,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289378978
+    "timestamp": 1775983155646717626
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8719,11 +8719,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289379173
+    "timestamp": 1775983155646717808
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8780,11 +8780,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289379369
+    "timestamp": 1775983155646718001
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8838,11 +8838,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289379553
+    "timestamp": 1775983155646718196
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8897,11 +8897,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289379803
+    "timestamp": 1775983155646718445
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -8958,11 +8958,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289380000
+    "timestamp": 1775983155646718632
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9016,11 +9016,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289380202
+    "timestamp": 1775983155646718833
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9075,11 +9075,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289380407
+    "timestamp": 1775983155646719013
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9136,11 +9136,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289380616
+    "timestamp": 1775983155646719200
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9194,11 +9194,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289380799
+    "timestamp": 1775983155646719388
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9253,11 +9253,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289381001
+    "timestamp": 1775983155646719562
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9314,11 +9314,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289381197
+    "timestamp": 1775983155646719769
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9372,11 +9372,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289381384
+    "timestamp": 1775983155646719955
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9431,11 +9431,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289381586
+    "timestamp": 1775983155646720135
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9492,11 +9492,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289381801
+    "timestamp": 1775983155646720324
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9550,11 +9550,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289381989
+    "timestamp": 1775983155646720519
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9609,11 +9609,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289382172
+    "timestamp": 1775983155646721599
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9670,11 +9670,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289382366
+    "timestamp": 1775983155646721822
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9728,11 +9728,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289382564
+    "timestamp": 1775983155646722004
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9787,11 +9787,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289382752
+    "timestamp": 1775983155646722184
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9848,11 +9848,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289382994
+    "timestamp": 1775983155646722369
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9906,11 +9906,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289383200
+    "timestamp": 1775983155646722579
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -9965,11 +9965,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289383405
+    "timestamp": 1775983155646722790
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10026,11 +10026,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289383621
+    "timestamp": 1775983155646722979
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10084,11 +10084,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289383807
+    "timestamp": 1775983155646723156
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10143,11 +10143,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289383988
+    "timestamp": 1775983155646723331
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10204,11 +10204,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289384177
+    "timestamp": 1775983155646723534
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10262,11 +10262,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289384368
+    "timestamp": 1775983155646723707
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10321,11 +10321,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289384635
+    "timestamp": 1775983155646723915
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10382,11 +10382,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289384853
+    "timestamp": 1775983155646724113
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10440,11 +10440,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289385810
+    "timestamp": 1775983155646725143
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10499,11 +10499,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289385998
+    "timestamp": 1775983155646725345
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10560,11 +10560,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289386292
+    "timestamp": 1775983155646725621
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10618,11 +10618,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289386492
+    "timestamp": 1775983155646725813
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10677,11 +10677,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289386679
+    "timestamp": 1775983155646725993
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10738,11 +10738,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289386906
+    "timestamp": 1775983155646726194
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10796,11 +10796,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289387097
+    "timestamp": 1775983155646726384
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10855,11 +10855,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289387285
+    "timestamp": 1775983155646726586
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10916,11 +10916,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289387500
+    "timestamp": 1775983155646726775
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -10974,11 +10974,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289387699
+    "timestamp": 1775983155646726954
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11033,11 +11033,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289387886
+    "timestamp": 1775983155646727148
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11094,11 +11094,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289388103
+    "timestamp": 1775983155646727335
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11152,11 +11152,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289388294
+    "timestamp": 1775983155646727509
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11211,11 +11211,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289388495
+    "timestamp": 1775983155646727683
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11272,11 +11272,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289388693
+    "timestamp": 1775983155646727889
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11330,11 +11330,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289388900
+    "timestamp": 1775983155646728068
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11389,11 +11389,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289389937
+    "timestamp": 1775983155646728240
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11450,11 +11450,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289390190
+    "timestamp": 1775983155646728425
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11508,11 +11508,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289391151
+    "timestamp": 1775983155646728610
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11567,11 +11567,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289391408
+    "timestamp": 1775983155646728786
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11628,11 +11628,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289391621
+    "timestamp": 1775983155646728970
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11686,11 +11686,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289391811
+    "timestamp": 1775983155646729148
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11745,11 +11745,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289391996
+    "timestamp": 1775983155646729340
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11806,11 +11806,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289392197
+    "timestamp": 1775983155646729529
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11864,11 +11864,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289392402
+    "timestamp": 1775983155646729703
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11923,11 +11923,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289392606
+    "timestamp": 1775983155646729876
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -11984,11 +11984,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289392838
+    "timestamp": 1775983155646730204
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12042,11 +12042,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289393057
+    "timestamp": 1775983155646730402
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12101,11 +12101,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289393238
+    "timestamp": 1775983155646730576
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12162,11 +12162,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289393427
+    "timestamp": 1775983155646730788
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12220,11 +12220,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289393624
+    "timestamp": 1775983155646730991
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12279,11 +12279,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289394606
+    "timestamp": 1775983155646733257
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12340,11 +12340,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289394830
+    "timestamp": 1775983155646733501
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12398,11 +12398,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289395016
+    "timestamp": 1775983155646733709
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12457,11 +12457,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289395202
+    "timestamp": 1775983155646734649
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12518,11 +12518,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289395417
+    "timestamp": 1775983155646734871
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12576,11 +12576,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289395623
+    "timestamp": 1775983155646735068
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12635,11 +12635,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289395805
+    "timestamp": 1775983155646735289
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12696,11 +12696,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289395997
+    "timestamp": 1775983155646735488
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12754,11 +12754,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289396199
+    "timestamp": 1775983155646735676
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12813,11 +12813,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289396385
+    "timestamp": 1775983155646735871
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12874,11 +12874,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289396596
+    "timestamp": 1775983155646736056
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12932,11 +12932,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289396801
+    "timestamp": 1775983155646736231
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -12991,11 +12991,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289397003
+    "timestamp": 1775983155646736405
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13052,11 +13052,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289397201
+    "timestamp": 1775983155646736587
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13110,11 +13110,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289397386
+    "timestamp": 1775983155646736764
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13169,11 +13169,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289397583
+    "timestamp": 1775983155646736939
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13230,11 +13230,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289397780
+    "timestamp": 1775983155646737123
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13288,11 +13288,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289397971
+    "timestamp": 1775983155646737308
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13347,11 +13347,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289398169
+    "timestamp": 1775983155646738222
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13408,11 +13408,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289398383
+    "timestamp": 1775983155646738430
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13466,11 +13466,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289398584
+    "timestamp": 1775983155646738622
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13525,11 +13525,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289398766
+    "timestamp": 1775983155646738801
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13586,11 +13586,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289398971
+    "timestamp": 1775983155646739014
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13644,11 +13644,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289399172
+    "timestamp": 1775983155646739198
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13703,11 +13703,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289399354
+    "timestamp": 1775983155646739372
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13764,11 +13764,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289399544
+    "timestamp": 1775983155646739573
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13822,11 +13822,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289399740
+    "timestamp": 1775983155646739748
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13881,11 +13881,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289400080
+    "timestamp": 1775983155646740004
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -13942,11 +13942,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289400278
+    "timestamp": 1775983155646740213
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14000,11 +14000,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289400480
+    "timestamp": 1775983155646740395
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14059,11 +14059,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289400669
+    "timestamp": 1775983155646740572
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14120,11 +14120,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289400862
+    "timestamp": 1775983155646740758
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14178,11 +14178,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289401854
+    "timestamp": 1775983155646751215
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14237,11 +14237,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289402074
+    "timestamp": 1775983155646751404
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14298,11 +14298,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289402307
+    "timestamp": 1775983155646751600
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14356,11 +14356,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289402491
+    "timestamp": 1775983155646751800
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14415,11 +14415,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289402707
+    "timestamp": 1775983155646752001
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14476,11 +14476,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289402909
+    "timestamp": 1775983155646752200
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14534,11 +14534,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289403089
+    "timestamp": 1775983155646752387
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14593,11 +14593,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289403266
+    "timestamp": 1775983155646752562
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14654,11 +14654,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289403478
+    "timestamp": 1775983155646752749
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14712,11 +14712,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289403658
+    "timestamp": 1775983155646752941
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14771,11 +14771,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289403841
+    "timestamp": 1775983155646753113
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14832,11 +14832,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289404052
+    "timestamp": 1775983155646753293
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14890,11 +14890,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289404235
+    "timestamp": 1775983155646753469
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -14949,11 +14949,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289404412
+    "timestamp": 1775983155646753659
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15010,11 +15010,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289404603
+    "timestamp": 1775983155646753848
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15068,11 +15068,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289404790
+    "timestamp": 1775983155646754022
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15127,11 +15127,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289406057
+    "timestamp": 1775983155646754196
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15188,11 +15188,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289406291
+    "timestamp": 1775983155646754391
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15246,11 +15246,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289406483
+    "timestamp": 1775983155646754567
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15305,11 +15305,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289406693
+    "timestamp": 1775983155646754742
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15366,11 +15366,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289406904
+    "timestamp": 1775983155646754946
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15424,11 +15424,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289407085
+    "timestamp": 1775983155646755127
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15483,11 +15483,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289407266
+    "timestamp": 1775983155646755321
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15544,11 +15544,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289407457
+    "timestamp": 1775983155646755532
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15602,11 +15602,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289407672
+    "timestamp": 1775983155646755712
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15661,11 +15661,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289407878
+    "timestamp": 1775983155646755888
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15722,11 +15722,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289408074
+    "timestamp": 1775983155646756089
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15780,11 +15780,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289408267
+    "timestamp": 1775983155646756283
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15839,11 +15839,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289408445
+    "timestamp": 1775983155646756463
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15900,11 +15900,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289408636
+    "timestamp": 1775983155646756647
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -15958,11 +15958,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289408818
+    "timestamp": 1775983155646756824
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16017,11 +16017,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289409086
+    "timestamp": 1775983155646757068
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16078,11 +16078,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289410031
+    "timestamp": 1775983155646758002
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16136,11 +16136,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289410226
+    "timestamp": 1775983155646758210
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16195,11 +16195,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289410413
+    "timestamp": 1775983155646758402
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16256,11 +16256,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289410626
+    "timestamp": 1775983155646758596
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16314,11 +16314,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289410830
+    "timestamp": 1775983155646758791
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16373,11 +16373,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289411028
+    "timestamp": 1775983155646758970
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16434,11 +16434,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289411233
+    "timestamp": 1775983155646759175
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16492,11 +16492,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289412202
+    "timestamp": 1775983155646759368
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16551,11 +16551,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289412404
+    "timestamp": 1775983155646759545
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16612,11 +16612,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289412624
+    "timestamp": 1775983155646759732
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16670,11 +16670,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289412843
+    "timestamp": 1775983155646759907
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16729,11 +16729,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289413034
+    "timestamp": 1775983155646760095
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16790,11 +16790,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289413233
+    "timestamp": 1775983155646760282
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16848,11 +16848,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289413437
+    "timestamp": 1775983155646760456
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16907,11 +16907,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289413735
+    "timestamp": 1775983155646760650
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -16968,11 +16968,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289413973
+    "timestamp": 1775983155646760843
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17026,11 +17026,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289414185
+    "timestamp": 1775983155646761031
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17085,11 +17085,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289414369
+    "timestamp": 1775983155646761201
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17146,11 +17146,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289414563
+    "timestamp": 1775983155646762337
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17204,11 +17204,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289414748
+    "timestamp": 1775983155646762547
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17263,11 +17263,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289414970
+    "timestamp": 1775983155646762749
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17324,11 +17324,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289415169
+    "timestamp": 1775983155646762968
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17382,11 +17382,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289415347
+    "timestamp": 1775983155646763146
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17441,11 +17441,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289415545
+    "timestamp": 1775983155646764205
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17502,11 +17502,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289415739
+    "timestamp": 1775983155646764417
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17560,11 +17560,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289415919
+    "timestamp": 1775983155646764604
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17619,11 +17619,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289416099
+    "timestamp": 1775983155646764784
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17680,11 +17680,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289416299
+    "timestamp": 1775983155646764972
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17738,11 +17738,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289416537
+    "timestamp": 1775983155646765178
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17797,11 +17797,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289416749
+    "timestamp": 1775983155646765362
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17858,11 +17858,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289416944
+    "timestamp": 1775983155646765551
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17916,11 +17916,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289417146
+    "timestamp": 1775983155646765744
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -17975,11 +17975,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289418097
+    "timestamp": 1775983155646766642
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18036,11 +18036,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289418309
+    "timestamp": 1775983155646766851
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18094,11 +18094,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289418501
+    "timestamp": 1775983155646767033
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18153,11 +18153,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289418701
+    "timestamp": 1775983155646767239
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18214,11 +18214,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289418900
+    "timestamp": 1775983155646767440
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18272,11 +18272,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289419109
+    "timestamp": 1775983155646767645
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18331,11 +18331,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289419339
+    "timestamp": 1775983155646767823
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18392,11 +18392,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289419608
+    "timestamp": 1775983155646768097
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18450,11 +18450,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289419815
+    "timestamp": 1775983155646768272
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18509,11 +18509,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289420000
+    "timestamp": 1775983155646768452
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18570,11 +18570,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289420191
+    "timestamp": 1775983155646768639
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18628,11 +18628,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289420374
+    "timestamp": 1775983155646768827
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18687,11 +18687,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289420578
+    "timestamp": 1775983155646769000
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18748,11 +18748,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289420791
+    "timestamp": 1775983155646769186
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18806,11 +18806,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289420977
+    "timestamp": 1775983155646769362
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18865,11 +18865,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289421159
+    "timestamp": 1775983155646769548
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18926,11 +18926,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289422129
+    "timestamp": 1775983155646769737
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -18984,11 +18984,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289422335
+    "timestamp": 1775983155646769913
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19043,11 +19043,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289422536
+    "timestamp": 1775983155646770109
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19104,11 +19104,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289422752
+    "timestamp": 1775983155646770293
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19162,11 +19162,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289422943
+    "timestamp": 1775983155646770470
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19221,11 +19221,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289423126
+    "timestamp": 1775983155646770643
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19282,11 +19282,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289423322
+    "timestamp": 1775983155646770842
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19340,11 +19340,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289423518
+    "timestamp": 1775983155646771019
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19399,11 +19399,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289423695
+    "timestamp": 1775983155646771208
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19460,11 +19460,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289423886
+    "timestamp": 1775983155646771395
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19518,11 +19518,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289424077
+    "timestamp": 1775983155646771568
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19577,11 +19577,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289424258
+    "timestamp": 1775983155646771750
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19638,11 +19638,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289424473
+    "timestamp": 1775983155646771949
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19696,11 +19696,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289424674
+    "timestamp": 1775983155646772136
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19755,11 +19755,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289424860
+    "timestamp": 1775983155646772312
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19816,11 +19816,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289425942
+    "timestamp": 1775983155646773453
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19874,11 +19874,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289426143
+    "timestamp": 1775983155646773678
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19933,11 +19933,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289426342
+    "timestamp": 1775983155646773861
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -19994,11 +19994,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289426535
+    "timestamp": 1775983155646774054
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20052,11 +20052,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289426715
+    "timestamp": 1775983155646774268
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20111,11 +20111,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289426906
+    "timestamp": 1775983155646774448
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20172,11 +20172,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289427103
+    "timestamp": 1775983155646774637
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20230,11 +20230,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289427284
+    "timestamp": 1775983155646774816
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20289,11 +20289,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289427480
+    "timestamp": 1775983155646775046
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20350,11 +20350,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289427696
+    "timestamp": 1775983155646775233
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20408,11 +20408,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289427898
+    "timestamp": 1775983155646775407
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20467,11 +20467,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289428077
+    "timestamp": 1775983155646775585
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20528,11 +20528,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289428286
+    "timestamp": 1775983155646775791
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20586,11 +20586,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289428470
+    "timestamp": 1775983155646775969
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20645,11 +20645,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289428672
+    "timestamp": 1775983155646776148
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20706,11 +20706,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289428868
+    "timestamp": 1775983155646776337
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20764,11 +20764,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289429047
+    "timestamp": 1775983155646776529
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20823,11 +20823,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289429228
+    "timestamp": 1775983155646776704
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20884,11 +20884,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289429418
+    "timestamp": 1775983155646776892
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -20942,11 +20942,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289429617
+    "timestamp": 1775983155646777971
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21001,11 +21001,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289429857
+    "timestamp": 1775983155646778378
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21062,11 +21062,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289430050
+    "timestamp": 1775983155646778574
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21120,11 +21120,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289430230
+    "timestamp": 1775983155646778762
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21179,11 +21179,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289430415
+    "timestamp": 1775983155646778957
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21240,11 +21240,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289430606
+    "timestamp": 1775983155646779155
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21298,11 +21298,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289430783
+    "timestamp": 1775983155646779340
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21357,11 +21357,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289430985
+    "timestamp": 1775983155646779522
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21418,11 +21418,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289431191
+    "timestamp": 1775983155646779721
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21476,11 +21476,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289431369
+    "timestamp": 1775983155646779901
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21535,11 +21535,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289432484
+    "timestamp": 1775983155646780097
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21596,11 +21596,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289432706
+    "timestamp": 1775983155646780286
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21654,11 +21654,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289432904
+    "timestamp": 1775983155646780474
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21713,11 +21713,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289433931
+    "timestamp": 1775983155646781406
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21774,11 +21774,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289434151
+    "timestamp": 1775983155646781610
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21832,11 +21832,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289434349
+    "timestamp": 1775983155646781797
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21891,11 +21891,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289434580
+    "timestamp": 1775983155646781982
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -21952,11 +21952,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289434807
+    "timestamp": 1775983155646782194
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22010,11 +22010,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289434988
+    "timestamp": 1775983155646782380
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22069,11 +22069,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289435170
+    "timestamp": 1775983155646782557
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22130,11 +22130,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289435365
+    "timestamp": 1775983155646782753
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22188,11 +22188,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289435562
+    "timestamp": 1775983155646782930
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22247,11 +22247,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289435746
+    "timestamp": 1775983155646783109
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22308,11 +22308,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289435939
+    "timestamp": 1775983155646783314
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22366,11 +22366,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289436133
+    "timestamp": 1775983155646783489
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22425,11 +22425,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289436306
+    "timestamp": 1775983155646783687
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22486,11 +22486,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289436497
+    "timestamp": 1775983155646784630
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22544,11 +22544,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289436673
+    "timestamp": 1775983155646784845
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22603,11 +22603,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289436866
+    "timestamp": 1775983155646785057
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22664,11 +22664,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289437076
+    "timestamp": 1775983155646785255
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22722,11 +22722,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289438181
+    "timestamp": 1775983155646785446
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22781,11 +22781,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289438374
+    "timestamp": 1775983155646785651
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22842,11 +22842,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289438611
+    "timestamp": 1775983155646785844
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22900,11 +22900,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289438794
+    "timestamp": 1775983155646786035
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -22959,11 +22959,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289438979
+    "timestamp": 1775983155646786227
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23020,11 +23020,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289439172
+    "timestamp": 1775983155646786441
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23078,11 +23078,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289439354
+    "timestamp": 1775983155646786631
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23137,11 +23137,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289439549
+    "timestamp": 1775983155646786821
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23198,11 +23198,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289439756
+    "timestamp": 1775983155646787032
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23256,11 +23256,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289439933
+    "timestamp": 1775983155646787221
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23315,11 +23315,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289440114
+    "timestamp": 1775983155646787405
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23376,11 +23376,11 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1775981685289440307
+    "timestamp": 1775983155646787600
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23434,11 +23434,11 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1775981685289440574
+    "timestamp": 1775983155646787805
   },
   {
     "env_config": {
-      "env-id": "parking-v0",
+      "env_id": "parking-v0",
       "train_timesteps": 300000,
       "eval_freq": 3000,
       "n_eval_episodes": 5,
@@ -23493,6 +23493,6 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1775981685289440751
+    "timestamp": 1775983155646787989
   }
 ]

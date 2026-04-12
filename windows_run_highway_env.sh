@@ -5,7 +5,7 @@
 ENV_FILE_PATH="./.env"
 # ---------------------
 
-# Grab the command (start, stop, status, logs)
+# Grab the command (start, stop, status, logs, check)
 COMMAND=$1
 # Grab the training parameters
 ENV=$2
@@ -14,12 +14,13 @@ END=$4
 
 # Function to show usage instructions
 show_usage() {
-    echo "Usage: $0 {start|stop|status|logs} <env> <start> <end>"
+    echo "Usage: $0 {start|stop|status|logs|check} <env> <start> <end>"
     echo ""
     echo "Examples:"
     echo "  $0 start HalfCheetah-v4 900 1000"
     echo "  $0 logs HalfCheetah-v4 900 1000"
     echo "  $0 stop HalfCheetah-v4 900 1000"
+    echo "  $0 check HalfCheetah-v4 900 1000"
     echo ""
     echo "Helper Commands:"
     echo "  $0 list   - Shows all currently saved PID files"
@@ -33,7 +34,7 @@ if [ "$COMMAND" == "list" ]; then
 fi
 
 # For the main commands, ensure the user provided the required parameters
-if [[ ! "$COMMAND" =~ ^(start|stop|status|logs)$ ]] || [ -z "$ENV" ] || [ -z "$START" ] || [ -z "$END" ]; then
+if [[ ! "$COMMAND" =~ ^(start|stop|status|logs|check)$ ]] || [ -z "$ENV" ] || [ -z "$START" ] || [ -z "$END" ]; then
     show_usage
     exit 1
 fi
@@ -73,6 +74,21 @@ start() {
     echo "PID saved to: $PID_FILE"
 }
 
+check() {
+    echo "Running check for: ENV=$ENV | START=$START | END=$END"
+    echo "Using .env file at: $ENV_FILE_PATH"
+
+    # Compute Windows paths for PowerShell
+    PYTHON_WIN=$(cygpath -w ./ISA4RL-article/src/main/.venv/Scripts/python.exe)
+    SCRIPT_WIN=$(cygpath -w ./ISA4RL-article/src/main/main.py)
+    ENV_FILE_WIN=$(cygpath -w "$ENV_FILE_PATH")
+    WD_WIN=$(cygpath -w "$PWD")
+
+    # Run the check task synchronously in the foreground so you can immediately see the output
+    powershell.exe -NoProfile -Command \
+    "Set-Location -Path \"$WD_WIN\"; uv run --env-file \"$ENV_FILE_WIN\" --python \"$PYTHON_WIN\" \"$SCRIPT_WIN\" --env \"$ENV\" --task 'check' --start \"$START\" --end \"$END\""
+}
+
 status() {
     if [ -f "$PID_FILE" ]; then
         PID_WIN=$(cygpath -w "$PID_FILE")
@@ -105,6 +121,7 @@ stop() {
 # Route the command
 case "$COMMAND" in
     start) start ;;
+    check) check ;;
     stop) stop ;;
     status) status ;;
     logs) logs ;;
