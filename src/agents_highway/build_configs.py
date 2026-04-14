@@ -189,6 +189,8 @@ def build_racetrack_configs() -> List[CONFIG]:
         })
         configs.append(config)
 
+    # now, I would've instead done: road_lengths = [100, 200], LANES_COUNT = [2, 4, 6]
+    # and also maybe reduce the veh_cnts (e.g. max=15)
     ROAD_LENGTHS = np.linspace(100, 200, 3, dtype=int)
     LANES_COUNT = np.linspace(2, 4, 3, dtype=int)
     for (steering, (length_idx, road_length), (lanes_idx, lanes_count)) in itertools.product(
