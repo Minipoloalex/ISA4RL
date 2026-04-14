@@ -1,11 +1,6 @@
-CHUNK_SIZE = 5
+CHUNK_SIZE = 12
 
-segments = [
-    (104, 110), (113, 120), (123, 130), (133, 140), 
-    (142, 150), (156, 160), (164, 170), (173, 180), 
-    (182, 190), (193, 200), (202, 210), (212, 220), 
-    (225, 230), (233, 240), (245, 250), (252, 594)
-]
+segments = [(177, 178), (221, 223), (237, 238), (251, 253), (263, 268), (281, 283), (295, 396)]
 
 # 1. Flatten all untrained segments into a single list of individual IDs
 missing_ids = []
@@ -26,18 +21,21 @@ ranges = []
 for i in range(len(boundaries) - 1):
     ranges.append((boundaries[i], boundaries[i+1]))
 
-# 4. Pair them up for Task A and Task B on each node
-with open("ranges_gemini.txt", "w") as f:
-    for i in range(0, len(ranges), 2):
-        a_start, a_end = ranges[i]
+# # 4. Pair them up for Task A and Task B on each node
+# with open("ranges_gemini.txt", "w") as f:
+#     for i in range(0, len(ranges), 2):
+#         a_start, a_end = ranges[i]
         
-        # Check if there is a Task B for this node
-        if i + 1 < len(ranges):
-            b_start, b_end = ranges[i+1]
-        else:
-            b_start, b_end = 0, 0 # Fallback if there's an odd number of chunks
+#         # Check if there is a Task B for this node
+#         if i + 1 < len(ranges):
+#             b_start, b_end = ranges[i+1]
+#         else:
+#             b_start, b_end = 0, 0 # Fallback if there's an odd number of chunks
             
-        f.write(f"{a_start} {a_end} {b_start} {b_end}\n")
+#         f.write(f"{a_start} {a_end} {b_start} {b_end}\n")
 
-total_lines = (len(ranges) + 1) // 2
-print(f"Success! Generated ranges.txt with {total_lines} lines.")
+with open("ranges.txt", "w") as f:
+    for start, end in ranges:
+        f.write(f"{start} {end}\n")
+
+print(f"Success! Generated ranges.txt")
