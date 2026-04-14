@@ -1,0 +1,3494 @@
+[
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "rORY",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "SC",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_sequence",
+        "config": "TXT",
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 2
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.0,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 3.75,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.0,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.15,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": true,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  },
+  {
+    "env_id": "metadrive-v0",
+    "train_timesteps": 1000000,
+    "eval_freq": 10000,
+    "n_eval_episodes": 5,
+    "n_test_episodes": 10,
+    "config": {
+      "random_traffic": false,
+      "num_scenarios": 1000,
+      "map": null,
+      "block_dist_config": {
+        "StdInterSection": 0.3333333333333333,
+        "StdTInterSection": 0.3333333333333333,
+        "Roundabout": 0.3333333333333333
+      },
+      "traffic_density": 0.3,
+      "discrete_action": false,
+      "map_config": {
+        "type": "block_num",
+        "config": 1,
+        "lane_width": 4.5,
+        "lane_num": 3
+      },
+      "vehicle_config": {
+        "vehicle_model": "default"
+      }
+    }
+  }
+]

@@ -17,6 +17,8 @@ KG = "KinematicsGoal"
 E = "ExitObservation"
 A = "AttributesObservation"
 OG = "OccupancyGrid"
+MD_LIDAR = "lidar"
+MD_IMAGE = "image"  # to use this observation, would require continuous hyperparameters for CnnPolicy
 
 # Some environments require custom observation configurations
 ALLOW_OBS: Dict[str, List[str]] = {

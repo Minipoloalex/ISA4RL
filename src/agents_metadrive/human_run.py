@@ -1,7 +1,11 @@
-from panda3d.core import loadPrcFileData
-loadPrcFileData("", "notify-level-linmath error")
+from copy import deepcopy
 
+from panda3d.core import loadPrcFileData
+from metadrive.component.sensors.rgb_camera import RGBCamera
 from metadrive.envs.metadrive_env import MetaDriveEnv
+from metadrive.envs.metadrive_env import METADRIVE_DEFAULT_CONFIG as _METADRIVE_DEFAULT_CONFIG
+
+loadPrcFileData("", "notify-level-linmath error")
 
 # ==========================================
 #              CONFIGURATION
@@ -34,39 +38,55 @@ from metadrive.manager.traffic_manager import TrafficMode
 from metadrive.utils import clip, Config
 
 # Change this string to test different map combinations!
-MAP_CONFIG = "rORY"
+MAP_CONFIG = "yP"
 MAP_CONFIG={
     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_SEQUENCE,
-    BaseMap.GENERATE_CONFIG: MAP_CONFIG,  # it can be a file path / block num / block ID sequence
+    BaseMap.GENERATE_CONFIG: MAP_CONFIG,
     BaseMap.LANE_WIDTH: 3.5,
-    BaseMap.LANE_NUM: 4,
+    BaseMap.LANE_NUM: 3,
     "exit_length": 50,
     "start_position": [0, 0],
 }
 
 # Control settings
 MANUAL_CONTROL = True    # Set to True to drive with W/A/S/D
-TRAFFIC_DENSITY = 0.1    # Set to 0.0 to test just the road, >0.0 to add cars
+TRAFFIC_DENSITY = 0.025    # Set to 0.0 to test just the road, >0.0 to add cars
 NUM_STEPS = 500000         # How long the simulation runs before auto-closing
 
 # ==========================================
 
+
 def run_map_test():
-    # Setup the environment configuration
-    config = {
-        "map_config": MAP_CONFIG,
+    INTERSECTION_PROB_DIST = {"StdInterSection": 1/3, "StdTInterSection": 1/3, "Roundabout": 1/3}
+    # MapGenerateMethod.BIG_BLOCK_NUM or # MapGenerateMethod.BIG_BLOCK_SEQUENCE
+
+    config = deepcopy(_METADRIVE_DEFAULT_CONFIG)
+    config.update({
         "manual_control": MANUAL_CONTROL,
         "use_render": True,
         "traffic_density": TRAFFIC_DENSITY,
+        "image_observation": True,
         "num_scenarios": 10,
-        "accident_prob": 1,
-    }
-
+        "accident_prob": 0,
+        "random_traffic": True,
+        "block_dist_config": PGBlockDistConfig(INTERSECTION_PROB_DIST),
+        "sensors": dict(rgb_camera=(RGBCamera, 200, 100)),
+        "interface_panel": ["rgb_camera", "dashboard"],
+        "stack_size": 3,
+        "random_agent_model": True,
+    })
+    config["map_config"].update({
+        BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_NUM,
+        BaseMap.GENERATE_CONFIG: 1,
+    })
+    config["vehicle_config"].update({
+        "vehicle_model": "m",
+    })
     env = MetaDriveEnv(config)
 
     try:
         obs, info = env.reset()
-        print(f"\n--- Successfully loaded map: '{MAP_CONFIG}' ---")
+        print(f"\n--- Successfully loaded map' ---")
         if MANUAL_CONTROL:
             print("Manual control is ON. Use W/A/S/D to drive and test the blocks.")
         else:
