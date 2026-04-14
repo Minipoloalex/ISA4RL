@@ -52,11 +52,11 @@ logging.basicConfig(
 def train_agents(train_configs: List[TrainConfig]):
     train_configs = [config for config in train_configs if not is_trained(config)]
     for i, config in tqdm(enumerate(train_configs), total=len(train_configs)):
-        logger.info("open fds before env creation:", len(os.listdir("/proc/self/fd")))
+        logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
         train_env = config.ensure_train_env()
         model = config.ensure_model()
         eval_env = config.ensure_eval_env()
-        logger.info("open fds after env creation:", len(os.listdir("/proc/self/fd")))
+        logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
         logger.info(f"Started training run {i} in path: {config.train_folder_path}")
         logger.info(f"Configuration for algorithm: {model.__str__()}")
         train(
