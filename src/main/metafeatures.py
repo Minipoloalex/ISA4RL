@@ -335,7 +335,7 @@ class BaseMetricHook:
     def on_episode_start(self) -> None:
         pass
 
-    def on_step(self, context: StepMetricsContext) -> None:
+    def on_step(self, context: StepInfo) -> None:
         pass
 
     def on_episode_end(self) -> None:
@@ -354,7 +354,7 @@ class TrafficMetricHook(BaseMetricHook):
         self.conflict_ttc_threshold = conflict_ttc_threshold
         self._snapshots: List[Dict[str, float]] = []
 
-    def on_step(self, context: StepMetricsContext) -> None:
+    def on_step(self, context: StepInfo) -> None:
         snapshot = _traffic_snapshot(context, self.lane_gap_threshold, self.conflict_ttc_threshold)
         if snapshot:
             self._snapshots.append(snapshot)
@@ -437,7 +437,7 @@ class RewardSignalHook(BaseMetricHook):
         self._prev_lane = None
         self._prev_progress = None
 
-    def on_step(self, context: StepMetricsContext) -> None:
+    def on_step(self, context: StepInfo) -> None:
         reward = float(context.reward)
         self._rewards.append(reward)
 
@@ -501,7 +501,7 @@ class RewardSignalHook(BaseMetricHook):
 
 
 
-def _build_metric_hooks() -> List[MetricHook]:
+def _build_metric_hooks() -> List[BaseMetricHook]:
     return [
         # TrafficMetricHook(),
         RewardSignalHook(),
@@ -509,7 +509,7 @@ def _build_metric_hooks() -> List[MetricHook]:
 
 
 def _traffic_snapshot(
-    context: StepMetricsContext,
+    context: StepInfo,
     lane_gap_threshold: float,
     conflict_ttc_threshold: float,
 ) -> Optional[Dict[str, float]]:
