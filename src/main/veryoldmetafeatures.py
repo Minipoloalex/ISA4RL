@@ -10,7 +10,7 @@ import numpy as np
 from highway_env.vehicle.behavior import IDMVehicle
 
 from configs import InstanceConfig
-from utils.general_utils import _flatten_obs
+from main.utils.general_utils import _flatten_obs
 
 PolicyFn = Callable[[Any, Dict[str, Any]], Any]
 
@@ -36,14 +36,30 @@ class StepMetricsContext:
     truncated: bool
 
 
+class MetricHook(Protocol):
+    def on_probe_start(self) -> None:
+        ...
+
+    def on_episode_start(self) -> None:
+        ...
+
+    def on_step(self, context: StepMetricsContext) -> None:
+        ...
+
+    def on_episode_end(self) -> None:
+        ...
+
+    def finalize(self) -> Dict[str, float]:
+        ...
 
 
 def extract_metafeatures(config: InstanceConfig):
     before = time.perf_counter()
-    env = config.ensure_test_env()
+    env = config.ensure_eval_env()
     env_name = env.spec.id
     env_seed = config.eval_seed
     env_features = _collect_env_features(env)
+    # env_features.update(_initial_geometry_features(env, env_seed))
 
     random_probe = _run_probe(
         env=env,
@@ -53,6 +69,34 @@ def extract_metafeatures(config: InstanceConfig):
         label="random_rollout",
         metric_hooks=_build_metric_hooks(),
     )
+    STUFF_IDK = [
+        # IDK what these are and if they may be decent
+        # Or just IDK if I want to keep them
+        "conflict_rate",
+        "lane_change_feasible_rate_left",
+        "lane_change_feasible_rate_right",
+        "nearby_vehicles_10m",
+        "nearby_vehicles_20m",
+        "nearby_vehicles_30m",
+    ]
+    INCLUDE_STUFF = [
+        "total_steps",
+        "mean_episode_return",
+        "std_episode_return",
+        "mean_episode_length",
+        "std_episode_length",
+        "collision_rate",
+        "timeout_rate",
+        "mean_speed",
+        "std_speed",
+        "reward_sparsity",
+        "reward_skew",
+        "reward_kurtosis",
+        "reward_autocorr1",
+        "corr_reward_speed",    # are these actually good?
+        "corr_reward_lane_change",
+        "corr_reward_progress",
+    ]
     idm_probe = _run_idm_probe(
         env=env,
         episodes=5,
@@ -74,6 +118,7 @@ def extract_metafeatures(config: InstanceConfig):
         _derived_features(
             random_probe=random_probe,
             idm_probe=idm_probe,
+            env_features=env_features,
         )
     )
     return {
@@ -122,6 +167,8 @@ def _run_idm_probe(
         env_seed=env_seed,
         label=label,
         reset_hook=reset_hook,
+        track_actions=True,
+        action_getter=_idm_action_getter,
         metric_hooks=_build_metric_hooks(),
     )
 
@@ -137,10 +184,42 @@ def _constant_policy(action: Any) -> PolicyFn:
 
     return policy
 
+
+def _reset_policy_state(policy: Any) -> None:
+    # TODO: check if this function does anything
+    if hasattr(policy, "reset_episode"):
+        try:
+            policy.reset_episode()
+        except Exception:
+            pass
+    elif hasattr(policy, "reset"):
+        try:
+            policy.reset()
+        except Exception:
+            pass
+
+
+def _default_value_for_space(space: gym.spaces.Space) -> Any:
+    spaces = gym.spaces
+    if isinstance(space, spaces.Discrete):
+        return 0
+    if isinstance(space, spaces.MultiBinary):
+        return np.zeros(space.shape, dtype=space.dtype)
+    if isinstance(space, spaces.MultiDiscrete):
+        return np.zeros(space.shape, dtype=space.dtype)
+    if isinstance(space, spaces.Box):
+        return np.zeros(space.shape, dtype=space.dtype)
+    if isinstance(space, spaces.Tuple):
+        return tuple(_default_value_for_space(sub) for sub in space.spaces)
+    return space.sample()
+
+
 def _ensure_idm_vehicle(env: gym.Env) -> None:
     base_env = env.unwrapped
-    vehicle = base_env.vehicle
-    road = base_env.road
+    vehicle = base_env.vehicle  # type: ignore
+    road = base_env.road    # type: ignore
+    # vehicle = getattr(base_env, "vehicle", None)
+    # road = getattr(base_env, "road", None)
 
     idm_vehicle = IDMVehicle.create_from(vehicle)
     idm_vehicle.enable_lane_change = True
@@ -150,14 +229,18 @@ def _ensure_idm_vehicle(env: gym.Env) -> None:
     _copy_vehicle_attr(vehicle, idm_vehicle, "index_to_speed")
     _copy_vehicle_attr(vehicle, idm_vehicle, "speed_index")
 
-    base_env.vehicle = idm_vehicle
+    base_env.vehicle = idm_vehicle  # type: ignore
 
     for idx, existing in enumerate(road.vehicles):
         if existing is vehicle:
             road.vehicles[idx] = idm_vehicle
             break
 
-    base_env.action_type.controlled_vehicle = idm_vehicle
+    base_env.action_type.controlled_vehicle = idm_vehicle   # type: ignore
+    # action_type = getattr(base_env, "action_type", None)
+    # if action_type is not None:
+    #     action_type.controlled_vehicle = idm_vehicle
+
 
 def _copy_vehicle_attr(
     src: Any, dst: Any, attr: str, *, deep_copy: bool = False
@@ -170,6 +253,22 @@ def _copy_vehicle_attr(
     setattr(dst, attr, value)
 
 
+def _idm_action_getter(_: Any, env: gym.Env) -> Any:
+    vehicle = env.unwrapped.vehicle # type: ignore
+    action = vehicle.action
+    if isinstance(action, dict):
+        normalized: Dict[str, Any] = {}
+        for key, value in action.items():
+            if isinstance(value, np.ndarray):
+                normalized[key] = np.array(value, copy=True)
+            elif isinstance(value, (list, tuple)):
+                normalized[key] = list(value)
+            else:
+                normalized[key] = value
+        return normalized
+    return action
+
+
 def _run_probe(
     env: gym.Env,
     policy: PolicyFn,
@@ -177,6 +276,8 @@ def _run_probe(
     env_seed: int,
     label: str,
     reset_hook: Optional[Callable[[gym.Env], None]] = None,
+    track_actions: bool = True,
+    action_getter: Optional[Callable[[Any, gym.Env], Any]] = None,
     metric_hooks: Optional[List[MetricHook]] = None,
 ) -> Dict[str, Any]:
     returns: List[float] = []
@@ -190,6 +291,7 @@ def _run_probe(
     obs_sq_sum = 0.0
     obs_abs_sum = 0.0
     obs_count = 0
+    action_counter: Counter[str] = Counter()
     obs_zero_count = 0
     obs_dim: Optional[int] = None
 
@@ -204,6 +306,7 @@ def _run_probe(
         obs, info = env.reset(seed=env_seed)
         if reset_hook is not None:
             reset_hook(env)
+        _reset_policy_state(policy)
         obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count = _obs_stats_update(
             obs,
             obs_sum,
@@ -212,6 +315,7 @@ def _run_probe(
             obs_count,
             obs_zero_count,
         )
+        obs_dim = obs_dim or _infer_obs_dim(obs)
 
         done = False
         ep_return = 0.0
@@ -250,6 +354,7 @@ def _run_probe(
                 obs_count,
                 obs_zero_count,
             )
+            obs_dim = obs_dim or _infer_obs_dim(obs)
 
             if metric_hooks:
                 step_context = StepMetricsContext(
@@ -272,6 +377,15 @@ def _run_probe(
                         hook.on_step(step_context)
                     except Exception:
                         continue
+
+            if track_actions:
+                logged_action = action
+                if action_getter is not None:
+                    try:
+                        logged_action = action_getter(action, env)
+                    except Exception:
+                        logged_action = action
+                action_counter[_action_key(logged_action)] += 1
 
             done = terminated or truncated
             prev_action = action
@@ -320,6 +434,7 @@ def _run_probe(
         # "obs_std": obs_std,
         "obs_mean_abs": obs_mean_abs,
         "obs_zero_fraction": obs_zero_fraction,
+        "obs_flat_dim": obs_dim or 0,
         "collision_observed": 1.0 if collisions > 0 else 0.0,
         "timeout_observed": 1.0 if timeouts > 0 else 0.0,
         # "return_min": float(np.min(returns)),
@@ -340,6 +455,40 @@ def _run_probe(
 
     result.update(extra_metrics)
     return result
+
+def _action_key(action: Any) -> str:
+    if isinstance(action, dict):
+        # print(action)
+        normalized_items = sorted(
+            (str(key), float(value)) for key, value in action.items()
+        )
+        return str(normalized_items)
+    if isinstance(action, np.ndarray):
+        return str(tuple(np.asarray(action).flatten().round(4).tolist()))
+    if isinstance(action, (list, tuple)):
+        return str(tuple(action))
+    if isinstance(action, (np.integer, int)):  # type: ignore[arg-type]
+        return str(int(action))
+    if isinstance(action, (np.floating, float)):  # type: ignore[arg-type]
+        return str(float(action))
+    return repr(action)
+
+
+def _copy_action_like(action: Any) -> Any:
+    if isinstance(action, dict):
+        return {key: _copy_action_like(value) for key, value in action.items()}
+    if isinstance(action, np.ndarray):
+        return np.array(action, copy=True)
+    if isinstance(action, list):
+        return [_copy_action_like(value) for value in action]
+    if isinstance(action, tuple):
+        return tuple(_copy_action_like(value) for value in action)
+    return action
+
+
+def _infer_obs_dim(obs: Any) -> int:
+    return int(_flatten_obs(obs).size)
+
 
 def _obs_stats_update(
     obs: Any,
@@ -367,13 +516,15 @@ def _as_float(value: Any) -> Optional[float]:
 
 def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
-    config = base_env.config
+    config = getattr(base_env, "config", {}) or {}
     features: Dict[str, float] = {}
 
-    def add(name: str, value: Any) -> None:
+    def add(name: str, value: Any, default: Optional[Any] = None) -> None:
         numeric = _as_float(value)
         if numeric is not None:
             features[name] = numeric
+        elif default is not None:
+            features[name] = default
 
     # roundabout and merge don't have these parameters (their values are hardcoded to these)
     lanes = config.get("lanes_count", 2)
@@ -396,49 +547,169 @@ def _collect_env_features(env: gym.Env) -> Dict[str, float]:
     action_space = env.action_space
     add("action_space_size", action_space.n)
 
-    # obs_space = env.observation_space
-    # assert(isinstance(obs_space, gym.spaces.Box))
-    # add("observation_space_dim", int(np.prod(obs_space.shape)))
+    obs_space = env.observation_space
+    assert(isinstance(obs_space, gym.spaces.Box))
+    add("observation_space_dim", int(np.prod(obs_space.shape)))
 
     return features
+
+
+def _initial_geometry_features(
+    env: gym.Env,
+    env_seed: int,
+    samples: int = INITIAL_GEOMETRY_SAMPLES,
+) -> Dict[str, float]:
+    snapshots: List[Dict[str, float]] = []
+    env.reset(seed=env_seed)
+    snapshot = _geometry_snapshot_from_env(env)
+    snapshots.append(snapshot)
+
+    free_space_ahead = [_cap_free_space(s["free_space_ahead"]) for s in snapshots]
+    free_space_any = [_cap_free_space(s["free_space_min"]) for s in snapshots]
+    lane_entropy = [s["lane_entropy"] for s in snapshots]
+    relative_speed_std = [s["relative_speed_std"] for s in snapshots]
+    nearby_counts = [s["vehicles_within_20m"] for s in snapshots]
+
+    print(free_space_ahead)
+    features: Dict[str, float] = {}
+    features["init_free_space_ahead_mean"] = float(np.mean(free_space_ahead))
+    features["init_free_space_ahead_min"] = float(np.min(free_space_ahead))
+    features["init_free_space_min"] = float(np.min(free_space_any))
+    features["init_lane_occupancy_entropy"] = float(np.mean(lane_entropy))
+    features["init_relative_speed_std"] = float(np.mean(relative_speed_std))
+    features["init_num_vehicles_within_20m"] = float(np.mean(nearby_counts))
+    if len(free_space_ahead) > 1:
+        features["initial_state_stochasticity"] = float(np.std(free_space_ahead))
+    else:
+        features["initial_state_stochasticity"] = 0.0
+    return features
+
+
+def _geometry_snapshot_from_env(env: gym.Env) -> Optional[Dict[str, float]]:
+    base_env = env.unwrapped
+    road = getattr(base_env, "road", None)
+    ego = getattr(base_env, "vehicle", None)
+    if road is None or ego is None:
+        return None
+    ego_lane = _lane_id_from_vehicle(ego)
+    if ego_lane is None:
+        return None
+    ego_pos = _vehicle_position(ego)
+    if ego_pos.size < 2:
+        return None
+
+    front_gap = math.inf
+    any_front_gap = math.inf
+    lane_counts: Counter = Counter()
+    rel_speed_samples: List[float] = []
+    nearby_within_20 = 0
+
+    vehicles = getattr(road, "vehicles", [])
+    for other in vehicles:
+        if other is ego:
+            continue
+        lane_id = _lane_id_from_vehicle(other)
+        if lane_id is None:
+            continue
+        lane_counts[lane_id] += 1
+        other_pos = _vehicle_position(other)
+        if other_pos.size < 2:
+            continue
+        gap = float(other_pos[0] - ego_pos[0])
+        if gap >= 0.0:
+            any_front_gap = min(any_front_gap, gap)
+            if lane_id == ego_lane:
+                front_gap = min(front_gap, gap)
+        distance = float(np.linalg.norm(other_pos - ego_pos))
+        if distance <= 20.0:
+            nearby_within_20 += 1
+        rel_speed_samples.append(_vehicle_speed(other) - ego.speed)
+
+    snapshot: Dict[str, float] = {}
+    snapshot["free_space_ahead"] = float(front_gap) if math.isfinite(front_gap) else float("inf")
+    snapshot["free_space_min"] = float(any_front_gap) if math.isfinite(any_front_gap) else float("inf")
+    snapshot["lane_entropy"] = _entropy_from_counts(lane_counts)
+    snapshot["relative_speed_std"] = (
+        float(np.std(rel_speed_samples)) if rel_speed_samples else 0.0
+    )
+    snapshot["vehicles_within_20m"] = float(nearby_within_20)
+    return snapshot
+
+
+def _cap_free_space(value: float) -> float:
+    if not math.isfinite(value):
+        return MAX_FREE_SPACE_METERS
+    return float(min(value, MAX_FREE_SPACE_METERS))
+
+
+def _entropy_from_counts(counts: Counter) -> float:
+    total = sum(counts.values())
+    if total <= 0:
+        return 0.0
+    probabilities = np.asarray(list(counts.values()), dtype=float) / float(total)
+    probabilities = probabilities[probabilities > 0]
+    if probabilities.size == 0:
+        return 0.0
+    return float(-np.sum(probabilities * np.log(np.maximum(probabilities, 1e-12))))
+
 
 def _random_probe_features(probe: Dict[str, Any]) -> Dict[str, float]:
     features: Dict[str, float] = {}
     keep_keys = [
         "mean_episode_return",
         "std_episode_return",
-        "mean_episode_length",
-        "std_episode_length",
         "collision_rate",
         "timeout_rate",
         "mean_speed",
-        "std_speed",
         "reward_sparsity",
         "reward_skew",
         "reward_kurtosis",
         "reward_autocorr1",
-        "corr_reward_speed",
-        "corr_reward_lane_change"
         "collision_observed",
         "timeout_observed",
     ]
     for key in keep_keys:
         _add_prefixed_feature(features, "random", key, probe.get(key))
 
-    mean_return = probe.get("mean_episode_return")
-    std_return = probe.get("std_episode_return")
-    mean_length = probe.get("mean_episode_length")
-    mean_speed = probe.get("mean_speed")
-    std_speed = probe.get("std_speed")
+    mean_return = _probe_value(probe, "mean_episode_return")
+    std_return = _probe_value(probe, "std_episode_return")
+    mean_length = _probe_value(probe, "mean_episode_length")
+    mean_speed = _probe_value(probe, "mean_speed")
+    std_speed = _probe_value(probe, "std_speed")
+    collision_rate = _probe_value(probe, "collision_rate")
+    timeout_rate = _probe_value(probe, "timeout_rate")
 
     if mean_return is not None and mean_length is not None and mean_length > 0.0:
         features["random_return_per_step"] = mean_return / max(mean_length, 1e-6)
-    # if mean_return is not None and std_return is not None:
-    #     features["random_reward_snr"] = mean_return / (abs(std_return) + 1e-6)
-    # if mean_speed is not None and std_speed is not None:
-    #     denom = max(abs(mean_speed), 1e-6)
-    #     features["random_speed_cv"] = std_speed / denom
+    if mean_return is not None and std_return is not None:
+        features["random_reward_snr"] = mean_return / (abs(std_return) + 1e-6)
+    if mean_speed is not None and std_speed is not None:
+        denom = max(abs(mean_speed), 1e-6)
+        features["random_speed_cv"] = std_speed / denom
+    if collision_rate is not None:
+        features["random_safety_index"] = 1.0 - collision_rate
+        if mean_speed is not None:
+            features["random_safety_vs_speed"] = (1.0 - collision_rate) * mean_speed
+    if timeout_rate is not None:
+        features["random_timeout_pressure"] = timeout_rate
 
+    for ttc_key in ["ttc_p05", "ttc_p50", "ttc_p95"]:
+        _add_prefixed_feature(
+            features,
+            "random",
+            ttc_key,
+            probe.get(ttc_key),
+            fallback=MAX_TTC_SECONDS,
+            impute_flag=f"random_{ttc_key}_imputed",
+        )
+    _add_prefixed_feature(
+        features,
+        "random",
+        "headway_mean",
+        probe.get("headway_mean"),
+        fallback=MAX_FREE_SPACE_METERS,
+        impute_flag="random_headway_mean_imputed",
+    )
     return features
 
 
@@ -446,26 +717,24 @@ def _baseline_probe_features(probe: Dict[str, Any], prefix: str) -> Dict[str, fl
     features: Dict[str, float] = {}
     keep_keys = [
         "mean_episode_return",
-        "std_episode_return",
-        "episode_length",
-        "std_episode_length",
         "collision_rate",
         "timeout_rate",
         "mean_speed",
-        "std_speed",
         "collision_observed",
         "timeout_observed",
-        "reward_autocorr1",
-        "corr_reward_speed",
-        "corr_reward_lane_change"
     ]
     for key in keep_keys:
         _add_prefixed_feature(features, prefix, key, probe.get(key))
 
-    mean_speed = probe["mean_speed"]
-    std_speed = probe["std_speed"]
-    denom = max(abs(mean_speed), 1e-6)
-    # features[f"{prefix}_speed_cv"] = std_speed / denom
+    mean_speed = _probe_value(probe, "mean_speed")
+    std_speed = _probe_value(probe, "std_speed")
+    if mean_speed is not None and std_speed is not None:
+        denom = max(abs(mean_speed), 1e-6)
+        features[f"{prefix}_speed_cv"] = std_speed / denom
+
+    collision_rate = _probe_value(probe, "collision_rate")
+    if collision_rate is not None:
+        features[f"{prefix}_safety_index"] = 1.0 - collision_rate
     return features
 
 
@@ -490,33 +759,71 @@ def _add_prefixed_feature(
     if impute_flag is not None:
         features[impute_flag] = 1.0 if used_fallback else 0.0
 
+
+def _probe_value(probe: Dict[str, Any], key: str) -> Optional[float]:
+    value = probe.get(key)
+    if value is None:
+        return None
+    return _as_float(value)
+
+
+def _probe_stat(probe: Dict[str, Any], key: str, default: float = 0.0) -> float:
+    value = _probe_value(probe, key)
+    if value is None:
+        return default
+    return value
+
+
 def _derived_features(
     random_probe: Dict[str, Any],
     idm_probe: Dict[str, Any],
+    env_features: Dict[str, float],
 ) -> Dict[str, float]:
     features: Dict[str, float] = {}
 
-    r_return = random_probe["mean_episode_return"]
-    i_return = idm_probe["mean_episode_return"]
+    r_return = _probe_stat(random_probe, "mean_episode_return")
+    i_return = _probe_stat(idm_probe, "mean_episode_return")
 
-    r_std = random_probe["std_episode_return"]
-    i_std = idm_probe["std_episode_return"]
-    r_speed = random_probe["mean_speed"]
-    i_speed = idm_probe["mean_speed"]
+    r_std = _probe_stat(random_probe, "std_episode_return")
+    i_std = _probe_stat(idm_probe, "std_episode_return")
+    r_speed = _probe_stat(random_probe, "mean_speed")
+    i_speed = _probe_stat(idm_probe, "mean_speed")
 
-    r_collision = random_probe["collision_rate"]
-    i_collision = idm_probe["collision_rate"]
+    r_collision = _probe_stat(random_probe, "collision_rate")
+    i_collision = _probe_stat(idm_probe, "collision_rate")
 
-    # r_timeout = random_probe["timeout_rate"]
-    # i_timeout = idm_probe["timeout_rate"]
+    r_timeout = _probe_stat(random_probe, "timeout_rate")
+    i_timeout = _probe_stat(idm_probe, "timeout_rate")
+
+    r_obs_dim = _probe_stat(random_probe, "obs_flat_dim")
 
     features["idm_return_gain"] = i_return - r_return
-    # features["idm_return_ratio"] = i_return / (abs(r_return) + 1e-6)
+    features["idm_return_ratio"] = i_return / (abs(r_return) + 1e-6)
     features["idm_collision_reduction"] = max(r_collision - i_collision, 0.0)
+    features["idm_timeout_reduction"] = r_timeout - i_timeout
     features["idm_speed_gain"] = i_speed - r_speed
+    features["random_reward_stochasticity"] = r_std / (abs(r_return) + 1e-6)
     features["stability_gap"] = r_std - i_std
-    # features["obs_complexity"] = random_probe["obs_flat_dim"]
+    features["obs_complexity"] = r_obs_dim
+    features["difficulty_index"] = (
+        env_features.get("traffic_intensity_index", 0.0)
+        * features["random_reward_stochasticity"]
+    )
     features["safety_gap"] = (1.0 - i_collision) - (1.0 - r_collision)
+    features["speed_safety_tradeoff"] = (
+        i_speed * (1.0 - i_collision) - r_speed * (1.0 - r_collision)
+    )
+    features["timeout_sensitivity"] = r_timeout
+
+    returns = [r_return, i_return]
+    collisions = [r_collision, i_collision]
+    timeouts = [r_timeout, i_timeout]
+    speeds = [r_speed, i_speed]
+
+    features["probe_return_spread"] = max(returns) - min(returns)
+    features["probe_safety_spread"] = max(collisions) - min(collisions)
+    features["probe_timeout_spread"] = max(timeouts) - min(timeouts)
+    features["probe_speed_spread"] = max(speeds) - min(speeds)
     return features
 
 class BaseMetricHook:
@@ -618,25 +925,33 @@ class RewardSignalHook(BaseMetricHook):
         self.sparsity_epsilon = sparsity_epsilon
         self._rewards: List[float] = []
         self._speed_values: List[float] = []
+        self._speed_rewards: List[float] = []
         self._lane_change_flags: List[float] = []
+        self._lane_change_rewards: List[float] = []
         self._progress_deltas: List[float] = []
+        self._progress_rewards: List[float] = []
         self._episode_sequences: List[List[float]] = []
+        self._episode_buffer: List[float] = []
         self._prev_lane: Optional[int] = None
         self._prev_progress: Optional[float] = None
 
     def on_episode_start(self) -> None:
+        self._episode_buffer = []
         self._prev_lane = None
         self._prev_progress = None
 
     def on_step(self, context: StepMetricsContext) -> None:
         reward = float(context.reward)
         self._rewards.append(reward)
+        self._episode_buffer.append(reward)
 
-        speed = context.info["speed"]
-        self._speed_values.append(float(speed))
+        speed = context.info.get("speed")
+        if speed is not None:
+            self._speed_values.append(float(speed))
+            self._speed_rewards.append(reward)
 
         base_env = context.env.unwrapped
-        vehicle = base_env.vehicle
+        vehicle = getattr(base_env, "vehicle", None)
         lane_id = _lane_id_from_vehicle(vehicle) if vehicle is not None else None
         if lane_id is not None:
             if self._prev_lane is None:
@@ -644,19 +959,30 @@ class RewardSignalHook(BaseMetricHook):
             else:
                 lane_change_flag = 1.0 if lane_id != self._prev_lane else 0.0
             self._lane_change_flags.append(lane_change_flag)
+            self._lane_change_rewards.append(reward)
             self._prev_lane = lane_id
 
         progress = None
-        pos = _vehicle_position(vehicle)
-        if pos.size:
-            progress = float(pos[0])
+        if vehicle is not None:
+            pos = _vehicle_position(vehicle)
+            if pos.size:
+                progress = float(pos[0])
         if progress is not None:
             if self._prev_progress is not None:
                 delta = progress - self._prev_progress
                 self._progress_deltas.append(delta)
+                self._progress_rewards.append(reward)
             self._prev_progress = progress
 
+    def on_episode_end(self) -> None:
+        if self._episode_buffer:
+            self._episode_sequences.append(list(self._episode_buffer))
+        self._episode_buffer = []
+
     def finalize(self) -> Dict[str, float]:
+        if not self._rewards:
+            return {}
+
         rewards = np.asarray(self._rewards, dtype=float)
         stats: Dict[str, float] = {}
         abs_rewards = np.abs(rewards)
@@ -665,26 +991,26 @@ class RewardSignalHook(BaseMetricHook):
         mean_reward = float(np.mean(rewards))
         centered = rewards - mean_reward
         std_reward = float(np.std(rewards))
-        # if std_reward > 1e-8:
-        #     stats["reward_skew"] = float(np.mean(centered ** 3) / (std_reward ** 3))
-        #     stats["reward_kurtosis"] = float(np.mean(centered ** 4) / (std_reward ** 4))
-        # else:
-        #     stats["reward_skew"] = 0.0
-        #     stats["reward_kurtosis"] = 0.0
+        if std_reward > 1e-8:
+            stats["reward_skew"] = float(np.mean(centered ** 3) / (std_reward ** 3))
+            stats["reward_kurtosis"] = float(np.mean(centered ** 4) / (std_reward ** 4))
+        else:
+            stats["reward_skew"] = 0.0
+            stats["reward_kurtosis"] = 0.0
 
         autocorr = _safe_autocorr(rewards)
         if autocorr is not None:
             stats["reward_autocorr1"] = autocorr
 
-        corr_speed = _safe_corr(self._rewards, self._speed_values)
+        corr_speed = _safe_corr(self._speed_rewards, self._speed_values)
         if corr_speed is not None:
             stats["corr_reward_speed"] = corr_speed
 
-        corr_lane = _safe_corr(self._rewards, self._lane_change_flags)
+        corr_lane = _safe_corr(self._lane_change_rewards, self._lane_change_flags)
         if corr_lane is not None:
             stats["corr_reward_lane_change"] = corr_lane
 
-        corr_progress = _safe_corr(self._rewards, self._progress_deltas)
+        corr_progress = _safe_corr(self._progress_rewards, self._progress_deltas)
         if corr_progress is not None:
             stats["corr_reward_progress"] = corr_progress
 
@@ -753,7 +1079,7 @@ def _traffic_snapshot(
                 nearby_counts[radius] += 1
 
         lane_entry = lane_stats[lane_key]
-        other_speed = other.speed
+        other_speed = _vehicle_speed(other)
         if longitudinal_gap >= 0.0:
             if longitudinal_gap < lane_entry["front_gap"]:
                 lane_entry["front_gap"] = longitudinal_gap
@@ -828,7 +1154,10 @@ def _rear_ttc(gap: float, other_speed: Optional[float], ego_speed: float) -> flo
 
 
 def _vehicle_position(vehicle: Any) -> np.ndarray:
-    return np.asarray(vehicle.position, dtype=float)
+    position = getattr(vehicle, "position", None)
+    if position is None:
+        return np.zeros(2, dtype=float)
+    return np.asarray(position, dtype=float)
 
 
 def _lane_id_from_vehicle(vehicle: Any) -> Optional[int]:
@@ -841,6 +1170,9 @@ def _lane_id_from_vehicle(vehicle: Any) -> Optional[int]:
         return int(lane_index)
     return None
 
+
+def _vehicle_speed(vehicle: Any) -> float:
+    return vehicle.speed
 
 def _safe_autocorr(values: np.ndarray) -> Optional[float]:
     if values.size <= 1:

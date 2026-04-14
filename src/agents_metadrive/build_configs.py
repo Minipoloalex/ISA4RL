@@ -50,7 +50,7 @@ MULTI_INPUT = "MultiInputPolicy"
 OBS_POLICY = {
     K: MLP,
     TTC: MLP,
-    KG: MLP,
+    KG: MULTI_INPUT,
     OG: MLP,
     E: MLP,
     A: MULTI_INPUT,
@@ -86,7 +86,7 @@ def build_metadrive_configs() -> List[CONFIG]:
     #     BaseMap.LANE_NUM: 3,
     # }
     MAPS = [
-        CURVE:
+        CURVE,
     ]
     random_lane_num = [True, False]
     random_lane_width = [True, False]

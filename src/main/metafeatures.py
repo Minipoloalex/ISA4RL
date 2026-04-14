@@ -2,79 +2,52 @@ import hashlib
 import math
 import time
 from collections import Counter, deque
-from dataclasses import dataclass
-from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple
-
+from dataclasses import dataclass, field
+from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
 import gymnasium as gym
 import numpy as np
 from highway_env.vehicle.behavior import IDMVehicle
+from utils.metafeatures.metrics import SimpleEgoMetricsHook
+from utils.general_utils import as_float
 
 from configs import InstanceConfig
 from utils.general_utils import _flatten_obs
-
-PolicyFn = Callable[[Any, Dict[str, Any]], Any]
+from utils.metafeature_utils import (
+    Trajectory,
+    StepInfo,
+    make_random_policy,
+    constant_policy,
+    default_idle_action,
+    ensure_idm_vehicle,
+    PolicyFn,
+)
 
 INITIAL_GEOMETRY_SAMPLES = 3
 MAX_FREE_SPACE_METERS = 200.0
 MAX_TTC_SECONDS = 30.0
 
 
-@dataclass
-class StepMetricsContext:
-    env: gym.Env
-    pre_obs: Any
-    post_obs: Any
-    action: Any
-    reward: float
-    info: Dict[str, Any]
-    prev_info: Optional[Dict[str, Any]]
-    prev_action: Any
-    prev_reward: Optional[float]
-    episode_index: int
-    step_index: int
-    terminated: bool
-    truncated: bool
-
-
-class MetricHook(Protocol):
-    def on_probe_start(self) -> None:
-        ...
-
-    def on_episode_start(self) -> None:
-        ...
-
-    def on_step(self, context: StepMetricsContext) -> None:
-        ...
-
-    def on_episode_end(self) -> None:
-        ...
-
-    def finalize(self) -> Dict[str, float]:
-        ...
-
-
 def extract_metafeatures(config: InstanceConfig):
     before = time.perf_counter()
     env = config.ensure_test_env()
     env_name = env.spec.id
-    env_seed = config.eval_seed
-    env_features = _collect_env_features(env)
+    env_features = _collect_env_features(env_name, env)
 
-    random_probe = _run_probe(
+    trajectories_random: List[Trajectory] = _run_probe(
         env=env,
-        policy=_make_random_policy(env),
-        episodes=10,
-        env_seed=env_seed,
-        label="random_rollout",
-        metric_hooks=_build_metric_hooks(),
+        policy=make_random_policy(env),
+        episodes=config.n_test_episodes,
     )
-    idm_probe = _run_idm_probe(
+    trajectories_idm = _run_idm_probe(
         env=env,
-        episodes=5,
-        env_seed=env_seed,
-        label="idm_like",
+        episodes=config.n_test_episodes,
     )
+
+    # save_trajectories("random", trajectories_random, config)
+    # save_trajectories("idm", trajectories_idm, config)
     config.close()
+    metafeatures_random = traj_metafeatures("random", trajectories_random)
+    metafeatures_idm = traj_metafeatures("idm", trajectories_idm)
     elapsed = time.perf_counter() - before
 
     idm_advantage = (
@@ -110,251 +83,79 @@ def extract_metafeatures(config: InstanceConfig):
     }
 
 
-def _make_random_policy(env: gym.Env) -> PolicyFn:
-    action_space = env.action_space
+def traj_metafeatures(label: str, trajectories: List[Trajectory]) -> Dict[str, Any]:
+    # Initialize the hook we built earlier
+    hooks = [SimpleEgoMetricsHook()]
+    for hook in hooks:
+        hook.on_probe_start()
 
-    def policy(_: Any, __: Dict[str, Any]) -> Any:
-        return action_space.sample()
+    for traj in trajectories:
+        for hook in hooks:
+            hook.on_episode_start()
+        
+        for step in traj:
+            for hook in hooks:
+                hook.on_step(step)
+            
+        for hook in hooks:
+            hook.on_episode_end()
 
-    return policy
+    # Retrieve the aggregated stats
+    for hook in hooks:
+        metrics = hook.finalize()
+
+    # Format the prefix to ensure clean dictionary keys (e.g., 'eval/reward_mean')
+    prefix = f"{label}/"
+
+    # Return the new dictionary with prefixed keys
+    return {f"{prefix}{key}": value for key, value in metrics.items()}
 
 def _run_idm_probe(
     env: gym.Env,
     episodes: int,
-    env_seed: int,
-    label: str,
-) -> Dict[str, Any]:
-    dummy_action = _default_idle_action(env)
-    policy = _constant_policy(dummy_action)
+) -> List[Trajectory]:
+    dummy_action = default_idle_action(env)
+    policy = constant_policy(dummy_action)
 
     def reset_hook(target_env: gym.Env) -> None:
-        _ensure_idm_vehicle(target_env)
+        ensure_idm_vehicle(target_env)
 
     return _run_probe(
         env=env,
         policy=policy,
         episodes=episodes,
-        env_seed=env_seed,
-        label=label,
         reset_hook=reset_hook,
-        metric_hooks=_build_metric_hooks(),
     )
-
-
-def _default_idle_action(env: gym.Env) -> int:
-    if isinstance(env.action_space, gym.spaces.Discrete):
-        return 0
-    raise NotImplementedError(f"Idle action not implemented for action space type: {type(env.action_space)}")
-
-def _constant_policy(action: Any) -> PolicyFn:
-    def policy(_: Any, __: Dict[str, Any]) -> Any:
-        return action
-
-    return policy
-
-def _ensure_idm_vehicle(env: gym.Env) -> None:
-    base_env = env.unwrapped
-    vehicle = base_env.vehicle
-    road = base_env.road
-
-    idm_vehicle = IDMVehicle.create_from(vehicle)
-    idm_vehicle.enable_lane_change = True
-    idm_vehicle.timer = getattr(vehicle, "timer", getattr(idm_vehicle, "timer", 0.0))
-    _copy_vehicle_attr(vehicle, idm_vehicle, "target_speed")
-    _copy_vehicle_attr(vehicle, idm_vehicle, "target_speeds", deep_copy=True)
-    _copy_vehicle_attr(vehicle, idm_vehicle, "index_to_speed")
-    _copy_vehicle_attr(vehicle, idm_vehicle, "speed_index")
-
-    base_env.vehicle = idm_vehicle
-
-    for idx, existing in enumerate(road.vehicles):
-        if existing is vehicle:
-            road.vehicles[idx] = idm_vehicle
-            break
-
-    base_env.action_type.controlled_vehicle = idm_vehicle
-
-def _copy_vehicle_attr(
-    src: Any, dst: Any, attr: str, *, deep_copy: bool = False
-) -> None:
-    if not hasattr(src, attr):
-        return
-    value = getattr(src, attr)
-    if deep_copy:
-        value = None if value is None else np.array(value, copy=True)
-    setattr(dst, attr, value)
 
 
 def _run_probe(
     env: gym.Env,
     policy: PolicyFn,
     episodes: int,
-    env_seed: int,
-    label: str,
+    *,
     reset_hook: Optional[Callable[[gym.Env], None]] = None,
-    metric_hooks: Optional[List[MetricHook]] = None,
-) -> Dict[str, Any]:
-    returns: List[float] = []
-    lengths: List[int] = []
-    collisions = 0
-    timeouts = 0
-    steps_collected = 0
-
-    speed_samples: List[float] = []
-    obs_sum = 0.0
-    obs_sq_sum = 0.0
-    obs_abs_sum = 0.0
-    obs_count = 0
-    obs_zero_count = 0
-    obs_dim: Optional[int] = None
-
-    metric_hooks = metric_hooks or []
-    for hook in metric_hooks:
-        try:
-            hook.on_probe_start()
-        except Exception:
-            continue
-
+) -> List[Trajectory]:
+    base_seed = int(1e6)
+    trajectories: List[Trajectory] = []
     for episode in range(episodes):
-        obs, info = env.reset(seed=env_seed)
+        seed = base_seed + episode
+        obs, info = env.reset(seed=seed)
         if reset_hook is not None:
             reset_hook(env)
-        obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count = _obs_stats_update(
-            obs,
-            obs_sum,
-            obs_sq_sum,
-            obs_abs_sum,
-            obs_count,
-            obs_zero_count,
-        )
 
+        traj: Trajectory = []
         done = False
-        ep_return = 0.0
-        ep_steps = 0
-        crashed = False
-        timeout = False
-        prev_action: Any = None
-        prev_reward: Optional[float] = None
-
-        for hook in metric_hooks:
-            try:
-                hook.on_episode_start()
-            except Exception:
-                continue
-
         while not done:
-            pre_step_obs = obs
-            pre_step_info = info
             action = policy(obs, info)
-            obs, reward, terminated, truncated, info = env.step(action)
-
-            ep_return += float(reward)
-            ep_steps += 1
-            steps_collected += 1
-
-            crashed = crashed or bool(info.get("crashed", False))
-            timeout = timeout or bool(truncated)
-            speed = info.get("speed")
-            if speed is not None:
-                speed_samples.append(speed)
-            obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count = _obs_stats_update(
-                obs,
-                obs_sum,
-                obs_sq_sum,
-                obs_abs_sum,
-                obs_count,
-                obs_zero_count,
-            )
-
-            if metric_hooks:
-                step_context = StepMetricsContext(
-                    env=env,
-                    pre_obs=pre_step_obs,
-                    post_obs=obs,
-                    action=action,
-                    reward=float(reward),
-                    info=info or {},
-                    prev_info=pre_step_info,
-                    prev_action=prev_action,
-                    prev_reward=prev_reward,
-                    episode_index=episode,
-                    step_index=ep_steps,
-                    terminated=terminated,
-                    truncated=truncated,
-                )
-                for hook in metric_hooks:
-                    try:
-                        hook.on_step(step_context)
-                    except Exception:
-                        continue
-
+            new_obs, reward, terminated, truncated, info = env.step(action)
+            step_info = StepInfo(obs, action, reward, new_obs, terminated, truncated, info)
+            traj.append(step_info)
+            
+            obs = new_obs
             done = terminated or truncated
-            prev_action = action
-            prev_reward = float(reward)
+        trajectories.append(traj)
 
-        returns.append(ep_return)
-        lengths.append(ep_steps)
-        collisions += int(crashed)
-        timeouts += int(timeout)
-
-        for hook in metric_hooks:
-            try:
-                hook.on_episode_end()
-            except Exception:
-                continue
-
-    mean_return = float(np.mean(returns))
-    std_return = float(np.std(returns))
-    mean_length = float(np.mean(lengths))
-    std_length = float(np.std(lengths))
-    mean_speed = float(np.mean(speed_samples))
-    std_speed = float(np.std(speed_samples))
-
-    obs_mean = obs_sum / obs_count
-    obs_var = obs_sq_sum / obs_count - obs_mean ** 2
-    obs_var = max(obs_var, 0.0)
-    obs_std = float(math.sqrt(obs_var))
-    obs_mean_abs = obs_abs_sum / obs_count
-    obs_zero_fraction = (
-        obs_zero_count / obs_count
-    )
-
-    result = {
-        "label": label,
-        "episodes": episodes,
-        "total_steps": steps_collected,
-        "mean_episode_return": mean_return,
-        "std_episode_return": std_return,
-        "mean_episode_length": mean_length,
-        "std_episode_length": std_length,
-        "collision_rate": collisions / episodes,
-        "timeout_rate": timeouts / episodes,
-        "mean_speed": mean_speed,
-        "std_speed": std_speed,
-        # "obs_mean": obs_mean,
-        # "obs_std": obs_std,
-        "obs_mean_abs": obs_mean_abs,
-        "obs_zero_fraction": obs_zero_fraction,
-        "collision_observed": 1.0 if collisions > 0 else 0.0,
-        "timeout_observed": 1.0 if timeouts > 0 else 0.0,
-        # "return_min": float(np.min(returns)),
-        # "return_max": float(np.max(returns)),
-        # "return_median": float(np.median(returns)),
-        # "length_min": float(np.min(lengths)),
-        # "length_max": float(np.max(lengths)),
-        # "speed_min": float(np.min(speed_samples)),
-        # "speed_max": float(np.max(speed_samples)),
-    }
-
-    extra_metrics: Dict[str, float] = {}
-    for hook in metric_hooks:
-        try:
-            extra_metrics.update(hook.finalize())
-        except Exception:
-            continue
-
-    result.update(extra_metrics)
-    return result
+    return trajectories
 
 def _obs_stats_update(
     obs: Any,
@@ -372,27 +173,20 @@ def _obs_stats_update(
     obs_zero_count += int(np.count_nonzero(flat == 0))
     return obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count
 
-def _is_number(value: Any) -> bool:
-    return isinstance(value, (int, float, np.integer, np.floating))
 
-def _as_float(value: Any) -> Optional[float]:
-    if _is_number(value):
-        return float(value)
-    return None
-
-def _collect_env_features(env: gym.Env) -> Dict[str, float]:
+def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
     config = base_env.config
     features: Dict[str, float] = {}
 
     def add(name: str, value: Any) -> None:
-        numeric = _as_float(value)
+        numeric = as_float(value)
         if numeric is not None:
             features[name] = numeric
 
     # roundabout and merge don't have these parameters (their values are hardcoded to these)
     lanes = config.get("lanes_count", 2)
-    vehicles_count = config.get("vehicles_count",4)
+    vehicles_count = config.get("vehicles_count", 4)
     vehicles_density = config.get("vehicles_density", 1)
 
     collision_reward = config.get("collision_reward")

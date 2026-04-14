@@ -67,3 +67,10 @@ def _coerce_numeric(value: Any) -> Optional[float]:
             return None
     return None
 
+def is_number(value: Any) -> bool:
+    return isinstance(value, (int, float, np.integer, np.floating))
+
+def as_float(value: Any) -> Optional[float]:
+    if is_number(value):
+        return float(value)
+    return None

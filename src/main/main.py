@@ -87,6 +87,8 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
         print("", datetime.datetime.now(), "\n\n\n")
         task_map[args.task](selected)  # type: ignore
         print("\n\n\n", datetime.datetime.now())
+        
+    print("Exiting")
 
 if __name__ == "__main__":
     main()
