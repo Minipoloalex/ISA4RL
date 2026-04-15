@@ -8,19 +8,24 @@ cd $BASE_PATH/ISA4RL-article/src/main
 
 # Grab the command (start, stop, status, logs)
 COMMAND=$1
-# Grab the training parameters
+# Grab the parameters
 ENV=$2
 START=$3
 END=$4
+# Grab the optional task parameter (defaults to "train" if omitted)
+TASK=${5:-train}
 
 # Function to show usage instructions
 show_usage() {
-    echo "Usage: $0 {start|stop|status|logs} <env> <start> <end>"
+    echo "Usage: $0 {start|stop|status|logs} <env> <start> <end> [task]"
+    echo ""
+    echo "Note: [task] is optional. If not provided, it defaults to 'train'."
     echo ""
     echo "Examples:"
-    echo "  $0 start HalfCheetah-v4 900 1000"
-    echo "  $0 logs HalfCheetah-v4 900 1000"
-    echo "  $0 stop HalfCheetah-v4 900 1000"
+    echo "  $0 start HalfCheetah-v4 900 1000          # Runs task 'train'"
+    echo "  $0 start HalfCheetah-v4 900 1000 evaluate # Runs task 'evaluate'"
+    echo "  $0 logs HalfCheetah-v4 900 1000 evaluate  # Views logs for 'evaluate'"
+    echo "  $0 stop HalfCheetah-v4 900 1000           # Stops 'train'"
     echo ""
     echo "Helper Commands:"
     echo "  $0 list   - Shows all currently saved PID files"
@@ -39,14 +44,13 @@ if [[ ! "$COMMAND" =~ ^(start|stop|status|logs)$ ]] || [ -z "$ENV" ] || [ -z "$S
     exit 1
 fi
 
-# Define dynamic POSIX paths based on your parameters
-LOG_OUT=$BASE_PATH/logs/train_${ENV}_${START}_${END}.out
-LOG_ERR=$BASE_PATH/logs/train_${ENV}_${START}_${END}.err
-PID_FILE=$BASE_PATH/pids/train_${ENV}_${START}_${END}.pid
+# Define dynamic POSIX paths based on your parameters (Updated to include TASK)
+LOG_OUT=$BASE_PATH/logs/${TASK}_${ENV}_${START}_${END}.out
+LOG_ERR=$BASE_PATH/logs/${TASK}_${ENV}_${START}_${END}.err
+PID_FILE=$BASE_PATH/pids/${TASK}_${ENV}_${START}_${END}.pid
 
 start() {
-    echo "Starting training: ENV=$ENV | START=$START | END=$END"
-    echo "Using .env file at: $ENV_FILE_PATH"
+    echo "Starting process: TASK=$TASK | ENV=$ENV | START=$START | END=$END"
 
     mkdir -p $BASE_PATH/logs
     mkdir -p $BASE_PATH/pids
@@ -54,7 +58,7 @@ start() {
     # Launch using `uv run` in the background with nohup.
     # Redirect stdout to LOG_OUT and stderr to LOG_ERR.
     nohup uv run --env-file .env main.py \
-        --env "$ENV" --task "train" --start "$START" --end "$END" \
+        --env "$ENV" --task "$TASK" --start "$START" --end "$END" \
         > "$LOG_OUT" 2> "$LOG_ERR" < /dev/null &
 
     # Capture the Process ID of the last background command
@@ -69,7 +73,7 @@ start() {
 status() {
     if [ -f "$PID_FILE" ]; then
         PID=$(cat "$PID_FILE")
-        echo "Checking process status for $ENV ($START to $END)..."
+        echo "Checking process status for $TASK | $ENV ($START to $END)..."
         # Check if the process is actually running
         if ps -p "$PID" > /dev/null; then
             echo "Status: RUNNING"
@@ -84,7 +88,7 @@ status() {
 }
 
 logs() {
-    echo "Tailing logs for $ENV ($START to $END)... (Press Ctrl+C to stop)"
+    echo "Tailing logs for $TASK | $ENV ($START to $END)... (Press Ctrl+C to stop)"
     touch "$LOG_OUT" "$LOG_ERR"
     # Tail both standard out and standard error
     tail -f "$LOG_OUT" "$LOG_ERR"
@@ -93,7 +97,7 @@ logs() {
 stop() {
     if [ -f "$PID_FILE" ]; then
         PID=$(cat "$PID_FILE")
-        echo "Stopping process for $ENV ($START to $END) with PID $PID..."
+        echo "Stopping process for $TASK | $ENV ($START to $END) with PID $PID..."
         
         # Check if process is running before trying to kill it
         if kill -0 "$PID" 2>/dev/null; then
