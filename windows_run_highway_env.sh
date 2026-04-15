@@ -7,20 +7,25 @@ ENV_FILE_PATH="./.env"
 
 # Grab the command (start, stop, status, logs, check)
 COMMAND=$1
-# Grab the training parameters
+# Grab the parameters
 ENV=$2
 START=$3
 END=$4
+# Grab the optional task parameter (defaults to "train" if omitted)
+TASK=${5:-train}
 
 # Function to show usage instructions
 show_usage() {
-    echo "Usage: $0 {start|stop|status|logs|check} <env> <start> <end>"
+    echo "Usage: $0 {start|stop|status|logs|check} <env> <start> <end> [task]"
+    echo ""
+    echo "Note: [task] is optional. If not provided, it defaults to 'train'."
     echo ""
     echo "Examples:"
-    echo "  $0 start HalfCheetah-v4 900 1000"
-    echo "  $0 logs HalfCheetah-v4 900 1000"
-    echo "  $0 stop HalfCheetah-v4 900 1000"
-    echo "  $0 check HalfCheetah-v4 900 1000"
+    echo "  $0 start HalfCheetah-v4 900 1000          # Runs task 'train'"
+    echo "  $0 start HalfCheetah-v4 900 1000 evaluate # Runs task 'evaluate'"
+    echo "  $0 logs HalfCheetah-v4 900 1000 evaluate  # Views logs for 'evaluate'"
+    echo "  $0 stop HalfCheetah-v4 900 1000           # Stops 'train'"
+    echo "  $0 check HalfCheetah-v4 900 1000          # Runs check sync"
     echo ""
     echo "Helper Commands:"
     echo "  $0 list   - Shows all currently saved PID files"
@@ -39,13 +44,13 @@ if [[ ! "$COMMAND" =~ ^(start|stop|status|logs|check)$ ]] || [ -z "$ENV" ] || [ 
     exit 1
 fi
 
-# Define dynamic POSIX paths based on your parameters
-LOG_OUT=~/MSc_Felix/logs/train_${ENV}_${START}_${END}.out
-LOG_ERR=~/MSc_Felix/logs/train_${ENV}_${START}_${END}.err
-PID_FILE=~/MSc_Felix/pids/train_${ENV}_${START}_${END}.pid
+# Define dynamic POSIX paths based on your parameters (Updated to include TASK)
+LOG_OUT=~/MSc_Felix/logs/${TASK}_${ENV}_${START}_${END}.out
+LOG_ERR=~/MSc_Felix/logs/${TASK}_${ENV}_${START}_${END}.err
+PID_FILE=~/MSc_Felix/pids/${TASK}_${ENV}_${START}_${END}.pid
 
 start() {
-    echo "Starting training: ENV=$ENV | START=$START | END=$END"
+    echo "Starting process: TASK=$TASK | ENV=$ENV | START=$START | END=$END"
     echo "Using .env file at: $ENV_FILE_PATH"
 
     mkdir -p ~/MSc_Felix/logs
@@ -61,10 +66,9 @@ start() {
     WD_WIN=$(cygpath -w "$PWD")
 
     # Launch using `uv run`.
-    # `--env-file` is explicitly passed using your configured variable at the top.
     powershell.exe -NoProfile -Command \
     "Start-Process -FilePath 'uv' \
-     -ArgumentList @('run', '--env-file', \"$ENV_FILE_WIN\", '--python', \"$PYTHON_WIN\", \"$SCRIPT_WIN\", '--env', \"$ENV\", '--task', 'train', '--start', \"$START\", '--end', \"$END\") \
+     -ArgumentList @('run', '--env-file', \"$ENV_FILE_WIN\", '--python', \"$PYTHON_WIN\", \"$SCRIPT_WIN\", '--env', \"$ENV\", '--task', \"$TASK\", '--start', \"$START\", '--end', \"$END\") \
      -WorkingDirectory \"$WD_WIN\" \
      -RedirectStandardOutput \"$LOG_WIN\" -RedirectStandardError \"$ERR_WIN\" \
      -WindowStyle Hidden -PassThru | Select-Object -ExpandProperty Id | Set-Content -Path \"$PID_WIN\""
@@ -92,7 +96,7 @@ check() {
 status() {
     if [ -f "$PID_FILE" ]; then
         PID_WIN=$(cygpath -w "$PID_FILE")
-        echo "Checking process status for $ENV ($START to $END)..."
+        echo "Checking process status for $TASK | $ENV ($START to $END)..."
         powershell.exe -NoProfile -Command "Get-Process -Id (Get-Content \"$PID_WIN\")"
     else
         echo "Status: PID file not found for these parameters. The process is likely not running."
@@ -100,7 +104,7 @@ status() {
 }
 
 logs() {
-    echo "Tailing logs for $ENV ($START to $END)... (Press Ctrl+C to stop)"
+    echo "Tailing logs for $TASK | $ENV ($START to $END)... (Press Ctrl+C to stop)"
     touch "$LOG_OUT" "$LOG_ERR"
     tail -f "$LOG_OUT" "$LOG_ERR"
 }
@@ -108,7 +112,7 @@ logs() {
 stop() {
     if [ -f "$PID_FILE" ]; then
         PID_WIN=$(cygpath -w "$PID_FILE")
-        echo "Stopping process for $ENV ($START to $END)..."
+        echo "Stopping process for $TASK | $ENV ($START to $END)..."
         powershell.exe -NoProfile -Command "Stop-Process -Id (Get-Content \"$PID_WIN\") -Force"
 
         rm "$PID_FILE"
