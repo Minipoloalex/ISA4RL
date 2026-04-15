@@ -52,25 +52,27 @@ logging.basicConfig(
 def train_agents(train_configs: List[TrainConfig]):
     train_configs = [config for config in train_configs if not is_trained(config)]
     for i, config in tqdm(enumerate(train_configs), total=len(train_configs)):
-        logger.info(f"open fds before env creation: {len(os.listdir("/proc/self/fd"))}")
-        train_env = config.ensure_train_env()
-        model = config.ensure_model()
-        eval_env = config.ensure_eval_env()
-        logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
-        logger.info(f"Started training run {i} in path: {config.train_folder_path}")
-        logger.info(f"Configuration for algorithm: {model.__str__()}")
-        train(
-            env=train_env,
-            model=model,
-            timesteps=config.timesteps,
-            folder_name=str(config.train_folder_path),
-            eval_env=eval_env,
-            n_eval_episodes=config.n_eval_episodes,
-            eval_freq=config.eval_freq,
-            seed=0,
-            progress_bar=True,
-        )
-        config.close()
+        try:
+            logger.info(f"open fds before env creation: {len(os.listdir("/proc/self/fd"))}")
+            train_env = config.ensure_train_env()
+            model = config.ensure_model()
+            eval_env = config.ensure_eval_env()
+            logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
+            logger.info(f"Started training run {i} in path: {config.train_folder_path}")
+            logger.info(f"Configuration for algorithm: {model.__str__()}")
+            train(
+                env=train_env,
+                model=model,
+                timesteps=config.timesteps,
+                folder_name=str(config.train_folder_path),
+                eval_env=eval_env,
+                n_eval_episodes=config.n_eval_episodes,
+                eval_freq=config.eval_freq,
+                seed=0,
+                progress_bar=True,
+            )
+        finally:
+            config.close()
         logger.info(f"Saved training information from run in {config.train_folder_path}")
 
 

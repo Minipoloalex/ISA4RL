@@ -70,6 +70,7 @@ class InstanceConfig:
         if self._test_env is not None:
             try:
                 self._test_env.close()
+                del self._test_env
             finally:
                 self._test_env = None
 
@@ -221,11 +222,14 @@ class TrainConfig(InstanceConfig):
         if self._train_env is not None:
             try:
                 self._train_env.close()
+                del self._train_env
             finally:
                 self._train_env = None
         if self._eval_env is not None:
             try:
                 self._eval_env.close()
+                del self._eval_env
             finally:
                 self._eval_env = None
+        del self._model
         self._model = None
