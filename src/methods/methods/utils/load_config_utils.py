@@ -1,4 +1,4 @@
-from configs import TrainConfig, InstanceConfig
+from methods.configs import TrainConfig, InstanceConfig
 from common.file_utils import *
 
 def load_env_instance_configs(env_name: str, base_results_path: Path = BASE_RESULTS_PATH) -> List[InstanceConfig]:

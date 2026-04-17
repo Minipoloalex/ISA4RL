@@ -4,20 +4,20 @@ from functools import partial
 from typing import Optional, Sequence, Dict, Callable, List
 
 import gymnasium as gym
-import highway_env
 import pandas as pd
 
-from configs import TrainConfig, InstanceConfig
+from methods.configs import TrainConfig, InstanceConfig
 from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS
 from common.file_utils import OTHER_RESULTS_PATH
-from utils.load_config_utils import load_env_train_configs, load_env_instance_configs
-from main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents, group_results
+from methods.utils.load_config_utils import load_env_train_configs, load_env_instance_configs
+from methods.main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents, group_results
 
-
-def main(argv: Optional[Sequence[str]] = None) -> None:
+def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) -> None:
     parser = argparse.ArgumentParser(
         description="Run training, evaluation, metafeature extraction, or checks of what has been run for highway-env configs."
     )
+    valid_envs = valid_envs if valid_envs is not None else HIGHWAY_ENVS + METADRIVE_ENVS
+
     parser.add_argument(
         "--task",
         choices=("train", "evaluate", "extract", "check", "group"),
@@ -25,7 +25,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     )
     parser.add_argument(
         "--env",
-        choices=HIGHWAY_ENVS + METADRIVE_ENVS,
+        choices=valid_envs,
         help="Environment to use",
     )
     parser.add_argument(
@@ -91,4 +91,4 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     print("Exiting")
 
 if __name__ == "__main__":
-    main()
+    main(None)

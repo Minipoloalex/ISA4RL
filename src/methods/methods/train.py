@@ -34,7 +34,7 @@ from common.file_utils import (
 )
 torch.set_num_threads(1)
 
-from utils.general_utils import (
+from methods.utils.general_utils import (
     set_global_seed,
     ensure_dir,
     discretize,
@@ -44,7 +44,7 @@ from utils.general_utils import (
     _interpolate_range_value,
     _coerce_numeric,
 )
-from utils.sb3_utils import get_env_id, unwrap_first_env, find_vec_normalize
+from methods.utils.sb3_utils import get_env_id, unwrap_first_env, find_vec_normalize
 from common.file_utils import _json_default
 
 class SaveVecNormalizeCallback(BaseCallback):

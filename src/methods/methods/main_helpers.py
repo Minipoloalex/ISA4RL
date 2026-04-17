@@ -26,12 +26,12 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-from configs import TrainConfig, InstanceConfig
-from train import train
-from evaluate import evaluate, show_eval_results
-from metafeatures import extract_metafeatures as compute_metafeatures
+from methods.configs import TrainConfig, InstanceConfig
+from methods.train import train
+from methods.evaluate import evaluate, show_eval_results
+from methods.metafeatures import extract_metafeatures as compute_metafeatures
 from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
-from utils.load_config_utils import (
+from methods.utils.load_config_utils import (
     is_trained,
     is_evaluated,
     is_extracted,
@@ -39,7 +39,7 @@ from utils.load_config_utils import (
     RESULTS_METAFEATURES_PATH,
     RESULTS_EVALUATION_PATH,
 )
-from utils.group_utils import find_config_in_folder, is_combination_trained, merge_result_folders
+from methods.utils.group_utils import find_config_in_folder, is_combination_trained, merge_result_folders
 from multiprocessing import get_context, cpu_count
 
 logger = logging.getLogger(__name__)

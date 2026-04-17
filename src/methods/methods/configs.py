@@ -10,7 +10,7 @@ from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv,
 
 from common.file_utils import *
 from common.config_utils import CONFIG, get_algo_id, get_instance_id, save_algo_config, save_instance_config
-from utils.sb3_utils import (
+from .utils.sb3_utils import (
     _resolve_schedule_placeholders,
     map_algo_name_to_class,
     _parse_policy_kwargs,

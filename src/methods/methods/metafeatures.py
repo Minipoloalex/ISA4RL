@@ -7,12 +7,12 @@ from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, Support
 import gymnasium as gym
 import numpy as np
 from highway_env.vehicle.behavior import IDMVehicle
-from utils.metafeatures.metrics import SimpleEgoMetricsHook
-from utils.general_utils import as_float
+from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook
+from methods.utils.general_utils import as_float
 
-from configs import InstanceConfig
-from utils.general_utils import _flatten_obs
-from utils.metafeature_utils import (
+from methods.configs import InstanceConfig
+from methods.utils.general_utils import _flatten_obs
+from methods.utils.metafeature_utils import (
     Trajectory,
     StepInfo,
     make_random_policy,

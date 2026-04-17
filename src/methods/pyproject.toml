@@ -1,13 +1,12 @@
 [project]
-name = "main"
+name = "methods"
 version = "0.1.0"
 description = "Add your description here"
-readme = "README.md"
-requires-python = ">=3.13,<3.14"
+requires-python = ">=3.12,<3.14"
 dependencies = [
+    "common",
     "datetime>=6.0",
     "gymnasium>=1.2.3",
-    "highway-env>=1.10.2",
     "matplotlib>=3.10.8",
     "numpy>=2.4.2",
     "pandas>=3.0.1",
@@ -22,5 +21,8 @@ dependencies = [
     "tqdm>=4.67.3",
 ]
 
+[tool.setuptools]
+py-modules = ["methods"]
+
 [tool.uv.sources]
-highway-env = { path = "../../highway-env", editable = true }
+common = { path = "../common", editable = true }

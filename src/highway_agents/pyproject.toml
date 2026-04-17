@@ -1,0 +1,14 @@
+[project]
+name = "highway-agents"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    "highway-env",
+    "methods",
+]
+
+[tool.uv.sources]
+highway-env = { path = "../../highway-env", editable = true }
+methods = { path = "../methods", editable = true }
