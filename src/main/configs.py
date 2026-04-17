@@ -99,7 +99,7 @@ class TrainConfig(InstanceConfig):
         use_best_model: only useful for evaluating (loads best model instead of model saved last)
         """
         env_config = config_dict["env_config"].copy()
-        obs_config = config_dict["obs_config"].copy()
+        obs_config = config_dict["obs_config"].copy() if config_dict["obs_config"] is not None else None
         algo_config = config_dict["algo_config"].copy()
 
         base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
@@ -116,12 +116,13 @@ class TrainConfig(InstanceConfig):
         ensure_dir(train_algo_folder_path)
         save_algo_config(train_algo_folder_path, algo_config)
 
-        if "observation_shape" in obs_config:
+        if obs_config is not None and "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
         env_id = env_config["env_id"]
         env_kwargs = env_config["config"]
-        env_kwargs["observation"] = obs_config
+        if obs_config is not None:
+            env_kwargs["observation"] = obs_config
 
         algo_name = algo_config.pop("algo")
         use_vec_normalize = algo_config.pop("normalize", False)

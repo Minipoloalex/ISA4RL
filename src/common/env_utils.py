@@ -1,6 +1,6 @@
 from typing import List, Dict
 
-ENVS: List[str] = [
+HIGHWAY_ENVS: List[str] = [
     "highway",
     "roundabout",
     "merge",
@@ -9,6 +9,7 @@ ENVS: List[str] = [
     "parking",
     "lane-keeping",
 ]
+METADRIVE_ENVS: List[str] = ["metadrive"]
 
 K = "Kinematics"
 GS = "GrayscaleObservation"

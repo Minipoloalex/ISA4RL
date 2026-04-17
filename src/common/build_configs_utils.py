@@ -14,7 +14,7 @@ from math import ceil
 logger = logging.getLogger(__name__)
 
 from common.config_utils import CONFIG
-from common.env_utils import ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C, K, TTC, KG, OG, A, E, GS
+from common.env_utils import D, C, K, TTC, KG, OG, A, E, GS
 from common.file_utils import (
     save_json,
     read_json,

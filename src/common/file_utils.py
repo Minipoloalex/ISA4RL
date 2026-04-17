@@ -4,7 +4,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Callable
 import numpy as np
 
-from common.env_utils import ENVS
+from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS
 
 # BASE PATHS
 
@@ -66,7 +66,7 @@ _folders = [
     ENV_CONFIGS_FOLDER,
     TRAIN_CONFIGS_FOLDER,
     EVAL_CONFIGS_FOLDER,
-    *[RESULTS_ENV_FOLDER_PATH(BASE_RESULTS_PATH, env) for env in ENVS],
+    *[RESULTS_ENV_FOLDER_PATH(BASE_RESULTS_PATH, env) for env in HIGHWAY_ENVS + METADRIVE_ENVS],
 ]
 for folder_path in _folders:
     folder_path.mkdir(parents=True, exist_ok=True)

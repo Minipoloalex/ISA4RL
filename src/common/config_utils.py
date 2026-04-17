@@ -1,4 +1,4 @@
-from typing import Dict, Any, Tuple, Callable
+from typing import Dict, Any, Tuple, Callable, Optional
 from .file_utils import *
 from .general_utils import generate_random_string
 from pprint import pprint
@@ -18,13 +18,13 @@ def get_config_map(base_dir: Path, config_path_func: Callable[[Path], Path]):
 def get_new_random_id() -> str:
     return generate_random_string(20)
 
-def __instance_config(env_config: CONFIG, obs_config: CONFIG):
+def __instance_config(env_config: CONFIG, obs_config: Optional[CONFIG]):
     return {
         "env_config": env_config,
         "obs_config": obs_config,
     }
 
-def get_instance_id(base_dir: Path, env_config: CONFIG, obs_config: CONFIG) -> str:
+def get_instance_id(base_dir: Path, env_config: CONFIG, obs_config: Optional[CONFIG]) -> str:
     instance_config_map = get_config_map(base_dir, RESULTS_INSTANCE_CONFIG_FILE)
     ic = __instance_config(env_config, obs_config)
     for id, conf in instance_config_map.items():
@@ -40,7 +40,7 @@ def get_algo_id(instance_folder_path: Path, algo_config: CONFIG) -> str:
             return id
     return get_new_random_id()
 
-def save_instance_config(folder: Path, env_config: CONFIG, obs_config: CONFIG) -> None:
+def save_instance_config(folder: Path, env_config: CONFIG, obs_config: Optional[CONFIG]) -> None:
     ic = __instance_config(env_config, obs_config)
     file = RESULTS_INSTANCE_CONFIG_FILE(folder)
     if not file.exists():

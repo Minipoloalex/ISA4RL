@@ -30,7 +30,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238722338
+    "timestamp": 1776280971641040847
   },
   {
     "env_config": {
@@ -70,7 +70,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238725724
+    "timestamp": 1776280971641046873
   },
   {
     "env_config": {
@@ -112,7 +112,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238727027
+    "timestamp": 1776280971641051750
   },
   {
     "env_config": {
@@ -141,7 +141,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -156,7 +155,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238728900
+    "timestamp": 1776280971641057011
   },
   {
     "env_config": {
@@ -185,7 +184,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -197,7 +195,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238730033
+    "timestamp": 1776280971641060932
   },
   {
     "env_config": {
@@ -239,7 +237,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238731125
+    "timestamp": 1776280971641064851
   },
   {
     "env_config": {
@@ -272,7 +270,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238731876
+    "timestamp": 1776280971641067036
   },
   {
     "env_config": {
@@ -312,7 +310,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238732878
+    "timestamp": 1776280971641070439
   },
   {
     "env_config": {
@@ -354,7 +352,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238733800
+    "timestamp": 1776280971641073966
   },
   {
     "env_config": {
@@ -383,7 +381,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -398,7 +395,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238735212
+    "timestamp": 1776280971641078096
   },
   {
     "env_config": {
@@ -427,7 +424,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -439,7 +435,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238736164
+    "timestamp": 1776280971641081414
   },
   {
     "env_config": {
@@ -481,7 +477,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238737106
+    "timestamp": 1776280971641084861
   },
   {
     "env_config": {
@@ -514,7 +510,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238737727
+    "timestamp": 1776280971641086480
   },
   {
     "env_config": {
@@ -554,7 +550,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238738619
+    "timestamp": 1776280971641089648
   },
   {
     "env_config": {
@@ -596,7 +592,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238739500
+    "timestamp": 1776280971641093022
   },
   {
     "env_config": {
@@ -625,7 +621,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -640,7 +635,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238740883
+    "timestamp": 1776280971641096811
   },
   {
     "env_config": {
@@ -669,7 +664,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -681,7 +675,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238741805
+    "timestamp": 1776280971641099887
   },
   {
     "env_config": {
@@ -723,7 +717,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238742867
+    "timestamp": 1776280971641103407
   },
   {
     "env_config": {
@@ -756,7 +750,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238743478
+    "timestamp": 1776280971641105213
   },
   {
     "env_config": {
@@ -796,7 +790,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238744410
+    "timestamp": 1776280971641108250
   },
   {
     "env_config": {
@@ -838,7 +832,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238745301
+    "timestamp": 1776280971641111610
   },
   {
     "env_config": {
@@ -867,7 +861,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -882,7 +875,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238746544
+    "timestamp": 1776280971641115503
   },
   {
     "env_config": {
@@ -911,7 +904,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -923,7 +915,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238747456
+    "timestamp": 1776280971641118648
   },
   {
     "env_config": {
@@ -965,7 +957,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238748377
+    "timestamp": 1776280971641122239
   },
   {
     "env_config": {
@@ -998,7 +990,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238748978
+    "timestamp": 1776280971641124019
   },
   {
     "env_config": {
@@ -1038,7 +1030,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238750141
+    "timestamp": 1776280971641127063
   },
   {
     "env_config": {
@@ -1080,7 +1072,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238751042
+    "timestamp": 1776280971641130660
   },
   {
     "env_config": {
@@ -1109,7 +1101,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1124,7 +1115,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238752275
+    "timestamp": 1776280971641134615
   },
   {
     "env_config": {
@@ -1153,7 +1144,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1165,7 +1155,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238753196
+    "timestamp": 1776280971641137861
   },
   {
     "env_config": {
@@ -1207,7 +1197,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238754138
+    "timestamp": 1776280971641141275
   },
   {
     "env_config": {
@@ -1240,7 +1230,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238754759
+    "timestamp": 1776280971641142866
   },
   {
     "env_config": {
@@ -1280,7 +1270,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238755671
+    "timestamp": 1776280971641145731
   },
   {
     "env_config": {
@@ -1322,7 +1312,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238756553
+    "timestamp": 1776280971641149145
   },
   {
     "env_config": {
@@ -1351,7 +1341,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1366,7 +1355,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238757915
+    "timestamp": 1776280971641153083
   },
   {
     "env_config": {
@@ -1395,7 +1384,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1407,7 +1395,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238758837
+    "timestamp": 1776280971641156231
   },
   {
     "env_config": {
@@ -1449,7 +1437,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238759749
+    "timestamp": 1776280971641159500
   },
   {
     "env_config": {
@@ -1482,7 +1470,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238760430
+    "timestamp": 1776280971641161116
   },
   {
     "env_config": {
@@ -1522,7 +1510,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238761292
+    "timestamp": 1776280971641164072
   },
   {
     "env_config": {
@@ -1564,7 +1552,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238762173
+    "timestamp": 1776280971641167548
   },
   {
     "env_config": {
@@ -1593,7 +1581,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1608,7 +1595,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238763496
+    "timestamp": 1776280971641171386
   },
   {
     "env_config": {
@@ -1637,7 +1624,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1649,7 +1635,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238764438
+    "timestamp": 1776280971641174678
   },
   {
     "env_config": {
@@ -1691,7 +1677,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238765439
+    "timestamp": 1776280971641178156
   },
   {
     "env_config": {
@@ -1724,7 +1710,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238766051
+    "timestamp": 1776280971641179970
   },
   {
     "env_config": {
@@ -1764,7 +1750,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238766932
+    "timestamp": 1776280971641182997
   },
   {
     "env_config": {
@@ -1806,7 +1792,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238767814
+    "timestamp": 1776280971641186581
   },
   {
     "env_config": {
@@ -1835,7 +1821,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -1850,7 +1835,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238769066
+    "timestamp": 1776280971641190354
   },
   {
     "env_config": {
@@ -1879,7 +1864,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -1891,7 +1875,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238769988
+    "timestamp": 1776280971641193465
   },
   {
     "env_config": {
@@ -1933,7 +1917,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238770900
+    "timestamp": 1776280971641196739
   },
   {
     "env_config": {
@@ -1966,7 +1950,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238771501
+    "timestamp": 1776280971641198249
   },
   {
     "env_config": {
@@ -2006,7 +1990,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238772383
+    "timestamp": 1776280971641201430
   },
   {
     "env_config": {
@@ -2048,7 +2032,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238773264
+    "timestamp": 1776280971641204832
   },
   {
     "env_config": {
@@ -2077,7 +2061,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2092,7 +2075,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238774497
+    "timestamp": 1776280971641208748
   },
   {
     "env_config": {
@@ -2121,7 +2104,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2133,7 +2115,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238775418
+    "timestamp": 1776280971641212194
   },
   {
     "env_config": {
@@ -2175,7 +2157,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238776430
+    "timestamp": 1776280971641215646
   },
   {
     "env_config": {
@@ -2208,7 +2190,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238777041
+    "timestamp": 1776280971641217223
   },
   {
     "env_config": {
@@ -2248,7 +2230,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238777923
+    "timestamp": 1776280971641220560
   },
   {
     "env_config": {
@@ -2290,7 +2272,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238778805
+    "timestamp": 1776280971641224041
   },
   {
     "env_config": {
@@ -2319,7 +2301,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2334,7 +2315,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238780067
+    "timestamp": 1776280971641227937
   },
   {
     "env_config": {
@@ -2363,7 +2344,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2375,7 +2355,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238780999
+    "timestamp": 1776280971641231438
   },
   {
     "env_config": {
@@ -2417,7 +2397,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238781921
+    "timestamp": 1776280971641234913
   },
   {
     "env_config": {
@@ -2450,7 +2430,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238782512
+    "timestamp": 1776280971641236790
   },
   {
     "env_config": {
@@ -2490,7 +2470,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238783393
+    "timestamp": 1776280971641239909
   },
   {
     "env_config": {
@@ -2532,7 +2512,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238784265
+    "timestamp": 1776280971641243256
   },
   {
     "env_config": {
@@ -2561,7 +2541,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2576,7 +2555,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238785517
+    "timestamp": 1776280971641247071
   },
   {
     "env_config": {
@@ -2605,7 +2584,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2617,7 +2595,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238786449
+    "timestamp": 1776280971641250216
   },
   {
     "env_config": {
@@ -2659,7 +2637,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238787481
+    "timestamp": 1776280971641253808
   },
   {
     "env_config": {
@@ -2692,7 +2670,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238788082
+    "timestamp": 1776280971641255535
   },
   {
     "env_config": {
@@ -2732,7 +2710,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238788974
+    "timestamp": 1776280971641258551
   },
   {
     "env_config": {
@@ -2774,7 +2752,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238789846
+    "timestamp": 1776280971641262078
   },
   {
     "env_config": {
@@ -2803,7 +2781,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -2818,7 +2795,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238791098
+    "timestamp": 1776280971641266126
   },
   {
     "env_config": {
@@ -2847,7 +2824,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -2859,7 +2835,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238792020
+    "timestamp": 1776280971641269457
   },
   {
     "env_config": {
@@ -2901,7 +2877,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238792941
+    "timestamp": 1776280971641289056
   },
   {
     "env_config": {
@@ -2934,7 +2910,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238793543
+    "timestamp": 1776280971641291008
   },
   {
     "env_config": {
@@ -2974,7 +2950,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238794424
+    "timestamp": 1776280971641294371
   },
   {
     "env_config": {
@@ -3016,7 +2992,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238795306
+    "timestamp": 1776280971641298073
   },
   {
     "env_config": {
@@ -3045,7 +3021,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3060,7 +3035,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238796548
+    "timestamp": 1776280971641302369
   },
   {
     "env_config": {
@@ -3089,7 +3064,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3101,7 +3075,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238797470
+    "timestamp": 1776280971641305882
   },
   {
     "env_config": {
@@ -3143,7 +3117,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238798672
+    "timestamp": 1776280971641309686
   },
   {
     "env_config": {
@@ -3176,7 +3150,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238799293
+    "timestamp": 1776280971641311462
   },
   {
     "env_config": {
@@ -3216,7 +3190,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238800175
+    "timestamp": 1776280971641314502
   },
   {
     "env_config": {
@@ -3258,7 +3232,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238801047
+    "timestamp": 1776280971641317928
   },
   {
     "env_config": {
@@ -3287,7 +3261,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3302,7 +3275,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238802309
+    "timestamp": 1776280971641321898
   },
   {
     "env_config": {
@@ -3331,7 +3304,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3343,7 +3315,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238803281
+    "timestamp": 1776280971641325159
   },
   {
     "env_config": {
@@ -3385,7 +3357,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238804213
+    "timestamp": 1776280971641328689
   },
   {
     "env_config": {
@@ -3418,7 +3390,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238804814
+    "timestamp": 1776280971641330306
   },
   {
     "env_config": {
@@ -3458,7 +3430,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238805696
+    "timestamp": 1776280971641333323
   },
   {
     "env_config": {
@@ -3500,7 +3472,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238806557
+    "timestamp": 1776280971641336727
   },
   {
     "env_config": {
@@ -3529,7 +3501,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3544,7 +3515,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238807830
+    "timestamp": 1776280971641340783
   },
   {
     "env_config": {
@@ -3573,7 +3544,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3585,7 +3555,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238808781
+    "timestamp": 1776280971641344122
   },
   {
     "env_config": {
@@ -3627,7 +3597,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238809723
+    "timestamp": 1776280971641347528
   },
   {
     "env_config": {
@@ -3660,7 +3630,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238810314
+    "timestamp": 1776280971641349055
   },
   {
     "env_config": {
@@ -3700,7 +3670,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238811176
+    "timestamp": 1776280971641352096
   },
   {
     "env_config": {
@@ -3742,7 +3712,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238812037
+    "timestamp": 1776280971641355317
   },
   {
     "env_config": {
@@ -3771,7 +3741,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -3786,7 +3755,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238813360
+    "timestamp": 1776280971641359338
   },
   {
     "env_config": {
@@ -3815,7 +3784,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -3827,7 +3795,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238814322
+    "timestamp": 1776280971641362510
   },
   {
     "env_config": {
@@ -3869,7 +3837,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238815264
+    "timestamp": 1776280971641366101
   },
   {
     "env_config": {
@@ -3902,7 +3870,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238815855
+    "timestamp": 1776280971641367684
   },
   {
     "env_config": {
@@ -3942,7 +3910,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238816736
+    "timestamp": 1776280971641370752
   },
   {
     "env_config": {
@@ -3984,7 +3952,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238817718
+    "timestamp": 1776280971641374290
   },
   {
     "env_config": {
@@ -4013,7 +3981,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4028,7 +3995,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238819061
+    "timestamp": 1776280971641378356
   },
   {
     "env_config": {
@@ -4057,7 +4024,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4069,7 +4035,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238820053
+    "timestamp": 1776280971641381713
   },
   {
     "env_config": {
@@ -4111,7 +4077,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238821034
+    "timestamp": 1776280971641385192
   },
   {
     "env_config": {
@@ -4144,7 +4110,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238821746
+    "timestamp": 1776280971641386836
   },
   {
     "env_config": {
@@ -4184,7 +4150,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238822607
+    "timestamp": 1776280971641389856
   },
   {
     "env_config": {
@@ -4226,7 +4192,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238823469
+    "timestamp": 1776280971641393196
   },
   {
     "env_config": {
@@ -4255,7 +4221,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4270,7 +4235,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238824711
+    "timestamp": 1776280971641396996
   },
   {
     "env_config": {
@@ -4299,7 +4264,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4311,7 +4275,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238825663
+    "timestamp": 1776280971641400158
   },
   {
     "env_config": {
@@ -4353,7 +4317,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238826605
+    "timestamp": 1776280971641403427
   },
   {
     "env_config": {
@@ -4386,7 +4350,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238827196
+    "timestamp": 1776280971641405114
   },
   {
     "env_config": {
@@ -4426,7 +4390,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238828509
+    "timestamp": 1776280971641408326
   },
   {
     "env_config": {
@@ -4468,7 +4432,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238829370
+    "timestamp": 1776280971641411857
   },
   {
     "env_config": {
@@ -4497,7 +4461,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4512,7 +4475,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238830623
+    "timestamp": 1776280971641416113
   },
   {
     "env_config": {
@@ -4541,7 +4504,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4553,7 +4515,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238831564
+    "timestamp": 1776280971641419281
   },
   {
     "env_config": {
@@ -4595,7 +4557,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238832516
+    "timestamp": 1776280971641422873
   },
   {
     "env_config": {
@@ -4628,7 +4590,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238833187
+    "timestamp": 1776280971641424630
   },
   {
     "env_config": {
@@ -4668,7 +4630,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238834049
+    "timestamp": 1776280971641427612
   },
   {
     "env_config": {
@@ -4710,7 +4672,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238834921
+    "timestamp": 1776280971641431010
   },
   {
     "env_config": {
@@ -4739,7 +4701,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4754,7 +4715,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238836183
+    "timestamp": 1776280971641434768
   },
   {
     "env_config": {
@@ -4783,7 +4744,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -4795,7 +4755,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238837135
+    "timestamp": 1776280971641437893
   },
   {
     "env_config": {
@@ -4837,7 +4797,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238838087
+    "timestamp": 1776280971641441494
   },
   {
     "env_config": {
@@ -4870,7 +4830,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238838708
+    "timestamp": 1776280971641443214
   },
   {
     "env_config": {
@@ -4910,7 +4870,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238839569
+    "timestamp": 1776280971641446254
   },
   {
     "env_config": {
@@ -4952,7 +4912,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238840441
+    "timestamp": 1776280971641449935
   },
   {
     "env_config": {
@@ -4981,7 +4941,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -4996,7 +4955,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238841694
+    "timestamp": 1776280971641453801
   },
   {
     "env_config": {
@@ -5025,7 +4984,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5037,7 +4995,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238842635
+    "timestamp": 1776280971641457142
   },
   {
     "env_config": {
@@ -5079,7 +5037,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238843577
+    "timestamp": 1776280971641460557
   },
   {
     "env_config": {
@@ -5112,7 +5070,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238844168
+    "timestamp": 1776280971641462120
   },
   {
     "env_config": {
@@ -5152,7 +5110,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238845040
+    "timestamp": 1776280971641465235
   },
   {
     "env_config": {
@@ -5194,7 +5152,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238845901
+    "timestamp": 1776280971641468634
   },
   {
     "env_config": {
@@ -5223,7 +5181,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5238,7 +5195,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238847264
+    "timestamp": 1776280971641472414
   },
   {
     "env_config": {
@@ -5267,7 +5224,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5279,7 +5235,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238848306
+    "timestamp": 1776280971641475593
   },
   {
     "env_config": {
@@ -5321,7 +5277,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238849248
+    "timestamp": 1776280971641479125
   },
   {
     "env_config": {
@@ -5354,7 +5310,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238849829
+    "timestamp": 1776280971641480741
   },
   {
     "env_config": {
@@ -5394,7 +5350,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238850690
+    "timestamp": 1776280971641483629
   },
   {
     "env_config": {
@@ -5436,7 +5392,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238851562
+    "timestamp": 1776280971641487001
   },
   {
     "env_config": {
@@ -5465,7 +5421,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5480,7 +5435,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238852794
+    "timestamp": 1776280971641490905
   },
   {
     "env_config": {
@@ -5509,7 +5464,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5521,7 +5475,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238853746
+    "timestamp": 1776280971641494248
   },
   {
     "env_config": {
@@ -5563,7 +5517,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238854678
+    "timestamp": 1776280971641497798
   },
   {
     "env_config": {
@@ -5596,7 +5550,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238855269
+    "timestamp": 1776280971641499396
   },
   {
     "env_config": {
@@ -5636,7 +5590,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238856131
+    "timestamp": 1776280971641502400
   },
   {
     "env_config": {
@@ -5678,7 +5632,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238856992
+    "timestamp": 1776280971641505850
   },
   {
     "env_config": {
@@ -5707,7 +5661,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5722,7 +5675,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238858225
+    "timestamp": 1776280971641509994
   },
   {
     "env_config": {
@@ -5751,7 +5704,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -5763,7 +5715,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238859167
+    "timestamp": 1776280971641513083
   },
   {
     "env_config": {
@@ -5805,7 +5757,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238860118
+    "timestamp": 1776280971641516306
   },
   {
     "env_config": {
@@ -5838,7 +5790,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238902047
+    "timestamp": 1776280971641517920
   },
   {
     "env_config": {
@@ -5878,7 +5830,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238903059
+    "timestamp": 1776280971641521125
   },
   {
     "env_config": {
@@ -5920,7 +5872,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238904051
+    "timestamp": 1776280971641524876
   },
   {
     "env_config": {
@@ -5949,7 +5901,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -5964,7 +5915,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238905354
+    "timestamp": 1776280971641528903
   },
   {
     "env_config": {
@@ -5993,7 +5944,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6005,7 +5955,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238906316
+    "timestamp": 1776280971641532005
   },
   {
     "env_config": {
@@ -6047,7 +5997,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238907378
+    "timestamp": 1776280971641535374
   },
   {
     "env_config": {
@@ -6080,7 +6030,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238907989
+    "timestamp": 1776280971641536987
   },
   {
     "env_config": {
@@ -6120,7 +6070,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238908880
+    "timestamp": 1776280971641539884
   },
   {
     "env_config": {
@@ -6162,7 +6112,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238909742
+    "timestamp": 1776280971641543307
   },
   {
     "env_config": {
@@ -6191,7 +6141,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6206,7 +6155,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238910984
+    "timestamp": 1776280971641547059
   },
   {
     "env_config": {
@@ -6235,7 +6184,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6247,7 +6195,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238911956
+    "timestamp": 1776280971641550353
   },
   {
     "env_config": {
@@ -6289,7 +6237,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238912918
+    "timestamp": 1776280971641556861
   },
   {
     "env_config": {
@@ -6322,7 +6270,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238913509
+    "timestamp": 1776280971641558675
   },
   {
     "env_config": {
@@ -6362,7 +6310,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238914371
+    "timestamp": 1776280971641561740
   },
   {
     "env_config": {
@@ -6404,7 +6352,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238915242
+    "timestamp": 1776280971641565093
   },
   {
     "env_config": {
@@ -6433,7 +6381,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6448,7 +6395,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238916485
+    "timestamp": 1776280971641568931
   },
   {
     "env_config": {
@@ -6477,7 +6424,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6489,7 +6435,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238917427
+    "timestamp": 1776280971641572275
   },
   {
     "env_config": {
@@ -6531,7 +6477,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238918368
+    "timestamp": 1776280971641575919
   },
   {
     "env_config": {
@@ -6564,7 +6510,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238918959
+    "timestamp": 1776280971641577587
   },
   {
     "env_config": {
@@ -6604,7 +6550,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238919831
+    "timestamp": 1776280971641580636
   },
   {
     "env_config": {
@@ -6646,7 +6592,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238920713
+    "timestamp": 1776280971641584161
   },
   {
     "env_config": {
@@ -6675,7 +6621,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6690,7 +6635,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238921965
+    "timestamp": 1776280971641588485
   },
   {
     "env_config": {
@@ -6719,7 +6664,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6731,7 +6675,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238922907
+    "timestamp": 1776280971641591928
   },
   {
     "env_config": {
@@ -6773,7 +6717,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238923899
+    "timestamp": 1776280971641595283
   },
   {
     "env_config": {
@@ -6806,7 +6750,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238924490
+    "timestamp": 1776280971641596963
   },
   {
     "env_config": {
@@ -6846,7 +6790,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238925382
+    "timestamp": 1776280971641599985
   },
   {
     "env_config": {
@@ -6888,7 +6832,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238926283
+    "timestamp": 1776280971641603400
   },
   {
     "env_config": {
@@ -6917,7 +6861,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -6932,7 +6875,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238927556
+    "timestamp": 1776280971641607299
   },
   {
     "env_config": {
@@ -6961,7 +6904,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -6973,7 +6915,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238928517
+    "timestamp": 1776280971641610581
   },
   {
     "env_config": {
@@ -7015,7 +6957,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238929580
+    "timestamp": 1776280971641614125
   },
   {
     "env_config": {
@@ -7048,7 +6990,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238930211
+    "timestamp": 1776280971641615807
   },
   {
     "env_config": {
@@ -7088,7 +7030,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238931213
+    "timestamp": 1776280971641618750
   },
   {
     "env_config": {
@@ -7130,7 +7072,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238932154
+    "timestamp": 1776280971641622193
   },
   {
     "env_config": {
@@ -7159,7 +7101,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7174,7 +7115,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238933507
+    "timestamp": 1776280971641626034
   },
   {
     "env_config": {
@@ -7203,7 +7144,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7215,7 +7155,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238934559
+    "timestamp": 1776280971641629424
   },
   {
     "env_config": {
@@ -7257,7 +7197,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238935611
+    "timestamp": 1776280971641632917
   },
   {
     "env_config": {
@@ -7290,7 +7230,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238936282
+    "timestamp": 1776280971641634503
   },
   {
     "env_config": {
@@ -7330,7 +7270,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238937224
+    "timestamp": 1776280971641637573
   },
   {
     "env_config": {
@@ -7372,7 +7312,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238938166
+    "timestamp": 1776280971641640837
   },
   {
     "env_config": {
@@ -7401,7 +7341,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7416,7 +7355,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238939498
+    "timestamp": 1776280971641644786
   },
   {
     "env_config": {
@@ -7445,7 +7384,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7457,7 +7395,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238940630
+    "timestamp": 1776280971641647987
   },
   {
     "env_config": {
@@ -7499,7 +7437,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238941572
+    "timestamp": 1776280971641651375
   },
   {
     "env_config": {
@@ -7532,7 +7470,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238942334
+    "timestamp": 1776280971641652912
   },
   {
     "env_config": {
@@ -7572,7 +7510,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238943195
+    "timestamp": 1776280971641655803
   },
   {
     "env_config": {
@@ -7614,7 +7552,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238944137
+    "timestamp": 1776280971641659256
   },
   {
     "env_config": {
@@ -7643,7 +7581,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7658,7 +7595,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238945540
+    "timestamp": 1776280971641663106
   },
   {
     "env_config": {
@@ -7687,7 +7624,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7699,7 +7635,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238946481
+    "timestamp": 1776280971641666320
   },
   {
     "env_config": {
@@ -7741,7 +7677,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238947423
+    "timestamp": 1776280971641669912
   },
   {
     "env_config": {
@@ -7774,7 +7710,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238948135
+    "timestamp": 1776280971641671717
   },
   {
     "env_config": {
@@ -7814,7 +7750,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238949197
+    "timestamp": 1776280971641674730
   },
   {
     "env_config": {
@@ -7856,7 +7792,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238950329
+    "timestamp": 1776280971641678066
   },
   {
     "env_config": {
@@ -7885,7 +7821,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -7900,7 +7835,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238951801
+    "timestamp": 1776280971641681894
   },
   {
     "env_config": {
@@ -7929,7 +7864,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -7941,7 +7875,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238952914
+    "timestamp": 1776280971641685226
   },
   {
     "env_config": {
@@ -7983,7 +7917,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238953996
+    "timestamp": 1776280971641688732
   },
   {
     "env_config": {
@@ -8016,7 +7950,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238954777
+    "timestamp": 1776280971641690459
   },
   {
     "env_config": {
@@ -8056,7 +7990,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238955819
+    "timestamp": 1776280971641693379
   },
   {
     "env_config": {
@@ -8098,7 +8032,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238956791
+    "timestamp": 1776280971641696979
   },
   {
     "env_config": {
@@ -8127,7 +8061,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8142,7 +8075,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238958244
+    "timestamp": 1776280971641700980
   },
   {
     "env_config": {
@@ -8171,7 +8104,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8183,7 +8115,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238959426
+    "timestamp": 1776280971641704290
   },
   {
     "env_config": {
@@ -8225,7 +8157,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238960538
+    "timestamp": 1776280971641707694
   },
   {
     "env_config": {
@@ -8258,7 +8190,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238961129
+    "timestamp": 1776280971641709274
   },
   {
     "env_config": {
@@ -8298,7 +8230,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238962091
+    "timestamp": 1776280971641712213
   },
   {
     "env_config": {
@@ -8340,7 +8272,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238962963
+    "timestamp": 1776280971641715551
   },
   {
     "env_config": {
@@ -8369,7 +8301,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8384,7 +8315,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238964355
+    "timestamp": 1776280971641719284
   },
   {
     "env_config": {
@@ -8413,7 +8344,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8425,7 +8355,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238965307
+    "timestamp": 1776280971641722444
   },
   {
     "env_config": {
@@ -8467,7 +8397,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238966359
+    "timestamp": 1776280971641725735
   },
   {
     "env_config": {
@@ -8500,7 +8430,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238966940
+    "timestamp": 1776280971641727276
   },
   {
     "env_config": {
@@ -8540,7 +8470,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238967802
+    "timestamp": 1776280971641730242
   },
   {
     "env_config": {
@@ -8582,7 +8512,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238968663
+    "timestamp": 1776280971641733673
   },
   {
     "env_config": {
@@ -8611,7 +8541,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8626,7 +8555,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238969946
+    "timestamp": 1776280971641737422
   },
   {
     "env_config": {
@@ -8655,7 +8584,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8667,7 +8595,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238970918
+    "timestamp": 1776280971641740620
   },
   {
     "env_config": {
@@ -8709,7 +8637,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238971859
+    "timestamp": 1776280971641744194
   },
   {
     "env_config": {
@@ -8742,7 +8670,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238972450
+    "timestamp": 1776280971641745833
   },
   {
     "env_config": {
@@ -8782,7 +8710,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238973402
+    "timestamp": 1776280971641748883
   },
   {
     "env_config": {
@@ -8824,7 +8752,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238974264
+    "timestamp": 1776280971641752464
   },
   {
     "env_config": {
@@ -8853,7 +8781,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -8868,7 +8795,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238975496
+    "timestamp": 1776280971641756461
   },
   {
     "env_config": {
@@ -8897,7 +8824,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -8909,7 +8835,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238976438
+    "timestamp": 1776280971641759777
   },
   {
     "env_config": {
@@ -8951,7 +8877,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238977390
+    "timestamp": 1776280971641763202
   },
   {
     "env_config": {
@@ -8984,7 +8910,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238977971
+    "timestamp": 1776280971641764829
   },
   {
     "env_config": {
@@ -9024,7 +8950,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238978833
+    "timestamp": 1776280971641767872
   },
   {
     "env_config": {
@@ -9066,7 +8992,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238979794
+    "timestamp": 1776280971641771303
   },
   {
     "env_config": {
@@ -9095,7 +9021,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9110,7 +9035,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238981287
+    "timestamp": 1776280971641775143
   },
   {
     "env_config": {
@@ -9139,7 +9064,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9151,7 +9075,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238982219
+    "timestamp": 1776280971641778361
   },
   {
     "env_config": {
@@ -9193,7 +9117,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238983161
+    "timestamp": 1776280971641781617
   },
   {
     "env_config": {
@@ -9226,7 +9150,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238983742
+    "timestamp": 1776280971641783172
   },
   {
     "env_config": {
@@ -9266,7 +9190,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238984613
+    "timestamp": 1776280971641786338
   },
   {
     "env_config": {
@@ -9308,7 +9232,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238985485
+    "timestamp": 1776280971641789786
   },
   {
     "env_config": {
@@ -9337,7 +9261,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9352,7 +9275,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238986808
+    "timestamp": 1776280971641793496
   },
   {
     "env_config": {
@@ -9381,7 +9304,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9393,7 +9315,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238987759
+    "timestamp": 1776280971641796667
   },
   {
     "env_config": {
@@ -9435,7 +9357,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238988801
+    "timestamp": 1776280971641800323
   },
   {
     "env_config": {
@@ -9468,7 +9390,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238989423
+    "timestamp": 1776280971641801874
   },
   {
     "env_config": {
@@ -9508,7 +9430,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238990364
+    "timestamp": 1776280971641804829
   },
   {
     "env_config": {
@@ -9550,7 +9472,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238991226
+    "timestamp": 1776280971641808137
   },
   {
     "env_config": {
@@ -9579,7 +9501,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9594,7 +9515,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238992468
+    "timestamp": 1776280971641811853
   },
   {
     "env_config": {
@@ -9623,7 +9544,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9635,7 +9555,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238993410
+    "timestamp": 1776280971641815085
   },
   {
     "env_config": {
@@ -9677,7 +9597,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238994352
+    "timestamp": 1776280971641818538
   },
   {
     "env_config": {
@@ -9710,7 +9630,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754238994933
+    "timestamp": 1776280971641820107
   },
   {
     "env_config": {
@@ -9750,7 +9670,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754238995795
+    "timestamp": 1776280971641823055
   },
   {
     "env_config": {
@@ -9792,7 +9712,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754238996666
+    "timestamp": 1776280971641826403
   },
   {
     "env_config": {
@@ -9821,7 +9741,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -9836,7 +9755,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754238997899
+    "timestamp": 1776280971641830120
   },
   {
     "env_config": {
@@ -9865,7 +9784,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -9877,7 +9795,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754238998840
+    "timestamp": 1776280971641833277
   },
   {
     "env_config": {
@@ -9919,7 +9837,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754238999772
+    "timestamp": 1776280971641836661
   },
   {
     "env_config": {
@@ -9952,7 +9870,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239000363
+    "timestamp": 1776280971641838294
   },
   {
     "env_config": {
@@ -9992,7 +9910,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239001265
+    "timestamp": 1776280971641841334
   },
   {
     "env_config": {
@@ -10034,7 +9952,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239002127
+    "timestamp": 1776280971641844746
   },
   {
     "env_config": {
@@ -10063,7 +9981,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10078,7 +9995,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239003369
+    "timestamp": 1776280971641848522
   },
   {
     "env_config": {
@@ -10107,7 +10024,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10119,7 +10035,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239004421
+    "timestamp": 1776280971641851735
   },
   {
     "env_config": {
@@ -10161,7 +10077,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239005363
+    "timestamp": 1776280971641855056
   },
   {
     "env_config": {
@@ -10194,7 +10110,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239005944
+    "timestamp": 1776280971641856599
   },
   {
     "env_config": {
@@ -10234,7 +10150,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239006805
+    "timestamp": 1776280971641859510
   },
   {
     "env_config": {
@@ -10276,7 +10192,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239007667
+    "timestamp": 1776280971641862760
   },
   {
     "env_config": {
@@ -10305,7 +10221,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10320,7 +10235,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239008989
+    "timestamp": 1776280971641866739
   },
   {
     "env_config": {
@@ -10349,7 +10264,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10361,7 +10275,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239009931
+    "timestamp": 1776280971641869940
   },
   {
     "env_config": {
@@ -10403,7 +10317,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239010943
+    "timestamp": 1776280971641873343
   },
   {
     "env_config": {
@@ -10436,7 +10350,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239011524
+    "timestamp": 1776280971641874862
   },
   {
     "env_config": {
@@ -10476,7 +10390,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239012386
+    "timestamp": 1776280971641877930
   },
   {
     "env_config": {
@@ -10518,7 +10432,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239013248
+    "timestamp": 1776280971641881316
   },
   {
     "env_config": {
@@ -10547,7 +10461,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10562,7 +10475,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239014490
+    "timestamp": 1776280971641885158
   },
   {
     "env_config": {
@@ -10591,7 +10504,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10603,7 +10515,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239015432
+    "timestamp": 1776280971641888462
   },
   {
     "env_config": {
@@ -10645,7 +10557,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239016363
+    "timestamp": 1776280971641891806
   },
   {
     "env_config": {
@@ -10678,7 +10590,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239016955
+    "timestamp": 1776280971641893645
   },
   {
     "env_config": {
@@ -10718,7 +10630,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239017816
+    "timestamp": 1776280971641896651
   },
   {
     "env_config": {
@@ -10760,7 +10672,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239018678
+    "timestamp": 1776280971641899923
   },
   {
     "env_config": {
@@ -10789,7 +10701,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -10804,7 +10715,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239019920
+    "timestamp": 1776280971641903596
   },
   {
     "env_config": {
@@ -10833,7 +10744,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -10845,7 +10755,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239020862
+    "timestamp": 1776280971641906642
   },
   {
     "env_config": {
@@ -10887,7 +10797,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239021934
+    "timestamp": 1776280971641910088
   },
   {
     "env_config": {
@@ -10920,7 +10830,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239022605
+    "timestamp": 1776280971641911684
   },
   {
     "env_config": {
@@ -10960,7 +10870,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239023537
+    "timestamp": 1776280971641914560
   },
   {
     "env_config": {
@@ -11002,7 +10912,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239024399
+    "timestamp": 1776280971641918130
   },
   {
     "env_config": {
@@ -11031,7 +10941,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11046,7 +10955,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239025641
+    "timestamp": 1776280971641922106
   },
   {
     "env_config": {
@@ -11075,7 +10984,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11087,7 +10995,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239026583
+    "timestamp": 1776280971641925210
   },
   {
     "env_config": {
@@ -11129,7 +11037,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239027524
+    "timestamp": 1776280971641928471
   },
   {
     "env_config": {
@@ -11162,7 +11070,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239028106
+    "timestamp": 1776280971641930076
   },
   {
     "env_config": {
@@ -11202,7 +11110,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239028967
+    "timestamp": 1776280971641933167
   },
   {
     "env_config": {
@@ -11244,7 +11152,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239029829
+    "timestamp": 1776280971641936448
   },
   {
     "env_config": {
@@ -11273,7 +11181,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11288,7 +11195,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239031071
+    "timestamp": 1776280971641940204
   },
   {
     "env_config": {
@@ -11317,7 +11224,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11329,7 +11235,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239032023
+    "timestamp": 1776280971641943368
   },
   {
     "env_config": {
@@ -11371,7 +11277,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239032965
+    "timestamp": 1776280971641946673
   },
   {
     "env_config": {
@@ -11404,7 +11310,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239033546
+    "timestamp": 1776280971641948338
   },
   {
     "env_config": {
@@ -11444,7 +11350,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239034407
+    "timestamp": 1776280971641951458
   },
   {
     "env_config": {
@@ -11486,7 +11392,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239035319
+    "timestamp": 1776280971641954801
   },
   {
     "env_config": {
@@ -11515,7 +11421,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11530,7 +11435,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239036602
+    "timestamp": 1776280971641958495
   },
   {
     "env_config": {
@@ -11559,7 +11464,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11571,7 +11475,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239037543
+    "timestamp": 1776280971641961765
   },
   {
     "env_config": {
@@ -11613,7 +11517,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239038495
+    "timestamp": 1776280971641966294
   },
   {
     "env_config": {
@@ -11646,7 +11550,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239039086
+    "timestamp": 1776280971641967968
   },
   {
     "env_config": {
@@ -11686,7 +11590,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239039948
+    "timestamp": 1776280971641971066
   },
   {
     "env_config": {
@@ -11728,7 +11632,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239040810
+    "timestamp": 1776280971641974670
   },
   {
     "env_config": {
@@ -11757,7 +11661,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -11772,7 +11675,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239042052
+    "timestamp": 1776280971641978401
   },
   {
     "env_config": {
@@ -11801,7 +11704,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -11813,7 +11715,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239042994
+    "timestamp": 1776280971641981349
   },
   {
     "env_config": {
@@ -11855,7 +11757,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239043925
+    "timestamp": 1776280971641984649
   },
   {
     "env_config": {
@@ -11888,7 +11790,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239044517
+    "timestamp": 1776280971641986171
   },
   {
     "env_config": {
@@ -11928,7 +11830,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239045368
+    "timestamp": 1776280971641988956
   },
   {
     "env_config": {
@@ -11970,7 +11872,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239046240
+    "timestamp": 1776280971641992192
   },
   {
     "env_config": {
@@ -11999,7 +11901,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -12014,7 +11915,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239047482
+    "timestamp": 1776280971641995911
   },
   {
     "env_config": {
@@ -12043,7 +11944,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -12055,7 +11955,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239048424
+    "timestamp": 1776280971641998944
   },
   {
     "env_config": {
@@ -12097,7 +11997,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239049366
+    "timestamp": 1776280971642002139
   },
   {
     "env_config": {
@@ -12130,7 +12030,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239049947
+    "timestamp": 1776280971642003629
   },
   {
     "env_config": {
@@ -12170,7 +12070,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239050808
+    "timestamp": 1776280971642006375
   },
   {
     "env_config": {
@@ -12212,7 +12112,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239051670
+    "timestamp": 1776280971642009604
   },
   {
     "env_config": {
@@ -12241,7 +12141,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -12256,7 +12155,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239052912
+    "timestamp": 1776280971642013202
   },
   {
     "env_config": {
@@ -12285,7 +12184,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -12297,7 +12195,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239053854
+    "timestamp": 1776280971642016252
   },
   {
     "env_config": {
@@ -12339,7 +12237,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239054796
+    "timestamp": 1776280971642019441
   },
   {
     "env_config": {
@@ -12372,7 +12270,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239055377
+    "timestamp": 1776280971642020901
   },
   {
     "env_config": {
@@ -12412,7 +12310,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239056239
+    "timestamp": 1776280971642023746
   },
   {
     "env_config": {
@@ -12454,7 +12352,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239057100
+    "timestamp": 1776280971642026840
   },
   {
     "env_config": {
@@ -12483,7 +12381,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -12498,7 +12395,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239058413
+    "timestamp": 1776280971642030587
   },
   {
     "env_config": {
@@ -12527,7 +12424,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -12539,7 +12435,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239059365
+    "timestamp": 1776280971642033558
   },
   {
     "env_config": {
@@ -12581,7 +12477,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239060316
+    "timestamp": 1776280971642036817
   },
   {
     "env_config": {
@@ -12614,7 +12510,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239060928
+    "timestamp": 1776280971642038296
   },
   {
     "env_config": {
@@ -12654,7 +12550,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239061789
+    "timestamp": 1776280971642041073
   },
   {
     "env_config": {
@@ -12696,7 +12592,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239062651
+    "timestamp": 1776280971642044169
   },
   {
     "env_config": {
@@ -12725,7 +12621,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -12740,7 +12635,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239063883
+    "timestamp": 1776280971642047780
   },
   {
     "env_config": {
@@ -12769,7 +12664,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -12781,7 +12675,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239064835
+    "timestamp": 1776280971642050839
   },
   {
     "env_config": {
@@ -12823,7 +12717,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239065767
+    "timestamp": 1776280971642054170
   },
   {
     "env_config": {
@@ -12856,7 +12750,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239066358
+    "timestamp": 1776280971642055645
   },
   {
     "env_config": {
@@ -12896,7 +12790,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239067219
+    "timestamp": 1776280971642059506
   },
   {
     "env_config": {
@@ -12938,7 +12832,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239068081
+    "timestamp": 1776280971642062865
   },
   {
     "env_config": {
@@ -12967,7 +12861,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -12982,7 +12875,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239069323
+    "timestamp": 1776280971642066727
   },
   {
     "env_config": {
@@ -13011,7 +12904,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -13023,7 +12915,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239070265
+    "timestamp": 1776280971642069762
   },
   {
     "env_config": {
@@ -13065,7 +12957,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239071217
+    "timestamp": 1776280971642073092
   },
   {
     "env_config": {
@@ -13103,7 +12995,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239071808
+    "timestamp": 1776280971642074837
   },
   {
     "env_config": {
@@ -13148,7 +13040,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239072670
+    "timestamp": 1776280971642077675
   },
   {
     "env_config": {
@@ -13195,7 +13087,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239073531
+    "timestamp": 1776280971642080953
   },
   {
     "env_config": {
@@ -13229,7 +13121,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -13244,7 +13135,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239074764
+    "timestamp": 1776280971642084725
   },
   {
     "env_config": {
@@ -13278,7 +13169,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -13290,7 +13180,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239075705
+    "timestamp": 1776280971642087786
   },
   {
     "env_config": {
@@ -13337,7 +13227,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239076637
+    "timestamp": 1776280971642091014
   },
   {
     "env_config": {
@@ -13375,7 +13265,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239077218
+    "timestamp": 1776280971642092491
   },
   {
     "env_config": {
@@ -13420,7 +13310,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239078080
+    "timestamp": 1776280971642095412
   },
   {
     "env_config": {
@@ -13467,7 +13357,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239078952
+    "timestamp": 1776280971642098583
   },
   {
     "env_config": {
@@ -13501,7 +13391,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -13516,7 +13405,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239080184
+    "timestamp": 1776280971642102265
   },
   {
     "env_config": {
@@ -13550,7 +13439,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -13562,7 +13450,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239081126
+    "timestamp": 1776280971642105406
   },
   {
     "env_config": {
@@ -13609,7 +13497,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239082068
+    "timestamp": 1776280971642108658
   },
   {
     "env_config": {
@@ -13647,7 +13535,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239082649
+    "timestamp": 1776280971642110211
   },
   {
     "env_config": {
@@ -13692,7 +13580,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239083510
+    "timestamp": 1776280971642113020
   },
   {
     "env_config": {
@@ -13739,7 +13627,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239084382
+    "timestamp": 1776280971642116331
   },
   {
     "env_config": {
@@ -13773,7 +13661,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -13788,7 +13675,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239085634
+    "timestamp": 1776280971642120136
   },
   {
     "env_config": {
@@ -13822,7 +13709,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -13834,7 +13720,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239086576
+    "timestamp": 1776280971642123168
   },
   {
     "env_config": {
@@ -13881,7 +13767,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239087508
+    "timestamp": 1776280971642126496
   },
   {
     "env_config": {
@@ -13919,7 +13805,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239088089
+    "timestamp": 1776280971642128054
   },
   {
     "env_config": {
@@ -13964,7 +13850,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239088951
+    "timestamp": 1776280971642130981
   },
   {
     "env_config": {
@@ -14011,7 +13897,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239089822
+    "timestamp": 1776280971642134196
   },
   {
     "env_config": {
@@ -14045,7 +13931,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -14060,7 +13945,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239091054
+    "timestamp": 1776280971642137873
   },
   {
     "env_config": {
@@ -14094,7 +13979,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -14106,7 +13990,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239092006
+    "timestamp": 1776280971642140928
   },
   {
     "env_config": {
@@ -14153,7 +14037,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239092958
+    "timestamp": 1776280971642144039
   },
   {
     "env_config": {
@@ -14191,7 +14075,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239093539
+    "timestamp": 1776280971642145530
   },
   {
     "env_config": {
@@ -14236,7 +14120,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239094411
+    "timestamp": 1776280971642148355
   },
   {
     "env_config": {
@@ -14283,7 +14167,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239095272
+    "timestamp": 1776280971642151511
   },
   {
     "env_config": {
@@ -14317,7 +14201,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -14332,7 +14215,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239096535
+    "timestamp": 1776280971642156075
   },
   {
     "env_config": {
@@ -14366,7 +14249,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -14378,7 +14260,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239097587
+    "timestamp": 1776280971642159267
   },
   {
     "env_config": {
@@ -14425,7 +14307,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239098609
+    "timestamp": 1776280971642162772
   },
   {
     "env_config": {
@@ -14463,7 +14345,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239099200
+    "timestamp": 1776280971642164440
   },
   {
     "env_config": {
@@ -14508,7 +14390,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239100051
+    "timestamp": 1776280971642167502
   },
   {
     "env_config": {
@@ -14555,7 +14437,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239100953
+    "timestamp": 1776280971642170862
   },
   {
     "env_config": {
@@ -14589,7 +14471,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -14604,7 +14485,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239102256
+    "timestamp": 1776280971642174683
   },
   {
     "env_config": {
@@ -14638,7 +14519,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -14650,7 +14530,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239103197
+    "timestamp": 1776280971642177841
   },
   {
     "env_config": {
@@ -14697,7 +14577,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239104139
+    "timestamp": 1776280971642181205
   },
   {
     "env_config": {
@@ -14735,7 +14615,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239104730
+    "timestamp": 1776280971642182904
   },
   {
     "env_config": {
@@ -14780,7 +14660,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239105592
+    "timestamp": 1776280971642185925
   },
   {
     "env_config": {
@@ -14827,7 +14707,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239106454
+    "timestamp": 1776280971642189099
   },
   {
     "env_config": {
@@ -14861,7 +14741,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -14876,7 +14755,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239107696
+    "timestamp": 1776280971642192704
   },
   {
     "env_config": {
@@ -14910,7 +14789,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -14922,7 +14800,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239108628
+    "timestamp": 1776280971642195747
   },
   {
     "env_config": {
@@ -14969,7 +14847,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239109569
+    "timestamp": 1776280971642198881
   },
   {
     "env_config": {
@@ -15007,7 +14885,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239110161
+    "timestamp": 1776280971642200342
   },
   {
     "env_config": {
@@ -15052,7 +14930,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239111012
+    "timestamp": 1776280971642203149
   },
   {
     "env_config": {
@@ -15099,7 +14977,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239111874
+    "timestamp": 1776280971642206355
   },
   {
     "env_config": {
@@ -15133,7 +15011,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -15148,7 +15025,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239113106
+    "timestamp": 1776280971642210306
   },
   {
     "env_config": {
@@ -15182,7 +15059,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -15194,7 +15070,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239114058
+    "timestamp": 1776280971642213356
   },
   {
     "env_config": {
@@ -15241,7 +15117,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239114990
+    "timestamp": 1776280971642216803
   },
   {
     "env_config": {
@@ -15279,7 +15155,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239115581
+    "timestamp": 1776280971642218303
   },
   {
     "env_config": {
@@ -15324,7 +15200,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239116442
+    "timestamp": 1776280971642221118
   },
   {
     "env_config": {
@@ -15371,7 +15247,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239117294
+    "timestamp": 1776280971642224281
   },
   {
     "env_config": {
@@ -15405,7 +15281,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -15420,7 +15295,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239118526
+    "timestamp": 1776280971642227914
   },
   {
     "env_config": {
@@ -15454,7 +15329,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -15466,7 +15340,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239119468
+    "timestamp": 1776280971642230974
   },
   {
     "env_config": {
@@ -15513,7 +15387,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239120400
+    "timestamp": 1776280971642234186
   },
   {
     "env_config": {
@@ -15551,7 +15425,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239120991
+    "timestamp": 1776280971642235673
   },
   {
     "env_config": {
@@ -15596,7 +15470,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239121853
+    "timestamp": 1776280971642238597
   },
   {
     "env_config": {
@@ -15643,7 +15517,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239122704
+    "timestamp": 1776280971642241967
   },
   {
     "env_config": {
@@ -15677,7 +15551,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -15692,7 +15565,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239123977
+    "timestamp": 1776280971642245746
   },
   {
     "env_config": {
@@ -15726,7 +15599,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -15738,7 +15610,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239124928
+    "timestamp": 1776280971642248778
   },
   {
     "env_config": {
@@ -15785,7 +15657,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239125880
+    "timestamp": 1776280971642252075
   },
   {
     "env_config": {
@@ -15823,7 +15695,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239126481
+    "timestamp": 1776280971642253635
   },
   {
     "env_config": {
@@ -15868,7 +15740,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239127433
+    "timestamp": 1776280971642256514
   },
   {
     "env_config": {
@@ -15915,7 +15787,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239128305
+    "timestamp": 1776280971642260265
   },
   {
     "env_config": {
@@ -15949,7 +15821,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -15964,7 +15835,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239129547
+    "timestamp": 1776280971642264139
   },
   {
     "env_config": {
@@ -15998,7 +15869,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -16010,7 +15880,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239130499
+    "timestamp": 1776280971642267496
   },
   {
     "env_config": {
@@ -16057,7 +15927,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239131451
+    "timestamp": 1776280971642272036
   },
   {
     "env_config": {
@@ -16095,7 +15965,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239132032
+    "timestamp": 1776280971642273853
   },
   {
     "env_config": {
@@ -16140,7 +16010,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239132894
+    "timestamp": 1776280971642276765
   },
   {
     "env_config": {
@@ -16187,7 +16057,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239133755
+    "timestamp": 1776280971642280060
   },
   {
     "env_config": {
@@ -16221,7 +16091,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -16236,7 +16105,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239134987
+    "timestamp": 1776280971642283858
   },
   {
     "env_config": {
@@ -16270,7 +16139,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -16282,7 +16150,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239135929
+    "timestamp": 1776280971642286999
   },
   {
     "env_config": {
@@ -16329,7 +16197,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239136871
+    "timestamp": 1776280971642290186
   },
   {
     "env_config": {
@@ -16367,7 +16235,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239137452
+    "timestamp": 1776280971642291655
   },
   {
     "env_config": {
@@ -16412,7 +16280,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239138314
+    "timestamp": 1776280971642294540
   },
   {
     "env_config": {
@@ -16459,7 +16327,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239139175
+    "timestamp": 1776280971642297945
   },
   {
     "env_config": {
@@ -16493,7 +16361,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -16508,7 +16375,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239140408
+    "timestamp": 1776280971642301684
   },
   {
     "env_config": {
@@ -16542,7 +16409,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -16554,7 +16420,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239141360
+    "timestamp": 1776280971642304762
   },
   {
     "env_config": {
@@ -16601,7 +16467,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239142361
+    "timestamp": 1776280971642309184
   },
   {
     "env_config": {
@@ -16639,7 +16505,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239142953
+    "timestamp": 1776280971642310777
   },
   {
     "env_config": {
@@ -16684,7 +16550,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239143814
+    "timestamp": 1776280971642313594
   },
   {
     "env_config": {
@@ -16731,7 +16597,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239144676
+    "timestamp": 1776280971642316821
   },
   {
     "env_config": {
@@ -16765,7 +16631,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -16780,7 +16645,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239145918
+    "timestamp": 1776280971642320500
   },
   {
     "env_config": {
@@ -16814,7 +16679,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -16826,7 +16690,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239146940
+    "timestamp": 1776280971642323562
   },
   {
     "env_config": {
@@ -16873,7 +16737,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239147882
+    "timestamp": 1776280971642326968
   },
   {
     "env_config": {
@@ -16911,7 +16775,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239148463
+    "timestamp": 1776280971642328449
   },
   {
     "env_config": {
@@ -16956,7 +16820,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239149335
+    "timestamp": 1776280971642331249
   },
   {
     "env_config": {
@@ -17003,7 +16867,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239150196
+    "timestamp": 1776280971642334470
   },
   {
     "env_config": {
@@ -17037,7 +16901,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -17052,7 +16915,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239151429
+    "timestamp": 1776280971642338052
   },
   {
     "env_config": {
@@ -17086,7 +16949,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -17098,7 +16960,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239152380
+    "timestamp": 1776280971642341127
   },
   {
     "env_config": {
@@ -17145,7 +17007,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239153322
+    "timestamp": 1776280971642359545
   },
   {
     "env_config": {
@@ -17183,7 +17045,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239153933
+    "timestamp": 1776280971642361143
   },
   {
     "env_config": {
@@ -17228,7 +17090,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239155065
+    "timestamp": 1776280971642364084
   },
   {
     "env_config": {
@@ -17275,7 +17137,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239156007
+    "timestamp": 1776280971642367532
   },
   {
     "env_config": {
@@ -17309,7 +17171,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -17324,7 +17185,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239157320
+    "timestamp": 1776280971642371324
   },
   {
     "env_config": {
@@ -17358,7 +17219,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -17370,7 +17230,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239158362
+    "timestamp": 1776280971642374478
   },
   {
     "env_config": {
@@ -17417,7 +17277,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239159374
+    "timestamp": 1776280971642377761
   },
   {
     "env_config": {
@@ -17455,7 +17315,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239160045
+    "timestamp": 1776280971642379270
   },
   {
     "env_config": {
@@ -17500,7 +17360,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239160977
+    "timestamp": 1776280971642388279
   },
   {
     "env_config": {
@@ -17547,7 +17407,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239161928
+    "timestamp": 1776280971642391631
   },
   {
     "env_config": {
@@ -17581,7 +17441,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -17596,7 +17455,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239163241
+    "timestamp": 1776280971642395382
   },
   {
     "env_config": {
@@ -17630,7 +17489,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -17642,7 +17500,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239164293
+    "timestamp": 1776280971642398502
   },
   {
     "env_config": {
@@ -17689,7 +17547,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239165235
+    "timestamp": 1776280971642402702
   },
   {
     "env_config": {
@@ -17727,7 +17585,7 @@
       "policy": "MlpPolicy",
       "ent_coef": 0.0
     },
-    "timestamp": 1776178754239165906
+    "timestamp": 1776280971642404274
   },
   {
     "env_config": {
@@ -17772,7 +17630,7 @@
       "learning_rate": "lin_0.001",
       "clip_range": "lin_0.2"
     },
-    "timestamp": 1776178754239167018
+    "timestamp": 1776280971642407385
   },
   {
     "env_config": {
@@ -17819,7 +17677,7 @@
       "exploration_final_eps": 0.04,
       "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1776178754239168060
+    "timestamp": 1776280971642410732
   },
   {
     "env_config": {
@@ -17853,7 +17711,6 @@
     "algo_config": {
       "algo": "a2c",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 16,
       "policy": "MlpPolicy",
       "ent_coef": 0.0,
@@ -17868,7 +17725,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178754239169513
+    "timestamp": 1776280971642414719
   },
   {
     "env_config": {
@@ -17902,7 +17759,6 @@
     "algo_config": {
       "algo": "ppo",
       "action_space": "Continuous",
-      "normalize": true,
       "n_envs": 32,
       "policy": "MlpPolicy",
       "n_steps": 2048,
@@ -17914,7 +17770,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178754239170865
+    "timestamp": 1776280971642417994
   },
   {
     "env_config": {
@@ -17961,6 +17817,6 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178754239171967
+    "timestamp": 1776280971642421261
   }
 ]

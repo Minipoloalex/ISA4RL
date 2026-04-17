@@ -8,7 +8,7 @@ import highway_env
 import pandas as pd
 
 from configs import TrainConfig, InstanceConfig
-from common.env_utils import ENVS
+from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS
 from common.file_utils import OTHER_RESULTS_PATH
 from utils.load_config_utils import load_env_train_configs, load_env_instance_configs
 from main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents, group_results
@@ -25,8 +25,8 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     )
     parser.add_argument(
         "--env",
-        choices=ENVS,
-        help="Highway-env environment to use",
+        choices=HIGHWAY_ENVS + METADRIVE_ENVS,
+        help="Environment to use",
     )
     parser.add_argument(
         "--start",

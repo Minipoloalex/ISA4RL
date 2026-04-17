@@ -18,7 +18,7 @@ logger = logging.getLogger(__name__)
 from env_fixed_configs import METADRIVE_FIXED_CONFIGS
 
 from common.config_utils import CONFIG
-from common.env_utils import ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C, K, TTC, KG, OG, A, E, GS
+from common.env_utils import METADRIVE_ENVS, ALLOW_OBS, ENV_ACTION_SPACE, D, C, K, TTC, KG, OG, A, E, GS
 from common.file_utils import (
     save_json,
     read_json,
@@ -111,6 +111,9 @@ def build_metadrive_configs() -> List[CONFIG]:
 #         and OBS_POLICY[obs_config["type"]] == MULTI_INPUT
 #     )
 
+def validate_algo_config(algo_config: CONFIG):
+    algo_config.pop("normalize", None)
+    return algo_config
 
 def valid_config(env_config: CONFIG, algo_config: CONFIG):
     if algo_config["policy"] == CNN:
@@ -130,7 +133,7 @@ def build_all_configs(
         {
             "env_config": env,
             # "obs_config": obs,
-            "algo_config": algo, # validate_policy_type(deepcopy(algo), obs),
+            "algo_config": validate_algo_config(deepcopy(algo)),
             "timestamp": time.time_ns(),
         }
         for (env, algo) in itertools.product(

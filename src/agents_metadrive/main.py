@@ -1,10 +1,9 @@
 
 from gymnasium.envs.registration import register
 
-from metadrive.envs import MetaDriveEnv, ScenarioEnv, SafeMetadriveEnv
+def register_env():
+    register(
+        id="metadrive-v0",
+        entry_point="metadrive.envs.my_metadrive_env.MyMetaDriveEnv",
+    )
 
-# register("metadrive-generalization-v0")
-
-# register("metadrive-varying-dynamics-v0")
-
-# register("metadrive-safe-v0")
