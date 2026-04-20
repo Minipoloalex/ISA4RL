@@ -3,6 +3,8 @@ from typing import Dict, List, Any
 from .base_metric_hook import BaseMetricHook
 from .step_info import StepInfo
 from scipy.stats import skew, kurtosis
+
+
 class SimpleEgoMetricsHook(BaseMetricHook):
     """
     A unified metric hook to track rewards, episode lengths, collisions, 

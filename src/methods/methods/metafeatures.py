@@ -1,6 +1,7 @@
 import hashlib
 import math
 import time
+import logging
 from collections import Counter, deque
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
@@ -19,18 +20,23 @@ from methods.utils.metafeature_utils import (
     default_idle_action,
     ensure_idm_vehicle,
     PolicyFn,
+    get_action_space_size,
 )
-
-INITIAL_GEOMETRY_SAMPLES = 3
-MAX_FREE_SPACE_METERS = 200.0
-MAX_TTC_SECONDS = 30.0
-
+from methods.utils.metafeatures.model_based import (
+    estimate_normalized_lipschitz,
+    compute_transition_stochasticity,
+    compute_transition_linearity,
+    compute_action_landscape_ruggedness,
+    compute_state_entropy,
+)
 
 def extract_metafeatures(config: InstanceConfig):
     before = time.perf_counter()
     env = config.ensure_test_env()
     env_name = env.spec.id
+
     env_features = _collect_env_features(env_name, env)
+    mb_metafeatures = _model_based_metafeatures(env)
 
     trajectories_random: List[Trajectory] = _run_probe(
         env=env,
@@ -48,6 +54,8 @@ def extract_metafeatures(config: InstanceConfig):
     metafeatures_random = traj_metafeatures("random", trajectories_random)
     metafeatures_idm = traj_metafeatures("idm", trajectories_idm)
     elapsed = time.perf_counter() - before
+
+    combined = _combine_metafeatures(metafeatures_random, metafeatures_idm)
 
     idm_advantage = (
         idm_probe["mean_episode_return"] - random_probe["mean_episode_return"]
@@ -78,6 +86,7 @@ def extract_metafeatures(config: InstanceConfig):
             "idm_advantage": idm_advantage,
             "idm_safety_gain": safety_delta,
         },
+        "model_based_features": mb_metafeatures,
         "features": features,
     }
 
@@ -108,6 +117,22 @@ def traj_metafeatures(label: str, trajectories: List[Trajectory]) -> Dict[str, A
 
     # Return the new dictionary with prefixed keys
     return {f"{prefix}{key}": value for key, value in metrics.items()}
+
+def _model_based_metafeatures(env: gym.Env) -> Dict[str, float]:
+    logging.getLogger().setLevel(logging.DEBUG)
+    funcs = {
+        "normalized_lipschitz": estimate_normalized_lipschitz,
+        "transition_stochasticity": compute_transition_stochasticity,
+        "transition_linearity": compute_transition_linearity,
+        "action_landscape_ruggedness": compute_action_landscape_ruggedness,
+        "state_entropy": compute_state_entropy,
+    }
+    features = {}
+    logging.debug("Computing model-based meta-features")
+    for name, func in funcs.items():
+        logging.debug(f"Computing {name}...")
+        features[name] = func(env)
+    return features
 
 def _run_idm_probe(
     env: gym.Env,
@@ -156,57 +181,21 @@ def _run_probe(
 
     return trajectories
 
-def _obs_stats_update(
-    obs: Any,
-    obs_sum: float,
-    obs_sq_sum: float,
-    obs_abs_sum: float,
-    obs_count: int,
-    obs_zero_count: int,
-) -> Tuple[float, float, float, int, int]:
-    flat = _flatten_obs(obs)
-    obs_sum += float(np.sum(flat))
-    obs_sq_sum += float(np.sum(np.square(flat)))
-    obs_abs_sum += float(np.sum(np.abs(flat)))
-    obs_count += flat.size
-    obs_zero_count += int(np.count_nonzero(flat == 0))
-    return obs_sum, obs_sq_sum, obs_abs_sum, obs_count, obs_zero_count
-
-
 def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
     config = base_env.config
     features: Dict[str, float] = {}
 
-    def add(name: str, value: Any) -> None:
-        numeric = as_float(value)
-        if numeric is not None:
-            features[name] = numeric
-
-    # roundabout and merge don't have these parameters (their values are hardcoded to these)
     lanes = config.get("lanes_count", 2)
-    vehicles_count = config.get("vehicles_count", 4)
-    vehicles_density = config.get("vehicles_density", 1)
+    traffic_density = config.get("vehicles_density", 0)
 
-    collision_reward = config.get("collision_reward")
-    right_lane_reward = config.get("right_lane_reward")
-    high_speed_reward = config.get("high_speed_reward")
-    lane_change_reward = config.get("lane_change_reward")
+    features["lanes_count"] = lanes
+    features["traffic_density"] = traffic_density
+    features["action_space_size"] = get_action_space_size(env)
 
-    add("lanes_count", lanes)
-    add("vehicles_count", vehicles_count)
-    add("vehicles_density", vehicles_density)
-    add("collision_reward", collision_reward)
-    add("right_lane_reward", right_lane_reward)
-    add("high_speed_reward", high_speed_reward)
-    add("lane_change_reward", lane_change_reward)
-
-    action_space = env.action_space
-    add("action_space_size", action_space.n)
-
-    # obs_space = env.observation_space
-    # assert(isinstance(obs_space, gym.spaces.Box))
-    # add("observation_space_dim", int(np.prod(obs_space.shape)))
+    obs_space = env.observation_space
+    assert isinstance(obs_space, gym.spaces.Box)
+    features["obs_space_dim_log"] = int(np.log2(np.prod(obs_space.shape)))
 
     return features
 
@@ -668,4 +657,3 @@ def _safe_corr(x_values: List[float], y_values: List[float]) -> Optional[float]:
     if np.std(x) < 1e-8 or np.std(y) < 1e-8:
         return 0.0
     return float(np.corrcoef(x, y)[0, 1])
-
