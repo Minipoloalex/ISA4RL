@@ -21,6 +21,15 @@ dependencies = [
     "stable-baselines3>=2.7.1",
     "tensorboard>=2.20.0",
     "tqdm>=4.67.3",
+    "torch>=2.11.0",
+    "torchvision>=0.26.0",
+    "torchaudio>=2.11.0",
+    "cuda-python>=13.2.0",
+    "pyopengl>=3.1.10",
+    "pyopengl-accelerate>=3.1.10",
+    "pyrr>=0.10.3",
+    "glfw>=2.10.0",
+    "cupy-cuda13x>=14.0.1",
 ]
 
 [tool.uv.sources]

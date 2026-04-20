@@ -2,7 +2,8 @@ from copy import deepcopy
 
 from panda3d.core import loadPrcFileData
 from metadrive.component.sensors.rgb_camera import RGBCamera
-from metadrive.envs.metadrive_env import MetaDriveEnv
+# from metadrive.envs.metadrive_env import MetaDriveEnv
+from metadrive.envs.my_metadrive_env import MyMetaDriveEnv
 from metadrive.envs.metadrive_env import METADRIVE_DEFAULT_CONFIG as _METADRIVE_DEFAULT_CONFIG
 
 loadPrcFileData("", "notify-level-linmath error")
@@ -22,6 +23,7 @@ loadPrcFileData("", "notify-level-linmath error")
 # 'O' = Roundabout
 # 'R' = Ramp (entry/exit)
 # 'r' = Ramp (straight)
+
 import copy
 from metadrive.component.navigation_module.node_network_navigation import NodeNetworkNavigation
 from typing import Union
@@ -38,7 +40,7 @@ from metadrive.manager.traffic_manager import TrafficMode
 from metadrive.utils import clip, Config
 
 # Change this string to test different map combinations!
-MAP_CONFIG = "yP"
+MAP_CONFIG = "O"
 MAP_CONFIG={
     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_SEQUENCE,
     BaseMap.GENERATE_CONFIG: MAP_CONFIG,
@@ -50,7 +52,7 @@ MAP_CONFIG={
 
 # Control settings
 MANUAL_CONTROL = True    # Set to True to drive with W/A/S/D
-TRAFFIC_DENSITY = 0.025    # Set to 0.0 to test just the road, >0.0 to add cars
+TRAFFIC_DENSITY = 0.0    # Set to 0.0 to test just the road, >0.0 to add cars
 NUM_STEPS = 500000         # How long the simulation runs before auto-closing
 
 # ==========================================
@@ -60,29 +62,35 @@ def run_map_test():
     INTERSECTION_PROB_DIST = {"StdInterSection": 1/3, "StdTInterSection": 1/3, "Roundabout": 1/3}
     # MapGenerateMethod.BIG_BLOCK_NUM or # MapGenerateMethod.BIG_BLOCK_SEQUENCE
 
-    config = deepcopy(_METADRIVE_DEFAULT_CONFIG)
+    # config = deepcopy(_METADRIVE_DEFAULT_CONFIG)
+    config = {}
     config.update({
+        "traffic_mode": "respawn",
         "manual_control": MANUAL_CONTROL,
         "use_render": True,
         "traffic_density": TRAFFIC_DENSITY,
-        "image_observation": True,
-        "num_scenarios": 10,
+        "image_observation": False,
+        "num_scenarios": int(1e3),
         "accident_prob": 0,
-        "random_traffic": True,
-        "block_dist_config": PGBlockDistConfig(INTERSECTION_PROB_DIST),
+        "random_traffic": False,
+        # "image_on_cuda": True,
+        # "block_dist_config": PGBlockDistConfig(INTERSECTION_PROB_DIST),
         "sensors": dict(rgb_camera=(RGBCamera, 200, 100)),
         "interface_panel": ["rgb_camera", "dashboard"],
         "stack_size": 3,
-        "random_agent_model": True,
+        "random_agent_model": False,
+        "horizon": 800,
     })
-    config["map_config"].update({
-        BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_NUM,
-        BaseMap.GENERATE_CONFIG: 1,
-    })
-    config["vehicle_config"].update({
+    # config["map_config"].update({
+    #     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_NUM,
+    #     BaseMap.GENERATE_CONFIG: 1,
+    # })
+    config["map_config"] = MAP_CONFIG
+
+    config["vehicle_config"] = {
         "vehicle_model": "m",
-    })
-    env = MetaDriveEnv(config)
+    }
+    env = MyMetaDriveEnv(config)
 
     try:
         obs, info = env.reset()
@@ -99,6 +107,7 @@ def run_map_test():
             action = env.action_space.sample() if not MANUAL_CONTROL else [0, 0]
 
             obs, reward, terminated, truncated, info = env.step(action)
+            print(reward)
 
             # Reset the environment if the car crashes or finishes the map
             if terminated or truncated:

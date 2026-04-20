@@ -19,6 +19,14 @@ from .utils.sb3_utils import (
     make_env_vec_normalize,
     make_model_helper,
 )
+try:
+    import highway_env
+except:
+    print("No highway-env available")
+try:
+    import metadrive
+except:
+    print("No metadrive available")
 
 # Mostly refer to the environment
 _DISCARD_POLICY_PARAMS = ["algo", "action_space", "n_envs", "env_wrapper", "frame_stack", "normalize", "id"]
@@ -99,7 +107,8 @@ class TrainConfig(InstanceConfig):
         use_best_model: only useful for evaluating (loads best model instead of model saved last)
         """
         env_config = config_dict["env_config"].copy()
-        obs_config = config_dict["obs_config"].copy() if config_dict["obs_config"] is not None else None
+        obs_config = config_dict.get("obs_config")
+        obs_config = obs_config.copy() if obs_config is not None else None
         algo_config = config_dict["algo_config"].copy()
 
         base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
@@ -232,5 +241,6 @@ class TrainConfig(InstanceConfig):
                 del self._eval_env
             finally:
                 self._eval_env = None
-        del self._model
+        if self._model is not None:
+            del self._model
         self._model = None

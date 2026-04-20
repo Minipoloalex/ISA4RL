@@ -6,7 +6,6 @@ from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
 import gymnasium as gym
 import numpy as np
-from highway_env.vehicle.behavior import IDMVehicle
 from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook
 from methods.utils.general_utils import as_float
 

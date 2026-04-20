@@ -15,7 +15,6 @@ import torch
 import yaml
 import gymnasium as gym
 import pandas as pd
-import highway_env
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
 from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
@@ -32,8 +31,6 @@ from common.file_utils import (
     BEST_VEC_NORMALIZE_FILE,
     VEC_NORMALIZE_FILE,
 )
-torch.set_num_threads(1)
-
 from methods.utils.general_utils import (
     set_global_seed,
     ensure_dir,
@@ -46,6 +43,17 @@ from methods.utils.general_utils import (
 )
 from methods.utils.sb3_utils import get_env_id, unwrap_first_env, find_vec_normalize
 from common.file_utils import _json_default
+
+try:
+    import highway_env
+except:
+    print("No highway-env available")
+try:
+    import metadrive
+except:
+    print("No metadrive available")
+
+torch.set_num_threads(1)
 
 class SaveVecNormalizeCallback(BaseCallback):
     def __init__(self, save_path: str, verbose: int = 1):
@@ -164,6 +172,7 @@ def train(
     if vec_normalize is not None:
         vec_normalize.save(str(final_vec_normalize_path))    
 
+    env_config_dict = env_config if type(env_config) is dict else env.get_attr("orig_config")[0]
     metadata = {
         "timesteps": timesteps,
         "elapsed_seconds": elapsed,
@@ -172,7 +181,7 @@ def train(
         "model_path": str(final_model_path),
         "best_model_path": str(best_model_path),
         "logs_dir": str(logs_dir),
-        "env_config": env_config,
+        "env_config": env_config_dict,
         "env_id": env_id,
         "model_class": model.__class__.__name__,
     }

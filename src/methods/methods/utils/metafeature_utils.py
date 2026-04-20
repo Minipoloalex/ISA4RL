@@ -2,7 +2,10 @@ from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, Support
 
 import numpy as np
 import gymnasium as gym
-from highway_env.vehicle.behavior import IDMVehicle
+try:
+    from highway_env.vehicle.behavior import IDMVehicle
+except:
+    pass
 
 from .metafeatures.step_info import StepInfo
 

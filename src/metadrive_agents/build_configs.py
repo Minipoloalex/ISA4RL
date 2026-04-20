@@ -53,7 +53,10 @@ def build_metadrive_configs() -> List[CONFIG]:
     INTERSECTION_PROB_DIST = {"StdInterSection": 1/3, "StdTInterSection": 1/3, "Roundabout": 1/3}
 
     MAPS = ["rORY", "SC", "TXT", INTERSECTION_PROB_DIST]
+    # human tested valid times for completion, assuming maximum occupancy (traffic density = 0.3)
+    MAP_HORIZONS = [800, 500, 500, 400]
     VEHICLE_MODELS = ["default"]
+    USE_IMG_OBSERVATION = [True, False]
 
     LANE_NUMS = np.linspace(2, 3, 2, dtype=int)
     LANE_WIDTHS = np.linspace(3, 4.5, 3, dtype=float)
@@ -62,10 +65,11 @@ def build_metadrive_configs() -> List[CONFIG]:
     DISCRETE_ACTION = [True, False]
 
     configs = []
-    for map, veh_model, lane_num, lane_width, veh_density, discrete_action in itertools.product(
-        MAPS, VEHICLE_MODELS, LANE_NUMS, LANE_WIDTHS, TRAFFIC_DENSITIES, DISCRETE_ACTION,
+    for (map_idx, metadrive_map), veh_model, lane_num, lane_width, veh_density, discrete_action in itertools.product(
+        enumerate(MAPS), VEHICLE_MODELS, LANE_NUMS, LANE_WIDTHS, TRAFFIC_DENSITIES, DISCRETE_ACTION,
     ):
         config = deepcopy(METADRIVE_FIXED_CONFIGS)
+        horizon = MAP_HORIZONS[map_idx]
         if type(map) is dict:
             n_blocks = 1
             map_type = MapGenerateMethod.BIG_BLOCK_NUM
@@ -75,13 +79,15 @@ def build_metadrive_configs() -> List[CONFIG]:
                 "block_dist_config": INTERSECTION_PROB_DIST,
             })
         else:
-            n_blocks = len(map)
+            n_blocks = len(metadrive_map)
             map_type = MapGenerateMethod.BIG_BLOCK_SEQUENCE
-            sequence = map
+            sequence = metadrive_map
 
         config["config"].update({
             "traffic_density": veh_density,
             "discrete_action": discrete_action,
+            "horizon": horizon,
+            "image_observation": False,  # TODO: define True and False, or don't define at all
         })
         config["config"]["map_config"] = {
             BaseMap.GENERATE_TYPE: map_type,
@@ -113,6 +119,7 @@ def build_metadrive_configs() -> List[CONFIG]:
 
 def validate_algo_config(algo_config: CONFIG):
     algo_config.pop("normalize", None)
+    # algo_config["policy"] = MULTI_INPUT
     return algo_config
 
 def valid_config(env_config: CONFIG, algo_config: CONFIG):

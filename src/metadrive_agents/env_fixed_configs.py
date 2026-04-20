@@ -1,4 +1,4 @@
-from copy import deepcopy
+import logging
 
 from metadrive.envs.metadrive_env import METADRIVE_DEFAULT_CONFIG as _METADRIVE_DEFAULT_CONFIG
 
@@ -10,7 +10,11 @@ METADRIVE_FIXED_CONFIGS = {
     "n_test_episodes": 10,
     "config": { # when instantiating the config, need to be careful with recursive dicts
         "random_traffic": False,
-        "num_scenarios": int(1e3),
-        "map": None,
+        "num_scenarios": int(1e12),
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": False,
+        "store_map": False,
+        "log_level": logging.INFO,
     },
 }

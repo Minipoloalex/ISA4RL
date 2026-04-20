@@ -8,10 +8,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -23,7 +29,7 @@
         }
       }
     },
-    "timestamp": 1776280971642422567
+    "timestamp": 1776517962141304482
   },
   {
     "env_config": {
@@ -34,10 +40,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -49,7 +61,7 @@
         }
       }
     },
-    "timestamp": 1776280971642423552
+    "timestamp": 1776517962141305008
   },
   {
     "env_config": {
@@ -60,10 +72,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -75,7 +93,7 @@
         }
       }
     },
-    "timestamp": 1776280971642423745
+    "timestamp": 1776517962141305202
   },
   {
     "env_config": {
@@ -86,10 +104,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -101,7 +125,7 @@
         }
       }
     },
-    "timestamp": 1776280971642423853
+    "timestamp": 1776517962141305301
   },
   {
     "env_config": {
@@ -112,10 +136,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -127,7 +157,7 @@
         }
       }
     },
-    "timestamp": 1776280971642423977
+    "timestamp": 1776517962141305393
   },
   {
     "env_config": {
@@ -138,10 +168,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -153,7 +189,7 @@
         }
       }
     },
-    "timestamp": 1776280971642424137
+    "timestamp": 1776517962141305554
   },
   {
     "env_config": {
@@ -164,10 +200,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -179,7 +221,7 @@
         }
       }
     },
-    "timestamp": 1776280971642424219
+    "timestamp": 1776517962141305630
   },
   {
     "env_config": {
@@ -190,10 +232,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -205,7 +253,7 @@
         }
       }
     },
-    "timestamp": 1776280971642424307
+    "timestamp": 1776517962141305695
   },
   {
     "env_config": {
@@ -216,10 +264,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -231,7 +285,7 @@
         }
       }
     },
-    "timestamp": 1776280971642424364
+    "timestamp": 1776517962141305758
   },
   {
     "env_config": {
@@ -242,10 +296,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -257,7 +317,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425592
+    "timestamp": 1776517962141305869
   },
   {
     "env_config": {
@@ -268,10 +328,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -283,7 +349,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425674
+    "timestamp": 1776517962141305936
   },
   {
     "env_config": {
@@ -294,10 +360,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -309,7 +381,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425749
+    "timestamp": 1776517962141306015
   },
   {
     "env_config": {
@@ -320,10 +392,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -335,7 +413,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425819
+    "timestamp": 1776517962141306070
   },
   {
     "env_config": {
@@ -346,10 +424,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -361,7 +445,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425874
+    "timestamp": 1776517962141306126
   },
   {
     "env_config": {
@@ -372,10 +456,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -387,7 +477,7 @@
         }
       }
     },
-    "timestamp": 1776280971642425937
+    "timestamp": 1776517962141306181
   },
   {
     "env_config": {
@@ -398,10 +488,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -413,7 +509,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426006
+    "timestamp": 1776517962141306235
   },
   {
     "env_config": {
@@ -424,10 +520,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -439,7 +541,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426059
+    "timestamp": 1776517962141306289
   },
   {
     "env_config": {
@@ -450,10 +552,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -465,7 +573,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426160
+    "timestamp": 1776517962141306406
   },
   {
     "env_config": {
@@ -476,10 +584,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -491,7 +605,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426233
+    "timestamp": 1776517962141306488
   },
   {
     "env_config": {
@@ -502,10 +616,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -517,7 +637,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426287
+    "timestamp": 1776517962141306544
   },
   {
     "env_config": {
@@ -528,10 +648,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -543,7 +669,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426341
+    "timestamp": 1776517962141306601
   },
   {
     "env_config": {
@@ -554,10 +680,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -569,7 +701,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426397
+    "timestamp": 1776517962141306657
   },
   {
     "env_config": {
@@ -580,10 +712,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -595,7 +733,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426452
+    "timestamp": 1776517962141306712
   },
   {
     "env_config": {
@@ -606,10 +744,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -621,7 +765,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426508
+    "timestamp": 1776517962141307622
   },
   {
     "env_config": {
@@ -632,10 +776,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -647,7 +797,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426562
+    "timestamp": 1776517962141307721
   },
   {
     "env_config": {
@@ -658,10 +808,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -673,7 +829,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426660
+    "timestamp": 1776517962141307816
   },
   {
     "env_config": {
@@ -684,10 +840,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -699,7 +861,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426740
+    "timestamp": 1776517962141307901
   },
   {
     "env_config": {
@@ -710,10 +872,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -725,7 +893,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426796
+    "timestamp": 1776517962141307957
   },
   {
     "env_config": {
@@ -736,10 +904,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -751,7 +925,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426850
+    "timestamp": 1776517962141308017
   },
   {
     "env_config": {
@@ -762,10 +936,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -777,7 +957,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426904
+    "timestamp": 1776517962141308092
   },
   {
     "env_config": {
@@ -788,10 +968,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -803,7 +989,7 @@
         }
       }
     },
-    "timestamp": 1776280971642426970
+    "timestamp": 1776517962141308146
   },
   {
     "env_config": {
@@ -814,10 +1000,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -829,7 +1021,7 @@
         }
       }
     },
-    "timestamp": 1776280971642427025
+    "timestamp": 1776517962141308200
   },
   {
     "env_config": {
@@ -840,10 +1032,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -855,7 +1053,7 @@
         }
       }
     },
-    "timestamp": 1776280971642427801
+    "timestamp": 1776517962141308256
   },
   {
     "env_config": {
@@ -866,10 +1064,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -881,7 +1085,7 @@
         }
       }
     },
-    "timestamp": 1776280971642427894
+    "timestamp": 1776517962141308333
   },
   {
     "env_config": {
@@ -892,10 +1096,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -907,7 +1117,7 @@
         }
       }
     },
-    "timestamp": 1776280971642427978
+    "timestamp": 1776517962141308389
   },
   {
     "env_config": {
@@ -918,10 +1128,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 800,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "rORY",
@@ -933,7 +1149,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428034
+    "timestamp": 1776517962141308445
   },
   {
     "env_config": {
@@ -944,10 +1160,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -959,7 +1181,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428094
+    "timestamp": 1776517962141308502
   },
   {
     "env_config": {
@@ -970,10 +1192,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -985,7 +1213,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428169
+    "timestamp": 1776517962141308579
   },
   {
     "env_config": {
@@ -996,10 +1224,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1011,7 +1245,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428226
+    "timestamp": 1776517962141308634
   },
   {
     "env_config": {
@@ -1022,10 +1256,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1037,7 +1277,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428293
+    "timestamp": 1776517962141308704
   },
   {
     "env_config": {
@@ -1048,10 +1288,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1063,7 +1309,7 @@
         }
       }
     },
-    "timestamp": 1776280971642428350
+    "timestamp": 1776517962141308758
   },
   {
     "env_config": {
@@ -1074,10 +1320,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1089,7 +1341,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429210
+    "timestamp": 1776517962141308845
   },
   {
     "env_config": {
@@ -1100,10 +1352,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1115,7 +1373,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429297
+    "timestamp": 1776517962141308919
   },
   {
     "env_config": {
@@ -1126,10 +1384,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1141,7 +1405,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429368
+    "timestamp": 1776517962141308975
   },
   {
     "env_config": {
@@ -1152,10 +1416,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1167,7 +1437,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429434
+    "timestamp": 1776517962141309031
   },
   {
     "env_config": {
@@ -1178,10 +1448,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1193,7 +1469,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429498
+    "timestamp": 1776517962141309103
   },
   {
     "env_config": {
@@ -1204,10 +1480,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1219,7 +1501,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429553
+    "timestamp": 1776517962141309992
   },
   {
     "env_config": {
@@ -1230,10 +1512,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1245,7 +1533,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429609
+    "timestamp": 1776517962141310050
   },
   {
     "env_config": {
@@ -1256,10 +1544,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1271,7 +1565,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429665
+    "timestamp": 1776517962141310106
   },
   {
     "env_config": {
@@ -1282,10 +1576,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1297,7 +1597,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429721
+    "timestamp": 1776517962141310162
   },
   {
     "env_config": {
@@ -1308,10 +1608,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1323,7 +1629,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429775
+    "timestamp": 1776517962141310227
   },
   {
     "env_config": {
@@ -1334,10 +1640,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1349,7 +1661,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429857
+    "timestamp": 1776517962141310283
   },
   {
     "env_config": {
@@ -1360,10 +1672,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1375,7 +1693,7 @@
         }
       }
     },
-    "timestamp": 1776280971642429927
+    "timestamp": 1776517962141310337
   },
   {
     "env_config": {
@@ -1386,10 +1704,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1401,7 +1725,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430011
+    "timestamp": 1776517962141310441
   },
   {
     "env_config": {
@@ -1412,10 +1736,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1427,7 +1757,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430064
+    "timestamp": 1776517962141310507
   },
   {
     "env_config": {
@@ -1438,10 +1768,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1453,7 +1789,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430120
+    "timestamp": 1776517962141311325
   },
   {
     "env_config": {
@@ -1464,10 +1800,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1479,7 +1821,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430175
+    "timestamp": 1776517962141311400
   },
   {
     "env_config": {
@@ -1490,10 +1832,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1505,7 +1853,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430253
+    "timestamp": 1776517962141311466
   },
   {
     "env_config": {
@@ -1516,10 +1864,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1531,7 +1885,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430307
+    "timestamp": 1776517962141311524
   },
   {
     "env_config": {
@@ -1542,10 +1896,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1557,7 +1917,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430363
+    "timestamp": 1776517962141311580
   },
   {
     "env_config": {
@@ -1568,10 +1928,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1583,7 +1949,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430417
+    "timestamp": 1776517962141311636
   },
   {
     "env_config": {
@@ -1594,10 +1960,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1609,7 +1981,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430473
+    "timestamp": 1776517962141311690
   },
   {
     "env_config": {
@@ -1620,10 +1992,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1635,7 +2013,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430528
+    "timestamp": 1776517962141311748
   },
   {
     "env_config": {
@@ -1646,10 +2024,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1661,7 +2045,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430582
+    "timestamp": 1776517962141311835
   },
   {
     "env_config": {
@@ -1672,10 +2056,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1687,7 +2077,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430636
+    "timestamp": 1776517962141311905
   },
   {
     "env_config": {
@@ -1698,10 +2088,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1713,7 +2109,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430764
+    "timestamp": 1776517962141312079
   },
   {
     "env_config": {
@@ -1724,10 +2120,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1739,7 +2141,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430833
+    "timestamp": 1776517962141312135
   },
   {
     "env_config": {
@@ -1750,10 +2152,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1765,7 +2173,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430899
+    "timestamp": 1776517962141312190
   },
   {
     "env_config": {
@@ -1776,10 +2184,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1791,7 +2205,7 @@
         }
       }
     },
-    "timestamp": 1776280971642430956
+    "timestamp": 1776517962141312246
   },
   {
     "env_config": {
@@ -1802,10 +2216,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1817,7 +2237,7 @@
         }
       }
     },
-    "timestamp": 1776280971642431009
+    "timestamp": 1776517962141312312
   },
   {
     "env_config": {
@@ -1828,10 +2248,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1843,7 +2269,7 @@
         }
       }
     },
-    "timestamp": 1776280971642431065
+    "timestamp": 1776517962141312373
   },
   {
     "env_config": {
@@ -1854,10 +2280,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "SC",
@@ -1869,7 +2301,7 @@
         }
       }
     },
-    "timestamp": 1776280971642431152
+    "timestamp": 1776517962141312436
   },
   {
     "env_config": {
@@ -1880,10 +2312,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -1895,7 +2333,7 @@
         }
       }
     },
-    "timestamp": 1776280971642440346
+    "timestamp": 1776517962141312493
   },
   {
     "env_config": {
@@ -1906,10 +2344,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -1921,7 +2365,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441203
+    "timestamp": 1776517962141312547
   },
   {
     "env_config": {
@@ -1932,10 +2376,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -1947,7 +2397,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441352
+    "timestamp": 1776517962141312614
   },
   {
     "env_config": {
@@ -1958,10 +2408,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -1973,7 +2429,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441414
+    "timestamp": 1776517962141312670
   },
   {
     "env_config": {
@@ -1984,10 +2440,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -1999,7 +2461,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441477
+    "timestamp": 1776517962141312726
   },
   {
     "env_config": {
@@ -2010,10 +2472,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2025,7 +2493,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441591
+    "timestamp": 1776517962141312867
   },
   {
     "env_config": {
@@ -2036,10 +2504,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2051,7 +2525,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441674
+    "timestamp": 1776517962141312923
   },
   {
     "env_config": {
@@ -2062,10 +2536,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2077,7 +2557,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441743
+    "timestamp": 1776517962141312979
   },
   {
     "env_config": {
@@ -2088,10 +2568,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2103,7 +2589,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441799
+    "timestamp": 1776517962141313042
   },
   {
     "env_config": {
@@ -2114,10 +2600,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2129,7 +2621,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441852
+    "timestamp": 1776517962141313116
   },
   {
     "env_config": {
@@ -2140,10 +2632,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2155,7 +2653,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441906
+    "timestamp": 1776517962141313170
   },
   {
     "env_config": {
@@ -2166,10 +2664,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2181,7 +2685,7 @@
         }
       }
     },
-    "timestamp": 1776280971642441959
+    "timestamp": 1776517962141313228
   },
   {
     "env_config": {
@@ -2192,10 +2696,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2207,7 +2717,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442014
+    "timestamp": 1776517962141313285
   },
   {
     "env_config": {
@@ -2218,10 +2728,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2233,7 +2749,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442081
+    "timestamp": 1776517962141313340
   },
   {
     "env_config": {
@@ -2244,10 +2760,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2259,7 +2781,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442156
+    "timestamp": 1776517962141314103
   },
   {
     "env_config": {
@@ -2270,10 +2792,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2285,7 +2813,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442211
+    "timestamp": 1776517962141314160
   },
   {
     "env_config": {
@@ -2296,10 +2824,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2311,7 +2845,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442267
+    "timestamp": 1776517962141314216
   },
   {
     "env_config": {
@@ -2322,10 +2856,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2337,7 +2877,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442322
+    "timestamp": 1776517962141314292
   },
   {
     "env_config": {
@@ -2348,10 +2888,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2363,7 +2909,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442377
+    "timestamp": 1776517962141314348
   },
   {
     "env_config": {
@@ -2374,10 +2920,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2389,7 +2941,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442431
+    "timestamp": 1776517962141314403
   },
   {
     "env_config": {
@@ -2400,10 +2952,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2415,7 +2973,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442489
+    "timestamp": 1776517962141314459
   },
   {
     "env_config": {
@@ -2426,10 +2984,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2441,7 +3005,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442729
+    "timestamp": 1776517962141314558
   },
   {
     "env_config": {
@@ -2452,10 +3016,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2467,7 +3037,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442786
+    "timestamp": 1776517962141314613
   },
   {
     "env_config": {
@@ -2478,10 +3048,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2493,7 +3069,7 @@
         }
       }
     },
-    "timestamp": 1776280971642442842
+    "timestamp": 1776517962141314669
   },
   {
     "env_config": {
@@ -2504,10 +3080,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2519,7 +3101,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443618
+    "timestamp": 1776517962141314725
   },
   {
     "env_config": {
@@ -2530,10 +3112,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2545,7 +3133,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443675
+    "timestamp": 1776517962141314781
   },
   {
     "env_config": {
@@ -2556,10 +3144,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2571,7 +3165,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443731
+    "timestamp": 1776517962141314837
   },
   {
     "env_config": {
@@ -2582,10 +3176,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2597,7 +3197,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443786
+    "timestamp": 1776517962141314894
   },
   {
     "env_config": {
@@ -2608,10 +3208,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2623,7 +3229,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443842
+    "timestamp": 1776517962141314963
   },
   {
     "env_config": {
@@ -2634,10 +3240,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2649,7 +3261,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443896
+    "timestamp": 1776517962141315019
   },
   {
     "env_config": {
@@ -2660,10 +3272,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2675,7 +3293,7 @@
         }
       }
     },
-    "timestamp": 1776280971642443950
+    "timestamp": 1776517962141315078
   },
   {
     "env_config": {
@@ -2686,10 +3304,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2701,7 +3325,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444003
+    "timestamp": 1776517962141315152
   },
   {
     "env_config": {
@@ -2712,10 +3336,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2727,7 +3357,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444057
+    "timestamp": 1776517962141315207
   },
   {
     "env_config": {
@@ -2738,10 +3368,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2753,7 +3389,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444799
+    "timestamp": 1776517962141315263
   },
   {
     "env_config": {
@@ -2764,10 +3400,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2779,7 +3421,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444854
+    "timestamp": 1776517962141315319
   },
   {
     "env_config": {
@@ -2790,10 +3432,16 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 500,
+        "image_observation": false,
         "map_config": {
           "type": "block_sequence",
           "config": "TXT",
@@ -2805,7 +3453,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444909
+    "timestamp": 1776517962141315378
   },
   {
     "env_config": {
@@ -2816,18 +3464,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2836,7 +3489,7 @@
         }
       }
     },
-    "timestamp": 1776280971642444963
+    "timestamp": 1776517962141315448
   },
   {
     "env_config": {
@@ -2847,18 +3500,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2867,7 +3525,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445066
+    "timestamp": 1776517962141316269
   },
   {
     "env_config": {
@@ -2878,18 +3536,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2898,7 +3561,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445121
+    "timestamp": 1776517962141316327
   },
   {
     "env_config": {
@@ -2909,18 +3572,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2929,7 +3597,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445174
+    "timestamp": 1776517962141316396
   },
   {
     "env_config": {
@@ -2940,18 +3608,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2960,7 +3633,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445229
+    "timestamp": 1776517962141316457
   },
   {
     "env_config": {
@@ -2971,18 +3644,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 2
         },
@@ -2991,7 +3669,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445283
+    "timestamp": 1776517962141316513
   },
   {
     "env_config": {
@@ -3002,18 +3680,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3022,7 +3705,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445335
+    "timestamp": 1776517962141316577
   },
   {
     "env_config": {
@@ -3033,18 +3716,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3053,7 +3741,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445405
+    "timestamp": 1776517962141316633
   },
   {
     "env_config": {
@@ -3064,18 +3752,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3084,7 +3777,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445459
+    "timestamp": 1776517962141316708
   },
   {
     "env_config": {
@@ -3095,18 +3788,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3115,7 +3813,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445512
+    "timestamp": 1776517962141316764
   },
   {
     "env_config": {
@@ -3126,18 +3824,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3146,7 +3849,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445566
+    "timestamp": 1776517962141317500
   },
   {
     "env_config": {
@@ -3157,18 +3860,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 2
         },
@@ -3177,7 +3885,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445622
+    "timestamp": 1776517962141317560
   },
   {
     "env_config": {
@@ -3188,18 +3896,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3208,7 +3921,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445699
+    "timestamp": 1776517962141317636
   },
   {
     "env_config": {
@@ -3219,18 +3932,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3239,7 +3957,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445765
+    "timestamp": 1776517962141317707
   },
   {
     "env_config": {
@@ -3250,18 +3968,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3270,7 +3993,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445818
+    "timestamp": 1776517962141317764
   },
   {
     "env_config": {
@@ -3281,18 +4004,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3301,7 +4029,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445881
+    "timestamp": 1776517962141317825
   },
   {
     "env_config": {
@@ -3312,18 +4040,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3332,7 +4065,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445935
+    "timestamp": 1776517962141317882
   },
   {
     "env_config": {
@@ -3343,18 +4076,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 2
         },
@@ -3363,7 +4101,7 @@
         }
       }
     },
-    "timestamp": 1776280971642445988
+    "timestamp": 1776517962141317938
   },
   {
     "env_config": {
@@ -3374,18 +4112,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3394,7 +4137,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446083
+    "timestamp": 1776517962141317994
   },
   {
     "env_config": {
@@ -3405,18 +4148,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3425,7 +4173,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446141
+    "timestamp": 1776517962141318754
   },
   {
     "env_config": {
@@ -3436,18 +4184,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3456,7 +4209,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446194
+    "timestamp": 1776517962141318820
   },
   {
     "env_config": {
@@ -3467,18 +4220,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3487,7 +4245,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446280
+    "timestamp": 1776517962141318902
   },
   {
     "env_config": {
@@ -3498,18 +4256,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3518,7 +4281,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446364
+    "timestamp": 1776517962141318958
   },
   {
     "env_config": {
@@ -3529,18 +4292,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.0,
           "lane_num": 3
         },
@@ -3549,7 +4317,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446418
+    "timestamp": 1776517962141319017
   },
   {
     "env_config": {
@@ -3560,18 +4328,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3580,7 +4353,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446472
+    "timestamp": 1776517962141319084
   },
   {
     "env_config": {
@@ -3591,18 +4364,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3611,7 +4389,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446527
+    "timestamp": 1776517962141319155
   },
   {
     "env_config": {
@@ -3622,18 +4400,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3642,7 +4425,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446581
+    "timestamp": 1776517962141319212
   },
   {
     "env_config": {
@@ -3653,18 +4436,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3673,7 +4461,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446636
+    "timestamp": 1776517962141319270
   },
   {
     "env_config": {
@@ -3684,18 +4472,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3704,7 +4497,7 @@
         }
       }
     },
-    "timestamp": 1776280971642446722
+    "timestamp": 1776517962141319327
   },
   {
     "env_config": {
@@ -3715,18 +4508,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 3.75,
           "lane_num": 3
         },
@@ -3735,7 +4533,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447590
+    "timestamp": 1776517962141319382
   },
   {
     "env_config": {
@@ -3746,18 +4544,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3766,7 +4569,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447675
+    "timestamp": 1776517962141319445
   },
   {
     "env_config": {
@@ -3777,18 +4580,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.0,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3797,7 +4605,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447731
+    "timestamp": 1776517962141319503
   },
   {
     "env_config": {
@@ -3808,18 +4616,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3828,7 +4641,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447814
+    "timestamp": 1776517962141319561
   },
   {
     "env_config": {
@@ -3839,18 +4652,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.15,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3859,7 +4677,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447871
+    "timestamp": 1776517962141319621
   },
   {
     "env_config": {
@@ -3870,18 +4688,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": true,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3890,7 +4713,7 @@
         }
       }
     },
-    "timestamp": 1776280971642447926
+    "timestamp": 1776517962141319678
   },
   {
     "env_config": {
@@ -3901,18 +4724,23 @@
       "n_test_episodes": 10,
       "config": {
         "random_traffic": false,
-        "num_scenarios": 1000,
-        "map": null,
-        "block_dist_config": {
-          "StdInterSection": 0.3333333333333333,
-          "StdTInterSection": 0.3333333333333333,
-          "Roundabout": 0.3333333333333333
-        },
+        "num_scenarios": 1000000000000,
+        "traffic_mode": "respawn",
+        "accident_prob": 0,
+        "random_agent_model": false,
+        "store_map": false,
+        "log_level": 20,
         "traffic_density": 0.3,
         "discrete_action": false,
+        "horizon": 400,
+        "image_observation": false,
         "map_config": {
-          "type": "block_num",
-          "config": 1,
+          "type": "block_sequence",
+          "config": {
+            "StdInterSection": 0.3333333333333333,
+            "StdTInterSection": 0.3333333333333333,
+            "Roundabout": 0.3333333333333333
+          },
           "lane_width": 4.5,
           "lane_num": 3
         },
@@ -3921,6 +4749,6 @@
         }
       }
     },
-    "timestamp": 1776280971642447980
+    "timestamp": 1776517962141319736
   }
 ]
