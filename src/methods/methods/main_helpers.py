@@ -9,7 +9,7 @@ import logging
 from collections import Counter, deque, defaultdict
 from multiprocessing import get_context, cpu_count
 from pathlib import Path
-from typing import Any, Callable, List
+from typing import Any, Callable, List, Optional
 from tqdm import tqdm
 from pprint import pprint
 from functools import partial
@@ -103,12 +103,15 @@ def eval_agents(train_configs: List[TrainConfig]):
         show_eval_results(eval_results)
 
 
-def _extract_and_save(config: InstanceConfig, requested_groups: Optional[List[str]] = None, update_threshold: float = 0.0) -> None:
+def _extract_and_save(
+    config: InstanceConfig,
+    requested_groups: Optional[List[str]] = None,
+    update_threshold: float = 0.0
+) -> None:
     path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
     existing_data = read_json(path) if path.is_file() else {}
     extract_results = compute_metafeatures(config, requested_groups, existing_data, update_threshold)
     save_json(path, extract_results)
-    config.close()
 
 
 def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, requested_groups: Optional[List[str]] = None, update_threshold: float = 0.0):

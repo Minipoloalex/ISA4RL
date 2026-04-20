@@ -46,13 +46,13 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         default="",
         help="List of result folders to group into the set of results (comma separated)"
     )
-    parser.add_argument(
+    parser.add_argument(    # for metafeatures
         "--workers",
         type=int,
         default=1,
         help="Parallel worker processes to use for metafeature extraction (extract task only).",
     )
-    parser.add_argument(
+    parser.add_argument(    # for metafeatures
         "--metafeature-groups",
         type=str,
         default=None,
@@ -62,7 +62,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         "--update",
         type=float,
         default=1.0,
-        help="Unix timestamp float. Groups older than this will be recomputed.",
+        help="Unix timestamp float. Use an helper to convert a date to a timestamp. Groups older than this will be recomputed.",
     )
     args = parser.parse_args(argv)
     env_name = args.env

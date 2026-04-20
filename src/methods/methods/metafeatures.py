@@ -34,6 +34,8 @@ FEATURES_KEY = "features"
 TIMESTAMP_KEY = "timestamp"
 ELAPSED_TIME_KEY = "elapsed_time"
 
+logger = logging.getLogger(__name__)
+
 def extract_metafeatures(
     config: InstanceConfig,
     requested_groups: Optional[List[str]] = None,
@@ -121,8 +123,10 @@ def extract_metafeatures(
         "mb_state_entropy": compute_state_entropy,
     }
     
+    logger.setLevel(logging.DEBUG)
     for mb_group_name, func in mb_funcs.items():
         if should_compute(mb_group_name):
+            logger.debug(f"Computing {mb_group_name} for instance: {config.instance_folder_path}")
             before = time.perf_counter()
             val = func(env)
             elapsed = time.perf_counter() - before
@@ -132,6 +136,7 @@ def extract_metafeatures(
                 ELAPSED_TIME_KEY: elapsed,
                 FEATURES_KEY: {feature_name: val},
             }
+    logger.setLevel(logging.INFO)
 
     config.close()
     return out_data
