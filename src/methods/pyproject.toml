@@ -19,7 +19,8 @@ dependencies = [
     "setuptools<81.0.0",
     "stable-baselines3>=2.7.1",
     "tensorboard>=2.20.0",
-    "tqdm>=4.67.3",
+    "tqdm>=4.67.3",\
+    "cloudpickle==3.1.2",
 ]
 
 [tool.setuptools]
