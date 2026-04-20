@@ -45,7 +45,7 @@ def make_vec_env_helper(
         vec_env_cls=vec_cls,
         env_kwargs=env_kwargs,
         vec_env_kwargs=vec_kwargs,
-        monitor_dir=monitor_dir,
+        # monitor_dir=monitor_dir,
     )
 
 def make_env_vec_normalize(builder: Callable[[], VecEnv], vec_normalize_path: Path, training: bool, **kwargs) -> VecEnv:
