@@ -3,7 +3,7 @@
 # --- CONFIGURATION ---
 # Define the specific path to your .env file here
 BASE_PATH=$HOME
-cd $BASE_PATH/ISA4RL-article/src/main
+cd $BASE_PATH/ISA4RL-article/src/highway_agents
 # ---------------------
 
 # Grab the command (start, stop, status, logs)
