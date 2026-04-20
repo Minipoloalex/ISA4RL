@@ -1,6 +1,6 @@
-CHUNK_SIZE = 12
+CHUNK_SIZE = 6
 
-segments = [(177, 178), (221, 223), (237, 238), (251, 253), (263, 268), (281, 283), (295, 396)]
+segments = [(251, 252), (260, 261), (268, 270), (314, 315), (323, 324), (332, 333), (368, 369), (377, 378), (386, 387), (394, 396)]
 
 # 1. Flatten all untrained segments into a single list of individual IDs
 missing_ids = []

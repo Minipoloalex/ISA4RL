@@ -52,6 +52,18 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         default=1,
         help="Parallel worker processes to use for metafeature extraction (extract task only).",
     )
+    parser.add_argument(
+        "--metafeature-groups",
+        type=str,
+        default=None,
+        help="Comma-separated list of metafeature groups to compute (e.g. 'env_features,mb_state_entropy'). Default computes all.",
+    )
+    parser.add_argument(    # for metafeatures
+        "--update",
+        type=float,
+        default=1.0,
+        help="Unix timestamp float. Groups older than this will be recomputed.",
+    )
     args = parser.parse_args(argv)
     env_name = args.env
     result_folders = args.result_folders.split(",")
@@ -80,7 +92,13 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         "check": check_agents,
     }  # type: ignore
     if args.task == "extract":
-        extract_metafeatures(selected, workers=args.workers)  # type: ignore[arg-type]
+        groups = args.metafeature_groups.split(",") if args.metafeature_groups else None
+        extract_metafeatures(
+            selected, 
+            workers=args.workers, 
+            requested_groups=groups, 
+            update_threshold=args.update
+        )  # type: ignore[arg-type]
     elif args.task == "group":
         group_results(result_folders)
     else:

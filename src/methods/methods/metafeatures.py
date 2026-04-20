@@ -30,68 +30,114 @@ from methods.utils.metafeatures.model_based import (
     compute_state_entropy,
 )
 
-def extract_metafeatures(config: InstanceConfig):
-    before = time.perf_counter()
+FEATURES_KEY = "features"
+TIMESTAMP_KEY = "timestamp"
+ELAPSED_TIME_KEY = "elapsed_time"
+
+def extract_metafeatures(
+    config: InstanceConfig,
+    requested_groups: Optional[List[str]] = None,
+    existing_data: Optional[Dict] = None,
+    update_threshold: float = 0.0
+):
+    if existing_data is None:
+        existing_data = {}
+        
+    out_data = dict(existing_data)
     env = config.ensure_test_env()
-    env_name = env.spec.id
+    out_data["env_name"] = env.spec.id if env.spec else None
 
-    env_features = _collect_env_features(env_name, env)
-    mb_metafeatures = _model_based_metafeatures(env)
+    if "feature_groups" not in out_data:
+        out_data["feature_groups"] = {}
+        
+    def should_compute(g: str) -> bool:
+        if requested_groups is not None and g not in requested_groups:
+            return False
+        if out_data["feature_groups"].get(g, {}).get("timestamp", 0.0) > update_threshold:
+            return False
+        return True
 
-    trajectories_random: List[Trajectory] = _run_probe(
-        env=env,
-        policy=make_random_policy(env),
-        episodes=config.n_test_episodes,
-    )
-    trajectories_idm = _run_idm_probe(
-        env=env,
-        episodes=config.n_test_episodes,
-    )
 
-    # save_trajectories("random", trajectories_random, config)
-    # save_trajectories("idm", trajectories_idm, config)
-    config.close()
-    metafeatures_random = traj_metafeatures("random", trajectories_random)
-    metafeatures_idm = traj_metafeatures("idm", trajectories_idm)
-    elapsed = time.perf_counter() - before
+    if should_compute("env_features"):
+        before = time.perf_counter()
+        env_features = _collect_env_features(out_data["env_name"], env)
+        elapsed = time.perf_counter() - before
+        out_data["feature_groups"]["env_features"] = {
+            TIMESTAMP_KEY: time.time(),
+            ELAPSED_TIME_KEY: elapsed,
+            FEATURES_KEY: env_features,
+        }
 
-    combined = _combine_metafeatures(metafeatures_random, metafeatures_idm)
-
-    idm_advantage = (
-        idm_probe["mean_episode_return"] - random_probe["mean_episode_return"]
-    )
-    safety_delta = random_probe["collision_rate"] - idm_probe["collision_rate"]
-    features: Dict[str, float] = {}
-    features.update(env_features)
-    features.update(_random_probe_features(random_probe))
-    features.update(_baseline_probe_features(idm_probe, "idm"))
-    features.update(
-        _derived_features(
-            random_probe=random_probe,
-            idm_probe=idm_probe,
+    if should_compute("probes"):
+        before = time.perf_counter()
+        trajectories_random = _run_probe(
+            env=env,
+            policy=make_random_policy(env),
+            episodes=config.n_test_episodes,
         )
-    )
-    return {
-        "instance_id": config.id,
-        "env_config_id": config.id_env_config,
-        "obs_config_id": config.id_obs_config,
-        "env_name": env_name,
-        "generated_at": time.time_ns(),
-        "elapsed_seconds": elapsed,
-        "probes": {
-            "random": random_probe,
-            "idm_like": idm_probe,
-        },
-        "diagnostics": {
+        trajectories_idm = _run_idm_probe(
+            env=env,
+            episodes=config.n_test_episodes,
+        )
+        random_probe = traj_metafeatures(trajectories_random)
+        idm_probe = traj_metafeatures(trajectories_idm)
+        
+        idm_advantage = idm_probe.get("mean_episode_return", 0.0) - random_probe.get("mean_episode_return", 0.0)
+        safety_delta = random_probe.get("collision_rate", 0.0) - idm_probe.get("collision_rate", 0.0)
+        
+        features: Dict[str, float] = {}
+        features.update(_random_probe_features(random_probe))
+        features.update(_baseline_probe_features(idm_probe, "idm"))
+        features.update(
+            _combine_probe_features(
+                random_probe=random_probe,
+                idm_probe=idm_probe,
+            )
+        )
+        
+        # Also compute diagnostics here since they are probe-derived
+        diagnostics = {
             "idm_advantage": idm_advantage,
             "idm_safety_gain": safety_delta,
-        },
-        "model_based_features": mb_metafeatures,
-        "features": features,
+        }
+        
+        elapsed = time.perf_counter() - before
+        out_data["feature_groups"]["probes"] = {
+            TIMESTAMP_KEY: time.time(),
+            ELAPSED_TIME_KEY: elapsed,
+            FEATURES_KEY: features,
+            "diagnostics": diagnostics,
+            "probes_raw": {
+                "random": random_probe,
+                "idm_like": idm_probe,
+            }
+        }
+
+    mb_funcs = {
+        "mb_normalized_lipschitz": estimate_normalized_lipschitz,
+        "mb_transition_stochasticity": compute_transition_stochasticity,
+        "mb_transition_linearity": compute_transition_linearity,
+        "mb_action_landscape_ruggedness": compute_action_landscape_ruggedness,
+        "mb_state_entropy": compute_state_entropy,
     }
+    
+    for mb_group_name, func in mb_funcs.items():
+        if should_compute(mb_group_name):
+            before = time.perf_counter()
+            val = func(env)
+            elapsed = time.perf_counter() - before
+            feature_name = mb_group_name.replace("mb_", "")
+            out_data["feature_groups"][mb_group_name] = {
+                TIMESTAMP_KEY: time.time(),
+                ELAPSED_TIME_KEY: elapsed,
+                FEATURES_KEY: {feature_name: val},
+            }
+
+    config.close()
+    return out_data
 
 
-def traj_metafeatures(label: str, trajectories: List[Trajectory]) -> Dict[str, Any]:
+def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
     # Initialize the hook we built earlier
     hooks = [SimpleEgoMetricsHook()]
     for hook in hooks:
@@ -109,14 +155,11 @@ def traj_metafeatures(label: str, trajectories: List[Trajectory]) -> Dict[str, A
             hook.on_episode_end()
 
     # Retrieve the aggregated stats
+    metrics = {}
     for hook in hooks:
-        metrics = hook.finalize()
+        metrics.update(hook.finalize())
 
-    # Format the prefix to ensure clean dictionary keys (e.g., 'eval/reward_mean')
-    prefix = f"{label}/"
-
-    # Return the new dictionary with prefixed keys
-    return {f"{prefix}{key}": value for key, value in metrics.items()}
+    return metrics
 
 def _model_based_metafeatures(env: gym.Env) -> Dict[str, float]:
     logging.getLogger().setLevel(logging.DEBUG)
@@ -287,7 +330,7 @@ def _add_prefixed_feature(
     if impute_flag is not None:
         features[impute_flag] = 1.0 if used_fallback else 0.0
 
-def _derived_features(
+def _combine_probe_features(
     random_probe: Dict[str, Any],
     idm_probe: Dict[str, Any],
 ) -> Dict[str, float]:

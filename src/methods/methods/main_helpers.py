@@ -103,29 +103,57 @@ def eval_agents(train_configs: List[TrainConfig]):
         show_eval_results(eval_results)
 
 
-def _extract_and_save(config: InstanceConfig) -> None:
-    extract_results = compute_metafeatures(config)
-    save_json(RESULTS_METAFEATURES_PATH(config.instance_folder_path), extract_results)
+def _extract_and_save(config: InstanceConfig, requested_groups: Optional[List[str]] = None, update_threshold: float = 0.0) -> None:
+    path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
+    existing_data = read_json(path) if path.is_file() else {}
+    extract_results = compute_metafeatures(config, requested_groups, existing_data, update_threshold)
+    save_json(path, extract_results)
     config.close()
 
 
-def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int):
+def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, requested_groups: Optional[List[str]] = None, update_threshold: float = 0.0):
     assert(workers > 0)
+    
+    def needs_compute(config: InstanceConfig) -> bool:
+        path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
+        if not path.is_file():
+            return True
+        if update_threshold <= 0 and requested_groups is None:
+            return False
+            
+        data = read_json(path) or {}
+        feature_groups = data.get("feature_groups", {})
+        
+        groups_to_check = requested_groups
+        if groups_to_check is None:
+            # Check standard groups if none specified
+            groups_to_check = ["env_features", "probes", "mb_normalized_lipschitz", "mb_transition_stochasticity", "mb_transition_linearity", "mb_action_landscape_ruggedness", "mb_state_entropy"]
+            
+        for g in groups_to_check:
+            if g not in feature_groups:
+                return True
+            if feature_groups[g].get("timestamp", 0.0) < update_threshold:
+                return True
+        return False
+
     metafeature_configs = [
-        config for config in instance_configs if not is_extracted(config)
+        config for config in instance_configs if needs_compute(config)
     ]
     desc = f"Extracting metafeatures (workers={workers})"
+    
+    extract_fn = partial(_extract_and_save, requested_groups=requested_groups, update_threshold=update_threshold)
+    
     if workers == 1:
         for config in tqdm(
             metafeature_configs, total=len(metafeature_configs), desc=desc
         ):
-            _extract_and_save(config)
+            extract_fn(config)
         return
 
     ctx = get_context("spawn")
     with ctx.Pool(processes=workers) as pool:
         for _ in tqdm(
-            pool.imap_unordered(_extract_and_save, metafeature_configs),
+            pool.imap_unordered(extract_fn, metafeature_configs),
             total=len(metafeature_configs),
             desc=desc,
         ):
