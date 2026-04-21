@@ -151,7 +151,7 @@ def extract_metafeatures(
         for g in groups_to_check:
             if g not in feature_groups:
                 return True
-            if feature_groups[g].get(TIMESTAMP_KEY, 0.0) < update_threshold:
+            if feature_groups[g][TIMESTAMP_KEY] < update_threshold:
                 return True
         return False
 

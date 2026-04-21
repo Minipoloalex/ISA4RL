@@ -73,7 +73,7 @@ dependencies = [
 [package.metadata]
 requires-dist = [
     { name = "matplotlib", specifier = ">=3.10.8" },
-    { name = "numpy", specifier = ">=2.4.4" },
+    { name = "numpy" },
     { name = "pyyaml", specifier = ">=6.0.3" },
 ]
 

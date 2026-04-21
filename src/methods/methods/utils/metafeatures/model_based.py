@@ -146,12 +146,12 @@ def compute_transition_linearity(env, num_samples=1000):
 
 
 
-def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, step_size=0.1):
+def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, max_episode_steps=None, step_size=0.1):
     autocorrelations = []
 
     for _ in range(num_states):
         env.reset()
-        for _ in range(np.random.randint(1, 10)):
+        for _ in range(np.random.randint(1, 10)):   # max_episode_steps // 2
             action = env.action_space.sample()
             obs, _, terminated, truncated, _ = env.step(action)
             if terminated or truncated:

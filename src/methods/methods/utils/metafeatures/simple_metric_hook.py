@@ -9,7 +9,6 @@ class SimpleEgoMetricsHook(BaseMetricHook):
     """
     A unified metric hook to track rewards, episode lengths, collisions, 
     timeouts, and speeds for a highway-env evaluation probe.
-    Now includes higher-order statistics like SNR, Skewness, and Kurtosis.
     """
 
     def __init__(self, close_collision_ttc_threshold: float = 1.0):
@@ -24,6 +23,7 @@ class SimpleEgoMetricsHook(BaseMetricHook):
         self.episode_timeouts: List[int] = []
         self.all_speeds: List[float] = []
         self.close_collision_steps = 0
+        self.positive_reward_steps = 0
         self.total_steps = 0
 
         # Current episode state
@@ -42,9 +42,11 @@ class SimpleEgoMetricsHook(BaseMetricHook):
         self.current_timeout = False
 
     def on_step(self, context: StepInfo) -> None:
-        self.current_reward += float(context.reward)
+        reward = float(context.reward)
+        self.current_reward += reward
         self.current_length += 1
         self.total_steps += 1
+        self.positive_reward_steps += int(reward > 0.0)
 
         if context.info.get("crashed", False):
             self.current_crashed = True
@@ -102,6 +104,7 @@ class SimpleEgoMetricsHook(BaseMetricHook):
             "length_std": float(np.std(lengths)),
             "collision_rate": float(np.mean(self.episode_crashes)),
             "close_collision_rate": float(self.close_collision_steps / self.total_steps) if self.total_steps else 0.0,
+            "positive_reward_rate": float(self.positive_reward_steps / self.total_steps) if self.total_steps else 0.0,
             "timeout_rate": float(np.mean(self.episode_timeouts)),
             "speed_mean": s_mean,
             "speed_std": s_std,

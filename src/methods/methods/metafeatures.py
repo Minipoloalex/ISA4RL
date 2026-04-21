@@ -60,6 +60,7 @@ def extract_metafeatures(
 
 
     if should_compute("env_features"):
+        logger.info(f"Computing env_features for instance: {config.instance_folder_path}")
         before = time.perf_counter()
         env_features = _collect_env_features(out_data["env_name"], env)
         elapsed = time.perf_counter() - before
@@ -70,6 +71,7 @@ def extract_metafeatures(
         }
 
     if should_compute("probes"):
+        logger.info(f"Computing probes for instance: {config.instance_folder_path}")
         before = time.perf_counter()
         trajectories_random = _run_probe(
             env=env,

@@ -31,7 +31,6 @@ ENV_CONFIG_PATH: Callable[[str], Path] = lambda env: ENV_CONFIGS_FOLDER / f"{env
 # MERGE_CONFIG_PATH: Path = ENV_CONFIG_PATH("merge-generic-v0")
 
 ALGO_CONFIG_HYPERPARAMS_PATH: Path = BASE_CONFIG_PATH / "rlzoo-algo-hyperparams"
-
 TRAIN_CONFIGS_FOLDER: Path = BASE_CONFIG_PATH / "train-configs"
 EVAL_CONFIGS_FOLDER: Path = BASE_CONFIG_PATH / "eval-configs"
 TRAIN_CONFIGS_PATH: Callable[[str], Path] = lambda env: TRAIN_CONFIGS_FOLDER / f"{env}.json"

@@ -2,7 +2,7 @@ from methods.configs import TrainConfig, InstanceConfig
 from common.file_utils import *
 
 def load_env_instance_configs(env_name: str, base_results_path: Path = BASE_RESULTS_PATH) -> List[InstanceConfig]:
-    configs = read_json(TRAIN_CONFIGS_PATH(env_name))
+    configs = read_json(EVAL_CONFIGS_PATH(env_name))
     return [InstanceConfig.from_dict(env_name, config, base_results_path) for config in configs]
 
 def load_env_train_configs(env_name: str, base_results_path: Path = BASE_RESULTS_PATH) -> List[TrainConfig]:

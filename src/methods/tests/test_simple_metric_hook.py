@@ -22,12 +22,13 @@ def test_close_collision_rate_counts_ttc_and_crashes() -> None:
     hook.on_episode_start()
 
     hook.on_step(make_step(reward=1.0, info={"speed": 10.0, "min_ttc": 1.5}))
-    hook.on_step(make_step(reward=1.0, info={"speed": 12.0, "min_ttc": 4.0}))
-    hook.on_step(make_step(reward=1.0, info={"speed": 0.0, "crashed": True}))
+    hook.on_step(make_step(reward=0.0, info={"speed": 12.0, "min_ttc": 4.0}))
+    hook.on_step(make_step(reward=-1.0, info={"speed": 0.0, "crashed": True}))
 
     hook.on_episode_end()
 
     metrics = hook.finalize()
 
     assert metrics["close_collision_rate"] == pytest.approx(2.0 / 3.0)
+    assert metrics["positive_reward_rate"] == pytest.approx(1.0 / 3.0)
     assert metrics["collision_rate"] == pytest.approx(1.0)
