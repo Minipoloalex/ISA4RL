@@ -1,10 +1,9 @@
 import numpy as np
-from copy import deepcopy
 import gymnasium as gym
 from sklearn.linear_model import LinearRegression
 from collections import Counter
 import logging
-
+from methods.utils.metafeature_utils import safe_copy_env
 
 logger = logging.getLogger(__name__)
 
@@ -27,14 +26,15 @@ def estimate_normalized_lipschitz(env: gym.Env, num_states=50, action_pairs_per_
             obs, reward, terminated, truncated, info = env.step(action)
             if terminated or truncated:
                 env.reset()
-            
-        base_env = deepcopy(env)
         
+        base_env = safe_copy_env(env)
+
         sample_rewards = []
         for _ in range(15):
-            temp_env = deepcopy(base_env)
+            temp_env = safe_copy_env(base_env)
             _, r, _, _, _ = temp_env.step(env.action_space.sample())
             sample_rewards.append(r)
+            temp_env.close()
         
         reward_std = np.std(sample_rewards)
         if reward_std < 1e-6:
@@ -49,16 +49,19 @@ def estimate_normalized_lipschitz(env: gym.Env, num_states=50, action_pairs_per_
             if dist < 1e-6:
                 continue
                 
-            env_copy1 = deepcopy(base_env)
+            env_copy1 = safe_copy_env(base_env)
             _, r1, _, _, _ = env_copy1.step(a1)
             
-            env_copy2 = deepcopy(base_env)
+            env_copy2 = safe_copy_env(base_env)
             _, r2, _, _, _ = env_copy2.step(a2)
             
             ratio = (abs(r1 - r2) / reward_std) / dist
             
             if ratio > max_lipschitz:
                 max_lipschitz = ratio
+            
+            env_copy1.close()
+            env_copy2.close()
 
     return max_lipschitz
 
@@ -74,25 +77,28 @@ def compute_transition_stochasticity(env, num_states=30, trials_per_action=10):
             if terminated or truncated:
                 env.reset()
                 
-        base_env = deepcopy(env)
+        base_env = safe_copy_env(env)
         action = env.action_space.sample()
         
         next_states = []
         for _ in range(trials_per_action):
-            temp_env = deepcopy(base_env)
+            temp_env = safe_copy_env(base_env)
             next_obs, _, _, _, _ = temp_env.step(action)
             next_states.append(next_obs)
+            temp_env.close()
             
         next_states = np.array(next_states)
         state_variance = np.var(next_states, axis=0).mean()
         variances.append(state_variance)
+        base_env.close()
 
     return float(np.mean(variances))
 
 
 def compute_transition_linearity(env, num_samples=1000):
-    X = []
-    Y = []
+    O_current = []
+    O_next = []
+    A = []
     
     obs, _ = env.reset()
     
@@ -102,27 +108,42 @@ def compute_transition_linearity(env, num_samples=1000):
         flat_obs = np.atleast_1d(obs).flatten()
         flat_action = np.atleast_1d(action).flatten()
         
-        x_vector = np.concatenate([flat_obs, flat_action])
-        
         next_obs, _, terminated, truncated, _ = env.step(action)
+        flat_next_obs = np.atleast_1d(next_obs).flatten()
         
-        y_vector = np.atleast_1d(next_obs).flatten()
-        
-        X.append(x_vector)
-        Y.append(y_vector)
+        O_current.append(flat_obs)
+        A.append(flat_action)
+        O_next.append(flat_next_obs)
         
         if terminated or truncated:
             obs, _ = env.reset()
         else:
             obs = next_obs
             
-    X = np.array(X)
-    Y = np.array(Y)
+    O_current = np.array(O_current)
+    O_next = np.array(O_next)
+    A = np.array(A)
+    
+    # If the observation space is very high-dimensional (e.g. images),
+    # reduce dimensionality using PCA to avoid perfectly overfitting
+    # the Linear Regression model (which happens when features > samples).
+    if O_current.shape[1] > 100:
+        from sklearn.decomposition import PCA
+        pca = PCA(n_components=min(64, num_samples // 2))
+        # Fit on both current and next to cover the whole state distribution we've seen
+        O_combined = np.vstack([O_current, O_next])
+        pca.fit(O_combined)
+        O_current = pca.transform(O_current)
+        O_next = pca.transform(O_next)
+        
+    X = np.hstack([O_current, A])
+    Y = O_next
     
     model = LinearRegression()
     model.fit(X, Y)
     
     return float(model.score(X, Y))
+
 
 
 def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, step_size=0.1):
@@ -136,14 +157,15 @@ def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, step
             if terminated or truncated:
                 env.reset()
 
-        base_env = deepcopy(env)
+        base_env = safe_copy_env(env)
         current_action = env.action_space.sample()
         rewards = []
 
         for _ in range(walk_length):
-            temp_env = deepcopy(base_env)
+            temp_env = safe_copy_env(base_env)
             _, r, _, _, _ = temp_env.step(current_action)
             rewards.append(r)
+            temp_env.close()
 
             if hasattr(env.action_space, 'high'):
                 noise = np.random.normal(0, step_size, size=current_action.shape)
@@ -167,6 +189,7 @@ def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, step
             correlation = 1.0
             
         autocorrelations.append(correlation)
+        base_env.close()
 
     mean_autocorr = np.mean(autocorrelations)
     

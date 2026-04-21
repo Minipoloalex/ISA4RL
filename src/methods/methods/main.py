@@ -1,5 +1,6 @@
 import datetime
 import argparse
+import time
 from functools import partial
 from typing import Optional, Sequence, Dict, Callable, List
 
@@ -61,7 +62,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     parser.add_argument(    # for metafeatures
         "--update",
         type=float,
-        default=1.0,
+        default=time.time(),
         help="Unix timestamp float. Use an helper to convert a date to a timestamp. Groups older than this will be recomputed.",
     )
     args = parser.parse_args(argv)
@@ -94,10 +95,10 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     if args.task == "extract":
         groups = args.metafeature_groups.split(",") if args.metafeature_groups else None
         extract_metafeatures(
-            selected, 
-            workers=args.workers, 
-            requested_groups=groups, 
-            update_threshold=args.update
+            selected,
+            workers=args.workers,
+            requested_groups=groups,
+            update_threshold=args.update,
         )  # type: ignore[arg-type]
     elif args.task == "group":
         group_results(result_folders)

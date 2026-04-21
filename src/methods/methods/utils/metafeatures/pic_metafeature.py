@@ -1,18 +1,17 @@
 import numpy as np
+import gymnasium as gym
 
 # Import the agent and sampler logic directly from the original paper's codebase
 from pic.algos import NumpyAgent
 from pic.sampler.sampler import run_episode
 
 # Import the metafeature extractor we just created
-from src.methods.methods.utils.metafeatures.pic_metafeature import extract_pic_poic
-
+from methods.utils.metafeatures.pic_helper import extract_pic_poic
 
 def compute_pic_end_to_end(
-    env,
+    env: gym.Env,
     n_samples=1000,
     n_episodes=10,
-    max_episode_steps=None,
     n_hidden_layers=2,
     n_hidden_units=64,
     random_dist="normal",
@@ -31,7 +30,6 @@ def compute_pic_end_to_end(
     - env: Instantiated Gym environment.
     - n_samples (int): Number of random policies to sample (default: 1000).
     - n_episodes (int): Number of episodes to evaluate per policy (default: 10).
-    - max_episode_steps (int): Max steps per episode. If None, infers from env.spec.
     - n_hidden_layers (int): Depth of the random MLP (default: 2).
     - n_hidden_units (int): Width of the random MLP (default: 64).
     - random_dist (str): Distribution for weight sampling ('normal', 'uniform', etc).
@@ -42,15 +40,8 @@ def compute_pic_end_to_end(
     - metrics (dict): Entropy metrics and best optuna temperature.
     - all_scores (np.ndarray): The raw (N, E) score matrix collected.
     """
-    # 1. Infer max episode steps if not provided
-    if max_episode_steps is None:
-        if hasattr(env, "spec") and env.spec is not None and hasattr(env.spec, "max_episode_steps"):
-            max_episode_steps = env.spec.max_episode_steps
-        else:
-            max_episode_steps = 1000  # fallback limit
 
-    # 2. Instantiate the agent using the original implementation
-    # Note: NumpyAgent natively calls env.reset() in its __init__ to figure out input size.
+    # Instantiate the agent using the original implementation
     agent = NumpyAgent(
         env=env,
         n_hidden_layers=n_hidden_layers,
@@ -69,7 +60,7 @@ def compute_pic_end_to_end(
 
         score_episodes = []
         for _ in range(n_episodes):
-            score = run_episode(env, agent, max_episode_steps)
+            score = run_episode(env, agent)
             score_episodes.append(score)
 
         all_scores_per_param.append(score_episodes)
@@ -85,36 +76,3 @@ def compute_pic_end_to_end(
 
     return pic, poic, metrics, all_scores_per_param
 
-
-if __name__ == "__main__":
-    # Example usage script
-    import gym
-    import warnings
-
-    warnings.filterwarnings("ignore")
-
-    try:
-        # Create a simple test environment
-        test_env_name = "CartPole-v0"
-        env = gym.make(test_env_name)
-
-        print(f"--- Running End-to-End Test on {test_env_name} ---")
-        # We use small sample numbers for a quick test;
-        # For actual usage, use n_samples=10000, n_episodes=10 as in the paper.
-        test_samples = 50
-        test_episodes = 5
-
-        pic_val, poic_val, metrics_dict, scores = compute_pic_end_to_end(
-            env=env,
-            n_samples=test_samples,
-            n_episodes=test_episodes,
-            env_name=test_env_name,
-        )
-
-        print("\n--- Results ---")
-        print(f"Collected scores shape: {scores.shape} (Policies x Episodes)")
-        print(f"PIC: {pic_val:.4f}")
-        print(f"POIC: {poic_val:.4f}")
-
-    except Exception as e:
-        print(f"Test failed. Ensure Gym is installed correctly. Error: {e}")

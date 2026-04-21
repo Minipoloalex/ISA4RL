@@ -106,7 +106,7 @@ def eval_agents(train_configs: List[TrainConfig]):
 def _extract_and_save(
     config: InstanceConfig,
     requested_groups: Optional[List[str]] = None,
-    update_threshold: float = 0.0
+    update_threshold: float = 0.0,
 ) -> None:
     path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
     existing_data = read_json(path) if path.is_file() else {}
@@ -121,7 +121,7 @@ def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, r
         path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
         if not path.is_file():
             return True
-        if update_threshold <= 0 and requested_groups is None:
+        if update_threshold < 0 and requested_groups is None:
             return False
             
         data = read_json(path) or {}
@@ -130,8 +130,17 @@ def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, r
         groups_to_check = requested_groups
         if groups_to_check is None:
             # Check standard groups if none specified
-            groups_to_check = ["env_features", "probes", "mb_normalized_lipschitz", "mb_transition_stochasticity", "mb_transition_linearity", "mb_action_landscape_ruggedness", "mb_state_entropy"]
-            
+            groups_to_check = [
+                "env_features",
+                "probes",
+                "mb_normalized_lipschitz",
+                "mb_transition_stochasticity",
+                "mb_transition_linearity",
+                "mb_action_landscape_ruggedness",
+                "mb_state_entropy",
+                # "pic",
+            ]
+
         for g in groups_to_check:
             if g not in feature_groups:
                 return True

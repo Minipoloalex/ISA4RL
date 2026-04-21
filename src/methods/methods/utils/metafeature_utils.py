@@ -1,4 +1,5 @@
 from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
+from copy import deepcopy
 
 import numpy as np
 import gymnasium as gym
@@ -89,7 +90,8 @@ def get_action_space_size(env: gym.Env) -> int:
     else:
         raise ValueError(f"Unknown action space type: {env.action_space}")
 
-def get_max_episode_steps(env: gym.Env, config: dict) -> int:
+def get_max_episode_steps(env: gym.Env) -> int:
+    config = env.unwrapped.config
     try:
         return config["duration"] * config["policy_frequency"]
     except:
@@ -99,3 +101,38 @@ def get_max_episode_steps(env: gym.Env, config: dict) -> int:
     except:
         pass
     raise NotImplementedError(f"Max episode steps not implemented for env: {env}")
+
+def _env_viewer_deepcopy(self, memo):
+    cls = self.__class__
+    result = cls.__new__(cls)
+    memo[id(self)] = result
+
+    new_env = deepcopy(self.env, memo)
+    new_config = deepcopy(self.config, memo)
+    new_config["offscreen_rendering"] = True
+    
+    result.__init__(new_env, config=new_config)
+    return result
+
+def safe_copy_env(env: gym.Env) -> gym.Env:
+    # Need to deepcopy the env, but deepcopy doesn't work with pygame's 
+    # WorldSurface (used by EnvViewer). We monkey-patch EnvViewer.__deepcopy__ 
+    # temporarily to properly reconstruct the viewer without pickling surfaces.
+    try:
+        from highway_env.envs.common.graphics import EnvViewer
+        original_deepcopy = getattr(EnvViewer, "__deepcopy__", None)
+        EnvViewer.__deepcopy__ = _env_viewer_deepcopy
+        patch_applied = True
+    except ImportError:
+        patch_applied = False
+
+    try:
+        base_env = deepcopy(env)
+    finally:
+        if patch_applied:
+            if original_deepcopy is None:
+                del EnvViewer.__deepcopy__
+            else:
+                EnvViewer.__deepcopy__ = original_deepcopy
+
+    return base_env
