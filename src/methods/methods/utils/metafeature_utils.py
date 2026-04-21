@@ -88,3 +88,14 @@ def get_action_space_size(env: gym.Env) -> int:
         return env.action_space.shape[0]
     else:
         raise ValueError(f"Unknown action space type: {env.action_space}")
+
+def get_max_episode_steps(env: gym.Env, config: dict) -> int:
+    try:
+        return config["duration"] * config["policy_frequency"]
+    except:
+        pass
+    try:
+        return config["horizon"]
+    except:
+        pass
+    raise NotImplementedError(f"Max episode steps not implemented for env: {env}")

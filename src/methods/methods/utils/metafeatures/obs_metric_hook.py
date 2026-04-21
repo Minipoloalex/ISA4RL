@@ -1,6 +1,7 @@
 import numpy as np
 from sklearn.decomposition import PCA
 from typing import Dict, List, Optional
+import scipy.stats
 
 from .step_info import StepInfo
 from .base_metric_hook import BaseMetricHook
@@ -98,6 +99,20 @@ class ObsHook(BaseMetricHook):
                 # Fallback if PCA fails (e.g., zero variance across all features)
                 pass
 
+        # 4. Attribute Entropy
+        entropies = []
+        for i in range(X.shape[1]):
+            col = X[:, i]
+            if np.std(col) < 1e-5:
+                entropies.append(0.0)
+            else:
+                counts, _ = np.histogram(col, bins='auto')
+                prob = counts / np.sum(counts)
+                entropies.append(float(scipy.stats.entropy(prob)))
+        
+        obs_entropy_mean = float(np.mean(entropies)) if entropies else 0.0
+        obs_entropy_sum = float(np.sum(entropies)) if entropies else 0.0
+
         return {
             "obs_mean": obs_mean,
             "obs_std": obs_std,
@@ -107,4 +122,6 @@ class ObsHook(BaseMetricHook):
             "pca_explained_var_pc1": pca_var_1,
             "pca_components_90_var": float(pca_dim_90),
             "pca_components_95_var": float(pca_dim_95),
+            "obs_entropy_mean": obs_entropy_mean,
+            "obs_entropy_sum": obs_entropy_sum,
         }

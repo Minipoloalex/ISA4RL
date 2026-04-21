@@ -6,10 +6,11 @@ from collections import Counter, deque
 from dataclasses import dataclass, field
 from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
 import gymnasium as gym
+from gymnasium.spaces.utils import flatdim
 import numpy as np
-from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook
-from methods.utils.general_utils import as_float
 
+from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook, ObsHook
+from methods.utils.general_utils import as_float
 from methods.configs import InstanceConfig
 from methods.utils.general_utils import _flatten_obs
 from methods.utils.metafeature_utils import (
@@ -21,6 +22,7 @@ from methods.utils.metafeature_utils import (
     ensure_idm_vehicle,
     PolicyFn,
     get_action_space_size,
+    get_max_episode_steps,
 )
 from methods.utils.metafeatures.model_based import (
     estimate_normalized_lipschitz,
@@ -47,7 +49,7 @@ def extract_metafeatures(
         
     out_data = dict(existing_data)
     env = config.ensure_test_env()
-    out_data["env_name"] = env.spec.id if env.spec else None
+    out_data["env_name"] = env.spec.id
 
     if "feature_groups" not in out_data:
         out_data["feature_groups"] = {}
@@ -144,7 +146,7 @@ def extract_metafeatures(
 
 def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
     # Initialize the hook we built earlier
-    hooks = [SimpleEgoMetricsHook()]
+    hooks = [SimpleEgoMetricsHook(), ObsHook()]
     for hook in hooks:
         hook.on_probe_start()
 
@@ -165,22 +167,6 @@ def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
         metrics.update(hook.finalize())
 
     return metrics
-
-def _model_based_metafeatures(env: gym.Env) -> Dict[str, float]:
-    logging.getLogger().setLevel(logging.DEBUG)
-    funcs = {
-        "normalized_lipschitz": estimate_normalized_lipschitz,
-        "transition_stochasticity": compute_transition_stochasticity,
-        "transition_linearity": compute_transition_linearity,
-        "action_landscape_ruggedness": compute_action_landscape_ruggedness,
-        "state_entropy": compute_state_entropy,
-    }
-    features = {}
-    logging.debug("Computing model-based meta-features")
-    for name, func in funcs.items():
-        logging.debug(f"Computing {name}...")
-        features[name] = func(env)
-    return features
 
 def _run_idm_probe(
     env: gym.Env,
@@ -240,12 +226,72 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density
     features["action_space_size"] = get_action_space_size(env)
+    features["max_steps"] = get_max_episode_steps(env, config)
 
     obs_space = env.observation_space
-    assert isinstance(obs_space, gym.spaces.Box)
-    features["obs_space_dim_log"] = int(np.log2(np.prod(obs_space.shape)))
+    
+    # Optional fallback for original log dim just in case
+    # If space is Dict/Tuple, np.prod doesn't work directly, so we flatten it
+    try:
+        dim = flatdim(obs_space)
+        features["obs_space_dim_log"] = int(np.log2(dim)) if dim > 0 else 0
+    except Exception:
+        if isinstance(obs_space, gym.spaces.Box):
+            features["obs_space_dim_log"] = int(np.log2(np.prod(obs_space.shape)))
+        else:
+            features["obs_space_dim_log"] = 0
+
+    cat_count, num_count, bin_count = _count_space_attributes(obs_space)
+    features["obs_categorical_count"] = float(cat_count)
+    features["obs_numerical_count"] = float(num_count)
+    features["obs_binary_count"] = float(bin_count)
 
     return features
+
+def _count_space_attributes(space: gym.Space) -> Tuple[int, int, int]:
+    num_cat = 0
+    num_num = 0
+    num_bin = 0
+
+    if isinstance(space, gym.spaces.Box):
+        is_int = np.issubdtype(space.dtype, np.integer)
+        flat_low = space.low.flatten()
+        flat_high = space.high.flatten()
+        for l, h in zip(flat_low, flat_high):
+            if is_int:
+                if l == 0 and h == 1:
+                    num_bin += 1
+                else:
+                    num_cat += 1
+            else:
+                num_num += 1
+    elif isinstance(space, gym.spaces.Discrete):
+        if space.n == 2:
+            num_bin += 1
+        else:
+            num_cat += 1
+    elif isinstance(space, gym.spaces.MultiDiscrete):
+        for n in space.nvec.flatten():
+            if n == 2:
+                num_bin += 1
+            else:
+                num_cat += 1
+    elif isinstance(space, gym.spaces.MultiBinary):
+        num_bin += int(np.prod(space.shape))
+    elif isinstance(space, gym.spaces.Tuple):
+        for s in space.spaces:
+            c, n, b = _count_space_attributes(s)
+            num_cat += c
+            num_num += n
+            num_bin += b
+    elif isinstance(space, gym.spaces.Dict):
+        for s in space.spaces.values():
+            c, n, b = _count_space_attributes(s)
+            num_cat += c
+            num_num += n
+            num_bin += b
+
+    return num_cat, num_num, num_bin
 
 def _random_probe_features(probe: Dict[str, Any]) -> Dict[str, float]:
     features: Dict[str, float] = {}
