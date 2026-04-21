@@ -8,7 +8,6 @@ import numpy as np
 
 from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook, ObsHook
 from methods.utils.metafeatures.other_vehicles_hook import OtherVehiclesBehaviorHook
-from methods.utils.general_utils import as_float
 from methods.configs import InstanceConfig
 from methods.utils.general_utils import _flatten_obs
 from methods.utils.metafeature_utils import (
@@ -21,7 +20,6 @@ from methods.utils.metafeature_utils import (
     PolicyFn,
     get_action_space_size,
     get_max_episode_steps,
-    safe_copy_env,
 )
 from methods.utils.metafeatures.model_based import (
     estimate_normalized_lipschitz,
@@ -140,7 +138,7 @@ def extract_metafeatures(
             logger.info(f"Skipping {mb_group_name} for instance: {config.instance_folder_path}")
     logger.info(f"Done computing MB features for instance: {config.instance_folder_path}")
 
-    # takes too long to compute
+    # Takes too long to compute
     # if should_compute("pic"):
     #     logger.info(f"Computing pic for instance: {config.instance_folder_path}")
     #     from methods.utils.metafeatures.pic_metafeature import compute_pic_end_to_end
@@ -232,10 +230,14 @@ def _run_probe(
         while not done:
             action = policy(obs, info)
             new_obs, reward, terminated, truncated, info = env.step(action)
-            
-            # Save other vehicles states into info so hooks can use them later
+
+            info = dict(info)
+            # Save traffic-derived signals into info so hooks can use them later.
             info["other_vehicles_states"] = _extract_other_vehicles_states(env)
-            
+            min_ttc = _extract_min_ttc(env)
+            if min_ttc is not None:
+                info["min_ttc"] = min_ttc
+
             step_info = StepInfo(obs, action, reward, new_obs, terminated, truncated, info)
             traj.append(step_info)
             
@@ -279,6 +281,84 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
         
     return []
 
+
+def _extract_min_ttc(env: gym.Env) -> Optional[float]:
+    base_env = env.unwrapped
+    road = getattr(base_env, "road", None)
+    ego = getattr(base_env, "vehicle", None)
+    if road is None or ego is None:
+        return None
+
+    vehicles = getattr(road, "vehicles", None)
+    if vehicles is None:
+        return None
+
+    ego_lane = _lane_id_from_vehicle(ego)
+    ego_pos = _vehicle_position(ego)
+    ego_speed = getattr(ego, "speed", None)
+    if ego_lane is None or ego_pos.size < 2 or ego_speed is None:
+        return None
+
+    ttc_samples: List[float] = []
+    for other in vehicles:
+        if other is ego:
+            continue
+
+        other_lane = _lane_id_from_vehicle(other)
+        if other_lane is None or abs(other_lane - ego_lane) > 1:
+            continue
+
+        other_pos = _vehicle_position(other)
+        other_speed = getattr(other, "speed", None)
+        if other_pos.size < 2 or other_speed is None:
+            continue
+
+        longitudinal_gap = float(other_pos[0] - ego_pos[0])
+        if longitudinal_gap >= 0.0:
+            ttc = _ttc_from_gap(longitudinal_gap, _closing_speed(float(ego_speed), float(other_speed)))
+        else:
+            ttc = _rear_ttc(abs(longitudinal_gap), float(other_speed), float(ego_speed))
+        ttc_samples.append(ttc)
+
+    finite_ttc = [value for value in ttc_samples if math.isfinite(value)]
+    return float(min(finite_ttc)) if finite_ttc else float("inf")
+
+
+def _ttc_from_gap(gap: float, closing_speed: Optional[float]) -> float:
+    if not math.isfinite(gap) or closing_speed is None or closing_speed <= 1e-6:
+        return float("inf")
+    return float(max(gap, 0.0) / max(closing_speed, 1e-6))
+
+
+def _closing_speed(ego_speed: float, other_speed: Optional[float]) -> Optional[float]:
+    if other_speed is None:
+        return None
+    return max(ego_speed - other_speed, 0.0)
+
+
+def _rear_ttc(gap: float, other_speed: Optional[float], ego_speed: float) -> float:
+    if not math.isfinite(gap) or other_speed is None:
+        return float("inf")
+    rel_speed = max(other_speed - ego_speed, 0.0)
+    if rel_speed <= 1e-6:
+        return float("inf")
+    return float(gap / rel_speed)
+
+
+def _vehicle_position(vehicle: Any) -> np.ndarray:
+    return np.asarray(vehicle.position, dtype=float)
+
+
+def _lane_id_from_vehicle(vehicle: Any) -> Optional[int]:
+    if vehicle is None:
+        return None
+    lane_index = getattr(vehicle, "lane_index", None)
+    if isinstance(lane_index, (list, tuple)) and lane_index:
+        lane_index = lane_index[-1]
+    if isinstance(lane_index, (np.integer, int)):
+        return int(lane_index)
+    return None
+
 def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
     config = base_env.config
@@ -286,6 +366,7 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
 
     lanes = config.get("lanes_count", 2)
     traffic_density = config.get("vehicles_density", 0)
+    vehicles_count = config.get("vehicles_count", 0)
 
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density
@@ -303,7 +384,7 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
         if isinstance(obs_space, gym.spaces.Box):
             features["obs_space_dim_log"] = int(np.log2(np.prod(obs_space.shape)))
         else:
-            features["obs_space_dim_log"] = 0
+            raise ValueError(f"Unsupported observation space type: {type(obs_space)}")
 
     cat_count, num_count, bin_count = _count_space_attributes(obs_space)
     features["obs_categorical_count"] = float(cat_count)
@@ -388,4 +469,3 @@ def _combine_probe_features(
     # features["obs_complexity"] = random_probe["obs_flat_dim"]
     features["safety_gap"] = (1.0 - i_collision) - (1.0 - r_collision)
     return features
-

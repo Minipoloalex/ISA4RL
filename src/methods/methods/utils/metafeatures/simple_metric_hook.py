@@ -12,7 +12,8 @@ class SimpleEgoMetricsHook(BaseMetricHook):
     Now includes higher-order statistics like SNR, Skewness, and Kurtosis.
     """
 
-    def __init__(self):
+    def __init__(self, close_collision_ttc_threshold: float = 1.0):
+        self.close_collision_ttc_threshold = close_collision_ttc_threshold
         self._reset_stats()
 
     def _reset_stats(self) -> None:
@@ -22,6 +23,8 @@ class SimpleEgoMetricsHook(BaseMetricHook):
         self.episode_crashes: List[int] = []
         self.episode_timeouts: List[int] = []
         self.all_speeds: List[float] = []
+        self.close_collision_steps = 0
+        self.total_steps = 0
 
         # Current episode state
         self.current_reward = 0.0
@@ -41,12 +44,19 @@ class SimpleEgoMetricsHook(BaseMetricHook):
     def on_step(self, context: StepInfo) -> None:
         self.current_reward += float(context.reward)
         self.current_length += 1
+        self.total_steps += 1
 
         if context.info.get("crashed", False):
             self.current_crashed = True
 
         if context.truncated:
             self.current_timeout = True
+
+        min_ttc = context.info.get("min_ttc", float("inf"))
+        is_close_collision = bool(context.info.get("crashed", False)) or (
+            np.isfinite(min_ttc) and float(min_ttc) < self.close_collision_ttc_threshold
+        )
+        self.close_collision_steps += int(is_close_collision)
 
         speed = context.info["speed"]
         self.all_speeds.append(float(speed))
@@ -91,6 +101,7 @@ class SimpleEgoMetricsHook(BaseMetricHook):
             "length_mean": float(np.mean(lengths)),
             "length_std": float(np.std(lengths)),
             "collision_rate": float(np.mean(self.episode_crashes)),
+            "close_collision_rate": float(self.close_collision_steps / self.total_steps) if self.total_steps else 0.0,
             "timeout_rate": float(np.mean(self.episode_timeouts)),
             "speed_mean": s_mean,
             "speed_std": s_std,
