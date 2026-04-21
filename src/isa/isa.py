@@ -9,10 +9,10 @@ from instancespace import InstanceSpace
 from instancespace.data import metadata as isa_metadata
 from instancespace.data.options import InstanceSpaceOptions, from_json_file, PerformanceOptions
 
-from common.file_utils import BASE_OUTPUT_PATH, ensure_dir
+from common.file_utils import BASE_RESULTS_PATH, ensure_dir
 
-ISA_RESULTS_DIR = BASE_OUTPUT_PATH / "isa"
-DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "new_instancespace_dataset.csv"
+ISA_RESULTS_DIR = BASE_RESULTS_PATH / "isa"
+DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "instancespace_dataset.csv"
 DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / f"analysis_{str(time.time_ns())}"
 
 

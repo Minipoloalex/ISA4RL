@@ -30,6 +30,7 @@ from methods.configs import TrainConfig, InstanceConfig
 from methods.train import train
 from methods.evaluate import evaluate, show_eval_results
 from methods.metafeatures import extract_metafeatures as compute_metafeatures
+from methods.metafeatures import TIMESTAMP_KEY
 from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
 from methods.utils.load_config_utils import (
     is_trained,
@@ -112,10 +113,16 @@ def _extract_and_save(
     existing_data = read_json(path) if path.is_file() else {}
     extract_results = compute_metafeatures(config, requested_groups, existing_data, update_threshold)
     save_json(path, extract_results)
+    print(f"Done: {config.instance_folder_path}")
 
 
-def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, requested_groups: Optional[List[str]] = None, update_threshold: float = 0.0):
-    assert(workers > 0)
+def extract_metafeatures(
+    instance_configs: List[InstanceConfig],
+    workers: int,
+    requested_groups: Optional[List[str]] = None,
+    update_threshold: float = 0.0,
+) -> None:
+    assert workers > 0
     
     def needs_compute(config: InstanceConfig) -> bool:
         path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
@@ -144,7 +151,7 @@ def extract_metafeatures(instance_configs: List[InstanceConfig], workers: int, r
         for g in groups_to_check:
             if g not in feature_groups:
                 return True
-            if feature_groups[g].get("timestamp", 0.0) < update_threshold:
+            if feature_groups[g].get(TIMESTAMP_KEY, 0.0) < update_threshold:
                 return True
         return False
 

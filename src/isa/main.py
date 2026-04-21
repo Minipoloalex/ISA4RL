@@ -3,6 +3,9 @@ import logging
 from typing import Dict, Any, Optional, Sequence
 from pathlib import Path
 import pandas as pd
+import time
+from isa import run_instance_space_analysis, InstanceSpaceAnalysisError
+import datetime
 
 from common.eval_summary import aggregate_metrics
 from common.file_utils import (
@@ -139,31 +142,127 @@ def build_isa_dataset(metric_key: str = "mean_reward", debug: bool = False, outp
     logger.info(f"[isa] Saved to '{output_path}'.")
     return df
 
+def _extensive_metafeature_analysis(df: pd.DataFrame) -> None:
+    for col in df.columns:
+        if not col.startswith("feature_"):
+            continue
+        print(f">> {col}")
+        nr = df[col].nunique(dropna=False)
+        print(f"Unique values: {nr}")
+        if nr <= 25:
+            print(df[col].unique())
+        
+        if pd.api.types.is_numeric_dtype(df[col]):
+            print(f"Min: {df[col].min()}, Max: {df[col].max()}")
+            print(f"Mean: {df[col].mean():.4f}, Std: {df[col].std():.4f}")
+            
+        print("-" * 40)
+
+def _print_summary(df: pd.DataFrame) -> None:
+    n_rows, n_cols = df.shape
+    duplicates = df.duplicated().sum()
+    missing_counts = df.isna().sum()
+    missing_total = int(missing_counts.sum())
+    missing_columns = int((missing_counts > 0).sum())
+
+    print(f"Rows: {n_rows:,}, columns: {n_cols:,}")
+    print(f"Duplicate rows: {duplicates:,}")
+    print(f"Missing values: {missing_total:,} across {missing_columns} columns")
+
+    top_missing = missing_counts[missing_counts > 0].sort_values(ascending=False).head(5)
+    if not top_missing.empty:
+        print("\nColumns with most missing values:")
+        for column, count in top_missing.items():
+            pct = count / n_rows * 100
+            print(f"  - {column}: {count:,} ({pct:.2f}%)")
+
+    unique_counts = df.nunique(dropna=False)
+    print("\nColumns with lowest cardinality:")
+    for column, count in unique_counts.sort_values().head(5).items():
+        print(f"  - {column}: {count:,} unique values")
+
+    numeric_df = df.select_dtypes(include="number")
+    if numeric_df.empty:
+        return
+
+    variance = numeric_df.var(numeric_only=True).sort_values(ascending=False).head(5)
+    print("\nHigh-variance numeric columns:")
+    for column, value in variance.items():
+        print(f"  - {column}: variance {value:.2f}")
+
+    std = numeric_df.std(numeric_only=True)
+    mean_abs = numeric_df.abs().mean(numeric_only=True).replace(0, pd.NA)
+    cv = (std / mean_abs).dropna()
+    if not cv.empty:
+        print("\nColumns with highest coefficient of variation (std/|mean|):")
+        for column, value in cv.sort_values(ascending=False).head(5).items():
+            print(f"  - {column}: {value:.2f}")
+
+    print("\n")
+    _extensive_metafeature_analysis(df)
+
+
 def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser = argparse.ArgumentParser(
-        description="Build an instance-space dataset (one row per instance, columns for metafeatures and algorithm performance)."
+        description="ISA tool suite: build dataset, run instance space analysis, or analyze metafeatures."
     )
+    parser.add_argument(
+        "--task",
+        choices=["build", "analyze", "metafeatures"],
+        required=True,
+        help="Task to execute.",
+    )
+    # common arguments
+    parser.add_argument(
+        "--dataset",
+        type=Path,
+        default=BASE_RESULTS_PATH / "isa" / "instancespace_dataset.csv",
+        help="Path to the dataset CSV file.",
+    )
+    
+    # build args
     parser.add_argument(
         "--debug",
         action="store_true",
-        help="Include diagnostic metrics and others from metafeature extraction.",
+        help="Include diagnostic metrics (for build task).",
     )
     parser.add_argument(
         "--metric",
         default="mean_reward",
-        help="Evaluation metric field to extract from eval summaries (default: mean_reward).",
+        help="Evaluation metric field to extract (for build task).",
     )
+    
+    # analyze args
     parser.add_argument(
         "--output",
         type=Path,
-        default=BASE_RESULTS_PATH / "isa" / "instancespace_dataset.csv",
-        help="CSV file where the dataset will be stored.",
+        default=BASE_RESULTS_PATH / "isa" / f"analysis_{datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')}",
+        help="Directory where ISA outputs will be stored (for analyze task).",
+    )
+    parser.add_argument(
+        "--options",
+        type=Path,
+        default=None,
+        help="Optional JSON file overriding Instance Space options (for analyze task).",
     )
     return parser.parse_args(argv)
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
-    build_isa_dataset(args.metric, args.debug, args.output)
+    if args.task == "build":
+        build_isa_dataset(args.metric, args.debug, args.dataset)
+    elif args.task == "analyze":
+        try:
+            run_instance_space_analysis(args.dataset, args.output, args.options)
+        except InstanceSpaceAnalysisError as err:
+            print(f"[isa] {err}")
+            raise SystemExit(1) from err
+    elif args.task == "metafeatures":
+        if not args.dataset.is_file():
+            print(f"[isa] Dataset not found: '{args.dataset}'")
+            return
+        df = pd.read_csv(str(args.dataset))
+        _print_summary(df)
 
 if __name__ == "__main__":
     main()

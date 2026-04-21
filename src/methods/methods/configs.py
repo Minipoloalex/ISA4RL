@@ -53,6 +53,7 @@ class InstanceConfig:
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
         instance_folder_path = RESULTS_INSTANCE_FOLDER_PATH(base_env_path, instance_config_id)
         ensure_dir(instance_folder_path)
+        save_instance_config(instance_folder_path, env_config, obs_config)
 
         if "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
