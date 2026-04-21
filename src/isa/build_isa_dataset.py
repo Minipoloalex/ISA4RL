@@ -3,6 +3,7 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 from typing import Dict, List, Optional, Sequence, Tuple, Any
+import logging
 
 import pandas as pd
 
@@ -24,6 +25,9 @@ from common.config_utils import (
     get_all_eval_configs,
     map_to_train_id,
 )
+
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 ISA_OUTPUT_DIR = BASE_OUTPUT_PATH / "isa"
 DATASET_FILENAME = "instancespace_dataset.csv"
@@ -87,20 +91,20 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
         obs_cfg = cfg["obs_config"]
         algo_cfg = cfg["algo_config"]
 
-        env_id = int(env_cfg["id"])
-        eval_seed = int(env_cfg["eval_seed"])
-        orig_env_id = int(env_cfg["orig_id"])
-        obs_id = int(obs_cfg["id"])
+        # env_id = int(env_cfg["id"])
+        # eval_seed = int(env_cfg["eval_seed"])
+        # orig_env_id = int(env_cfg["orig_id"])
+        # obs_id = int(obs_cfg["id"])
         algo_name = str(algo_cfg["algo"]).lower()
-        algo_id = algo_cfg["id"]
-        key = (env_id, obs_id)
-        train_id = map_to_train_id(orig_env_id, obs_id, algo_id)
+        # algo_id = algo_cfg["id"]
+        # key = (env_id, obs_id)
+        # train_id = map_to_train_id(orig_env_id, obs_id, algo_id)
 
         row = instance_rows.get(key)
         if row is None:
             source = f"{env_cfg["env_id"]}_{obs_cfg["type"]}"
             # source = f"{env_cfg["env_id"]}"
-            meta = _load_metafeatures(env_id, obs_id, source, debug)
+            # meta = _load_metafeatures(env_id, obs_id, source, debug)
             if meta is None:
                 missing_meta.append(key)
                 continue
@@ -118,9 +122,9 @@ def build_dataset(metric_key: str, debug: bool) -> pd.DataFrame:
 
     if missing_meta:
         unique = sorted(set(missing_meta))
-        print(f"[isa] Skipped {len(unique)} instances without metafeatures.")
+        logger.warning(f"[isa] Skipped {len(unique)} instances without metafeatures.")
     if missing_metric:
-        print(f"[isa] {len(missing_metric)} runs are missing evaluation data.")
+        logger.warning(f"[isa] {len(missing_metric)} runs are missing evaluation data.")
 
     # Normalize, with best algorithm performance = 1
     # for k, v in instance_rows.items():
@@ -154,13 +158,13 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--metric",
         default=DEFAULT_METRIC,
-        help="Evaluation metric field to extract from eval summaries (default: mean_reward).",
+        help=f"Evaluation metric field to extract from eval summaries (default: {DEFAULT_METRIC}).",
     )
     parser.add_argument(
         "--output",
         type=Path,
         default=ISA_OUTPUT_DIR / DATASET_FILENAME,
-        help="CSV file where the dataset will be stored.",
+        help=f"CSV file where the dataset will be stored (default: {ISA_OUTPUT_DIR / DATASET_FILENAME}).",
     )
     return parser.parse_args(argv)
 
@@ -169,21 +173,21 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
     dataset = build_dataset(args.metric, args.debug)
     if dataset.empty:
-        print("[isa] No instances with both metafeatures and evaluation metrics were found.")
-        return
+        logger.error("[isa] No instances with both metafeatures and evaluation metrics were found.")
+        raise ValueError("[isa] No instances with both metafeatures and evaluation metrics were found.")
     feature_columns = [col for col in dataset.columns if col.startswith("feature_")]
     algo_columns = [col for col in dataset.columns if col.startswith(f"algo_")]
     leading_columns = [col for col in dataset.columns if col not in algo_columns]
     dataset = dataset[leading_columns + algo_columns]
 
     output_path = save_dataset(dataset, args.output)
-    print(
+    logger.info(
         "[isa] Dataset ready for instancespace:"
         f" {len(dataset)} instances,"
         f" {len(feature_columns)} (meta-)feature columns,"
         f" {len(algo_columns)} algorithm performance columns."
     )
-    print(f"[isa] Saved to '{output_path}'.")
+    logger.info(f"[isa] Saved to '{output_path}'.")
 
 
 if __name__ == "__main__":

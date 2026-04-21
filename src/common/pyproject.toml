@@ -5,7 +5,7 @@ description = "Add your description here"
 requires-python = ">=3.12"
 dependencies = [
     "matplotlib>=3.10.8",
-    "numpy>=2.4.4",
+    "numpy",
     "pyyaml>=6.0.3",
 ]
 
