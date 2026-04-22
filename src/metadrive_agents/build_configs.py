@@ -87,7 +87,7 @@ def build_metadrive_configs() -> List[CONFIG]:
             "traffic_density": veh_density,
             "discrete_action": discrete_action,
             "horizon": horizon,
-            "image_observation": False,  # TODO: define True and False, or don't define at all
+            "image_observation": False, # The image observation is too slow per timestep
         })
         config["config"]["map_config"] = {
             BaseMap.GENERATE_TYPE: map_type,
@@ -119,7 +119,7 @@ def build_metadrive_configs() -> List[CONFIG]:
 
 def validate_algo_config(algo_config: CONFIG):
     algo_config.pop("normalize", None)
-    # algo_config["policy"] = MULTI_INPUT
+    algo_config["policy"] = MULTI_INPUT
     return algo_config
 
 def valid_config(env_config: CONFIG, algo_config: CONFIG):
