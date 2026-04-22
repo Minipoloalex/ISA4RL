@@ -163,7 +163,6 @@ def train(
     model.learn(**learn_kwargs)
     elapsed = time.perf_counter() - before
     print(f"Training finished in {elapsed:.2f}s ({elapsed / 60:.2f} min) for {timesteps} timesteps.")
-
     final_model_path = models_dir / MODEL_FILE
     model.save(final_model_path)
 

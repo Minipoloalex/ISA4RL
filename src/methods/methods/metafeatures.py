@@ -84,7 +84,8 @@ def extract_metafeatures(
         )
         random_probe = traj_metafeatures(trajectories_random)
         idm_probe = traj_metafeatures(trajectories_idm)
-        
+        logger.info(f"Random probe achieved performance of {random_probe["reward_mean"]} mean return")
+        logger.info(f"IDM probe achieved performance of {idm_probe["reward_mean"]} mean return")
         # idm_advantage = idm_probe.get("mean_episode_return", 0.0) - random_probe.get("mean_episode_return", 0.0)
         # safety_delta = random_probe.get("collision_rate", 0.0) - idm_probe.get("collision_rate", 0.0)
         
@@ -443,31 +444,31 @@ def _count_space_attributes(space: gym.Space) -> Tuple[int, int, int]:
 def _probe_features(probe: Dict[str, Any], prefix: str) -> Dict[str, float]:
     return {f"{prefix}_{key}": probe[key] for key in probe}
 
-def _combine_probe_features(
-    random_probe: Dict[str, Any],
-    idm_probe: Dict[str, Any],
-) -> Dict[str, float]:
-    features: Dict[str, float] = {}
+# def _combine_probe_features(
+#     random_probe: Dict[str, Any],
+#     idm_probe: Dict[str, Any],
+# ) -> Dict[str, float]:
+#     features: Dict[str, float] = {}
 
-    r_return = random_probe["mean_episode_return"]
-    i_return = idm_probe["mean_episode_return"]
+#     r_return = random_probe["mean_episode_return"]
+#     i_return = idm_probe["mean_episode_return"]
 
-    r_std = random_probe["std_episode_return"]
-    i_std = idm_probe["std_episode_return"]
-    r_speed = random_probe["mean_speed"]
-    i_speed = idm_probe["mean_speed"]
+#     r_std = random_probe["std_episode_return"]
+#     i_std = idm_probe["std_episode_return"]
+#     r_speed = random_probe["mean_speed"]
+#     i_speed = idm_probe["mean_speed"]
 
-    r_collision = random_probe["collision_rate"]
-    i_collision = idm_probe["collision_rate"]
+#     r_collision = random_probe["collision_rate"]
+#     i_collision = idm_probe["collision_rate"]
 
-    # r_timeout = random_probe["timeout_rate"]
-    # i_timeout = idm_probe["timeout_rate"]
+#     # r_timeout = random_probe["timeout_rate"]
+#     # i_timeout = idm_probe["timeout_rate"]
 
-    features["idm_return_gain"] = i_return - r_return
-    # features["idm_return_ratio"] = i_return / (abs(r_return) + 1e-6)
-    features["idm_collision_reduction"] = max(r_collision - i_collision, 0.0)
-    features["idm_speed_gain"] = i_speed - r_speed
-    features["stability_gap"] = r_std - i_std
-    # features["obs_complexity"] = random_probe["obs_flat_dim"]
-    features["safety_gap"] = (1.0 - i_collision) - (1.0 - r_collision)
-    return features
+#     features["idm_return_gain"] = i_return - r_return
+#     # features["idm_return_ratio"] = i_return / (abs(r_return) + 1e-6)
+#     features["idm_collision_reduction"] = max(r_collision - i_collision, 0.0)
+#     features["idm_speed_gain"] = i_speed - r_speed
+#     features["stability_gap"] = r_std - i_std
+#     # features["obs_complexity"] = random_probe["obs_flat_dim"]
+#     features["safety_gap"] = (1.0 - i_collision) - (1.0 - r_collision)
+#     return features
