@@ -1,6 +1,7 @@
 from typing import Any, Callable, Dict, List, Optional, Protocol, Tuple, SupportsFloat
 from copy import deepcopy
 from types import MethodType
+import math
 
 import numpy as np
 import gymnasium as gym
@@ -35,6 +36,119 @@ def make_random_policy(env: gym.Env) -> PolicyFn:
 
     def policy(_: Any, __: Dict[str, Any]) -> Any:
         return action_space.sample()
+
+    return policy
+
+
+def is_parking_env(env: gym.Env) -> bool:
+    return env.spec.id == "parking-v0"
+
+
+def _wrap_to_pi(angle: float) -> float:
+    return (angle + math.pi) % (2.0 * math.pi) - math.pi
+
+
+def _continuous_action_ranges(env: gym.Env) -> Tuple[Tuple[float, float], Tuple[float, float]]:
+    action_type = env.unwrapped.action_type
+    acceleration_range = action_type.acceleration_range
+    steering_range = action_type.steering_range
+    return tuple(acceleration_range), tuple(steering_range)
+
+
+def _normalized_continuous_action(
+    acceleration: float,
+    steering: float,
+    acceleration_range: Tuple[float, float],
+    steering_range: Tuple[float, float],
+) -> np.ndarray:
+    def normalize(value: float, value_range: Tuple[float, float]) -> float:
+        lo, hi = value_range
+        if abs(hi - lo) < 1e-8:
+            return 0.0
+        return float(np.clip(2.0 * (value - lo) / (hi - lo) - 1.0, -1.0, 1.0))
+
+    return np.asarray(
+        [
+            normalize(acceleration, acceleration_range),
+            normalize(steering, steering_range),
+        ],
+        dtype=np.float32,
+    )
+
+
+def make_parking_geometric_policy(env: gym.Env) -> PolicyFn:
+    """Create a non-learned goal-seeking controller for highway-env parking.
+
+    The policy uses simulator state, not trained parameters. It acts as the
+    parking counterpart to IDM: task-informed, deterministic, and independent
+    from the RL algorithms being compared.
+    """
+
+    if not isinstance(env.action_space, gym.spaces.Box):
+        raise NotImplementedError("Parking geometric policy expects a continuous action space.")
+
+    acceleration_range, steering_range = _continuous_action_ranges(env)
+    max_forward_speed = 2.2
+    max_reverse_speed = -1.4
+    slow_radius = 8.0
+    stop_radius = 0.75
+    heading_align_radius = 2.5
+    kp_speed = 2.0
+    kp_steering = 1.35
+
+    def policy(_: Any, __: Dict[str, Any]) -> np.ndarray:
+        base_env = env.unwrapped
+        vehicle = getattr(base_env, "vehicle", None)
+        goal = getattr(vehicle, "goal", None)
+        if vehicle is None or goal is None:
+            return np.zeros(env.action_space.shape, dtype=env.action_space.dtype)
+
+        position = np.asarray(vehicle.position, dtype=float)
+        goal_position = np.asarray(goal.position, dtype=float)
+        delta = goal_position - position
+        distance = float(np.linalg.norm(delta))
+
+        heading = float(vehicle.heading)
+        goal_heading = float(getattr(goal, "heading", heading))
+        speed = float(getattr(vehicle, "speed", 0.0))
+
+        if distance > 1e-6:
+            target_heading = math.atan2(float(delta[1]), float(delta[0]))
+        else:
+            target_heading = goal_heading
+
+        forward_error = _wrap_to_pi(target_heading - heading)
+        reverse_error = _wrap_to_pi(target_heading + math.pi - heading)
+        reversing = abs(reverse_error) + 0.2 < abs(forward_error)
+
+        if distance < heading_align_radius:
+            steering_error = _wrap_to_pi(goal_heading - heading)
+            desired_speed = 0.0 if distance < stop_radius and abs(steering_error) < 0.25 else 0.7
+            reversing = False
+        elif reversing:
+            steering_error = reverse_error
+            desired_speed = max_reverse_speed * min(distance / slow_radius, 1.0)
+        else:
+            steering_error = forward_error
+            desired_speed = max_forward_speed * min(distance / slow_radius, 1.0)
+
+        acceleration = np.clip(
+            kp_speed * (desired_speed - speed),
+            acceleration_range[0],
+            acceleration_range[1],
+        )
+        steering = np.clip(
+            kp_steering * steering_error,
+            steering_range[0],
+            steering_range[1],
+        )
+
+        return _normalized_continuous_action(
+            float(acceleration),
+            float(steering),
+            acceleration_range,
+            steering_range,
+        ).astype(env.action_space.dtype)
 
     return policy
 

@@ -3,6 +3,7 @@ import random
 from pathlib import Path
 from typing import Any, Optional, Tuple
 import torch
+import numpy as np
 
 from common.file_utils import *
 from common.config_utils import *
@@ -25,6 +26,11 @@ def discretize(obs: np.ndarray, clip_range: Tuple[float, float] = (-5.0, 5.0), b
 def _flatten_obs(obs: Any) -> np.ndarray:
     if isinstance(obs, np.ndarray):
         return obs.astype(np.float32).ravel()
+    if isinstance(obs, dict):
+        parts = []
+        for key in sorted(obs):
+            parts.append(_flatten_obs(obs[key]))
+        return np.concatenate(parts).astype(np.float32).ravel() if parts else np.asarray([], dtype=np.float32)
     if isinstance(obs, (list, tuple)):
         return np.asarray(obs, dtype=np.float32).ravel()
     if isinstance(obs, (int, float)):

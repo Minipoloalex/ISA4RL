@@ -5,6 +5,7 @@ import scipy.stats
 
 from .step_info import StepInfo
 from .base_metric_hook import BaseMetricHook
+from methods.utils.general_utils import _flatten_obs
 
 class ObsHook(BaseMetricHook):
     """
@@ -31,8 +32,9 @@ class ObsHook(BaseMetricHook):
         self.last_obs = None
 
     def on_step(self, context: StepInfo) -> None:
-        # Flatten the observation (highway-env is usually V x F matrix)
-        flat_obs = np.array(context.observation).flatten()
+        # Flatten the observation (highway-env is usually V x F matrix;
+        # parking uses a Dict goal observation).
+        flat_obs = _flatten_obs(context.observation)
         self.all_observations.append(flat_obs)
 
         # Calculate volatility: L2 norm of the difference between current and last observation

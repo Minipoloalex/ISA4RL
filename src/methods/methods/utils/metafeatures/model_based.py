@@ -4,6 +4,7 @@ from sklearn.linear_model import LinearRegression
 from collections import Counter
 import logging
 from methods.utils.metafeature_utils import safe_copy_env
+from methods.utils.general_utils import _flatten_obs
 
 logger = logging.getLogger(__name__)
 
@@ -84,7 +85,7 @@ def compute_transition_stochasticity(env, num_states=30, trials_per_action=10):
         for _ in range(trials_per_action):
             temp_env = safe_copy_env(base_env)
             next_obs, _, _, _, _ = temp_env.step(action)
-            next_states.append(next_obs)
+            next_states.append(_flatten_obs(next_obs))
             temp_env.close()
             
         next_states = np.array(next_states)
@@ -105,11 +106,11 @@ def compute_transition_linearity(env, num_samples=1000):
     for _ in range(num_samples):
         action = env.action_space.sample()
         
-        flat_obs = np.atleast_1d(obs).flatten()
+        flat_obs = _flatten_obs(obs)
         flat_action = np.atleast_1d(action).flatten()
         
         next_obs, _, terminated, truncated, _ = env.step(action)
-        flat_next_obs = np.atleast_1d(next_obs).flatten()
+        flat_next_obs = _flatten_obs(next_obs)
         
         O_current.append(flat_obs)
         A.append(flat_action)
@@ -202,10 +203,7 @@ def compute_state_entropy(env: gym.Env, num_steps=10000, decimals=1):
     state_counts = Counter()
 
     for _ in range(num_steps):
-        if isinstance(state, np.ndarray):
-            state_rep = tuple(np.round(state, decimals).flatten())
-        else:
-            state_rep = state
+        state_rep = tuple(np.round(_flatten_obs(state), decimals))
 
         state_counts[state_rep] += 1
         

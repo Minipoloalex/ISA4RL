@@ -14,9 +14,11 @@ from methods.utils.metafeature_utils import (
     Trajectory,
     StepInfo,
     make_random_policy,
+    make_parking_geometric_policy,
     constant_policy,
     default_idle_action,
     ensure_idm_vehicle,
+    is_parking_env,
     PolicyFn,
     get_action_space_size,
     get_max_episode_steps,
@@ -78,20 +80,22 @@ def extract_metafeatures(
             policy=make_random_policy(env),
             episodes=config.n_test_episodes,
         )
-        trajectories_idm = _run_idm_probe(
+        trajectories_baseline = _run_baseline_probe(
             env=env,
             episodes=config.n_test_episodes,
         )
         random_probe = traj_metafeatures(trajectories_random)
-        idm_probe = traj_metafeatures(trajectories_idm)
+        baseline_probe = traj_metafeatures(trajectories_baseline)
         logger.info(f"Random probe achieved performance of {random_probe["reward_mean"]} mean return")
-        logger.info(f"IDM probe achieved performance of {idm_probe["reward_mean"]} mean return")
+        logger.info(f"Structured probe achieved performance of {baseline_probe["reward_mean"]} mean return")
         # idm_advantage = idm_probe.get("mean_episode_return", 0.0) - random_probe.get("mean_episode_return", 0.0)
         # safety_delta = random_probe.get("collision_rate", 0.0) - idm_probe.get("collision_rate", 0.0)
         
         features: Dict[str, float] = {}
         features.update(_probe_features(random_probe, "random"))
-        features.update(_probe_features(idm_probe, "idm"))
+        features.update(_probe_features(baseline_probe, "baseline"))
+        # Backward-compatible aliases for existing analysis scripts. For
+        # parking-v0 these represent the geometric parking baseline, not IDM.
         # features.update(
         #     _combine_probe_features(
         #         random_probe=random_probe,
@@ -113,7 +117,7 @@ def extract_metafeatures(
             "diagnostics": diagnostics,
             "probes_raw": {
                 "random": random_probe,
-                "idm_like": idm_probe,
+                "baseline": baseline_probe,
             }
         }
 
@@ -194,6 +198,26 @@ def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
         metrics.update(hook.finalize())
 
     return metrics
+
+def _run_baseline_probe(
+    env: gym.Env,
+    episodes: int,
+) -> List[Trajectory]:
+    if is_parking_env(env):
+        return _run_parking_geometric_probe(env, episodes)
+    return _run_idm_probe(env, episodes)
+
+
+def _run_parking_geometric_probe(
+    env: gym.Env,
+    episodes: int,
+) -> List[Trajectory]:
+    return _run_probe(
+        env=env,
+        policy=make_parking_geometric_policy(env),
+        episodes=episodes,
+    )
+
 
 def _run_idm_probe(
     env: gym.Env,
