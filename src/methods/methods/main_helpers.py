@@ -209,6 +209,7 @@ def group_results(
             continue
         for env_instance_folder in env_folder.iterdir():
             env_config_file = env_instance_folder / "instance_config.json"
+            env_metafeatures_file = RESULTS_METAFEATURES_PATH(env_instance_folder)  # TODO: implement grouping for metafeatures as well
             env_config = read_json(env_config_file)
             for final_results_folder in (env_instance_folder / "train").iterdir():
                 algo_config_file = final_results_folder / "algo_config.json"

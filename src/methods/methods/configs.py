@@ -159,9 +159,6 @@ class TrainConfig(InstanceConfig):
         load_model_path = train_algo_folder_path / model_file # in case it's evaluation
         load_vec_normalize_path = train_algo_folder_path / vec_normalize_file
 
-        # Only normalize rewards for parking
-        normalize_reward = use_vec_normalize and env_id == "parking-v0"
-
         train_vec_env_builder = partial(
             make_vec_env_helper, env_id, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
         )
@@ -169,7 +166,7 @@ class TrainConfig(InstanceConfig):
             make_vec_env_helper, env_id, env_kwargs, 1, DummyVecEnv, monitor_dir=str(train_algo_folder_path),
         )
 
-        if use_vec_normalize:
+        if use_vec_normalize and env_name != "parking":
             common_kwargs = {
                 "norm_obs": True,
                 "clip_obs": 10,
@@ -177,7 +174,7 @@ class TrainConfig(InstanceConfig):
             }
             train_vec_env_builder = partial(
                 make_env_vec_normalize, train_vec_env_builder, load_vec_normalize_path,
-                training=True, norm_reward=normalize_reward,**common_kwargs,
+                training=True, norm_reward=False,**common_kwargs,
             )
             eval_vec_env_builder = partial(
                 make_env_vec_normalize, eval_vec_env_builder, load_vec_normalize_path,
