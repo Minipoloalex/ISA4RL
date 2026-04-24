@@ -40,7 +40,14 @@ from methods.utils.load_config_utils import (
     RESULTS_METAFEATURES_PATH,
     RESULTS_EVALUATION_PATH,
 )
-from methods.utils.group_utils import find_config_in_folder, is_combination_trained, merge_result_folders
+from methods.utils.group_utils import (
+    find_config_in_folder,
+    find_instance_config_in_folder,
+    is_combination_trained,
+    is_combination_extracted,
+    merge_result_folders,
+    merge_metafeature_results,
+)
 from multiprocessing import get_context, cpu_count
 
 logger = logging.getLogger(__name__)
@@ -204,20 +211,41 @@ def group_results(
     #     if the combination is not present in any computer, the folder will be left empty)
 
     folder = BASE_RESULTS_PATH
-    for env_folder in folder.iterdir():
+    for env_folder in folder.iterdir(): # e.g. exit/
         if env_folder.name == "isa":
             continue
-        for env_instance_folder in env_folder.iterdir():
-            env_config_file = env_instance_folder / "instance_config.json"
-            env_metafeatures_file = RESULTS_METAFEATURES_PATH(env_instance_folder)  # TODO: implement grouping for metafeatures as well
+        for env_instance_folder in env_folder.iterdir(): # exit/<id>/
+            env_config_file = env_instance_folder / "instance_config.json" # exit/<id>/instance_config.json
             env_config = read_json(env_config_file)
-            for final_results_folder in (env_instance_folder / "train").iterdir():
-                algo_config_file = final_results_folder / "algo_config.json"
+
+            for result_folder in result_folders:
+                result_folder_to_merge = find_instance_config_in_folder(
+                    OTHER_RESULTS_PATH(result_folder),
+                    env_folder.name,
+                    env_config,
+                )
+                if result_folder_to_merge is None:
+                    continue
+
+                if is_combination_extracted(result_folder_to_merge):
+                    merge_metafeature_results(
+                        RESULTS_METAFEATURES_PATH(result_folder_to_merge),  # <other-results>/exit/<id>/metafeatures.json
+                        RESULTS_METAFEATURES_PATH(env_instance_folder),     # results/exit/<id>/metafeatures.json
+                    )
+                    break
+
+            for final_results_folder in (env_instance_folder / "train").iterdir(): # exit/<id>/train/<id>/
+                algo_config_file = final_results_folder / "algo_config.json" # exit/<id>/train/<id>/algo_config.json
                 algo_config = read_json(algo_config_file)
 
                 # Now, go through the other result folders to merge
                 for result_folder in result_folders:
-                    result_folder_to_merge = find_config_in_folder(OTHER_RESULTS_PATH(result_folder), (env_config, algo_config))
+                    result_folder_to_merge = find_config_in_folder(
+                        OTHER_RESULTS_PATH(result_folder),
+                        env_folder.name,
+                        env_config,
+                        algo_config,
+                    )
                     if result_folder_to_merge is None:
                         continue
 

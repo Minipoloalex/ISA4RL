@@ -1,7 +1,7 @@
 import json
 
 # Load configuration from the JSON file
-with open("config.json", "r") as f:
+with open("ranges_params.json", "r") as f:
     config = json.load(f)
 
 chunk_size = config["chunk_size"]
@@ -12,7 +12,7 @@ missing_ids = []
 for start, end in segments:
     missing_ids.extend(range(start, end))
 
-# 2. Grab boundaries every 5 missing elements
+# 2. Grab boundaries every X missing elements
 boundaries = []
 for i in range(0, len(missing_ids), chunk_size):
     boundaries.append(missing_ids[i])
