@@ -144,7 +144,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument("--total-timesteps", type=positive_int, default=300_000)
     parser.add_argument("--n-envs", type=positive_int, default=16)
     parser.add_argument("--seed", type=int, default=0)
-    parser.add_argument("--output-dir", type=Path, default=Path("runs/parking_experiment"))
+    parser.add_argument("--output-dir", type=Path, default=Path("results_experiments/parking_experiment"))
     parser.add_argument("--eval-freq", type=positive_int, default=3_000)
     parser.add_argument("--n-eval-episodes", type=positive_int, default=5)
     parser.add_argument("--test-episodes", type=non_negative_int, default=3)
