@@ -5,6 +5,8 @@ from pathlib import Path
 import pandas as pd
 from isa import run_instance_space_analysis, InstanceSpaceAnalysisError
 import datetime
+# import warnings
+# warnings.filterwarnings('error', category=RuntimeWarning)
 
 from common.eval_summary import aggregate_metrics
 from common.file_utils import (
@@ -30,10 +32,13 @@ def filter_metafeature_columns(
     df: pd.DataFrame,
     max_missing_ratio: float = 0.0,
     report_path: Optional[Path] = None,
+    near_constant_threshold: float = 1e-12,
 ) -> pd.DataFrame:
-    """Drop metafeatures that are too sparse or have no variation."""
+    """Drop metafeatures that are too sparse or have effectively no variation."""
     if max_missing_ratio < 0.0 or max_missing_ratio > 1.0:
         raise ValueError("[isa] max_missing_ratio must be between 0.0 and 1.0.")
+    if near_constant_threshold < 0.0:
+        raise ValueError("[isa] near_constant_threshold must be non-negative.")
 
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     if not feature_columns:
@@ -41,6 +46,9 @@ def filter_metafeature_columns(
 
     missing_ratios = df[feature_columns].isna().mean()
     unique_counts = df[feature_columns].nunique(dropna=True)
+    feature_min = df[feature_columns].min()
+    feature_max = df[feature_columns].max()
+    feature_range = feature_max - feature_min
 
     dropped_features: Dict[str, Dict[str, Any]] = {}
     kept_features = []
@@ -50,11 +58,16 @@ def filter_metafeature_columns(
             reasons.append("too_many_missing_values")
         if unique_counts[column] <= 1:
             reasons.append("single_unique_value")
+        elif feature_range[column] <= near_constant_threshold:
+            reasons.append("near_constant_value")
 
         if reasons:
             dropped_features[column] = {
                 "missing_ratio": float(missing_ratios[column]),
                 "unique_values": int(unique_counts[column]),
+                "min": float(feature_min[column]),
+                "max": float(feature_max[column]),
+                "range": float(feature_range[column]),
                 "reasons": reasons,
             }
         else:
@@ -73,10 +86,12 @@ def filter_metafeature_columns(
         )
         for column, details in dropped_features.items():
             logger.info(
-                "[isa] Dropped %s: missing %.2f%%, %s unique values, reasons=%s",
+                "[isa] Dropped %s: missing %.2f%%, %s unique values, "
+                "range %.3g, reasons=%s",
                 column,
                 details["missing_ratio"] * 100,
                 details["unique_values"],
+                details["range"],
                 ",".join(details["reasons"]),
             )
 
@@ -92,6 +107,7 @@ def filter_metafeature_columns(
             report_path,
             {
                 "max_missing_ratio": max_missing_ratio,
+                "near_constant_threshold": near_constant_threshold,
                 "kept_features": kept_features,
                 "dropped_features": dropped_features,
             },
@@ -209,6 +225,7 @@ def build_isa_dataset(
         
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
+    algo_columns = [col for col in algo_columns if col.startswith("algo_ppo") or col.startswith("algo_a2c")] # hotfix for now
     leading_columns = [col for col in df.columns if col not in algo_columns]
     df = df[leading_columns + algo_columns]
     df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
