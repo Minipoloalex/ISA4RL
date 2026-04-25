@@ -3,6 +3,7 @@ import argparse
 import time
 from functools import partial
 from typing import Optional, Sequence, Dict, Callable, List
+import logging
 
 import gymnasium as gym
 import pandas as pd
@@ -12,6 +13,13 @@ from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS
 from common.file_utils import OTHER_RESULTS_PATH
 from methods.utils.load_config_utils import load_env_train_configs, load_env_instance_configs
 from methods.main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents, group_results
+
+logger = logging.getLogger(__name__)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    datefmt="%d-%m-%Y %H:%M:%S",
+)
 
 def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) -> None:
     parser = argparse.ArgumentParser(
@@ -69,6 +77,8 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     env_name = args.env
     result_folders = args.result_folders.split(",")
 
+    logger.info(f"Running task {args.task} for environment {env_name}")
+
     load_configs = {
         "train": partial(load_env_train_configs, env_name),
         "evaluate": partial(load_env_train_configs, env_name),
@@ -84,7 +94,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     selected = configs[start:end]
 
     if not selected:
-        print("No run configurations selected. Nothing to do.")
+        logger.info("No run configurations selected. Nothing to do.")
         return
 
     task_map: Dict[str, Callable[[List[TrainConfig]], None]] = {
@@ -103,11 +113,11 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     elif args.task == "group":
         group_results(result_folders)
     else:
-        print("", datetime.datetime.now(), "\n\n\n")
+        logger.info(f"Starting task {args.task}\n\n\n")
         task_map[args.task](selected)  # type: ignore
-        print("\n\n\n", datetime.datetime.now())
-        
-    print("Exiting")
+        logger.info(f"Finished task {args.task}\n\n\n")
+
+    logger.info("Exiting")
 
 if __name__ == "__main__":
     main(None)

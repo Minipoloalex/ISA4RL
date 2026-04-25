@@ -28,7 +28,7 @@ def find_instance_config_in_folder(folder: Path, env_name: str, target_env_confi
 
 def find_config_in_folder(folder: Path, env_name: str, target_env_config: CONFIG, target_algo_config: CONFIG) -> Optional[Path]:
     env_instance_folder = find_instance_config_in_folder(folder, env_name, target_env_config)
-    if env_instance_folder is None:
+    if env_instance_folder is None or not (env_instance_folder / "train").is_dir():
         return None
     for results_folder in (env_instance_folder / "train").iterdir(): # results_server/exit/<id>/train/<id>/
         algo_config_file = results_folder / "algo_config.json" # results_server/exit/<id>/train/<id>/algo_config.json
@@ -45,7 +45,7 @@ def is_combination_extracted(path: Path) -> bool:
     return nonempty_file_in(RESULTS_METAFEATURES_PATH(path))
 
 def merge_result_folders(src_path: Path, dst_path: Path) -> None:
-    shutil.copytree(src_path, dst_path)
+    shutil.copytree(src_path, dst_path, dirs_exist_ok=True)
 
 def merge_metafeature_results(src_path: Path, dst_path: Path) -> None:
     shutil.copy2(src_path, dst_path)

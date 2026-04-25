@@ -391,9 +391,9 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     config = base_env.config
     features: Dict[str, float] = {}
 
-    lanes = config.get("lanes_count", 2)
-    traffic_density = config.get("vehicles_density", 0)
-    vehicles_count = config.get("vehicles_count", 0)
+    lanes = config.get("lanes_count") or config.get("roundabout_lanes")
+    traffic_density = config.get("vehicles_density") or 1
+    vehicles_count = config.get("vehicles_count") or 0
 
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density

@@ -31,6 +31,7 @@ from methods.train import train
 from methods.evaluate import evaluate, show_eval_results
 from methods.metafeatures import extract_metafeatures as compute_metafeatures
 from methods.metafeatures import TIMESTAMP_KEY
+from methods.check import check_helper
 from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
 from methods.utils.load_config_utils import (
     is_trained,
@@ -120,7 +121,7 @@ def _extract_and_save(
     existing_data = read_json(path) if path.is_file() else {}
     extract_results = compute_metafeatures(config, requested_groups, existing_data, update_threshold)
     save_json(path, extract_results)
-    print(f"Done: {config.instance_folder_path}")
+    logger.info(f"Done: {config.instance_folder_path}")
 
 
 def extract_metafeatures(
@@ -186,24 +187,16 @@ def extract_metafeatures(
             pass
 
 def check_agents(train_configs: List[TrainConfig]):
-    segs = []   # segments of not trained configurations
-    i = 0
-    while i < len(train_configs):
-        if not is_trained(train_configs[i]):
-            lo = i
-            hi = i + 1
-            while hi < len(train_configs) and not is_trained(train_configs[hi]):
-                hi += 1
-            segs.append((lo, hi))
-            i = hi - 1
-        i += 1
-    pprint(f"Segments not trained yet: {segs}")
+    not_trained_segs = check_helper(train_configs, is_trained)
+    not_evaled_segs = check_helper(train_configs, is_evaluated)
+    logger.info(f"Segments not trained yet: {not_trained_segs}")
+    logger.info(f"Segments not evauated yet: {not_evaled_segs}")
 
 
 def group_results(
         result_folders: list[str],
     ):
-    # Assumptions:
+    # Assumptions:1
     # 1. The `results` folder contains all the environments and all the algorithms (and it is clean)
     # 2. The folder structure is consistent throughout all the `results` folders
     # 3. The combination `environment + algorithm` has files in exactly one of the `result_folders`
@@ -214,6 +207,9 @@ def group_results(
     for env_folder in folder.iterdir(): # e.g. exit/
         if env_folder.name == "isa":
             continue
+        logger.info(
+            f"Started grouping results for environment {env_folder.name} for {len(list(env_folder.iterdir()))} instance folders"
+        )
         for env_instance_folder in env_folder.iterdir(): # exit/<id>/
             env_config_file = env_instance_folder / "instance_config.json" # exit/<id>/instance_config.json
             env_config = read_json(env_config_file)
@@ -233,7 +229,8 @@ def group_results(
                         RESULTS_METAFEATURES_PATH(env_instance_folder),     # results/exit/<id>/metafeatures.json
                     )
                     break
-
+            if not (env_instance_folder / "train").is_dir():
+                continue
             for final_results_folder in (env_instance_folder / "train").iterdir(): # exit/<id>/train/<id>/
                 algo_config_file = final_results_folder / "algo_config.json" # exit/<id>/train/<id>/algo_config.json
                 algo_config = read_json(algo_config_file)
@@ -252,3 +249,4 @@ def group_results(
                     if is_combination_trained(result_folder_to_merge):
                         merge_result_folders(result_folder_to_merge, final_results_folder)
                         break
+        logger.info(f"Finished grouping results for environment: {env_folder.name}")
