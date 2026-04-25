@@ -3,7 +3,6 @@ import logging
 from typing import Dict, Any, Optional, Sequence
 from pathlib import Path
 import pandas as pd
-import time
 from isa import run_instance_space_analysis, InstanceSpaceAnalysisError
 import datetime
 
@@ -27,9 +26,92 @@ logging.basicConfig(
     datefmt="%d-%m-%Y %H:%M:%S",
 )
 
-def build_isa_dataset(metric_key: str = "mean_reward", debug: bool = False, output_path: Optional[Path] = None):
+def filter_metafeature_columns(
+    df: pd.DataFrame,
+    max_missing_ratio: float = 0.0,
+    report_path: Optional[Path] = None,
+) -> pd.DataFrame:
+    """Drop metafeatures that are too sparse or have no variation."""
+    if max_missing_ratio < 0.0 or max_missing_ratio > 1.0:
+        raise ValueError("[isa] max_missing_ratio must be between 0.0 and 1.0.")
+
+    feature_columns = [col for col in df.columns if col.startswith("feature_")]
+    if not feature_columns:
+        raise ValueError("[isa] No metafeature columns were found.")
+
+    missing_ratios = df[feature_columns].isna().mean()
+    unique_counts = df[feature_columns].nunique(dropna=True)
+
+    dropped_features: Dict[str, Dict[str, Any]] = {}
+    kept_features = []
+    for column in feature_columns:
+        reasons = []
+        if missing_ratios[column] > max_missing_ratio:
+            reasons.append("too_many_missing_values")
+        if unique_counts[column] <= 1:
+            reasons.append("single_unique_value")
+
+        if reasons:
+            dropped_features[column] = {
+                "missing_ratio": float(missing_ratios[column]),
+                "unique_values": int(unique_counts[column]),
+                "reasons": reasons,
+            }
+        else:
+            kept_features.append(column)
+
+    if not kept_features:
+        raise ValueError("[isa] Metafeature filtering removed every feature column.")
+
+    if dropped_features:
+        logger.warning(
+            "[isa] Dropped %s/%s metafeature columns before ISA "
+            "(max missing ratio %.2f).",
+            len(dropped_features),
+            len(feature_columns),
+            max_missing_ratio,
+        )
+        for column, details in dropped_features.items():
+            logger.info(
+                "[isa] Dropped %s: missing %.2f%%, %s unique values, reasons=%s",
+                column,
+                details["missing_ratio"] * 100,
+                details["unique_values"],
+                ",".join(details["reasons"]),
+            )
+
+    filtered_columns = [
+        col for col in df.columns
+        if not col.startswith("feature_") or col in kept_features
+    ]
+    filtered_df = df[filtered_columns].copy()
+
+    if report_path is not None:
+        ensure_dir(report_path.parent)
+        save_json(
+            report_path,
+            {
+                "max_missing_ratio": max_missing_ratio,
+                "kept_features": kept_features,
+                "dropped_features": dropped_features,
+            },
+        )
+        logger.info(f"[isa] Metafeature filter report saved to '{report_path}'.")
+
+    return filtered_df
+
+
+def build_isa_dataset(
+    metric_key: str = "mean_reward",
+    debug: bool = False,
+    output_path: Optional[Path] = None,
+    max_feature_missing: float = 0.0,
+    filter_report_path: Optional[Path] = None,
+):
     if output_path is None:
         output_path = BASE_RESULTS_PATH / "isa" / "instancespace_dataset.csv"
+    if filter_report_path is None:
+        filter_report_path = output_path.with_name(f"{output_path.stem}_filter_report.json")
 
     instance_rows: Dict[str, Dict[str, Any]] = {}
     missing_meta = 0
@@ -129,6 +211,8 @@ def build_isa_dataset(metric_key: str = "mean_reward", debug: bool = False, outp
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
     leading_columns = [col for col in df.columns if col not in algo_columns]
     df = df[leading_columns + algo_columns]
+    df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
+    feature_columns = [col for col in df.columns if col.startswith("feature_")]
 
     ensure_dir(output_path.parent)
     df.to_csv(output_path, index=False)
@@ -155,7 +239,7 @@ def _extensive_metafeature_analysis(df: pd.DataFrame) -> None:
         if pd.api.types.is_numeric_dtype(df[col]):
             print(f"Min: {df[col].min()}, Max: {df[col].max()}")
             print(f"Mean: {df[col].mean():.4f}, Std: {df[col].std():.4f}")
-            
+        print(f"Missing values: {df[col].isnull().mean() * 100:.1f}%")
         print("-" * 40)
 
 def _print_summary(df: pd.DataFrame) -> None:
@@ -231,6 +315,24 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         default="mean_reward",
         help="Evaluation metric field to extract (for build task).",
     )
+    parser.add_argument(
+        "--max-feature-missing",
+        type=float,
+        default=0.0,
+        help=(
+            "Maximum allowed missing-value ratio for each metafeature column "
+            "(for build and analyze tasks). Default removes any metafeature with missing values."
+        ),
+    )
+    parser.add_argument(
+        "--filter-report",
+        type=Path,
+        default=None,
+        help=(
+            "Path to write the metafeature filtering report. For build, defaults to "
+            "'<dataset stem>_filter_report.json'. For analyze, defaults inside the output directory."
+        ),
+    )
     
     # analyze args
     parser.add_argument(
@@ -250,10 +352,24 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
     if args.task == "build":
-        build_isa_dataset(args.metric, args.debug, args.dataset)
+        build_isa_dataset(
+            args.metric,
+            args.debug,
+            args.dataset,
+            args.max_feature_missing,
+            args.filter_report,
+        )
     elif args.task == "analyze":
         try:
-            run_instance_space_analysis(args.dataset, args.output, args.options)
+            ensure_dir(args.output)
+            report_path = args.filter_report
+            if report_path is None:
+                report_path = args.output / "instancespace_dataset_filter_report.json"
+            filtered_dataset_path = args.output / "instancespace_dataset_filtered.csv"
+            df = pd.read_csv(str(args.dataset))
+            filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
+            filtered_df.to_csv(filtered_dataset_path, index=False)
+            run_instance_space_analysis(filtered_dataset_path, args.output, args.options)
         except InstanceSpaceAnalysisError as err:
             print(f"[isa] {err}")
             raise SystemExit(1) from err
