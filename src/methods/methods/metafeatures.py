@@ -94,8 +94,6 @@ def extract_metafeatures(
         features: Dict[str, float] = {}
         features.update(_probe_features(random_probe, "random"))
         features.update(_probe_features(baseline_probe, "baseline"))
-        # Backward-compatible aliases for existing analysis scripts. For
-        # parking-v0 these represent the geometric parking baseline, not IDM.
         # features.update(
         #     _combine_probe_features(
         #         random_probe=random_probe,
@@ -176,7 +174,6 @@ def extract_metafeatures(
 
 
 def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
-    # Initialize the hook we built earlier
     hooks = [SimpleEgoMetricsHook(), ObsHook(), OtherVehiclesBehaviorHook()]
     for hook in hooks:
         hook.on_probe_start()
@@ -311,14 +308,9 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
 
 def _extract_min_ttc(env: gym.Env) -> Optional[float]:
     base_env = env.unwrapped
-    road = getattr(base_env, "road", None)
-    ego = getattr(base_env, "vehicle", None)
-    if road is None or ego is None:
-        return None
-
-    vehicles = getattr(road, "vehicles", None)
-    if vehicles is None:
-        return None
+    road = base_env.road
+    ego = base_env.vehicle
+    vehicles = road.vehicles
 
     ego_lane = _lane_id_from_vehicle(ego)
     ego_pos = _vehicle_position(ego)
@@ -390,15 +382,16 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
     config = base_env.config
     features: Dict[str, float] = {}
+    duration = config["duration"]
 
     lanes = config.get("lanes_count") or config.get("roundabout_lanes")
-    traffic_density = config.get("vehicles_density") or 1
-    vehicles_count = config.get("vehicles_count") or 0
+    vehicles_count = config.get("vehicles_count")
+    traffic_density = vehicles_count / lanes / duration
 
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density
-    features["action_space_size"] = get_action_space_size(env)
-    features["max_steps"] = get_max_episode_steps(env)
+    # features["action_space_size"] = get_action_space_size(env)
+    # features["max_steps"] = get_max_episode_steps(env)
 
     obs_space = env.observation_space
     
@@ -414,9 +407,9 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
             raise ValueError(f"Unsupported observation space type: {type(obs_space)}")
 
     cat_count, num_count, bin_count = _count_space_attributes(obs_space)
-    features["obs_categorical_count"] = float(cat_count)
-    features["obs_numerical_count"] = float(num_count)
-    features["obs_binary_count"] = float(bin_count)
+    # features["obs_categorical_count"] = float(cat_count)
+    # features["obs_numerical_count"] = float(num_count)
+    # features["obs_binary_count"] = float(bin_count)
 
     return features
 

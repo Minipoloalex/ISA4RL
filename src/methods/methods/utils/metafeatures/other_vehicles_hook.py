@@ -60,25 +60,13 @@ class OtherVehiclesBehaviorHook(BaseMetricHook):
                 self.all_vehicle_mean_heading_variations.append(mean_heading_var)
 
     def finalize(self) -> Dict[str, float]:
-        metrics = {
-            "other_veh_speed_var_mean": 0.0,
-            "other_veh_speed_var_var": 0.0,
-            "other_veh_speed_var_max": 0.0,
-            "other_veh_heading_var_mean": 0.0,
-            "other_veh_heading_var_var": 0.0,
-            "other_veh_heading_var_max": 0.0,
+        arr_speed = np.array(self.all_vehicle_mean_variations)
+        arr_heading = np.array(self.all_vehicle_mean_heading_variations)
+        return {
+            "other_veh_speed_var_mean": float(np.mean(arr_speed)),
+            "other_veh_speed_var_var": float(np.var(arr_speed)),
+            "other_veh_speed_var_max": float(np.max(arr_speed)),
+            "other_veh_heading_var_mean": float(np.mean(arr_heading)),
+            "other_veh_heading_var_var": float(np.var(arr_heading)),
+            "other_veh_heading_var_max": float(np.max(arr_heading)),
         }
-        
-        if self.all_vehicle_mean_variations:
-            arr_speed = np.array(self.all_vehicle_mean_variations)
-            metrics["other_veh_speed_var_mean"] = float(np.mean(arr_speed))
-            metrics["other_veh_speed_var_var"] = float(np.var(arr_speed))
-            metrics["other_veh_speed_var_max"] = float(np.max(arr_speed))
-            
-        if self.all_vehicle_mean_heading_variations:
-            arr_heading = np.array(self.all_vehicle_mean_heading_variations)
-            metrics["other_veh_heading_var_mean"] = float(np.mean(arr_heading))
-            metrics["other_veh_heading_var_var"] = float(np.var(arr_heading))
-            metrics["other_veh_heading_var_max"] = float(np.max(arr_heading))
-            
-        return metrics
