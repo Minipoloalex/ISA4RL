@@ -101,7 +101,7 @@ def build_metadrive_configs() -> List[CONFIG]:
 
 def validate_algo_config(algo_config: CONFIG):
     algo_config.pop("normalize", None)
-    algo_config["policy"] = MULTI_INPUT
+    # algo_config["policy"] = MULTI_INPUT
     return algo_config
 
 def valid_config(env_config: CONFIG, algo_config: CONFIG):
