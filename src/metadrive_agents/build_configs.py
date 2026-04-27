@@ -55,13 +55,12 @@ def build_metadrive_configs() -> List[CONFIG]:
     MAPS = ["rORY", "SC", "TXT", INTERSECTION_PROB_DIST]
     # human tested valid times for completion, assuming maximum occupancy (traffic density = 0.3)
     MAP_HORIZONS = [800, 500, 500, 400]
+
     VEHICLE_MODELS = ["default"]
-    USE_IMG_OBSERVATION = [True, False]
+    LANE_NUMS = np.linspace(2, 5, 4, dtype=int)
+    LANE_WIDTHS = [3.5]
 
-    LANE_NUMS = np.linspace(2, 3, 2, dtype=int)
-    LANE_WIDTHS = np.linspace(3, 4.5, 3, dtype=float)
-
-    TRAFFIC_DENSITIES = np.linspace(0.0, 0.3, 3, dtype=float)
+    TRAFFIC_DENSITIES = np.linspace(0.0, 0.3, 7, dtype=float)
     DISCRETE_ACTION = [True, False]
 
     configs = []
@@ -100,23 +99,6 @@ def build_metadrive_configs() -> List[CONFIG]:
 
     return configs
 
-
-# def valid_config(algo_config: CONFIG, obs_config: CONFIG) -> bool:
-#     # we can assume None is never anything
-#     return (
-#         algo_config["policy"] == CNN
-#         and OBS_POLICY[obs_config["type"]] == CNN
-#     ) or (
-#         algo_config["policy"] == MLP
-#         and OBS_POLICY[obs_config["type"]] == MLP
-#     ) or (
-#         algo_config["policy"] == MLP    # in this case, we will need to modify the policy to be multi input
-#         and OBS_POLICY[obs_config["type"]] == MULTI_INPUT
-#     ) or (
-#         algo_config["policy"] == MULTI_INPUT
-#         and OBS_POLICY[obs_config["type"]] == MULTI_INPUT
-#     )
-
 def validate_algo_config(algo_config: CONFIG):
     algo_config.pop("normalize", None)
     algo_config["policy"] = MULTI_INPUT
@@ -130,7 +112,6 @@ def valid_config(env_config: CONFIG, algo_config: CONFIG):
         (env_config["config"]["discrete_action"] and algo_config["action_space"] == D) or
         (not env_config["config"]["discrete_action"] and algo_config["action_space"] == C)
     )
-
 
 def build_all_configs(
     env_configs: List[CONFIG],
@@ -147,7 +128,6 @@ def build_all_configs(
             env_configs, algo_configs,
         )
         if valid_config(env, algo)
-        # if valid_config(algo, obs)
     ]
     eval_configs = [
         {
