@@ -150,7 +150,7 @@ class TrainConfig(InstanceConfig):
             policy_params["policy_kwargs"] = _parse_policy_kwargs(policy_params["policy_kwargs"])
 
         algo_cls = map_algo_name_to_class(algo_name)
-        vec_env_cls = DummyVecEnv if n_envs == 1 else SubprocVecEnv
+        vec_env_cls = DummyVecEnv if n_envs == 1 and env_name != "metadrive" else SubprocVecEnv
         vec_env_kwargs = None if n_envs == 1 else {"start_method": "spawn"}
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
