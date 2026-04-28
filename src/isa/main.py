@@ -1,9 +1,9 @@
 import argparse
 import logging
-from typing import Dict, Any, Optional, Sequence
+from typing import Dict, Any, Optional, Sequence, List
 from pathlib import Path
 import pandas as pd
-from isa import run_instance_space_analysis, InstanceSpaceAnalysisError
+from isa import DEFAULT_OPTIONS_PATH, run_instance_space_analysis, InstanceSpaceAnalysisError
 import datetime
 # import warnings
 # warnings.filterwarnings('error', category=RuntimeWarning)
@@ -118,6 +118,7 @@ def filter_metafeature_columns(
 
 
 def build_isa_dataset(
+    envs: List[str],
     metric_key: str = "mean_reward",
     debug: bool = False,
     output_path: Optional[Path] = None,
@@ -135,7 +136,7 @@ def build_isa_dataset(
 
     # Iterate over environments
     for env_folder in BASE_RESULTS_PATH.iterdir():
-        if not env_folder.is_dir() or env_folder.name == "isa":
+        if not env_folder.is_dir() or env_folder.name == "isa" or env_folder.name not in envs:
             continue
             
         # Iterate over instances
@@ -225,8 +226,10 @@ def build_isa_dataset(
         
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
-    algo_columns = [col for col in algo_columns if col.startswith("algo_ppo") or col.startswith("algo_a2c")] # hotfix for now
-    leading_columns = [col for col in df.columns if col not in algo_columns]
+    excluded_columns = algo_columns.copy()
+    USE_ALGOS = ["ppo", "a2c", "dqn"]
+    algo_columns = [col for col in algo_columns if [1 for alg in USE_ALGOS if alg in col]] # hotfix for now
+    leading_columns = [col for col in df.columns if col not in excluded_columns]
     df = df[leading_columns + algo_columns]
     df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
@@ -328,6 +331,12 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         help="Include diagnostic metrics (for build task).",
     )
     parser.add_argument(
+        "--envs",
+        type=str,
+        default="",
+        help="Comma-separated list of environments to use for the ISA dataset (for build task)",
+    )
+    parser.add_argument(
         "--metric",
         default="mean_reward",
         help="Evaluation metric field to extract (for build task).",
@@ -361,15 +370,17 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--options",
         type=Path,
-        default=None,
-        help="Optional JSON file overriding Instance Space options (for analyze task).",
+        default=DEFAULT_OPTIONS_PATH,
+        help="JSON file with Instance Space options (for analyze task).",
     )
     return parser.parse_args(argv)
 
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
     if args.task == "build":
+        env_list = args.envs.split(",")
         build_isa_dataset(
+            env_list,
             args.metric,
             args.debug,
             args.dataset,

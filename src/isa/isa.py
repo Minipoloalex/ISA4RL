@@ -7,13 +7,14 @@ import time
 
 from instancespace import InstanceSpace
 from instancespace.data import metadata as isa_metadata
-from instancespace.data.options import InstanceSpaceOptions, from_json_file, PerformanceOptions
+from instancespace.data.options import InstanceSpaceOptions, from_json_file
 
 from common.file_utils import BASE_RESULTS_PATH, ensure_dir
 
 ISA_RESULTS_DIR = BASE_RESULTS_PATH / "isa"
 DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "instancespace_dataset.csv"
 DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / f"analysis_{str(time.time_ns())}"
+DEFAULT_OPTIONS_PATH = Path(__file__).resolve().parents[2] / "options.json"
 
 
 class InstanceSpaceAnalysisError(RuntimeError):
@@ -22,26 +23,7 @@ class InstanceSpaceAnalysisError(RuntimeError):
 
 def _load_options(options_path: Optional[Path]) -> InstanceSpaceOptions:
     if options_path is None:
-        perf = PerformanceOptions.default(
-            max_perf=True,
-            abs_perf=False,
-            epsilon = 0.02,
-            beta_threshold = 0.55,
-        )
-        return InstanceSpaceOptions.default(
-            parallel=None,
-            perf=perf,
-            auto=None,
-            bound=None,
-            norm=None,
-            selvars=None,
-            sifted=None,
-            pilot=None,
-            cloister=None,
-            pythia=None,
-            trace=None,
-            outputs=None,
-        )
+        options_path = DEFAULT_OPTIONS_PATH
 
     options = from_json_file(options_path)
     if options is None:
@@ -116,8 +98,8 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
     parser.add_argument(
         "--options",
         type=Path,
-        default=None,
-        help="Optional JSON file overriding Instance Space options.",
+        default=DEFAULT_OPTIONS_PATH,
+        help="JSON file with Instance Space options.",
     )
     return parser.parse_args(argv)
 
