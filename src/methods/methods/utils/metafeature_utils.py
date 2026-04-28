@@ -44,6 +44,10 @@ def is_parking_env(env: gym.Env) -> bool:
     return env.spec.id == "parking-v0"
 
 
+def is_lane_keeping_env(env: gym.Env) -> bool:
+    return env.spec.id == "lane-keeping-v0"
+
+
 def _wrap_to_pi(angle: float) -> float:
     return (angle + math.pi) % (2.0 * math.pi) - math.pi
 
@@ -149,6 +153,62 @@ def make_parking_geometric_policy(env: gym.Env) -> PolicyFn:
             acceleration_range,
             steering_range,
         ).astype(env.action_space.dtype)
+
+    return policy
+
+
+def make_lane_keeping_observation_policy(env: gym.Env) -> PolicyFn:
+    """Create a non-learned steering controller for highway-env lane keeping.
+
+    The controller only reads the observation passed to the policy. For
+    AttributesObservation this means it uses the same noisy state and derivative
+    values available to learning agents, plus the reference state exposed by the
+    environment observation.
+    """
+
+    if not isinstance(env.action_space, gym.spaces.Box):
+        raise NotImplementedError("Lane-keeping policy expects a continuous action space.")
+
+    action_type = env.unwrapped.action_type
+    if action_type.longitudinal:
+        raise NotImplementedError("Lane-keeping policy expects lateral-only control.")
+
+    _, steering_range = _continuous_action_ranges(env)
+    max_abs_steering = max(abs(steering_range[0]), abs(steering_range[1]))
+    if max_abs_steering <= 1e-8:
+        raise ValueError(f"Invalid steering range for lane-keeping policy: {steering_range}")
+
+    kp_lateral = 0.08
+    kp_heading = 0.95
+    kd_lateral = 0.03
+    kd_heading = 0.12
+
+    def policy(obs: Any, __: Dict[str, Any]) -> np.ndarray:
+        if not isinstance(obs, dict):
+            raise TypeError(f"Lane-keeping policy expects dict observations, got {type(obs)}")
+
+        state = np.asarray(obs["state"], dtype=float).reshape(-1)
+        derivative = np.asarray(obs["derivative"], dtype=float).reshape(-1)
+        reference_state = np.asarray(obs["reference_state"], dtype=float).reshape(-1)
+
+        if state.size < 2 or derivative.size < 2 or reference_state.size < 2:
+            raise ValueError(
+                "Lane-keeping observation must contain at least lateral and heading components."
+            )
+
+        lateral_error = float(state[0] - reference_state[0])
+        heading_error = _wrap_to_pi(float(state[1] - reference_state[1]))
+        lateral_rate = float(derivative[0])
+        heading_rate = float(derivative[1])
+
+        steering = -(
+            kp_lateral * lateral_error
+            + kp_heading * heading_error
+            + kd_lateral * lateral_rate
+            + kd_heading * heading_rate
+        )
+        normalized_steering = np.clip(steering / max_abs_steering, -1.0, 1.0)
+        return np.asarray([normalized_steering], dtype=env.action_space.dtype)
 
     return policy
 

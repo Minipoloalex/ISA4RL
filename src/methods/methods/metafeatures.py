@@ -15,10 +15,12 @@ from methods.utils.metafeature_utils import (
     StepInfo,
     make_random_policy,
     make_parking_geometric_policy,
+    make_lane_keeping_observation_policy,
     constant_policy,
     default_idle_action,
     ensure_idm_vehicle,
     is_parking_env,
+    is_lane_keeping_env,
     PolicyFn,
     get_action_space_size,
     get_max_episode_steps,
@@ -86,8 +88,8 @@ def extract_metafeatures(
         )
         random_probe = traj_metafeatures(trajectories_random)
         baseline_probe = traj_metafeatures(trajectories_baseline)
-        logger.info(f"Random probe achieved performance of {random_probe["reward_mean"]} mean return")
-        logger.info(f"Structured probe achieved performance of {baseline_probe["reward_mean"]} mean return")
+        logger.info(f"Random probe achieved reward SNR of {random_probe['reward_snr']}")
+        logger.info(f"Structured probe achieved reward SNR of {baseline_probe['reward_snr']}")
         # idm_advantage = idm_probe.get("mean_episode_return", 0.0) - random_probe.get("mean_episode_return", 0.0)
         # safety_delta = random_probe.get("collision_rate", 0.0) - idm_probe.get("collision_rate", 0.0)
         
@@ -202,6 +204,8 @@ def _run_baseline_probe(
 ) -> List[Trajectory]:
     if is_parking_env(env):
         return _run_parking_geometric_probe(env, episodes)
+    if is_lane_keeping_env(env):
+        return _run_lane_keeping_probe(env, episodes)
     return _run_idm_probe(env, episodes)
 
 
@@ -212,6 +216,17 @@ def _run_parking_geometric_probe(
     return _run_probe(
         env=env,
         policy=make_parking_geometric_policy(env),
+        episodes=episodes,
+    )
+
+
+def _run_lane_keeping_probe(
+    env: gym.Env,
+    episodes: int,
+) -> List[Trajectory]:
+    return _run_probe(
+        env=env,
+        policy=make_lane_keeping_observation_policy(env),
         episodes=episodes,
     )
 

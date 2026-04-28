@@ -62,6 +62,16 @@ class OtherVehiclesBehaviorHook(BaseMetricHook):
     def finalize(self) -> Dict[str, float]:
         arr_speed = np.array(self.all_vehicle_mean_variations)
         arr_heading = np.array(self.all_vehicle_mean_heading_variations)
+        if arr_speed.size == 0:
+            return {
+                "other_veh_speed_var_mean": 0.0,
+                "other_veh_speed_var_var": 0.0,
+                "other_veh_speed_var_max": 0.0,
+                "other_veh_heading_var_mean": 0.0,
+                "other_veh_heading_var_var": 0.0,
+                "other_veh_heading_var_max": 0.0,
+            }
+
         return {
             "other_veh_speed_var_mean": float(np.mean(arr_speed)),
             "other_veh_speed_var_var": float(np.var(arr_speed)),
