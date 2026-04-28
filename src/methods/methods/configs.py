@@ -22,11 +22,11 @@ from .utils.sb3_utils import (
 try:
     import highway_env
 except:
-    print("No highway-env available")
+    pass
 try:
     import metadrive
 except:
-    print("No metadrive available")
+    pass
 
 # Mostly refer to the environment
 _DISCARD_POLICY_PARAMS = ["algo", "action_space", "n_envs", "env_wrapper", "frame_stack", "normalize", "id"]

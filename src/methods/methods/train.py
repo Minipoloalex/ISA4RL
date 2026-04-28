@@ -47,11 +47,11 @@ from common.file_utils import _json_default
 try:
     import highway_env
 except:
-    print("No highway-env available")
+    pass
 try:
     import metadrive
 except:
-    print("No metadrive available")
+    pass
 
 torch.set_num_threads(1)
 

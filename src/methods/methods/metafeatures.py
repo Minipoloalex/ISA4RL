@@ -399,9 +399,9 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     features: Dict[str, float] = {}
     duration = config["duration"]
 
-    if env_name == "parking":
+    if is_parking_env(env):
         lanes = 0
-    elif env_name == "lane-keeping":
+    elif is_lane_keeping_env(env):
         lanes = 1
     else:
         lanes = config.get("lanes_count") or config.get("roundabout_lanes")

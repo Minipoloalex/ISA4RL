@@ -226,9 +226,9 @@ def build_isa_dataset(
         
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
-    excluded_columns = algo_columns.copy()
+    excluded_columns = algo_columns.copy()  # TODO: fix this hotfix (used for now)
     USE_ALGOS = ["ppo", "a2c", "dqn"]
-    algo_columns = [col for col in algo_columns if [1 for alg in USE_ALGOS if alg in col]] # hotfix for now
+    algo_columns = [col for col in algo_columns if [1 for alg in USE_ALGOS if alg in col]]
     leading_columns = [col for col in df.columns if col not in excluded_columns]
     df = df[leading_columns + algo_columns]
     df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
@@ -378,6 +378,8 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
     if args.task == "build":
+        if not args.envs:
+            raise ValueError("Need to specify --envs in order to use --task build")
         env_list = args.envs.split(",")
         build_isa_dataset(
             env_list,

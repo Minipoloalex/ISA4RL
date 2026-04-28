@@ -27,6 +27,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     )
     valid_envs = valid_envs if valid_envs is not None else HIGHWAY_ENVS + METADRIVE_ENVS
 
+    # check is used to check the progress of training/evaluating/extracting
     parser.add_argument(
         "--task",
         choices=("train", "evaluate", "extract", "check", "group"),
@@ -83,7 +84,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         "train": partial(load_env_train_configs, env_name),
         "evaluate": partial(load_env_train_configs, env_name),
         "extract": partial(load_env_instance_configs, env_name),
-        "check": partial(load_env_train_configs, env_name), # used to check what configs have already trained
+        "check": lambda : [ 0 ], # unused, just to not crash
         "group": lambda : [ 0 ], # unused, just to not crash
     }
     configs = load_configs[args.task]()
@@ -100,7 +101,6 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     task_map: Dict[str, Callable[[List[TrainConfig]], None]] = {
         "train": train_agents,
         "evaluate": eval_agents,
-        "check": check_agents,
     }  # type: ignore
     if args.task == "extract":
         groups = args.metafeature_groups.split(",") if args.metafeature_groups else None
@@ -112,6 +112,12 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
         )  # type: ignore[arg-type]
     elif args.task == "group":
         group_results(result_folders)
+    elif args.task == "check":
+        logger.info(f"Checking trained, evaluated and extracted instances\n\n\n")
+        for env in valid_envs:
+            logger.info(f"Checking for env {env}")
+            check_agents(load_env_train_configs(env), load_env_instance_configs(env))
+            logger.info(f"Finished checking\n")
     else:
         logger.info(f"Starting task {args.task}\n\n\n")
         task_map[args.task](selected)  # type: ignore
