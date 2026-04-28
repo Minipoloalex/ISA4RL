@@ -399,9 +399,21 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     features: Dict[str, float] = {}
     duration = config["duration"]
 
-    lanes = config.get("lanes_count") or config.get("roundabout_lanes")
-    vehicles_count = config.get("vehicles_count")
-    traffic_density = vehicles_count / lanes / duration
+    if env_name == "parking":
+        lanes = 0
+    elif env_name == "lane-keeping":
+        lanes = 1
+    else:
+        lanes = config.get("lanes_count") or config.get("roundabout_lanes")
+    assert lanes is not None
+
+    vehicles_count = config.get("vehicles_count") or 0
+    if env_name == "parking":
+        traffic_density = vehicles_count / (2 * config["parking_spots"])
+    elif vehicles_count is not None:
+        traffic_density = vehicles_count / lanes / duration
+    else:
+        traffic_density = 0
 
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density
