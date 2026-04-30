@@ -47,7 +47,8 @@ class InstanceConfig:
     @classmethod
     def from_dict(cls, env_name: str, config_dict: CONFIG, base_results_path: Path = BASE_RESULTS_PATH) -> "InstanceConfig":
         env_config = config_dict["env_config"].copy()
-        obs_config = config_dict["obs_config"].copy()
+        obs_config = config_dict.get("obs_config")
+        obs_config = obs_config.copy() if obs_config is not None else None
 
         base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
@@ -55,7 +56,7 @@ class InstanceConfig:
         ensure_dir(instance_folder_path)
         save_instance_config(instance_folder_path, env_config, obs_config)
 
-        if "observation_shape" in obs_config:
+        if obs_config is not None and "observation_shape" in obs_config:
             obs_config["observation_shape"] = tuple(obs_config["observation_shape"])
 
         env_id = env_config["env_id"]
@@ -150,8 +151,11 @@ class TrainConfig(InstanceConfig):
             policy_params["policy_kwargs"] = _parse_policy_kwargs(policy_params["policy_kwargs"])
 
         algo_cls = map_algo_name_to_class(algo_name)
-        vec_env_cls = DummyVecEnv if n_envs == 1 and env_name != "metadrive" else SubprocVecEnv
-        vec_env_kwargs = None if n_envs == 1 else {"start_method": "spawn"}
+        is_metadrive = env_name == "metadrive"
+        train_vec_env_cls = DummyVecEnv if n_envs == 1 and not is_metadrive else SubprocVecEnv
+        eval_vec_env_cls = SubprocVecEnv if is_metadrive else DummyVecEnv
+        train_vec_env_kwargs = {"start_method": "spawn"} if train_vec_env_cls is SubprocVecEnv else None
+        eval_vec_env_kwargs = {"start_method": "spawn"} if eval_vec_env_cls is SubprocVecEnv else None
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
         model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
@@ -160,10 +164,10 @@ class TrainConfig(InstanceConfig):
         load_vec_normalize_path = train_algo_folder_path / vec_normalize_file
 
         train_vec_env_builder = partial(
-            make_vec_env_helper, env_id, env_kwargs, n_envs, vec_env_cls, vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
+            make_vec_env_helper, env_id, env_kwargs, n_envs, train_vec_env_cls, train_vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
         )
         eval_vec_env_builder = partial(
-            make_vec_env_helper, env_id, env_kwargs, 1, DummyVecEnv, monitor_dir=str(train_algo_folder_path),
+            make_vec_env_helper, env_id, env_kwargs, 1, eval_vec_env_cls, eval_vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
         )
 
         if use_vec_normalize and env_name != "parking":
@@ -222,6 +226,14 @@ class TrainConfig(InstanceConfig):
         env = self.ensure_train_env()
         if self._model is None:
             self._model = self.make_model(env)
+        return self._model
+
+    def ensure_model_for_env(self, env: VecEnv) -> BaseAlgorithm:
+        """Instantiate the algorithm against an explicit environment."""
+        if self._model is None:
+            self._model = self.make_model(env)
+        else:
+            self._model.set_env(env)
         return self._model
 
     def close(self) -> None:

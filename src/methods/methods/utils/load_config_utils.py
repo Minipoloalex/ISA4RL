@@ -1,5 +1,10 @@
+import logging
+
 from methods.configs import TrainConfig, InstanceConfig
 from common.file_utils import *
+
+
+logger = logging.getLogger(__name__)
 
 def load_env_instance_configs(env_name: str, base_results_path: Path = BASE_RESULTS_PATH) -> List[InstanceConfig]:
     configs = read_json(EVAL_CONFIGS_PATH(env_name))
@@ -20,4 +25,3 @@ def is_evaluated(config: TrainConfig) -> bool:
 def is_extracted(config: InstanceConfig) -> bool:
     """Extracted iff metafeatures result artifact exists."""
     return nonempty_file_in(RESULTS_METAFEATURES_PATH(config.instance_folder_path))
-

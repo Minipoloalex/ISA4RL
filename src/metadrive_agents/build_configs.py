@@ -69,7 +69,7 @@ def build_metadrive_configs() -> List[CONFIG]:
     ):
         config = deepcopy(METADRIVE_FIXED_CONFIGS)
         horizon = MAP_HORIZONS[map_idx]
-        if type(map) is dict:
+        if type(metadrive_map) is dict:
             n_blocks = 1
             map_type = MapGenerateMethod.BIG_BLOCK_NUM
             sequence = n_blocks
@@ -81,6 +81,10 @@ def build_metadrive_configs() -> List[CONFIG]:
             n_blocks = len(metadrive_map)
             map_type = MapGenerateMethod.BIG_BLOCK_SEQUENCE
             sequence = metadrive_map
+
+        if metadrive_map == "rORY" and lane_num >= 5:
+            logger.warning("Skipping pathological MetaDrive map config: map=%s lane_num=%s", metadrive_map, lane_num)
+            continue
 
         config["config"].update({
             "traffic_density": veh_density,

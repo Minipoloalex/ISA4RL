@@ -1,13 +1,15 @@
 import datetime
 import argparse
+import gc
 import json
 import math
 import os
 import random
 import time
 import logging
+import traceback
 from collections import Counter, deque, defaultdict
-from multiprocessing import get_context, cpu_count
+from multiprocessing import get_context, cpu_count, Queue
 from pathlib import Path
 from typing import Any, Callable, List, Optional
 from tqdm import tqdm
@@ -58,36 +60,45 @@ logging.basicConfig(
     datefmt="%d-%m-%Y %H:%M:%S",
 )
 
+def _train_one_agent(config: TrainConfig, run_index: int) -> None:
+    train_env = None
+    eval_env = None
+    model = None
+    try:
+        try:
+            logger.info(f"open fds before env creation: {len(os.listdir("/proc/self/fd"))}")
+        except:
+            pass
+        train_env = config.ensure_train_env()
+        model = config.ensure_model()
+        eval_env = config.ensure_eval_env()
+        try:
+            logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
+        except:
+            pass
+        logger.info(f"Started training run {run_index} in path: {config.train_folder_path}")
+        logger.info(f"Configuration for algorithm: {model.__str__()}")
+        train(
+            env=train_env,
+            model=model,
+            timesteps=config.timesteps,
+            folder_name=str(config.train_folder_path),
+            eval_env=eval_env,
+            n_eval_episodes=config.n_eval_episodes,
+            eval_freq=config.eval_freq,
+            seed=0,
+            progress_bar=True,
+        )
+    finally:
+        config.close()
+        del model
+        del eval_env
+        del train_env
+
 def train_agents(train_configs: List[TrainConfig]):
     train_configs = [config for config in train_configs if not is_trained(config)]
     for i, config in tqdm(enumerate(train_configs), total=len(train_configs)):
-        try:
-            try:
-                logger.info(f"open fds before env creation: {len(os.listdir("/proc/self/fd"))}")
-            except:
-                pass
-            train_env = config.ensure_train_env()
-            model = config.ensure_model()
-            eval_env = config.ensure_eval_env()
-            try:
-                logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
-            except:
-                pass
-            logger.info(f"Started training run {i} in path: {config.train_folder_path}")
-            logger.info(f"Configuration for algorithm: {model.__str__()}")
-            train(
-                env=train_env,
-                model=model,
-                timesteps=config.timesteps,
-                folder_name=str(config.train_folder_path),
-                eval_env=eval_env,
-                n_eval_episodes=config.n_eval_episodes,
-                eval_freq=config.eval_freq,
-                seed=0,
-                progress_bar=True,
-            )
-        finally:
-            config.close()
+        _train_one_agent(config, i)
         logger.info(f"Saved training information from run in {config.train_folder_path}")
 
 
@@ -98,18 +109,29 @@ def eval_agents(train_configs: List[TrainConfig]):
         if is_trained(config) and not is_evaluated(config)
     ]
     for config in tqdm(eval_configs, total=len(eval_configs)):
-        eval_env=config.ensure_eval_env()
-        model=config.ensure_model()
-        eval_results=evaluate(
+        _eval_one_agent(config)
+
+
+def _eval_one_agent(config: TrainConfig) -> None:
+    eval_env = None
+    model = None
+    eval_results = None
+    try:
+        eval_env = config.ensure_eval_env()
+        model = config.ensure_model_for_env(eval_env)
+        eval_results = evaluate(
             model=model,
             env=eval_env,
             n_episodes=config.n_test_episodes,
             deterministic=True,
         )
         save_json(RESULTS_EVALUATION_PATH(config.train_folder_path), eval_results)
-        config.close()
-
         show_eval_results(eval_results)
+    finally:
+        config.close()
+        del eval_results
+        del model
+        del eval_env
 
 
 def _extract_and_save(

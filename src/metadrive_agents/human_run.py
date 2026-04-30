@@ -27,6 +27,7 @@ loadPrcFileData("", "notify-level-linmath error")
 import copy
 from metadrive.component.navigation_module.node_network_navigation import NodeNetworkNavigation
 from typing import Union
+import logging
 
 import numpy as np
 
@@ -39,13 +40,15 @@ from metadrive.envs.base_env import BaseEnv
 from metadrive.manager.traffic_manager import TrafficMode
 from metadrive.utils import clip, Config
 
-# Change this string to test different map combinations!
-MAP_CONFIG = "O"
+logger = logging.getLogger(__name__)
+
+# Change this string to test different map combinations
+MAP_CONFIG = "TXT"
 MAP_CONFIG={
     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_SEQUENCE,
     BaseMap.GENERATE_CONFIG: MAP_CONFIG,
     BaseMap.LANE_WIDTH: 3.5,
-    BaseMap.LANE_NUM: 3,
+    BaseMap.LANE_NUM: 4,
     "exit_length": 50,
     "start_position": [0, 0],
 }
@@ -94,11 +97,11 @@ def run_map_test():
 
     try:
         obs, info = env.reset()
-        print(f"\n--- Successfully loaded map' ---")
+        logger.info(f"\n--- Successfully loaded map' ---")
         if MANUAL_CONTROL:
-            print("Manual control is ON. Use W/A/S/D to drive and test the blocks.")
+            logger.info("Manual control is ON. Use W/A/S/D to drive and test the blocks.")
         else:
-            print("Manual control is OFF. The vehicle will take random actions.")
+            logger.info("Manual control is OFF. The vehicle will take random actions.")
 
         # Simulation loop
         for step in range(NUM_STEPS):
@@ -107,16 +110,16 @@ def run_map_test():
             action = env.action_space.sample() if not MANUAL_CONTROL else [0, 0]
 
             obs, reward, terminated, truncated, info = env.step(action)
-            print(reward)
+            logger.info(reward)
 
             # Reset the environment if the car crashes or finishes the map
             if terminated or truncated:
-                print("Episode ended (crash or destination reached). Resetting...")
+                logger.info("Episode ended (crash or destination reached). Resetting...")
                 env.reset()
                 
     finally:
         env.close()
-        print("Simulation closed.")
+        logger.info("Simulation closed.")
 
 if __name__ == "__main__":
     run_map_test()
