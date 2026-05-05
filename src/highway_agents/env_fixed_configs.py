@@ -2,7 +2,7 @@ __DEFAULT_TRAIN_CONFIGS = {
     "train_timesteps": int(1e5),
     "eval_freq": int(1e3),
     "n_eval_episodes": 10,
-    "n_test_episodes": 10,
+    "n_test_episodes": 50,
 }
 
 HIGHWAY_FIXED_CONFIGS = {
@@ -50,7 +50,7 @@ LANE_KEEPING_FIXED_CONFIGS = {
     "train_timesteps": int(2e5),
     "eval_freq": int(2e3),
     "n_eval_episodes": 10,
-    "n_test_episodes": 10,
+    "n_test_episodes": 50,
 }
 BASIC_RACETRACK_FIXED_CONFIGS = {
     "env_id": "racetrack-v0",
@@ -65,7 +65,7 @@ BASIC_RACETRACK_FIXED_CONFIGS = {
     "train_timesteps": int(2e5),
     "eval_freq": int(2e3),
     "n_eval_episodes": 5,
-    "n_test_episodes": 10,
+    "n_test_episodes": 50,
 }
 OVAL_RACETRACK_FIXED_CONFIGS = {
     "env_id": "racetrack-oval-v0",
@@ -80,14 +80,14 @@ OVAL_RACETRACK_FIXED_CONFIGS = {
     "train_timesteps": int(2e5),
     "eval_freq": int(2e3),
     "n_eval_episodes": 5,
-    "n_test_episodes": 10,
+    "n_test_episodes": 50,
 }
 PARKING_FIXED_CONFIGS = {
     "env_id": "parking-v0",
     "train_timesteps": int(3e5),
     "eval_freq": int(3e3),
     "n_eval_episodes": 5,
-    "n_test_episodes": 10,
+    "n_test_episodes": 50,
     "config": {
         "duration": 60,
         "action": { # steering_range not here
