@@ -17,6 +17,14 @@ from .general_utils import _coerce_numeric
 
 AlgorithmName = str
 
+ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
+    "ppo": PPO,
+    "dqn": DQN,
+    "a2c": A2C,
+    "sac": SAC,
+    "td3": TD3,
+    "ddpg": DDPG,
+}
 
 @dataclass(frozen=True)
 class LinearSchedule:
@@ -27,15 +35,6 @@ class LinearSchedule:
         Progress decreases from 1 at the beginning to 0 at the end.
         """
         return progress_remaining * self.initial_value
-
-ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
-    "ppo": PPO,
-    "dqn": DQN,
-    "a2c": A2C,
-    "sac": SAC,
-    "td3": TD3,
-    "ddpg": DDPG,
-}
 
 def make_env_helper(env_id: str, env_config: Dict[str, Any]) -> gym.Env:
     env_kwargs = {"config": env_config.copy()}
