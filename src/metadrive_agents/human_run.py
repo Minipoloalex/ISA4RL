@@ -43,19 +43,19 @@ from metadrive.utils import clip, Config
 logger = logging.getLogger(__name__)
 
 # Change this string to test different map combinations
-MAP_CONFIG = "TXT"
+MAP_CONFIG = "SC"
 MAP_CONFIG={
     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_SEQUENCE,
     BaseMap.GENERATE_CONFIG: MAP_CONFIG,
     BaseMap.LANE_WIDTH: 3.5,
-    BaseMap.LANE_NUM: 4,
+    BaseMap.LANE_NUM: 5,
     "exit_length": 50,
     "start_position": [0, 0],
 }
 
 # Control settings
 MANUAL_CONTROL = True    # Set to True to drive with W/A/S/D
-TRAFFIC_DENSITY = 0.0    # Set to 0.0 to test just the road, >0.0 to add cars
+TRAFFIC_DENSITY = 0.1    # Set to 0.0 to test just the road, >0.0 to add cars
 NUM_STEPS = 500000         # How long the simulation runs before auto-closing
 
 # ==========================================
@@ -68,12 +68,13 @@ def run_map_test():
     # config = deepcopy(_METADRIVE_DEFAULT_CONFIG)
     config = {}
     config.update({
+        "store_map": False,
         "traffic_mode": "respawn",
         "manual_control": MANUAL_CONTROL,
         "use_render": True,
         "traffic_density": TRAFFIC_DENSITY,
         "image_observation": False,
-        "num_scenarios": int(1e3),
+        "num_scenarios": 1000000000000,
         "accident_prob": 0,
         "random_traffic": False,
         # "image_on_cuda": True,
@@ -90,9 +91,9 @@ def run_map_test():
     # })
     config["map_config"] = MAP_CONFIG
 
-    config["vehicle_config"] = {
-        "vehicle_model": "m",
-    }
+    # config["vehicle_config"] = {
+    #     "vehicle_model": "m",
+    # }
     env = MyMetaDriveEnv(config)
 
     try:

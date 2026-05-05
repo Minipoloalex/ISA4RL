@@ -26,7 +26,11 @@ from common.config_utils import (
     map_to_train_id,
 )
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format="%(asctime)s - %(message)s",
+    datefmt="%d-%m-%Y %H:%M:%S",
+)
 logger = logging.getLogger(__name__)
 
 ISA_OUTPUT_DIR = BASE_OUTPUT_PATH / "isa"
