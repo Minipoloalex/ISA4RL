@@ -73,7 +73,7 @@ def _train_one_agent(config: TrainConfig, run_index: int) -> None:
         model = config.ensure_model()
         eval_env = config.ensure_eval_env()
         try:
-            logger.info(f"open fds after env creation: {len(os.listdir("/proc/self/fd"))}")
+            logger.info(f"open fds after env creation: {len(os.listdir('/proc/self/fd'))}")
         except:
             pass
         logger.info(f"Started training run {run_index} in path: {config.train_folder_path}")
@@ -102,14 +102,36 @@ def train_agents(train_configs: List[TrainConfig]):
         logger.info(f"Saved training information from run in {config.train_folder_path}")
 
 
-def eval_agents(train_configs: List[TrainConfig]):
+def eval_agents(
+    train_configs: List[TrainConfig],
+    workers: int,
+    repeat_evaluation: bool = False,
+):
+    assert workers > 0
+
     eval_configs = [
         config
         for config in train_configs
-        if is_trained(config) and not is_evaluated(config)
+        if is_trained(config) and (repeat_evaluation or not is_evaluated(config))
     ]
-    for config in tqdm(eval_configs, total=len(eval_configs)):
-        _eval_one_agent(config)
+    logger.info("Instances not trained: %d", sum(1 for config in train_configs if not is_trained(config)))
+    logger.info("Total train configs: %d", len(train_configs))
+    logger.info("Train configs to evaluate: %d", len(eval_configs))
+    desc = f"Evaluating agents (workers={workers})"
+
+    if workers == 1:
+        for config in tqdm(eval_configs, total=len(eval_configs), desc=desc):
+            _eval_one_agent(config)
+        return
+
+    ctx = get_context("spawn")
+    with ctx.Pool(processes=workers) as pool:
+        for _ in tqdm(
+            pool.imap_unordered(_eval_one_agent, eval_configs),
+            total=len(eval_configs),
+            desc=desc,
+        ):
+            pass
 
 
 def _eval_one_agent(config: TrainConfig) -> None:

@@ -29,46 +29,60 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
 
     # check is used to check the progress of training/evaluating/extracting
     parser.add_argument(
+        "-t",
         "--task",
         choices=("train", "evaluate", "extract", "check", "group"),
         help="Pipeline stage to execute.",
     )
     parser.add_argument(
+        "-e",
         "--env",
         choices=valid_envs,
         help="Environment to use",
     )
     parser.add_argument(
+        "-S",
         "--start",
         type=int,
         default=0,
         help="Inclusive starting index for selecting run configurations.",
     )
     parser.add_argument(
+        "-E",
         "--end",
         type=int,
         default=None,
         help="Exclusive ending index for selecting run configurations. Defaults to all.",
     )
     parser.add_argument(
+        "-rf",
         "--result-folders",
         type=str,
         default="",
         help="List of result folders to group into the set of results (comma separated)"
     )
-    parser.add_argument(    # for metafeatures
+    parser.add_argument(    # for metafeatures and evaluation
+        "-w",
         "--workers",
         type=int,
         default=1,
-        help="Parallel worker processes to use for metafeature extraction (extract task only).",
+        help="Parallel worker processes to use for evaluation and metafeature extraction.",
+    )
+    parser.add_argument(    # for evaluation
+        "-re",
+        "--repeat-evaluation",
+        action="store_true",
+        help="Evaluate trained configurations even when evaluation results already exist.",
     )
     parser.add_argument(    # for metafeatures
+        "-mg",
         "--metafeature-groups",
         type=str,
         default=None,
         help="Comma-separated list of metafeature groups to compute (e.g. 'env_features,mb_state_entropy'). Default computes all.",
     )
     parser.add_argument(    # for metafeatures
+        "-u",
         "--update",
         type=float,
         default=time.time(),
@@ -100,7 +114,6 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
 
     task_map: Dict[str, Callable[[List[TrainConfig]], None]] = {
         "train": train_agents,
-        "evaluate": eval_agents,
     }  # type: ignore
     if args.task == "extract":
         groups = args.metafeature_groups.split(",") if args.metafeature_groups else None
@@ -119,6 +132,14 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
             logger.info(f"Checking for env {env}")
             check_agents(load_env_train_configs(env), load_env_instance_configs(env))
             logger.info(f"Finished checking\n")
+    elif args.task == "evaluate":
+        logger.info(f"Starting task {args.task}\n\n\n")
+        eval_agents(
+            selected,
+            workers=args.workers,
+            repeat_evaluation=args.repeat_evaluation,
+        )  # type: ignore[arg-type]
+        logger.info(f"Finished task {args.task}\n\n\n")
     else:
         logger.info(f"Starting task {args.task}\n\n\n")
         task_map[args.task](selected)  # type: ignore
