@@ -92,7 +92,7 @@ class SimpleEgoMetricsHook(BaseMetricHook):
         s_std = float(np.std(speeds))
 
         metrics = {
-            # "reward_mean": r_mean,
+            "mean_reward": r_mean,
             # "reward_std": r_std,
             # "reward_min": float(np.min(rewards)),
             # "reward_max": float(np.max(rewards)),
