@@ -17,7 +17,7 @@ from methods.main_helpers import train_agents, eval_agents, extract_metafeatures
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(message)s",
+    format="%(asctime)s [%(levelname)s] %(name)s:%(lineno)d: %(message)s",
     datefmt="%d-%m-%Y %H:%M:%S",
 )
 
@@ -105,6 +105,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     if args.task == "extract":
         groups = args.metafeature_groups.split(",") if args.metafeature_groups else None
         extract_metafeatures(
+            env_name,
             selected,
             workers=args.workers,
             requested_groups=groups,

@@ -18,9 +18,11 @@ apptainer exec --nv --containall \
 
 ### Run the project
 
-Inside `src/main`:
+Inside `src/highway_agents`, `src/metadrive_agents` or `src/isa`:
 
-```uv run --env-file .env main.py```
+```bash
+uv run --env-file .env main.py -h   # Get additional info on command line arguments
+```
 
 
 

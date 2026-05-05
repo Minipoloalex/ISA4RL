@@ -56,7 +56,7 @@ from multiprocessing import get_context, cpu_count
 logger = logging.getLogger(__name__)
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s - %(message)s",
+    format="%(asctime)s [%(levelname)s] %(name)s:%(lineno)d: %(message)s",
     datefmt="%d-%m-%Y %H:%M:%S",
 )
 
@@ -136,17 +136,19 @@ def _eval_one_agent(config: TrainConfig) -> None:
 
 def _extract_and_save(
     config: InstanceConfig,
+    env_name: str,
     requested_groups: Optional[List[str]] = None,
     update_threshold: float = 0.0,
 ) -> None:
     path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
     existing_data = read_json(path) if path.is_file() else {}
-    extract_results = compute_metafeatures(config, requested_groups, existing_data, update_threshold)
+    extract_results = compute_metafeatures(env_name, config, requested_groups, existing_data, update_threshold)
     save_json(path, extract_results)
     logger.info(f"Done: {config.instance_folder_path}")
 
 
 def extract_metafeatures(
+    env_name: str,
     instance_configs: List[InstanceConfig],
     workers: int,
     requested_groups: Optional[List[str]] = None,
@@ -190,7 +192,9 @@ def extract_metafeatures(
     ]
     desc = f"Extracting metafeatures (workers={workers})"
     
-    extract_fn = partial(_extract_and_save, requested_groups=requested_groups, update_threshold=update_threshold)
+    extract_fn = partial(
+        _extract_and_save, env_name=env_name, requested_groups=requested_groups, update_threshold=update_threshold,
+    )
     
     if workers == 1:
         for config in tqdm(
@@ -214,8 +218,8 @@ def check_agents(train_configs: List[TrainConfig], instance_configs: List[Instan
     not_extracted_segs = check_helper(instance_configs, is_extracted)
     logger.info(f"Total train_configs: {len(train_configs)}, Total instance configs: {len(instance_configs)}")
     logger.info(f"Segments not trained yet: {not_trained_segs}")
-    logger.info(f"Segments not evauated yet: {not_evaled_segs}")
-    logger.info(f"Segments not evauated yet: {not_extracted_segs}")
+    logger.info(f"Segments not evaluated yet: {not_evaled_segs}")
+    logger.info(f"Segments not extracted yet: {not_extracted_segs}")
     
 
 

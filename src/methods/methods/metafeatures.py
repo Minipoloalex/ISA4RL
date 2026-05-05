@@ -40,6 +40,7 @@ ELAPSED_TIME_KEY = "elapsed_time"
 logger = logging.getLogger(__name__)
 
 def extract_metafeatures(
+    env_name: str,
     config: InstanceConfig,
     requested_groups: Optional[List[str]] = None,
     existing_data: Optional[Dict] = None,
@@ -50,7 +51,7 @@ def extract_metafeatures(
         
     out_data = dict(existing_data)
     env = config.ensure_test_env()
-    out_data["env_name"] = env.spec.id
+    out_data["env_id"] = env.spec.id
 
     if "feature_groups" not in out_data:
         out_data["feature_groups"] = {}
@@ -66,7 +67,7 @@ def extract_metafeatures(
     if should_compute("env_features"):
         logger.info(f"Computing env_features for instance: {config.instance_folder_path}")
         before = time.perf_counter()
-        env_features = _collect_env_features(out_data["env_name"], env)
+        env_features = _collect_env_features(env_name, env)
         elapsed = time.perf_counter() - before
         out_data["feature_groups"]["env_features"] = {
             TIMESTAMP_KEY: time.time(),
@@ -155,7 +156,7 @@ def extract_metafeatures(
     #         env=env,
     #         n_samples=1000,
     #         n_episodes=10,
-    #         env_name=out_data["env_name"],
+    #         env_name=env_name,
     #     )
     #     elapsed = time.perf_counter() - before
         
