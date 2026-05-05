@@ -20,7 +20,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -48,7 +48,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195589100
+    "timestamp": 1777994051488148044
   },
   {
     "env_config": {
@@ -71,7 +71,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -96,7 +96,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195602686
+    "timestamp": 1777994051488153165
   },
   {
     "env_config": {
@@ -119,7 +119,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -145,7 +145,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195615289
+    "timestamp": 1777994051488157566
   },
   {
     "env_config": {
@@ -168,7 +168,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -196,7 +196,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195628685
+    "timestamp": 1777994051488162215
   },
   {
     "env_config": {
@@ -219,7 +219,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -244,7 +244,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195639565
+    "timestamp": 1777994051488165955
   },
   {
     "env_config": {
@@ -267,7 +267,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -293,7 +293,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195651017
+    "timestamp": 1777994051488169737
   },
   {
     "env_config": {
@@ -316,7 +316,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -344,7 +344,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195663430
+    "timestamp": 1777994051488173916
   },
   {
     "env_config": {
@@ -367,7 +367,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -392,7 +392,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195674080
+    "timestamp": 1777994051488177354
   },
   {
     "env_config": {
@@ -415,7 +415,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -441,7 +441,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195684991
+    "timestamp": 1777994051488181631
   },
   {
     "env_config": {
@@ -464,7 +464,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -492,7 +492,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195697344
+    "timestamp": 1777994051488185933
   },
   {
     "env_config": {
@@ -515,7 +515,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -540,7 +540,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195707594
+    "timestamp": 1777994051488189474
   },
   {
     "env_config": {
@@ -563,7 +563,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -589,7 +589,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195718554
+    "timestamp": 1777994051488193180
   },
   {
     "env_config": {
@@ -612,7 +612,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -640,7 +640,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195730768
+    "timestamp": 1777994051488197194
   },
   {
     "env_config": {
@@ -663,7 +663,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -688,7 +688,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195740917
+    "timestamp": 1777994051488200728
   },
   {
     "env_config": {
@@ -711,7 +711,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -737,7 +737,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195751797
+    "timestamp": 1777994051488204397
   },
   {
     "env_config": {
@@ -760,7 +760,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -788,7 +788,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195763950
+    "timestamp": 1777994051488208462
   },
   {
     "env_config": {
@@ -811,7 +811,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -836,7 +836,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195774149
+    "timestamp": 1777994051488211953
   },
   {
     "env_config": {
@@ -859,7 +859,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -885,7 +885,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195785351
+    "timestamp": 1777994051488215554
   },
   {
     "env_config": {
@@ -908,7 +908,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -936,7 +936,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195800038
+    "timestamp": 1777994051488219666
   },
   {
     "env_config": {
@@ -959,7 +959,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -984,7 +984,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195810388
+    "timestamp": 1777994051488223697
   },
   {
     "env_config": {
@@ -1007,7 +1007,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1033,7 +1033,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195823723
+    "timestamp": 1777994051488227258
   },
   {
     "env_config": {
@@ -1056,7 +1056,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1084,7 +1084,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195835846
+    "timestamp": 1777994051488231077
   },
   {
     "env_config": {
@@ -1107,7 +1107,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1132,7 +1132,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195846165
+    "timestamp": 1777994051488234511
   },
   {
     "env_config": {
@@ -1155,7 +1155,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1181,7 +1181,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195859781
+    "timestamp": 1777994051488238149
   },
   {
     "env_config": {
@@ -1204,7 +1204,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1232,7 +1232,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195871994
+    "timestamp": 1777994051488242312
   },
   {
     "env_config": {
@@ -1255,7 +1255,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1280,7 +1280,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195882374
+    "timestamp": 1777994051488245731
   },
   {
     "env_config": {
@@ -1303,7 +1303,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1329,7 +1329,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195893264
+    "timestamp": 1777994051488249081
   },
   {
     "env_config": {
@@ -1352,7 +1352,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1380,7 +1380,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195905377
+    "timestamp": 1777994051488252890
   },
   {
     "env_config": {
@@ -1403,7 +1403,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1428,7 +1428,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195915727
+    "timestamp": 1777994051488256662
   },
   {
     "env_config": {
@@ -1451,7 +1451,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1477,7 +1477,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195926637
+    "timestamp": 1777994051488261393
   },
   {
     "env_config": {
@@ -1500,7 +1500,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1528,7 +1528,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195938861
+    "timestamp": 1777994051488266479
   },
   {
     "env_config": {
@@ -1551,7 +1551,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1576,7 +1576,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195949270
+    "timestamp": 1777994051488269746
   },
   {
     "env_config": {
@@ -1599,7 +1599,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1625,7 +1625,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195960111
+    "timestamp": 1777994051488273094
   },
   {
     "env_config": {
@@ -1648,7 +1648,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1676,7 +1676,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751195975039
+    "timestamp": 1777994051488276977
   },
   {
     "env_config": {
@@ -1699,7 +1699,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1724,7 +1724,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751195985459
+    "timestamp": 1777994051488280188
   },
   {
     "env_config": {
@@ -1747,7 +1747,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1773,7 +1773,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751195996439
+    "timestamp": 1777994051488283610
   },
   {
     "env_config": {
@@ -1796,7 +1796,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1824,7 +1824,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196008702
+    "timestamp": 1777994051488287226
   },
   {
     "env_config": {
@@ -1847,7 +1847,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1872,7 +1872,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196018892
+    "timestamp": 1777994051488290421
   },
   {
     "env_config": {
@@ -1895,7 +1895,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1921,7 +1921,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196029662
+    "timestamp": 1777994051488293769
   },
   {
     "env_config": {
@@ -1944,7 +1944,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1972,7 +1972,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196041885
+    "timestamp": 1777994051488298470
   },
   {
     "env_config": {
@@ -1995,7 +1995,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2020,7 +2020,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196052084
+    "timestamp": 1777994051488301658
   },
   {
     "env_config": {
@@ -2043,7 +2043,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2069,7 +2069,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196063506
+    "timestamp": 1777994051488306281
   },
   {
     "env_config": {
@@ -2092,7 +2092,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2120,7 +2120,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196075659
+    "timestamp": 1777994051488310339
   },
   {
     "env_config": {
@@ -2143,7 +2143,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2168,7 +2168,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196088403
+    "timestamp": 1777994051488313842
   },
   {
     "env_config": {
@@ -2191,7 +2191,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2217,7 +2217,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196099233
+    "timestamp": 1777994051488317482
   },
   {
     "env_config": {
@@ -2240,7 +2240,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2268,7 +2268,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196111567
+    "timestamp": 1777994051488321339
   },
   {
     "env_config": {
@@ -2291,7 +2291,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2316,7 +2316,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196121746
+    "timestamp": 1777994051488324711
   },
   {
     "env_config": {
@@ -2339,7 +2339,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2365,7 +2365,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196132586
+    "timestamp": 1777994051488328376
   },
   {
     "env_config": {
@@ -2388,7 +2388,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2416,7 +2416,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196144719
+    "timestamp": 1777994051488332390
   },
   {
     "env_config": {
@@ -2439,7 +2439,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2464,7 +2464,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196154919
+    "timestamp": 1777994051488336795
   },
   {
     "env_config": {
@@ -2487,7 +2487,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2513,7 +2513,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196167973
+    "timestamp": 1777994051488340265
   },
   {
     "env_config": {
@@ -2536,7 +2536,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2564,7 +2564,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196180146
+    "timestamp": 1777994051488344377
   },
   {
     "env_config": {
@@ -2587,7 +2587,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2612,7 +2612,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196192610
+    "timestamp": 1777994051488347767
   },
   {
     "env_config": {
@@ -2635,7 +2635,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2661,7 +2661,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196205735
+    "timestamp": 1777994051488352002
   },
   {
     "env_config": {
@@ -2684,7 +2684,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2712,7 +2712,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196218679
+    "timestamp": 1777994051488356446
   },
   {
     "env_config": {
@@ -2735,7 +2735,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2760,7 +2760,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196229379
+    "timestamp": 1777994051488359922
   },
   {
     "env_config": {
@@ -2783,7 +2783,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2809,7 +2809,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196240420
+    "timestamp": 1777994051488363471
   },
   {
     "env_config": {
@@ -2832,7 +2832,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2860,7 +2860,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196252663
+    "timestamp": 1777994051488367374
   },
   {
     "env_config": {
@@ -2883,7 +2883,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2908,7 +2908,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196262973
+    "timestamp": 1777994051488370715
   },
   {
     "env_config": {
@@ -2931,7 +2931,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -2957,7 +2957,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196273803
+    "timestamp": 1777994051488375366
   },
   {
     "env_config": {
@@ -2980,7 +2980,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3008,7 +3008,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196285916
+    "timestamp": 1777994051488379409
   },
   {
     "env_config": {
@@ -3031,7 +3031,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3056,7 +3056,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196296125
+    "timestamp": 1777994051488383206
   },
   {
     "env_config": {
@@ -3079,7 +3079,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3105,7 +3105,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196307006
+    "timestamp": 1777994051488386674
   },
   {
     "env_config": {
@@ -3128,7 +3128,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3156,7 +3156,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196321263
+    "timestamp": 1777994051488391015
   },
   {
     "env_config": {
@@ -3179,7 +3179,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3204,7 +3204,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196331512
+    "timestamp": 1777994051488395203
   },
   {
     "env_config": {
@@ -3227,7 +3227,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3253,7 +3253,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196342573
+    "timestamp": 1777994051488398736
   },
   {
     "env_config": {
@@ -3276,7 +3276,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3304,7 +3304,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196361118
+    "timestamp": 1777994051488402559
   },
   {
     "env_config": {
@@ -3327,7 +3327,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3352,7 +3352,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196371508
+    "timestamp": 1777994051488405893
   },
   {
     "env_config": {
@@ -3375,7 +3375,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3401,7 +3401,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196382358
+    "timestamp": 1777994051488409455
   },
   {
     "env_config": {
@@ -3424,7 +3424,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3452,7 +3452,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196394441
+    "timestamp": 1777994051488414111
   },
   {
     "env_config": {
@@ -3475,7 +3475,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3500,7 +3500,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196404540
+    "timestamp": 1777994051488417632
   },
   {
     "env_config": {
@@ -3523,7 +3523,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3549,7 +3549,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196415320
+    "timestamp": 1777994051488421392
   },
   {
     "env_config": {
@@ -3572,7 +3572,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3600,7 +3600,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196427544
+    "timestamp": 1777994051488425451
   },
   {
     "env_config": {
@@ -3623,7 +3623,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3648,7 +3648,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196440187
+    "timestamp": 1777994051488429777
   },
   {
     "env_config": {
@@ -3671,7 +3671,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3697,7 +3697,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196451048
+    "timestamp": 1777994051488433316
   },
   {
     "env_config": {
@@ -3720,7 +3720,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3748,7 +3748,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196463131
+    "timestamp": 1777994051488437357
   },
   {
     "env_config": {
@@ -3771,7 +3771,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3796,7 +3796,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196473250
+    "timestamp": 1777994051488440746
   },
   {
     "env_config": {
@@ -3819,7 +3819,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3845,7 +3845,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196484641
+    "timestamp": 1777994051488444632
   },
   {
     "env_config": {
@@ -3868,7 +3868,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3896,7 +3896,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196496885
+    "timestamp": 1777994051488448846
   },
   {
     "env_config": {
@@ -3919,7 +3919,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3944,7 +3944,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196507074
+    "timestamp": 1777994051488453019
   },
   {
     "env_config": {
@@ -3967,7 +3967,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -3993,7 +3993,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196517844
+    "timestamp": 1777994051488456631
   },
   {
     "env_config": {
@@ -4016,7 +4016,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4044,7 +4044,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196532331
+    "timestamp": 1777994051488460706
   },
   {
     "env_config": {
@@ -4067,7 +4067,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4092,7 +4092,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196542561
+    "timestamp": 1777994051488463956
   },
   {
     "env_config": {
@@ -4115,7 +4115,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4141,7 +4141,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196555816
+    "timestamp": 1777994051488467658
   },
   {
     "env_config": {
@@ -4164,7 +4164,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4192,7 +4192,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196570273
+    "timestamp": 1777994051488471490
   },
   {
     "env_config": {
@@ -4215,7 +4215,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4240,7 +4240,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196580653
+    "timestamp": 1777994051488474906
   },
   {
     "env_config": {
@@ -4263,7 +4263,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4289,7 +4289,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196591483
+    "timestamp": 1777994051488478495
   },
   {
     "env_config": {
@@ -4312,7 +4312,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4340,7 +4340,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196603616
+    "timestamp": 1777994051488482349
   },
   {
     "env_config": {
@@ -4363,7 +4363,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4388,7 +4388,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196613835
+    "timestamp": 1777994051488485882
   },
   {
     "env_config": {
@@ -4411,7 +4411,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4437,7 +4437,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196624836
+    "timestamp": 1777994051488490331
   },
   {
     "env_config": {
@@ -4460,7 +4460,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4488,7 +4488,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196636999
+    "timestamp": 1777994051488494534
   },
   {
     "env_config": {
@@ -4511,7 +4511,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4536,7 +4536,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196647148
+    "timestamp": 1777994051488497928
   },
   {
     "env_config": {
@@ -4559,7 +4559,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4585,7 +4585,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196657929
+    "timestamp": 1777994051488501442
   },
   {
     "env_config": {
@@ -4608,7 +4608,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4636,7 +4636,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196672166
+    "timestamp": 1777994051488505524
   },
   {
     "env_config": {
@@ -4659,7 +4659,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4684,7 +4684,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196682455
+    "timestamp": 1777994051488508835
   },
   {
     "env_config": {
@@ -4707,7 +4707,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4733,7 +4733,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196693386
+    "timestamp": 1777994051488513176
   },
   {
     "env_config": {
@@ -4756,7 +4756,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4784,7 +4784,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196705639
+    "timestamp": 1777994051488517264
   },
   {
     "env_config": {
@@ -4807,7 +4807,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4832,7 +4832,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196715758
+    "timestamp": 1777994051488520841
   },
   {
     "env_config": {
@@ -4855,7 +4855,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4881,7 +4881,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196726648
+    "timestamp": 1777994051488524583
   },
   {
     "env_config": {
@@ -4904,7 +4904,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4932,7 +4932,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196738791
+    "timestamp": 1777994051488529642
   },
   {
     "env_config": {
@@ -4955,7 +4955,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -4980,7 +4980,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196749041
+    "timestamp": 1777994051488532884
   },
   {
     "env_config": {
@@ -5003,7 +5003,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5029,7 +5029,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196759921
+    "timestamp": 1777994051488536210
   },
   {
     "env_config": {
@@ -5052,7 +5052,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5080,7 +5080,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196772014
+    "timestamp": 1777994051488540032
   },
   {
     "env_config": {
@@ -5103,7 +5103,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5128,7 +5128,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196784187
+    "timestamp": 1777994051488543301
   },
   {
     "env_config": {
@@ -5151,7 +5151,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5177,7 +5177,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196795018
+    "timestamp": 1777994051488547390
   },
   {
     "env_config": {
@@ -5200,7 +5200,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5228,7 +5228,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196807110
+    "timestamp": 1777994051488551267
   },
   {
     "env_config": {
@@ -5251,7 +5251,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5276,7 +5276,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196817410
+    "timestamp": 1777994051488554601
   },
   {
     "env_config": {
@@ -5299,7 +5299,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5325,7 +5325,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196828130
+    "timestamp": 1777994051488558580
   },
   {
     "env_config": {
@@ -5348,7 +5348,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5376,7 +5376,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196840824
+    "timestamp": 1777994051488562772
   },
   {
     "env_config": {
@@ -5399,7 +5399,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5424,7 +5424,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196851805
+    "timestamp": 1777994051488567053
   },
   {
     "env_config": {
@@ -5447,7 +5447,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5473,7 +5473,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196862535
+    "timestamp": 1777994051488570708
   },
   {
     "env_config": {
@@ -5496,7 +5496,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5524,7 +5524,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196874698
+    "timestamp": 1777994051488574495
   },
   {
     "env_config": {
@@ -5547,7 +5547,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5572,7 +5572,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196885018
+    "timestamp": 1777994051488577578
   },
   {
     "env_config": {
@@ -5595,7 +5595,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5621,7 +5621,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196902010
+    "timestamp": 1777994051488581974
   },
   {
     "env_config": {
@@ -5644,7 +5644,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5672,7 +5672,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196914223
+    "timestamp": 1777994051488586124
   },
   {
     "env_config": {
@@ -5695,7 +5695,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5720,7 +5720,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196926656
+    "timestamp": 1777994051488589260
   },
   {
     "env_config": {
@@ -5743,7 +5743,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5769,7 +5769,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196937657
+    "timestamp": 1777994051488592876
   },
   {
     "env_config": {
@@ -5792,7 +5792,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5820,7 +5820,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196950101
+    "timestamp": 1777994051488596617
   },
   {
     "env_config": {
@@ -5843,7 +5843,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5868,7 +5868,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196960420
+    "timestamp": 1777994051488599700
   },
   {
     "env_config": {
@@ -5891,7 +5891,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5917,7 +5917,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751196971180
+    "timestamp": 1777994051488603922
   },
   {
     "env_config": {
@@ -5940,7 +5940,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -5968,7 +5968,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751196983323
+    "timestamp": 1777994051488607927
   },
   {
     "env_config": {
@@ -5991,7 +5991,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6016,7 +6016,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751196993523
+    "timestamp": 1777994051488611123
   },
   {
     "env_config": {
@@ -6039,7 +6039,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6065,7 +6065,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197004273
+    "timestamp": 1777994051488614547
   },
   {
     "env_config": {
@@ -6088,7 +6088,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6116,7 +6116,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197018880
+    "timestamp": 1777994051488618319
   },
   {
     "env_config": {
@@ -6139,7 +6139,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6164,7 +6164,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197029210
+    "timestamp": 1777994051488621498
   },
   {
     "env_config": {
@@ -6187,7 +6187,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6213,7 +6213,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197040161
+    "timestamp": 1777994051488625001
   },
   {
     "env_config": {
@@ -6236,7 +6236,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6264,7 +6264,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197052304
+    "timestamp": 1777994051488628883
   },
   {
     "env_config": {
@@ -6287,7 +6287,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6312,7 +6312,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197062513
+    "timestamp": 1777994051488633490
   },
   {
     "env_config": {
@@ -6335,7 +6335,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6361,7 +6361,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197073554
+    "timestamp": 1777994051488636996
   },
   {
     "env_config": {
@@ -6384,7 +6384,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6412,7 +6412,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197085827
+    "timestamp": 1777994051488641804
   },
   {
     "env_config": {
@@ -6435,7 +6435,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6460,7 +6460,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197096066
+    "timestamp": 1777994051488645216
   },
   {
     "env_config": {
@@ -6483,7 +6483,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6509,7 +6509,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197106766
+    "timestamp": 1777994051488648743
   },
   {
     "env_config": {
@@ -6532,7 +6532,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6560,7 +6560,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197118869
+    "timestamp": 1777994051488652677
   },
   {
     "env_config": {
@@ -6583,7 +6583,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6608,7 +6608,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197131233
+    "timestamp": 1777994051488656000
   },
   {
     "env_config": {
@@ -6631,7 +6631,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6657,7 +6657,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197142253
+    "timestamp": 1777994051488659556
   },
   {
     "env_config": {
@@ -6680,7 +6680,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6708,7 +6708,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197154406
+    "timestamp": 1777994051488663481
   },
   {
     "env_config": {
@@ -6731,7 +6731,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6756,7 +6756,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197164686
+    "timestamp": 1777994051488667513
   },
   {
     "env_config": {
@@ -6779,7 +6779,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6805,7 +6805,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197175446
+    "timestamp": 1777994051488671033
   },
   {
     "env_config": {
@@ -6828,7 +6828,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6856,7 +6856,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197187579
+    "timestamp": 1777994051488674904
   },
   {
     "env_config": {
@@ -6879,7 +6879,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6904,7 +6904,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197197879
+    "timestamp": 1777994051488679066
   },
   {
     "env_config": {
@@ -6927,7 +6927,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -6953,7 +6953,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197208669
+    "timestamp": 1777994051488682492
   },
   {
     "env_config": {
@@ -6976,7 +6976,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7004,7 +7004,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197220862
+    "timestamp": 1777994051488686180
   },
   {
     "env_config": {
@@ -7027,7 +7027,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7052,7 +7052,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197231041
+    "timestamp": 1777994051488689471
   },
   {
     "env_config": {
@@ -7075,7 +7075,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7101,7 +7101,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197247913
+    "timestamp": 1777994051488692978
   },
   {
     "env_config": {
@@ -7124,7 +7124,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7152,7 +7152,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197260046
+    "timestamp": 1777994051488696643
   },
   {
     "env_config": {
@@ -7175,7 +7175,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7200,7 +7200,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197272349
+    "timestamp": 1777994051488699842
   },
   {
     "env_config": {
@@ -7223,7 +7223,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7249,7 +7249,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197283260
+    "timestamp": 1777994051488741259
   },
   {
     "env_config": {
@@ -7272,7 +7272,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7300,7 +7300,7 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1776178751197297386
+    "timestamp": 1777994051488745401
   },
   {
     "env_config": {
@@ -7323,7 +7323,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7348,7 +7348,7 @@
       "learning_rate": 0.0003,
       "clip_range": 0.18
     },
-    "timestamp": 1776178751197307696
+    "timestamp": 1777994051488748819
   },
   {
     "env_config": {
@@ -7371,7 +7371,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -7397,6 +7397,6 @@
       "use_sde": true,
       "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1776178751197318857
+    "timestamp": 1777994051488753320
   }
 ]

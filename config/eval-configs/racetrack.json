@@ -18,7 +18,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -43,7 +43,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229389471
+    "timestamp": 1777994051465134384
   },
   {
     "env_config": {
@@ -64,7 +64,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -89,7 +89,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229389732
+    "timestamp": 1777994051465134646
   },
   {
     "env_config": {
@@ -110,7 +110,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -135,7 +135,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229389877
+    "timestamp": 1777994051465134829
   },
   {
     "env_config": {
@@ -156,7 +156,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -181,7 +181,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229389965
+    "timestamp": 1777994051465134932
   },
   {
     "env_config": {
@@ -202,7 +202,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -227,7 +227,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390042
+    "timestamp": 1777994051465135004
   },
   {
     "env_config": {
@@ -248,7 +248,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -273,7 +273,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390191
+    "timestamp": 1777994051465135131
   },
   {
     "env_config": {
@@ -294,7 +294,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -319,7 +319,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390261
+    "timestamp": 1777994051465135201
   },
   {
     "env_config": {
@@ -340,7 +340,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -365,7 +365,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390331
+    "timestamp": 1777994051465135270
   },
   {
     "env_config": {
@@ -386,7 +386,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -411,7 +411,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390425
+    "timestamp": 1777994051465135345
   },
   {
     "env_config": {
@@ -435,7 +435,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -460,7 +460,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390546
+    "timestamp": 1777994051465136199
   },
   {
     "env_config": {
@@ -486,7 +486,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -511,7 +511,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390636
+    "timestamp": 1777994051465136290
   },
   {
     "env_config": {
@@ -535,7 +535,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -560,7 +560,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390713
+    "timestamp": 1777994051465136365
   },
   {
     "env_config": {
@@ -586,7 +586,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -611,7 +611,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390785
+    "timestamp": 1777994051465136437
   },
   {
     "env_config": {
@@ -635,7 +635,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -660,7 +660,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390856
+    "timestamp": 1777994051465136510
   },
   {
     "env_config": {
@@ -686,7 +686,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -711,7 +711,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390924
+    "timestamp": 1777994051465136582
   },
   {
     "env_config": {
@@ -738,7 +738,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -763,7 +763,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229390993
+    "timestamp": 1777994051465136654
   },
   {
     "env_config": {
@@ -787,7 +787,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -812,7 +812,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391063
+    "timestamp": 1777994051465136722
   },
   {
     "env_config": {
@@ -838,7 +838,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -863,7 +863,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391191
+    "timestamp": 1777994051465136853
   },
   {
     "env_config": {
@@ -890,7 +890,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -915,7 +915,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391274
+    "timestamp": 1777994051465136962
   },
   {
     "env_config": {
@@ -939,7 +939,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -964,7 +964,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391344
+    "timestamp": 1777994051465137031
   },
   {
     "env_config": {
@@ -990,7 +990,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1015,7 +1015,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391414
+    "timestamp": 1777994051465137109
   },
   {
     "env_config": {
@@ -1043,7 +1043,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1068,7 +1068,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391483
+    "timestamp": 1777994051465137179
   },
   {
     "env_config": {
@@ -1092,7 +1092,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1117,7 +1117,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391550
+    "timestamp": 1777994051465137247
   },
   {
     "env_config": {
@@ -1143,7 +1143,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1168,7 +1168,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229391643
+    "timestamp": 1777994051465137313
   },
   {
     "env_config": {
@@ -1196,7 +1196,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1221,7 +1221,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392524
+    "timestamp": 1777994051465137382
   },
   {
     "env_config": {
@@ -1245,7 +1245,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1270,7 +1270,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392654
+    "timestamp": 1777994051465137508
   },
   {
     "env_config": {
@@ -1296,7 +1296,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1321,7 +1321,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392728
+    "timestamp": 1777994051465137576
   },
   {
     "env_config": {
@@ -1349,7 +1349,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1374,7 +1374,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392801
+    "timestamp": 1777994051465137643
   },
   {
     "env_config": {
@@ -1398,7 +1398,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1423,7 +1423,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392874
+    "timestamp": 1777994051465137726
   },
   {
     "env_config": {
@@ -1449,7 +1449,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1474,7 +1474,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229392948
+    "timestamp": 1777994051465137796
   },
   {
     "env_config": {
@@ -1498,7 +1498,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1523,7 +1523,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393016
+    "timestamp": 1777994051465137864
   },
   {
     "env_config": {
@@ -1549,7 +1549,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1574,7 +1574,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393085
+    "timestamp": 1777994051465137934
   },
   {
     "env_config": {
@@ -1598,7 +1598,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1623,7 +1623,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393153
+    "timestamp": 1777994051465138004
   },
   {
     "env_config": {
@@ -1649,7 +1649,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1674,7 +1674,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393261
+    "timestamp": 1777994051465138120
   },
   {
     "env_config": {
@@ -1701,7 +1701,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1726,7 +1726,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393342
+    "timestamp": 1777994051465138193
   },
   {
     "env_config": {
@@ -1750,7 +1750,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1775,7 +1775,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393411
+    "timestamp": 1777994051465138262
   },
   {
     "env_config": {
@@ -1801,7 +1801,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1826,7 +1826,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393476
+    "timestamp": 1777994051465138328
   },
   {
     "env_config": {
@@ -1853,7 +1853,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1878,7 +1878,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393545
+    "timestamp": 1777994051465138391
   },
   {
     "env_config": {
@@ -1902,7 +1902,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1927,7 +1927,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393613
+    "timestamp": 1777994051465138456
   },
   {
     "env_config": {
@@ -1953,7 +1953,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -1978,7 +1978,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393679
+    "timestamp": 1777994051465138521
   },
   {
     "env_config": {
@@ -2005,7 +2005,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2030,7 +2030,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393746
+    "timestamp": 1777994051465138589
   },
   {
     "env_config": {
@@ -2054,7 +2054,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2079,7 +2079,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229393872
+    "timestamp": 1777994051465139490
   },
   {
     "env_config": {
@@ -2105,7 +2105,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2130,7 +2130,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229394760
+    "timestamp": 1777994051465139584
   },
   {
     "env_config": {
@@ -2158,7 +2158,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2183,7 +2183,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229394838
+    "timestamp": 1777994051465139661
   },
   {
     "env_config": {
@@ -2207,7 +2207,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2232,7 +2232,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229394923
+    "timestamp": 1777994051465139733
   },
   {
     "env_config": {
@@ -2258,7 +2258,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2283,7 +2283,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395018
+    "timestamp": 1777994051465139805
   },
   {
     "env_config": {
@@ -2311,7 +2311,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2336,7 +2336,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395091
+    "timestamp": 1777994051465139877
   },
   {
     "env_config": {
@@ -2360,7 +2360,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2385,7 +2385,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395163
+    "timestamp": 1777994051465139949
   },
   {
     "env_config": {
@@ -2411,7 +2411,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2436,7 +2436,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395230
+    "timestamp": 1777994051465140016
   },
   {
     "env_config": {
@@ -2464,7 +2464,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2489,7 +2489,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395311
+    "timestamp": 1777994051465140082
   },
   {
     "env_config": {
@@ -2513,7 +2513,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2538,7 +2538,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395379
+    "timestamp": 1777994051465140161
   },
   {
     "env_config": {
@@ -2564,7 +2564,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2589,7 +2589,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395461
+    "timestamp": 1777994051465140228
   },
   {
     "env_config": {
@@ -2613,7 +2613,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2638,7 +2638,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395528
+    "timestamp": 1777994051465140297
   },
   {
     "env_config": {
@@ -2664,7 +2664,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2689,7 +2689,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395647
+    "timestamp": 1777994051465140400
   },
   {
     "env_config": {
@@ -2713,7 +2713,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2738,7 +2738,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395715
+    "timestamp": 1777994051465140465
   },
   {
     "env_config": {
@@ -2764,7 +2764,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2789,7 +2789,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229395783
+    "timestamp": 1777994051465140529
   },
   {
     "env_config": {
@@ -2816,7 +2816,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2841,7 +2841,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229396548
+    "timestamp": 1777994051465140594
   },
   {
     "env_config": {
@@ -2865,7 +2865,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2890,7 +2890,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229396626
+    "timestamp": 1777994051465140661
   },
   {
     "env_config": {
@@ -2916,7 +2916,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -2941,7 +2941,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229396701
+    "timestamp": 1777994051465140726
   },
   {
     "env_config": {
@@ -2955,2084 +2955,6 @@
           "steering_range": [
             -0.7853981633974483,
             0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": [
-          1,
-          3
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229396774
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229396849
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229396917
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229396985
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229397052
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229397121
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229397991
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398062
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398133
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 100,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398204
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398271
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398339
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398407
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398474
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398539
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398619
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398685
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398749
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398890
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229398959
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399037
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399105
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399175
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399240
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399307
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 0,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399375
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399442
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399509
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 10,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229399579
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400340
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400434
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -0.7853981633974483,
-            0.7853981633974483
-          ]
-        },
-        "lanes_count": 4,
-        "vehicles_count": 20,
-        "length": 200,
-        "block_lanes": [
-          1,
-          3,
-          4
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400506
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400579
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400650
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400816
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 2,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400886
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229400954
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229401020
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 0,
-        "length": 100,
-        "block_lanes": [
-          1,
-          3
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229401085
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": []
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229401149
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
-          ]
-        },
-        "lanes_count": 3,
-        "vehicles_count": 10,
-        "length": 100,
-        "block_lanes": [
-          1
-        ]
-      },
-      "train_timesteps": 200000,
-      "eval_freq": 2000,
-      "n_eval_episodes": 5,
-      "n_test_episodes": 10
-    },
-    "obs_config": {
-      "type": "OccupancyGrid",
-      "features": [
-        "presence",
-        "on_road"
-      ],
-      "grid_size": [
-        [
-          -18,
-          18
-        ],
-        [
-          -18,
-          18
-        ]
-      ],
-      "grid_step": [
-        3,
-        3
-      ],
-      "as_image": false,
-      "align_to_vehicle_axes": true
-    },
-    "timestamp": 1776250405229401228
-  },
-  {
-    "env_config": {
-      "env_id": "racetrack-oval-v0",
-      "config": {
-        "duration": 100,
-        "action": {
-          "type": "ContinuousAction",
-          "longitudinal": false,
-          "lateral": true,
-          "steering_range": [
-            -1.0471975511965976,
-            1.0471975511965976
           ]
         },
         "lanes_count": 3,
@@ -5046,7 +2968,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5071,7 +2993,2085 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401294
+    "timestamp": 1777994051465140792
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465140858
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465140950
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465141737
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465141843
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465142599
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465142828
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465142900
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465142974
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 100,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465143057
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465143126
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465143193
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465143258
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465143361
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144116
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144260
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144375
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144447
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144597
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144668
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144739
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144808
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144876
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465144940
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145007
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 0,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145087
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145153
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145220
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 10,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145288
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145354
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145421
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -0.7853981633974483,
+            0.7853981633974483
+          ]
+        },
+        "lanes_count": 4,
+        "vehicles_count": 20,
+        "length": 200,
+        "block_lanes": [
+          1,
+          3,
+          4
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145487
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145552
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145620
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145734
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 2,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145818
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145885
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465145951
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 0,
+        "length": 100,
+        "block_lanes": [
+          1,
+          3
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465146017
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": []
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465146083
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": [
+          1
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465146150
+  },
+  {
+    "env_config": {
+      "env_id": "racetrack-oval-v0",
+      "config": {
+        "duration": 100,
+        "action": {
+          "type": "ContinuousAction",
+          "longitudinal": false,
+          "lateral": true,
+          "steering_range": [
+            -1.0471975511965976,
+            1.0471975511965976
+          ]
+        },
+        "lanes_count": 3,
+        "vehicles_count": 10,
+        "length": 100,
+        "block_lanes": [
+          1,
+          3
+        ]
+      },
+      "train_timesteps": 200000,
+      "eval_freq": 2000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50
+    },
+    "obs_config": {
+      "type": "OccupancyGrid",
+      "features": [
+        "presence",
+        "on_road"
+      ],
+      "grid_size": [
+        [
+          -18,
+          18
+        ],
+        [
+          -18,
+          18
+        ]
+      ],
+      "grid_step": [
+        3,
+        3
+      ],
+      "as_image": false,
+      "align_to_vehicle_axes": true
+    },
+    "timestamp": 1777994051465146215
   },
   {
     "env_config": {
@@ -5095,7 +5095,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5120,7 +5120,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401360
+    "timestamp": 1777994051465146283
   },
   {
     "env_config": {
@@ -5146,7 +5146,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5171,7 +5171,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401427
+    "timestamp": 1777994051465146350
   },
   {
     "env_config": {
@@ -5199,7 +5199,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5224,7 +5224,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401495
+    "timestamp": 1777994051465146420
   },
   {
     "env_config": {
@@ -5248,7 +5248,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5273,7 +5273,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401561
+    "timestamp": 1777994051465147384
   },
   {
     "env_config": {
@@ -5299,7 +5299,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5324,7 +5324,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401628
+    "timestamp": 1777994051465147462
   },
   {
     "env_config": {
@@ -5352,7 +5352,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5377,7 +5377,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401692
+    "timestamp": 1777994051465147536
   },
   {
     "env_config": {
@@ -5401,7 +5401,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5426,7 +5426,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401760
+    "timestamp": 1777994051465147611
   },
   {
     "env_config": {
@@ -5452,7 +5452,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5477,7 +5477,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401824
+    "timestamp": 1777994051465147681
   },
   {
     "env_config": {
@@ -5505,7 +5505,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5530,7 +5530,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229401926
+    "timestamp": 1777994051465147878
   },
   {
     "env_config": {
@@ -5554,7 +5554,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5579,7 +5579,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402006
+    "timestamp": 1777994051465147948
   },
   {
     "env_config": {
@@ -5605,7 +5605,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5630,7 +5630,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402071
+    "timestamp": 1777994051465148017
   },
   {
     "env_config": {
@@ -5654,7 +5654,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5679,7 +5679,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402139
+    "timestamp": 1777994051465148083
   },
   {
     "env_config": {
@@ -5705,7 +5705,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5730,7 +5730,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402204
+    "timestamp": 1777994051465148150
   },
   {
     "env_config": {
@@ -5754,7 +5754,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5779,7 +5779,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402270
+    "timestamp": 1777994051465148218
   },
   {
     "env_config": {
@@ -5805,7 +5805,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5830,7 +5830,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402334
+    "timestamp": 1777994051465148286
   },
   {
     "env_config": {
@@ -5857,7 +5857,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5882,7 +5882,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402400
+    "timestamp": 1777994051465148351
   },
   {
     "env_config": {
@@ -5906,7 +5906,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5931,7 +5931,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402466
+    "timestamp": 1777994051465148416
   },
   {
     "env_config": {
@@ -5957,7 +5957,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -5982,7 +5982,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402530
+    "timestamp": 1777994051465148481
   },
   {
     "env_config": {
@@ -6009,7 +6009,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6034,7 +6034,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229402610
+    "timestamp": 1777994051465148547
   },
   {
     "env_config": {
@@ -6058,7 +6058,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6083,7 +6083,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403426
+    "timestamp": 1777994051465148620
   },
   {
     "env_config": {
@@ -6109,7 +6109,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6134,7 +6134,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403518
+    "timestamp": 1777994051465148686
   },
   {
     "env_config": {
@@ -6161,7 +6161,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6186,7 +6186,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403592
+    "timestamp": 1777994051465148753
   },
   {
     "env_config": {
@@ -6210,7 +6210,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6235,7 +6235,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403666
+    "timestamp": 1777994051465148818
   },
   {
     "env_config": {
@@ -6261,7 +6261,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6286,7 +6286,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403739
+    "timestamp": 1777994051465148885
   },
   {
     "env_config": {
@@ -6314,7 +6314,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6339,7 +6339,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403813
+    "timestamp": 1777994051465149623
   },
   {
     "env_config": {
@@ -6363,7 +6363,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6388,7 +6388,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403880
+    "timestamp": 1777994051465149695
   },
   {
     "env_config": {
@@ -6414,7 +6414,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6439,7 +6439,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229403959
+    "timestamp": 1777994051465149776
   },
   {
     "env_config": {
@@ -6467,7 +6467,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6492,7 +6492,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229404811
+    "timestamp": 1777994051465149843
   },
   {
     "env_config": {
@@ -6516,7 +6516,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6541,7 +6541,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229409097
+    "timestamp": 1777994051465149959
   },
   {
     "env_config": {
@@ -6567,7 +6567,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6592,7 +6592,7 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229409175
+    "timestamp": 1777994051465150029
   },
   {
     "env_config": {
@@ -6620,7 +6620,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 5,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "OccupancyGrid",
@@ -6645,6 +6645,6 @@
       "as_image": false,
       "align_to_vehicle_axes": true
     },
-    "timestamp": 1776250405229409256
+    "timestamp": 1777994051465150097
   }
 ]

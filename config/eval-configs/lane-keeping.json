@@ -20,7 +20,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -30,7 +30,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197320811
+    "timestamp": 1777994051488754126
   },
   {
     "env_config": {
@@ -53,7 +53,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -63,7 +63,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197321462
+    "timestamp": 1777994051488754370
   },
   {
     "env_config": {
@@ -86,7 +86,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -96,7 +96,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197321732
+    "timestamp": 1777994051488754491
   },
   {
     "env_config": {
@@ -119,7 +119,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -129,7 +129,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197321953
+    "timestamp": 1777994051488754571
   },
   {
     "env_config": {
@@ -152,7 +152,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -162,7 +162,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197322163
+    "timestamp": 1777994051488754647
   },
   {
     "env_config": {
@@ -185,7 +185,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -195,7 +195,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197322504
+    "timestamp": 1777994051488754786
   },
   {
     "env_config": {
@@ -218,7 +218,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -228,7 +228,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197322754
+    "timestamp": 1777994051488754866
   },
   {
     "env_config": {
@@ -251,7 +251,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -261,7 +261,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197322985
+    "timestamp": 1777994051488754951
   },
   {
     "env_config": {
@@ -284,7 +284,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -294,7 +294,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197323215
+    "timestamp": 1777994051488755021
   },
   {
     "env_config": {
@@ -317,7 +317,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -327,7 +327,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197323496
+    "timestamp": 1777994051488757178
   },
   {
     "env_config": {
@@ -350,7 +350,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -360,7 +360,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197323736
+    "timestamp": 1777994051488757288
   },
   {
     "env_config": {
@@ -383,7 +383,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -393,7 +393,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197323957
+    "timestamp": 1777994051488757384
   },
   {
     "env_config": {
@@ -416,7 +416,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -426,7 +426,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197324177
+    "timestamp": 1777994051488757465
   },
   {
     "env_config": {
@@ -449,7 +449,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -459,7 +459,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197324397
+    "timestamp": 1777994051488757537
   },
   {
     "env_config": {
@@ -482,7 +482,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -492,7 +492,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197324608
+    "timestamp": 1777994051488757608
   },
   {
     "env_config": {
@@ -515,7 +515,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -525,7 +525,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197324828
+    "timestamp": 1777994051488757677
   },
   {
     "env_config": {
@@ -548,7 +548,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -558,7 +558,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197325039
+    "timestamp": 1777994051488757746
   },
   {
     "env_config": {
@@ -581,7 +581,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -591,7 +591,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197325630
+    "timestamp": 1777994051488757876
   },
   {
     "env_config": {
@@ -614,7 +614,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -624,7 +624,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197325860
+    "timestamp": 1777994051488757971
   },
   {
     "env_config": {
@@ -647,7 +647,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -657,7 +657,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197326101
+    "timestamp": 1777994051488758048
   },
   {
     "env_config": {
@@ -680,7 +680,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -690,7 +690,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197326311
+    "timestamp": 1777994051488758113
   },
   {
     "env_config": {
@@ -713,7 +713,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -723,7 +723,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197326532
+    "timestamp": 1777994051488758180
   },
   {
     "env_config": {
@@ -746,7 +746,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -756,7 +756,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197326752
+    "timestamp": 1777994051488758247
   },
   {
     "env_config": {
@@ -779,7 +779,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -789,7 +789,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197326962
+    "timestamp": 1777994051488758313
   },
   {
     "env_config": {
@@ -812,7 +812,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -822,7 +822,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197327183
+    "timestamp": 1777994051488758392
   },
   {
     "env_config": {
@@ -845,7 +845,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -855,7 +855,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197327453
+    "timestamp": 1777994051488758508
   },
   {
     "env_config": {
@@ -878,7 +878,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -888,7 +888,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197327674
+    "timestamp": 1777994051488758580
   },
   {
     "env_config": {
@@ -911,7 +911,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -921,7 +921,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197327904
+    "timestamp": 1777994051488758645
   },
   {
     "env_config": {
@@ -944,7 +944,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -954,7 +954,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197330389
+    "timestamp": 1777994051488758710
   },
   {
     "env_config": {
@@ -977,7 +977,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -987,7 +987,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197330649
+    "timestamp": 1777994051488758773
   },
   {
     "env_config": {
@@ -1010,7 +1010,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1020,7 +1020,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197330880
+    "timestamp": 1777994051488758839
   },
   {
     "env_config": {
@@ -1043,7 +1043,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1053,7 +1053,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197331120
+    "timestamp": 1777994051488758903
   },
   {
     "env_config": {
@@ -1076,7 +1076,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1086,7 +1086,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197331361
+    "timestamp": 1777994051488758968
   },
   {
     "env_config": {
@@ -1109,7 +1109,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1119,7 +1119,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197331611
+    "timestamp": 1777994051488759080
   },
   {
     "env_config": {
@@ -1142,7 +1142,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1152,7 +1152,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197331832
+    "timestamp": 1777994051488759145
   },
   {
     "env_config": {
@@ -1175,7 +1175,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1185,7 +1185,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197332052
+    "timestamp": 1777994051488759211
   },
   {
     "env_config": {
@@ -1208,7 +1208,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1218,7 +1218,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197332272
+    "timestamp": 1777994051488759276
   },
   {
     "env_config": {
@@ -1241,7 +1241,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1251,7 +1251,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197332483
+    "timestamp": 1777994051488759339
   },
   {
     "env_config": {
@@ -1274,7 +1274,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1284,7 +1284,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197332703
+    "timestamp": 1777994051488759402
   },
   {
     "env_config": {
@@ -1307,7 +1307,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1317,7 +1317,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197332924
+    "timestamp": 1777994051488759469
   },
   {
     "env_config": {
@@ -1340,7 +1340,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1350,7 +1350,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197333164
+    "timestamp": 1777994051488759533
   },
   {
     "env_config": {
@@ -1373,7 +1373,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1383,7 +1383,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197333495
+    "timestamp": 1777994051488760427
   },
   {
     "env_config": {
@@ -1406,7 +1406,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1416,7 +1416,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197333795
+    "timestamp": 1777994051488761271
   },
   {
     "env_config": {
@@ -1439,7 +1439,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1449,7 +1449,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197334016
+    "timestamp": 1777994051488761362
   },
   {
     "env_config": {
@@ -1472,7 +1472,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1482,7 +1482,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197334236
+    "timestamp": 1777994051488761471
   },
   {
     "env_config": {
@@ -1505,7 +1505,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1515,7 +1515,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197334456
+    "timestamp": 1777994051488761542
   },
   {
     "env_config": {
@@ -1538,7 +1538,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1548,7 +1548,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197334677
+    "timestamp": 1777994051488761615
   },
   {
     "env_config": {
@@ -1571,7 +1571,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1581,7 +1581,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197334887
+    "timestamp": 1777994051488761685
   },
   {
     "env_config": {
@@ -1604,7 +1604,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1614,7 +1614,7 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197335268
+    "timestamp": 1777994051488761756
   },
   {
     "env_config": {
@@ -1637,7 +1637,7 @@
       "train_timesteps": 200000,
       "eval_freq": 2000,
       "n_eval_episodes": 10,
-      "n_test_episodes": 10
+      "n_test_episodes": 50
     },
     "obs_config": {
       "type": "AttributesObservation",
@@ -1647,6 +1647,6 @@
         "reference_state"
       ]
     },
-    "timestamp": 1776178751197335629
+    "timestamp": 1777994051488761822
   }
 ]
