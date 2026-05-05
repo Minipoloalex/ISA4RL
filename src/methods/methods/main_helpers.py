@@ -212,6 +212,7 @@ def check_agents(train_configs: List[TrainConfig], instance_configs: List[Instan
     not_trained_segs = check_helper(train_configs, is_trained)
     not_evaled_segs = check_helper(train_configs, is_evaluated)
     not_extracted_segs = check_helper(instance_configs, is_extracted)
+    logger.info(f"Total train_configs: {len(train_configs)}, Total instance configs: {len(instance_configs)}")
     logger.info(f"Segments not trained yet: {not_trained_segs}")
     logger.info(f"Segments not evauated yet: {not_evaled_segs}")
     logger.info(f"Segments not evauated yet: {not_extracted_segs}")
@@ -230,7 +231,7 @@ def group_results(
 
     folder = BASE_RESULTS_PATH
     for env_folder in folder.iterdir(): # e.g. exit/
-        if env_folder.name == "isa":
+        if env_folder.name == "isa" or not env_folder.is_dir():
             continue
         logger.info(
             f"Started grouping results for environment {env_folder.name} for {len(list(env_folder.iterdir()))} instance folders"

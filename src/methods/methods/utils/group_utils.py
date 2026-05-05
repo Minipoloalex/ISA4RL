@@ -19,6 +19,9 @@ def find_instance_config_in_folder(folder: Path, env_name: str, target_env_confi
             continue
 
         for env_instance_folder in env_folder.iterdir(): # results_server/exit/<id>/
+            if not env_instance_folder.is_dir():
+                continue
+
             env_config_file = env_instance_folder / "instance_config.json"  # results_server/exit/<id>/instance_config.json
             env_config = read_json(env_config_file)
 
