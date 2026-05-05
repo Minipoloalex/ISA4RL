@@ -9,12 +9,24 @@ from stable_baselines3.common.sb2_compat.rmsprop_tf_like import RMSpropTFLike
 
 import gymnasium as gym
 
+from dataclasses import dataclass
 from typing import Optional, Dict, Any, Callable
 
 from common.file_utils import *
 from .general_utils import _coerce_numeric
 
 AlgorithmName = str
+
+
+@dataclass(frozen=True)
+class LinearSchedule:
+    initial_value: float
+
+    def __call__(self, progress_remaining: float) -> float:
+        """
+        Progress decreases from 1 at the beginning to 0 at the end.
+        """
+        return progress_remaining * self.initial_value
 
 ALGORITHM_MAP: Dict[AlgorithmName, type[BaseAlgorithm]] = {
     "ppo": PPO,
@@ -113,15 +125,7 @@ def _linear_schedule(initial_value: float) -> Callable[[float], float]:
     :return: schedule that computes
       current learning rate depending on remaining progress
     """
-    def func(progress_remaining: float) -> float:
-        """
-        Progress will decrease from 1 (beginning) to 0.
-
-        :param progress_remaining:
-        :return: current learning rate
-        """
-        return progress_remaining * initial_value
-    return func
+    return LinearSchedule(initial_value)
 
 def _resolve_schedule_placeholders(value: Any) -> Any:
     """Recursively replace lin_* placeholders with schedule callables."""

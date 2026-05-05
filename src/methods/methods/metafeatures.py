@@ -489,6 +489,7 @@ def _count_space_attributes(space: gym.Space) -> Tuple[int, int, int]:
 def _probe_features(probe: Dict[str, Any], prefix: str) -> Dict[str, float]:
     return {f"{prefix}_{key}": probe[key] for key in probe}
 
+# old code, maybe useful?
 # def _combine_probe_features(
 #     random_probe: Dict[str, Any],
 #     idm_probe: Dict[str, Any],
