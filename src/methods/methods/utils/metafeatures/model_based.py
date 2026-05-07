@@ -9,7 +9,105 @@ from methods.utils.general_utils import _flatten_obs
 logger = logging.getLogger(__name__)
 
 
-def estimate_normalized_lipschitz(env: gym.Env, num_states=50, action_pairs_per_state=20):
+def _action_distance(action_space: gym.Space, action_1, action_2) -> float:
+    if isinstance(action_space, gym.spaces.Discrete):
+        return 0.0 if int(action_1) == int(action_2) else 1.0
+
+    if isinstance(action_space, gym.spaces.MultiDiscrete):
+        action_1_arr = np.asarray(action_1, dtype=int).ravel()
+        action_2_arr = np.asarray(action_2, dtype=int).ravel()
+        return float(np.linalg.norm(action_1_arr != action_2_arr))
+
+    if isinstance(action_space, gym.spaces.MultiBinary):
+        action_1_arr = np.asarray(action_1, dtype=int).ravel()
+        action_2_arr = np.asarray(action_2, dtype=int).ravel()
+        return float(np.linalg.norm(action_1_arr != action_2_arr))
+
+    if isinstance(action_space, gym.spaces.Box):
+        action_1_arr = np.asarray(action_1, dtype=np.float32).ravel()
+        action_2_arr = np.asarray(action_2, dtype=np.float32).ravel()
+        action_delta = action_1_arr - action_2_arr
+
+        low = np.asarray(action_space.low, dtype=np.float32).ravel()
+        high = np.asarray(action_space.high, dtype=np.float32).ravel()
+        width = high - low
+        finite_width = np.isfinite(width) & (np.abs(width) > 1e-8)
+        if np.all(finite_width):
+            action_delta = action_delta / width
+
+        return float(np.linalg.norm(action_delta))
+
+    raise ValueError(f"Unsupported action space type: {type(action_space)}")
+
+
+def _action_features(action_space: gym.Space, action) -> np.ndarray:
+    if isinstance(action_space, gym.spaces.Discrete):
+        encoded_action = np.zeros(action_space.n, dtype=np.float32)
+        encoded_action[int(action)] = 1.0
+        return encoded_action
+
+    if isinstance(action_space, gym.spaces.MultiDiscrete):
+        action_arr = np.asarray(action, dtype=int).ravel()
+        encoded_parts = []
+        for value, n_values in zip(action_arr, action_space.nvec.ravel()):
+            encoded = np.zeros(int(n_values), dtype=np.float32)
+            encoded[int(value)] = 1.0
+            encoded_parts.append(encoded)
+        return np.concatenate(encoded_parts)
+
+    if isinstance(action_space, gym.spaces.MultiBinary):
+        return np.asarray(action, dtype=np.float32).ravel()
+
+    if isinstance(action_space, gym.spaces.Box):
+        action_arr = np.asarray(action, dtype=np.float32).ravel()
+        low = np.asarray(action_space.low, dtype=np.float32).ravel()
+        high = np.asarray(action_space.high, dtype=np.float32).ravel()
+        width = high - low
+        finite_width = np.isfinite(width) & (np.abs(width) > 1e-8)
+        if np.all(finite_width):
+            return (action_arr - low) / width
+        return action_arr
+
+    raise ValueError(f"Unsupported action space type: {type(action_space)}")
+
+
+def _sample_action_pairs(action_space: gym.Space, num_pairs: int):
+    if isinstance(action_space, gym.spaces.Discrete):
+        action_pairs = [
+            (action_1, action_2)
+            for action_1 in range(action_space.n)
+            for action_2 in range(action_1 + 1, action_space.n)
+        ]
+        if len(action_pairs) <= num_pairs:
+            return action_pairs
+
+        selected_indices = np.random.choice(len(action_pairs), size=num_pairs, replace=False)
+        return [action_pairs[int(index)] for index in selected_indices]
+
+    return [
+        (action_space.sample(), action_space.sample())
+        for _ in range(num_pairs)
+    ]
+
+
+def _next_action(action_space: gym.Space, current_action, step_size: float):
+    if isinstance(action_space, gym.spaces.Box):
+        noise = np.random.normal(0, step_size, size=current_action.shape)
+        return np.clip(
+            current_action + noise,
+            action_space.low,
+            action_space.high,
+        )
+
+    return action_space.sample()
+
+
+def estimate_normalized_lipschitz(
+    env: gym.Env,
+    num_states=50,
+    action_pairs_per_state=20,
+    reward_samples_per_state=15,
+):
     """
     Estimates the normalized Lipschitz constant of the reward function.
     
@@ -31,7 +129,7 @@ def estimate_normalized_lipschitz(env: gym.Env, num_states=50, action_pairs_per_
         base_env = safe_copy_env(env)
 
         sample_rewards = []
-        for _ in range(15):
+        for _ in range(reward_samples_per_state):
             temp_env = safe_copy_env(base_env)
             _, r, _, _, _ = temp_env.step(env.action_space.sample())
             sample_rewards.append(r)
@@ -41,11 +139,9 @@ def estimate_normalized_lipschitz(env: gym.Env, num_states=50, action_pairs_per_
         if reward_std < 1e-6:
             reward_std = 1.0 
         
-        for _ in range(action_pairs_per_state):
-            a1 = env.action_space.sample()
-            a2 = env.action_space.sample()
-            
-            dist = np.linalg.norm(a1 - a2)
+        action_pairs = _sample_action_pairs(env.action_space, action_pairs_per_state)
+        for a1, a2 in action_pairs:
+            dist = _action_distance(env.action_space, a1, a2)
             
             if dist < 1e-6:
                 continue
@@ -107,7 +203,7 @@ def compute_transition_linearity(env, num_samples=1000):
         action = env.action_space.sample()
         
         flat_obs = _flatten_obs(obs)
-        flat_action = np.atleast_1d(action).flatten()
+        flat_action = _action_features(env.action_space, action)
         
         next_obs, _, terminated, truncated, _ = env.step(action)
         flat_next_obs = _flatten_obs(next_obs)
@@ -168,15 +264,7 @@ def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, max_
             rewards.append(r)
             temp_env.close()
 
-            if hasattr(env.action_space, 'high'):
-                noise = np.random.normal(0, step_size, size=current_action.shape)
-                current_action = np.clip(
-                    current_action + noise, 
-                    env.action_space.low, 
-                    env.action_space.high
-                )
-            else:
-                current_action = env.action_space.sample()
+            current_action = _next_action(env.action_space, current_action, step_size)
 
         if np.std(rewards) < 1e-6:
             autocorrelations.append(1.0)

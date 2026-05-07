@@ -81,7 +81,7 @@ def _normalized_continuous_action(
 
 
 def make_parking_geometric_policy(env: gym.Env) -> PolicyFn:
-    """Create a non-learned goal-seeking controller for highway-env parking.
+    """Creates a non-learned goal-seeking controller for highway-env parking.
 
     The policy uses simulator state, not trained parameters. It acts as the
     parking counterpart to IDM: task-informed, deterministic, and independent
@@ -158,11 +158,11 @@ def make_parking_geometric_policy(env: gym.Env) -> PolicyFn:
 
 
 def make_lane_keeping_observation_policy(env: gym.Env) -> PolicyFn:
-    """Create a non-learned steering controller for highway-env lane keeping.
+    """Creates a non-learned steering controller for highway-env lane keeping.
 
     The controller only reads the observation passed to the policy. For
     AttributesObservation this means it uses the same noisy state and derivative
-    values available to learning agents, plus the reference state exposed by the
+    values available to learning agents, and the reference state exposed by the
     environment observation.
     """
 
@@ -178,6 +178,7 @@ def make_lane_keeping_observation_policy(env: gym.Env) -> PolicyFn:
     if max_abs_steering <= 1e-8:
         raise ValueError(f"Invalid steering range for lane-keeping policy: {steering_range}")
 
+    # Decent values
     kp_lateral = 0.08
     kp_heading = 0.95
     kd_lateral = 0.03
@@ -334,6 +335,7 @@ def _configure_exit_idm_behavior(base_env: gym.Env, idm_vehicle: Any) -> None:
     if env_id != "exit-v0":
         return
 
+    # Decent values based on visual experiments
     idm_vehicle.POLITENESS = -1
     idm_vehicle.LANE_CHANGE_MIN_ACC_GAIN = -0.2
     idm_vehicle.LANE_CHANGE_MAX_BRAKING_IMPOSED = 6
@@ -403,7 +405,7 @@ def _env_viewer_deepcopy(self, memo):
 
 def safe_copy_env(env: gym.Env) -> gym.Env:
     # Need to deepcopy the env, but deepcopy doesn't work with pygame's 
-    # WorldSurface (used by EnvViewer). We monkey-patch EnvViewer.__deepcopy__ 
+    # WorldSurface (used by EnvViewer). We replace EnvViewer.__deepcopy__ 
     # temporarily to properly reconstruct the viewer without pickling surfaces.
     try:
         from highway_env.envs.common.graphics import EnvViewer
