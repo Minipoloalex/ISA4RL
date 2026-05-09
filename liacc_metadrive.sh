@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- CONFIGURATION ---
-# Define the specific path to your .env file here
+# Define the specific path to .env file here
 BASE_PATH=$HOME
 cd $BASE_PATH/ISA4RL-article/src/metadrive_agents
 # ---------------------

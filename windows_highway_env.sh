@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # --- CONFIGURATION ---
-# Define the specific path to your .env file here
+# Define the specific path to .env file here
 ENV_FILE_PATH="./.env"
 # ---------------------
 

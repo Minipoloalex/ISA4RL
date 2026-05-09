@@ -268,6 +268,44 @@ def exclude_configured_metafeature_columns(
     return df.drop(columns=list(excluded_columns)).copy()
 
 
+def normalize_algorithm_reward(
+    agent_metric: float,
+    row: Dict[str, Any],
+    metric_key: str,
+    train_folder: Path,
+) -> float:
+    baseline_column = f"feature_baseline_{metric_key}"
+    random_column = f"feature_random_{metric_key}"
+
+    missing_columns = [
+        column for column in (baseline_column, random_column) if column not in row
+    ]
+    if missing_columns:
+        missing = ", ".join(missing_columns)
+        raise ValueError(
+            "[isa] Cannot normalize algorithm performance for "
+            f"'{train_folder}' because required columns are missing: {missing}"
+        )
+
+    baseline_metric = row[baseline_column]
+    random_metric = row[random_column]
+    if pd.isna(baseline_metric) or pd.isna(random_metric):
+        raise ValueError(
+            "[isa] Cannot normalize algorithm performance for "
+            f"'{train_folder}' because baseline or random metric is missing."
+        )
+
+    denominator = float(baseline_metric) - float(random_metric)
+    if denominator == 0.0:
+        raise ValueError(
+            "[isa] Cannot normalize algorithm performance for "
+            f"'{train_folder}' because baseline and random {metric_key} are equal "
+            f"({baseline_metric})."
+        )
+
+    return (float(agent_metric) - float(random_metric)) / denominator
+
+
 def build_isa_dataset(
     envs: List[str],
     metric_key: str = "mean_reward",
@@ -354,13 +392,12 @@ def build_isa_dataset(
                     metric_value = summary.get(metric_key)
                     
                     if metric_value is not None:
-                        # Normalize by baseline performance
-                        baseline_metric = row.get(f"feature_baseline_{metric_key}")
-                        
-                        if baseline_metric == 0:
-                            logger.error("Baseline metric was 0 for instance %s", train_folder)
-                        else:
-                            metric_value = float(metric_value) / float(baseline_metric)
+                        metric_value = normalize_algorithm_reward(
+                            float(metric_value),
+                            row,
+                            metric_key,
+                            train_folder,
+                        )
                             
                         column_name = f"algo_{algo_name}_{metric_key}"
                         row[column_name] = float(metric_value)
@@ -410,7 +447,16 @@ def build_isa_dataset(
                 "excluded_metafeature_columns": excluded_metafeature_columns,
                 "filter_report_path": str(filter_report_path),
                 "dataset_path": str(output_path),
-                "normalize_algorithm_metric_by_baseline": True,
+                "algorithm_metric_normalization": {
+                    "enabled": True,
+                    "formula": (
+                        "(agent_metric - random_metric) / "
+                        "(baseline_metric - random_metric)"
+                    ),
+                    "agent_metric": metric_key,
+                    "baseline_metric_column": f"feature_baseline_{metric_key}",
+                    "random_metric_column": f"feature_random_{metric_key}",
+                },
             },
             "results": {
                 "instances": len(df),
