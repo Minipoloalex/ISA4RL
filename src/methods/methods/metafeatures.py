@@ -21,6 +21,7 @@ from methods.utils.metafeature_utils import (
     ensure_idm_vehicle,
     is_parking_env,
     is_lane_keeping_env,
+    is_basic_racetrack_env,
     PolicyFn,
     get_action_space_size,
     get_max_episode_steps,
@@ -404,6 +405,8 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
         lanes = 0
     elif is_lane_keeping_env(env):
         lanes = 1
+    elif is_basic_racetrack_env(env):
+        lanes = 2
     else:
         lanes = config.get("lanes_count") or config.get("roundabout_lanes")
     assert lanes is not None

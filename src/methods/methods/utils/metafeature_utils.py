@@ -47,6 +47,8 @@ def is_parking_env(env: gym.Env) -> bool:
 def is_lane_keeping_env(env: gym.Env) -> bool:
     return env.spec.id == "lane-keeping-v0"
 
+def is_basic_racetrack_env(env: gym.Env) -> bool:
+    return env.spec.id == "racetrack-v0"
 
 def _wrap_to_pi(angle: float) -> float:
     return (angle + math.pi) % (2.0 * math.pi) - math.pi
