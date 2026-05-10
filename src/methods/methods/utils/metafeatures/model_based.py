@@ -102,6 +102,111 @@ def _next_action(action_space: gym.Space, current_action, step_size: float):
     return action_space.sample()
 
 
+def _continuous_action_perturbation(
+    action_space: gym.spaces.Box,
+    action: np.ndarray,
+    epsilon: float,
+) -> np.ndarray:
+    direction = np.random.normal(size=action.shape)
+    direction_norm = np.linalg.norm(direction)
+    if direction_norm < 1e-8:
+        raise ValueError("Failed to sample a non-zero perturbation direction.")
+
+    direction = direction / direction_norm
+    low = np.asarray(action_space.low, dtype=np.float32)
+    high = np.asarray(action_space.high, dtype=np.float32)
+    width = high - low
+    finite_width = np.isfinite(width) & (np.abs(width) > 1e-8)
+
+    if np.all(finite_width):
+        delta = epsilon * width * direction
+    else:
+        delta = epsilon * direction
+
+    return np.clip(action + delta, action_space.low, action_space.high)
+
+
+def _relative_observation_distance(obs_1, obs_2) -> float:
+    flat_obs_1 = _flatten_obs(obs_1)
+    flat_obs_2 = _flatten_obs(obs_2)
+    scale = max(float(np.linalg.norm(flat_obs_1)), float(np.linalg.norm(flat_obs_2)), 1.0)
+    return float(np.linalg.norm(flat_obs_1 - flat_obs_2) / scale)
+
+
+def _summary_stats(values):
+    if not values:
+        return 0.0, 0.0, 0.0
+
+    values_arr = np.asarray(values, dtype=float)
+    return (
+        float(np.mean(values_arr)),
+        float(np.percentile(values_arr, 95)),
+        float(np.max(values_arr)),
+    )
+
+
+def compute_action_discontinuity(
+    env: gym.Env,
+    num_states=50,
+    perturbations_per_state=5,
+    epsilon=0.01,
+):
+    reward_jumps = []
+    state_jumps = []
+    is_continuous = isinstance(env.action_space, gym.spaces.Box)
+
+    for _ in range(num_states):
+        env.reset()
+        for _ in range(np.random.randint(1, 10)):
+            action = env.action_space.sample()
+            _, _, terminated, truncated, _ = env.step(action)
+            if terminated or truncated:
+                env.reset()
+
+        base_env = safe_copy_env(env)
+
+        if is_continuous:
+            action_pairs = []
+            for _ in range(perturbations_per_state):
+                action = env.action_space.sample()
+                perturbed_action = _continuous_action_perturbation(env.action_space, action, epsilon)
+                action_pairs.append((action, perturbed_action))
+        else:
+            action_pairs = _sample_action_pairs(env.action_space, perturbations_per_state)
+
+        for action_1, action_2 in action_pairs:
+            action_dist = _action_distance(env.action_space, action_1, action_2)
+            if action_dist < 1e-8:
+                continue
+
+            env_copy_1 = safe_copy_env(base_env)
+            next_obs_1, reward_1, _, _, _ = env_copy_1.step(action_1)
+
+            env_copy_2 = safe_copy_env(base_env)
+            next_obs_2, reward_2, _, _, _ = env_copy_2.step(action_2)
+
+            reward_jumps.append(float(abs(reward_1 - reward_2) / action_dist))
+            state_jumps.append(float(_relative_observation_distance(next_obs_1, next_obs_2) / action_dist))
+
+            env_copy_1.close()
+            env_copy_2.close()
+
+        base_env.close()
+
+    reward_mean, reward_p95, reward_max = _summary_stats(reward_jumps)
+    state_mean, state_p95, state_max = _summary_stats(state_jumps)
+
+    return {
+        "action_discontinuity_applicable": float(is_continuous),
+        "action_reward_discontinuity_mean": reward_mean,
+        "action_reward_discontinuity_p95": reward_p95,
+        "action_reward_discontinuity_max": reward_max,
+        "action_state_discontinuity_mean": state_mean,
+        "action_state_discontinuity_p95": state_p95,
+        "action_state_discontinuity_max": state_max,
+    }
+
+
 def estimate_normalized_lipschitz(
     env: gym.Env,
     num_states=50,

@@ -47,6 +47,12 @@ def is_parking_env(env: gym.Env) -> bool:
 def is_lane_keeping_env(env: gym.Env) -> bool:
     return env.spec.id == "lane-keeping-v0"
 
+def is_highway_env(env: gym.Env) -> bool:
+    return env.spec.id in {"highway-v0", "highway-fast-v0"}
+
+def is_merge_env(env: gym.Env) -> bool:
+    return env.spec.id in {"merge-v0", "merge-generic-v0"}
+
 def is_basic_racetrack_env(env: gym.Env) -> bool:
     return env.spec.id == "racetrack-v0"
 
@@ -346,6 +352,22 @@ def _configure_exit_idm_behavior(base_env: gym.Env, idm_vehicle: Any) -> None:
     idm_vehicle.COMFORT_ACC_MIN = -6.0
 
 
+def _configure_speed_reward_idm_behavior(base_env: gym.Env, idm_vehicle: Any) -> None:
+    if not (is_highway_env(base_env) or is_merge_env(base_env)):
+        return
+
+    target_speed = float(base_env.config["reward_speed_range"][1])
+    idm_vehicle.target_speed = target_speed
+    idm_vehicle.COMFORT_ACC_MAX = 4.0
+    idm_vehicle.COMFORT_ACC_MIN = -6.0
+    idm_vehicle.TIME_WANTED = 1.0
+
+    if hasattr(idm_vehicle, "target_speeds"):
+        target_speeds = np.asarray(idm_vehicle.target_speeds, dtype=float)
+        speed_index = int(np.argmin(np.abs(target_speeds - target_speed)))
+        idm_vehicle.speed_index = speed_index
+
+
 def ensure_idm_vehicle(env: gym.Env) -> None:
     base_env = env.unwrapped
     vehicle = base_env.vehicle
@@ -362,6 +384,7 @@ def ensure_idm_vehicle(env: gym.Env) -> None:
     # both just for exit environment (planning route + changing behavior)
     _configure_idm_route(base_env, idm_vehicle)
     _configure_exit_idm_behavior(base_env, idm_vehicle)
+    _configure_speed_reward_idm_behavior(base_env, idm_vehicle)
 
     base_env.vehicle = idm_vehicle
 

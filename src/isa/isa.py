@@ -14,7 +14,7 @@ from common.file_utils import BASE_RESULTS_PATH, ensure_dir
 ISA_RESULTS_DIR = BASE_RESULTS_PATH / "isa"
 DEFAULT_DATASET_PATH = ISA_RESULTS_DIR / "instancespace_dataset.csv"
 DEFAULT_OUTPUT_DIR = ISA_RESULTS_DIR / f"analysis_{str(time.time_ns())}"
-DEFAULT_OPTIONS_PATH = Path(__file__).resolve().parents[2] / "options.json"
+DEFAULT_OPTIONS_PATH = Path(__file__).resolve().parents[2] / "isa-options" / "options.json"
 
 
 class InstanceSpaceAnalysisError(RuntimeError):

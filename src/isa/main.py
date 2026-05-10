@@ -296,6 +296,18 @@ def normalize_algorithm_reward(
         )
 
     denominator = float(baseline_metric) - float(random_metric)
+    if denominator < 0.0:
+        logger.warning(
+            "[isa] Random policy outperformed baseline heuristic for '%s': "
+            "random_%s=%s, baseline_%s=%s. Normalized scores will still be "
+            "computed, but their direction is inverted for this instance.",
+            train_folder,
+            metric_key,
+            random_metric,
+            metric_key,
+            baseline_metric,
+        )
+
     if denominator == 0.0:
         raise ValueError(
             "[isa] Cannot normalize algorithm performance for "
@@ -578,7 +590,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         "-e",
         "--envs",
         type=parse_env_names,
-        default=None,
+        required=True,
         help=(
             "Comma-separated list of environments to use for the ISA dataset and "
             "environment-specific default dataset path."
@@ -643,8 +655,6 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
 def main(argv: Optional[Sequence[str]] = None) -> None:
     args = parse_args(argv)
     if args.task == "build":
-        if not args.envs:
-            raise ValueError("Need to specify --envs in order to use --task build")
         build_isa_dataset(
             args.envs,
             args.metric,

@@ -31,6 +31,7 @@ from methods.utils.metafeatures.model_based import (
     compute_transition_stochasticity,
     compute_transition_linearity,
     compute_action_landscape_ruggedness,
+    compute_action_discontinuity,
     compute_state_entropy,
 )
 
@@ -128,6 +129,7 @@ def extract_metafeatures(
         "mb_transition_stochasticity": compute_transition_stochasticity,
         "mb_transition_linearity": compute_transition_linearity,
         "mb_action_landscape_ruggedness": compute_action_landscape_ruggedness,
+        "mb_action_discontinuity": compute_action_discontinuity,
         "mb_state_entropy": compute_state_entropy,
     }
 
@@ -138,10 +140,14 @@ def extract_metafeatures(
             val = func(env)
             elapsed = time.perf_counter() - before
             feature_name = mb_group_name.replace("mb_", "")
+            if isinstance(val, dict):
+                features = {key: float(value) for key, value in val.items()}
+            else:
+                features = {feature_name: float(val)}
             out_data["feature_groups"][mb_group_name] = {
                 TIMESTAMP_KEY: time.time(),
                 ELAPSED_TIME_KEY: elapsed,
-                FEATURES_KEY: {feature_name: val},
+                FEATURES_KEY: features,
             }
         else:
             logger.info(f"Skipping {mb_group_name} for instance: {config.instance_folder_path}")
