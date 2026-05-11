@@ -271,8 +271,7 @@ def _find_merge_vehicle(base_env: gym.Env) -> Optional[Any]:
 
 
 def _merge_yield_speed(base_env: gym.Env) -> float:
-    min_speed, max_speed = base_env.config["reward_speed_range"]
-    return float(min_speed + 0.4 * (max_speed - min_speed))
+    return float(base_env.config["reward_speed_range"][0])
 
 
 def make_idm_baseline_policy(env: gym.Env) -> PolicyFn:
@@ -282,7 +281,7 @@ def make_idm_baseline_policy(env: gym.Env) -> PolicyFn:
 
     cruise_speed = float(env.unwrapped.config["reward_speed_range"][1])
     yield_speed = _merge_yield_speed(env.unwrapped)
-    merge_gap_threshold = 50.0
+    merge_gap_threshold = 40.0
     passed_merge_gap = -10.0
 
     def policy(_: Any, __: Dict[str, Any]) -> Any:
