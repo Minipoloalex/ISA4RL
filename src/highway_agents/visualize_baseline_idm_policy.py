@@ -11,10 +11,10 @@ import highway_env  # noqa: F401
 import numpy as np
 
 from methods.utils.metafeature_utils import (
-    default_idle_action,
     ensure_idm_vehicle,
     is_highway_env,
     is_merge_env,
+    make_idm_baseline_policy,
 )
 
 
@@ -76,13 +76,13 @@ def _vehicle_summary(env: gym.Env) -> Dict[str, Any]:
 
 
 def run_episode(env: gym.Env, seed: int, sleep_seconds: float, print_every: int) -> Dict[str, Any]:
-    _, _ = env.reset(seed=seed)
+    obs, info = env.reset(seed=seed)
     ensure_idm_vehicle(env)
 
     if not (is_highway_env(env.unwrapped) or is_merge_env(env.unwrapped)):
         raise ValueError(f"Unsupported IDM baseline environment: {env.spec.id}")
 
-    action = default_idle_action(env)
+    policy = make_idm_baseline_policy(env)
     initial = _vehicle_summary(env)
     total_reward = 0.0
     steps = 0
@@ -98,7 +98,8 @@ def run_episode(env: gym.Env, seed: int, sleep_seconds: float, print_every: int)
 
     env.render()
     while not (terminated or truncated):
-        _, reward, terminated, truncated, _ = env.step(action)
+        action = policy(obs, info)
+        obs, reward, terminated, truncated, info = env.step(action)
         vehicle = env.unwrapped.vehicle
 
         total_reward += float(reward)

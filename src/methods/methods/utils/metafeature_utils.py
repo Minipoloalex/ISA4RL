@@ -7,6 +7,7 @@ import numpy as np
 import gymnasium as gym
 try:
     from highway_env.vehicle.behavior import IDMVehicle
+    from highway_env.vehicle.controller import ControlledVehicle
 except:
     pass
 
@@ -235,6 +236,71 @@ def constant_policy(action: Any) -> PolicyFn:
 
     return policy
 
+
+def _set_idm_target_speed(idm_vehicle: Any, target_speed: float) -> None:
+    idm_vehicle.target_speed = target_speed
+    target_speeds = np.asarray(idm_vehicle.target_speeds, dtype=float)
+    speed_index = int(np.argmin(np.abs(target_speeds - target_speed)))
+    idm_vehicle.speed_index = speed_index
+
+
+def _merge_main_lanes_count(base_env: gym.Env) -> int:
+    config = base_env.config
+    if "lanes_count" in config:
+        return int(config["lanes_count"])
+    return 2
+
+
+def _is_merge_vehicle(base_env: gym.Env, vehicle: Any) -> bool:
+    lane_index = vehicle.lane_index
+    merge_lane_index = _merge_main_lanes_count(base_env)
+
+    return (
+        lane_index[:2] in {("j", "k"), ("k", "b")}
+        or lane_index == ("b", "c", merge_lane_index)
+    ) and isinstance(vehicle, ControlledVehicle)
+
+
+def _find_merge_vehicle(base_env: gym.Env) -> Optional[Any]:
+    for vehicle in base_env.road.vehicles:
+        if vehicle is base_env.vehicle:
+            continue
+        if _is_merge_vehicle(base_env, vehicle):
+            return vehicle
+    return None
+
+
+def _merge_yield_speed(base_env: gym.Env) -> float:
+    min_speed, max_speed = base_env.config["reward_speed_range"]
+    return float(min_speed + 0.4 * (max_speed - min_speed))
+
+
+def make_idm_baseline_policy(env: gym.Env) -> PolicyFn:
+    idle_action = default_idle_action(env)
+    if not is_merge_env(env.unwrapped):
+        return constant_policy(idle_action)
+
+    cruise_speed = float(env.unwrapped.config["reward_speed_range"][1])
+    yield_speed = _merge_yield_speed(env.unwrapped)
+    merge_gap_threshold = 50.0
+    passed_merge_gap = -10.0
+
+    def policy(_: Any, __: Dict[str, Any]) -> Any:
+        base_env = env.unwrapped
+        idm_vehicle = base_env.vehicle
+        merge_vehicle = _find_merge_vehicle(base_env)
+
+        target_speed = cruise_speed
+        if merge_vehicle is not None:
+            longitudinal_gap = float(merge_vehicle.position[0] - idm_vehicle.position[0])
+            if passed_merge_gap < longitudinal_gap < merge_gap_threshold:
+                target_speed = yield_speed
+
+        _set_idm_target_speed(idm_vehicle, target_speed)
+        return idle_action
+
+    return policy
+
 def _copy_vehicle_attr(
     src: Any, dst: Any, attr: str, *, deep_copy: bool = False
 ) -> None:
@@ -357,15 +423,10 @@ def _configure_speed_reward_idm_behavior(base_env: gym.Env, idm_vehicle: Any) ->
         return
 
     target_speed = float(base_env.config["reward_speed_range"][1])
-    idm_vehicle.target_speed = target_speed
+    _set_idm_target_speed(idm_vehicle, target_speed)
     idm_vehicle.COMFORT_ACC_MAX = 4.0
     idm_vehicle.COMFORT_ACC_MIN = -6.0
     idm_vehicle.TIME_WANTED = 1.0
-
-    if hasattr(idm_vehicle, "target_speeds"):
-        target_speeds = np.asarray(idm_vehicle.target_speeds, dtype=float)
-        speed_index = int(np.argmin(np.abs(target_speeds - target_speed)))
-        idm_vehicle.speed_index = speed_index
 
 
 def ensure_idm_vehicle(env: gym.Env) -> None:

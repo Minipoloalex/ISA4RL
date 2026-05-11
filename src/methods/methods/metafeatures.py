@@ -19,6 +19,7 @@ from methods.utils.metafeature_utils import (
     constant_policy,
     default_idle_action,
     ensure_idm_vehicle,
+    make_idm_baseline_policy,
     is_parking_env,
     is_lane_keeping_env,
     is_basic_racetrack_env,
@@ -243,8 +244,7 @@ def _run_idm_probe(
     env: gym.Env,
     episodes: int,
 ) -> List[Trajectory]:
-    dummy_action = default_idle_action(env)
-    policy = constant_policy(dummy_action)
+    policy = make_idm_baseline_policy(env)
 
     def reset_hook(target_env: gym.Env) -> None:
         ensure_idm_vehicle(target_env)
