@@ -296,6 +296,17 @@ def normalize_algorithm_reward(
         )
 
     denominator = float(baseline_metric) - float(random_metric)
+    if float(agent_metric) < float(random_metric):
+        logger.warning(
+            "[isa] Trained agent underperformed random policy for '%s': "
+            "agent_%s=%s, random_%s=%s. Normalized score will be below 0.0.",
+            train_folder,
+            metric_key,
+            agent_metric,
+            metric_key,
+            random_metric,
+        )
+
     if denominator < 0.0:
         logger.warning(
             "[isa] Random policy outperformed baseline heuristic for '%s': "
