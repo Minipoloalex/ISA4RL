@@ -89,6 +89,9 @@ class TrainConfig(InstanceConfig):
     make_model: ModelFactory
     make_train_env: VecEnvFactory
     make_eval_env: VecEnvFactory
+    model_path: Path
+    vec_normalize_path: Path
+    uses_vec_normalize: bool
     timesteps: int
     train_folder_path: Path
     eval_freq: int
@@ -160,8 +163,8 @@ class TrainConfig(InstanceConfig):
 
         model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
         vec_normalize_file = BEST_VEC_NORMALIZE_FILE if use_best_model else VEC_NORMALIZE_FILE
-        load_model_path = train_algo_folder_path / model_file # in case it's evaluation
-        load_vec_normalize_path = train_algo_folder_path / vec_normalize_file
+        load_model_path = train_algo_folder_path / MODELS_FOLDER / model_file
+        load_vec_normalize_path = train_algo_folder_path / MODELS_FOLDER / vec_normalize_file
 
         train_vec_env_builder = partial(
             make_vec_env_helper, env_id, env_kwargs, n_envs, train_vec_env_cls, train_vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
@@ -199,6 +202,9 @@ class TrainConfig(InstanceConfig):
                 policy_params=policy_params,
                 device=device,
             ),
+            model_path=load_model_path,
+            vec_normalize_path=load_vec_normalize_path,
+            uses_vec_normalize=use_vec_normalize and env_name != "parking",
             make_train_env=train_vec_env_builder,
             timesteps=env_config["train_timesteps"],
             train_folder_path=train_algo_folder_path,
@@ -217,6 +223,18 @@ class TrainConfig(InstanceConfig):
             self._eval_env = self.make_eval_env()
         return self._eval_env
 
+    def validate_evaluation_artifacts(self) -> None:
+        if not nonempty_file_in(self.model_path):
+            raise FileNotFoundError(
+                "Cannot evaluate because the expected model artifact is missing: "
+                f"{self.model_path}"
+            )
+        if self.uses_vec_normalize and not nonempty_file_in(self.vec_normalize_path):
+            raise FileNotFoundError(
+                "Cannot evaluate because the expected VecNormalize artifact is missing: "
+                f"{self.vec_normalize_path}"
+            )
+
     def ensure_test_env(self) -> gym.Env:
         # Not supposed to use test_env within TrainConfig
         raise NotImplementedError
@@ -230,6 +248,7 @@ class TrainConfig(InstanceConfig):
 
     def ensure_model_for_env(self, env: VecEnv) -> BaseAlgorithm:
         """Instantiate the algorithm against an explicit environment."""
+        self.validate_evaluation_artifacts()
         if self._model is None:
             self._model = self.make_model(env)
         else:
