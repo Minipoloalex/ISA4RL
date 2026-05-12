@@ -11,6 +11,7 @@ import gymnasium as gym
 
 from dataclasses import dataclass
 from typing import Optional, Dict, Any, Callable
+from pathlib import Path
 
 from common.file_utils import *
 from .general_utils import _coerce_numeric

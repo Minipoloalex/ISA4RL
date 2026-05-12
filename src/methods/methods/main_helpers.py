@@ -139,6 +139,7 @@ def _eval_one_agent(config: TrainConfig) -> None:
     model = None
     eval_results = None
     try:
+        config.validate_evaluation_artifacts()
         eval_env = config.ensure_eval_env()
         model = config.ensure_model_for_env(eval_env)
         eval_results = evaluate(
