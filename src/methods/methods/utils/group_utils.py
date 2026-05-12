@@ -11,9 +11,10 @@ from common.file_utils import (
     RESULTS_TRAIN_METADATA_PATH,
     RESULTS_METAFEATURES_PATH,
 )
-from common.config_utils import CONFIG
+from common.config_utils import CONFIG, remove_useless_params
 
 def find_instance_config_in_folder(folder: Path, env_name: str, target_env_config: CONFIG) -> Optional[Path]:
+    target_env_config = remove_useless_params(target_env_config)
     for env_folder in folder.iterdir(): # e.g. results_server/exit/
         if env_folder.name != env_name:
             continue
@@ -25,6 +26,7 @@ def find_instance_config_in_folder(folder: Path, env_name: str, target_env_confi
             env_config_file = env_instance_folder / "instance_config.json"  # results_server/exit/<id>/instance_config.json
             env_config = read_json(env_config_file)
 
+            env_config = remove_useless_params(env_config)
             if env_config == target_env_config:
                 return env_instance_folder
     return None
