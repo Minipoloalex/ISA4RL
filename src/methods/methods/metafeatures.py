@@ -6,7 +6,7 @@ import gymnasium as gym
 from gymnasium.spaces.utils import flatdim
 import numpy as np
 
-from methods.utils.metafeatures.metrics import SimpleEgoMetricsHook, ObsHook
+from methods.utils.metafeatures.metrics import BaseMetricHook, SimpleEgoMetricsHook, ObsHook
 from methods.utils.metafeatures.other_vehicles_hook import OtherVehiclesBehaviorHook
 from methods.configs import InstanceConfig
 from methods.utils.general_utils import _flatten_obs
@@ -81,16 +81,35 @@ def extract_metafeatures(
     if should_compute("probes"):
         logger.info(f"Computing probes for instance: {config.instance_folder_path}")
         before = time.perf_counter()
-        trajectories_random = _run_probe(
+        random_light_episodes = config.n_test_episodes * 2
+        random_heavy_episodes = config.n_test_episodes
+
+        trajectories_random_heavy = _run_probe(
             env=env,
             policy=make_random_policy(env),
-            episodes=config.n_test_episodes,
+            episodes=random_heavy_episodes,
+        )
+        trajectories_random_light = _run_probe(
+            env=env,
+            policy=make_random_policy(env),
+            episodes=random_light_episodes,
+            collect_other_vehicles=False,
+            keep_observations=False,
         )
         trajectories_baseline = _run_baseline_probe(
             env=env,
             episodes=config.n_test_episodes,
         )
-        random_probe = traj_metafeatures(trajectories_random)
+        random_probe_heavy = traj_metafeatures(trajectories_random_heavy)
+        random_probe_light = traj_metafeatures(
+            trajectories_random_light,
+            include_light_metrics=True,
+            include_heavy_metrics=False,
+        )
+        random_probe = {
+            **random_probe_heavy,
+            **random_probe_light,
+        }
         baseline_probe = traj_metafeatures(trajectories_baseline)
         logger.info(f"Random probe achieved reward SNR of {random_probe['reward_snr']}")
         logger.info(f"Structured probe achieved reward SNR of {baseline_probe['reward_snr']}")
@@ -109,6 +128,9 @@ def extract_metafeatures(
         
         # Also compute diagnostics here since they are probe-derived
         diagnostics = {
+            "random_heavy_episodes": random_heavy_episodes,
+            "random_light_episodes": random_light_episodes,
+            "baseline_episodes": config.n_test_episodes,
             # "idm_advantage": idm_advantage,
             # "idm_safety_gain": safety_delta,
         }
@@ -121,6 +143,8 @@ def extract_metafeatures(
             "diagnostics": diagnostics,
             "probes_raw": {
                 "random": random_probe,
+                "random_heavy": random_probe_heavy,
+                "random_light": random_probe_light,
                 "baseline": baseline_probe,
             }
         }
@@ -184,8 +208,20 @@ def extract_metafeatures(
     return out_data
 
 
-def traj_metafeatures(trajectories: List[Trajectory]) -> Dict[str, Any]:
-    hooks = [SimpleEgoMetricsHook(), ObsHook(), OtherVehiclesBehaviorHook()]
+def traj_metafeatures(
+    trajectories: List[Trajectory],
+    *,
+    include_light_metrics: bool = True,
+    include_heavy_metrics: bool = True,
+) -> Dict[str, Any]:
+    hooks: List[BaseMetricHook] = []
+    if include_light_metrics:
+        hooks.append(SimpleEgoMetricsHook())
+    if include_heavy_metrics:
+        hooks.extend([ObsHook(), OtherVehiclesBehaviorHook()])
+    if not hooks:
+        raise ValueError("At least one metric group must be enabled.")
+
     for hook in hooks:
         hook.on_probe_start()
 
@@ -263,12 +299,16 @@ def _run_probe(
     episodes: int,
     *,
     reset_hook: Optional[Callable[[gym.Env], None]] = None,
+    collect_other_vehicles: bool = True,
+    collect_min_ttc: bool = True,
+    keep_observations: bool = True,
 ) -> List[Trajectory]:
     base_seed = int(1e6)
     trajectories: List[Trajectory] = []
     for episode in range(episodes):
         seed = base_seed + episode
         obs, info = env.reset(seed=seed)
+        env.action_space.seed(seed)
         if reset_hook is not None:
             reset_hook(env)
 
@@ -279,13 +319,23 @@ def _run_probe(
             new_obs, reward, terminated, truncated, info = env.step(action)
 
             info = dict(info)
-            # Save traffic-derived signals into info so hooks can use them later.
-            info["other_vehicles_states"] = _extract_other_vehicles_states(env)
-            min_ttc = _extract_min_ttc(env)
-            if min_ttc is not None:
-                info["min_ttc"] = min_ttc
+            if collect_other_vehicles:
+                # Save traffic-derived signals into info so hooks can use them later.
+                info["other_vehicles_states"] = _extract_other_vehicles_states(env)
+            if collect_min_ttc:
+                min_ttc = _extract_min_ttc(env)
+                if min_ttc is not None:
+                    info["min_ttc"] = min_ttc
 
-            step_info = StepInfo(obs, action, reward, new_obs, terminated, truncated, info)
+            step_info = StepInfo(
+                obs if keep_observations else None,
+                action,
+                reward,
+                new_obs if keep_observations else None,
+                terminated,
+                truncated,
+                info,
+            )
             traj.append(step_info)
             
             obs = new_obs
