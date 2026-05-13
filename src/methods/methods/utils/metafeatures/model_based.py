@@ -1,12 +1,17 @@
 import numpy as np
 import gymnasium as gym
 from sklearn.linear_model import LinearRegression
+from sklearn.decomposition import PCA
 from collections import Counter
 import logging
 from methods.utils.metafeature_utils import safe_copy_env
 from methods.utils.general_utils import _flatten_obs
 
 logger = logging.getLogger(__name__)
+
+# These are model-based metafeatures because they actively query the
+# environment transition/reward model: they reset, step, copy states, perturb
+# actions, and measure how the simulated next state or reward changes.
 
 
 def _action_distance(action_space: gym.Space, action_1, action_2) -> float:
@@ -151,6 +156,14 @@ def compute_action_discontinuity(
     perturbations_per_state=5,
     epsilon=0.01,
 ):
+    """
+    Measures local sensitivity to action changes from the same simulated state.
+
+    For continuous actions, actions are perturbed by epsilon. For discrete
+    actions, sampled action pairs are compared. Larger values mean that small
+    or alternative action choices can create large immediate reward or next
+    observation changes, suggesting a less smooth control problem.
+    """
     reward_jumps = []
     state_jumps = []
     is_continuous = isinstance(env.action_space, gym.spaces.Box)
@@ -269,6 +282,14 @@ def estimate_normalized_lipschitz(
 
 
 def compute_transition_stochasticity(env, num_states=30, trials_per_action=10):
+    """
+    Estimates one-step transition randomness.
+
+    The same action is repeated several times from copied versions of the same
+    state. Larger values mean the resulting next observations vary more, which
+    suggests stochastic dynamics or simulator randomness after controlling for
+    the current state and action.
+    """
     variances = []
     
     for _ in range(num_states):
@@ -298,6 +319,14 @@ def compute_transition_stochasticity(env, num_states=30, trials_per_action=10):
 
 
 def compute_transition_linearity(env, num_samples=1000):
+    """
+    Measures how well a linear model predicts one-step dynamics.
+
+    A linear regression predicts next observation from current observation and
+    action. Higher R^2 means the sampled transition dynamics are more linearly
+    predictable; lower values suggest more nonlinear or harder-to-approximate
+    dynamics.
+    """
     O_current = []
     O_next = []
     A = []
@@ -330,7 +359,6 @@ def compute_transition_linearity(env, num_samples=1000):
     # reduce dimensionality using PCA to avoid perfectly overfitting
     # the Linear Regression model (which happens when features > samples).
     if O_current.shape[1] > 100:
-        from sklearn.decomposition import PCA
         pca = PCA(n_components=min(64, num_samples // 2))
         # Fit on both current and next to cover the whole state distribution we've seen
         O_combined = np.vstack([O_current, O_next])
@@ -349,6 +377,14 @@ def compute_transition_linearity(env, num_samples=1000):
 
 
 def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, max_episode_steps=None, step_size=0.1):
+    """
+    Estimates roughness of the immediate reward landscape over actions.
+
+    From copied states, the function walks through nearby continuous actions
+    or sampled discrete actions and measures reward autocorrelation along that
+    walk. Larger ruggedness means neighboring actions tend to produce less
+    similar rewards, making the action-reward landscape less smooth.
+    """
     autocorrelations = []
 
     for _ in range(num_states):
@@ -392,6 +428,15 @@ def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, max_
 
 
 def compute_state_entropy(env: gym.Env, num_steps=10000, decimals=1):
+    """
+    Estimates visited-state diversity under random actions.
+
+    Flattened observations are rounded and counted during a random rollout.
+    Larger entropy means the random probe visits a wider variety of distinct
+    observed states. This is information-theoretic in form, but still grouped
+    with model-based features here because it is obtained by interacting with
+    the environment dynamics.
+    """
     state, _ = env.reset()
     state_counts = Counter()
 
