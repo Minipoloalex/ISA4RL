@@ -61,7 +61,8 @@ class InstanceConfig:
 
         env_id = env_config["env_id"]
         env_kwargs = env_config["config"]
-        env_kwargs["observation"] = obs_config
+        if obs_config is not None:
+            env_kwargs["observation"] = obs_config
 
         return cls(
             make_test_env=partial(make_env_helper, env_id, env_kwargs),
@@ -156,9 +157,14 @@ class TrainConfig(InstanceConfig):
         algo_cls = map_algo_name_to_class(algo_name)
         is_metadrive = env_name == "metadrive"
         train_vec_env_cls = DummyVecEnv if n_envs == 1 and not is_metadrive else SubprocVecEnv
-        eval_vec_env_cls = SubprocVecEnv if is_metadrive else DummyVecEnv
+        
+        # Used during training, but in evaluation, it broke when using multiple workers
+        # eval_vec_env_cls = SubprocVecEnv if is_metadrive else DummyVecEnv
+        # eval_vec_env_kwargs = {"start_method": "spawn"} if eval_vec_env_cls is SubprocVecEnv else None
+        
+        eval_vec_env_cls = DummyVecEnv
         train_vec_env_kwargs = {"start_method": "spawn"} if train_vec_env_cls is SubprocVecEnv else None
-        eval_vec_env_kwargs = {"start_method": "spawn"} if eval_vec_env_cls is SubprocVecEnv else None
+        eval_vec_env_kwargs = None
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
         model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
