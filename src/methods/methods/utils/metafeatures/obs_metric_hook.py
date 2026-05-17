@@ -116,9 +116,9 @@ class ObsHook(BaseMetricHook):
         obs_entropy_sum = float(np.sum(entropies)) if entropies else 0.0
 
         return {
-            # "obs_mean": obs_mean,
-            # "obs_std": obs_std,
-            # "obs_sparsity": sparsity,
+            "obs_mean": obs_mean,
+            "obs_std": obs_std,
+            "obs_sparsity": sparsity,
             "obs_volatility_mean": volatility_mean,
             "obs_volatility_max": volatility_max,
             "pca_explained_var_pc1": pca_var_1,
