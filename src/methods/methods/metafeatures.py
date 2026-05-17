@@ -16,8 +16,6 @@ from methods.utils.metafeature_utils import (
     make_random_policy,
     make_parking_geometric_policy,
     make_lane_keeping_observation_policy,
-    constant_policy,
-    default_idle_action,
     ensure_idm_vehicle,
     make_idm_baseline_policy,
     is_parking_env,
@@ -35,6 +33,19 @@ from methods.utils.metafeatures.model_based import (
     compute_action_discontinuity,
     compute_state_entropy,
 )
+MB_FUNCS = {
+    "mb_normalized_lipschitz": estimate_normalized_lipschitz,
+    "mb_transition_stochasticity": compute_transition_stochasticity,
+    "mb_transition_linearity": compute_transition_linearity,
+    "mb_action_landscape_ruggedness": compute_action_landscape_ruggedness,
+    "mb_action_discontinuity": compute_action_discontinuity,
+    "mb_state_entropy": compute_state_entropy,
+}
+DEFAULT_METAFEATURE_GROUPS = [
+    "env_features",
+    "probes",
+    *MB_FUNCS.keys(),
+]
 
 FEATURES_KEY = "features"
 TIMESTAMP_KEY = "timestamp"
@@ -97,6 +108,7 @@ def extract_metafeatures(
             keep_observations=False,
         )
         trajectories_baseline = _run_baseline_probe(
+            env_name=env_name,
             env=env,
             episodes=config.n_test_episodes,
         )
@@ -111,28 +123,18 @@ def extract_metafeatures(
             **random_probe_light,
         }
         baseline_probe = traj_metafeatures(trajectories_baseline)
-        logger.info(f"Random probe achieved reward SNR of {random_probe['reward_snr']}")
-        logger.info(f"Structured probe achieved reward SNR of {baseline_probe['reward_snr']}")
-        # idm_advantage = idm_probe.get("mean_episode_return", 0.0) - random_probe.get("mean_episode_return", 0.0)
-        # safety_delta = random_probe.get("collision_rate", 0.0) - idm_probe.get("collision_rate", 0.0)
-        
+        logger.info("Random probe achieved mean reward of %s", random_probe["mean_reward"])
+        logger.info("Structured probe achieved mean reward of %s", baseline_probe["mean_reward"])
+
         features: Dict[str, float] = {}
         features.update(_probe_features(random_probe, "random"))
         features.update(_probe_features(baseline_probe, "baseline"))
-        # features.update(
-        #     _combine_probe_features(
-        #         random_probe=random_probe,
-        #         idm_probe=idm_probe,
-        #     )
-        # )
         
         # Also compute diagnostics here since they are probe-derived
         diagnostics = {
             "random_heavy_episodes": random_heavy_episodes,
             "random_light_episodes": random_light_episodes,
             "baseline_episodes": config.n_test_episodes,
-            # "idm_advantage": idm_advantage,
-            # "idm_safety_gain": safety_delta,
         }
         
         elapsed = time.perf_counter() - before
@@ -149,16 +151,7 @@ def extract_metafeatures(
             }
         }
 
-    mb_funcs = {
-        "mb_normalized_lipschitz": estimate_normalized_lipschitz,
-        "mb_transition_stochasticity": compute_transition_stochasticity,
-        "mb_transition_linearity": compute_transition_linearity,
-        "mb_action_landscape_ruggedness": compute_action_landscape_ruggedness,
-        "mb_action_discontinuity": compute_action_discontinuity,
-        "mb_state_entropy": compute_state_entropy,
-    }
-
-    for mb_group_name, func in mb_funcs.items():
+    for mb_group_name, func in MB_FUNCS.items():
         if should_compute(mb_group_name):
             logger.info(f"Computing {mb_group_name} for instance: {config.instance_folder_path}")
             before = time.perf_counter()
@@ -244,6 +237,7 @@ def traj_metafeatures(
     return metrics
 
 def _run_baseline_probe(
+    env_name: str,
     env: gym.Env,
     episodes: int,
 ) -> List[Trajectory]:
@@ -251,6 +245,8 @@ def _run_baseline_probe(
         return _run_parking_geometric_probe(env, episodes)
     if is_lane_keeping_env(env):
         return _run_lane_keeping_probe(env, episodes)
+    if env_name == "metadrive":
+        return _run_metadrive_probe(env, episodes)
     return _run_idm_probe(env, episodes)
 
 
@@ -274,6 +270,74 @@ def _run_lane_keeping_probe(
         policy=make_lane_keeping_observation_policy(env),
         episodes=episodes,
     )
+
+
+def _run_metadrive_probe(
+    env: gym.Env,
+    episodes: int,
+) -> List[Trajectory]:
+    from metadrive.policy.idm_policy import IDMPolicy
+
+    base_env = env.unwrapped
+    original_agent_policy = base_env.config["agent_policy"]
+    original_manual_control = base_env.config["manual_control"]
+    base_env.config["agent_policy"] = IDMPolicy
+    base_env.config["manual_control"] = False
+
+    def reset_hook(target_env: gym.Env) -> None:
+        _assert_metadrive_policy(target_env, IDMPolicy)
+
+    try:
+        return _run_probe(
+            env=env,
+            policy=_make_metadrive_dummy_step_policy(env),
+            episodes=episodes,
+            reset_hook=reset_hook,
+        )
+    finally:
+        base_env.config["agent_policy"] = original_agent_policy
+        base_env.config["manual_control"] = original_manual_control
+        env.reset(seed=_probe_seed(env, 0))
+
+
+def _assert_metadrive_policy(env: gym.Env, expected_policy_cls: type) -> None:
+    base_env = env.unwrapped
+    policy = base_env.engine.get_policy(base_env.vehicle.name)
+    if not isinstance(policy, expected_policy_cls):
+        raise RuntimeError(
+            f"MetaDrive reset did not apply {expected_policy_cls.__name__}; "
+            f"active policy is {policy.__class__.__name__}."
+        )
+
+
+def _make_metadrive_dummy_step_policy(env: gym.Env) -> PolicyFn:
+    """
+    Return a valid placeholder action for gym.Env.step().
+
+    When MetaDrive is reset with agent_policy=IDMPolicy, the ego action is
+    produced by IDMPolicy inside the engine. The external action passed to
+    env.step() is still required by Gymnasium, but is not used for ego control.
+    """
+    action_space = env.action_space
+
+    if isinstance(action_space, gym.spaces.Box):
+        action = np.zeros(action_space.shape, dtype=action_space.dtype)
+    elif isinstance(action_space, gym.spaces.MultiDiscrete):
+        action = np.asarray(action_space.nvec // 2, dtype=action_space.dtype)
+    elif isinstance(action_space, gym.spaces.Discrete):
+        base_env = env.unwrapped
+        steering_dim = base_env.config["discrete_steering_dim"]
+        throttle_dim = base_env.config["discrete_throttle_dim"]
+        action = (throttle_dim // 2) * steering_dim + (steering_dim // 2)
+        if action >= action_space.n:
+            raise ValueError(f"Invalid MetaDrive placeholder action {action} for action space {action_space}.")
+    else:
+        raise ValueError(f"Unsupported MetaDrive action space type: {type(action_space)}")
+
+    def policy(_: Any, __: Dict[str, Any]) -> Any:
+        return action
+
+    return policy
 
 
 def _run_idm_probe(
@@ -303,10 +367,9 @@ def _run_probe(
     collect_min_ttc: bool = True,
     keep_observations: bool = True,
 ) -> List[Trajectory]:
-    base_seed = int(1e6)
     trajectories: List[Trajectory] = []
     for episode in range(episodes):
-        seed = base_seed + episode
+        seed = _probe_seed(env, episode)
         obs, info = env.reset(seed=seed)
         env.action_space.seed(seed)
         if reset_hook is not None:
@@ -319,6 +382,12 @@ def _run_probe(
             new_obs, reward, terminated, truncated, info = env.step(action)
 
             info = dict(info)
+            if "speed" not in info and "velocity" in info:
+                info["speed"] = info["velocity"]
+            if "speed" not in info:
+                ego_speed = _extract_ego_speed(env)
+                if ego_speed is not None:
+                    info["speed"] = ego_speed
             if collect_other_vehicles:
                 # Save traffic-derived signals into info so hooks can use them later.
                 info["other_vehicles_states"] = _extract_other_vehicles_states(env)
@@ -344,6 +413,10 @@ def _run_probe(
 
     return trajectories
 
+
+def _probe_seed(env: gym.Env, episode: int) -> int:
+    return int(1e6) + episode
+
 def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
     base_env = env.unwrapped
     
@@ -364,22 +437,50 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
     if hasattr(base_env, "engine"):
         ego = getattr(base_env, "vehicle", None)
         states = []
-        tm = getattr(base_env.engine, "traffic_manager", None)
-        if tm is not None:
-            vehicles = getattr(tm, "vehicles", [])
-            for v in vehicles:
-                if v is ego: continue
-                states.append({
-                    "id": id(v),
-                    "speed": float(getattr(v, "speed", 0.0)),
-                    "heading": float(getattr(v, "heading_theta", getattr(v, "heading", 0.0))),
-                })
+        tm = base_env.engine.traffic_manager
+        vehicles = tm.traffic_vehicles
+        for v in vehicles:
+            if v is ego: continue
+            if hasattr(v, "heading_theta"):
+                heading = v.heading_theta
+            elif hasattr(v, "heading"):
+                heading = v.heading
+            else:
+                raise AttributeError(f"MetaDrive vehicle {v} has no heading attribute.")
+            states.append({
+                "id": id(v),
+                "speed": float(v.speed),
+                "heading": float(heading),
+                "position_x": float(v.position[0]),
+                "position_y": float(v.position[1]),
+            })
         return states
         
     return []
 
 
+def _extract_ego_speed(env: gym.Env) -> Optional[float]:
+    base_env = env.unwrapped
+    if not hasattr(base_env, "vehicle"):
+        return None
+    ego = base_env.vehicle
+    if hasattr(ego, "speed"):
+        return float(ego.speed)
+    if hasattr(ego, "speed_km_h"):
+        return float(ego.speed_km_h) / 3.6
+    return None
+
+
 def _extract_min_ttc(env: gym.Env) -> Optional[float]:
+    base_env = env.unwrapped
+    if hasattr(base_env, "road") and hasattr(base_env, "vehicle"):
+        return _extract_highway_min_ttc(env)
+    if hasattr(base_env, "engine") and hasattr(base_env, "vehicle"):
+        return _extract_metadrive_min_ttc(env)
+    raise ValueError("Unrecognized environment")    # TODO: add better log
+
+
+def _extract_highway_min_ttc(env: gym.Env) -> Optional[float]:
     base_env = env.unwrapped
     road = base_env.road
     ego = base_env.vehicle
@@ -387,7 +488,7 @@ def _extract_min_ttc(env: gym.Env) -> Optional[float]:
 
     ego_lane = _lane_id_from_vehicle(ego)
     ego_pos = _vehicle_position(ego)
-    ego_speed = getattr(ego, "speed", None)
+    ego_speed = _extract_ego_speed(env)
     if ego_lane is None or ego_pos.size < 2 or ego_speed is None:
         return None
 
@@ -401,8 +502,8 @@ def _extract_min_ttc(env: gym.Env) -> Optional[float]:
             continue
 
         other_pos = _vehicle_position(other)
-        other_speed = getattr(other, "speed", None)
-        if other_pos.size < 2 or other_speed is None:
+        other_speed = other.speed
+        if other_pos.size < 2:
             continue
 
         longitudinal_gap = float(other_pos[0] - ego_pos[0])
@@ -414,6 +515,43 @@ def _extract_min_ttc(env: gym.Env) -> Optional[float]:
 
     finite_ttc = [value for value in ttc_samples if math.isfinite(value)]
     return float(min(finite_ttc)) if finite_ttc else float("inf")
+
+
+def _extract_metadrive_min_ttc(env: gym.Env) -> Optional[float]:
+    base_env = env.unwrapped
+    ego = base_env.vehicle
+    tm = base_env.engine.traffic_manager
+    lane_width = _metadrive_lane_width(base_env, ego)
+
+    ttc_samples: List[float] = []
+    for other in tm.traffic_vehicles:
+        if other is ego:
+            continue
+
+        relative_position = ego.convert_to_local_coordinates(other.position, ego.position)
+        longitudinal_gap = float(relative_position[0])
+        lateral_gap = abs(float(relative_position[1]))
+        if lateral_gap > lane_width:
+            continue
+
+        relative_velocity = ego.convert_to_local_coordinates(other.velocity, ego.velocity)
+        longitudinal_relative_speed = float(relative_velocity[0])
+        if longitudinal_gap >= 0.0:
+            closing_speed = max(-longitudinal_relative_speed, 0.0)
+            ttc = _ttc_from_gap(longitudinal_gap, closing_speed)
+        else:
+            rear_closing_speed = max(longitudinal_relative_speed, 0.0)
+            ttc = _ttc_from_gap(abs(longitudinal_gap), rear_closing_speed)
+        ttc_samples.append(ttc)
+
+    finite_ttc = [value for value in ttc_samples if math.isfinite(value)]
+    return float(min(finite_ttc)) if finite_ttc else float("inf")
+
+
+def _metadrive_lane_width(base_env: gym.Env, ego: Any) -> float:
+    if hasattr(ego, "lane") and hasattr(ego.lane, "width"):
+        return float(ego.lane.width)
+    return float(base_env.config["map_config"]["lane_width"])
 
 
 def _ttc_from_gap(gap: float, closing_speed: Optional[float]) -> float:
@@ -455,9 +593,10 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     base_env = env.unwrapped
     config = base_env.config
     features: Dict[str, float] = {}
-    duration = config["duration"]
 
-    if is_parking_env(env):
+    if env_name == "metadrive":
+        lanes = config["map_config"]["lane_num"]
+    elif is_parking_env(env):
         lanes = 0
     elif is_lane_keeping_env(env):
         lanes = 1
@@ -468,17 +607,20 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     assert lanes is not None
 
     vehicles_count = config.get("vehicles_count") or 0
-    if is_parking_env(env):
+    if env_name == "metadrive":
+        traffic_density = config["traffic_density"]
+    elif is_parking_env(env):
         traffic_density = vehicles_count / (2 * config["parking_spots"])
     elif vehicles_count is not None:
+        duration = config["duration"]
         traffic_density = vehicles_count / lanes / duration
     else:
         traffic_density = 0
 
     features["lanes_count"] = lanes
     features["traffic_density"] = traffic_density
-    # features["action_space_size"] = get_action_space_size(env)
-    # features["max_steps"] = get_max_episode_steps(env)
+    features["action_space_size"] = get_action_space_size(env)
+    features["max_steps"] = get_max_episode_steps(env)
 
     obs_space = env.observation_space
     
@@ -494,9 +636,12 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
             raise ValueError(f"Unsupported observation space type: {type(obs_space)}")
 
     cat_count, num_count, bin_count = _count_space_attributes(obs_space)
-    # features["obs_categorical_count"] = float(cat_count)
-    # features["obs_numerical_count"] = float(num_count)
-    # features["obs_binary_count"] = float(bin_count)
+    obs_attribute_count = cat_count + num_count + bin_count
+    if obs_attribute_count == 0:
+        raise ValueError(f"Unsupported observation space type: {type(obs_space)}")
+    features["obs_categorical_ratio"] = float(cat_count) / float(obs_attribute_count)
+    features["obs_numerical_ratio"] = float(num_count) / float(obs_attribute_count)
+    features["obs_binary_ratio"] = float(bin_count) / float(obs_attribute_count)
 
     return features
 

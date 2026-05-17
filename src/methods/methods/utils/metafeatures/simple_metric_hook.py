@@ -82,8 +82,11 @@ class SimpleEgoMetricsHook(BaseMetricHook):
         def safe_stat(func, data: np.ndarray) -> float:
             if len(data) < 2:
                 return 0.0
-            # nan_policy='omit' ensures one bad step doesn't poison the whole metric
-            return float(func(data, nan_policy='omit'))
+            # nan_policy="omit" ensures one bad step does not poison the whole metric.
+            value = float(func(data, nan_policy="omit"))
+            if not np.isfinite(value):
+                return 0.0
+            return value
 
         r_mean = float(np.mean(rewards))
         r_std = float(np.std(rewards))

@@ -458,9 +458,9 @@ def ensure_idm_vehicle(env: gym.Env) -> None:
 
 def get_action_space_size(env: gym.Env) -> int:
     if isinstance(env.action_space, gym.spaces.Discrete):
-        return env.action_space.n
+        return int(env.action_space.n)
     elif isinstance(env.action_space, gym.spaces.Box):
-        return env.action_space.shape[0]
+        return int(env.action_space.shape[0])
     else:
         raise ValueError(f"Unknown action space type: {env.action_space}")
 

@@ -33,6 +33,7 @@ from methods.train import train
 from methods.evaluate import evaluate, show_eval_results
 from methods.metafeatures import extract_metafeatures as compute_metafeatures
 from methods.metafeatures import TIMESTAMP_KEY
+from methods.metafeatures import DEFAULT_METAFEATURE_GROUPS
 from methods.check import check_helper
 from common.file_utils import save_json, read_json, BASE_RESULTS_PATH, OTHER_RESULTS_PATH, nonempty_file_in
 from methods.utils.load_config_utils import (
@@ -66,14 +67,16 @@ def _train_one_agent(config: TrainConfig, run_index: int) -> None:
     model = None
     try:
         try:
-            logger.info(f"open fds before env creation: {len(os.listdir("/proc/self/fd"))}")
+            fd_path = "/proc/self/fd"
+            logger.info("open fds before env creation: %s", len(os.listdir(fd_path)))
         except:
             pass
         train_env = config.ensure_train_env()
         model = config.ensure_model()
         eval_env = config.ensure_eval_env()
         try:
-            logger.info(f"open fds after env creation: {len(os.listdir('/proc/self/fd'))}")
+            fd_path = "/proc/self/fd"
+            logger.info("open fds after env creation: %s", len(os.listdir(fd_path)))
         except:
             pass
         logger.info(f"Started training run {run_index} in path: {config.train_folder_path}")
@@ -191,17 +194,7 @@ def extract_metafeatures(
         
         groups_to_check = requested_groups
         if groups_to_check is None:
-            # Check standard groups if none specified
-            groups_to_check = [
-                "env_features",
-                "probes",
-                "mb_normalized_lipschitz",
-                "mb_transition_stochasticity",
-                "mb_transition_linearity",
-                "mb_action_landscape_ruggedness",
-                "mb_state_entropy",
-                # "pic",
-            ]
+            groups_to_check = DEFAULT_METAFEATURE_GROUPS
 
         for g in groups_to_check:
             if g not in feature_groups:
