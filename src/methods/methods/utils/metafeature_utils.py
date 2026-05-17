@@ -489,6 +489,14 @@ def _env_viewer_deepcopy(self, memo):
     return result
 
 def safe_copy_env(env: gym.Env) -> gym.Env:
+    if hasattr(env.unwrapped, "engine"):
+        raise NotImplementedError(
+            "MetaDrive environments cannot be deep-copied because their live "
+            "simulator state contains Panda3D BulletVehicle objects. Use only "
+            "metafeatures that do not require branching from an exact copied "
+            "MetaDrive state."
+        )
+
     # Need to deepcopy the env, but deepcopy doesn't work with pygame's 
     # WorldSurface (used by EnvViewer). We replace EnvViewer.__deepcopy__ 
     # temporarily to properly reconstruct the viewer without pickling surfaces.

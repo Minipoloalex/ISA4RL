@@ -50,6 +50,18 @@ DEFAULT_METAFEATURE_GROUPS = [
 FEATURES_KEY = "features"
 TIMESTAMP_KEY = "timestamp"
 ELAPSED_TIME_KEY = "elapsed_time"
+METADRIVE_DEEPCOPY_UNAVAILABLE_GROUPS = {
+    "mb_normalized_lipschitz",
+    "mb_transition_stochasticity",
+    "mb_action_landscape_ruggedness",
+    "mb_action_discontinuity",
+}
+METADRIVE_DEEPCOPY_SKIP_REASON = (
+    "MetaDrive live simulator state contains Panda3D BulletVehicle objects, "
+    "which cannot be deep-copied. This group requires branching multiple "
+    "one-step rollouts from the exact same simulator state, so it is not "
+    "computed for MetaDrive."
+)
 
 logger = logging.getLogger(__name__)
 
@@ -155,6 +167,20 @@ def extract_metafeatures(
         if should_compute(mb_group_name):
             logger.info(f"Computing {mb_group_name} for instance: {config.instance_folder_path}")
             before = time.perf_counter()
+            if _should_skip_metadrive_mb_group(env_name, mb_group_name):
+                elapsed = time.perf_counter() - before
+                logger.info(
+                    "Skipping %s for MetaDrive instance %s: %s",
+                    mb_group_name,
+                    config.instance_folder_path,
+                    METADRIVE_DEEPCOPY_SKIP_REASON,
+                )
+                out_data["feature_groups"][mb_group_name] = _skipped_feature_group(
+                    elapsed,
+                    METADRIVE_DEEPCOPY_SKIP_REASON,
+                )
+                continue
+
             val = func(env)
             elapsed = time.perf_counter() - before
             feature_name = mb_group_name.replace("mb_", "")
@@ -199,6 +225,22 @@ def extract_metafeatures(
     #     }
     config.close()
     return out_data
+
+
+def _should_skip_metadrive_mb_group(env_name: str, group_name: str) -> bool:
+    return env_name == "metadrive" and group_name in METADRIVE_DEEPCOPY_UNAVAILABLE_GROUPS
+
+
+def _skipped_feature_group(elapsed: float, reason: str) -> Dict[str, Any]:
+    return {
+        TIMESTAMP_KEY: time.time(),
+        ELAPSED_TIME_KEY: elapsed,
+        FEATURES_KEY: {},
+        "diagnostics": {
+            "skipped": True,
+            "reason": reason,
+        },
+    }
 
 
 def traj_metafeatures(
@@ -302,7 +344,7 @@ def _run_metadrive_probe(
 
 def _assert_metadrive_policy(env: gym.Env, expected_policy_cls: type) -> None:
     base_env = env.unwrapped
-    policy = base_env.engine.get_policy(base_env.vehicle.name)
+    policy = base_env.engine.get_policy(base_env.agent.name)
     if not isinstance(policy, expected_policy_cls):
         raise RuntimeError(
             f"MetaDrive reset did not apply {expected_policy_cls.__name__}; "
@@ -435,7 +477,7 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
 
     # Try Metadrive
     if hasattr(base_env, "engine"):
-        ego = getattr(base_env, "vehicle", None)
+        ego = base_env.agent
         states = []
         tm = base_env.engine.traffic_manager
         vehicles = tm.traffic_vehicles
@@ -461,9 +503,13 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
 
 def _extract_ego_speed(env: gym.Env) -> Optional[float]:
     base_env = env.unwrapped
-    if not hasattr(base_env, "vehicle"):
+    if hasattr(base_env, "engine"):
+        ego = base_env.agent
+    elif hasattr(base_env, "vehicle"):
+        ego = base_env.vehicle
+    else:
         return None
-    ego = base_env.vehicle
+
     if hasattr(ego, "speed"):
         return float(ego.speed)
     if hasattr(ego, "speed_km_h"):
@@ -475,7 +521,7 @@ def _extract_min_ttc(env: gym.Env) -> Optional[float]:
     base_env = env.unwrapped
     if hasattr(base_env, "road") and hasattr(base_env, "vehicle"):
         return _extract_highway_min_ttc(env)
-    if hasattr(base_env, "engine") and hasattr(base_env, "vehicle"):
+    if hasattr(base_env, "engine"):
         return _extract_metadrive_min_ttc(env)
     raise ValueError("Unrecognized environment")    # TODO: add better log
 
@@ -519,7 +565,7 @@ def _extract_highway_min_ttc(env: gym.Env) -> Optional[float]:
 
 def _extract_metadrive_min_ttc(env: gym.Env) -> Optional[float]:
     base_env = env.unwrapped
-    ego = base_env.vehicle
+    ego = base_env.agent
     tm = base_env.engine.traffic_manager
     lane_width = _metadrive_lane_width(base_env, ego)
 

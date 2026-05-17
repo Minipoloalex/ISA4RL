@@ -29,14 +29,14 @@ def _neutral_action(env: gym.Env) -> Any:
 
 def _active_policy_name(env: gym.Env) -> str:
     base_env = env.unwrapped
-    return base_env.engine.get_policy(base_env.vehicle.name).__class__.__name__
+    return base_env.engine.get_policy(base_env.agent.name).__class__.__name__
 
 
 def _run_steps(env: gym.Env, steps: int, label: str, seed: int) -> None:
     base_env = env.unwrapped
     for step in range(steps):
         _, reward, terminated, truncated, info = env.step(_neutral_action(env))
-        speed = info["velocity"] if "velocity" in info else base_env.vehicle.speed
+        speed = info["velocity"] if "velocity" in info else base_env.agent.speed
         logger.info(
             "%s step=%04d reward=%.3f speed=%.3f terminated=%s truncated=%s",
             label,
