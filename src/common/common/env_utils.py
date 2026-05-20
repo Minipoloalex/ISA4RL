@@ -10,6 +10,7 @@ HIGHWAY_ENVS: List[str] = [
     "lane-keeping",
 ]
 METADRIVE_ENVS: List[str] = ["metadrive"]
+CARLA_ENVS: List[str] = ["carla"]
 
 K = "Kinematics"
 GS = "GrayscaleObservation"

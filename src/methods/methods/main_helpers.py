@@ -73,7 +73,8 @@ def _train_one_agent(config: TrainConfig, run_index: int) -> None:
             pass
         train_env = config.ensure_train_env()
         model = config.ensure_model()
-        eval_env = config.ensure_eval_env()
+        if config.use_training_eval_callback:
+            eval_env = config.ensure_eval_env()
         try:
             fd_path = "/proc/self/fd"
             logger.info("open fds after env creation: %s", len(os.listdir(fd_path)))
@@ -111,6 +112,8 @@ def eval_agents(
     repeat_evaluation: bool = False,
 ):
     assert workers > 0
+    if workers != 1 and any(config.env_name == "carla" for config in train_configs):
+        raise ValueError("CARLA evaluation must use workers=1.")
 
     eval_configs = [
         config
@@ -181,6 +184,8 @@ def extract_metafeatures(
     update_threshold: float = 0.0,
 ) -> None:
     assert workers > 0
+    if env_name == "carla" and workers != 1:
+        raise ValueError("CARLA metafeature extraction must use workers=1.")
     
     def needs_compute(config: InstanceConfig) -> bool:
         path = RESULTS_METAFEATURES_PATH(config.instance_folder_path)
