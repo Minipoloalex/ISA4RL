@@ -79,7 +79,10 @@ def default_isa_dataset_path(
     return BASE_RESULTS_PATH / "isa" / f"isa_ds_{env_component}_{action_space_component}.csv"
 
 
-def default_isa_analysis_output_path(envs: Optional[Sequence[str]]) -> Path:
+def default_isa_analysis_output_path(
+    envs: Optional[Sequence[str]],
+    action_space: str = ACTION_SPACE_ALL,
+) -> Path:
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     if envs is None:
         env_component = "all-envs"
@@ -87,7 +90,8 @@ def default_isa_analysis_output_path(envs: Optional[Sequence[str]]) -> Path:
         env_component = "_".join(
             _filename_component(env) for env in canonical_env_names(envs)
         )
-    return BASE_RESULTS_PATH / "isa" / f"analysis_{timestamp}_{env_component}"
+    action_space_component = _filename_component(action_space)
+    return BASE_RESULTS_PATH / "isa" / f"{timestamp}_{env_component}_{action_space_component}"
 
 
 def isa_dataset_metadata_path(dataset_path: Path) -> Path:
@@ -833,7 +837,7 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         default=None,
         help=(
             "Directory where ISA outputs will be stored (for analyze task). Defaults "
-            "to 'analysis_<timestamp>_<envs>' under the ISA results folder."
+            "to '<timestamp>_<envs>_<action-space>' under the ISA results folder."
         ),
     )
     parser.add_argument(
@@ -867,7 +871,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             output_path = (
                 args.output
                 if args.output is not None
-                else default_isa_analysis_output_path(args.envs)
+                else default_isa_analysis_output_path(args.envs, args.action_space)
             )
             ensure_dir(output_path)
             report_path = args.filter_report
