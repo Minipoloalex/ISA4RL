@@ -19,6 +19,7 @@ from common.file_utils import (
     ensure_dir,
     RESULTS_METAFEATURES_PATH,
     RESULTS_EVALUATION_PATH,
+    RESULTS_INSTANCE_CONFIG_FILE,
     RESULTS_TRAIN_FOLDER_PATH,
     RESULTS_TRAIN_CONFIG_FILE,
 )
@@ -30,7 +31,15 @@ logging.basicConfig(
     datefmt="%d-%m-%Y %H:%M:%S",
 )
 
-DEFAULT_DATASET_PATH = BASE_RESULTS_PATH / "isa" / "instancespace_dataset.csv"
+DEFAULT_DATASET_PATH = BASE_RESULTS_PATH / "isa" / "isa_ds_all.csv"
+ACTION_SPACE_ALL = "all"
+ACTION_SPACE_DISCRETE = "discrete"
+ACTION_SPACE_CONTINUOUS = "continuous"
+ACTION_SPACE_CHOICES = [
+    ACTION_SPACE_ALL,
+    ACTION_SPACE_DISCRETE,
+    ACTION_SPACE_CONTINUOUS,
+]
 
 
 def parse_env_names(value: str) -> List[str]:
@@ -61,9 +70,13 @@ def canonical_algorithm_names(algorithms: Sequence[str]) -> List[str]:
     return sorted(algorithm.lower() for algorithm in algorithms)
 
 
-def default_isa_dataset_path(envs: Sequence[str]) -> Path:
+def default_isa_dataset_path(
+    envs: Sequence[str],
+    action_space: str = ACTION_SPACE_ALL,
+) -> Path:
     env_component = "_".join(_filename_component(env) for env in canonical_env_names(envs))
-    return BASE_RESULTS_PATH / "isa" / f"instancespace_dataset_{env_component}.csv"
+    action_space_component = _filename_component(action_space)
+    return BASE_RESULTS_PATH / "isa" / f"isa_ds_{env_component}_{action_space_component}.csv"
 
 
 def default_isa_analysis_output_path(envs: Optional[Sequence[str]]) -> Path:
@@ -84,11 +97,12 @@ def isa_dataset_metadata_path(dataset_path: Path) -> Path:
 def resolve_dataset_path(
     dataset_path: Optional[Path],
     envs: Optional[Sequence[str]],
+    action_space: str = ACTION_SPACE_ALL,
 ) -> Path:
     if dataset_path is not None:
         return dataset_path
     if envs is not None:
-        return default_isa_dataset_path(envs)
+        return default_isa_dataset_path(envs, action_space)
     return DEFAULT_DATASET_PATH
 
 
@@ -136,6 +150,120 @@ def filter_algorithm_columns(
         ", ".join(selected_algo_columns),
     )
     return df[non_algo_columns + selected_algo_columns].copy()
+
+
+def drop_incomplete_algorithm_rows(
+    df: pd.DataFrame,
+    algorithms: Optional[Sequence[str]],
+    metric_key: str,
+) -> pd.DataFrame:
+    if algorithms is None:
+        return df
+
+    selected_algo_columns = [
+        f"algo_{algorithm}_{metric_key}"
+        for algorithm in canonical_algorithm_names(algorithms)
+    ]
+    missing_values = df[selected_algo_columns].isna()
+    incomplete_rows = missing_values.any(axis=1)
+    if not incomplete_rows.any():
+        return df
+
+    examples = ", ".join(df.loc[incomplete_rows, "instances"].head(10).astype(str))
+    missing_counts = missing_values.sum().to_dict()
+    counts = ", ".join(
+        f"{column}: {int(count)}"
+        for column, count in missing_counts.items()
+        if count > 0
+    )
+    logger.warning(
+        "[isa] Dropping %s instances with missing selected algorithm performance. "
+        "Missing values by column: %s. Example instances: %s.",
+        int(incomplete_rows.sum()),
+        counts,
+        examples,
+    )
+    filtered_df = df.loc[~incomplete_rows].copy()
+    if filtered_df.empty:
+        raise ValueError(
+            "[isa] Dropping instances with missing selected algorithm performance "
+            "removed every instance."
+        )
+    return filtered_df
+
+
+def read_instance_action_space(instance_folder: Path) -> Optional[str]:
+    instance_config_path = RESULTS_INSTANCE_CONFIG_FILE(instance_folder)
+    if not nonempty_file_in(instance_config_path):
+        return None
+
+    instance_config = read_json(instance_config_path)
+    env_config = instance_config.get("env_config", {})
+    config = env_config.get("config", {})
+    if "discrete_action" not in config:
+        return None
+
+    if config["discrete_action"] is True:
+        return ACTION_SPACE_DISCRETE
+    if config["discrete_action"] is False:
+        return ACTION_SPACE_CONTINUOUS
+    raise ValueError(
+        "[isa] Expected boolean 'discrete_action' in "
+        f"'{instance_config_path}', got {config['discrete_action']!r}."
+    )
+
+
+def filter_action_space_rows(
+    df: pd.DataFrame,
+    action_space: str,
+) -> pd.DataFrame:
+    if action_space == ACTION_SPACE_ALL:
+        return df
+
+    if "action_space" not in df.columns:
+        raise ValueError(
+            "[isa] Cannot filter by action space because the dataset does not "
+            "contain an 'action_space' column. Rebuild the dataset with the "
+            "current ISA builder."
+        )
+
+    invalid_values = sorted(
+        value
+        for value in df["action_space"].dropna().unique()
+        if value not in (ACTION_SPACE_DISCRETE, ACTION_SPACE_CONTINUOUS)
+    )
+    if invalid_values:
+        invalid = ", ".join(str(value) for value in invalid_values)
+        raise ValueError(
+            "[isa] Dataset contains invalid action_space values: "
+            f"{invalid}."
+        )
+
+    missing_action_space = df["action_space"].isna()
+    if missing_action_space.any():
+        examples = ", ".join(
+            df.loc[missing_action_space, "instances"].head(10).astype(str)
+        )
+        raise ValueError(
+            "[isa] Cannot filter by action space because "
+            f"{int(missing_action_space.sum())} instances have missing "
+            f"action_space values. Example instances: {examples}."
+        )
+
+    filtered_df = df[df["action_space"] == action_space].copy()
+    if filtered_df.empty:
+        raise ValueError(
+            "[isa] Action-space filtering removed every instance "
+            f"(requested: {action_space})."
+        )
+
+    logger.info(
+        "[isa] Kept %s/%s instances after action-space filter: %s",
+        len(filtered_df),
+        len(df),
+        action_space,
+    )
+    return filtered_df
 
 
 def filter_metafeature_columns(
@@ -337,13 +465,19 @@ def build_isa_dataset(
     max_feature_missing: float = 0.0,
     filter_report_path: Optional[Path] = None,
     projection_algorithms: Optional[Sequence[str]] = None,
+    action_space: str = ACTION_SPACE_ALL,
 ):
     envs = canonical_env_names(envs)
     if projection_algorithms is not None:
         projection_algorithms = canonical_algorithm_names(projection_algorithms)
+    if action_space not in ACTION_SPACE_CHOICES:
+        raise ValueError(
+            "[isa] Invalid action_space value "
+            f"'{action_space}'. Expected one of: {', '.join(ACTION_SPACE_CHOICES)}."
+        )
 
     if output_path is None:
-        output_path = default_isa_dataset_path(envs)
+        output_path = default_isa_dataset_path(envs, action_space)
     if filter_report_path is None:
         filter_report_path = output_path.with_name(f"{output_path.stem}_filter_report.json")
 
@@ -362,6 +496,15 @@ def build_isa_dataset(
                 continue
                 
             instance_id = instance_folder.name
+            instance_action_space = read_instance_action_space(instance_folder)
+            if action_space != ACTION_SPACE_ALL and instance_action_space is None:
+                raise ValueError(
+                    "[isa] Cannot filter instance by action space because "
+                    f"'{RESULTS_INSTANCE_CONFIG_FILE(instance_folder)}' does not "
+                    "define 'env_config.config.discrete_action'."
+                )
+            if action_space != ACTION_SPACE_ALL and instance_action_space != action_space:
+                continue
             
             # Load metafeatures
             meta_path = RESULTS_METAFEATURES_PATH(instance_folder)
@@ -371,7 +514,11 @@ def build_isa_dataset(
                 
             meta_data = read_json(meta_path)
             
-            row: Dict[str, Any] = {"instances": instance_id, "source": env_folder.name}
+            row: Dict[str, Any] = {
+                "instances": instance_id,
+                "source": env_folder.name,
+                "action_space": instance_action_space,
+            }
             
             # Flatten feature groups
             feature_groups = meta_data.get("feature_groups", {})
@@ -440,7 +587,9 @@ def build_isa_dataset(
         logger.error("[isa] No instances with metafeatures were found.")
         raise ValueError("[isa] No instances with metafeatures were found.")
         
+    df = filter_action_space_rows(df, action_space)
     df = filter_algorithm_columns(df, projection_algorithms, metric_key)
+    df = drop_incomplete_algorithm_rows(df, projection_algorithms, metric_key)
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
     excluded_metafeature_columns = sorted(EXCLUDED_METAFEATURE_COLUMNS)
     df = exclude_configured_metafeature_columns(df)
@@ -464,6 +613,7 @@ def build_isa_dataset(
                     if projection_algorithms is not None
                     else None
                 ),
+                "action_space": action_space,
                 "metric_key": metric_key,
                 "debug": debug,
                 "max_feature_missing": max_feature_missing,
@@ -620,7 +770,18 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
         required=True,
         help=(
             "Comma-separated algorithm names to use as projection performance columns, "
-            "for example 'ppo,a2c,dqn'. If omitted, all algorithm columns are kept."
+            "for example 'ppo,a2c,dqn'."
+        ),
+    )
+    parser.add_argument(
+        "-as",
+        "--action-space",
+        choices=ACTION_SPACE_CHOICES,
+        default=ACTION_SPACE_ALL,
+        help=(
+            "Instance action-space filter. Use 'discrete' for DQN-compatible "
+            "MetaDrive instances, 'continuous' for continuous-control instances, "
+            "or 'all' to keep every instance."
         ),
     )
     parser.add_argument(
@@ -674,10 +835,15 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             args.max_feature_missing,
             args.filter_report,
             args.algorithms,
+            args.action_space,
         )
     elif args.task == "analyze":
         try:
-            dataset_path = resolve_dataset_path(args.dataset, args.envs)
+            dataset_path = resolve_dataset_path(
+                args.dataset,
+                args.envs,
+                args.action_space,
+            )
             output_path = (
                 args.output
                 if args.output is not None
@@ -686,10 +852,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             ensure_dir(output_path)
             report_path = args.filter_report
             if report_path is None:
-                report_path = output_path / "instancespace_dataset_filter_report.json"
-            filtered_dataset_path = output_path / "instancespace_dataset_filtered.csv"
+                report_path = output_path / "isa_ds_filter_report.json"
+            filtered_dataset_path = output_path / "isa_ds_filtered.csv"
             df = pd.read_csv(str(dataset_path))
+            df = filter_action_space_rows(df, args.action_space)
             df = filter_algorithm_columns(df, args.algorithms, args.metric)
+            df = drop_incomplete_algorithm_rows(df, args.algorithms, args.metric)
             filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
             filtered_df.to_csv(filtered_dataset_path, index=False)
             run_instance_space_analysis(filtered_dataset_path, output_path, args.options)
@@ -697,7 +865,11 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             print(f"[isa] {err}")
             raise SystemExit(1) from err
     elif args.task == "metafeatures":
-        dataset_path = resolve_dataset_path(args.dataset, args.envs)
+        dataset_path = resolve_dataset_path(
+            args.dataset,
+            args.envs,
+            args.action_space,
+        )
         if not dataset_path.is_file():
             print(f"[isa] Dataset not found: '{dataset_path}'")
             return
