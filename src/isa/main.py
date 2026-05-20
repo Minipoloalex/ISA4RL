@@ -874,10 +874,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 else default_isa_analysis_output_path(args.envs, args.action_space)
             )
             ensure_dir(output_path)
+            csv_output_path = output_path / "CSV"
+            ensure_dir(csv_output_path)
             report_path = args.filter_report
             if report_path is None:
                 report_path = output_path / "isa_ds_filter_report.json"
-            filtered_dataset_path = output_path / "isa_ds_filtered.csv"
+            filtered_dataset_path = csv_output_path / "isa_ds_filtered.csv"
             df = pd.read_csv(str(dataset_path))
             df = filter_action_space_rows(df, args.action_space)
             df = filter_algorithm_columns(df, args.algorithms, args.metric)
