@@ -200,6 +200,26 @@ def read_instance_action_space(instance_folder: Path) -> Optional[str]:
     instance_config = read_json(instance_config_path)
     env_config = instance_config.get("env_config", {})
     config = env_config.get("config", {})
+    if "action_space" in config:
+        action_space = str(config["action_space"]).lower()
+        if action_space == ACTION_SPACE_DISCRETE:
+            return ACTION_SPACE_DISCRETE
+        if action_space == ACTION_SPACE_CONTINUOUS:
+            return ACTION_SPACE_CONTINUOUS
+        raise ValueError(
+            "[isa] Expected 'discrete' or 'continuous' in "
+            f"'{instance_config_path}' env_config.config.action_space, "
+            f"got {config['action_space']!r}."
+        )
+    if "continuous_actions" in config:
+        if config["continuous_actions"] is True:
+            return ACTION_SPACE_CONTINUOUS
+        if config["continuous_actions"] is False:
+            return ACTION_SPACE_DISCRETE
+        raise ValueError(
+            "[isa] Expected boolean 'continuous_actions' in "
+            f"'{instance_config_path}', got {config['continuous_actions']!r}."
+        )
     if "discrete_action" not in config:
         return None
 
