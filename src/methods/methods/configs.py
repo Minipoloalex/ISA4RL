@@ -51,6 +51,8 @@ class InstanceConfig:
         obs_config = obs_config.copy() if obs_config is not None else None
 
         base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
+        ensure_dir(base_env_path)
+
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
         instance_folder_path = RESULTS_INSTANCE_FOLDER_PATH(base_env_path, instance_config_id)
         ensure_dir(instance_folder_path)
@@ -87,12 +89,14 @@ class InstanceConfig:
 
 @dataclass
 class TrainConfig(InstanceConfig):
+    env_name: str
     make_model: ModelFactory
     make_train_env: VecEnvFactory
     make_eval_env: VecEnvFactory
     model_path: Path
     vec_normalize_path: Path
     uses_vec_normalize: bool
+    use_training_eval_callback: bool
     timesteps: int
     train_folder_path: Path
     eval_freq: int
@@ -118,6 +122,8 @@ class TrainConfig(InstanceConfig):
         algo_config = config_dict["algo_config"].copy()
 
         base_env_path = RESULTS_ENV_FOLDER_PATH(base_results_path, env_name)
+        ensure_dir(base_env_path)
+
         instance_config_id = get_instance_id(base_env_path, env_config, obs_config)
         instance_folder_path = RESULTS_INSTANCE_FOLDER_PATH(base_env_path, instance_config_id)
         ensure_dir(instance_folder_path)
@@ -143,6 +149,12 @@ class TrainConfig(InstanceConfig):
         use_vec_normalize = algo_config.pop("normalize", False)
         n_envs = algo_config.pop("n_envs", 1)
         policy = algo_config["policy"]
+        is_carla = env_name == "carla"
+        if is_carla:
+            if n_envs != 1:
+                raise ValueError("CARLA configs must use n_envs=1.")
+            if use_vec_normalize:
+                raise ValueError("CARLA configs must not use VecNormalize.")
 
         for key in _DISCARD_POLICY_PARAMS:
             algo_config.pop(key, None)
@@ -167,8 +179,9 @@ class TrainConfig(InstanceConfig):
         eval_vec_env_kwargs = None
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
-        model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
-        vec_normalize_file = BEST_VEC_NORMALIZE_FILE if use_best_model else VEC_NORMALIZE_FILE
+        # TODO: fix this and allow evaluation of checkpoint models to determine and save best model
+        model_file = MODEL_FILE if is_carla or not use_best_model else BEST_MODEL_FILE
+        vec_normalize_file = VEC_NORMALIZE_FILE if is_carla or not use_best_model else BEST_VEC_NORMALIZE_FILE
         load_model_path = train_algo_folder_path / MODELS_FOLDER / model_file
         load_vec_normalize_path = train_algo_folder_path / MODELS_FOLDER / vec_normalize_file
 
@@ -179,7 +192,7 @@ class TrainConfig(InstanceConfig):
             make_vec_env_helper, env_id, env_kwargs, 1, eval_vec_env_cls, eval_vec_env_kwargs, monitor_dir=str(train_algo_folder_path),
         )
 
-        if use_vec_normalize and env_name != "parking":
+        if use_vec_normalize and env_name not in ("parking", "carla"):
             common_kwargs = {
                 "norm_obs": True,
                 "clip_obs": 10,
@@ -198,6 +211,7 @@ class TrainConfig(InstanceConfig):
             make_test_env=partial(make_env_helper, env_id, env_kwargs),
 
             make_eval_env=eval_vec_env_builder,
+            env_name=env_name,
             n_test_episodes=env_config["n_test_episodes"],
             instance_folder_path=instance_folder_path,
             make_model=partial(
@@ -210,7 +224,8 @@ class TrainConfig(InstanceConfig):
             ),
             model_path=load_model_path,
             vec_normalize_path=load_vec_normalize_path,
-            uses_vec_normalize=use_vec_normalize and env_name != "parking",
+            uses_vec_normalize=use_vec_normalize and env_name not in ("parking", "carla"),
+            use_training_eval_callback=not is_carla,
             make_train_env=train_vec_env_builder,
             timesteps=env_config["train_timesteps"],
             train_folder_path=train_algo_folder_path,

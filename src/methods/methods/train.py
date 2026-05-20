@@ -16,7 +16,7 @@ import yaml
 import gymnasium as gym
 import pandas as pd
 from stable_baselines3 import DQN, PPO, A2C, SAC, TD3
-from stable_baselines3.common.callbacks import BaseCallback, EvalCallback
+from stable_baselines3.common.callbacks import BaseCallback, EvalCallback, CheckpointCallback
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.logger import Logger, configure
 from stable_baselines3.common.vec_env import DummyVecEnv, VecEnv, SubprocVecEnv
@@ -76,7 +76,7 @@ def train(
     model: BaseAlgorithm,
     timesteps: int,
     folder_name: str,
-    eval_env: VecEnv,
+    eval_env: Optional[VecEnv],
     n_eval_episodes: int,
     eval_freq: int,
     *,
@@ -134,18 +134,29 @@ def train(
 
     best_model_path = models_dir / BEST_MODEL_FILE
     best_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
-    on_best_callback = SaveVecNormalizeCallback(str(best_vec_normalize_path))
-    learn_kwargs["callback"] = EvalCallback(
-        eval_env,
-        n_eval_episodes=n_eval_episodes,
-        best_model_save_path=str(models_dir),   # auto saves to models_dir / best_model.zip
-        log_path=folder_name,
-        eval_freq=eval_freq,    # already takes into account the number of vectorized environments
-        callback_on_new_best=on_best_callback,
-        deterministic=True,
-        render=False,
-        verbose=1,
-    )
+    if eval_env is not None:
+        on_best_callback = SaveVecNormalizeCallback(str(best_vec_normalize_path))
+        learn_kwargs["callback"] = EvalCallback(
+            eval_env,
+            n_eval_episodes=n_eval_episodes,
+            best_model_save_path=str(models_dir),   # auto saves to models_dir / best_model.zip
+            log_path=folder_name,
+            eval_freq=eval_freq,    # already takes into account the number of vectorized environments
+            callback_on_new_best=on_best_callback,
+            deterministic=True,
+            render=False,
+            verbose=1,
+        )
+    else:
+        checkpoint_dir = models_dir / "checkpoints"
+        ensure_dir(checkpoint_dir)
+        learn_kwargs["callback"] = CheckpointCallback(
+            save_freq=eval_freq,
+            save_path=str(checkpoint_dir),
+            name_prefix="model",
+            save_replay_buffer=False,
+            save_vecnormalize=False,    # there won't be any vec normalize for carla
+        )
     learn_kwargs["progress_bar"] = progress_bar
 
     # Gather environment metadata without forcing access to the raw env when using
@@ -178,7 +189,7 @@ def train(
         "seed": seed,
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "model_path": str(final_model_path),
-        "best_model_path": str(best_model_path),
+        "best_model_path": str(best_model_path) if eval_env is not None else None,
         "logs_dir": str(logs_dir),
         "env_config": env_config_dict,
         "env_id": env_id,
@@ -188,4 +199,6 @@ def train(
     with metadata_output_path.open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
+    if eval_env is None:
+        return final_model_path, final_vec_normalize_path
     return best_model_path, best_vec_normalize_path

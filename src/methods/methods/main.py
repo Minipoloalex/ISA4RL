@@ -9,7 +9,7 @@ import gymnasium as gym
 import pandas as pd
 
 from methods.configs import TrainConfig, InstanceConfig
-from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS
+from common.env_utils import HIGHWAY_ENVS, METADRIVE_ENVS, CARLA_ENVS
 from common.file_utils import OTHER_RESULTS_PATH
 from methods.utils.load_config_utils import load_env_train_configs, load_env_instance_configs
 from methods.main_helpers import train_agents, eval_agents, extract_metafeatures, check_agents, group_results
@@ -25,7 +25,7 @@ def main(valid_envs: Optional[List[str]], argv: Optional[Sequence[str]] = None) 
     parser = argparse.ArgumentParser(
         description="Run training, evaluation, metafeature extraction, or checks of what has been run for highway-env configs."
     )
-    valid_envs = valid_envs if valid_envs is not None else HIGHWAY_ENVS + METADRIVE_ENVS
+    valid_envs = valid_envs if valid_envs is not None else HIGHWAY_ENVS + METADRIVE_ENVS + CARLA_ENVS
 
     # check is used to check the progress of training/evaluating/extracting
     parser.add_argument(
