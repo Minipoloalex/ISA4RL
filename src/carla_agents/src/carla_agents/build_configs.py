@@ -41,7 +41,6 @@ def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
             "continuous_actions": train_config["continuous_actions"],
             "scenario_names": list(train_config["scenario_names"]),
             "scenario_count": train_config["scenario_count"],
-            # "lane_count_estimate": carla_lane_count_estimate(train_config),
             "max_steps": 400,
             "scenarios_file": str(CARLA_SCENARIOS.relative_to(REPO_ROOT)),
             "sensor_config": str(CARLA_SENSORS.relative_to(REPO_ROOT)),
@@ -63,14 +62,14 @@ def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
         },
     }
 
-
-def carla_lane_count_estimate(train_config: Dict[str, Any]) -> int:
-    scenario_group = train_config["scenario_group"]
-    if scenario_group == "road":
-        return 1
-    if scenario_group in ("junction", "highway_merge"):
-        return 2
-    raise ValueError(f"Unknown CARLA scenario group: {scenario_group}")
+# TODO: maybe use in metafeatures.py if estimating is necessary for CARLA env
+# def carla_lane_count_estimate(train_config: Dict[str, Any]) -> int:
+#     scenario_group = train_config["scenario_group"]
+#     if scenario_group == "road":
+#         return 1
+#     if scenario_group in ("junction", "highway_merge"):
+#         return 2
+#     raise ValueError(f"Unknown CARLA scenario group: {scenario_group}")
 
 
 def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:

@@ -474,6 +474,10 @@ def get_max_episode_steps(env: gym.Env) -> int:
         return config["horizon"]
     except:
         pass
+    try:
+        return config["max_steps"]
+    except:
+        pass
     raise NotImplementedError(f"Max episode steps not implemented for env: {env}")
 
 def _env_viewer_deepcopy(self, memo):
@@ -495,6 +499,13 @@ def safe_copy_env(env: gym.Env) -> gym.Env:
             "simulator state contains Panda3D BulletVehicle objects. Use only "
             "metafeatures that do not require branching from an exact copied "
             "MetaDrive state."
+        )
+    if hasattr(env.unwrapped, "get_active_scenario"):
+        raise NotImplementedError(
+            "CARLA environments cannot be deep-copied because their live "
+            "simulator state contains CARLA actors and client connections. Use "
+            "only metafeatures that do not require branching from an exact copied "
+            "CARLA state."
         )
 
     # Need to deepcopy the env, but deepcopy doesn't work with pygame's 
