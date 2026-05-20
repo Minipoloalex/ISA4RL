@@ -1,0 +1,77 @@
+{
+  "discrete": [
+    {
+      "algo": "dqn",
+      "action_space": "Discrete",
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0001,
+      "buffer_size": 10000,
+      "learning_starts": 500,
+      "batch_size": 32,
+      "tau": 0.005,
+      "gamma": 0.99,
+      "train_freq": 4,
+      "gradient_steps": 1,
+      "target_update_interval": 2000,
+      "exploration_fraction": 0.1,
+      "exploration_final_eps": 0.01
+    },
+    {
+      "algo": "ppo",
+      "action_space": "Discrete",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0003,
+      "n_steps": 512,
+      "batch_size": 64,
+      "gamma": 0.99
+    },
+    {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0007,
+      "n_steps": 5,
+      "gamma": 0.99
+    }
+  ],
+  "continuous": [
+    {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0003,
+      "n_steps": 512,
+      "batch_size": 64,
+      "gamma": 0.99
+    },
+    {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0007,
+      "n_steps": 5,
+      "gamma": 0.99
+    },
+    {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0003,
+      "buffer_size": 50000,
+      "learning_starts": 1000,
+      "batch_size": 256,
+      "gamma": 0.99
+    }
+  ]
+}
