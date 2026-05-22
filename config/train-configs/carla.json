@@ -2,7 +2,7 @@
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -24,7 +24,6 @@
           "isa_000_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -48,27 +47,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844456488968
+    "timestamp": 1779461740534496671
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -90,7 +88,6 @@
           "isa_000_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -117,17 +114,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844456512275
+    "timestamp": 1779461740534510443
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -149,7 +150,6 @@
           "isa_000_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -176,16 +176,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844456532684
+    "timestamp": 1779461740534521213
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -207,7 +208,6 @@
           "isa_001_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -234,17 +234,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844456553099
+    "timestamp": 1779461740534532742
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -266,7 +270,6 @@
           "isa_001_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -293,16 +296,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844456571694
+    "timestamp": 1779461740534544298
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -324,7 +335,6 @@
           "isa_001_junction_non_signalized_junction_left_turn_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -348,21 +358,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844456590636
+    "timestamp": 1779461740534555381
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -384,7 +399,6 @@
           "isa_002_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -408,27 +422,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844456617165
+    "timestamp": 1779461740534566356
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -450,7 +463,6 @@
           "isa_002_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -477,17 +489,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844456636107
+    "timestamp": 1779461740534577092
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -509,7 +525,6 @@
           "isa_002_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -536,16 +551,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844456655286
+    "timestamp": 1779461740534589665
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -567,7 +583,6 @@
           "isa_003_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -594,17 +609,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844456675510
+    "timestamp": 1779461740534601760
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -626,7 +645,6 @@
           "isa_003_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -653,16 +671,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844456693208
+    "timestamp": 1779461740534612964
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -684,7 +710,6 @@
           "isa_003_junction_non_signalized_junction_right_turn_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -708,21 +733,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844456711474
+    "timestamp": 1779461740534624204
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -744,7 +774,6 @@
           "isa_004_junction_priority_at_junction_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -768,27 +797,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844456731804
+    "timestamp": 1779461740534634796
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -810,7 +838,6 @@
           "isa_004_junction_priority_at_junction_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -837,17 +864,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844456749717
+    "timestamp": 1779461740534655271
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -869,7 +900,6 @@
           "isa_004_junction_priority_at_junction_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -896,16 +926,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844456767437
+    "timestamp": 1779461740534665757
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -927,7 +958,6 @@
           "isa_005_junction_priority_at_junction_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -954,17 +984,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844456785971
+    "timestamp": 1779461740534676656
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -986,7 +1020,6 @@
           "isa_005_junction_priority_at_junction_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1013,16 +1046,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844456812363
+    "timestamp": 1779461740534687734
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1044,7 +1085,6 @@
           "isa_005_junction_priority_at_junction_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1068,21 +1108,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844456831112
+    "timestamp": 1779461740534698898
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1104,7 +1149,6 @@
           "isa_006_highway_merge_enter_actor_flow_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1128,27 +1172,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844456852287
+    "timestamp": 1779461740534709641
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1170,7 +1213,6 @@
           "isa_006_highway_merge_enter_actor_flow_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1197,17 +1239,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844456870514
+    "timestamp": 1779461740534720065
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1229,7 +1275,6 @@
           "isa_006_highway_merge_enter_actor_flow_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1256,16 +1301,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844456888139
+    "timestamp": 1779461740534731138
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1287,7 +1333,6 @@
           "isa_007_highway_merge_enter_actor_flow_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1314,17 +1359,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844456906555
+    "timestamp": 1779461740534742544
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1346,7 +1395,6 @@
           "isa_007_highway_merge_enter_actor_flow_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1373,16 +1421,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844456924317
+    "timestamp": 1779461740534754236
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1404,7 +1460,6 @@
           "isa_007_highway_merge_enter_actor_flow_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1428,21 +1483,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844456942833
+    "timestamp": 1779461740534765906
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1464,7 +1524,6 @@
           "isa_008_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1488,27 +1547,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844456963001
+    "timestamp": 1779461740534777138
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1530,7 +1588,6 @@
           "isa_008_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1557,17 +1614,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844456987811
+    "timestamp": 1779461740534788133
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1589,7 +1650,6 @@
           "isa_008_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1616,16 +1676,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844457006324
+    "timestamp": 1779461740534797713
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1647,7 +1708,6 @@
           "isa_009_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1674,17 +1734,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844457152688
+    "timestamp": 1779461740534808238
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1706,7 +1770,6 @@
           "isa_009_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1733,16 +1796,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844457176501
+    "timestamp": 1779461740534819161
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1764,7 +1835,6 @@
           "isa_009_highway_merge_enter_actor_flow_v2_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1788,21 +1858,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844457195582
+    "timestamp": 1779461740534830222
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1824,7 +1899,6 @@
           "isa_010_highway_merge_highway_exit_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1848,27 +1922,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844457216503
+    "timestamp": 1779461740534840947
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1890,7 +1963,6 @@
           "isa_010_highway_merge_highway_exit_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1917,17 +1989,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844457234578
+    "timestamp": 1779461740534851398
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -1949,7 +2025,6 @@
           "isa_010_highway_merge_highway_exit_traffic_25_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -1976,16 +2051,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844457252094
+    "timestamp": 1779461740534862231
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2007,7 +2083,6 @@
           "isa_011_highway_merge_highway_exit_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2034,17 +2109,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844457270744
+    "timestamp": 1779461740534873370
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2066,7 +2145,6 @@
           "isa_011_highway_merge_highway_exit_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2093,16 +2171,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844457288323
+    "timestamp": 1779461740534884206
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2124,7 +2210,6 @@
           "isa_011_highway_merge_highway_exit_traffic_25_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 2,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2148,21 +2233,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844457306436
+    "timestamp": 1779461740534894975
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2184,7 +2274,6 @@
           "isa_012_road_plain_road_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2208,27 +2297,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844457327218
+    "timestamp": 1779461740534907226
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2250,7 +2338,6 @@
           "isa_012_road_plain_road_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2277,17 +2364,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844457345519
+    "timestamp": 1779461740534918040
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2309,7 +2400,6 @@
           "isa_012_road_plain_road_traffic_00_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2336,16 +2426,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844457369578
+    "timestamp": 1779461740534927819
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2367,7 +2458,6 @@
           "isa_013_road_plain_road_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2394,17 +2484,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844457388700
+    "timestamp": 1779461740534939355
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2426,7 +2520,6 @@
           "isa_013_road_plain_road_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2453,16 +2546,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844457406328
+    "timestamp": 1779461740534950557
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2484,7 +2585,6 @@
           "isa_013_road_plain_road_traffic_00_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2508,21 +2608,26 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
       "batch_size": 256,
-      "gamma": 0.99
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
     },
-    "timestamp": 1779273844457425481
+    "timestamp": 1779461740534961630
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2544,7 +2649,6 @@
           "isa_014_road_plain_road_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2568,27 +2672,26 @@
     "algo_config": {
       "algo": "dqn",
       "action_space": "Discrete",
-      "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0001,
-      "buffer_size": 10000,
-      "learning_starts": 500,
-      "batch_size": 32,
-      "tau": 0.005,
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
       "gamma": 0.99,
-      "train_freq": 4,
-      "gradient_steps": 1,
-      "target_update_interval": 2000,
-      "exploration_fraction": 0.1,
-      "exploration_final_eps": 0.01
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
     },
-    "timestamp": 1779273844457446908
+    "timestamp": 1779461740534972316
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2610,7 +2713,6 @@
           "isa_014_road_plain_road_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2637,17 +2739,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
-      "batch_size": 64,
-      "gamma": 0.99
+      "n_steps": 256,
+      "batch_size": 256,
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844457464899
+    "timestamp": 1779461740534982605
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2669,7 +2775,6 @@
           "isa_014_road_plain_road_traffic_15_clear_noon_discrete_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2696,16 +2801,17 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
     },
-    "timestamp": 1779273844457483493
+    "timestamp": 1779461740534993075
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2727,7 +2833,6 @@
           "isa_015_road_plain_road_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2754,17 +2859,21 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "n_steps": 512,
+      "n_steps": 2048,
       "batch_size": 64,
-      "gamma": 0.99
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
     },
-    "timestamp": 1779273844457502281
+    "timestamp": 1779461740535004202
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2786,7 +2895,6 @@
           "isa_015_road_plain_road_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2813,16 +2921,24 @@
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0007,
-      "n_steps": 5,
-      "gamma": 0.99
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
     },
-    "timestamp": 1779273844457520298
+    "timestamp": 1779461740535015379
   },
   {
     "env_config": {
       "env_id": "isa-carla-gymdrive-v0",
-      "train_timesteps": 100000,
+      "train_timesteps": 200000,
       "eval_freq": 10000,
       "n_eval_episodes": 5,
       "n_test_episodes": 50,
@@ -2844,7 +2960,6 @@
           "isa_015_road_plain_road_traffic_15_clear_noon_continuous_variant_05"
         ],
         "scenario_count": 6,
-        "lane_count_estimate": 1,
         "max_steps": 400,
         "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
         "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
@@ -2868,15 +2983,395 @@
     "algo_config": {
       "algo": "sac",
       "action_space": "Continuous",
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1779461740535025800
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_016_road_plain_road_traffic_25_clear_noon_discrete",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "discrete",
+        "continuous_actions": false,
+        "scenario_names": [
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_00",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_01",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_02",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_03",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_04",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "dqn",
+      "action_space": "Discrete",
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.0023,
+      "batch_size": 64,
+      "buffer_size": 100000,
+      "learning_starts": 1000,
+      "gamma": 0.99,
+      "target_update_interval": 10,
+      "train_freq": 256,
+      "gradient_steps": 128,
+      "exploration_fraction": 0.16,
+      "exploration_final_eps": 0.04,
+      "policy_kwargs": "dict(net_arch=[256, 256])"
+    },
+    "timestamp": 1779461740535036309
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_016_road_plain_road_traffic_25_clear_noon_discrete",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "discrete",
+        "continuous_actions": false,
+        "scenario_names": [
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_00",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_01",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_02",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_03",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_04",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Discrete",
       "n_envs": 1,
       "normalize": false,
       "policy": "MultiInputPolicy",
-      "learning_rate": 0.0003,
-      "buffer_size": 50000,
-      "learning_starts": 1000,
+      "n_steps": 256,
       "batch_size": 256,
-      "gamma": 0.99
+      "gae_lambda": 0.8,
+      "gamma": 0.98,
+      "n_epochs": 20,
+      "ent_coef": 0.0,
+      "learning_rate": "lin_0.001",
+      "clip_range": "lin_0.2"
     },
-    "timestamp": 1779273844457543319
+    "timestamp": 1779461740535046823
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_016_road_plain_road_traffic_25_clear_noon_discrete",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "discrete",
+        "continuous_actions": false,
+        "scenario_names": [
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_00",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_01",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_02",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_03",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_04",
+          "isa_016_road_plain_road_traffic_25_clear_noon_discrete_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Discrete",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "gamma": 0.995,
+      "n_steps": 40,
+      "learning_rate": "lin_0.00083",
+      "ent_coef": 1e-05
+    },
+    "timestamp": 1779461740535057209
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_017_road_plain_road_traffic_25_clear_noon_continuous",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "continuous",
+        "continuous_actions": true,
+        "scenario_names": [
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_00",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_01",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_02",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_03",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_04",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "ppo",
+      "action_space": "Continuous",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "n_steps": 2048,
+      "batch_size": 64,
+      "gae_lambda": 0.95,
+      "gamma": 0.999,
+      "n_epochs": 10,
+      "ent_coef": 0.0,
+      "learning_rate": 0.0003,
+      "clip_range": 0.18
+    },
+    "timestamp": 1779461740535068298
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_017_road_plain_road_traffic_25_clear_noon_continuous",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "continuous",
+        "continuous_actions": true,
+        "scenario_names": [
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_00",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_01",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_02",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_03",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_04",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "a2c",
+      "action_space": "Continuous",
+      "n_envs": 1,
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "ent_coef": 0.0,
+      "max_grad_norm": 0.5,
+      "n_steps": 128,
+      "gae_lambda": 0.9,
+      "vf_coef": 0.4,
+      "gamma": 0.99,
+      "use_rms_prop": true,
+      "normalize_advantage": false,
+      "learning_rate": "lin_0.00096",
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)"
+    },
+    "timestamp": 1779461740535079132
+  },
+  {
+    "env_config": {
+      "env_id": "isa-carla-gymdrive-v0",
+      "train_timesteps": 200000,
+      "eval_freq": 10000,
+      "n_eval_episodes": 5,
+      "n_test_episodes": 50,
+      "config": {
+        "config_id": "isa_017_road_plain_road_traffic_25_clear_noon_continuous",
+        "scenario_group": "road",
+        "source_trigger_type": "PlainRoad",
+        "situation": "Road",
+        "weather_condition": "Clear Noon",
+        "max_traffic_vehicles": 25,
+        "action_space": "continuous",
+        "continuous_actions": true,
+        "scenario_names": [
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_00",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_01",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_02",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_03",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_04",
+          "isa_017_road_plain_road_traffic_25_clear_noon_continuous_variant_05"
+        ],
+        "scenario_count": 6,
+        "max_steps": 400,
+        "scenarios_file": "CARLA-GymDrive/src/config/isa_carla_scenarios.json",
+        "sensor_config": "CARLA-GymDrive/src/config/vae_rgb_sensors.json",
+        "time_limit": 60,
+        "initialize_server": false,
+        "random_weather": false,
+        "random_traffic": false,
+        "synchronous_mode": true,
+        "show_sensor_data": false,
+        "has_traffic": true,
+        "autopilot": false,
+        "verbose": false,
+        "use_vae": true,
+        "vae_model": "vae_64",
+        "vae_root": "CARLA-GymDrive/vae_repo/vae/log_dir",
+        "vae_device": "auto",
+        "keep_rgb": false,
+        "sample_latent": false
+      }
+    },
+    "algo_config": {
+      "algo": "sac",
+      "action_space": "Continuous",
+      "normalize": false,
+      "policy": "MultiInputPolicy",
+      "learning_rate": 0.00073,
+      "buffer_size": 300000,
+      "batch_size": 256,
+      "ent_coef": "auto",
+      "gamma": 0.98,
+      "tau": 0.02,
+      "train_freq": 64,
+      "gradient_steps": 64,
+      "learning_starts": 10000,
+      "use_sde": true,
+      "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])"
+    },
+    "timestamp": 1779461740535090604
   }
 ]

@@ -16,8 +16,8 @@ CARLA_SCENARIOS = CARLA_GYMDRIVE_ROOT / "src" / "config" / "isa_carla_scenarios.
 CARLA_SENSORS = CARLA_GYMDRIVE_ROOT / "src" / "config" / "vae_rgb_sensors.json"
 CARLA_ALGO_CONFIGS = REPO_ROOT / "config" / "carla-algo-configs.json"
 
-TRAIN_TIMESTEPS = 100_000
-EVAL_FREQ = 5_000
+TRAIN_TIMESTEPS = 200_000
+EVAL_FREQ = 10_000
 N_EVAL_EPISODES = 5
 N_TEST_EPISODES = 50
 TIME_LIMIT = 60
@@ -62,17 +62,15 @@ def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
         },
     }
 
-# TODO: maybe use in metafeatures.py if estimating is necessary for CARLA env
-# def carla_lane_count_estimate(train_config: Dict[str, Any]) -> int:
-#     scenario_group = train_config["scenario_group"]
-#     if scenario_group == "road":
-#         return 1
-#     if scenario_group in ("junction", "highway_merge"):
-#         return 2
-#     raise ValueError(f"Unknown CARLA scenario group: {scenario_group}")
-
-
 def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
+    # CARLA uses the dictionary observation stream produced by
+    # VaeObservationWrapper/RlObservationWrapper, so all policies are
+    # MultiInputPolicy. Hyperparameters are adapted from the non-image baselines
+    # in config/algo-configs.json / config/rlzoo-algo-hyperparams:
+    # DQN and discrete PPO follow CartPole-style discrete control, discrete A2C
+    # follows LunarLander-style discrete control, and continuous PPO/A2C/SAC
+    # follow BipedalWalker-style continuous control. Changes from those source
+    # baselines are commented next to the affected parameters.
     return {
         "discrete": [
             {
@@ -80,17 +78,17 @@ def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
                 "action_space": "Discrete",
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0001,
-                "buffer_size": 10_000,
-                "learning_starts": 500,
-                "batch_size": 32,
-                "tau": 0.005,
+                "learning_rate": 0.0023,
+                "batch_size": 64,
+                "buffer_size": 100_000,
+                "learning_starts": 1_000,
                 "gamma": 0.99,
-                "train_freq": 4,
-                "gradient_steps": 1,
-                "target_update_interval": 2_000,
-                "exploration_fraction": 0.1,
-                "exploration_final_eps": 0.01,
+                "target_update_interval": 10,
+                "train_freq": 256,
+                "gradient_steps": 128,
+                "exploration_fraction": 0.16,
+                "exploration_final_eps": 0.04,
+                "policy_kwargs": "dict(net_arch=[256, 256])",
             },
             {
                 "algo": "ppo",
@@ -98,10 +96,17 @@ def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
                 "n_envs": 1,
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0003,
-                "n_steps": 512,
-                "batch_size": 64,
-                "gamma": 0.99,
+                # CartPole PPO uses n_envs=8 and n_steps=32, i.e. 256 samples
+                # per rollout. CARLA is constrained to n_envs=1, so n_steps=256
+                # preserves the same rollout batch size.
+                "n_steps": 256,
+                "batch_size": 256,
+                "gae_lambda": 0.8,
+                "gamma": 0.98,
+                "n_epochs": 20,
+                "ent_coef": 0.0,
+                "learning_rate": "lin_0.001",
+                "clip_range": "lin_0.2",
             },
             {
                 "algo": "a2c",
@@ -109,9 +114,13 @@ def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
                 "n_envs": 1,
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0007,
-                "n_steps": 5,
-                "gamma": 0.99,
+                "gamma": 0.995,
+                # LunarLander A2C uses n_envs=8 and n_steps=5, i.e. 40 samples
+                # per rollout. CARLA is constrained to n_envs=1, so n_steps=40
+                # preserves the same rollout batch size.
+                "n_steps": 40,
+                "learning_rate": "lin_0.00083",
+                "ent_coef": 0.00001,
             },
         ],
         "continuous": [
@@ -121,10 +130,14 @@ def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
                 "n_envs": 1,
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0003,
-                "n_steps": 512,
+                "n_steps": 2048,
                 "batch_size": 64,
-                "gamma": 0.99,
+                "gae_lambda": 0.95,
+                "gamma": 0.999,
+                "n_epochs": 10,
+                "ent_coef": 0.0,
+                "learning_rate": 0.0003,
+                "clip_range": 0.18,
             },
             {
                 "algo": "a2c",
@@ -132,20 +145,37 @@ def carla_algo_configs() -> Dict[str, List[Dict[str, Any]]]:
                 "n_envs": 1,
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0007,
-                "n_steps": 5,
+                "ent_coef": 0.0,
+                "max_grad_norm": 0.5,
+                # BipedalWalker A2C uses n_envs=16 and n_steps=8, i.e. 128
+                # samples per rollout. CARLA is constrained to n_envs=1, so
+                # n_steps=128 preserves the same rollout batch size.
+                "n_steps": 128,
+                "gae_lambda": 0.9,
+                "vf_coef": 0.4,
                 "gamma": 0.99,
+                "use_rms_prop": True,
+                "normalize_advantage": False,
+                "learning_rate": "lin_0.00096",
+                "use_sde": True,
+                "policy_kwargs": "dict(log_std_init=-2, ortho_init=False)",
             },
             {
                 "algo": "sac",
                 "action_space": "Continuous",
                 "normalize": False,
                 "policy": "MultiInputPolicy",
-                "learning_rate": 0.0003,
-                "buffer_size": 50_000,
-                "learning_starts": 1_000,
+                "learning_rate": 0.00073,
+                "buffer_size": 300_000,
                 "batch_size": 256,
-                "gamma": 0.99,
+                "ent_coef": "auto",
+                "gamma": 0.98,
+                "tau": 0.02,
+                "train_freq": 64,
+                "gradient_steps": 64,
+                "learning_starts": 10_000,
+                "use_sde": True,
+                "policy_kwargs": "dict(log_std_init=-3, net_arch=[400, 300])",
             },
         ],
     }
