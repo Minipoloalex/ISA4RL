@@ -11,7 +11,8 @@ HIGHWAY_ENVS: List[str] = [
     "lane-keeping",
 ]
 METADRIVE_ENVS: List[str] = ["metadrive"]
-ENVS = HIGHWAY_ENVS + METADRIVE_ENVS
+CARLA_ENVS: List[str] = ["carla"]
+ENVS = HIGHWAY_ENVS + METADRIVE_ENVS + CARLA_ENVS
 
 env_files = [f"{env}.json" for env in ENVS]
 
