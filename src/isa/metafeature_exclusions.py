@@ -5,9 +5,6 @@
 EXCLUDED_METAFEATURE_COLUMNS = {
     "action_space_size",
     "max_steps",
-    "obs_categorical_ratio",
-    "obs_numerical_ratio",
-    "obs_binary_ratio",
 }
 EXCLUDE_METAFEATURES_BOTH_PROBES = {
     "mean_reward",

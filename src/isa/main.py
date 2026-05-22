@@ -23,6 +23,7 @@ from common.file_utils import (
     RESULTS_TRAIN_FOLDER_PATH,
     RESULTS_TRAIN_CONFIG_FILE,
 )
+from common.env_utils import HIGHWAY_ENVS, ENV_ACTION_SPACE
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(
@@ -449,6 +450,7 @@ def normalize_algorithm_reward(
 
     denominator = float(baseline_metric) - float(random_metric)
     if float(agent_metric) < float(random_metric):
+        # cnt_random_outperformed += 1  # TODO: implement this
         logger.warning(
             "[isa] Trained agent underperformed random policy for '%s': "
             "agent_%s=%s, random_%s=%s. Normalized score will be below 0.0.",
@@ -521,14 +523,15 @@ def build_isa_dataset(
                 
             instance_id = instance_folder.name
             instance_action_space = read_instance_action_space(instance_folder)
-            if action_space != ACTION_SPACE_ALL and instance_action_space is None:
-                raise ValueError(
-                    "[isa] Cannot filter instance by action space because "
-                    f"'{RESULTS_INSTANCE_CONFIG_FILE(instance_folder)}' does not "
-                    "define 'env_config.config.discrete_action'."
-                )
-            if action_space != ACTION_SPACE_ALL and instance_action_space != action_space:
-                continue
+            if env_folder.name not in HIGHWAY_ENVS:
+                if action_space != ACTION_SPACE_ALL and instance_action_space is None:
+                    raise ValueError(
+                        "[isa] Cannot filter instance by action space because "
+                        f"'{RESULTS_INSTANCE_CONFIG_FILE(instance_folder)}' does not "
+                        "define 'env_config.config.discrete_action'."
+                    )
+                if action_space != ACTION_SPACE_ALL and instance_action_space != action_space:
+                    continue
             
             # Load metafeatures
             meta_path = RESULTS_METAFEATURES_PATH(instance_folder)
@@ -881,7 +884,8 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 report_path = output_path / "isa_ds_filter_report.json"
             filtered_dataset_path = csv_output_path / "isa_ds_filtered.csv"
             df = pd.read_csv(str(dataset_path))
-            df = filter_action_space_rows(df, args.action_space)
+            if args.action_space != ACTION_SPACE_ALL:
+                df = filter_action_space_rows(df, args.action_space)
             df = filter_algorithm_columns(df, args.algorithms, args.metric)
             df = drop_incomplete_algorithm_rows(df, args.algorithms, args.metric)
             filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
