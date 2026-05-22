@@ -14,6 +14,9 @@ import numpy as np
 from stable_baselines3.common.base_class import BaseAlgorithm
 from stable_baselines3.common.vec_env import VecEnv
 
+EVALUATION_BASE_SEED = int(1e6)
+CHECKPOINT_SELECTION_BASE_SEED = int(2e6)
+
 def rollout_episode(
     model: BaseAlgorithm,
     env: VecEnv,
@@ -42,12 +45,12 @@ def evaluate(
     env: VecEnv,
     n_episodes: int,
     *,
+    base_seed: int = EVALUATION_BASE_SEED,
     deterministic: bool,
 ) -> List[Dict[str, Any]]:
     # env should be DummyVecEnv with n_envs=1
     assert env.num_envs == 1    # only supports n_envs=1
 
-    base_seed = int(1e6)
     episodes_stats: List[Dict[str, Any]] = []
     for i in range(n_episodes):
         cur_seed = base_seed + i

@@ -92,6 +92,11 @@ def _train_one_agent(config: TrainConfig, run_index: int) -> None:
             eval_freq=config.eval_freq,
             seed=0,
             progress_bar=True,
+            post_training_eval_env_factory=(
+                config.make_eval_env
+                if not config.use_training_eval_callback
+                else None
+            ),
         )
     finally:
         config.close()

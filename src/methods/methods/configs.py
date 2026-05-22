@@ -179,9 +179,10 @@ class TrainConfig(InstanceConfig):
         eval_vec_env_kwargs = None
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
-        # TODO: fix this and allow evaluation of checkpoint models to determine and save best model
-        model_file = MODEL_FILE if is_carla or not use_best_model else BEST_MODEL_FILE
-        vec_normalize_file = VEC_NORMALIZE_FILE if is_carla or not use_best_model else BEST_VEC_NORMALIZE_FILE
+        model_file = MODEL_FILE if not use_best_model else BEST_MODEL_FILE
+        vec_normalize_file = (
+            VEC_NORMALIZE_FILE if is_carla or not use_best_model else BEST_VEC_NORMALIZE_FILE
+        )
         load_model_path = train_algo_folder_path / MODELS_FOLDER / model_file
         load_vec_normalize_path = train_algo_folder_path / MODELS_FOLDER / vec_normalize_file
 

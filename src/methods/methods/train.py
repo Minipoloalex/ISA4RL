@@ -3,6 +3,8 @@ import json
 import math
 import os
 import random
+import re
+import shutil
 import time
 from datetime import datetime
 from collections import Counter, deque, defaultdict
@@ -43,6 +45,7 @@ from methods.utils.general_utils import (
 )
 from methods.utils.sb3_utils import get_env_id, unwrap_first_env, find_vec_normalize
 from common.file_utils import _json_default
+from methods.evaluate import CHECKPOINT_SELECTION_BASE_SEED, evaluate
 
 try:
     import highway_env
@@ -82,6 +85,7 @@ def train(
     *,
     seed: Optional[int] = None,
     progress_bar: bool = False,
+    post_training_eval_env_factory: Optional[Callable[[], VecEnv]] = None,
     **kwargs,
 ) -> Tuple[Path, Path]:
     """Train a Stable-Baselines3 model and persist artifacts to disk.
@@ -134,6 +138,7 @@ def train(
 
     best_model_path = models_dir / BEST_MODEL_FILE
     best_vec_normalize_path = models_dir / BEST_VEC_NORMALIZE_FILE
+    checkpoint_dir = models_dir / "checkpoints"
     if eval_env is not None:
         on_best_callback = SaveVecNormalizeCallback(str(best_vec_normalize_path))
         learn_kwargs["callback"] = EvalCallback(
@@ -148,7 +153,6 @@ def train(
             verbose=1,
         )
     else:
-        checkpoint_dir = models_dir / "checkpoints"
         ensure_dir(checkpoint_dir)
         learn_kwargs["callback"] = CheckpointCallback(
             save_freq=eval_freq,
@@ -180,16 +184,36 @@ def train(
     final_vec_normalize_path = models_dir / VEC_NORMALIZE_FILE
     vec_normalize = find_vec_normalize(env)
     if vec_normalize is not None:
-        vec_normalize.save(str(final_vec_normalize_path))    
+        vec_normalize.save(str(final_vec_normalize_path))
 
-    env_config_dict = env_config if type(env_config) is dict else env.get_attr("orig_config")[0]
+    checkpoint_evaluation_results = None
+    if post_training_eval_env_factory is not None:
+        env.close()
+        checkpoint_evaluation_results = evaluate_checkpoints_after_training(
+            model=model,
+            model_paths=get_checkpoint_model_paths(
+                checkpoint_dir,
+                final_model_path,
+                max_step=timesteps,
+            ),
+            eval_env_factory=post_training_eval_env_factory,
+            n_eval_episodes=n_eval_episodes,
+            best_model_path=best_model_path,
+        )
+
+    env_config_dict = (
+        env_config if type(env_config) is dict else env.get_attr("orig_config")[0]
+    )
     metadata = {
         "timesteps": timesteps,
         "elapsed_seconds": elapsed,
         "seed": seed,
         "timestamp": datetime.now().isoformat(timespec="seconds"),
         "model_path": str(final_model_path),
-        "best_model_path": str(best_model_path) if eval_env is not None else None,
+        "best_model_path": str(best_model_path)
+        if eval_env is not None or post_training_eval_env_factory is not None
+        else None,
+        "checkpoint_evaluations": checkpoint_evaluation_results,
         "logs_dir": str(logs_dir),
         "env_config": env_config_dict,
         "env_id": env_id,
@@ -199,6 +223,97 @@ def train(
     with metadata_output_path.open("w", encoding="utf-8") as fp:
         json.dump(metadata, fp, default=_json_default, indent=2)
 
-    if eval_env is None:
+    if eval_env is None and post_training_eval_env_factory is None:
         return final_model_path, final_vec_normalize_path
     return best_model_path, best_vec_normalize_path
+
+
+def get_checkpoint_model_paths(
+    checkpoint_dir: Path,
+    final_model_path: Path,
+    *,
+    max_step: int,
+) -> List[Path]:
+    checkpoint_paths = sorted(
+        (
+            path
+            for path in checkpoint_dir.glob("model_*_steps.zip")
+            if _checkpoint_step(path) < max_step
+        ),
+        key=_checkpoint_step,
+    )
+    return [*checkpoint_paths, final_model_path]
+
+
+def _checkpoint_step(path: Path) -> int:
+    match = re.fullmatch(r"model_(\d+)_steps\.zip", path.name)
+    if match is None:
+        raise ValueError(f"Unexpected checkpoint filename: {path}")
+    return int(match.group(1))
+
+
+def evaluate_checkpoints_after_training(
+    *,
+    model: BaseAlgorithm,
+    model_paths: Sequence[Path],
+    eval_env_factory: Callable[[], VecEnv],
+    n_eval_episodes: int,
+    best_model_path: Path,
+) -> List[Dict[str, Any]]:
+    if not model_paths:
+        raise ValueError(
+            "No checkpoint models were available for post-training evaluation."
+        )
+
+    eval_env = None
+    candidate_model = None
+    best_mean_reward = -math.inf
+    best_candidate_path = None
+    checkpoint_evaluation_results: List[Dict[str, Any]] = []
+
+    try:
+        eval_env = eval_env_factory()
+        for model_path in model_paths:
+            if candidate_model is not None:
+                del candidate_model
+                candidate_model = None
+            candidate_model = model.__class__.load(
+                str(model_path),
+                env=eval_env,
+                device=model.device,
+            )
+            episode_results = evaluate(
+                model=candidate_model,
+                env=eval_env,
+                n_episodes=n_eval_episodes,
+                base_seed=CHECKPOINT_SELECTION_BASE_SEED,
+                deterministic=True,
+            )
+            rewards = [episode_result["reward"] for episode_result in episode_results]
+            mean_reward = float(np.mean(rewards))
+            result = {
+                "model_path": str(model_path),
+                "mean_reward": mean_reward,
+                "base_seed": CHECKPOINT_SELECTION_BASE_SEED,
+                "episode_rewards": rewards,
+                "episode_lengths": [
+                    episode_result["length"] for episode_result in episode_results
+                ],
+                "episode_seeds": [
+                    episode_result["seed"] for episode_result in episode_results
+                ],
+            }
+            checkpoint_evaluation_results.append(result)
+            if mean_reward > best_mean_reward:
+                best_mean_reward = mean_reward
+                best_candidate_path = model_path
+
+        if best_candidate_path is None:
+            raise RuntimeError("Could not select a best checkpoint model.")
+        shutil.copy2(best_candidate_path, best_model_path)
+        return checkpoint_evaluation_results
+    finally:
+        if candidate_model is not None:
+            del candidate_model
+        if eval_env is not None:
+            eval_env.close()
