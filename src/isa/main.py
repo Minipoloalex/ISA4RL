@@ -426,7 +426,7 @@ def normalize_algorithm_reward(
     row: Dict[str, Any],
     metric_key: str,
     train_folder: Path,
-) -> float:
+) -> tuple[float, bool]:
     baseline_column = f"feature_baseline_{metric_key}"
     random_column = f"feature_random_{metric_key}"
 
@@ -449,8 +449,8 @@ def normalize_algorithm_reward(
         )
 
     denominator = float(baseline_metric) - float(random_metric)
-    if float(agent_metric) < float(random_metric):
-        # cnt_random_outperformed += 1  # TODO: implement this
+    random_outperformed_agent = float(agent_metric) < float(random_metric)
+    if random_outperformed_agent:
         logger.warning(
             "[isa] Trained agent underperformed random policy for '%s': "
             "agent_%s=%s, random_%s=%s. Normalized score will be below 0.0.",
@@ -480,7 +480,8 @@ def normalize_algorithm_reward(
             f"({baseline_metric})."
         )
 
-    return (float(agent_metric) - float(random_metric)) / denominator
+    normalized_metric = (float(agent_metric) - float(random_metric)) / denominator
+    return normalized_metric, random_outperformed_agent
 
 
 def build_isa_dataset(
@@ -510,6 +511,7 @@ def build_isa_dataset(
     instance_rows: Dict[str, Dict[str, Any]] = {}
     missing_meta = 0
     missing_metric = 0
+    random_outperformed_runs = 0
 
     # Iterate over environments
     for env_folder in BASE_RESULTS_PATH.iterdir():
@@ -589,12 +591,14 @@ def build_isa_dataset(
                     metric_value = summary.get(metric_key)
                     
                     if metric_value is not None:
-                        metric_value = normalize_algorithm_reward(
-                            float(metric_value),
-                            row,
-                            metric_key,
-                            train_folder,
+                        (
+                            metric_value,
+                            random_outperformed_agent,
+                        ) = normalize_algorithm_reward(
+                            float(metric_value), row, metric_key, train_folder
                         )
+                        if random_outperformed_agent:
+                            random_outperformed_runs += 1
                             
                         column_name = f"algo_{algo_name}_{metric_key}"
                         row[column_name] = float(metric_value)
@@ -607,6 +611,10 @@ def build_isa_dataset(
         logger.warning(f"[isa] Skipped {missing_meta} instances without metafeatures.")
     if missing_metric:
         logger.warning(f"[isa] {missing_metric} runs are missing evaluation data.")
+    logger.warning(
+        "[isa] Random policy outperformed trained agent in %s runs.",
+        random_outperformed_runs,
+    )
 
     df = pd.DataFrame(list(instance_rows.values()))
     
