@@ -20,8 +20,13 @@ TRAIN_TIMESTEPS = 200_000
 EVAL_FREQ = 10_000
 N_EVAL_EPISODES = 5
 N_TEST_EPISODES = 50
-TIME_LIMIT = 60
-
+CARLA_MAX_STEPS_BY_SCENARIO_GROUP = {
+    "highway": 400,
+    "highway_merge": 400,
+    "road": 600,
+    "intersection": 600,
+    "junction": 600,
+}
 
 def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
     return {
@@ -41,10 +46,11 @@ def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
             "continuous_actions": train_config["continuous_actions"],
             "scenario_names": list(train_config["scenario_names"]),
             "scenario_count": train_config["scenario_count"],
-            "max_steps": 400,
+            "max_steps": CARLA_MAX_STEPS_BY_SCENARIO_GROUP[
+                train_config["scenario_group"]
+            ],
             "scenarios_file": str(CARLA_SCENARIOS.relative_to(REPO_ROOT)),
             "sensor_config": str(CARLA_SENSORS.relative_to(REPO_ROOT)),
-            "time_limit": TIME_LIMIT,
             "initialize_server": False,
             "random_weather": False,
             "random_traffic": False,

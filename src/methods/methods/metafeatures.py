@@ -717,9 +717,8 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
 
     if env_name == "metadrive":
         lanes = config["map_config"]["lane_num"]
-    elif env_name == "carla":   # TODO: is this possible? or do we just actually need to estimate
-        # lanes = config["lane_count_estimate"]
-        lanes = None    # TODO: fix this
+    elif env_name == "carla":
+        lanes = None    # TODO: improve later
     elif is_parking_env(env):
         lanes = 1
     elif is_lane_keeping_env(env):
@@ -728,13 +727,11 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
         lanes = 2
     else:
         lanes = config.get("lanes_count") or config.get("roundabout_lanes")
-    assert lanes is not None
-
     vehicles_count = config.get("vehicles_count") or 0
     if env_name == "metadrive":
         traffic_density = config["traffic_density"]
-    elif env_name == "carla":   # TODO: better estimation
-        traffic_density = config["max_traffic_vehicles"] / lanes / config["time_limit"]
+    elif env_name == "carla":
+        traffic_density = None  # TODO: improve later
     elif is_parking_env(env):
         traffic_density = vehicles_count / (2 * config["parking_spots"])
     elif vehicles_count is not None:
@@ -743,8 +740,10 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     else:
         traffic_density = 0
 
-    features["lanes_count"] = lanes
-    features["traffic_density"] = traffic_density
+    if lanes is not None:
+        features["lanes_count"] = lanes
+    if traffic_density is not None:
+        features["traffic_density"] = traffic_density
     features["action_space_size"] = get_action_space_size(env)
     features["max_steps"] = get_max_episode_steps(env)
 

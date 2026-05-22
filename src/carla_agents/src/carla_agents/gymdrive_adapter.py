@@ -74,7 +74,7 @@ class IsaCarlaGymDriveEnv(gym.Env):
 
         env = gym.make(
             "carla-rl-gym-v0",
-            time_limit=self.config["time_limit"],
+            max_episode_steps=self.config["max_steps"],
             initialize_server=self.config["initialize_server"],
             random_weather=self.config["random_weather"],
             random_traffic=self.config["random_traffic"],
