@@ -73,6 +73,7 @@ class IsaCarlaGymDriveEnv(gym.Env):
             "carla-rl-gym-v0",
             max_episode_steps=self.config["max_steps"],
             initialize_server=self.config["initialize_server"],
+            offscreen_rendering=self.config["offscreen_rendering"],
             random_weather=self.config["random_weather"],
             random_traffic=self.config["random_traffic"],
             synchronous_mode=self.config["synchronous_mode"],

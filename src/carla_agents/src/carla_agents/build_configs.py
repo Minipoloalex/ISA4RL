@@ -52,6 +52,7 @@ def carla_env_config(train_config: Dict[str, Any]) -> Dict[str, Any]:
             "scenarios_file": str(CARLA_SCENARIOS.relative_to(REPO_ROOT)),
             "sensor_config": str(CARLA_SENSORS.relative_to(REPO_ROOT)),
             "initialize_server": True,
+            "offscreen_rendering": True,
             "random_weather": False,
             "random_traffic": False,
             "synchronous_mode": True,
