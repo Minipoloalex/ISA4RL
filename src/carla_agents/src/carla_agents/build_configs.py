@@ -209,7 +209,7 @@ def build_all_configs() -> Tuple[List[Dict[str, Any]], List[Dict[str, Any]]]:
 
     eval_configs = [
         {
-            "env_config": env_config,
+            "env_config": deepcopy(env_config),
             "timestamp": time.time_ns(),
         }
         for env_config in env_configs
