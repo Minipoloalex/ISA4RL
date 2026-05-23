@@ -69,9 +69,6 @@ class IsaCarlaGymDriveEnv(gym.Env):
         from src.env.rl_observation_wrapper import RlObservationWrapper
         from src.env.vae_observation_wrapper import VaeObservationWrapper
 
-        if self.config["initialize_server"]:
-            raise ValueError("CARLA ISA integration expects initialize_server to be false.")
-
         env = gym.make(
             "carla-rl-gym-v0",
             max_episode_steps=self.config["max_steps"],

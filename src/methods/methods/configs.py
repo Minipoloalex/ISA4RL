@@ -179,7 +179,7 @@ class TrainConfig(InstanceConfig):
         eval_vec_env_kwargs = None
         device = "cuda" if policy == "CnnPolicy" else "cpu"
 
-        model_file = MODEL_FILE if not use_best_model else BEST_MODEL_FILE
+        model_file = BEST_MODEL_FILE if use_best_model else MODEL_FILE
         vec_normalize_file = (
             VEC_NORMALIZE_FILE if is_carla or not use_best_model else BEST_VEC_NORMALIZE_FILE
         )
