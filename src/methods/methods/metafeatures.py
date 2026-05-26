@@ -736,7 +736,7 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
         traffic_density = vehicles_count / (2 * config["parking_spots"])
     elif vehicles_count is not None:
         duration = config["duration"]
-        traffic_density = vehicles_count / lanes / duration
+        traffic_density = vehicles_count / lanes / duration / 2.5
     else:
         traffic_density = 0
 
