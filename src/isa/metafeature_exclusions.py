@@ -1,5 +1,7 @@
 """Metafeature columns intentionally kept out of the ISA metadata dataset."""
 
+from typing import Iterable
+
 # These names are the final CSV column names produced by src/isa/main.py.
 # The raw extracted metafeatures remain available in metafeatures.json.
 EXCLUDED_METAFEATURE_COLUMNS = {
@@ -27,6 +29,11 @@ for f in EXCLUDE_METAFEATURES_BOTH_PROBES:
     EXCLUDED_METAFEATURE_COLUMNS.add(f"random_{f}")
     EXCLUDED_METAFEATURE_COLUMNS.add(f"baseline_{f}")
 
-EXCLUDED_METAFEATURE_COLUMNS = {
-    f"feature_{f}" for f in EXCLUDED_METAFEATURE_COLUMNS
-}
+def features(feats: Iterable[str]):
+    return {f"feature_{f}" for f in feats}
+
+EXCLUDED_METAFEATURE_COLUMNS = features(EXCLUDED_METAFEATURE_COLUMNS)
+
+DOMAIN_SPECIFIC_METAFEATURES = features({
+    
+})
