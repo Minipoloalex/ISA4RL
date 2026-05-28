@@ -7,6 +7,10 @@ from typing import Iterable
 EXCLUDED_METAFEATURE_COLUMNS = {
     "action_space_size",
     "max_steps",
+    "obs_categorical_ratio",
+    "obs_numerical_ratio",
+    "obs_binary_ratio",
+    "obs_space_dim_log",
 }
 EXCLUDE_METAFEATURES_BOTH_PROBES = {
     "mean_reward",
@@ -35,5 +39,30 @@ def features(feats: Iterable[str]):
 EXCLUDED_METAFEATURE_COLUMNS = features(EXCLUDED_METAFEATURE_COLUMNS)
 
 DOMAIN_SPECIFIC_METAFEATURES = features({
-    
+    "lanes_count",
+    "traffic_density",
+    "random_collision_rate",
+    "random_close_collision_rate",
+    "random_timeout_rate",
+    "random_speed_snr",
+    "random_speed_skew",
+    "random_speed_kurtosis",
+    "random_other_veh_speed_var_mean",
+    "random_other_veh_speed_var_var",
+    "random_other_veh_speed_var_max",
+    "random_other_veh_heading_var_mean",
+    "random_other_veh_heading_var_var",
+    "random_other_veh_heading_var_max",
+    "baseline_collision_rate",
+    "baseline_close_collision_rate",
+    "baseline_timeout_rate",
+    "baseline_speed_snr",
+    "baseline_speed_skew",
+    "baseline_speed_kurtosis",
+    "baseline_other_veh_speed_var_mean",
+    "baseline_other_veh_speed_var_var",
+    "baseline_other_veh_speed_var_max",
+    "baseline_other_veh_heading_var_mean",
+    "baseline_other_veh_heading_var_var",
+    "baseline_other_veh_heading_var_max",
 })

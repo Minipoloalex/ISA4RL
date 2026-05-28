@@ -4,7 +4,10 @@ from typing import Dict, Any, Optional, Sequence, List, Collection
 from pathlib import Path
 import pandas as pd
 from isa import DEFAULT_OPTIONS_PATH, run_instance_space_analysis, InstanceSpaceAnalysisError
-from metafeature_exclusions import EXCLUDED_METAFEATURE_COLUMNS
+from metafeature_exclusions import (
+    DOMAIN_SPECIFIC_METAFEATURES,
+    EXCLUDED_METAFEATURE_COLUMNS,
+)
 import datetime
 import re
 # import warnings
@@ -71,18 +74,35 @@ def canonical_algorithm_names(algorithms: Sequence[str]) -> List[str]:
     return sorted(algorithm.lower() for algorithm in algorithms)
 
 
+def metafeature_exclusion_filename_suffix(
+    exclude_domain_specific_metafeatures: bool,
+) -> str:
+    if exclude_domain_specific_metafeatures:
+        return "_edsm"
+    return ""
+
+
 def default_isa_dataset_path(
     envs: Sequence[str],
     action_space: str = ACTION_SPACE_ALL,
+    exclude_domain_specific_metafeatures: bool = False,
 ) -> Path:
     env_component = "_".join(_filename_component(env) for env in canonical_env_names(envs))
     action_space_component = _filename_component(action_space)
-    return BASE_RESULTS_PATH / "isa" / f"isa_ds_{env_component}_{action_space_component}.csv"
+    suffix = metafeature_exclusion_filename_suffix(
+        exclude_domain_specific_metafeatures
+    )
+    return (
+        BASE_RESULTS_PATH
+        / "isa"
+        / f"isa_ds_{env_component}_{action_space_component}{suffix}.csv"
+    )
 
 
 def default_isa_analysis_output_path(
     envs: Optional[Sequence[str]],
     action_space: str = ACTION_SPACE_ALL,
+    exclude_domain_specific_metafeatures: bool = False,
 ) -> Path:
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     if envs is None:
@@ -92,7 +112,14 @@ def default_isa_analysis_output_path(
             _filename_component(env) for env in canonical_env_names(envs)
         )
     action_space_component = _filename_component(action_space)
-    return BASE_RESULTS_PATH / "isa" / f"{timestamp}_{env_component}_{action_space_component}"
+    suffix = metafeature_exclusion_filename_suffix(
+        exclude_domain_specific_metafeatures
+    )
+    return (
+        BASE_RESULTS_PATH
+        / "isa"
+        / f"{timestamp}_{env_component}_{action_space_component}{suffix}"
+    )
 
 
 def isa_dataset_metadata_path(dataset_path: Path) -> Path:
@@ -103,11 +130,16 @@ def resolve_dataset_path(
     dataset_path: Optional[Path],
     envs: Optional[Sequence[str]],
     action_space: str = ACTION_SPACE_ALL,
+    exclude_domain_specific_metafeatures: bool = False,
 ) -> Path:
     if dataset_path is not None:
         return dataset_path
     if envs is not None:
-        return default_isa_dataset_path(envs, action_space)
+        return default_isa_dataset_path(
+            envs,
+            action_space,
+            exclude_domain_specific_metafeatures,
+        )
     return DEFAULT_DATASET_PATH
 
 
@@ -410,15 +442,25 @@ def exclude_configured_metafeature_columns(
                 missing,
             )
 
-    if not excluded_columns:
+    columns_to_drop = [column for column in excluded_columns if column in df.columns]
+
+    if not columns_to_drop:
         return df
 
     logger.info(
         "[isa] Excluding %s configured metafeature columns from ISA dataset: %s",
-        len(excluded_columns),
-        ", ".join(sorted(excluded_columns)),
+        len(columns_to_drop),
+        ", ".join(sorted(columns_to_drop)),
     )
-    return df.drop(columns=list(excluded_columns)).copy()
+    return df.drop(columns=columns_to_drop).copy()
+
+
+def metafeature_columns_to_exclude(
+    exclude_domain_specific_metafeatures: bool,
+) -> Collection[str]:
+    if not exclude_domain_specific_metafeatures:
+        return EXCLUDED_METAFEATURE_COLUMNS
+    return EXCLUDED_METAFEATURE_COLUMNS | DOMAIN_SPECIFIC_METAFEATURES
 
 
 def normalize_algorithm_reward(
@@ -493,6 +535,7 @@ def build_isa_dataset(
     filter_report_path: Optional[Path] = None,
     projection_algorithms: Optional[Sequence[str]] = None,
     action_space: str = ACTION_SPACE_ALL,
+    exclude_domain_specific_metafeatures: bool = False,
 ):
     envs = canonical_env_names(envs)
     if projection_algorithms is not None:
@@ -504,7 +547,11 @@ def build_isa_dataset(
         )
 
     if output_path is None:
-        output_path = default_isa_dataset_path(envs, action_space)
+        output_path = default_isa_dataset_path(
+            envs,
+            action_space,
+            exclude_domain_specific_metafeatures,
+        )
     if filter_report_path is None:
         filter_report_path = output_path.with_name(f"{output_path.stem}_filter_report.json")
 
@@ -626,8 +673,16 @@ def build_isa_dataset(
     df = filter_algorithm_columns(df, projection_algorithms, metric_key)
     df = drop_incomplete_algorithm_rows(df, projection_algorithms, metric_key)
     algo_columns = [col for col in df.columns if col.startswith("algo_")]
-    excluded_metafeature_columns = sorted(EXCLUDED_METAFEATURE_COLUMNS)
+    excluded_metafeature_columns = sorted(
+        metafeature_columns_to_exclude(exclude_domain_specific_metafeatures)
+    )
     df = exclude_configured_metafeature_columns(df)
+    if exclude_domain_specific_metafeatures:
+        df = exclude_configured_metafeature_columns(
+            df,
+            DOMAIN_SPECIFIC_METAFEATURES,
+            force_exclusion=False,
+        )
     df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     diagnostic_columns = [col for col in df.columns if col.startswith("diag_")]
@@ -653,6 +708,9 @@ def build_isa_dataset(
                 "debug": debug,
                 "max_feature_missing": max_feature_missing,
                 "excluded_metafeature_columns": excluded_metafeature_columns,
+                "exclude_domain_specific_metafeatures": (
+                    exclude_domain_specific_metafeatures
+                ),
                 "filter_report_path": str(filter_report_path),
                 "dataset_path": str(output_path),
                 "algorithm_metric_normalization": {
@@ -839,6 +897,16 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
             "'<dataset stem>_filter_report.json'. For analyze, defaults inside the output directory."
         ),
     )
+    parser.add_argument(
+        "-edsm",
+        "--exclude-domain-specific-metafeatures",
+        action="store_true",
+        help=(
+            "Exclude driving-domain-specific metafeatures such as lane, traffic, "
+            "collision, timeout, speed-shape, and other-vehicle probe features "
+            "(for build and analyze tasks)."
+        ),
+    )
     
     # analyze args
     parser.add_argument(
@@ -871,6 +939,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             args.filter_report,
             args.algorithms,
             args.action_space,
+            args.exclude_domain_specific_metafeatures,
         )
     elif args.task == "analyze":
         try:
@@ -878,11 +947,16 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 args.dataset,
                 args.envs,
                 args.action_space,
+                args.exclude_domain_specific_metafeatures,
             )
             output_path = (
                 args.output
                 if args.output is not None
-                else default_isa_analysis_output_path(args.envs, args.action_space)
+                else default_isa_analysis_output_path(
+                    args.envs,
+                    args.action_space,
+                    args.exclude_domain_specific_metafeatures,
+                )
             )
             ensure_dir(output_path)
             csv_output_path = output_path / "CSV"
@@ -896,6 +970,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 df = filter_action_space_rows(df, args.action_space)
             df = filter_algorithm_columns(df, args.algorithms, args.metric)
             df = drop_incomplete_algorithm_rows(df, args.algorithms, args.metric)
+            if args.exclude_domain_specific_metafeatures:
+                df = exclude_configured_metafeature_columns(
+                    df,
+                    DOMAIN_SPECIFIC_METAFEATURES,
+                    force_exclusion=False,
+                )
             filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
             filtered_df.to_csv(filtered_dataset_path, index=False)
             run_instance_space_analysis(filtered_dataset_path, output_path, args.options)
@@ -907,6 +987,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             args.dataset,
             args.envs,
             args.action_space,
+            args.exclude_domain_specific_metafeatures,
         )
         if not dataset_path.is_file():
             print(f"[isa] Dataset not found: '{dataset_path}'")
