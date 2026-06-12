@@ -57,9 +57,10 @@
         "csv": true,
         "web": false,
         "png": true,
-        "use_source_markers": false,
+        "pdf": true,
+        "use_source_markers": true,
         "show_titles": false,
-        "auto_projection_bounds": true,
+        "auto_projection_bounds": false,
         "projection_bounds_padding": 0.05
     }
 }

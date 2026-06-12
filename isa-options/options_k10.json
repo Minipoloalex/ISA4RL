@@ -57,9 +57,11 @@
         "csv": true,
         "web": false,
         "png": true,
+        "pdf": true,
         "use_source_markers": true,
         "show_titles": false,
         "auto_projection_bounds": true,
+        "source_legend_location": "top-left",
         "projection_bounds_padding": 0.05
     }
 }

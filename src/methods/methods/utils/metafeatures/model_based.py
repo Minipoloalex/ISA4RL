@@ -389,7 +389,7 @@ def compute_action_landscape_ruggedness(env, num_states=20, walk_length=50, max_
 
     for _ in range(num_states):
         env.reset()
-        for _ in range(np.random.randint(1, 10)):   # max_episode_steps // 2
+        for _ in range(np.random.randint(1, 10)):
             action = env.action_space.sample()
             obs, _, terminated, truncated, _ = env.step(action)
             if terminated or truncated:
