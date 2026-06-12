@@ -24,6 +24,7 @@ from methods.utils.metafeature_utils import (
     PolicyFn,
     get_action_space_size,
     get_max_episode_steps,
+    get_carla_lanes_avg,
 )
 from methods.utils.metafeatures.model_based import (
     estimate_normalized_lipschitz,
@@ -566,8 +567,24 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
             })
         return states
 
-    if hasattr(base_env, "get_active_scenario"):    # TODO
-        return []
+    if hasattr(base_env, "get_active_scenario"):
+        ego_actor = base_env._get_private_attr("__vehicle").get_vehicle()
+        carla_world = base_env._get_private_attr("__world").get_world()
+        states = []
+        for v in carla_world.get_actors().filter("vehicle.*"):
+            if v.id == ego_actor.id:
+                continue
+            velocity = v.get_velocity()
+            transform = v.get_transform()
+            location = transform.location
+            states.append({
+                "id": int(v.id),
+                "speed": float(3.6 * velocity.length()),
+                "heading": float(math.radians(transform.rotation.yaw)),
+                "position_x": float(location.x),
+                "position_y": float(location.y),
+            })
+        return states
         
     return []
 
@@ -718,7 +735,7 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
     if env_name == "metadrive":
         lanes = config["map_config"]["lane_num"]
     elif env_name == "carla":
-        lanes = None    # TODO: improve later
+        lanes = get_carla_lanes_avg(env)
     elif is_parking_env(env):
         lanes = 1
     elif is_lane_keeping_env(env):
@@ -727,16 +744,18 @@ def _collect_env_features(env_name: str, env: gym.Env) -> Dict[str, float]:
         lanes = 2
     else:
         lanes = config.get("lanes_count") or config.get("roundabout_lanes")
+
     vehicles_count = config.get("vehicles_count") or 0
     if env_name == "metadrive":
         traffic_density = config["traffic_density"]
     elif env_name == "carla":
-        traffic_density = None  # TODO: improve later
+        traffic_density = config["max_traffic_vehicles"] / 5
+
     elif is_parking_env(env):
-        traffic_density = vehicles_count / (2 * config["parking_spots"])
+        traffic_density = vehicles_count / (2 * config["parking_spots"]) / 2
     elif vehicles_count is not None:
         duration = config["duration"]
-        traffic_density = vehicles_count / lanes / duration / 2.5
+        traffic_density = vehicles_count / lanes / duration
     else:
         traffic_density = 0
 

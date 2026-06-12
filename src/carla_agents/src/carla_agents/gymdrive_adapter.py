@@ -139,6 +139,10 @@ class IsaCarlaGymDriveEnv(gym.Env):
     def get_active_scenario_name(self) -> str:
         return str(self._get_private_attr("__active_scenario_name"))
 
+    def get_active_scenario_lanes_count(self) -> int:
+        base_env = self._base_env()
+        return int(base_env.get_active_scenario_lanes_count())
+
     def _base_env(self) -> Any:
         current = self.env
         while hasattr(current, "env"):

@@ -480,6 +480,21 @@ def get_max_episode_steps(env: gym.Env) -> int:
         pass
     raise NotImplementedError(f"Max episode steps not implemented for env: {env}")
 
+
+def get_carla_lanes_avg(env: gym.Env) -> float:
+    config = env.unwrapped.config
+    scenario_names = config["scenario_names"]
+
+    lane_counts: List[int] = []
+    for scenario_name in scenario_names:
+        env.reset(options={"scenario_name": scenario_name})
+        lane_counts.append(env.unwrapped.get_active_scenario_lanes_count())
+
+    if not lane_counts:
+        raise ValueError("CARLA configuration has no scenarios to average.")
+    return float(np.mean(lane_counts))
+
+
 def _env_viewer_deepcopy(self, memo):
     cls = self.__class__
     result = cls.__new__(cls)
