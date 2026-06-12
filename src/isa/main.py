@@ -44,6 +44,17 @@ ACTION_SPACE_CHOICES = [
     ACTION_SPACE_DISCRETE,
     ACTION_SPACE_CONTINUOUS,
 ]
+INTERNAL_DATASET_COLUMNS = ["action_space"]
+
+
+def drop_internal_dataset_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Remove columns needed during construction but not valid ISA CSV inputs."""
+    columns_to_drop = [
+        column for column in INTERNAL_DATASET_COLUMNS if column in df.columns
+    ]
+    if not columns_to_drop:
+        return df
+    return df.drop(columns=columns_to_drop).copy()
 
 
 def parse_env_names(value: str) -> List[str]:
@@ -684,6 +695,7 @@ def build_isa_dataset(
             force_exclusion=False,
         )
     df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
+    df = drop_internal_dataset_columns(df)
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     diagnostic_columns = [col for col in df.columns if col.startswith("diag_")]
 
@@ -977,6 +989,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                     force_exclusion=False,
                 )
             filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
+            filtered_df = drop_internal_dataset_columns(filtered_df)
             filtered_df.to_csv(filtered_dataset_path, index=False)
             run_instance_space_analysis(filtered_dataset_path, output_path, args.options)
         except InstanceSpaceAnalysisError as err:
