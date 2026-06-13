@@ -143,6 +143,18 @@ class IsaCarlaGymDriveEnv(gym.Env):
         base_env = self._base_env()
         return int(base_env.get_active_scenario_lanes_count())
 
+    def get_current_lane_width(self) -> float:
+        base_env = self._base_env()
+        return float(base_env.get_current_lane_width())
+
+    def get_current_vehicle_state(self) -> Dict[str, float]:
+        base_env = self._base_env()
+        return dict(base_env.get_current_vehicle_state())
+
+    def get_active_traffic_vehicle_states(self) -> List[Dict[str, float]]:
+        base_env = self._base_env()
+        return [dict(state) for state in base_env.get_active_traffic_vehicle_states()]
+
     def _base_env(self) -> Any:
         current = self.env
         while hasattr(current, "env"):

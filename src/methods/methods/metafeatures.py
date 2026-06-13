@@ -111,7 +111,7 @@ def extract_metafeatures(
     if should_compute("probes"):
         logger.info(f"Computing probes for instance: {config.instance_folder_path}")
         before = time.perf_counter()
-        random_light_episodes = config.n_test_episodes * 2
+        random_light_episodes = config.n_test_episodes  # changed for CARLA
         random_heavy_episodes = config.n_test_episodes
 
         trajectories_random_heavy = _run_probe(
@@ -339,8 +339,6 @@ def _run_carla_autopilot_probe(
             env=env,
             policy=constant_ignored_policy(env),
             episodes=episodes,
-            collect_other_vehicles=False,
-            collect_min_ttc=False,
         )
     finally:
         base_env.enable_autopilot(False)
@@ -493,6 +491,9 @@ def _run_probe(
             new_obs, reward, terminated, truncated, info = env.step(action)
 
             info = dict(info)
+            if "speed" in info and hasattr(env.unwrapped, "get_active_scenario"):
+                # converting ego-speed from km/h to m/s
+                info["speed"] = float(info["speed"]) / 3.6
             if "speed" not in info and "velocity" in info:
                 info["speed"] = info["velocity"]
             if "speed" not in info:
@@ -502,7 +503,11 @@ def _run_probe(
             if collect_other_vehicles:
                 # Save traffic-derived signals into info so hooks can use them later.
                 info["other_vehicles_states"] = _extract_other_vehicles_states(env)
-            if collect_min_ttc:
+            carla_terminal_step = (
+                hasattr(env.unwrapped, "get_active_scenario")
+                and (terminated or truncated)
+            )
+            if collect_min_ttc and not carla_terminal_step:
                 min_ttc = _extract_min_ttc(env)
                 if min_ttc is not None:
                     info["min_ttc"] = min_ttc
@@ -568,23 +573,7 @@ def _extract_other_vehicles_states(env: gym.Env) -> List[Dict[str, float]]:
         return states
 
     if hasattr(base_env, "get_active_scenario"):
-        ego_actor = base_env._get_private_attr("__vehicle").get_vehicle()
-        carla_world = base_env._get_private_attr("__world").get_world()
-        states = []
-        for v in carla_world.get_actors().filter("vehicle.*"):
-            if v.id == ego_actor.id:
-                continue
-            velocity = v.get_velocity()
-            transform = v.get_transform()
-            location = transform.location
-            states.append({
-                "id": int(v.id),
-                "speed": float(3.6 * velocity.length()),
-                "heading": float(math.radians(transform.rotation.yaw)),
-                "position_x": float(location.x),
-                "position_y": float(location.y),
-            })
-        return states
+        return base_env.get_active_traffic_vehicle_states()
         
     return []
 
@@ -613,9 +602,60 @@ def _extract_min_ttc(env: gym.Env) -> Optional[float]:
         return _extract_highway_min_ttc(env)
     if hasattr(base_env, "engine"):
         return _extract_metadrive_min_ttc(env)
-    if hasattr(base_env, "get_active_scenario"):    # TODO
-        return None
+    if hasattr(base_env, "get_active_scenario"):
+        return _extract_carla_min_ttc(env)
     raise ValueError("Unrecognized environment")    # TODO: add better log
+
+
+def _extract_carla_min_ttc(env: gym.Env) -> Optional[float]:
+    base_env = env.unwrapped
+    ego_state = base_env.get_current_vehicle_state()
+    traffic_states = base_env.get_active_traffic_vehicle_states()
+    if not traffic_states:
+        return float("inf")
+
+    lane_width = float(base_env.get_current_lane_width())
+    ego_position = np.asarray(
+        [ego_state["position_x"], ego_state["position_y"]],
+        dtype=float,
+    )
+    ego_velocity = np.asarray(
+        [ego_state["velocity_x"], ego_state["velocity_y"]],
+        dtype=float,
+    )
+    ego_heading = float(ego_state["heading"])
+    forward_axis = np.asarray([math.cos(ego_heading), math.sin(ego_heading)], dtype=float)
+    lateral_axis = np.asarray([-math.sin(ego_heading), math.cos(ego_heading)], dtype=float)
+
+    ttc_samples: List[float] = []
+    for traffic_state in traffic_states:
+        other_position = np.asarray(
+            [traffic_state["position_x"], traffic_state["position_y"]],
+            dtype=float,
+        )
+        other_velocity = np.asarray(
+            [traffic_state["velocity_x"], traffic_state["velocity_y"]],
+            dtype=float,
+        )
+
+        relative_position = other_position - ego_position
+        longitudinal_gap = float(np.dot(relative_position, forward_axis))
+        lateral_gap = abs(float(np.dot(relative_position, lateral_axis)))
+        if lateral_gap > lane_width:
+            continue
+
+        relative_velocity = other_velocity - ego_velocity
+        longitudinal_relative_speed = float(np.dot(relative_velocity, forward_axis))
+        if longitudinal_gap >= 0.0:
+            closing_speed = max(-longitudinal_relative_speed, 0.0)
+            ttc = _ttc_from_gap(longitudinal_gap, closing_speed)
+        else:
+            rear_closing_speed = max(longitudinal_relative_speed, 0.0)
+            ttc = _ttc_from_gap(abs(longitudinal_gap), rear_closing_speed)
+        ttc_samples.append(ttc)
+
+    finite_ttc = [value for value in ttc_samples if math.isfinite(value)]
+    return float(min(finite_ttc)) if finite_ttc else float("inf")
 
 
 def _extract_highway_min_ttc(env: gym.Env) -> Optional[float]:
