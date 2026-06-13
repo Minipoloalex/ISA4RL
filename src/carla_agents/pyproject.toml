@@ -12,6 +12,8 @@ dependencies = [
     "pygame>=2.6.1",
     "pynput>=1.8.2",
     "tqdm>=4.67.3",
+    "wandb",
+    "shapely>=2.1.2",
 ]
 
 [project.scripts]
