@@ -3,12 +3,13 @@ import io
 
 csv_data = """
 Row,Avg_Perf_all_instances,Std_Perf_all_instances,Probability_of_good,Avg_Perf_selected_instances,Std_Perf_selected_instances,CV_model_accuracy,CV_model_precision,CV_model_recall,BoxConstraint,KernelScale
-algo_a2c_mean_reward,0.483,0.338,0.252,0.504,0.445,79.9,56.9,83.5,0.002,7.303
-algo_ppo_mean_reward,0.456,0.378,0.207,0.506,0.589,85.0,60.2,81.5,0.003,1.646
-algo_sac_mean_reward,0.727,0.375,0.86,0.878,0.242,86.0,97.1,86.3,0.039,0.502
-Oracle,0.752,0.339,1.0,,,,,,,
-Selector,0.697,0.447,0.873,0.708,0.446,,87.3,69.8,,
+algo_a2c_mean_reward,2.352,1.471,0.91,2.917,1.576,48.6,98.3,44.3,2.742,14.359
+algo_dqn_mean_reward,1.515,1.45,0.458,2.191,1.141,85.4,76.5,98.5,0.003,1.646
+algo_ppo_mean_reward,2.464,1.383,0.792,3.082,1.652,66.7,91.2,64.0,6.47,8.298
+Oracle,2.565,1.365,1.0,,,,,,,
+Selector,2.468,1.374,0.847,2.468,1.374,,84.7,46.0,,
 """
+LABEL = "tab:res-merge"
 
 # Load data
 df = pd.read_csv(io.StringIO(csv_data))
@@ -22,7 +23,7 @@ def clean_name(name):
 df['Row'] = df['Row'].apply(clean_name)
 
 # Sort rows to match the typical order (Algorithms first, then Selector, then Oracle)
-cat_type = pd.CategoricalDtype(categories=['A2C', 'PPO', 'SAC', 'Selector', 'Oracle'], ordered=True)
+cat_type = pd.CategoricalDtype(categories=['A2C', 'DQN', 'PPO', 'SAC', 'Selector', 'Oracle'], ordered=True)
 df['Row_cat'] = df['Row'].astype(cat_type)
 df = df.sort_values('Row_cat').drop('Row_cat', axis=1)
 
@@ -33,8 +34,8 @@ max_prob = df[df['Row'] != 'Oracle']['Probability_of_good'].max()
 latex_lines = [
     "\\begin{table}",
     "\\centering",
-    "\\caption{Algorithm Performance Comparison: Normalized Mean Reward.}",
-    "\\label{tab:isa_perf}",
+    "\\caption{Algorithm Performance Comparison.}",
+    "\\label{" + LABEL + "}",
     "\\begin{tabular}{cccc}",
     "\\toprule",
     "\\textbf{Algorithms} & \\textbf{\\ Average performance\\ } & \\textbf{\\ Std performance\\ } & \\textbf{Probability of good} \\\\ \\midrule"
