@@ -1,68 +1,73 @@
-import pandas as pd
-import io
+import argparse
+import csv
+from pathlib import Path
 
-csv_data = """
-Row,Avg_Perf_all_instances,Std_Perf_all_instances,Probability_of_good,Avg_Perf_selected_instances,Std_Perf_selected_instances,CV_model_accuracy,CV_model_precision,CV_model_recall,BoxConstraint,KernelScale
-algo_a2c_mean_reward,2.352,1.471,0.91,2.917,1.576,48.6,98.3,44.3,2.742,14.359
-algo_dqn_mean_reward,1.515,1.45,0.458,2.191,1.141,85.4,76.5,98.5,0.003,1.646
-algo_ppo_mean_reward,2.464,1.383,0.792,3.082,1.652,66.7,91.2,64.0,6.47,8.298
-Oracle,2.565,1.365,1.0,,,,,,,
-Selector,2.468,1.374,0.847,2.468,1.374,,84.7,46.0,,
-"""
-LABEL = "tab:res-merge"
 
-# Load data
-df = pd.read_csv(io.StringIO(csv_data))
-
-# Clean algorithm names (e.g., algo_a2c_mean_reward -> A2C)
 def clean_name(name):
-    if name.startswith('algo_') and name.endswith('_mean_reward'):
-        return name.replace('algo_', '').replace('_mean_reward', '').upper()
+    if name.startswith("algo_") and name.endswith("_mean_reward"):
+        return name.replace("algo_", "").replace("_mean_reward", "").upper()
     return name
 
-df['Row'] = df['Row'].apply(clean_name)
 
-# Sort rows to match the typical order (Algorithms first, then Selector, then Oracle)
-cat_type = pd.CategoricalDtype(categories=['A2C', 'DQN', 'PPO', 'SAC', 'Selector', 'Oracle'], ordered=True)
-df['Row_cat'] = df['Row'].astype(cat_type)
-df = df.sort_values('Row_cat').drop('Row_cat', axis=1)
+def read_table_rows(csv_path: str) -> list[dict[str, str]]:
+    with Path(csv_path).open(newline="") as csv_file:
+        return list(csv.DictReader(csv_file))
 
-# Find the highest Probability_of_good (excluding Oracle) to bold it
-max_prob = df[df['Row'] != 'Oracle']['Probability_of_good'].max()
 
-# Generate LaTeX
-latex_lines = [
-    "\\begin{table}",
-    "\\centering",
-    "\\caption{Algorithm Performance Comparison.}",
-    "\\label{" + LABEL + "}",
-    "\\begin{tabular}{cccc}",
-    "\\toprule",
-    "\\textbf{Algorithms} & \\textbf{\\ Average performance\\ } & \\textbf{\\ Std performance\\ } & \\textbf{Probability of good} \\\\ \\midrule"
-]
+def sort_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
+    order = ["A2C", "DQN", "PPO", "SAC", "Selector", "Oracle"]
+    order_by_name = {name: index for index, name in enumerate(order)}
+    return sorted(rows, key=lambda row: order_by_name.get(row["Row"], len(order_by_name)))
 
-for _, row in df.iterrows():
-    algo = row['Row']
-    avg = f"{row['Avg_Perf_all_instances']:.3f}"
-    std = f"{row['Std_Perf_all_instances']:.3f}"
-    prob = float(row['Probability_of_good'])
-    
-    prob_str = f"{prob:.3f}"
-    
-    # Apply bolding for Selector and max probability
-    if algo == 'Selector':
-        algo = f"\\textbf{{{algo}}}"
-        
-    if prob == max_prob and row['Row'] != 'Oracle':
-        prob_str = f"\\textbf{{{prob_str}}}"
-        
-    latex_lines.append(f"{algo} & {avg} & {std} & {prob_str} \\\\")
 
-latex_lines.extend([
-    "\\bottomrule",
-    "\\end{tabular}",
-    "\\end{table}"
-])
+def latex_table(csv_path: str, label: str, caption: str) -> str:
+    rows = read_table_rows(csv_path)
+    for row in rows:
+        row["Row"] = clean_name(row["Row"])
 
-# Print output
-print("\n".join(latex_lines))
+    rows = sort_rows(rows)
+    max_prob = max(float(row["Probability_of_good"]) for row in rows if row["Row"] != "Oracle")
+
+    latex_lines = [
+        "\\begin{table}",
+        "\\centering",
+        "\\caption{" + caption + "}",
+        "\\label{" + label + "}",
+        "\\begin{tabular}{cccc}",
+        "\\toprule",
+        "\\textbf{Algorithms} & \\textbf{\\ Average performance\\ } & \\textbf{\\ Std performance\\ } & \\textbf{Probability of good} \\\\ \\midrule",
+    ]
+
+    for row in rows:
+        algo = row["Row"]
+        avg_perf = row["Avg_Perf_all_instances"]
+        std_perf = row["Std_Perf_all_instances"]
+        avg = f"{float(avg_perf):.3f}"
+        std = f"{float(std_perf):.3f}"
+        prob = float(row["Probability_of_good"])
+        prob_str = f"{prob:.3f}"
+
+        if algo == "Selector":
+            algo = f"\\textbf{{{algo}}}"
+
+        if prob == max_prob and row["Row"] != "Oracle":
+            prob_str = f"\\textbf{{{prob_str}}}"
+
+        latex_lines.append(f"{algo} & {avg} & {std} & {prob_str} \\\\")
+
+    latex_lines.extend([
+        "\\bottomrule",
+        "\\end{tabular}",
+        "\\end{table}",
+    ])
+    return "\n".join(latex_lines)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("csv_path", type=str, help="Path to CSV/svm_table.csv.")
+    parser.add_argument("--label", type=str, required=True, help="LaTeX table label.")
+    parser.add_argument("--caption", type=str, required=True, help="LaTeX table caption.")
+    args = parser.parse_args()
+
+    print(latex_table(args.csv_path, args.label, args.caption))

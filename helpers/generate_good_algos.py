@@ -1,62 +1,99 @@
-ALGOS = ["A2C", "DQN", "PPO"]
-# ALGOS = ["A2C", "PPO", "SAC"]
-ENV = "merge"
-NR_COLS = [3]
+import argparse
+import csv
+from pathlib import Path
 
-SVM_PREDICTIONS = True
+from generate_feature_distribution_figures import auto_nr_cols, parse_nr_cols
 
-FILE_PREFIX = "figures/results/" + "single-envs/" + f"{ENV}/" + ("4_svm_good_" if SVM_PREDICTIONS else "3_good_")
-LABEL_PREFIX = f"fig:res-{ENV}-svm-good" if SVM_PREDICTIONS else f"fig:res-{ENV}-good"
-CAPTION = (
-    f"Predicted successful instances for each RL algorithm across the instance space for the {ENV.capitalize()} environment."
-    if SVM_PREDICTIONS
-    else f"Successful instances for each RL algorithm across the instance space for the {ENV.capitalize()} environment."
-)
 
-assert len(ALGOS) == sum(NR_COLS)
-assert len(ALGOS) <= 26
+def env_title(env: str) -> str:
+    return env.replace("_", " ").title()
 
-algo_index = 0
-figure_lines = [
-    "\\begin{figure}",
-    "    \\centering",
-]
 
-for row_index, nr_cols in enumerate(NR_COLS):
-    if row_index > 0:
-        figure_lines.extend([
-            "",
-            "    \\medskip",
-            "",
-        ])
+def clean_algo(name: str) -> str:
+    if name.startswith("algo_") and name.endswith("_mean_reward"):
+        return name.replace("algo_", "").replace("_mean_reward", "").upper()
+    return name
 
-    width = f"{0.98 / nr_cols:.3f}"
 
-    for col_index in range(nr_cols):
-        algo = ALGOS[algo_index]
-        algo_key = algo.lower()
-        subfigure_letter = chr(ord("a") + algo_index)
-        algo_label = f"{LABEL_PREFIX}-{algo_key}"
-        algo_path = f"{FILE_PREFIX}{algo_key}.pdf"
-        algo_caption = f"{algo}\\label{{{algo_label}}}"
+def read_algos_from_svm_table(csv_path: str) -> list[str]:
+    with Path(csv_path).open(newline="") as csv_file:
+        reader = csv.DictReader(csv_file)
+        rows = list(reader)
+    return [clean_algo(row["Row"]) for row in rows if row["Row"].startswith("algo_")]
 
-        figure_lines.extend([
-            f"    \\subfloat[{algo_caption}]{{%",
-            f"        \\includegraphics[width={width}\\textwidth]{{{algo_path}}}%",
-            "    }",
-        ])
 
-        algo_index += 1
+def good_algos_figure(
+    env: str,
+    algos: list[str],
+    nr_cols: list[int],
+    figure_prefix: str,
+    svm_predictions: bool,
+) -> str:
+    if len(algos) != sum(nr_cols):
+        raise ValueError("The number of algorithms must equal the sum of --nr-cols.")
+    if len(algos) > 26:
+        raise ValueError("Subfigure labels support at most 26 algorithms.")
 
-        if col_index < nr_cols - 1:
-            figure_lines.append("    \\hfill")
+    file_prefix = figure_prefix + ("4_svm_good_" if svm_predictions else "3_good_")
+    label_prefix = f"fig:res-{env}-svm-good" if svm_predictions else f"fig:res-{env}-good"
+    caption = (
+        f"Predicted successful instances for each RL algorithm across the instance space for the {env_title(env)} environment."
+        if svm_predictions
+        else f"Successful instances for each RL algorithm across the instance space for the {env_title(env)} environment."
+    )
 
-figure_lines.extend([
-    "    \\caption{" + CAPTION + "}",
-    f"    \\label{{{LABEL_PREFIX}}}",
-    "\\end{figure}",
-])
+    algo_index = 0
+    figure_lines = [
+        "\\begin{figure}",
+        "    \\centering",
+    ]
 
-latex_string = "\n".join(figure_lines)
+    for row_index, nr_col in enumerate(nr_cols):
+        if row_index > 0:
+            figure_lines.extend([
+                "",
+                "    \\medskip",
+                "",
+            ])
 
-print(latex_string)
+        width = f"{0.98 / nr_col:.3f}"
+
+        for col_index in range(nr_col):
+            algo = algos[algo_index]
+            algo_key = algo.lower()
+            subfigure_letter = chr(ord("a") + algo_index)
+            algo_label = f"{label_prefix}-{algo_key}"
+            algo_path = f"{file_prefix}{algo}.pdf"
+            algo_caption = f"{algo}\\label{{{algo_label}}}"
+
+            figure_lines.extend([
+                f"    \\subfloat[{algo_caption}]{{%",
+                f"        \\includegraphics[width={width}\\textwidth]{{{algo_path}}}%",
+                "    }",
+            ])
+
+            algo_index += 1
+
+            if col_index < nr_col - 1:
+                figure_lines.append("    \\hfill")
+
+    figure_lines.extend([
+        "    \\caption{" + caption + "}",
+        f"    \\label{{{label_prefix}}}",
+        "\\end{figure}",
+    ])
+    return "\n".join(figure_lines)
+
+
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--env", type=str, required=True, help="Environment key used in labels.")
+    parser.add_argument("--svm-table", type=str, required=True, help="Path to CSV/svm_table.csv.")
+    parser.add_argument("--figure-prefix", type=str, required=True, help="LaTeX path prefix for figure files.")
+    parser.add_argument("--nr-cols", type=str, help="Comma-separated subfigure counts by row, such as 3 or 2,2.")
+    parser.add_argument("--actual", action="store_true", help="Use actual good-instance figures instead of SVM predictions.")
+    args = parser.parse_args()
+
+    algos = read_algos_from_svm_table(args.svm_table)
+    nr_cols = parse_nr_cols(args.nr_cols) if args.nr_cols else auto_nr_cols(len(algos))
+    print(good_algos_figure(args.env, algos, nr_cols, args.figure_prefix, not args.actual))
