@@ -6,7 +6,7 @@
     "perf": {
         "MaxPerf": true,
         "AbsPerf": false,
-        "epsilon": 0.05,
+        "epsilon": 0.1,
         "betaThreshold": 0.66
     },
     "auto": {
@@ -60,7 +60,7 @@
         "pdf": true,
         "use_source_markers": false,
         "show_titles": false,
-        "auto_projection_bounds": false,
-        "projection_bounds_padding": 0.05
+        "auto_projection_bounds": true,
+        "projection_bounds_padding": 0.1
     }
 }

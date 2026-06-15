@@ -30,7 +30,7 @@
     "sifted": {
         "flag": true,
         "rho": 0.2,
-        "K": 10,
+        "K": 6,
         "NTREES": 50,
         "MaxIter": 1000,
         "Replicates": 100
@@ -51,7 +51,7 @@
     },
     "trace": {
         "usesim": false,
-        "PI": 0.5
+        "PI": 0.3
     },
     "outputs": {
         "csv": true,
@@ -61,6 +61,6 @@
         "use_source_markers": true,
         "show_titles": false,
         "auto_projection_bounds": true,
-        "projection_bounds_padding": 0.05
+        "projection_bounds_padding": 0.1
     }
 }
