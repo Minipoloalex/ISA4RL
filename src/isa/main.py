@@ -45,6 +45,53 @@ ACTION_SPACE_CHOICES = [
     ACTION_SPACE_CONTINUOUS,
 ]
 INTERNAL_DATASET_COLUMNS = ["action_space"]
+ANALYSIS_FEATURE_COLUMN_RENAMES = {
+    "feature_random_other_veh_speed_var_mean": "feature_random_other_veh_speed_delta_mean",
+    "feature_random_other_veh_speed_var_var": "feature_random_other_veh_speed_delta_var",
+    "feature_random_other_veh_speed_var_max": "feature_random_other_veh_speed_delta_max",
+    "feature_random_other_veh_heading_var_mean": "feature_random_other_veh_heading_delta_mean",
+    "feature_random_other_veh_heading_var_var": "feature_random_other_veh_heading_delta_var",
+    "feature_random_other_veh_heading_var_max": "feature_random_other_veh_heading_delta_max",
+    "feature_baseline_other_veh_speed_var_mean": "feature_baseline_other_veh_speed_delta_mean",
+    "feature_baseline_other_veh_speed_var_var": "feature_baseline_other_veh_speed_delta_var",
+    "feature_baseline_other_veh_speed_var_max": "feature_baseline_other_veh_speed_delta_max",
+    "feature_baseline_other_veh_heading_var_mean": "feature_baseline_other_veh_heading_delta_mean",
+    "feature_baseline_other_veh_heading_var_var": "feature_baseline_other_veh_heading_delta_var",
+    "feature_baseline_other_veh_heading_var_max": "feature_baseline_other_veh_heading_delta_max",
+}
+
+
+def rename_analysis_feature_columns(df: pd.DataFrame) -> pd.DataFrame:
+    """Rename metafeature columns whose ISA-facing names should be clearer."""
+    present_renames = {
+        old_name: new_name
+        for old_name, new_name in ANALYSIS_FEATURE_COLUMN_RENAMES.items()
+        if old_name in df.columns
+    }
+    if not present_renames:
+        return df
+
+    collisions = [
+        new_name
+        for old_name, new_name in present_renames.items()
+        if new_name in df.columns and new_name != old_name
+    ]
+    if collisions:
+        collision_list = ", ".join(sorted(collisions))
+        raise ValueError(
+            "[isa] Cannot rename analysis feature columns because target columns "
+            f"already exist: {collision_list}"
+        )
+
+    logger.info(
+        "[isa] Renaming %s analysis feature columns: %s",
+        len(present_renames),
+        ", ".join(
+            f"{old_name} -> {new_name}"
+            for old_name, new_name in sorted(present_renames.items())
+        ),
+    )
+    return df.rename(columns=present_renames).copy()
 
 
 def drop_internal_dataset_columns(df: pd.DataFrame) -> pd.DataFrame:
@@ -990,6 +1037,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 )
             filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
             filtered_df = drop_internal_dataset_columns(filtered_df)
+            filtered_df = rename_analysis_feature_columns(filtered_df)
             filtered_df.to_csv(filtered_dataset_path, index=False)
             run_instance_space_analysis(filtered_dataset_path, output_path, args.options)
         except InstanceSpaceAnalysisError as err:
