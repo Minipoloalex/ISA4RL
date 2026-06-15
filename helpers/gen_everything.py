@@ -29,7 +29,7 @@ def infer_env(run_dir: Path) -> str:
 
 
 def default_output_dir(run_dir: Path) -> Path:
-    return HELPERS_DIR / "results" / run_dir.name
+    return HELPERS_DIR / "latex" / run_dir.name
 
 
 def latex_figure_prefix(env: str) -> str:
@@ -83,7 +83,7 @@ def generate_everything(run_dir: Path, env: str, output_dir: Path, figure_prefix
     env_name = env.replace("_", " ").title()
 
     artifacts = {
-        "projection_matrix.tex": latex_matrix(read_csv_text(str(projection_matrix)), f"res-{env}-projection"),
+        "projection_matrix.tex": latex_matrix(read_csv_text(str(projection_matrix)), f"res-{env}-mat"),
         "performance_table.tex": latex_table(
             str(svm_table),
             f"tab:res-{env}",

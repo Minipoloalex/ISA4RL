@@ -30,20 +30,20 @@ def latex_matrix(data: str, label: str):
     features_str = "\n".join(features_tex)
 
     latex = f"""
-    \\begin{{equation}}
-    \\begin{{bmatrix}}
-    Z_1\\\\
-    Z_2
-    \\end{{bmatrix}}
-    =
-    \\begin{{bmatrix}}
-    {matrix_str}
-    \\end{{bmatrix}}^{{T}}
-    \\begin{{bmatrix}}
-    {features_str}
-    \\end{{bmatrix}}
-    \\label{{eq:{label}}}
-    \\end{{equation}}
+\\begin{{equation}}
+\\begin{{bmatrix}}
+Z_1\\\\
+Z_2
+\\end{{bmatrix}}
+=
+\\begin{{bmatrix}}
+{matrix_str}
+\\end{{bmatrix}}^{{T}}
+\\begin{{bmatrix}}
+{features_str}
+\\end{{bmatrix}}
+\\label{{eq:{label}}}
+\\end{{equation}}
     """
     return latex
 
