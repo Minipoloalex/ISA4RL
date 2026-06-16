@@ -426,7 +426,8 @@ def filter_metafeature_columns(
             if not keep_low_diversity_features:
                 reasons.append("single_unique_value")
         elif feature_range[column] <= near_constant_threshold:
-            reasons.append("near_constant_value")
+            if not keep_low_diversity_features:
+                reasons.append("near_constant_value")
 
         if reasons:
             dropped_features[column] = {
