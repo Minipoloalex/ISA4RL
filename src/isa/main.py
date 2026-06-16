@@ -132,23 +132,31 @@ def canonical_algorithm_names(algorithms: Sequence[str]) -> List[str]:
     return sorted(algorithm.lower() for algorithm in algorithms)
 
 
-def metafeature_exclusion_filename_suffix(
+def metafeature_filter_filename_suffix(
     exclude_domain_specific_metafeatures: bool,
+    keep_low_diversity_features: bool = False,
 ) -> str:
+    suffixes = []
     if exclude_domain_specific_metafeatures:
-        return "_edsm"
-    return ""
+        suffixes.append("edsm")
+    if keep_low_diversity_features:
+        suffixes.append("keep_low_diversity")
+    if not suffixes:
+        return ""
+    return "_" + "_".join(suffixes)
 
 
 def default_isa_dataset_path(
     envs: Sequence[str],
     action_space: str = ACTION_SPACE_ALL,
     exclude_domain_specific_metafeatures: bool = False,
+    keep_low_diversity_features: bool = False,
 ) -> Path:
     env_component = "_".join(_filename_component(env) for env in canonical_env_names(envs))
     action_space_component = _filename_component(action_space)
-    suffix = metafeature_exclusion_filename_suffix(
-        exclude_domain_specific_metafeatures
+    suffix = metafeature_filter_filename_suffix(
+        exclude_domain_specific_metafeatures,
+        keep_low_diversity_features,
     )
     return (
         BASE_RESULTS_PATH
@@ -161,6 +169,7 @@ def default_isa_analysis_output_path(
     envs: Optional[Sequence[str]],
     action_space: str = ACTION_SPACE_ALL,
     exclude_domain_specific_metafeatures: bool = False,
+    keep_low_diversity_features: bool = False,
 ) -> Path:
     timestamp = datetime.datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     if envs is None:
@@ -170,8 +179,9 @@ def default_isa_analysis_output_path(
             _filename_component(env) for env in canonical_env_names(envs)
         )
     action_space_component = _filename_component(action_space)
-    suffix = metafeature_exclusion_filename_suffix(
-        exclude_domain_specific_metafeatures
+    suffix = metafeature_filter_filename_suffix(
+        exclude_domain_specific_metafeatures,
+        keep_low_diversity_features,
     )
     return (
         BASE_RESULTS_PATH
@@ -189,6 +199,7 @@ def resolve_dataset_path(
     envs: Optional[Sequence[str]],
     action_space: str = ACTION_SPACE_ALL,
     exclude_domain_specific_metafeatures: bool = False,
+    keep_low_diversity_features: bool = False,
 ) -> Path:
     if dataset_path is not None:
         return dataset_path
@@ -197,6 +208,7 @@ def resolve_dataset_path(
             envs,
             action_space,
             exclude_domain_specific_metafeatures,
+            keep_low_diversity_features,
         )
     return DEFAULT_DATASET_PATH
 
@@ -386,6 +398,7 @@ def filter_metafeature_columns(
     max_missing_ratio: float = 0.0,
     report_path: Optional[Path] = None,
     near_constant_threshold: float = 1e-12,
+    keep_low_diversity_features: bool = False,
 ) -> pd.DataFrame:
     """Drop metafeatures that are too sparse or have effectively no variation."""
     if max_missing_ratio < 0.0 or max_missing_ratio > 1.0:
@@ -410,7 +423,8 @@ def filter_metafeature_columns(
         if missing_ratios[column] > max_missing_ratio:
             reasons.append("too_many_missing_values")
         if unique_counts[column] <= 1:
-            reasons.append("single_unique_value")
+            if not keep_low_diversity_features:
+                reasons.append("single_unique_value")
         elif feature_range[column] <= near_constant_threshold:
             reasons.append("near_constant_value")
 
@@ -461,6 +475,7 @@ def filter_metafeature_columns(
             {
                 "max_missing_ratio": max_missing_ratio,
                 "near_constant_threshold": near_constant_threshold,
+                "keep_low_diversity_features": keep_low_diversity_features,
                 "kept_features": kept_features,
                 "dropped_features": dropped_features,
             },
@@ -594,6 +609,7 @@ def build_isa_dataset(
     projection_algorithms: Optional[Sequence[str]] = None,
     action_space: str = ACTION_SPACE_ALL,
     exclude_domain_specific_metafeatures: bool = False,
+    keep_low_diversity_features: bool = False,
 ):
     envs = canonical_env_names(envs)
     if projection_algorithms is not None:
@@ -609,6 +625,7 @@ def build_isa_dataset(
             envs,
             action_space,
             exclude_domain_specific_metafeatures,
+            keep_low_diversity_features,
         )
     if filter_report_path is None:
         filter_report_path = output_path.with_name(f"{output_path.stem}_filter_report.json")
@@ -741,7 +758,12 @@ def build_isa_dataset(
             DOMAIN_SPECIFIC_METAFEATURES,
             force_exclusion=False,
         )
-    df = filter_metafeature_columns(df, max_feature_missing, filter_report_path)
+    df = filter_metafeature_columns(
+        df,
+        max_feature_missing,
+        filter_report_path,
+        keep_low_diversity_features=keep_low_diversity_features,
+    )
     df = drop_internal_dataset_columns(df)
     feature_columns = [col for col in df.columns if col.startswith("feature_")]
     diagnostic_columns = [col for col in df.columns if col.startswith("diag_")]
@@ -770,6 +792,7 @@ def build_isa_dataset(
                 "exclude_domain_specific_metafeatures": (
                     exclude_domain_specific_metafeatures
                 ),
+                "keep_low_diversity_features": keep_low_diversity_features,
                 "filter_report_path": str(filter_report_path),
                 "dataset_path": str(output_path),
                 "algorithm_metric_normalization": {
@@ -966,6 +989,16 @@ def parse_args(argv: Optional[Sequence[str]] = None) -> argparse.Namespace:
             "(for build and analyze tasks)."
         ),
     )
+    parser.add_argument(
+        "-kldf",
+        "--keep-low-diversity-features",
+        action="store_true",
+        help=(
+            "Keep metafeature columns with only one unique non-missing value "
+            "(for build and analyze tasks). Default dataset CSV names include "
+            "'keep_low_diversity' when this option is set."
+        ),
+    )
     
     # analyze args
     parser.add_argument(
@@ -999,6 +1032,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             args.algorithms,
             args.action_space,
             args.exclude_domain_specific_metafeatures,
+            args.keep_low_diversity_features,
         )
     elif args.task == "analyze":
         try:
@@ -1007,6 +1041,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                 args.envs,
                 args.action_space,
                 args.exclude_domain_specific_metafeatures,
+                args.keep_low_diversity_features,
             )
             output_path = (
                 args.output
@@ -1015,6 +1050,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                     args.envs,
                     args.action_space,
                     args.exclude_domain_specific_metafeatures,
+                    args.keep_low_diversity_features,
                 )
             )
             ensure_dir(output_path)
@@ -1023,7 +1059,13 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             report_path = args.filter_report
             if report_path is None:
                 report_path = output_path / "isa_ds_filter_report.json"
-            filtered_dataset_path = csv_output_path / "isa_ds_filtered.csv"
+            filtered_dataset_suffix = metafeature_filter_filename_suffix(
+                args.exclude_domain_specific_metafeatures,
+                args.keep_low_diversity_features,
+            )
+            filtered_dataset_path = (
+                csv_output_path / f"isa_ds_filtered{filtered_dataset_suffix}.csv"
+            )
             df = pd.read_csv(str(dataset_path))
             if args.action_space != ACTION_SPACE_ALL:
                 df = filter_action_space_rows(df, args.action_space)
@@ -1035,7 +1077,12 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
                     DOMAIN_SPECIFIC_METAFEATURES,
                     force_exclusion=False,
                 )
-            filtered_df = filter_metafeature_columns(df, args.max_feature_missing, report_path)
+            filtered_df = filter_metafeature_columns(
+                df,
+                args.max_feature_missing,
+                report_path,
+                keep_low_diversity_features=args.keep_low_diversity_features,
+            )
             filtered_df = drop_internal_dataset_columns(filtered_df)
             filtered_df = rename_analysis_feature_columns(filtered_df)
             filtered_df.to_csv(filtered_dataset_path, index=False)
@@ -1049,6 +1096,7 @@ def main(argv: Optional[Sequence[str]] = None) -> None:
             args.envs,
             args.action_space,
             args.exclude_domain_specific_metafeatures,
+            args.keep_low_diversity_features,
         )
         if not dataset_path.is_file():
             print(f"[isa] Dataset not found: '{dataset_path}'")
