@@ -138,8 +138,8 @@ def extract_metafeatures(
             include_heavy_metrics=False,
         )
         random_probe = {
-            **random_probe_heavy,
             **random_probe_light,
+            **random_probe_heavy,
         }
         baseline_probe = traj_metafeatures(trajectories_baseline)
         logger.info("Random probe achieved mean reward of %s", random_probe["mean_reward"])
