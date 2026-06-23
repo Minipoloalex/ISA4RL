@@ -39,23 +39,24 @@ from metadrive.constants import DEFAULT_AGENT, TerminationState
 from metadrive.envs.base_env import BaseEnv
 from metadrive.manager.traffic_manager import TrafficMode
 from metadrive.utils import clip, Config
+from metadrive.envs.top_down_env import TopDownMetaDrive
 
 logger = logging.getLogger(__name__)
 
 # Change this string to test different map combinations
-MAP_CONFIG = "SC"
+MAP_CONFIG = "rORY"
 MAP_CONFIG={
     BaseMap.GENERATE_TYPE: MapGenerateMethod.BIG_BLOCK_SEQUENCE,
     BaseMap.GENERATE_CONFIG: MAP_CONFIG,
     BaseMap.LANE_WIDTH: 3.5,
-    BaseMap.LANE_NUM: 5,
+    BaseMap.LANE_NUM: 3,
     "exit_length": 50,
     "start_position": [0, 0],
 }
 
 # Control settings
 MANUAL_CONTROL = True    # Set to True to drive with W/A/S/D
-TRAFFIC_DENSITY = 0.1    # Set to 0.0 to test just the road, >0.0 to add cars
+TRAFFIC_DENSITY = 0.3    # Set to 0.0 to test just the road, >0.0 to add cars
 NUM_STEPS = 500000         # How long the simulation runs before auto-closing
 
 # ==========================================
@@ -94,7 +95,8 @@ def run_map_test():
     # config["vehicle_config"] = {
     #     "vehicle_model": "m",
     # }
-    env = MyMetaDriveEnv(config)
+    # env = MyMetaDriveEnv(config)
+    env = TopDownMetaDrive(config)
 
     try:
         obs, info = env.reset()

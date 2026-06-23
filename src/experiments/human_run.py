@@ -2,11 +2,13 @@
 
 from __future__ import annotations
 import argparse
+from pathlib import Path
 from typing import Dict, Tuple, Union, Mapping, Optional
 import gymnasium as gym
 from gymnasium import spaces
 import highway_env  # noqa: F401 - needed to register the environments
 import numpy as np
+import pygame
 from pprint import pprint
 from math import ceil
 
@@ -61,13 +63,14 @@ def print_help(key_bindings: KeyBindings) -> None:
     for key, (_, desc) in key_bindings.items():
         label = "<enter>" if key == "" else key
         print(f"  {label:>7} -> {desc}")
+    print("      p -> save current image")
     print("      r -> reset episode")
     print("      q -> quit\n")
 
 
 def format_prompt(key_bindings: KeyBindings) -> str:
     keys = "/".join("<enter>" if key == "" else key for key in key_bindings)
-    return f"Next action [{keys}, r=reset, q=quit]: "
+    return f"Next action [{keys}, p=save image, r=reset, q=quit]: "
 
 
 def get_user_action(
@@ -82,6 +85,8 @@ def get_user_action(
             return "quit"
         if cmd == "r":
             return "reset"
+        if cmd == "p":
+            return "save"
         if cmd in key_bindings:
             return key_bindings[cmd][0]
         print("Unknown command, try again.")
@@ -91,7 +96,8 @@ def format_continuous_prompt(space: spaces.Box) -> str:
     shape = "x".join(str(dim) for dim in space.shape)
     return (
         "Next action "
-        f"({shape} values, comma/space separated, blank=reuse/zero, r=reset, q=quit): "
+        f"({shape} values, comma/space separated, blank=reuse/zero, "
+        "p=save image, r=reset, q=quit): "
     )
 
 
@@ -110,6 +116,8 @@ def parse_continuous(
         return "quit"
     if raw == "r":
         return "reset"
+    if raw == "p":
+        return "save"
     if raw == "":
         if last_action is not None:
             return last_action
@@ -146,6 +154,28 @@ def get_continuous_action(
             return result
 
 
+def save_current_image(env: gym.Env, image_path: Path) -> None:
+    """Save the currently rendered Highway-env frame without advancing the environment."""
+    viewer = env.unwrapped.viewer
+    if viewer is None:
+        raise RuntimeError("The environment viewer has not been initialized.")
+
+    frame = viewer.get_image()
+    surface = pygame.surfarray.make_surface(np.moveaxis(frame, 0, 1))
+    image_path.parent.mkdir(parents=True, exist_ok=True)
+    pygame.image.save(surface, image_path)
+    print(f"Saved current image to {image_path}")
+
+
+def prompt_for_image_path() -> Path:
+    """Request a non-empty destination path for the current frame."""
+    while True:
+        raw_path = input("Image file path: ").strip()
+        if raw_path:
+            return Path(raw_path).expanduser()
+        print("Image file path cannot be empty.")
+
+
 def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Manual control helper for highway-env."
@@ -163,9 +193,9 @@ def main() -> None:
     if args.env.startswith("highway"):
         env_config.update(
             {
-                "lanes_count": 2,
-                "vehicles_count": 5,
-                "vehicles_density": 0.5,
+                "lanes_count": 3,
+                "vehicles_count": 10,
+                "vehicles_density": 1.5,
                 "duration": 40,
                 "ego_spacing": 2,
             }
@@ -173,8 +203,8 @@ def main() -> None:
     if args.env == "roundabout-generic-v0":
         env_config.update({
             "roundabout_lanes": 2,
-            "roundabout_radius": 30,
-            "vehicles_count": 15,
+            "roundabout_radius": 20,
+            "vehicles_count": 5,
             "duration": 20,
         })
     if args.env.startswith("intersection"):
@@ -189,16 +219,21 @@ def main() -> None:
             }
         )
     if args.env == "merge-generic-v0":
+        # env_config.update({
+        #     # "length_before_merge": 150,
+        #     # "vehicles_count": 10,
+        #     # "length_after_merge": 250,
+        #     "lanes_count": 4,
+        #     "merge_length_parallel": 50,
+        #     "vehicles_count": 20,
+        # })
         env_config.update({
-            # "length_before_merge": 150,
-            # "vehicles_count": 10,
-            # "length_after_merge": 250,
-            "lanes_count": 4,
+            "lanes_count": 2,
             "merge_length_parallel": 50,
-            "vehicles_count": 20,
+            "vehicles_count": 12,
         })
     if args.env == "exit-v0":
-        lanes = 5
+        lanes = 4
         capacity = 10
         highway_duration = 40
         density = 2
@@ -206,7 +241,7 @@ def main() -> None:
         length = 150
         road_length = pos + length + 500
         duration = (pos+length) // 25
-        veh = ceil(lanes * capacity * (density / 2) * duration / highway_duration)
+        veh = int(ceil(lanes * capacity * (density / 2) * duration / highway_duration))
         pprint({
             "lanes": lanes,
             "capacity": capacity,
@@ -242,8 +277,10 @@ def main() -> None:
             "vehicles_count": 20,
             "lanes_count": 3,
             "duration": 100,
-            "length": 150,
-            "block_lanes": [],
+            "length": 100,
+            "scaling": 4.5,
+            "centering_position": [0.6, 0.75],
+            "block_lanes": [1],
         })
     if args.env == "u-turn-v0":
        env_config.update({
@@ -251,9 +288,17 @@ def main() -> None:
        })
     if args.env == "lane-keeping-v0":
         env_config.update({
-            "duration": 5,
+            "scaling": 5,
+            "duration": 20,
+            "screen_height": 300,
         })
-
+    if args.env == "parking-v0":
+        env_config.update({
+            "parking_spots": 10,
+            "vehicles_count": 10,
+            "scaling": 6.5,
+            "add_walls": False,
+        })
     env_kwargs: Dict[str, object] = {"render_mode": "human"}
     if env_config:
         env_kwargs["config"] = env_config
@@ -295,6 +340,9 @@ def main() -> None:
                 steps = 0
                 episode_return = 0.0
                 print("Episode reset.")
+                continue
+            if isinstance(action, str) and action == "save":
+                save_current_image(env, prompt_for_image_path())
                 continue
             print(action)
             obs, reward, done, truncated, info = env.step(action)
